@@ -1,0 +1,11 @@
+**
+
+To solve this problem, I started by handling the edge case where the input string `s` is empty. If `s` is empty, the function returns an empty string.
+
+Next, I initialized variables to keep track of the character with the longest run (`max_char`) and its length (`max_len`). Additionally, I tracked the current character being evaluated (`current_char`) and its consecutive count (`current_len`).
+
+I then iterated through the string starting from the second character. If the current character is the same as `current_char`, I incremented `current_len`. If not, I compared `current_len` with `max_len` to decide whether to update `max_char` and `max_len`. After updating, I reset `current_char` and `current_len`.
+
+Finally, after the loop, I made a final comparison between `current_len` and `max_len` in case the longest run ended at the last character of the string. This ensures that if there's a tie for the longest run length, the function returns the character from the last such run.
+
+This approach is concise and readable, with clear separation of logic to handle different scenarios.

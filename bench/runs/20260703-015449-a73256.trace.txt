@@ -1,0 +1,2 @@
+**
+I chose a concise and readable approach using Python's built-in `max` function with the `split` method to split the string into words. The `default=''` argument ensures that an empty string returns an empty string as specified in the task. To handle ties according to the task, I used the `key=len` argument, which tells `max` to consider word length when deciding between equal words. This way, if there are multiple words of the same maximum length, `max` will return the last such word.

@@ -1,0 +1,1 @@
+I used a two-pass approach to solve this problem. First, I sorted the given pairs of ranges by their start points, which sets up an ordered sequence for merging overlapping or sharing endpoints. Next, I iterated through the sorted list and merged adjacent ranges that did not share an endpoint. An empty list was handled as a special case where no pairs were provided.

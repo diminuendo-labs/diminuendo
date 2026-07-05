@@ -1,0 +1,2 @@
+**
+I chose to use list comprehension and the `split` method to split the input string into words, then used a generator expression with `capitalize` to convert each word to camelCase. The `if word` condition filters out empty strings created by repeated or trailing underscores, handling the edge case where the input contains consecutive underscores (e.g., `'__a__b_'`). This approach keeps the code concise and readable while ensuring it meets all requirements.

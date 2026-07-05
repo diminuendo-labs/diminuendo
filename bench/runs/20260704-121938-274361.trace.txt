@@ -1,0 +1,1 @@
+The function uses a list comprehension to split the input list into chunks of size `k`. If the length of the list is not evenly divisible by `k`, it creates additional lists filled with None to make up for the missing elements. This approach ensures that every chunk has exactly `k` elements, and the edge case of an empty list is handled correctly as it returns [].

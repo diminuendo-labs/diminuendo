@@ -1,0 +1,3 @@
+**
+
+The function `kth_ordered` takes two parameters: a list of words and an integer `k`. It first checks for edge cases where the input list is empty or `k` is less than or equal to zero, returning `None` in such cases. The function then groups words by their length using a dictionary. For each group, it sorts the words reverse-alphabetically. These sorted words are then added to a result list. Finally, the function checks if `k` is within the bounds of the result list and returns the k-th word (adjusting for 1-based indexing) or `None` if `k` is out of range.

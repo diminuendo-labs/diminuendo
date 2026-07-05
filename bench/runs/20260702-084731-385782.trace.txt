@@ -1,0 +1,2 @@
+**
+I chose to split the input string `s` into a list of whitespace-separated words, convert each word and the target word `w` to lowercase (for case-insensitive comparison), and then use a generator expression within the built-in `sum` function to count how many words in the list match the target. This approach is concise and readable, and handles the edge case where an empty string is input, returning 0 as per the requirements.

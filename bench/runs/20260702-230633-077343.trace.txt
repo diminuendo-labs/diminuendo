@@ -1,0 +1,3 @@
+**
+
+I first imported the `Counter` class from the `collections` module to efficiently count the occurrences of each word. I then split the input string into a list of words, converted them to lowercase using the `lower()` method, and created a `Counter` object to store the counts of each word. Finally, I used a list comprehension to find all words with the maximum count, sorted these words alphabetically, and returned the first one (which breaks ties alphabetically).

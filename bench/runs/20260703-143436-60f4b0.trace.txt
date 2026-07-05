@@ -1,0 +1,2 @@
+**
+I chose to use a generator expression within the `set` function to create an iterator that yields each distinct value greater than k. This approach is concise and readable, as it eliminates the need for explicit loops or conditional checks. The edge case of an empty list is handled implicitly by the fact that `set` returns an empty set when given no elements.

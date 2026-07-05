@@ -1,0 +1,106 @@
+SUPPLY PROBE 20260703-142225 (PACKET-014, counts not claims)
+performer=llama3.1:8b  audience=qwen2.5-coder:7b (v1, production)
+class=distinctness  R=6 per task  tasks=12
+== ENUMERATION (printed before any run) ==
+  count_unique             pool=generation topic=values  gen_eligible=True topic_in_apply=True
+  sum_distinct             pool=generation topic=values  gen_eligible=True topic_in_apply=True
+  count_distinct_pairs     pool=generation topic=pairs   gen_eligible=True topic_in_apply=False
+  sum_of_modes             pool=generation topic=values  gen_eligible=True topic_in_apply=True
+  count_distinct_over      pool=generation topic=values  gen_eligible=True topic_in_apply=True
+  third_largest_distinct   pool=generation topic=values  gen_eligible=True topic_in_apply=True
+  mode_count               pool=generation topic=values  gen_eligible=True topic_in_apply=True
+  second_largest           pool=apply      topic=values  gen_eligible=False topic_in_apply=True
+  dedupe                   pool=apply      topic=values  gen_eligible=False topic_in_apply=True
+  range_summary            pool=apply      topic=values  gen_eligible=False topic_in_apply=True
+  nth_smallest             pool=apply      topic=values  gen_eligible=False topic_in_apply=True
+  count_pairs              pool=apply      topic=pairs   gen_eligible=False topic_in_apply=False
+count_unique rep 0: ev=1.00 passed=True
+count_unique rep 1: ev=1.00 passed=True
+count_unique rep 2: ev=1.00 passed=True
+count_unique rep 3: ev=1.00 passed=True
+count_unique rep 4: ev=1.00 passed=True
+count_unique rep 5: ev=1.00 passed=True
+sum_distinct rep 0: ev=1.00 passed=True
+sum_distinct rep 1: ev=1.00 passed=True
+sum_distinct rep 2: ev=1.00 passed=True
+sum_distinct rep 3: ev=1.00 passed=True
+sum_distinct rep 4: ev=1.00 passed=True
+sum_distinct rep 5: ev=0.25 passed=False
+count_distinct_pairs rep 0: ev=1.00 passed=True
+count_distinct_pairs rep 1: ev=1.00 passed=True
+count_distinct_pairs rep 2: ev=1.00 passed=True
+count_distinct_pairs rep 3: ev=0.25 passed=False
+count_distinct_pairs rep 4: ev=1.00 passed=True
+count_distinct_pairs rep 5: ev=1.00 passed=True
+sum_of_modes rep 0: ev=1.00 passed=True
+sum_of_modes rep 1: ev=1.00 passed=True
+sum_of_modes rep 2: ev=1.00 passed=True
+sum_of_modes rep 3: ev=1.00 passed=True
+sum_of_modes rep 4: ev=1.00 passed=True
+sum_of_modes rep 5: ev=1.00 passed=True
+count_distinct_over rep 0: ev=1.00 passed=True
+count_distinct_over rep 1: ev=1.00 passed=True
+count_distinct_over rep 2: ev=1.00 passed=True
+count_distinct_over rep 3: ev=1.00 passed=True
+count_distinct_over rep 4: ev=1.00 passed=True
+count_distinct_over rep 5: ev=1.00 passed=True
+third_largest_distinct rep 0: ev=1.00 passed=True
+third_largest_distinct rep 1: ev=1.00 passed=True
+third_largest_distinct rep 2: ev=1.00 passed=True
+third_largest_distinct rep 3: ev=1.00 passed=True
+third_largest_distinct rep 4: ev=1.00 passed=True
+third_largest_distinct rep 5: ev=1.00 passed=True
+mode_count rep 0: ev=1.00 passed=True
+mode_count rep 1: ev=1.00 passed=True
+mode_count rep 2: ev=1.00 passed=True
+mode_count rep 3: ev=1.00 passed=True
+mode_count rep 4: ev=1.00 passed=True
+mode_count rep 5: ev=1.00 passed=True
+second_largest rep 0: ev=1.00 passed=True
+second_largest rep 1: ev=1.00 passed=True
+second_largest rep 2: ev=1.00 passed=True
+second_largest rep 3: ev=1.00 passed=True
+second_largest rep 4: ev=1.00 passed=True
+second_largest rep 5: ev=1.00 passed=True
+dedupe rep 0: ev=1.00 passed=True
+dedupe rep 1: ev=1.00 passed=True
+dedupe rep 2: ev=1.00 passed=True
+dedupe rep 3: ev=1.00 passed=True
+dedupe rep 4: ev=1.00 passed=True
+dedupe rep 5: ev=1.00 passed=True
+range_summary rep 0: ev=1.00 passed=True
+range_summary rep 1: ev=1.00 passed=True
+range_summary rep 2: ev=0.40 passed=False
+range_summary rep 3: ev=0.20 passed=False
+range_summary rep 4: ev=1.00 passed=True
+range_summary rep 5: ev=1.00 passed=True
+nth_smallest rep 0: ev=1.00 passed=True
+nth_smallest rep 1: ev=1.00 passed=True
+nth_smallest rep 2: ev=1.00 passed=True
+nth_smallest rep 3: ev=1.00 passed=True
+nth_smallest rep 4: ev=1.00 passed=True
+nth_smallest rep 5: ev=1.00 passed=True
+count_pairs rep 0: ev=1.00 passed=True
+count_pairs rep 1: ev=1.00 passed=True
+count_pairs rep 2: ev=1.00 passed=True
+count_pairs rep 3: ev=1.00 passed=True
+count_pairs rep 4: ev=0.75 passed=False
+count_pairs rep 5: ev=1.00 passed=True
+== SUPPLY TABLE ==
+  count_unique             all_pass  (0/6 failed) conjunction=no
+  sum_distinct             mixed     (1/6 failed) conjunction=YES
+  count_distinct_pairs     mixed     (1/6 failed) conjunction=no
+  sum_of_modes             all_pass  (0/6 failed) conjunction=no
+  count_distinct_over      all_pass  (0/6 failed) conjunction=no
+  third_largest_distinct   all_pass  (0/6 failed) conjunction=no
+  mode_count               all_pass  (0/6 failed) conjunction=no
+  second_largest           all_pass  (0/6 failed) conjunction=no (apply pool, excluded from generation)
+  dedupe                   all_pass  (0/6 failed) conjunction=no (apply pool, excluded from generation)
+  range_summary            mixed     (2/6 failed) conjunction=no (apply pool, excluded from generation)
+  nth_smallest             all_pass  (0/6 failed) conjunction=no (apply pool, excluded from generation)
+  count_pairs              mixed     (1/6 failed) conjunction=no (apply pool, excluded from generation)
+== ELIGIBLE CONTRAST PAIRS: 1 ==
+  within_task: fail=sum_distinct pass=sum_distinct topic=values
+distill within_task sum_distinct: committed
+CLOSING: a gated llama-origin distinctness lesson with an in-pool topic EXISTS; the reverse cell on liftable ground is REACHABLE.
+GATE: PASSED. enumeration printed before any run, 12 tasks at R=6, every run checkpointed, report persisted, store packet-local only.

@@ -1,0 +1,4 @@
+1. **Sorting**: The input list is first sorted to ensure that consecutive numbers are adjacent.
+2. **Iterating and Ranging**: We iterate through the sorted list while keeping track of the start and end of potential ranges.
+3. **Appending Ranges**: Whenever a break in consecutive numbers is detected, we decide whether to append a single number or a range based on the current `start` and `end`.
+4. **Edge Case Handling**: The function checks if the input list is empty at the beginning and returns an empty string if true. This handles the edge case where no numbers are provided.

@@ -1,0 +1,2 @@
+**
+I chose to use a simple and efficient approach by counting the occurrences of '(' and ')' in the string. This works because each opening parenthesis must have a corresponding closing parenthesis, so if the counts are equal, the parentheses are balanced. I also included an explicit note about the edge case where an empty string is considered balanced, as it's not immediately obvious from the code.

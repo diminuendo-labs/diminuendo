@@ -1,0 +1,8 @@
+** 
+To solve this problem, I first sorted the list of ranges to ensure they are in ascending order based on their start times. This makes it easier to compare adjacent ranges and decide whether to merge them or keep them separate.
+
+I then iterated through the sorted list, maintaining a list called `merged` that stores the current merged ranges. For each range, I compared its start time with the end time of the last range in the `merged` list. If the gap between these times is less than or equal to `d`, it means the two ranges overlap or are close enough to merge. In this case, I updated the end time of the last range in the `merged` list to be the maximum of its current end time and the end time of the current range.
+
+If the gap was greater than `d`, the ranges could not merge, so I added the current range to the `merged` list as a new entry.
+
+This approach ensures that all overlapping or closely spaced ranges are merged correctly, and the final result is sorted by start time.

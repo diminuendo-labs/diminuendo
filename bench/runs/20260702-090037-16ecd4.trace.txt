@@ -1,0 +1,4 @@
+**  
+I first ensure the list is sorted and has no duplicates by converting it to a set and then back to a list. I initialize an empty list `result` to store the parts of the final string. Using a while loop, I iterate through the numbers, identifying ranges by checking if each number is consecutive to the next. If a range is found (more than one number), I add it in 'start-end' format; otherwise, I simply add the single number. Finally, I join all parts with commas and return the result.
+
+One edge case that this function handles is an empty input list, returning an empty string as specified.

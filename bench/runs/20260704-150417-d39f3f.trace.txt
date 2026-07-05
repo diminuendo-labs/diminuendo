@@ -1,0 +1,2 @@
+**
+I wrote a function `trimmed_mean` that first checks if the input list is empty, returning `None` immediately to handle this edge case. Then I sort the list and create a new list `dropped` containing the minimum and maximum values. The original list is then iterated over to create a new list `trimmed_nums` without these dropped values. Finally, the sum of the trimmed list divided by its length is calculated as the mean.

@@ -1,0 +1,3 @@
+**
+
+I chose to split the string `s` into a list of words. If the resulting list is empty (meaning the input string was empty), I return an empty string immediately. Otherwise, I find the maximum length of any word in the list using a generator expression. To handle ties by returning the last such word, I iterate over the reversed list of words and return the first word that matches the maximum length. This approach ensures that if there are multiple words with the same longest length, the last one encountered is returned.

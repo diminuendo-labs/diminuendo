@@ -1,0 +1,3 @@
+**
+
+I chose to use the `Counter` class from the `collections` module to efficiently count the occurrences of each word in the input string. To handle the edge case where the largest value appears more than once, I sorted the list of most common words alphabetically and returned the last one, which will have the highest alphabetical value due to Python's lexicographical sorting behavior.

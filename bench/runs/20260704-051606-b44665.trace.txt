@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking for edge cases such as an empty input list or a list with only one element. I then sorted the input pairs based on their start value to ensure that we can easily identify overlapping ranges. Finally, I iterated through the sorted pairs and merged any adjacent ranges that overlap or touch, storing the result in the `ranges` list.

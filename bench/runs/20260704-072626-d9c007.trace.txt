@@ -1,0 +1,9 @@
+**
+
+To solve the task, I first ensure that the input list `pairs` is not empty. If it is, an empty list is returned immediately as there are no ranges to merge.
+
+I then sort the list of pairs by their start times. This allows me to process the pairs in order, ensuring that any potential overlaps or touches will be adjacent in the sorted list.
+
+I initialize a `merged` list with the first range from the sorted list. I iterate through the remaining ranges and check if they overlap or touch with the last range in the `merged` list. If they do, I extend the end time of the last merged range to cover the current range. If not, I simply add the current range to the `merged` list.
+
+This approach ensures that all overlapping or touching ranges are merged into a single range and that the final result is sorted by start time. The edge case of an empty input list is handled gracefully by returning an empty list immediately.

@@ -1,0 +1,8 @@
+**
+To solve this problem, I first checked if the input string `s` is empty. If it is, I immediately returned an empty string as specified in the edge case. Otherwise, I split the string into words using `s.split()`, which handles whitespace and returns a list of words.
+
+I then initialized two variables: `max_length` to keep track of the length of the longest word found so far, and `longest_word` to store the actual word with this maximum length.
+
+I iterated over the list of words in reverse order using `reversed(words)`. This ensures that if there are ties (multiple words of the same maximum length), I return the last such word as required. For each word, I compared its length to `max_length`. If the current word's length is greater than or equal to `max_length`, I updated both `longest_word` and `max_length`.
+
+Finally, after iterating through all the words, I returned the `longest_word`. This approach ensures that the function is correct, concise, and readable while handling the specified edge case.

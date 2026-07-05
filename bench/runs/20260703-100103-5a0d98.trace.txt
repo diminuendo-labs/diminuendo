@@ -1,0 +1,2 @@
+**
+I chose to split the string into a list of words and then iterate over them in reverse order to find the longest word(s). If multiple words have the same maximum length, the last one encountered will be returned due to the reverse iteration. This approach ensures that I handle ties by returning the last such word as specified. Additionally, I checked for an empty string input to return an empty string immediately, handling this edge case effectively.

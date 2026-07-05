@@ -1,0 +1,2 @@
+**
+I chose a straightforward approach by using Python's built-in `count()` method to compare the number of opening and closing parentheses in the input string. This approach is concise and readable, making it easy to understand that an empty string or any string with an equal number of opening and closing parentheses will return True. By ignoring other characters in the string, this function effectively handles edge cases such as strings containing other types of brackets or special characters.

@@ -1,0 +1,3 @@
+**
+
+I started by sorting the input pairs based on their start times to ensure that any overlapping or touching ranges are adjacent. Then, I iterated through the sorted list, maintaining a list of merged ranges. For each pair, if it overlaps or touches the last range in the merged list, I updated the end time of the last range. If it does not overlap or touch, I added the current range to the merged list. This approach ensures that all overlapping or touching ranges are correctly merged and the final list is sorted by start time. The edge case handled here is an empty input list, which returns an empty list as expected.

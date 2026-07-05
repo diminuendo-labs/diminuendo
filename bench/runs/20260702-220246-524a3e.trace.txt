@@ -1,0 +1,7 @@
+**
+
+I used the `re` module to handle regular expressions for splitting words and stripping punctuation. The function first checks if the input string is empty and returns 0 immediately if it is. Then, it uses a regular expression to split the sentence into individual words while preserving whitespace boundaries.
+
+For each word, the function strips any leading or trailing punctuation using another regular expression that matches non-word characters at the start or end of a word. It then compares the cleaned word (in lower case) with the target word `w`, also converted to lower case and stripped of punctuation for a case-insensitive comparison. The function counts each match found.
+
+This approach ensures the function is both concise and readable, while handling edge cases like empty strings appropriately.

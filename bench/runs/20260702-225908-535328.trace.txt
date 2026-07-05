@@ -1,0 +1,2 @@
+**
+I chose a simple and readable approach by using the `split` method to split the input string into words, then used a generator expression with `capitalize` to convert each word to camelCase. I decided against any explicit leading/trailing underscore checks since the task implicitly includes them in its definition of "drop". The edge case this handles is an empty string, which is correctly returned as ''.

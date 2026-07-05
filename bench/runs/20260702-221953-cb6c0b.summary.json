@@ -1,0 +1,53 @@
+{
+  "run_id": "20260702-221953-cb6c0b",
+  "node_id": "task-20260702-221953-cb6c0b",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code meets all the criteria, but it does not handle input validation for empty lists or non-list inputs.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5,
+    "at least one edge case is named": 4,
+    "input validation is present": 1
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**  \n```python\ndef flatten_once(lst):\n    flat_list = []\n    for element in lst:\n        if isinstance(element, list):\n            flat_list.extend(element)\n        else:\n            flat_list.append(element)\n    return flat_list\n```\n\n**",
+  "trace": "**  \nI created a function `flatten_once` that iterates through each element in the input list. If an element is a list itself, it extends the result list with its elements using the `extend()` method. For non-list elements, it simply appends them to the result list. This ensures exactly one level of nesting is flattened while deeper nesting remains untouched. The function handles nested lists within the top-level list as specified in the task criteria.",
+  "totals": {
+    "time_s": 19.4713892,
+    "tokens": 605
+  },
+  "files": [
+    "20260702-221953-cb6c0b.crumbs.jsonl",
+    "20260702-221953-cb6c0b.trace.txt"
+  ]
+}

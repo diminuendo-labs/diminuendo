@@ -1,0 +1,2 @@
+**
+I approached this task by splitting the input string `s` into a list of tokens based on the underscore delimiter. Then, I used a generator expression to iterate over these tokens, converting each to lowercase unless it was found in the provided exception list `exceptions`. These tokens were then joined together without any separators. This method ensures that all tokens follow camel case except for those specified in the exceptions list.

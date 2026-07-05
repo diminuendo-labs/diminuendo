@@ -1,0 +1,8 @@
+To solve this task, I followed these steps:
+
+1. **Sorting and Deduplication**: The input list is first sorted to ensure that consecutive numbers are adjacent, and duplicates are removed by converting it to a set.
+2. **Handling Edge Case**: An empty list returns an empty string immediately.
+3. **Iterating and Ranging**: I used a loop to iterate through the sorted unique numbers. If a number is consecutive to the previous one, I extended the range. Otherwise, I added the current range (or single number) to the result and started a new range.
+4. **Final Check**: After the loop, I made sure to add the last range to the result.
+
+This approach ensures that the function correctly handles all edge cases and efficiently summarizes consecutive ranges in the input list.

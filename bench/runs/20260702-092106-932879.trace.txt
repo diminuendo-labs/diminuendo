@@ -1,0 +1,2 @@
+**
+I achieved this task by using Python's built-in string methods `split()` and `capitalize()`. The function splits the input string into words separated by underscores, filters out any empty strings (which would be created if there were consecutive underscores), and then capitalizes each word. Finally, it joins these capitalized words together with no separator to create the desired camelCase format.

@@ -1,0 +1,2 @@
+**  
+I used Python's string manipulation capabilities to achieve this. The function splits the input string `s` by underscores, capitalizes each non-empty segment, and then joins them together. The `.strip('_')` at the end ensures that any leading or trailing underscores are removed from the final result. This handles edge cases like repeated underscores and empty strings gracefully.

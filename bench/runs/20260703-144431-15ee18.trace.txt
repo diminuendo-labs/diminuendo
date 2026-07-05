@@ -1,0 +1,3 @@
+**
+
+I started by adding a simple edge case check for an empty input list. Then, I used a set to remove duplicates and sorted the set in descending order to easily get the largest and second-largest values. Finally, I added a check to ensure there are at least two distinct values before returning the second largest value. This approach is concise and readable due to its simplicity and use of built-in functions like `set` and `sorted`.

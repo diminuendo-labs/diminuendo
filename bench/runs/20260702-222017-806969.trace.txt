@@ -1,0 +1,2 @@
+**
+The function `snake_to_camel` converts a snake_case string to camelCase by splitting the input string on underscores, capitalizing each resulting substring (excluding empty strings), and then joining them together. The edge case where an empty string is passed in is handled directly by returning an empty string.

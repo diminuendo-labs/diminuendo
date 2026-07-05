@@ -1,0 +1,2 @@
+**
+I chose to use a simple iterative approach, scanning the input string from left to right. I kept track of the maximum length and character seen so far, as well as the current character being processed and its count. When encountering a new character, I updated the maximums if necessary and reset the current counter. This way, I avoided using any data structures more complex than simple variables, keeping the code concise and readable.

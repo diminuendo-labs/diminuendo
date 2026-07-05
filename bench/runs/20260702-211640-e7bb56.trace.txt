@@ -1,0 +1,5 @@
+1. I used a set `seen` to keep track of numbers we've encountered so far.
+2. Another set `pairs` is used to store distinct pairs that sum to the target. Storing them as tuples ensures that order doesn't matter (e.g., both (1, 3) and (3, 1) are considered the same pair).
+3. For each number in the list, I calculate its complement with respect to the target. If this complement has already been seen, it means we have a valid pair.
+4. By sorting the pair before adding it to `pairs`, we ensure that duplicate pairs are not counted multiple times.
+5. Finally, the length of the `pairs` set gives us the count of distinct pairs that sum up to the target.

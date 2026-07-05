@@ -1,0 +1,2 @@
+**
+I used Python's built-in `split` and `capitalize` functions to achieve the conversion. By splitting on `_` and then capitalizing each resulting substring (excluding empty ones), I effectively converted snake_case to camelCase while removing leading/trailing/repeated underscores. The edge case handled by this function is when an input string contains only underscores, in which case it returns an empty string (`''`).

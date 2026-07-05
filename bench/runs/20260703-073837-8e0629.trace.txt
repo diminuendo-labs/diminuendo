@@ -1,0 +1,2 @@
+**
+To create the `clamp` function that returns a value clamped between two inclusive bounds (`lo` and `hi`), I used Python's built-in `max` and `min` functions. The `max` function ensures the returned value does not fall below `lo`, while the `min` function caps it at `hi`. If `lo` is greater than `hi`, indicating a degenerate range, the function returns `None`. This approach ensures the code is concise and readable, handling all edge cases as specified.

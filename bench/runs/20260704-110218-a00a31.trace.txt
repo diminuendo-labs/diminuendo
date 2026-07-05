@@ -1,0 +1,2 @@
+**
+I chose a simple and concise approach by directly comparing the counts of '(' and ')' characters in the input string. This approach assumes that there are no unmatched opening or closing parentheses other than these two delimiters. The edge case this handles is an empty string, which would also be considered balanced according to the problem statement. By not using any complex data structures or recursion, I aimed to keep the code as readable and efficient as possible.

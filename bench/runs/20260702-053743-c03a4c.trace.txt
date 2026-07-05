@@ -1,0 +1,2 @@
+**  
+I started by defining a function `flatten_once` that takes a list as its argument. I then initialized an empty list `result` to store the flattened elements. As I iterate through each element in the input list, I check if it is a list itself using `isinstance`. If it is, I extend my result list with the items from this nested list. If it is not a list, I simply append it to the result list as is. This ensures that only one level of nesting is flattened, and deeper lists remain nested.

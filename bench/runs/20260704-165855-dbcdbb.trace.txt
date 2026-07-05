@@ -1,0 +1,2 @@
+**  
+The `chunk_pad` function first checks if the input list `lst` is empty or if `k` is less than or equal to zero. If either condition is true, it returns an empty list as specified in the edge case handling rule. Otherwise, it proceeds to split the list into chunks of size `k` using a list comprehension. Finally, it appends additional empty lists (padded with None) to ensure that each chunk has exactly `k` elements. This ensures that the function handles both regular and edge cases correctly while maintaining readability and conciseness.

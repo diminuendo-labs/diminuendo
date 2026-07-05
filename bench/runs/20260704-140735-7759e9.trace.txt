@@ -1,0 +1,5 @@
+**
+
+The function `collapse_delims` first splits the input string `s` by commas. It then uses a list comprehension to filter out any empty or whitespace-only pieces, ensuring that only non-empty pieces are kept. Finally, it joins these pieces back together with a single comma between each using the `join()` method.
+
+One edge case this function handles is multiple consecutive commas in the input string. For example, if the input is `'a,,b,c'`, the output will be `'a,b,c'` instead of `'a,,b,c'`.

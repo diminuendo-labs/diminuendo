@@ -1,0 +1,2 @@
+**  
+The function `chunk` takes a list `lst` and an integer `size`. It first checks if the `size` is less than or equal to zero. If so, it returns an empty list as specified. Otherwise, it uses a list comprehension to create chunks of the desired size by slicing the input list from `i` to `i + size`, where `i` ranges from 0 to the length of the list in steps of `size`. This approach ensures that all elements are included and the last chunk is shorter if necessary.

@@ -1,0 +1,32 @@
+{
+  "run_id": "20260702-020536-90fed5",
+  "node_id": "task-20260702-020536-90fed5",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function is mostly correct, handles edge cases well, but could be more concise.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_case_handled": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [],
+    "error": "File \"C:\\Users\\bradl\\AppData\\Local\\Temp\\tmpm_11s6fr.py\", line 8\n    return [item for item in lst if isinstance(item, list) else item]\n                                                           ^^^^\nSyntaxError: invalid syntax"
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting.\n\n    :param lst: The input list, possibly containing nested lists.\n    :return: A new list with one level of nesting removed.\n    \"\"\"\n    return [item for item in lst if isinstance(item, list) else item]\n```\n\n**",
+  "trace": "**\nI chose to use a list comprehension to create the output list. This approach is concise and readable because it directly expresses the transformation needed on each element of the input list. I handled the edge case where an empty list is passed as input; this function will return an empty list in such a case, which seems like a reasonable behavior given that there's no nesting to remove.",
+  "totals": {
+    "time_s": -2.7582684000000004,
+    "tokens": 38
+  },
+  "files": [
+    "20260702-020536-90fed5.crumbs.jsonl",
+    "20260702-020536-90fed5.trace.txt"
+  ]
+}

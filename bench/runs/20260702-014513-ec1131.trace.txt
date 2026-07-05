@@ -1,0 +1,2 @@
+**
+I used a simple state machine approach to track the balance of parentheses. The function iterates through each character in the string, incrementing a counter for an opening parenthesis and decrementing it for a closing one. If at any point the counter goes negative, it immediately returns `False` as this indicates a premature closing parenthesis. Finally, if the loop completes and the counter is back to zero, the function returns `True`, indicating balanced parentheses. This approach ensures the code is concise and readable while handling all edge cases effectively.

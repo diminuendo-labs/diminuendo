@@ -1,0 +1,2 @@
+- The function first checks if the input list is empty, returning None in such a case. If not, it sorts the list and calculates the trimmed mean using simple arithmetic operations.
+- To handle edge cases where the minimum or maximum value occurs multiple times, we iterate through the sorted list until we find unique occurrences of the minimum and maximum values. This way, we can accurately identify the indices to be excluded when calculating the trimmed mean.

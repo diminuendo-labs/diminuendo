@@ -1,0 +1,2 @@
+**
+I chose to use a simple sorting approach, as the problem requires sorted output and it's efficient for small inputs. By sorting by start, I can iterate over the list once and merge adjacent ranges on the fly. This also handles the edge case of an empty input returning an empty list.

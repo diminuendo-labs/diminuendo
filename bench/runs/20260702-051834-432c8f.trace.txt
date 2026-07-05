@@ -1,0 +1,1 @@
+** I first checked if the input list `nums` is empty, returning 0 immediately as an edge case. Then, I used a dictionary to count occurrences of each number. Finally, I calculated the number of values that appear exactly once by summing up values in the dictionary that equal 1. This approach ensures clarity and efficiency while handling the specified requirements.

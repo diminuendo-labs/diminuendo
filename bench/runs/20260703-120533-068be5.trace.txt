@@ -1,0 +1,5 @@
+**
+
+The function `range_summary` first handles the edge case where an empty list is passed, returning an empty string. It then sorts the unique numbers in ascending order to facilitate the grouping of consecutive numbers into ranges. The function iterates through the sorted numbers, checking if each number is consecutive to the previous one. If not, it appends the current range (or single number) to the summary list and resets the start and end variables for the new potential range. Finally, after the loop, it adds any remaining range or single number to the summary. The ranges and numbers are then joined into a string separated by commas and returned.
+
+The use of `sorted(set(nums))` ensures that duplicates are removed and the list is sorted, while iterating through the list only once provides an efficient solution with a time complexity of O(n log n) due to sorting followed by a linear scan.

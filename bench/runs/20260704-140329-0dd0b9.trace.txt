@@ -1,0 +1,3 @@
+**
+
+The function `trimmed_mean` calculates the mean of a list after removing one occurrence of both the minimum and maximum values. It first checks if the list has 2 or fewer elements, in which case it returns `None`. If not, it removes one instance each of the smallest and largest numbers from the list using the `remove()` method. Finally, it computes and returns the mean of the remaining numbers as a float. This function handles all edge cases specified in the criteria, including empty lists and lists with duplicate values where the minimum and maximum are the same.

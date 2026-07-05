@@ -1,0 +1,2 @@
+**  
+I first handle the edge case where the input list is empty, returning an empty string immediately. Then, I sort and deduplicate the list to ensure each number appears only once and is in ascending order. Using a while loop, I iterate through the list, identifying consecutive runs of numbers. For each run, I determine whether it should be represented as a single number or a range and append the appropriate string to the result list. Finally, I join all elements of the result list with commas to form the final output.

@@ -1,0 +1,2 @@
+**
+I implemented the function by first checking for the edge case of an empty list, which returns None. Then I used the built-in `sorted` function to sort the input list, as it is assumed that the input list is not already sorted. The rest of the function calculates the middle index and uses conditional logic to determine whether to return the single middle value or the average of the two middle values, depending on whether the length of the list is odd or even.

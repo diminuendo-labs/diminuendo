@@ -1,0 +1,2 @@
+**  
+I used a list comprehension to split the string by commas, strip any whitespace from each piece, and filter out empty strings. Then I joined the remaining pieces with a single comma between each. This approach ensures that consecutive commas are treated as one split and that leading/trailing spaces around delimiters do not affect the output. The edge case of leading or trailing commas is handled by `p.strip()` within the list comprehension, which drops any empty strings resulting from these cases.

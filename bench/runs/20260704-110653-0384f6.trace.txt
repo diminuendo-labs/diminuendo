@@ -1,0 +1,2 @@
+**
+I chose to write a simple iterative function using a stack data structure. The approach involves iterating over the input string, pushing opening parentheses onto the stack and popping them off when closing parentheses are encountered. If a closing parenthesis is encountered without its matching opening partner (edge case: ')('), the function immediately returns False. Finally, an empty stack means all parentheses were balanced, so the function returns True. This solution is concise and readable, with clear variable names and comments to explain its logic.

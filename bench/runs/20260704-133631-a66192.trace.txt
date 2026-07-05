@@ -1,0 +1,8 @@
+**
+To solve this problem, I first checked if the input list `pairs` is empty. If it is, I returned an empty list immediately since there's nothing to merge.
+
+Next, I sorted the list of ranges based on their start values to ensure that I can iterate through them in order and check for overlaps easily.
+
+I then initialized a new list called `merged` with the first range from the sorted list. As I iterated through the remaining ranges, I compared each range's start value with the end value of the last merged range. If they overlap or share an endpoint (i.e., if the current start is less than or equal to the last end), I merged them by updating the end of the last merged range. If they don't overlap, I simply appended the new range to the `merged` list.
+
+This approach ensures that the merged ranges are sorted and handles overlapping or sharing endpoints correctly while keeping separated ranges distinct.

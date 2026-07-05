@@ -1,0 +1,3 @@
+** 
+
+I chose to use a list comprehension within a generator expression to iterate over the input list `lst` in chunks of size `k`. For each chunk, if its length is less than `k`, I padded it with `None` using `[None]*(k-len(lst[i:i+k]))`. This ensures that every chunk has exactly `k` elements. The edge case of an empty list is handled by returning an empty list immediately.

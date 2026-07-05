@@ -1,0 +1,2 @@
+**
+I implemented the function using a generator expression to compute the weighted sum of values and weights. This approach is concise and efficient as it avoids creating an intermediate list. I also explicitly handled the edge case where either input list is empty, which would otherwise raise a ValueError in the original implementation.

@@ -1,0 +1,2 @@
+**
+I used Python's built-in `re` module for regular expressions to split the string on one or more commas (`',+'`). This allows consecutive commas to be treated as a single split. I then joined the resulting list of pieces back together with a single comma between each using the `join()` method, which is concise and readable. The edge case where the input string is empty is handled implicitly by the fact that `re.split` returns an empty list in this case, and `join` will return an empty string when given an empty list to join.

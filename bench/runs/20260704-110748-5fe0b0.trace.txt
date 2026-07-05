@@ -1,0 +1,2 @@
+**
+I chose a straightforward approach by simply counting the occurrences of '(' and ')' in the input string. This method works because it effectively ignores any characters other than parentheses. I did not normalize delimiters before processing, as it would add unnecessary complexity to this simple problem. By relying on the `count` method of strings, the code is concise and readable while handling the edge case where an empty string is considered balanced.

@@ -1,0 +1,3 @@
+**
+
+I implemented the `token_case` function by first splitting the input string into tokens using underscore as a delimiter. Then, I iterated through each token and applied the required transformations (lowercasing or capitalizing) based on its position in the list and whether it's an exception. The result is then joined back together with no separator to form the final camel case string. One edge case this function handles is when all tokens are exceptions; for example, given the input `'URL_URL'`, the output will be `'URL_URL'` instead of being modified.

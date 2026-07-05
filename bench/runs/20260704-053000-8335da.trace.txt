@@ -1,0 +1,2 @@
+**
+I used the built-in string methods `strip()` and `replace()` to efficiently handle leading/trailing and repeated underscores respectively. I chose to use `capitalize()` instead of concatenating substrings or using a loop, as it is more concise and readable while still being efficient. The edge case handled by this function is an empty string input, which returns an empty string.

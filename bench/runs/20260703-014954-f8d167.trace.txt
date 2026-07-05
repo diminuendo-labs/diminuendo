@@ -1,0 +1,2 @@
+**
+I used the built-in `split` method to split the input string into a list of whitespace-separated words. Then, I checked for the edge case where the input is an empty string or only contains spaces by checking if the resulting list is empty. If so, I returned an empty string. Otherwise, I used the `max` function with the `key=len` argument to find and return the longest word in the list, breaking ties by returning the last such word. This approach is concise and readable, meeting all requirements.

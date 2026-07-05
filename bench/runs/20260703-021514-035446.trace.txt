@@ -1,0 +1,2 @@
+**
+The function `snake_to_camel` takes a string `s` in snake_case and converts it to camelCase. It splits the string by underscores, capitalizes each non-empty segment, and joins them together without any separators. This approach ensures that leading, trailing, and repeated underscores are dropped as required. Edge cases such as an empty string or strings with multiple consecutive underscores are handled correctly.

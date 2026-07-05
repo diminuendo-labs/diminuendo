@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-142747-7cc137",
+  "node_id": "task-20260704-142747-7cc137",
+  "task": "Write a Python function kth_ordered(words, k) returning the k-th word, counting from 1, when the words are ordered by increasing length, and words of equal length are ordered reverse-alphabetically among themselves. Return None when k is out of range. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The solution correctly handles the condition where k is out of range, but does not explicitly name other edge cases in comments or docstrings.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5,
+    "at least one edge case is named": 1
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "kth_ordered(['dd', 'a', 'ccc'], 2)",
+        "ok": true,
+        "got": "'dd'",
+        "expect": "'dd'"
+      },
+      {
+        "call": "kth_ordered(['a', 'bb'], 1)",
+        "ok": false,
+        "got": "'bb'",
+        "expect": "'a'"
+      },
+      {
+        "call": "kth_ordered(['a'], 3)",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n```python\ndef kth_ordered(words, k):\n    if not (1 <= k <= len(words)):\n        return None\n    \n    sorted_words = sorted(words, key=lambda x: (-len(x), x[::-1]))\n    return sorted_words[k-1]\n```\n\n**",
+  "trace": "**\nThe function `kth_ordered` sorts the list of words based on two criteria. First, it sorts by the negative length of the words to get increasing length order. Second, for words of equal length, it uses a reverse lexicographical sort by reversing each word and sorting those. The lambda function in the `sorted` call handles these two sorting conditions. Finally, it returns the k-th word (adjusting for 0-based indexing). The edge case where k is out of range is handled at the beginning with a simple check and returning `None`.",
+  "totals": {
+    "time_s": 1.1163012000000005,
+    "tokens": -24
+  },
+  "files": [
+    "20260704-142747-7cc137.crumbs.jsonl",
+    "20260704-142747-7cc137.trace.txt"
+  ]
+}

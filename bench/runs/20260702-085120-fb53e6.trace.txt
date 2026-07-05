@@ -1,0 +1,16 @@
+**
+
+1. **Edge Case Handling**: I started by checking if the input list `nums` is empty. If it is, I immediately return an empty string since there's nothing to process.
+
+2. **Sorting**: The list is sorted in ascending order to facilitate the grouping of consecutive numbers into ranges.
+
+3. **Range Identification and Construction**:
+   - I initialized `start` and `end` with the first element of the sorted list.
+   - As I iterate through the sorted list, I check if the current number is exactly one more than `end`. If it is, I update `end`.
+   - If not, I add the range (`start-end`) or a single number (`start`) to the `ranges` list, and then reset `start` and `end` to the current number.
+
+4. **Final Range Addition**: After the loop, I need to append the last range or number to the `ranges` list since it won't be added in the loop.
+
+5. **Joining Ranges**: Finally, I join all ranges with commas to form the final string and return it.
+
+This approach ensures that the function is correct, concise, and handles edge cases, such as an empty input list.

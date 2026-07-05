@@ -1,0 +1,31 @@
+GEN CALIBRATION 20260703-072720: 9 candidates x 2 seats x R_G=3
+A=qwen2.5-coder:7b  B=llama3.1:8b  no lessons, cross-family audience
+longest_run_char seat A: all_pass (0/3 failed)
+longest_run_char seat B: mixed (2/3 failed)
+least_frequent_word seat A: all_pass (0/3 failed)
+least_frequent_word seat B: mixed (1/3 failed)
+count_distinct_over seat A: all_pass (0/3 failed)
+count_distinct_over seat B: all_pass (0/3 failed)
+third_largest_distinct seat A: all_pass (0/3 failed)
+third_largest_distinct seat B: all_pass (0/3 failed)
+mode_count seat A: all_pass (0/3 failed)
+mode_count seat B: mixed (1/3 failed)
+clamp seat A: all_pass (0/3 failed)
+clamp seat B: all_pass (0/3 failed)
+nth_page seat A: all_pass (0/3 failed)
+nth_page seat B: all_pass (0/3 failed)
+split_csvish seat A: all_pass (0/3 failed)
+split_csvish seat B: all_pass (0/3 failed)
+depth_max seat A: all_pass (0/3 failed)
+depth_max seat B: all_pass (0/3 failed)
+== TABLE (case per task per seat) ==
+  longest_run_char       [tie_break   ] A=all_pass B=mixed
+  least_frequent_word    [tie_break   ] A=all_pass B=mixed
+  count_distinct_over    [distinctness] A=all_pass B=all_pass
+  third_largest_distinct [distinctness] A=all_pass B=all_pass
+  mode_count             [distinctness] A=all_pass B=mixed
+  clamp                  [boundary    ] A=all_pass B=all_pass
+  nth_page               [boundary    ] A=all_pass B=all_pass
+  split_csvish           [normalize   ] A=all_pass B=all_pass
+  depth_max              [normalize   ] A=all_pass B=all_pass
+report: gencal-20260703-072720.report.json

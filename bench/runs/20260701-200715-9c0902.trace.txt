@@ -1,0 +1,2 @@
+**
+To solve the problem, I first removed duplicate values from the input list `nums` using `set()` and converted it back to a list called `unique_nums`. This ensures that we are only considering distinct values. Then, I checked if there were fewer than two distinct values, in which case the function returns `None`. If there are at least two distinct values, I sorted the list in descending order and returned the second element, which is the second largest value.

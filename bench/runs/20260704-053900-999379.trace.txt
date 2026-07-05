@@ -1,0 +1,2 @@
+**
+I chose to implement the `flatten_once` function using a simple iterative approach. I defined a recursive structure that iterates over each element in the input list and checks if it's a list itself. If it is, its elements are appended to the result list; otherwise, the original element is added. This approach handles edge cases like empty or None inputs by implicitly returning an empty list when encountering them. I also included docstrings for clarity on function behavior and usage.

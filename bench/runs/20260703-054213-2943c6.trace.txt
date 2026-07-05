@@ -1,0 +1,2 @@
+**
+The function `weighted_mean` takes two parameters: `values` and `weights`. It first checks if either list is empty or if the total weight is zero. If any of these conditions are true, it returns `None`. Otherwise, it calculates the weighted mean by summing each value multiplied by its corresponding weight, then dividing by the total weight. This approach ensures that the function handles edge cases gracefully and provides the correct result when input is valid.

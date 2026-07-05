@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-170635-52a963",
+  "node_id": "task-20260703-170635-52a963",
+  "task": "Write a Python function depth_max(s) returning the maximum nesting depth of square brackets in the string, counting only the characters [ and ] and ignoring everything else. When a closing bracket appears before its opener, or any opener is never closed, return -1. An empty string returns 0. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly handles the maximum nesting depth of square brackets in a string.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "depth_max('[a[b]]')",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "depth_max(']fine[')",
+        "ok": true,
+        "got": "-1",
+        "expect": "-1"
+      },
+      {
+        "call": "depth_max('[[')",
+        "ok": false,
+        "got": "2",
+        "expect": "-1"
+      },
+      {
+        "call": "depth_max('')",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef depth_max(s):\n    depth = 0\n    max_depth = 0\n    for char in s:\n        if char == '[':\n            depth += 1\n            max_depth = max(depth, max_depth)\n        elif char == ']':\n            if not depth:\n                return -1  # edge case: closing bracket before opening\n            depth -= 1\n    return max_depth or 0  # for an empty string\n```",
+  "trace": "In this solution, we traverse the input string from left to right and maintain two variables: `depth` to keep track of the current nesting level, and `max_depth` to store the maximum depth encountered so far. If a '[' is found, we increment the `depth`. If a ']' is found, we decrement the `depth` and check if the `depth` is 0 (indicating an unmatched opening bracket). If there's ever a closing bracket before its corresponding opening one, we return -1 as an edge case. Finally, we return the maximum depth encountered or 0 for an empty string.",
+  "totals": {
+    "time_s": -1.1227365000000002,
+    "tokens": -80
+  },
+  "files": [
+    "20260703-170635-52a963.crumbs.jsonl",
+    "20260703-170635-52a963.trace.txt"
+  ]
+}

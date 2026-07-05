@@ -1,0 +1,2 @@
+**
+I chose to use a dictionary `freq` to store the frequency of each lowercase letter in `s`. This allows me to easily keep track of the maximum frequency and retrieve all letters with that frequency. To break ties alphabetically, I used a list comprehension to get all letters with the maximum frequency, and then returned the smallest one using the `min` function.

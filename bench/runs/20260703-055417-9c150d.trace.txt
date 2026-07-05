@@ -1,0 +1,2 @@
+**
+I implemented the function by directly utilizing Python's built-in `range` function to generate the sequence of numbers. I chose this approach because it is straightforward and efficient for generating sequences with a specified start, stop, and step. The edge case where `start` is at or past `stop` is explicitly handled in the function's conditionals, ensuring that an empty list is returned in these scenarios.

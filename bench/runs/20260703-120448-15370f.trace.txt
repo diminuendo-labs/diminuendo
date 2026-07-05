@@ -1,0 +1,2 @@
+**  
+I chose to split the input string `s` into a list of words using `str.split()`. To handle the edge case where an empty string is passed, I checked if `s` is empty at the beginning and returned an empty string immediately. For finding the longest word, I used Python's built-in `max()` function with the `key=len` argument to find the word with maximum length. If there are multiple words of the same maximum length, `max()` returns the last one by default, which satisfies the problem requirement.

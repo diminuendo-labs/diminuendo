@@ -1,0 +1,3 @@
+**
+
+I started by sorting the list of pairs based on their start value to ensure that any potential overlaps are adjacent. Then, I iterated through the sorted list and used a greedy algorithm to merge overlapping or touching ranges into a single range whenever possible. This approach ensures that the function is both correct and concise, as it only requires a single pass through the list after sorting. The edge case of an empty input list is handled by returning an empty list immediately, ensuring robustness.

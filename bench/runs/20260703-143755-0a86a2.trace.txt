@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for the two edge cases: an empty list and a list with fewer than three distinct values. If either of these conditions are met, I immediately return None. Otherwise, I convert the input list to a set (which automatically removes duplicates) and sort it in descending order. Finally, I return the third element of this sorted list, which corresponds to the third largest distinct value.

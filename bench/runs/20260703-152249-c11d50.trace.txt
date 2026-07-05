@@ -1,0 +1,7 @@
+**
+
+The function `range_summary` first checks if the input list `nums` is empty and returns an empty string if so. It then sorts the list to ensure that consecutive numbers are adjacent, simplifying the task of identifying ranges.
+
+The algorithm uses two pointers, `start` and `end`, initialized to the first element of the sorted list. It iterates through the rest of the list, updating the `end` pointer when it encounters consecutive numbers. When a non-consecutive number is found, it appends either a single number or a range (`start-end`) to the result list based on whether `start` equals `end`. After processing all elements, it ensures the final range or number is added to the result.
+
+This approach ensures that the function handles edge cases such as an empty input gracefully and correctly identifies and collapses consecutive numbers into ranges.

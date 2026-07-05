@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to count the occurrences of each word. To handle ties alphabetically, I created a list comprehension that selects all words with the maximum count and then returned the smallest one using the built-in `min` function. This approach is concise while still being readable, as it clearly shows how the most common word is determined. The edge case for an empty string is explicitly handled by returning an empty string when there are no words in the input string.

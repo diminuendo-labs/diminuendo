@@ -1,0 +1,2 @@
+**
+I defined a function `count_distinct_over` that takes two arguments, `nums` and `k`, using the built-in `set` data structure to efficiently eliminate duplicate values. The edge case where an empty list is passed is handled implicitly by the fact that a set created from an empty iterable will be empty, thus making `len()` return 0. This approach avoids the need for explicit error checking or additional logic, keeping the code concise and readable while ensuring correct behavior in all cases.

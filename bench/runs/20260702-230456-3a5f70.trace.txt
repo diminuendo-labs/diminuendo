@@ -1,0 +1,3 @@
+**
+
+I approached this task by first checking for the edge case of an empty input list, as specified. Then, I used a set to remove duplicates from the input list and sorted it in ascending order. To handle consecutive runs, I iterated over the sorted list, keeping track of the start of each run, and only appending the range when the current number is not consecutive to the previous one.

@@ -1,0 +1,2 @@
+**
+I implemented a simple and concise function using Python's built-in `count()` method, which counts the occurrences of a substring in a given string. I chose this approach because it is easy to read and understand, and it directly addresses the problem statement by comparing the counts of opening and closing parentheses. The edge case for an empty string is explicitly mentioned in the docstring, highlighting that it returns True as per the problem's definition.

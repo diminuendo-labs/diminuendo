@@ -1,0 +1,2 @@
+**
+I chose to use the `split()` method to split the input string into a list of words. This approach is concise and readable because it's a built-in string method that clearly communicates its intent. To handle ties, I iterated through the list of words once and kept track of the last word that had the maximum length. This way, if there are multiple words with the same maximum length, I can return the last one I encountered.

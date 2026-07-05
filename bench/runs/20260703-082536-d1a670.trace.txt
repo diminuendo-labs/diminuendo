@@ -1,0 +1,3 @@
+**
+
+I chose to use Python's built-in `max` function with a custom `key` argument, which takes the largest value in the list while maintaining its original index. This approach is concise and readable, as it directly applies a function to each element of the iterable (in this case, tuples containing values from the list along with their indices). I also handled the edge case where the input list is empty by raising a `ValueError`.

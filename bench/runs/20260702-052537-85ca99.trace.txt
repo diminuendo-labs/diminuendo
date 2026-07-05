@@ -1,0 +1,5 @@
+**
+
+To implement the `equal_ignoring_spaces` function, I first addressed the edge case where either or both input strings might be `None`. If both are `None`, they are considered equal. If only one is `None`, they are not equal.
+
+For the core functionality, I used Python's built-in string methods to remove whitespace and convert the strings to lowercase. The `split()` method without any arguments removes all whitespace characters, and the `lower()` method converts all characters to their lowercase equivalents. Finally, I compared the cleaned versions of both strings for equality. This approach ensures that the function is concise, readable, and handles the specified edge case effectively.

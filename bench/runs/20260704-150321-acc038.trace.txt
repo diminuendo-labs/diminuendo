@@ -1,0 +1,2 @@
+**
+I defined the `trimmed_mean` function with a docstring explaining its purpose. To handle the edge case where all elements are the same, I added a conditional statement that checks if the length of the set of input numbers is 1, and returns their average if so (i.e., the "mean" is not truly representative in this scenario). Otherwise, I find the minimum and maximum values in the list, create a new list with these removed, calculate the mean of the trimmed list, and return it.

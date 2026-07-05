@@ -1,0 +1,2 @@
+**
+I used the built-in `split()` method to split the input string into a list of words. I then used the `max()` function with the `key` argument set to `len`, which returns the length of each word. To handle ties, I used the `or next` trick, which returns the first non-empty value from an iterable (in this case, the `next()` function is called on an empty iterator if all words have the same maximum length). This approach is concise and readable, and it handles the edge case where the input string is empty.

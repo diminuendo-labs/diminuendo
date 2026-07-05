@@ -1,0 +1,2 @@
+**
+I chose a concise and readable approach using the built-in `split()` method to split the input string into words, followed by a generator expression to capitalize each non-empty word. This handles the edge case where an empty string is passed as input, which would otherwise raise an exception. The use of `''.join(...)` allows for easy concatenation of the capitalized words.

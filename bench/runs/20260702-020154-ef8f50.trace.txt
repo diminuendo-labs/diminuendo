@@ -1,0 +1,3 @@
+**
+
+The function `range_summary` takes a list of integers and returns a string representing the distinct values in ascending order. The approach involves sorting the input list to ensure that consecutive runs are grouped together. We then iterate through the sorted list, tracking the start and end of each run. If the current number is consecutive to the previous one, we update the end; otherwise, we append the current range (or single number) to the result list and reset the start and end for the new range. Finally, we handle any remaining range before joining the result with commas. This approach ensures that the function is correct, concise, and handles edge cases like an empty input list.

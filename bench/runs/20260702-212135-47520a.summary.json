@@ -1,0 +1,58 @@
+{
+  "run_id": "20260702-212135-47520a",
+  "node_id": "task-20260702-212135-47520a",
+  "task": "Write a Python function weighted_mean(values, weights) returning the weighted arithmetic mean as a float. Empty lists return None, and a zero total weight also returns None, never a crash. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "All criteria are met, the function correctly calculates the weighted mean with error handling for edge cases.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "weighted_mean([1, 3], [1, 1])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      },
+      {
+        "call": "weighted_mean([2], [0])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "weighted_mean([], [])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "weighted_mean([1, 2], [0, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef weighted_mean(values, weights):\n    if not values or not weights or sum(weights) == 0:\n        return None\n    return sum(value * weight for value, weight in zip(values, weights)) / sum(weights)\n```\n\n**",
+  "trace": "**\n\nI defined the function `weighted_mean` that takes two lists, `values` and `weights`. I first check if either list is empty or if the total weight is zero. If any of these conditions are met, I return `None` to handle edge cases where division by zero might occur. Otherwise, I calculate the weighted mean using a generator expression inside the `sum` function and divide it by the sum of the weights. This approach ensures that the function handles edge cases gracefully and returns the correct weighted mean when possible.",
+  "totals": {
+    "time_s": 21.8998057,
+    "tokens": 605
+  },
+  "files": [
+    "20260702-212135-47520a.crumbs.jsonl",
+    "20260702-212135-47520a.trace.txt"
+  ]
+}

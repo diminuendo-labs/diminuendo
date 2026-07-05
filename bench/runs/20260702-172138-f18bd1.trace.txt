@@ -1,0 +1,2 @@
+**
+I used the `re` module to split the input string into a list of whitespace-separated words in lowercase. Then I counted the occurrences of each word using the `Counter` class from the `collections` module. Finally, I returned the maximum word based on its count and alphabetical order using a lambda function as the key for the `max` function. The edge case handled is an empty string, where the function returns an empty string as per the problem statement.

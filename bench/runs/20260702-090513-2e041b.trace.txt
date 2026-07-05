@@ -1,0 +1,2 @@
+**  
+I chose to split the input string into lowercase words and use a dictionary to count occurrences of each word. After determining the maximum count, I collected all words that match this count into a list. The `min()` function is then used to find the lexicographically smallest (alphabetically first) word among those with the highest frequency. This approach handles ties by returning the last such word alphabetically as required.

@@ -1,0 +1,3 @@
+**
+
+The function `chunk_pad` splits a list into consecutive chunks of size `k`. If the final chunk is shorter than `k`, it pads it with `None`. The edge case handled here is an empty list, which directly returns an empty list. The implementation uses list comprehension to create each chunk and calculates the number of chunks needed based on the length of the input list and the desired chunk size.

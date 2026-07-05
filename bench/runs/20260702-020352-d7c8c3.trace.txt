@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for an edge case where the input list is empty, returning an empty list in this case. Then, I sorted the input pairs based on their start value using a lambda function as the sorting key. Finally, I iterated over the sorted pairs and merged overlapping ranges into contiguous blocks by extending the end of the last range or adding non-overlapping ranges to the result list.

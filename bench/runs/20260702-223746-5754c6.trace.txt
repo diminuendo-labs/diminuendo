@@ -1,0 +1,3 @@
+**
+
+To solve this problem, I first sorted the input list of ranges by their start times. This allows me to process the ranges in order, making it easier to identify overlaps or touches. Then, I iterated through the sorted ranges and merged them if they overlapped or touched by updating the end time of the last merged range. If a range did not overlap with the last merged range, it was added to the result list as is. The function handles an edge case where the input list might be empty, returning an empty list in that scenario.

@@ -1,0 +1,5 @@
+**
+
+The function `flatten_once(lst)` takes a single parameter `lst`, which is expected to be a list. It attempts to flatten the list exactly one level deep. This is achieved by using a list comprehension that iterates over each element in the input list. If an element is a list, it expands it into individual elements; otherwise, it keeps the element as is.
+
+To handle the edge case where the input might not be iterable (e.g., integers or strings), the function includes a `try-except` block to catch `TypeError`. If a `TypeError` occurs during the iteration, indicating that an element is not iterable, the function returns the original input unchanged. This ensures robustness in cases where the input data types are uncertain.

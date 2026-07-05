@@ -1,0 +1,2 @@
+**
+I solved this task by using Python's built-in `str.split()` and `str.join()` methods to re-split the string and then re-join it with commas. I used a regular expression (`replace(',,', ',')`) to simplify consecutive commas into single delimiters. To handle the edge case where the input is a single comma, I added an empty filter in the `join()` call, which removes any empty strings from the resulting list before joining. This ensures that a single comma returns an empty string as desired.

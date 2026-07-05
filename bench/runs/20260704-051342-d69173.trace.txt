@@ -1,0 +1,3 @@
+**
+
+I sorted the input ranges by start value first, which allows for a simple and efficient merge process. Then I iterated over each pair after sorting, checking if it overlaps or touches with the last merged range. If so, I updated the end value of the last merged range; otherwise, I added the current range to the list as a new one. This approach is concise and easy to read while handling edge cases like an empty input list.

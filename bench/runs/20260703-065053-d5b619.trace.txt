@@ -1,0 +1,2 @@
+**
+I chose to follow the direction stated by the task to prioritize returning the last word among those with the shortest length in case of a tie. To achieve this, I iterated through the list of words in reverse order (from last to first), and as soon as I found a word that was longer than the current maximum length, I updated the maximum length and the longest word. This way, if there's a tie for the longest word, the last occurrence will be returned. Additionally, I handled the edge case of an empty string by returning '' in such cases.

@@ -1,0 +1,5 @@
+I defined a function `chunk` that takes two parameters: `lst`, the list to be chunked, and `size`, the desired chunk size. The function first checks if the size is zero or negative; if so, it returns an empty list as specified in the edge case.
+
+For valid sizes, the function uses a for loop with a step equal to the chunk size to iterate over the input list. It slices the list from index `i` to `i+size` and appends each slice to the result list. This process continues until all elements of the input list have been processed.
+
+This approach ensures that the list is divided into consecutive chunks of the given size, with the last chunk being shorter if necessary. The function is concise and readable, following Python's best practices for clear and maintainable code.

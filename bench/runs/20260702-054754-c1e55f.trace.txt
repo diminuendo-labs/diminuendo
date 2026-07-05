@@ -1,0 +1,2 @@
+**  
+I used Python's string `split` method to break the input string into words based on underscores. The list comprehension iterates through these words, capitalizing each one and filtering out any empty strings that might result from leading, trailing, or repeated underscores. The `''.join()` function then concatenates the capitalized words back into a single string, effectively converting snake_case to camelCase. This approach handles all edge cases as specified, including empty strings and strings with multiple consecutive underscores.

@@ -1,0 +1,2 @@
+**  
+I created a function `flatten_once` that iterates through each element in the input list. If an element is a list itself, it extends the result list with its elements using the `extend()` method. For non-list elements, it simply appends them to the result list. This ensures exactly one level of nesting is flattened while deeper nesting remains untouched. The function handles nested lists within the top-level list as specified in the task criteria.

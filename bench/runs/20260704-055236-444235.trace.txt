@@ -1,0 +1,5 @@
+**
+
+I chose to write a function that iterates over each element in the input list and checks if it's a list itself. If it is, I extend the result list with its items; otherwise, I append the element as is. This approach ensures only one level of nesting is flattened while keeping deeper nesting intact.
+
+The code is concise and readable due to clear variable names and a single responsibility per loop iteration. The example usage demonstrates how the function works, including handling an empty input list as an edge case.

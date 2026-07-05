@@ -1,0 +1,2 @@
+**
+I chose to define the function with a docstring that clearly describes its purpose and behavior. This follows best practices for writing clear and readable code. To handle edge cases, I added a check at the beginning of the function to ensure that the input `n` is either an integer or a float. If it's not, the function raises a ValueError with a descriptive message.

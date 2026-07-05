@@ -1,0 +1,2 @@
+**
+I chose to write the function by following the stated direction of returning the last occurrence of the largest value in case of ties. This is achieved by iterating over the words in reverse order, keeping track of the maximum length and the corresponding word. I also included a check for an empty string as input, which returns '' as per the task requirements.

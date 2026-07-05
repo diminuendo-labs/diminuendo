@@ -1,0 +1,3 @@
+**
+
+I approached this task by using a list comprehension to iterate through each element in the input list. For each element, I checked if it is an instance of a list itself. If it is, I included that sublist as is (in a new list to preserve the structure). If not, I simply included the element. This method ensures that only one level of nesting is flattened. The edge case I named and handled is when there are no sublists in the input list, which results in returning the original list unchanged.

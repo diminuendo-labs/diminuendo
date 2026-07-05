@@ -1,0 +1,2 @@
+**
+I wrote a concise function using Python's built-in `max` and `split` functions. I chose to use the `or` operator to handle the edge case where all words are empty, in which case `len` will raise an error, but `next` will return an empty string without any issues. This approach meets the criteria for conciseness and readability while also handling the specified edge case.

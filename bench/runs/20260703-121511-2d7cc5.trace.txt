@@ -1,0 +1,2 @@
+**  
+I started by handling the edge case where the input list is empty, returning an empty string immediately. Next, I sorted and deduplicated the input list to ensure distinct values are considered. I then iterated through the list to identify consecutive sequences, updating `start` and `end` as needed. When a sequence breaks, I format it appropriately ('single number' or 'range') and add it to the result list. Finally, I joined all parts of the result with commas and returned the string.

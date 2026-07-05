@@ -1,0 +1,2 @@
+**
+I solved this problem by first tokenizing the input string into words and counting their occurrences using the `Counter` class from the `collections` module. Then, I found the most common word by taking the maximum of the counter values, breaking ties alphabetically with a custom key function that returns a tuple containing the negative count and the word itself (to prioritize larger counts) followed by the alphabetical order of the words. Finally, I used the `next` function with a generator expression to find the index of the last occurrence of the most common word.

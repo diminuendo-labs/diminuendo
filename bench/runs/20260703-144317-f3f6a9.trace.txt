@@ -1,0 +1,2 @@
+**
+I chose to use a set to remove duplicates and then sort the resulting list. This approach allows me to efficiently find the second largest value by accessing the second-to-last element in the sorted list. I also explicitly handled the edge case where the input list contains fewer than two distinct values, returning None as required.

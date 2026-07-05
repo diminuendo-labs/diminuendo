@@ -1,0 +1,2 @@
+**
+The function `longest_word` takes a string `s` as input. It first splits the string into a list of words using `s.split()`. If the resulting list is empty (which happens when `s` is an empty string), it returns an empty string. Otherwise, it calculates the maximum length of any word in the list using a generator expression inside `max()`. Finally, it iterates over the list of words in reverse order to find and return the last word that has the maximum length. This ensures that ties are resolved by returning the last such word as specified.

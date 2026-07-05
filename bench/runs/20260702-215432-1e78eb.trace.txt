@@ -1,0 +1,2 @@
+**
+The function `max_index` takes a list `nums` as input and returns the index of the largest value in the list. If the list is empty, it raises a `ValueError`. Starting from the end of the list, it iterates backward to find the last occurrence of the maximum value. This approach ensures that if the maximum value appears more than once, the function correctly returns its last occurrence's index. The edge case handled here is an empty list, which is checked at the beginning and raises an error if encountered.

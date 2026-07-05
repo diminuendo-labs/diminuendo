@@ -1,0 +1,3 @@
+**
+
+I chose a straightforward approach to solve this problem. I first split the input string into a list of words using `s.split()`. Then, I iterate over the list in reverse order (from last word to first) to ensure that if there are multiple words with maximum length, the last one is returned. This meets the "last occurrence" requirement mentioned in the task description. I also included a docstring to highlight the edge case where an empty string returns ''.

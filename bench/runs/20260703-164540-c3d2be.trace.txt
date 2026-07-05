@@ -1,0 +1,3 @@
+First, I split the input string `s` by whitespace to get a list of words and then convert it to a set since sets are efficient for checking uniqueness and eliminating duplicates. Next, I iterate over each word in the set and remove leading and trailing punctuation using the strip method. After that, I lowercase all words in the set for case-insensitive comparison with `w`. Lastly, I check if any of the words equals `w` after lowercasing and return the count of matching words.
+
+To handle an edge case where there might be substrings inside longer words, I made sure to only compare complete words with `w`, not substrings. Also, I account for empty strings by checking if a word is present in the string before converting it to a set.

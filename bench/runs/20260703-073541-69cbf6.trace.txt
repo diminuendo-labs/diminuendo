@@ -1,0 +1,2 @@
+**
+I chose to sort the set of distinct numbers in descending order, which allows me to easily access the third largest number. By using `set` to remove duplicates, I ensured that the function only counts each value once. The edge case for an empty list is handled explicitly at the beginning of the function, returning `None` immediately if the input list is empty.

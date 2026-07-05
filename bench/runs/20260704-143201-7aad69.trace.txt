@@ -1,0 +1,2 @@
+**
+To solve this problem, I first grouped the words by their length. This allows me to handle each group separately. For each group, I sorted the words reverse-alphabetically to meet the specified ordering requirement for words of equal length. After sorting all groups, I flattened the list of lists into a single sorted list. Finally, I returned the k-th word from this sorted list, adjusting for zero-based indexing by using `k-1`. I also included an edge case check at the beginning to return `None` if `k` is out of range.

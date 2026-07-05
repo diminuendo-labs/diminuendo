@@ -1,0 +1,2 @@
+**
+I chose to implement the function using a combination of simple math operations and list slicing. I handled edge cases such as zero or negative size, invalid page numbers, and pages past the end by adding conditions at the beginning of the function. For example, if `size` is less than or equal to 0, the function immediately returns an empty list.

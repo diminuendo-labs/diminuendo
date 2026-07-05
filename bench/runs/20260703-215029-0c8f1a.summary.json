@@ -1,0 +1,64 @@
+{
+  "run_id": "20260703-215029-0c8f1a",
+  "node_id": "task-20260703-215029-0c8f1a",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness": 4,
+    "readability": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": true,
+        "got": "'1-3,5'",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": false,
+        "got": "'1-2,2-3'",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": true,
+        "got": "'1,3,5'",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": true,
+        "got": "'7'",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef range_summary(nums):\n    if not nums:\n        return ''\n    \n    nums.sort()\n    result = []\n    start = end = nums[0]\n    \n    for num in nums[1:]:\n        if num == end + 1:\n            end = num\n        else:\n            if start == end:\n                result.append(str(start))\n            else:\n                result.append(f'{start}-{end}')\n            start = end = num\n    \n    if start == end:\n        result.append(str(start))\n    else:\n        result.append(f'{start}-{end}')\n    \n    return ','.join(result)\n```",
+  "trace": "To solve this task, I first check if the input list is empty and return an empty string if true. Then, I sort the list to handle consecutive numbers easily. I use two pointers (`start` and `end`) to track the current range. As I iterate through the sorted list, if the current number is consecutive to the end of the current range, I update the end pointer. If not, I append the current range (or single number) to the result list and reset the start and end pointers to the current number. After the loop, I add the last range to the result. Finally, I join the result list into a string with commas separating the ranges and return it. This approach ensures that consecutive runs are collapsed into 'start-end' format while single numbers remain as is.",
+  "totals": {
+    "time_s": -2.6882022999999986,
+    "tokens": -193
+  },
+  "files": [
+    "20260703-215029-0c8f1a.crumbs.jsonl",
+    "20260703-215029-0c8f1a.trace.txt"
+  ]
+}

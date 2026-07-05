@@ -1,0 +1,3 @@
+**
+
+I defined the function `chunk_pad` with two parameters, `lst` and `k`, which represents the input list and chunk size, respectively. The function uses a list comprehension to create chunks of size `k` from the input list. To handle edge cases where the final chunk is shorter than `k`, I used slicing (`i:i+k`) to extract each chunk, then padded it with `None` using list addition. For example, when `lst = [1, 2, 3]` and `k = 4`, the function correctly returns `[ [1, 2, 3, None], [] ]`.

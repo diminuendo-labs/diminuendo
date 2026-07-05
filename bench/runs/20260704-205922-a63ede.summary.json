@@ -1,0 +1,51 @@
+{
+  "run_id": "20260704-205922-a63ede",
+  "node_id": "task-20260704-205922-a63ede",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided Python function correctly calculates the trimmed mean, handles edge cases, and has clear logic.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n\n    nums.sort()\n    n = len(nums)\n    mid = (n - 1) // 2\n    median = nums[mid]\n\n    filtered_nums = [num for num in nums if num != min(nums) and num != max(nums)]\n\n    return sum(filtered_nums) / len(filtered_nums)\n```",
+  "trace": "I created a function named `trimmed_mean(nums)`. The function first checks if the input list is empty, and if so, it returns `None`. If not, it sorts the list and calculates the median value.\n\nThen, it filters out both the minimum and maximum values from the sorted list using a list comprehension and calculates the sum of the remaining filtered numbers. Finally, it divides the sum by the number of filtered items to get the trimmed mean as a float.\n\nThe edge case I handled is when the input list is empty, as the function returns `None` in such a scenario.",
+  "totals": {
+    "time_s": 20.4260632,
+    "tokens": 704
+  },
+  "files": [
+    "20260704-205922-a63ede.crumbs.jsonl",
+    "20260704-205922-a63ede.trace.txt"
+  ]
+}

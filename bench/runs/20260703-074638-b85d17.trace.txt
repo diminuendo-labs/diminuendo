@@ -1,0 +1,3 @@
+**
+
+I implemented this function by iterating over each character in the input string. When I encounter an opening bracket '[', I increment the current depth, which also updates the maximum depth if it's greater than the current value. When I encounter a closing bracket ']', I decrement the current depth, but return -1 immediately if the current depth is already 0 or less (indicating that there was no matching opener). After iterating over all characters, I check if the final current depth is 0; if not, it means there's an unclosed opening bracket and I return -1.

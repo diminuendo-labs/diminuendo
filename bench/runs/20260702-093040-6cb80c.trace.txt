@@ -1,0 +1,3 @@
+**
+
+I implemented this function using a simple iterative approach. The function iterates over each element in the input list, checking if it's a list itself. If so, its items are contributed to the result in order; otherwise, the original element is added as is. This ensures that only one level of nesting is flattened, and deeper nesting remains nested. I also chose to name one edge case: when the input is already flat (i.e., no flattening is possible), the function returns the original list without modifying it.

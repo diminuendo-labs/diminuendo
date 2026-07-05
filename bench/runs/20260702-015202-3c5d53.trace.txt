@@ -1,0 +1,2 @@
+**  
+I chose the concept of using Python's built-in methods like `strip()` and list slicing to process the string efficiently. By splitting the input string on underscores and capitalizing each word except the first one, I was able to convert snake_case identifiers to camelCase with a concise and readable solution. The approach handles leading, trailing, and repeated underscores by stripping them off before processing, and it correctly converts empty strings to an empty result.

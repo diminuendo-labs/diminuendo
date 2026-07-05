@@ -1,0 +1,2 @@
+**
+I used Python's built-in `sorted` function with a custom key. The key is a tuple where the first element is the length of the word, and the second element is the negative ASCII value of the last character to achieve reverse-alphabetical sorting for words of equal length. I also added an edge case check at the beginning to return `None` if `k` is out of range.

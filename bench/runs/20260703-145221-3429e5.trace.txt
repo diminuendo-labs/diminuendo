@@ -1,0 +1,2 @@
+**
+I approached this task by first converting the input list to a set to remove duplicates, then sorting the distinct numbers in ascending order. This allows for efficient lookup of the nth smallest number using indexing on the sorted list. I also included a check at the beginning to handle cases where n is less than 1 or exceeds the number of distinct values, as specified in the task requirements.

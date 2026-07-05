@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `max` function with a generator expression to split the string into words and find the longest one. This is concise and readable, as it directly applies the operation without need for complex conditional logic or iterations. The edge case I handled was an empty string returning '', which prevents attempting to access indices on an empty list.

@@ -1,0 +1,3 @@
+The function `range_summary` first sorts the unique elements of the input list to ensure they are in ascending order. It then iterates through these sorted numbers, identifying consecutive sequences and non-consecutive points. For each sequence, it either appends a single number or a range to the result list, depending on whether the sequence is just one number or multiple consecutive numbers. Finally, it joins all elements of the result list into a string separated by commas and returns this string.
+
+The edge case handled here is when the input list is empty, in which case the function returns an empty string. This ensures that the function behaves correctly even for degenerate cases without any additional checks.

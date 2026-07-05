@@ -1,0 +1,6 @@
+1. **Sorting and Deduplication**: The input list `nums` is first sorted and duplicates are removed by converting it to a set and back to a list. This ensures that we only process unique values.
+2. **Iterating and Collapsing Ranges**: We iterate through the sorted list and identify consecutive numbers. If consecutive numbers are found, they form a range which is added to the result as `start-end`. If not, the single number is added.
+3. **Edge Case Handling**: The function handles an empty input by returning an empty string immediately.
+4. **Conciseness and Readability**: The solution uses list comprehensions and simple if-else statements for clarity while keeping the code concise.
+
+This approach ensures that the function meets the requirements of collapsing consecutive runs into ranges, handling edge cases, and providing a clear output format.

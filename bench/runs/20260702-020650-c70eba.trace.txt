@@ -1,0 +1,3 @@
+**
+
+To solve this task, I used Python's built-in `collections.Counter` class to count the occurrences of each word in the input string. The `max` function is then used with a custom sorting key that first considers the count and then the alphabetical order to break ties. To handle the edge case where the input string is empty (which should return an empty string), I added a simple condition at the beginning of the function.

@@ -1,0 +1,2 @@
+**
+I chose a straightforward approach to solve this problem by simply comparing the count of opening and closing parentheses. This method works because the task states that we can ignore everything else except for '(' and ')', so any other characters won't affect the balance. An empty string is indeed balanced, as it doesn't have any parentheses, which makes it a suitable edge case to consider. The code is concise and readable, following PEP 8 guidelines.

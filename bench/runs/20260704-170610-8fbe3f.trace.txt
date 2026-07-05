@@ -1,0 +1,8 @@
+**
+
+1. **Splitting the String:** The input string `s` is split into tokens using the underscore `_` as the delimiter.
+2. **Handling Exceptions and Case Conversion:** A list comprehension processes each token:
+   - If the token is in the exception list (['URL', 'ID']), it remains unchanged.
+   - Otherwise, the first token is lowercased and all subsequent tokens are capitalized.
+3. **Joining Tokens:** The processed tokens are joined together without any separator to form the camel case string.
+4. **Edge Case:** A simple test function `test_token_case` is provided to verify that exceptions like 'URL_id' are handled correctly, ensuring that 'urlId' is produced rather than 'userId'.

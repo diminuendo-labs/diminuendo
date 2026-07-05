@@ -1,0 +1,8 @@
+**
+1. I used the `strip()` method to remove any leading or trailing whitespace from the input string.
+2. The `split('_')` method splits the string into tokens based on underscores, and `enumerate()` is used to iterate through these tokens while keeping track of their indices.
+3. I handled the first token separately to ensure it's always lowercased.
+4. Tokens that are in the exception list are added as is.
+5. All other tokens (except the first) are capitalized before being appended to the result list.
+6. The `join()` method combines all the tokens into a single string without any separators.
+7. I included an edge case where leading and trailing underscores in the input string were handled correctly, demonstrating that even if the function receives tokens with extra spaces, it will still produce the expected output by ignoring those spaces.

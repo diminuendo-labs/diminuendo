@@ -1,0 +1,2 @@
+**  
+I created a function `balanced(s)` that iterates through each character in the string. It uses a counter (`balance`) to track the number of open parentheses that have not yet been closed. If at any point the counter goes negative, it means there is a closing parenthesis without a matching opening one, so the function returns `False`. After the loop, if the counter is zero, all parentheses are balanced, and the function returns `True`. An edge case this function handles is an empty string, which is considered balanced as required.

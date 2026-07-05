@@ -1,0 +1,2 @@
+**
+I solved the problem by using a hash table (`num_count`) to count the frequency of each number and its complement. I used another set (`pair_count`) to keep track of distinct unordered pairs that sum up to the target. The function iterates over the list once, looking up complements in `num_count` and adding pairs to `pair_count`. This approach ensures efficient lookups and count updates while handling duplicate values correctly. The edge case for an empty input list is explicitly handled at the beginning of the function.

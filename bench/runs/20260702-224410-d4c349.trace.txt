@@ -1,0 +1,2 @@
+**
+I first checked for an edge case where the input list is empty. If it is, I return an empty list immediately to avoid unnecessary processing. Next, I sorted the ranges by their start value using a lambda function as the sorting key. Then, I iterated over the sorted ranges and merged any adjacent or overlapping ones. Finally, I returned the merged range list.

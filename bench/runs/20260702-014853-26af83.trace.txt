@@ -1,0 +1,4 @@
+** 
+I used a stack to keep track of the parentheses. As I iterate through the string, if the character is '(', I push it onto the stack. If it's ')', I check if the stack is empty or if the top element of the stack is not '('. If either condition is true, the function returns `False`. Otherwise, I pop the top element from the stack. Finally, after iterating through the string, if the stack is empty, all parentheses were balanced, so the function returns `True`; otherwise, it returns `False`.
+
+This approach efficiently handles edge cases such as an empty string (which is considered balanced) and strings with mismatched or nested parentheses.

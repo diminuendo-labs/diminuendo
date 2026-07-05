@@ -1,0 +1,9 @@
+**
+
+I implemented the function `equal_ignoring_spaces` to compare two strings after normalizing them by removing all whitespace and converting them to lowercase. The key steps are:
+1. Use `''.join(a.split())` to remove all whitespace from string `a`.
+2. Convert the cleaned string to lowercase using `.lower()`.
+3. Repeat the same process for string `b`.
+4. Finally, compare the two normalized strings for equality.
+
+This approach ensures that the function is both concise and readable. The edge case where both strings might be entirely composed of whitespace or empty is handled by the normalization steps, as an empty string will remain an empty string after removing whitespace and converting to lowercase.

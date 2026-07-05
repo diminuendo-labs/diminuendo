@@ -1,0 +1,2 @@
+**
+I started by sorting the list and removing duplicates to handle any repeated values. I then iterated through the sorted unique numbers, grouping consecutive sequences into ranges. If a sequence was just a single number, it was added as is. Finally, I joined all parts with commas to form the final string. This approach ensures that the function handles edge cases like empty lists and maintains readability by using clear variable names and straightforward logic.

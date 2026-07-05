@@ -1,0 +1,3 @@
+1. First, we create a sorted list of unique values by converting the input list to a set, sorting it in reverse order (largest to smallest), and then converting back to a set. This ensures that the list contains only the distinct values and is already sorted.
+2. Next, we check if there are at least three elements in the sorted set. If yes, we return the third element from the sorted list using index 2 (since Python uses zero-based indexing). If not, we return None to indicate that there aren't enough distinct values to determine the third largest.
+One edge case handled here is when the input list contains duplicates of the third largest value. Since we only consider unique values, this will not affect the output.

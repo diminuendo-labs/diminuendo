@@ -1,0 +1,1494 @@
+{
+  "probe_id": "20260702-215407",
+  "models": {
+    "A": "qwen2.5-coder:7b",
+    "B": "llama3.1:8b"
+  },
+  "audience": {
+    "A": "llama3.1:8b",
+    "B": "qwen2.5-coder:7b"
+  },
+  "generator": "qwen2.5-coder:7b",
+  "r_g": 3,
+  "gen_accounting": {
+    "A": [
+      {
+        "rule_class": "tie_break",
+        "cases": {
+          "max_index": "mixed",
+          "shortest_word": "all_pass"
+        },
+        "lessons": [
+          {
+            "task": "max_index",
+            "type": "within_task",
+            "committed": true
+          }
+        ]
+      },
+      {
+        "rule_class": "distinctness",
+        "cases": {
+          "count_distinct_pairs": "all_pass",
+          "sum_of_modes": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      },
+      {
+        "rule_class": "boundary",
+        "cases": {
+          "weighted_mean": "all_pass",
+          "range_step": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      },
+      {
+        "rule_class": "normalize",
+        "cases": {
+          "title_words": "all_pass",
+          "count_token": "mixed"
+        },
+        "lessons": [
+          {
+            "task": "count_token",
+            "type": "within_task",
+            "committed": true
+          }
+        ]
+      }
+    ],
+    "B": [
+      {
+        "rule_class": "tie_break",
+        "cases": {
+          "max_index": "all_fail",
+          "shortest_word": "all_fail"
+        },
+        "lessons": [],
+        "reason": "all_fail with no passing sibling"
+      },
+      {
+        "rule_class": "distinctness",
+        "cases": {
+          "count_distinct_pairs": "mixed",
+          "sum_of_modes": "all_pass"
+        },
+        "lessons": [
+          {
+            "task": "count_distinct_pairs",
+            "type": "within_task",
+            "committed": true
+          }
+        ]
+      },
+      {
+        "rule_class": "boundary",
+        "cases": {
+          "weighted_mean": "all_pass",
+          "range_step": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      },
+      {
+        "rule_class": "normalize",
+        "cases": {
+          "title_words": "mixed",
+          "count_token": "mixed"
+        },
+        "lessons": [
+          {
+            "task": "title_words",
+            "type": "within_task",
+            "committed": true
+          },
+          {
+            "task": "count_token",
+            "type": "within_task",
+            "committed": true
+          }
+        ]
+      }
+    ]
+  },
+  "lesson_counts": {
+    "A": 2,
+    "B": 3
+  },
+  "apply_pool": [
+    "most_common_word",
+    "merge_ranges",
+    "longest_word",
+    "median",
+    "range_summary",
+    "flatten_once",
+    "snake_to_camel",
+    "balanced"
+  ],
+  "repeats": 3,
+  "per_cell_n": 24,
+  "cells": [
+    {
+      "cell": "A|none",
+      "tools": 0,
+      "n": 24,
+      "pass_rate": 0.625,
+      "ev_mean": 0.8270833333333334,
+      "per_class": {
+        "boundary": {
+          "n": 9,
+          "ev_mean": 0.8888888888888888
+        },
+        "distinctness": {
+          "n": 3,
+          "ev_mean": 0.8666666666666667
+        },
+        "normalize": {
+          "n": 6,
+          "ev_mean": 0.625
+        },
+        "tie_break": {
+          "n": 6,
+          "ev_mean": 0.9166666666666666
+        }
+      }
+    },
+    {
+      "cell": "A|A",
+      "tools": 2,
+      "n": 24,
+      "pass_rate": 0.5833333333333334,
+      "ev_mean": 0.8166666666666668,
+      "per_class": {
+        "boundary": {
+          "n": 9,
+          "ev_mean": 0.8888888888888888
+        },
+        "distinctness": {
+          "n": 3,
+          "ev_mean": 0.5333333333333333
+        },
+        "normalize": {
+          "n": 6,
+          "ev_mean": 0.75
+        },
+        "tie_break": {
+          "n": 6,
+          "ev_mean": 0.9166666666666666
+        }
+      }
+    },
+    {
+      "cell": "A|B",
+      "tools": 3,
+      "n": 24,
+      "pass_rate": 0.5,
+      "ev_mean": 0.7791666666666667,
+      "per_class": {
+        "boundary": {
+          "n": 9,
+          "ev_mean": 0.8611111111111112
+        },
+        "distinctness": {
+          "n": 3,
+          "ev_mean": 0.7333333333333334
+        },
+        "normalize": {
+          "n": 6,
+          "ev_mean": 0.625
+        },
+        "tie_break": {
+          "n": 6,
+          "ev_mean": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "cell": "B|none",
+      "tools": 0,
+      "n": 24,
+      "pass_rate": 0.125,
+      "ev_mean": 0.6298611111111111,
+      "per_class": {
+        "boundary": {
+          "n": 9,
+          "ev_mean": 0.6296296296296297
+        },
+        "distinctness": {
+          "n": 3,
+          "ev_mean": 0.7333333333333334
+        },
+        "normalize": {
+          "n": 6,
+          "ev_mean": 0.5
+        },
+        "tie_break": {
+          "n": 6,
+          "ev_mean": 0.7083333333333334
+        }
+      }
+    },
+    {
+      "cell": "B|A",
+      "tools": 2,
+      "n": 24,
+      "pass_rate": 0.16666666666666666,
+      "ev_mean": 0.6916666666666668,
+      "per_class": {
+        "boundary": {
+          "n": 9,
+          "ev_mean": 0.7407407407407408
+        },
+        "distinctness": {
+          "n": 3,
+          "ev_mean": 0.8666666666666667
+        },
+        "normalize": {
+          "n": 6,
+          "ev_mean": 0.5
+        },
+        "tie_break": {
+          "n": 6,
+          "ev_mean": 0.7222222222222222
+        }
+      }
+    },
+    {
+      "cell": "B|B",
+      "tools": 3,
+      "n": 24,
+      "pass_rate": 0.20833333333333334,
+      "ev_mean": 0.6104166666666667,
+      "per_class": {
+        "boundary": {
+          "n": 9,
+          "ev_mean": 0.7314814814814814
+        },
+        "distinctness": {
+          "n": 3,
+          "ev_mean": 0.4666666666666666
+        },
+        "normalize": {
+          "n": 6,
+          "ev_mean": 0.625
+        },
+        "tie_break": {
+          "n": 6,
+          "ev_mean": 0.4861111111111111
+        }
+      }
+    }
+  ],
+  "per_class": {
+    "boundary": {
+      "A|none": {
+        "n": 9,
+        "ev_mean": 0.8888888888888888
+      },
+      "A|A": {
+        "n": 9,
+        "ev_mean": 0.8888888888888888
+      },
+      "A|B": {
+        "n": 9,
+        "ev_mean": 0.8611111111111112
+      },
+      "B|none": {
+        "n": 9,
+        "ev_mean": 0.6296296296296297
+      },
+      "B|A": {
+        "n": 9,
+        "ev_mean": 0.7407407407407408
+      },
+      "B|B": {
+        "n": 9,
+        "ev_mean": 0.7314814814814814
+      }
+    },
+    "distinctness": {
+      "A|none": {
+        "n": 3,
+        "ev_mean": 0.8666666666666667
+      },
+      "A|A": {
+        "n": 3,
+        "ev_mean": 0.5333333333333333
+      },
+      "A|B": {
+        "n": 3,
+        "ev_mean": 0.7333333333333334
+      },
+      "B|none": {
+        "n": 3,
+        "ev_mean": 0.7333333333333334
+      },
+      "B|A": {
+        "n": 3,
+        "ev_mean": 0.8666666666666667
+      },
+      "B|B": {
+        "n": 3,
+        "ev_mean": 0.4666666666666666
+      }
+    },
+    "normalize": {
+      "A|none": {
+        "n": 6,
+        "ev_mean": 0.625
+      },
+      "A|A": {
+        "n": 6,
+        "ev_mean": 0.75
+      },
+      "A|B": {
+        "n": 6,
+        "ev_mean": 0.625
+      },
+      "B|none": {
+        "n": 6,
+        "ev_mean": 0.5
+      },
+      "B|A": {
+        "n": 6,
+        "ev_mean": 0.5
+      },
+      "B|B": {
+        "n": 6,
+        "ev_mean": 0.625
+      }
+    },
+    "tie_break": {
+      "A|none": {
+        "n": 6,
+        "ev_mean": 0.9166666666666666
+      },
+      "A|A": {
+        "n": 6,
+        "ev_mean": 0.9166666666666666
+      },
+      "A|B": {
+        "n": 6,
+        "ev_mean": 0.8333333333333334
+      },
+      "B|none": {
+        "n": 6,
+        "ev_mean": 0.7083333333333334
+      },
+      "B|A": {
+        "n": 6,
+        "ev_mean": 0.7222222222222222
+      },
+      "B|B": {
+        "n": 6,
+        "ev_mean": 0.4861111111111111
+      }
+    }
+  },
+  "check_table": {
+    "most_common_word": {
+      "most_common_word('b a b a c')": {
+        "rule_check": true,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          }
+        }
+      },
+      "most_common_word('z z y')": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      },
+      "most_common_word('')": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          }
+        }
+      }
+    },
+    "merge_ranges": {
+      "merge_ranges([[1, 3], [4, 6]])": {
+        "rule_check": true,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "merge_ranges([[5, 7], [1, 2]])": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      },
+      "merge_ranges([[1, 4], [2, 3]])": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      },
+      "merge_ranges([])": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      }
+    },
+    "longest_word": {
+      "longest_word('cat door bird')": {
+        "rule_check": true,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "longest_word('a bb cc d')": {
+        "rule_check": true,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "longest_word('')": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          }
+        }
+      },
+      "longest_word('one')": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      }
+    },
+    "median": {
+      "median([3, 1, 2])": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      },
+      "median([1, 2, 3, 4])": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      },
+      "median([5, 5])": {
+        "rule_check": true,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      },
+      "median([])": {
+        "rule_check": true,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      }
+    },
+    "range_summary": {
+      "range_summary([1, 2, 3, 5])": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          }
+        }
+      },
+      "range_summary([3, 1, 2, 2])": {
+        "rule_check": true,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          }
+        }
+      },
+      "range_summary([5, 3, 1])": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          }
+        }
+      },
+      "range_summary([])": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      },
+      "range_summary([7])": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          }
+        }
+      }
+    },
+    "flatten_once": {
+      "flatten_once([[1, 2], [3]])": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 2,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "B|B": {
+            "n": 2,
+            "passed": 1,
+            "rate": 0.5
+          }
+        }
+      },
+      "flatten_once([1, [2, [3, 4]]])": {
+        "rule_check": true,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 2,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "B|B": {
+            "n": 2,
+            "passed": 1,
+            "rate": 0.5
+          }
+        }
+      },
+      "flatten_once([])": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 2,
+            "passed": 2,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 2,
+            "passed": 2,
+            "rate": 1.0
+          }
+        }
+      }
+    },
+    "snake_to_camel": {
+      "snake_to_camel('foo_bar_baz')": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          }
+        }
+      },
+      "snake_to_camel('__a__b_')": {
+        "rule_check": true,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "snake_to_camel('word')": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          }
+        }
+      },
+      "snake_to_camel('')": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      }
+    },
+    "balanced": {
+      "balanced('(a(b)c)')": {
+        "rule_check": true,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      },
+      "balanced(')(')": {
+        "rule_check": true,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 2,
+            "rate": 0.6666666666666666
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 1,
+            "rate": 0.3333333333333333
+          }
+        }
+      },
+      "balanced('')": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      },
+      "balanced('((x)')": {
+        "rule_check": false,
+        "cells": {
+          "A|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "A|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|none": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|A": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          },
+          "B|B": {
+            "n": 3,
+            "passed": 3,
+            "rate": 1.0
+          }
+        }
+      }
+    }
+  },
+  "n_note": "8 apply tasks x 3 repeats = n=24 per cell. Per-class n is per-cell and smaller, stated in per_class. Direction at this n, not rates. Volume decides."
+}

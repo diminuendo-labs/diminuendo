@@ -1,0 +1,7 @@
+**
+
+To solve the problem of finding the most common word in a given string, I first convert the entire string to lowercase and split it into individual words. This ensures that the comparison is case-insensitive. Next, I use a dictionary `word_count` to keep track of the frequency of each word.
+
+After counting the occurrences, I sort the dictionary items based on two criteria: first, by frequency in descending order (to get the most common words at the beginning), and second, alphabetically if there are ties (using the word itself as the key).
+
+Finally, I return the word from the first item of the sorted list, which is guaranteed to be the most common and alphabetically first among tie-breakers. If the input string is empty, the function returns an empty string as specified in one of the edge cases.

@@ -1,0 +1,2 @@
+**
+I implemented the function by first checking for an empty input list, which handles a critical edge case. I then sorted the pairs based on their start values to ensure that adjacent ranges are processed together. A simple iterative approach was used to merge overlapping or adjacent ranges while keeping non-overlapping ones separate. This approach is straightforward and efficient, as it only requires a single pass through the input list.

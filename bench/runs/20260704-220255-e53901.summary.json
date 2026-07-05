@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-220255-e53901",
+  "node_id": "task-20260704-220255-e53901",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided code accurately calculates the trimmed mean after dropping the minimum and maximum values.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "edge case handling": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n\n    nums.sort()\n    min_index = 0\n    max_index = len(nums) - 1\n    n = len(nums) - 2\n\n    mean = sum(nums[min_index + 1 : max_index]) / n\n    return round(mean, 2)\n```",
+  "trace": "I created a function called `trimmed_mean` that takes in a list of numbers. If the input is an empty list, it returns None. I used the Python built-in `sort()` method to sort the list in ascending order. After that, I defined variables for the indexes of the minimum and maximum values, as well as the number of elements left to calculate the mean after removing one occurrence of each extreme value. Lastly, I calculated the trimmed mean by summing the middle (non-extreme) values in the sorted list and dividing it by `n`, and then rounding the result to 2 decimal places before returning it. The edge case I named was an empty input list.",
+  "totals": {
+    "time_s": 23.0752814,
+    "tokens": 709
+  },
+  "files": [
+    "20260704-220255-e53901.crumbs.jsonl",
+    "20260704-220255-e53901.trace.txt"
+  ]
+}

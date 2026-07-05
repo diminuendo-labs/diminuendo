@@ -1,0 +1,10 @@
+**
+
+I implemented the `depth_max` function to calculate the maximum nesting depth of square brackets in a given string. I maintained a counter `depth` to track the current depth and updated it as I encountered opening (`[`) and closing (`]`) brackets. The variable `max_depth` keeps track of the highest nesting level achieved.
+
+To handle edge cases:
+- If the depth becomes negative at any point, it means there's a closing bracket without an matching opener, so I return -1.
+- An empty string returns 0, as there are no brackets to nest.
+- The function checks if the final depth is zero before returning `max_depth`, ensuring all openers have been closed.
+
+This approach ensures the function is both correct and concise.

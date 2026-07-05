@@ -1,0 +1,16 @@
+{"phase": "gen", "model": "A", "run_id": "20260701-200427-82c580", "verdict": "pass", "ev": 1.0}
+{"phase": "gen", "model": "A", "run_id": "20260701-200507-96a60b", "verdict": "pass", "ev": 1.0}
+{"phase": "gen", "model": "B", "run_id": "20260701-200536-f8fd39", "verdict": "fail", "ev": 1.0}
+{"phase": "gen", "model": "B", "run_id": "20260701-200605-85bfe9", "verdict": "pass", "ev": 1.0}
+{"phase": "apply", "cell": "A|none", "run_id": "20260701-200632-88afa1", "verdict": "pass", "ev": 1.0}
+{"phase": "apply", "cell": "A|none", "run_id": "20260701-200649-af10ab", "verdict": "pass", "ev": 1.0}
+{"phase": "apply", "cell": "A|A", "run_id": "20260701-200715-9c0902", "verdict": "pass", "ev": 1.0}
+{"phase": "apply", "cell": "A|A", "run_id": "20260701-200739-546bbf", "verdict": "pass", "ev": 1.0}
+{"phase": "apply", "cell": "A|B", "run_id": "20260701-200804-cf200e", "verdict": "pass", "ev": 1.0}
+{"phase": "apply", "cell": "A|B", "run_id": "20260701-200831-463b04", "verdict": "pass", "ev": 1.0}
+{"phase": "apply", "cell": "B|none", "run_id": "20260701-200854-8c3982", "verdict": "pass", "ev": 1.0}
+{"phase": "apply", "cell": "B|none", "run_id": "20260701-200910-2c0d20", "verdict": "fail", "ev": 0.0}
+{"phase": "apply", "cell": "B|A", "run_id": "20260701-200936-549ec6", "verdict": "fail", "ev": 1.0}
+{"phase": "apply", "cell": "B|A", "run_id": "20260701-201001-a2cc87", "verdict": "fail", "ev": 0.6666666666666666}
+{"phase": "apply", "cell": "B|B", "run_id": "20260701-201026-be4b8a", "verdict": "pass", "ev": 1.0}
+{"phase": "apply", "cell": "B|B", "run_id": "20260701-201051-4d0ea9", "verdict": "fail", "ev": 1.0}

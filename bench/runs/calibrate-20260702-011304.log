@@ -1,0 +1,57 @@
+CALIBRATION 20260702-011304: 17 candidates x 2 seats
+A=qwen2.5-coder:7b  B=llama3.1:8b  no lessons, cross-family audience
+second_largest seat A: ev=1.00 verdict=pass
+second_largest seat B: ev=1.00 verdict=fail
+most_common_word seat A: ev=1.00 verdict=pass
+most_common_word seat B: ev=0.67 verdict=fail
+top_k seat A: ev=1.00 verdict=pass
+top_k seat B: ev=1.00 verdict=fail
+dedupe seat A: ev=1.00 verdict=pass
+dedupe seat B: ev=1.00 verdict=pass
+mode seat A: ev=1.00 verdict=pass
+mode seat B: ev=1.00 verdict=pass
+merge_ranges seat A: ev=0.75 verdict=fail
+merge_ranges seat B: ev=0.75 verdict=fail
+longest_word seat A: ev=0.50 verdict=fail
+longest_word seat B: ev=0.50 verdict=fail
+median seat A: ev=1.00 verdict=pass
+median seat B: ev=0.75 verdict=fail
+range_summary seat A: ev=0.40 verdict=fail
+range_summary seat B: ev=0.60 verdict=fail
+flatten_once seat A: ev=0.33 verdict=fail
+flatten_once seat B: ev=0.33 verdict=fail
+snake_to_camel seat A: ev=0.25 verdict=fail
+snake_to_camel seat B: ev=0.25 verdict=fail
+nth_smallest seat A: ev=1.00 verdict=pass
+nth_smallest seat B: ev=1.00 verdict=fail
+is_rotation seat A: ev=1.00 verdict=pass
+is_rotation seat B: ev=1.00 verdict=fail
+truncate_words seat A: ev=1.00 verdict=pass
+truncate_words seat B: ev=1.00 verdict=pass
+balanced seat A: ev=1.00 verdict=pass
+balanced seat B: ev=0.75 verdict=fail
+interleave seat A: ev=1.00 verdict=pass
+interleave seat B: ev=1.00 verdict=pass
+count_pairs seat A: ev=1.00 verdict=pass
+count_pairs seat B: ev=1.00 verdict=pass
+== TABLE (ev fraction, task x seat) ==
+  second_largest     A=1.00  B=1.00
+  most_common_word   A=1.00  B=0.67
+  top_k              A=1.00  B=1.00
+  dedupe             A=1.00  B=1.00
+  mode               A=1.00  B=1.00
+  merge_ranges       A=0.75  B=0.75
+  longest_word       A=0.50  B=0.50
+  median             A=1.00  B=0.75
+  range_summary      A=0.40  B=0.60
+  flatten_once       A=0.33  B=0.33
+  snake_to_camel     A=0.25  B=0.25
+  nth_smallest       A=1.00  B=1.00
+  is_rotation        A=1.00  B=1.00
+  truncate_words     A=1.00  B=1.00
+  balanced           A=1.00  B=0.75
+  interleave         A=1.00  B=1.00
+  count_pairs        A=1.00  B=1.00
+candidate pool mean: A=0.84  B=0.80
+tasks with headroom (some seat < 1.0): 8 of 17
+report: calibrate-20260702-011304.report.json

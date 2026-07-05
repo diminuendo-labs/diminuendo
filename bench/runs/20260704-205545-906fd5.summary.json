@@ -1,0 +1,33 @@
+{
+  "run_id": "20260704-205545-906fd5",
+  "node_id": "task-20260704-205545-906fd5",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly handles the edge case where an empty list is passed to it.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [],
+    "error": "File \"C:\\Users\\bradl\\AppData\\Local\\Temp\\tmpwmyh5joo.py\", line 11\n    min_index, max_index += 1\n    ^^^^^^^^^^^^^^^^^^^^\nSyntaxError: 'tuple' is an illegal expression for augmented assignment"
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n\n    nums.sort()\n    length = len(nums)\n    median_index = (length - 1) // 2\n\n    min_index, max_index = 0, length - 1\n    if length % 2 == 0:\n        min_index, max_index += 1\n\n    sum_of_middle_values = sum(nums[min_index:median_index]) + sum(nums[median_index+1:max_index])\n    total_excluding_extremes = length - 2\n\n    return sum_of_middle_values / total_excluding_extremes\n```",
+  "trace": "First, I sorted the input list `nums` and calculated the index of the median value. Then, I determined the indices for the minimum and maximum values, considering an edge case where the list has an even number of elements. Finally, I computed the sum of middle values (excluding the minimum and maximum) and divided it by the total count of such values to get the trimmed mean.",
+  "totals": {
+    "time_s": -1.290090000000001,
+    "tokens": -50
+  },
+  "files": [
+    "20260704-205545-906fd5.crumbs.jsonl",
+    "20260704-205545-906fd5.trace.txt"
+  ]
+}

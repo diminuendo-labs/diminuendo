@@ -1,0 +1,64 @@
+{
+  "run_id": "20260703-175142-ea6432",
+  "node_id": "task-20260703-175142-ea6432",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly handles the edge case of an empty list returning an empty string.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": false,
+        "got": "'1, 1-3, 5'",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": false,
+        "got": "'3, 3, 1-2, 2'",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": false,
+        "got": "'5, 5, 3, 1'",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": false,
+        "got": "'7, 7'",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef range_summary(nums):\n    if not nums:\n        return ''\n    runs = []\n    current_start, current_end = nums[0], nums[0]\n    for num in nums:\n        if num == current_end + 1:\n            current_end = num\n        else:\n            runs.append((current_start, current_end))\n            current_start, current_end = num, num\n    runs.append((current_start, current_end))\n    return ', '.join(f'{start}-{end}' if start != end else str(start) for start, end in runs)\n```",
+  "trace": "The approach taken is to iterate through the list and identify consecutive runs of integers. If a number differs by one from the current end, it is added to the current run; otherwise, a new run starts. The function then converts the runs into a string, collapsing each run into 'start-end' format and joining them with commas. To handle an empty list, a return of '' is implemented when nums is empty. This solution is concise, readable, and handles the edge case where the input can be an empty list.",
+  "totals": {
+    "time_s": -1.6006426000000005,
+    "tokens": -79
+  },
+  "files": [
+    "20260703-175142-ea6432.crumbs.jsonl",
+    "20260703-175142-ea6432.trace.txt"
+  ]
+}

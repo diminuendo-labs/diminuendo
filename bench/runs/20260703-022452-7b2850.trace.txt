@@ -1,0 +1,2 @@
+**
+I wrote a concise function using list comprehension and the `capitalize()` string method. This approach is efficient because it uses built-in functions and avoids unnecessary operations. The edge case I handled is an empty string, which returns an empty string as per the specification.

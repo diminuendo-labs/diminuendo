@@ -1,0 +1,2 @@
+**
+I approached this task by first splitting the input string into a list of words using the `split()` method. This allows me to easily compare the lengths of each word and find the shortest one. To handle ties (where multiple words have the same minimum length), I used the `min()` function with the `key` argument set to `len`, which returns the first (shortest) matching element in case of a tie.

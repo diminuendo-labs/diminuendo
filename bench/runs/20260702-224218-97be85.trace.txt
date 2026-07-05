@@ -1,0 +1,5 @@
+** 
+
+The function `range_summary` takes a list of integers and returns a string summarizing the numbers into ranges where possible. It first checks if the input list is empty and returns an empty string if so. Then, it sorts and deduplicates the list using `sorted(set(nums))`. The function iterates through the sorted numbers, tracking the start and end of consecutive sequences. When a sequence breaks, it appends either a single number or a range to the result list. Finally, it handles the last sequence in the loop and joins all parts with commas before returning the summary string.
+
+This approach ensures that the function is concise and readable while correctly handling edge cases like empty lists and consecutive runs of numbers.

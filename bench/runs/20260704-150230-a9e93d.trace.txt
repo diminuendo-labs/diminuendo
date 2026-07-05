@@ -1,0 +1,2 @@
+**
+I implemented the function by first checking for the edge case where an empty list is passed. If not empty, I found the minimum and maximum values in the list. If the list has only 3 elements or both min and max are unique, I return None as per the problem statement. Otherwise, I used a list comprehension to drop one occurrence of the min and max, and then returned their average.

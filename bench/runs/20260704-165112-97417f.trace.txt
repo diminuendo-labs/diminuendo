@@ -1,0 +1,1 @@
+I first checked for the edge case where the input list is empty or the chunk size `k` is less than or equal to zero. If either condition is met, an empty list is returned. Then, I used a list comprehension to create chunks of the desired size `k`. Finally, if the last chunk has fewer than `k` elements, I padded it with `None` to ensure all chunks are of equal length.

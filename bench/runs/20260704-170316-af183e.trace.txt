@@ -1,0 +1,2 @@
+**  
+I chose a list comprehension to iterate through the tokens, applying the necessary transformations. The `strip()` method was used to remove any leading or trailing whitespace from the input string. The edge case handled is that no transformation is applied if a token is in the exception list ['URL', 'ID'].

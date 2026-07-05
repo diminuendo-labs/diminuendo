@@ -1,0 +1,2 @@
+**
+The `balanced` function iterates through the string, tracking the balance of parentheses with a counter. It increments for an opening parenthesis '(' and decrements for a closing one ')'. If at any point the counter goes negative, it means a closing parenthesis appears before its matching opening one, so it returns False immediately. After processing all characters, if the counter is zero, all parentheses are balanced, and it returns True; otherwise, it returns False. This approach efficiently handles the task with minimal complexity.

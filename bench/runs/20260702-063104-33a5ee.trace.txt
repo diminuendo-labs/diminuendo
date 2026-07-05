@@ -1,0 +1,3 @@
+**
+
+I approached this task by using Python's built-in string methods, specifically the `split` and `capitalize` functions. I chose to use a generator expression within the `join` function to create the camelCase string, as it allows for a concise and readable implementation of the logic. This solution handles one edge case explicitly: an empty string, which will return an empty string without any errors.

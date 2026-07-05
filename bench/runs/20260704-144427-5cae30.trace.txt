@@ -1,0 +1,2 @@
+**
+I chose a simple iterative approach, sorting the input pairs first by their start value. Then I iterated over the sorted pairs, merging overlapping ranges as I went along. The `if not pairs:` check at the beginning handles the edge case where the input list is empty, returning an empty list immediately. This approach allows for efficient merging of adjacent and partially overlapping ranges without requiring a more complex algorithm like sweep-line or interval tree approaches.

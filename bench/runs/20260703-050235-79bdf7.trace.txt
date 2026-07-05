@@ -1,0 +1,6 @@
+** 
+I began by checking if the input list `nums` is empty, returning an empty string if true. I then sorted and de-duplicated the list using `sorted(set(nums))` to ensure distinct values in ascending order. I initialized an empty list `result` to store the final ranges or individual numbers, and set a variable `start` to keep track of the beginning of consecutive sequences.
+
+I iterated through the sorted list starting from the second element, comparing each number with the previous one (`num != start + 1`). If they are not consecutive, I appended the range (or single number) from `start` to the last added number in `result`, then updated `start` to the current number. After the loop, I append the final range or number to `result`. Finally, I joined all elements in `result` with commas and returned the resulting string.
+
+This approach ensures that consecutive sequences are correctly collapsed into 'start-end' format, single numbers remain unchanged, and edge cases like an empty input list are handled appropriately.

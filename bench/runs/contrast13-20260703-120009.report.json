@@ -1,0 +1,196 @@
+{
+  "contrast13_id": "20260703-120009",
+  "performer": "qwen2.5-coder:7b",
+  "audience": "llama3.1:8b",
+  "cells": [
+    "L-none",
+    "L-prod",
+    "R-none",
+    "R-hand"
+  ],
+  "repeats": 12,
+  "byte_checks": {
+    "prod_byte_identical": true,
+    "hand_line_byte_identical": true
+  },
+  "prod_lessons": [
+    {
+      "concept": "When multiple consecutive character runs have the same length, return the last such run's character.",
+      "rule": "When several runs tie for longest, follow the direction to return the character of the last such run."
+    },
+    {
+      "concept": "When the task states to return the last occurrence or longest run, follow that direction.",
+      "rule": "Follow the stated direction of returning the last occurrence or longest run when applicable."
+    }
+  ],
+  "hand_lesson": {
+    "concept": "When the task states each distinct pair counts once regardless of repeats, honor the distinctness the task states.",
+    "rule": "each distinct pair counts once regardless of repeats",
+    "provenance": "hand"
+  },
+  "check_table": {
+    "longest_word": {
+      "longest_word('cat door bird')": {
+        "rule_check": true,
+        "cells": {
+          "L-none": {
+            "n": 12,
+            "passed": 7,
+            "rate": 0.5833333333333334
+          },
+          "L-prod": {
+            "n": 12,
+            "passed": 1,
+            "rate": 0.08333333333333333
+          }
+        }
+      },
+      "longest_word('a bb cc d')": {
+        "rule_check": true,
+        "cells": {
+          "L-none": {
+            "n": 12,
+            "passed": 6,
+            "rate": 0.5
+          },
+          "L-prod": {
+            "n": 12,
+            "passed": 1,
+            "rate": 0.08333333333333333
+          }
+        }
+      },
+      "longest_word('')": {
+        "rule_check": false,
+        "cells": {
+          "L-none": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "L-prod": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      },
+      "longest_word('one')": {
+        "rule_check": false,
+        "cells": {
+          "L-none": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "L-prod": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      }
+    },
+    "range_summary": {
+      "range_summary([1, 2, 3, 5])": {
+        "rule_check": false,
+        "cells": {
+          "R-none": {
+            "n": 12,
+            "passed": 4,
+            "rate": 0.3333333333333333
+          },
+          "R-hand": {
+            "n": 12,
+            "passed": 5,
+            "rate": 0.4166666666666667
+          }
+        }
+      },
+      "range_summary([3, 1, 2, 2])": {
+        "rule_check": true,
+        "cells": {
+          "R-none": {
+            "n": 12,
+            "passed": 8,
+            "rate": 0.6666666666666666
+          },
+          "R-hand": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      },
+      "range_summary([5, 3, 1])": {
+        "rule_check": false,
+        "cells": {
+          "R-none": {
+            "n": 12,
+            "passed": 4,
+            "rate": 0.3333333333333333
+          },
+          "R-hand": {
+            "n": 12,
+            "passed": 5,
+            "rate": 0.4166666666666667
+          }
+        }
+      },
+      "range_summary([])": {
+        "rule_check": false,
+        "cells": {
+          "R-none": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "R-hand": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      },
+      "range_summary([7])": {
+        "rule_check": false,
+        "cells": {
+          "R-none": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "R-hand": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      }
+    }
+  },
+  "pooled_rule_checks": {
+    "L-none": {
+      "n": 24,
+      "passed": 13,
+      "rate": 0.5416666666666666
+    },
+    "L-prod": {
+      "n": 24,
+      "passed": 2,
+      "rate": 0.08333333333333333
+    },
+    "R-none": {
+      "n": 12,
+      "passed": 8,
+      "rate": 0.6666666666666666
+    },
+    "R-hand": {
+      "n": 12,
+      "passed": 12,
+      "rate": 1.0
+    }
+  },
+  "tool_audit_ok": true,
+  "n_note": "R=12 per cell, interleaved. Each task reads only against its own same-run none cell. Gaps under 4 of 24 claim nothing, per the drift doctrine. The four signed readings live in the packet and are applied in its RESULTS, not here."
+}

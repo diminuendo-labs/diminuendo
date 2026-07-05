@@ -1,0 +1,2 @@
+**
+I first handle the edge case where the input list is empty, returning an empty string immediately. Then I sort and deduplicate the list to ensure that I'm working with a clean sequence of unique numbers. The main loop iterates through this sorted list, tracking the start of each potential range. When it encounters a number not consecutive to the current range's end, it appends either the single number or the range to the result list and moves on. Finally, I join all parts of the result list with commas to produce the final string.

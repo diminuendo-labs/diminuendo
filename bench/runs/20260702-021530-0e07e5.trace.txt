@@ -1,0 +1,2 @@
+**
+I chose to use list comprehension for this task because it allows for concise and readable code. Specifically, I used nested list comprehensions to iterate over the input list and its sublists, while checking if each sublist is a list using `isinstance()`. This approach handles the edge case where the input contains only one level of nesting, as demonstrated by the example usage provided in the docstring.

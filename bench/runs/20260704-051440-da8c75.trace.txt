@@ -1,0 +1,2 @@
+**
+I implemented a simple and efficient algorithm for merging integer ranges. I first sort the input pairs by their start values, which allows me to iterate through the ranges in order. Then, as I iterate through each current range, I check if it overlaps with the last merged range. If they overlap, I merge them into one contiguous block; otherwise, I add the non-overlapping range to the list of merged ranges. This approach ensures that the output is sorted by start value and handles edge cases where duplicate ranges are present in the input list.

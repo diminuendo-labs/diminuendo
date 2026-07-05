@@ -1,0 +1,11 @@
+**
+
+To solve this task, I followed these steps:
+
+1. **Function Definition:** Defined a function `equal_ignoring_spaces` that takes two parameters, `a` and `b`.
+2. **Edge Case Handling:** Added a check at the beginning to see if either `a` or `b` is `None`. If so, return `False`. This handles the edge case where one of the strings might be improperly defined.
+3. **Whitespace Removal and Lowercasing:** Used the `replace()` method to remove all whitespace characters from both strings and then converted them to lowercase using the `lower()` method.
+4. **Comparison:** Compared the processed versions of `a` and `b`. If they are equal, return `True`; otherwise, return `False`.
+5. **Return Value:** The function returns a boolean indicating whether the two input strings are equal after ignoring spaces and case.
+
+This approach ensures that the function is both correct (it meets the criteria provided) and concise (using clear, straightforward operations), while also properly handling an important edge case.

@@ -1,0 +1,3 @@
+**
+
+To implement the `merge_ranges` function, I used a clear and effective approach to merge overlapping ranges. I first checked for the edge case where no ranges are provided by returning an empty list if the input is empty. Then, I sorted the ranges by their start value using Python's built-in `sort()` method with a lambda function as the sorting key. This facilitated the merging process. Finally, I iterated through the sorted ranges and merged overlapping ones while maintaining the order of non-overlapping ranges.

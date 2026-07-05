@@ -1,0 +1,169 @@
+TRANSFER PROBE 20260702-083121 (contrastive lessons, rule classes)
+A=qwen2.5-coder:7b  B=llama3.1:8b  generator=qwen2.5-coder:7b (fixed)
+apply pool=8 tasks  repeats=3  per-cell n=24  gen pool=8 tasks x R_G=3
+-- generating lessons from model A (qwen2.5-coder:7b), contrastive with sibling fallback, R_G=3 --
+gen A (max_index): within_task lesson committed
+gen A (shortest_word): within_task lesson committed
+gen A (distinctness): no contrast, both siblings all_pass, nothing broke
+gen A (boundary): no contrast, both siblings all_pass, nothing broke
+gen A (normalize): no contrast, both siblings all_pass, nothing broke
+store A: 2 lessons committed
+-- generating lessons from model B (llama3.1:8b), contrastive with sibling fallback, R_G=3 --
+gen B (max_index): within_task lesson committed
+gen B (distinctness): no contrast, both siblings all_pass, nothing broke
+gen B (boundary): no contrast, both siblings all_pass, nothing broke
+gen B (normalize): no contrast, both siblings all_pass, nothing broke
+store B: 1 lessons committed
+cell A|none rep 0 (most_common_word): verdict=pass ev=1.00 tools=0
+cell A|none rep 0 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell A|none rep 0 (longest_word): verdict=pass ev=1.00 tools=0
+cell A|none rep 0 (median): verdict=pass ev=1.00 tools=0
+cell A|none rep 0 (range_summary): verdict=fail ev=0.80 tools=0
+cell A|none rep 0 (flatten_once): verdict=pass ev=1.00 tools=0
+cell A|none rep 0 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell A|none rep 0 (balanced): verdict=pass ev=1.00 tools=0
+cell A|none rep 1 (most_common_word): verdict=pass ev=1.00 tools=0
+cell A|none rep 1 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell A|none rep 1 (longest_word): verdict=fail ev=0.50 tools=0
+cell A|none rep 1 (median): verdict=fail ev=0.75 tools=0
+cell A|none rep 1 (range_summary): verdict=pass ev=1.00 tools=0
+cell A|none rep 1 (flatten_once): verdict=pass ev=1.00 tools=0
+cell A|none rep 1 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell A|none rep 1 (balanced): verdict=pass ev=1.00 tools=0
+cell A|none rep 2 (most_common_word): verdict=pass ev=1.00 tools=0
+cell A|none rep 2 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell A|none rep 2 (longest_word): verdict=fail ev=0.50 tools=0
+cell A|none rep 2 (median): verdict=pass ev=1.00 tools=0
+cell A|none rep 2 (range_summary): verdict=pass ev=1.00 tools=0
+cell A|none rep 2 (flatten_once): verdict=pass ev=1.00 tools=0
+cell A|none rep 2 (snake_to_camel): verdict=fail ev=0.75 tools=0
+cell A|none rep 2 (balanced): verdict=pass ev=1.00 tools=0
+cell A|A rep 0 (most_common_word): verdict=fail ev=0.67 tools=2
+cell A|A rep 0 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell A|A rep 0 (longest_word): verdict=pass ev=1.00 tools=2
+cell A|A rep 0 (median): verdict=pass ev=1.00 tools=0
+cell A|A rep 0 (range_summary): verdict=pass ev=1.00 tools=0
+cell A|A rep 0 (flatten_once): verdict=pass ev=1.00 tools=0
+cell A|A rep 0 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell A|A rep 0 (balanced): verdict=pass ev=1.00 tools=0
+cell A|A rep 1 (most_common_word): verdict=pass ev=1.00 tools=2
+cell A|A rep 1 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell A|A rep 1 (longest_word): verdict=fail ev=0.50 tools=2
+cell A|A rep 1 (median): verdict=pass ev=1.00 tools=0
+cell A|A rep 1 (range_summary): verdict=pass ev=1.00 tools=0
+cell A|A rep 1 (flatten_once): verdict=pass ev=1.00 tools=0
+cell A|A rep 1 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell A|A rep 1 (balanced): verdict=pass ev=1.00 tools=0
+cell A|A rep 2 (most_common_word): verdict=pass ev=1.00 tools=2
+cell A|A rep 2 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell A|A rep 2 (longest_word): verdict=fail ev=0.50 tools=2
+cell A|A rep 2 (median): verdict=pass ev=1.00 tools=0
+cell A|A rep 2 (range_summary): verdict=pass ev=1.00 tools=0
+cell A|A rep 2 (flatten_once): verdict=pass ev=1.00 tools=0
+cell A|A rep 2 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell A|A rep 2 (balanced): verdict=pass ev=1.00 tools=0
+cell A|B rep 0 (most_common_word): verdict=pass ev=1.00 tools=1
+cell A|B rep 0 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell A|B rep 0 (longest_word): verdict=pass ev=1.00 tools=1
+cell A|B rep 0 (median): verdict=fail ev=0.75 tools=0
+cell A|B rep 0 (range_summary): verdict=pass ev=1.00 tools=0
+cell A|B rep 0 (flatten_once): verdict=fail ev=0.33 tools=0
+cell A|B rep 0 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell A|B rep 0 (balanced): verdict=pass ev=1.00 tools=0
+cell A|B rep 1 (most_common_word): verdict=pass ev=1.00 tools=1
+cell A|B rep 1 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell A|B rep 1 (longest_word): verdict=pass ev=1.00 tools=1
+cell A|B rep 1 (median): verdict=pass ev=1.00 tools=0
+cell A|B rep 1 (range_summary): verdict=pass ev=1.00 tools=0
+cell A|B rep 1 (flatten_once): verdict=fail ev=0.33 tools=0
+cell A|B rep 1 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell A|B rep 1 (balanced): verdict=pass ev=1.00 tools=0
+cell A|B rep 2 (most_common_word): verdict=pass ev=1.00 tools=1
+cell A|B rep 2 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell A|B rep 2 (longest_word): verdict=pass ev=1.00 tools=1
+cell A|B rep 2 (median): verdict=fail ev=0.75 tools=0
+cell A|B rep 2 (range_summary): verdict=fail ev=0.40 tools=0
+cell A|B rep 2 (flatten_once): verdict=pass ev=1.00 tools=0
+cell A|B rep 2 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell A|B rep 2 (balanced): verdict=pass ev=1.00 tools=0
+cell B|none rep 0 (most_common_word): verdict=pass ev=1.00 tools=0
+cell B|none rep 0 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell B|none rep 0 (longest_word): verdict=fail ev=0.50 tools=0
+cell B|none rep 0 (median): verdict=pass ev=1.00 tools=0
+cell B|none rep 0 (range_summary): verdict=fail ev=0.20 tools=0
+cell B|none rep 0 (flatten_once): verdict=fail ev=0.00 tools=0
+cell B|none rep 0 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell B|none rep 0 (balanced): verdict=fail ev=0.75 tools=0
+cell B|none rep 1 (most_common_word): verdict=pass ev=1.00 tools=0
+cell B|none rep 1 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell B|none rep 1 (longest_word): verdict=fail ev=0.50 tools=0
+cell B|none rep 1 (median): verdict=fail ev=1.00 tools=0
+cell B|none rep 1 (range_summary): verdict=fail ev=0.20 tools=0
+cell B|none rep 1 (flatten_once): verdict=fail ev=0.67 tools=0
+cell B|none rep 1 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell B|none rep 1 (balanced): verdict=pass ev=1.00 tools=0
+cell B|none rep 2 (most_common_word): verdict=fail ev=0.33 tools=0
+cell B|none rep 2 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell B|none rep 2 (longest_word): verdict=fail ev=1.00 tools=0
+cell B|none rep 2 (median): verdict=pass ev=1.00 tools=0
+cell B|none rep 2 (range_summary): verdict=fail ev=0.20 tools=0
+cell B|none rep 2 (flatten_once): verdict=fail ev=0.33 tools=0
+cell B|none rep 2 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell B|none rep 2 (balanced): verdict=fail ev=1.00 tools=0
+cell B|A rep 0 (most_common_word): verdict=fail ev=0.67 tools=2
+cell B|A rep 0 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell B|A rep 0 (longest_word): verdict=fail ev=1.00 tools=2
+cell B|A rep 0 (median): verdict=pass ev=1.00 tools=0
+cell B|A rep 0 (range_summary): verdict=fail ev=0.40 tools=0
+cell B|A rep 0 (flatten_once): verdict=pass ev=1.00 tools=0
+cell B|A rep 0 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell B|A rep 0 (balanced): verdict=fail ev=0.75 tools=0
+cell B|A rep 1 (most_common_word): verdict=pass ev=1.00 tools=2
+cell B|A rep 1 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell B|A rep 1 (longest_word): verdict=fail ev=0.00 tools=2
+cell B|A rep 1 (median): verdict=fail ev=0.75 tools=0
+cell B|A rep 1 (range_summary): verdict=fail ev=0.20 tools=0
+cell B|A rep 1 (flatten_once): verdict=fail ev=0.00 tools=0
+cell B|A rep 1 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell B|A rep 1 (balanced): verdict=pass ev=1.00 tools=0
+cell B|A rep 2 (most_common_word): verdict=fail ev=1.00 tools=2
+cell B|A rep 2 (merge_ranges): verdict=fail ev=0.50 tools=0
+cell B|A rep 2 (longest_word): verdict=fail ev=0.50 tools=2
+cell B|A rep 2 (median): verdict=pass ev=1.00 tools=0
+cell B|A rep 2 (range_summary): verdict=fail ev=0.40 tools=0
+cell B|A rep 2 (flatten_once): verdict=fail ev=1.00 tools=0
+cell B|A rep 2 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell B|A rep 2 (balanced): verdict=fail ev=0.75 tools=0
+cell B|B rep 0 (most_common_word): verdict=pass ev=1.00 tools=1
+cell B|B rep 0 (merge_ranges): verdict=fail ev=0.50 tools=0
+cell B|B rep 0 (longest_word): verdict=fail ev=0.50 tools=1
+cell B|B rep 0 (median): verdict=pass ev=1.00 tools=0
+cell B|B rep 0 (range_summary): verdict=fail ev=0.20 tools=0
+cell B|B rep 0 (flatten_once): verdict=fail ev=0.33 tools=0
+cell B|B rep 0 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell B|B rep 0 (balanced): verdict=fail ev=0.75 tools=0
+cell B|B rep 1 (most_common_word): verdict=fail ev=0.67 tools=1
+cell B|B rep 1 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell B|B rep 1 (longest_word): verdict=pass ev=1.00 tools=1
+cell B|B rep 1 (median): verdict=fail ev=0.75 tools=0
+cell B|B rep 1 (range_summary): verdict=fail ev=0.40 tools=0
+cell B|B rep 1 (flatten_once): verdict=fail ev=0.67 tools=0
+cell B|B rep 1 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell B|B rep 1 (balanced): verdict=pass ev=1.00 tools=0
+cell B|B rep 2 (most_common_word): verdict=fail ev=0.67 tools=1
+cell B|B rep 2 (merge_ranges): verdict=fail ev=0.75 tools=0
+cell B|B rep 2 (longest_word): verdict=pass ev=1.00 tools=1
+cell B|B rep 2 (median): verdict=fail ev=0.75 tools=0
+cell B|B rep 2 (range_summary): verdict=fail ev=0.20 tools=0
+cell B|B rep 2 (flatten_once): verdict=pass ev=1.00 tools=0
+cell B|B rep 2 (snake_to_camel): verdict=fail ev=0.25 tools=0
+cell B|B rep 2 (balanced): verdict=pass ev=1.00 tools=0
+== MATRIX (ev_mean / pass_rate, rows=performer, cols=lessons) ==
+  A:  none=0.84/0.58  A=0.82/0.62  B=0.77/0.54
+  B:  none=0.61/0.21  A=0.63/0.21  B=0.65/0.29
+== PER-CLASS (ev_mean, cells as perf|src, n in parens) ==
+  boundary:  A|none=0.89(9)  A|A=0.92(9)  A|B=0.71(9)  B|none=0.69(9)  B|A=0.75(9)  B|B=0.72(9)
+  distinctness:  A|none=0.93(3)  A|A=1.00(3)  A|B=0.80(3)  B|none=0.20(3)  B|A=0.33(3)  B|B=0.27(3)
+  normalize:  A|none=0.71(6)  A|A=0.62(6)  A|B=0.62(6)  B|none=0.58(6)  B|A=0.54(6)  B|B=0.58(6)
+  tie_break:  A|none=0.83(6)  A|A=0.78(6)  A|B=1.00(6)  B|none=0.72(6)  B|A=0.69(6)  B|B=0.81(6)
+GATE: PASSED. six cells ran at n=24 each, every run checkpointed, per-class breakdown and per-class contrast accounting present. Lessons committed A=2 (2 within-task, 0 sibling), B=1 (1 within-task, 0 sibling). A thin store is a finding, not a failure, and the accounting is in the report.

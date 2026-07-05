@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `Counter` class from Python's standard library to count the occurrences of each word. This allowed me to easily determine both the most common word and its frequency. To handle ties, I used a list comprehension with the `max` function to find the index of the last occurrence of the most common word. This approach is concise and readable while efficiently handling the specified edge case where multiple words have the same maximum frequency.

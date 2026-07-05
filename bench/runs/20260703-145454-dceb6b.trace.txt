@@ -1,0 +1,3 @@
+**
+
+I approached this problem by first handling the edge case where the input list is empty. Then, I used a dictionary `num_counts` to store the count of each number in the list. This allows me to efficiently look up the count of complements for each number and increment the pair count accordingly. The logic is concise and readable, with comments added to explain the reasoning behind the code.

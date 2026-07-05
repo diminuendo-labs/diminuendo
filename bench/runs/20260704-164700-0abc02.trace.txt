@@ -1,0 +1,4 @@
+**
+I split the input string `s` by underscores to get individual tokens. I then iterate over these tokens, capitalizing each token unless it is in the exception list `['URL', 'ID']`, in which case I leave it unchanged. Finally, I join all tokens together without any separators to form the camelCase output.
+
+The edge case I named is when the input string contains an underscore-delimited identifier like `'user_id'`. The function correctly handles this by capitalizing all letters except for those immediately following an underscore unless they are part of the exception list.

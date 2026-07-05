@@ -1,0 +1,3 @@
+**
+
+To solve this problem, I first converted the list to a set to remove duplicates and then sorted it. This ensures that all values are distinct and in ascending order. Next, I iterated through the sorted list, identifying consecutive ranges by checking if the next number is exactly one more than the current number. If a range is identified, it is added to the result as 'start-end'. If not, the single number is added. Finally, all parts of the result are joined with commas and returned. This approach ensures that the function is both correct and concise, meeting the criteria provided.

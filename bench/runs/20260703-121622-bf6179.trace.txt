@@ -1,0 +1,11 @@
+**
+
+I started by sorting and removing duplicates from the input list to ensure that I am working with a clean, sorted set of numbers. I then initialized an empty list `summary` to store the parts of the final output string and set `start` to the first number in the sorted list. 
+
+I iterated through the sorted list starting from the second element. If the current number is not exactly one more than the previous number, it means a range has ended, and I check if `start` equals the previous number. If they are equal, it's just a single number, so I append it to `summary`. Otherwise, I append the range 'start-end'. I then update `start` to the current number.
+
+After the loop, I handle the last range or single number in the list by checking if `start` equals the last number. If they are equal, it's a single number, so I append it. Otherwise, I append the range 'start-last_number'.
+
+Finally, I join all parts in `summary` with commas and return the resulting string.
+
+This approach ensures that consecutive numbers are collapsed into ranges and that all distinct values are included, handling the edge case of an empty input list by returning an empty string.

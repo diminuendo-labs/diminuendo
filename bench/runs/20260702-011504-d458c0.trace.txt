@@ -1,0 +1,4 @@
+**
+The `dedupe` function uses a list comprehension to iterate over the input list `items`. It maintains a set called `seen` to track elements that have already been encountered. For each element `x`, it checks if `x` is in the `seen` set. If not, it adds `x` to both the result list and the `seen` set. This approach ensures that only the first appearance of each element is included in the output list, preserving order.
+
+The edge case handled by this function is when the input list is empty (`[]`). The function correctly returns an empty list for this edge case.

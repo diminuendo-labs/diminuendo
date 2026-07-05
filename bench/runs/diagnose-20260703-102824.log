@@ -1,0 +1,50 @@
+RESIDUE DIAGNOSIS 20260703-102824 (PACKET-012)
+performer=qwen2.5-coder:7b  audience=llama3.1:8b (v1, production)
+task=longest_word  arms=('none', 'prod', 'hand')  R=12
+hand lesson gate check: validate=lesson missing fields: ['confidence', 'provenance']; menu.query=KeyError: 'confidence'
+none rep 0: ev=1.00 tools=0
+none rep 1: ev=0.50 tools=0
+none rep 2: ev=0.50 tools=0
+none rep 3: ev=1.00 tools=0
+none rep 4: ev=0.50 tools=0
+none rep 5: ev=1.00 tools=0
+none rep 6: ev=1.00 tools=0
+none rep 7: ev=1.00 tools=0
+none rep 8: ev=0.50 tools=0
+none rep 9: ev=1.00 tools=0
+none rep 10: ev=0.50 tools=0
+none rep 11: ev=0.50 tools=0
+prod rep 0: ev=0.50 tools=2
+prod rep 1: ev=1.00 tools=2
+prod rep 2: ev=0.50 tools=2
+prod rep 3: ev=0.50 tools=2
+prod rep 4: ev=0.50 tools=2
+prod rep 5: ev=0.50 tools=2
+prod rep 6: ev=0.50 tools=2
+prod rep 7: ev=1.00 tools=2
+prod rep 8: ev=0.50 tools=2
+prod rep 9: ev=1.00 tools=2
+prod rep 10: ev=0.50 tools=2
+prod rep 11: ev=1.00 tools=2
+hand rep 0: ev=1.00 tools=1
+hand rep 1: ev=1.00 tools=1
+hand rep 2: ev=0.50 tools=1
+hand rep 3: ev=1.00 tools=1
+hand rep 4: ev=0.50 tools=1
+hand rep 5: ev=0.50 tools=1
+hand rep 6: ev=0.50 tools=1
+hand rep 7: ev=0.50 tools=1
+hand rep 8: ev=0.50 tools=1
+hand rep 9: ev=0.50 tools=1
+hand rep 10: ev=1.00 tools=1
+hand rep 11: ev=1.00 tools=1
+== POOLED RULE CHECKS (passed/n per arm) ==
+  none: 12/24
+  prod: 8/24
+  hand: 10/24
+== PER-CHECK (none / prod / hand) ==
+  longest_word('cat door bird'): 0.50 / 0.33 / 0.42  <-- rule
+  longest_word('a bb cc d'): 0.50 / 0.33 / 0.42  <-- rule
+  longest_word(''): 1.00 / 1.00 / 1.00
+  longest_word('one'): 1.00 / 1.00 / 1.00
+GATE: PASSED. three arms at R=12, tool audit clean (prod=2, hand=1 on every armed run), every run checkpointed, report persisted. The readings are applied in the packet RESULTS.

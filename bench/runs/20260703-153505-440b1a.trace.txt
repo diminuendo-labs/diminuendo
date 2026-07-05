@@ -1,0 +1,8 @@
+**
+I started by checking if the input list `nums` is empty, and if so, returning an empty string immediately. This handles one of the edge cases as specified in the criteria.
+
+Next, I converted the list to a set to remove duplicates and then sorted it to ensure the numbers are in ascending order. This step ensures that consecutive numbers can be identified easily.
+
+I then iterated through the sorted numbers, keeping track of the start and end of potential ranges. If a number is consecutive to the current range (end + 1), I updated the end; otherwise, I appended the current range to the result list and reset the start and end.
+
+Finally, after the loop, I handled the last range separately and joined all parts with commas to form the final string. This approach ensures that the function is both correct and concise, meeting the criteria provided.

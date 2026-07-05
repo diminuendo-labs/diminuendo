@@ -1,0 +1,2 @@
+**
+I implemented the function by iterating over the input ranges and maintaining a list of merged ranges. When encountering an overlapping or adjacent range, I updated the last merged range in the list to encompass both. If no overlap was found, I appended the new range to the list. This approach ensures that the output is sorted by start value. The function also explicitly handles the edge case where the input list is empty, returning an empty list in this case.

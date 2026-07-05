@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking the edge case where the input list is empty, and returning 0 as per the requirements. Then I created a frequency dictionary to keep track of the counts of each number in the list. After that, I found the maximum frequency encountered so far using a variable `max_freq`. Finally, I used a list comprehension to generate a list of modes (numbers with the highest frequency), and returned its length as the count of distinct modes.

@@ -1,0 +1,3 @@
+**
+
+I defined a generator expression that iterates over each element in the input list. If an element is a list itself (checked using `isinstance()`), it's included as-is; otherwise, its value is yielded individually. This approach effectively "flattens" one level of nesting while preserving deeper levels of nesting. I chose this concise implementation to meet the readability and correctness criteria specified in the task.

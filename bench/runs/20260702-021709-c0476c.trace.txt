@@ -1,0 +1,3 @@
+**
+
+I chose to approach this task by first handling the edge case where the input list is empty. This allows the function to return an empty list immediately without any further processing. Next, I sorted the list of pairs based on their start values to make it easier to identify overlapping ranges. Then, I iterated through the sorted list and merged any overlapping ranges by updating the last range in the `merged` list if necessary. This resulted in a concise and readable function that correctly merges the input ranges while handling the empty list edge case.

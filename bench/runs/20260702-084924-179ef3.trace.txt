@@ -1,0 +1,3 @@
+**
+
+To solve this task, I chose to use Python's built-in string methods `lower()` for case-insensitivity and `replace()` for removing whitespace characters. I also wrapped the function call in a conditional expression that handles the edge case where both inputs are None by converting them to empty strings before applying the stripping and lowercasing operations. This approach is concise and readable while ensuring the correct handling of the specified edge case.

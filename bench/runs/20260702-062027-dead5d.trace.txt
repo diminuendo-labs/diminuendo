@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking for the edge case of an empty list, and returning an empty string. Then, I sorted and removed duplicates from the input list to simplify further processing. I used a single loop to iterate over the sorted list, keeping track of the current start and end values of each range. If a number is consecutive to the previous one, it updates the end value; otherwise, it adds the previous range (if it's not a singleton) or starts a new one. Finally, I join the ranges with commas.

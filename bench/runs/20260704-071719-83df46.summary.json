@@ -1,0 +1,51 @@
+{
+  "run_id": "20260704-071719-83df46",
+  "node_id": "task-20260704-071719-83df46",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided Python function meets all requirements, including correctly handling an edge case when input is not a list.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n```python\ndef flatten_once(lst):\n    flat_list = []\n    for item in lst:\n        if isinstance(item, list):\n            flat_list.extend(item)\n        else:\n            flat_list.append(item)\n    return flat_list\n\n# Edge case: input is not a list\ndef flatten_once_safe(lst):\n    if not isinstance(lst, list):\n        raise ValueError(\"Input must be a list\")\n    return flatten_once(lst)\n\n```\n\n**",
+  "trace": "**\nThe `flatten_once` function iterates through each element in the provided list. If the element is a list itself, it extends the result list with its items; otherwise, it appends the item directly to the result list. This way, only one level of nesting is flattened.\n\nTo handle an edge case where the input might not be a list, I added a `flatten_once_safe` function that checks if the input is a list and raises a `ValueError` if it's not. This ensures robustness by preventing the function from being called with inappropriate types.",
+  "totals": {
+    "time_s": 23.723079,
+    "tokens": 683
+  },
+  "files": [
+    "20260704-071719-83df46.crumbs.jsonl",
+    "20260704-071719-83df46.trace.txt"
+  ]
+}

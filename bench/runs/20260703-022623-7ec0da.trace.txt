@@ -1,0 +1,2 @@
+**
+I chose to use the built-in string methods `replace()` and `title()`, which are concise and readable ways to perform the required transformations. The first `replace()` call removes all underscores, and then `title()` capitalizes each word, which can lead to unnecessary spaces in case of camelCase (e.g., 'fooBarBaz' -> 'Foo Bar Baz'). To handle this edge case, I added a final `replace(' ', '')` to remove any remaining spaces.

@@ -1,0 +1,2 @@
+**
+I chose to solve this problem by first sorting and deduping the input list, then iterating over it to build up a list of ranges. I used a single flag `start` to keep track of whether we're in a range or not, and added logic to handle cases where a single number stays a single number (never a range). I also explicitly handled the edge case of an empty input list by returning an empty string immediately.

@@ -1,0 +1,2 @@
+**  
+I started by sorting the list and removing duplicates to ensure that I am working with a clean, ascending sequence of unique numbers. Then, I iterated through this list, identifying consecutive ranges. For each range identified, I formatted it as 'start-end' unless it was a single number. Finally, I joined all these pieces into a string separated by commas. The function handles an edge case where the input list is empty, returning an empty string in such cases.

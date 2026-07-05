@@ -1,0 +1,2 @@
+** 
+To solve this task, I first checked for the edge case where the input list is empty and returned an empty string if true. Then, I converted the list to a set to remove duplicates and sorted it to ensure the numbers are in ascending order. Using a while loop, I iterated through the list and identified consecutive ranges by checking if each number is followed by its successor. If a range is found, I appended it in 'start-end' format; otherwise, I appended the single number. Finally, I joined all parts with commas to form the final string.

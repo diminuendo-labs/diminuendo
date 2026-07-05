@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-054423-c84378",
+  "node_id": "task-20260703-054423-c84378",
+  "task": "Write a Python function title_words(s) returning the string with every whitespace-separated word title-cased (first letter upper, the rest lower) and runs of whitespace collapsed to single spaces, except that words already entirely uppercase stay exactly as they are. An empty string returns ''. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code successfully implements the required functionality with good readability, but does not explicitly name an edge case in its comments or docstring.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 1
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "title_words('hello  world')",
+        "ok": true,
+        "got": "'Hello World'",
+        "expect": "'Hello World'"
+      },
+      {
+        "call": "title_words('NASA rocks')",
+        "ok": true,
+        "got": "'NASA Rocks'",
+        "expect": "'NASA Rocks'"
+      },
+      {
+        "call": "title_words('mIxEd')",
+        "ok": true,
+        "got": "'Mixed'",
+        "expect": "'Mixed'"
+      },
+      {
+        "call": "title_words('')",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef title_words(s):\n    words = s.split()\n    titlecased_words = []\n    for word in words:\n        if word.isupper():\n            titlecased_words.append(word)\n        else:\n            titlecased_words.append(word.capitalize())\n    return ' '.join(titlecased_words)\n```\n\n**",
+  "trace": "**\n\nI chose to split the input string into individual words using `split()`, which handles multiple consecutive whitespace characters by collapsing them into a single space. For each word, I checked if it was already entirely uppercase with `isupper()`. If it was, I appended it unchanged to the result list; otherwise, I applied title-casing with `capitalize()` (which converts the first character of the string to uppercase and makes the rest lowercase). Finally, I joined the processed words back into a single string with `' '.join(titlecased_words)`, ensuring that only the first letter of each word is uppercased unless it was already all uppercase. This approach maintains readability and conciseness while correctly handling edge cases like multiple spaces between words or words already in title case.",
+  "totals": {
+    "time_s": 22.1416182,
+    "tokens": 709
+  },
+  "files": [
+    "20260703-054423-c84378.crumbs.jsonl",
+    "20260703-054423-c84378.trace.txt"
+  ]
+}

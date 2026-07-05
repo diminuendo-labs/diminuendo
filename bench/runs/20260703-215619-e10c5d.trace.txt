@@ -1,0 +1,5 @@
+**
+
+1. **Sorting and Removing Duplicates:** I started by sorting the input list to ensure that any consecutive numbers are adjacent. Additionally, converting the list to a set removes any duplicate values.
+2. **Iterating Through the List:** I then iterated through the sorted unique list to identify consecutive sequences. If a number is consecutive to the previous one, I updated the end of the current sequence. Otherwise, I added the range (or single number) to the result list and started a new sequence.
+3. **Handling Edge Cases:** The function handles an empty input by returning an empty string immediately. It also correctly processes sequences where the start equals the end, ensuring no unnecessary range is created.

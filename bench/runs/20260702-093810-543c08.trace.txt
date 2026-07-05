@@ -1,0 +1,2 @@
+**
+I approached this task by considering the simplest possible implementation that meets the requirements. Since we only care about '(' and ')' characters, I counted the occurrences of each using Python's built-in `count` method for strings. This approach assumes that parentheses are properly nested, as the problem statement guarantees is the case (no '))(' or ')(' sequences).

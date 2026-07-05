@@ -1,0 +1,1 @@
+I first sorted the list of words by increasing length using Python's built-in sort function. To handle the edge case where multiple words have equal lengths, I applied another sort with a custom key that reverses the alphabetical order within groups of equal lengths. Finally, I returned the requested k-th word if it exists in the list, and None otherwise.

@@ -1,0 +1,2 @@
+**
+I wrote the function `chunk` using a list comprehension to create the chunks. The loop starts at index 0 and iterates over the length of the input list with a step size equal to the desired chunk size. If the size is non-positive, I immediately return an empty list. This approach is concise and readable, following the "iterative" idiom for list comprehensions in Python.

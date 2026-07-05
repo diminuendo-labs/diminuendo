@@ -1,0 +1,3 @@
+**
+
+I approached the problem by splitting the input string `s` into a list of words using `split()`. Since `split()` handles multiple consecutive whitespace characters appropriately, it simplifies edge cases like multiple spaces. I then used Python's built-in `max()` function with `key=len` to find the longest word in the list. If the list is empty (which would happen if `s` is an empty string), the function returns an empty string as specified. This solution adheres to the criteria by being concise, readable, and handling edge cases like multiple consecutive spaces correctly.

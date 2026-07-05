@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for an edge case where the input list `words` is empty. If it is, I immediately return `None`. Then, I used Python's built-in `sorted` function with a custom sorting key to sort the words based on their length (in ascending order) and reverse alphabetical order among words of equal length. Finally, I checked if the provided index `k` was within range (i.e., between 1 and the length of the sorted list), and returned the corresponding word or `None` otherwise.

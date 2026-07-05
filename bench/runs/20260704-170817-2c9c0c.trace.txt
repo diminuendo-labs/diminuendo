@@ -1,0 +1,3 @@
+**
+
+To achieve the desired functionality, I first defined an exception list containing 'URL' and 'ID'. Then, I split the input string `s` by underscores while removing any leading or trailing whitespace. The resulting tokens were processed to capitalize every token except for those in the exception list. For these exceptions, their original form was preserved. Finally, the first token was converted to lowercase and concatenated with the capitalized tokens to form the camel case output. This approach ensures that the function handles both normal cases and edge cases involving tokens specified in the exception list correctly.

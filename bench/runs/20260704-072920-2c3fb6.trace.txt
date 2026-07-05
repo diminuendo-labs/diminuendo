@@ -1,0 +1,3 @@
+**
+
+To solve this task, I first check if the list is empty and return `None` as specified in the edge case. If the list is not empty, I sort it to ensure the numbers are in ascending order. Then, I calculate the middle index of the sorted list. If the length of the list is even (`n % 2 == 0`), I return the average of the two middle values as a float. If the length is odd, I simply return the middle value. This approach ensures that the function handles all edge cases and meets the requirements efficiently and concisely.

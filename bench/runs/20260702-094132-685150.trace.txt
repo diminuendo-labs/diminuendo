@@ -1,0 +1,2 @@
+**
+I approached this task by recognizing that a string of balanced parentheses would have the same number of opening and closing parentheses. Therefore, instead of iterating over the string or using a stack to keep track of open parentheses, I simply compared the counts of '(' and ')' characters in the input string. This solution is concise and readable, and it correctly handles the edge case where an empty string is considered balanced.

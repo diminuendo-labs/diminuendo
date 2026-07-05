@@ -1,0 +1,2 @@
+**
+I used a `set` to track the numbers I have seen so far and another set to store the distinct pairs. As I iterate through the list, for each number, I calculate its complement (the number needed to reach the target sum). If this complement is in the `seen` set, it means we have found a pair that sums up to the target. To ensure the pairs are unordered and counted distinctly, I sort the pair before adding it to the `pairs` set. Finally, I return the size of the `pairs` set, which represents the number of distinct unordered pairs.

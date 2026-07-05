@@ -1,0 +1,3 @@
+**
+
+I approached this problem by first checking for the edge case of an empty list and returning 0 immediately. Then, I used a dictionary to store the frequency of each number in the list. After that, I found the maximum frequency and counted how many numbers tied for it by creating a new list with numbers that have that maximum frequency. The length of this list is then returned as the count of distinct modes.

@@ -1,0 +1,2 @@
+** 
+I defined the function `median` that takes a list of numbers as input. The first check is for an empty list, returning `None` if true. The list is then sorted to facilitate finding the median. Depending on whether the length of the list is odd or even, the function returns either the middle element (for odd lengths) or the average of the two middle elements (for even lengths). This approach ensures the function works correctly for all edge cases, including an empty input list.

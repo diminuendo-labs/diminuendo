@@ -1,0 +1,2 @@
+**
+I chose to use the `Counter` class from the `collections` module to efficiently count the occurrences of each word. This allowed me to easily identify the maximum count and then find all words with that count. To break ties alphabetically, I used a list comprehension to filter for words with the maximum count, and then returned the minimum of this list (i.e., the first one encountered in lexicographic order). The edge case of an empty input string is handled by checking if the stripped string is empty before attempting to process it.

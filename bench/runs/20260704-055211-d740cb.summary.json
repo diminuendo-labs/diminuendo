@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-055211-d740cb",
+  "node_id": "task-20260704-055211-d740cb",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function does not flatten the list exactly one level. It returns the original input if it is a list, or wraps the input in a list otherwise.",
+  "per_criterion": {
+    "correctness": 3,
+    "conciseness_and_readability": 4,
+    "edge_case_handled": 0
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": false,
+        "got": "[[1, 2], [3]]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": false,
+        "got": "[1, [2, [3, 4]]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flatten exactly one level of nesting.\n\n    Args:\n        lst (list): Input list with potential nested lists.\n\n    Returns:\n        list: Flattened list, or the original if not list.\n    \"\"\"\n    return [x for x in lst] if isinstance(lst, list) else [lst]\n```\n**",
+  "trace": "**\nI chose to use a list comprehension to concisely implement the desired behavior. To handle edge cases, I added a simple condition using `isinstance` to check if the input is a list; if so, it gets flattened, otherwise it's returned as is. This approach handles an edge case where a non-list element is present in the input (e.g., `[1, [2, 3], 'a']`).",
+  "totals": {
+    "time_s": -1.7191542000000002,
+    "tokens": -33
+  },
+  "files": [
+    "20260704-055211-d740cb.crumbs.jsonl",
+    "20260704-055211-d740cb.trace.txt"
+  ]
+}

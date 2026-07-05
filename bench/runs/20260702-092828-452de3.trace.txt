@@ -1,0 +1,3 @@
+**
+
+I chose to handle the tie break by returning the last occurrence of the most common word. This is because when there's a tie for the shortest word, it makes sense to return the one that appears later in the string. I also included an edge case check at the beginning of the function to return an empty string if the input is an empty string. In terms of implementation, I used the `Counter` class from Python's built-in `collections` module to count the occurrences of each word, and then used list slicing to get the last tied word in case of a tie for the shortest word.

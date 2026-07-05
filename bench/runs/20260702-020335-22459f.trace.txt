@@ -1,0 +1,2 @@
+**
+I solved the task by first using regular expressions to split the input string into words. I then used the `Counter` class from the `collections` module to count the occurrences of each word. To break ties alphabetically, I filtered out the words with the highest count and returned the lexicographically smallest one. I also handled the edge case where the input string is empty by returning an empty string.

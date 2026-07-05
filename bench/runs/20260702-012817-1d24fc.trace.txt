@@ -1,0 +1,3 @@
+**
+
+The function `is_palindrome(s)` first uses a regular expression (`re.sub`) to remove all non-alphanumeric characters from the input string and converts it to lower case. This ensures that only alphanumeric characters are considered when determining if the string is a palindrome. The cleaned string is then compared with its reverse to check for palindromicity. An edge case handled by this function is an empty string or a string containing only non-alphanumeric characters, which both result in `True` because they can be considered palindromes under the given criteria.

@@ -1,0 +1,7 @@
+**
+
+The function `second_largest` first checks if the length of the input list is less than 2. If it is, the function returns `None` because there can't be a second largest element in such a case.
+
+Next, the function converts the list to a set to remove any duplicate values. If the resulting set has fewer than two elements, it returns `None` as well, since there isn't a distinct second largest value.
+
+Finally, the unique values are sorted in descending order, and the function returns the second element of this sorted list, which is the second largest distinct value.

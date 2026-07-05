@@ -1,0 +1,6 @@
+**
+To solve this task, I first handle the edge case where the input list is empty. If it is, the function returns an empty string immediately. Then, I sort and remove duplicates from the input list to ensure we are working with a clean set of unique numbers in ascending order.
+
+Next, I iterate through the sorted list, using two pointers to identify consecutive ranges. When a range is detected, it is formatted as 'start-end' and added to the summary list. If no range is detected (i.e., a single number), it is simply added as a string.
+
+Finally, the summary list is joined into a comma-separated string and returned. This approach ensures that the function is both concise and readable, while correctly handling all edge cases, including an empty input list.

@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-073417-45b955",
+  "node_id": "task-20260703-073417-45b955",
+  "task": "Write a Python function third_largest_distinct(nums) returning the third largest distinct value in the list, or None when there are fewer than three distinct values. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly returns None when there are fewer than three distinct values in the list.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "edge cases are handled": 1
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "third_largest_distinct([5, 5, 4, 3])",
+        "ok": true,
+        "got": "3",
+        "expect": "3"
+      },
+      {
+        "call": "third_largest_distinct([2, 2, 1, 1])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "third_largest_distinct([9, 8, 7, 6])",
+        "ok": true,
+        "got": "7",
+        "expect": "7"
+      },
+      {
+        "call": "third_largest_distinct([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:** \n\n```python\ndef third_largest_distinct(nums):\n    distinct_nums = set(nums)\n    if len(distinct_nums) < 3:\n        return None\n    sorted_nums = sorted(distinct_nums, reverse=True)\n    return sorted_nums[2]\n```\n\n**",
+  "trace": "**\n\nThe function `third_largest_distinct` first converts the input list `nums` into a set to remove any duplicates, resulting in `distinct_nums`. It then checks if the number of distinct elements is less than 3. If so, it returns `None` as there aren't enough distinct values. Otherwise, it sorts the distinct numbers in descending order and returns the third element from the sorted list, which represents the third largest distinct value.",
+  "totals": {
+    "time_s": 12.7422448,
+    "tokens": 576
+  },
+  "files": [
+    "20260703-073417-45b955.crumbs.jsonl",
+    "20260703-073417-45b955.trace.txt"
+  ]
+}

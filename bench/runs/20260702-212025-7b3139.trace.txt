@@ -1,0 +1,2 @@
+**
+I approached this problem by first handling the edge case of an empty list. Then, I created a dictionary `counts` to store the frequency of each number in the list. Next, I found the maximum frequency using the `max()` function and identified all numbers with that frequency using a list comprehension. Finally, I used the `set()` function to ensure each mode is counted once and returned their sum.

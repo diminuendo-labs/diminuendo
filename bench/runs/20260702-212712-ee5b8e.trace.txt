@@ -1,0 +1,2 @@
+**
+I defined a function `title_words` that splits the input string into whitespace-separated words, then iterates over these words to apply title casing where necessary (i.e., unless they are already entirely uppercase). To collapse runs of whitespace, I used the `split()` method, which returns a list of words separated by any number of whitespace characters.

@@ -1,0 +1,2 @@
+**
+I chose to sort the input pairs by their start value first, as this allows us to easily identify adjacent or nearly adjacent ranges. Then I iterated through the sorted pairs, merging any that overlapped with or were within distance 1 of each other by updating the end of the last merged range. This approach is concise and readable, and it handles the edge case where the input list is empty by returning an empty list.

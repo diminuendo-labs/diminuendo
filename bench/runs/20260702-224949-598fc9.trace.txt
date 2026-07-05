@@ -1,0 +1,2 @@
+**
+I chose to use a simple and straightforward approach by counting the occurrences of '(' and ')' in the input string. Since a closing parenthesis must never appear before its opening partner, if the counts match, it implies that every open parenthesis has been matched with a corresponding close parenthesis. This function handles the edge case where an empty string is provided, which would also be considered balanced according to the problem statement.

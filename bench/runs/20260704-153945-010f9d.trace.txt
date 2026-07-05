@@ -1,0 +1,2 @@
+**
+I implemented the function using Python's built-in `sorted` function with a custom sorting key. The lambda function sorts first by word length (`len(x)`) and then by reverse alphabetical order for words of equal length (`-x`). This ensures that shorter words come before longer ones, and among equal lengths, reverse alphabetical order is used. I also added a try-except block to handle the case when `k` is out of range.

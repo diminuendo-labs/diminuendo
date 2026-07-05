@@ -1,0 +1,5 @@
+**
+
+To achieve the task, I defined a function `token_case` that takes an underscore-delimited string `s` and an optional list of exception tokens. The function splits the input string into tokens using the underscore as a delimiter. It then iterates over each token, applying a capitalization rule based on whether it's in the exceptions list or not. Tokens listed in the exceptions are kept in their exact form (uppercased), while others are capitalized. Finally, the transformed tokens are joined together to form the camel case string.
+
+The edge case I named is when the input string is `user_id`, which should produce the output `userId`. This demonstrates that the function correctly capitalizes all tokens except for any specified exceptions in their exact form.

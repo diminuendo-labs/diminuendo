@@ -1,0 +1,3 @@
+**
+
+I chose to use the built-in `sum` and `len` functions in Python to calculate the mean, as they are concise and readable. The function first checks if the input list is empty, returning None immediately if so, thus handling the edge case of an empty list. This approach also makes it clear that zero is never returned by the function, fulfilling another part of the criteria.

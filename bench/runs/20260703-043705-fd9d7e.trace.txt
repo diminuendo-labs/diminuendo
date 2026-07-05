@@ -1,0 +1,2 @@
+**
+I started by checking if the input string `s` is empty or contains only whitespace. If so, I immediately return an empty string. Next, I created a dictionary `word_counts` to keep track of the count of each word in lowercase. As I iterate over the words in the string, I update their counts in the dictionary. After that, I find the maximum count and gather all words that have this count into a list `common_words`. Finally, I sort this list alphabetically and return the first element, which is the lexicographically smallest word among those with the highest frequency.

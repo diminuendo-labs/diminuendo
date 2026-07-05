@@ -1,0 +1,3 @@
+The `token_case()` function first creates an exception list of identifiers that should not be altered. It then splits the input string by underscores to get a list of tokens. The loop iterates through each token, checking if it needs to be capitalized or left unchanged due to being in the exception list. If it's neither empty nor an exception, it converts the first character to lowercase and concatenates the rest without any separator. Lastly, it returns the camel-cased string converted to title case for consistency with Python conventions.
+
+One edge case handled is when there are no underscores in the input string; in this case, the function will simply return the original string.

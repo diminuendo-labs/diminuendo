@@ -1,0 +1,6 @@
+**
+The function `range_summary` first checks if the input list `nums` is empty. If it is, an empty string is returned as specified in one of the edge cases.
+
+If the list is not empty, it is sorted to ensure that consecutive numbers are adjacent. The function then iterates through the sorted list, tracking the start and end of potential ranges. When a non-consecutive number is encountered, the current range (or single number) is added to the summary list in the appropriate format ('start-end' or 'single_number').
+
+Finally, any remaining range or single number is appended to the summary list before joining all elements with commas to form the final result string. This approach ensures that consecutive numbers are collapsed into ranges and non-consecutive numbers remain as individual entries, meeting the requirements of the task.

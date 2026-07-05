@@ -1,0 +1,9 @@
+**
+1. I first check if the input list is empty and return an empty string immediately if it is.
+2. The list is sorted to ensure that consecutive numbers are adjacent.
+3. I iterate through the sorted list, maintaining a start and end pointer for the current range of consecutive numbers.
+4. When a non-consecutive number is encountered, the current range (or single number) is added to the result list, and new start and end pointers are set.
+5. After the loop, any remaining range is added to the result.
+6. The result list is joined with commas to form the final string.
+
+This approach ensures that all consecutive ranges are correctly identified and collapsed into 'start-end' format, while single numbers remain unchanged.

@@ -1,0 +1,2 @@
+**
+I approached this task by first handling the edge case of an empty list, which would cause a runtime error if not checked for explicitly. I then sorted the input list to ensure that it's in the correct order before calculating the median. For odd-length lists, I returned the middle element directly; for even-length lists, I calculated the average of the two middle elements to avoid floating-point arithmetic errors.

@@ -1,0 +1,2 @@
+**  
+The function `collapse_delims(s)` is designed to split the input string `s` using commas and semicolons as delimiters. To handle consecutive delimiters (edge case), a regular expression pattern `,;+` is used in the `split` method, which matches one or more occurrences of either delimiter. The result is then filtered and joined with a single comma between each piece. Empty pieces at the start and end are automatically dropped by filtering and stripping commas from both ends before returning the final string.

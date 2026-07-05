@@ -1,0 +1,2 @@
+**
+I started by sorting the list and removing duplicates using `sorted(set(nums))` to ensure that each distinct value is considered only once. I then used a while loop to iterate through the sorted list, identifying consecutive sequences. If a sequence of more than one number is found, it is converted into a range in the format 'start-end'. Single numbers are added as they are. Finally, all parts are joined with commas to form the final output string. This approach ensures that the function handles the task requirements correctly and efficiently.

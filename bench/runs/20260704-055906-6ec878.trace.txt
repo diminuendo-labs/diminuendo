@@ -1,0 +1,3 @@
+**
+
+I chose a simple and efficient approach by counting the occurrences of '(' and ')' in the input string. This works because an empty string is considered balanced according to the problem statement, so there's no need for additional edge case handling. By directly comparing the counts of opening and closing parentheses, we can determine if they are balanced without having to iterate over the entire string or use more complex data structures.

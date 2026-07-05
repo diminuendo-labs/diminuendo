@@ -1,0 +1,3 @@
+** 
+
+I began by handling the edge case where the input list `lst` is empty or the chunk size `k` is less than or equal to zero. In such cases, I returned an empty list immediately. Then, I iterated through the list in steps of `k`, creating chunks of the desired size. If a chunk was shorter than `k`, I appended `None` until it reached the required length. Finally, I collected all these padded chunks into a result list and returned it. This approach ensures that every chunk has exactly `k` elements, with padding as necessary.

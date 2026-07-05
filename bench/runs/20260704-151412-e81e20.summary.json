@@ -1,0 +1,33 @@
+{
+  "run_id": "20260704-151412-e81e20",
+  "node_id": "task-20260704-151412-e81e20",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. Empty lists, one-element lists, and two-element lists return None. When all values are equal, one of them still drops as the minimum and one as the maximum, and the mean of the rest equals that same value. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function is correct, handles the edge case well, but could be more concise.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_case_handled": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [],
+    "error": "Traceback (most recent call last):\n  File \"C:\\Users\\bradl\\AppData\\Local\\Temp\\tmpdip21wo5.py\", line 19, in <module>\n    print(trimmed_mean([1, 1, 1]))  # Should print 1.0\n          ~~~~~~~~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\bradl\\AppData\\Local\\Temp\\tmpdip21wo5.py\", line 16, in trimmed_mean\n    return sum(trimmed_nums) / len(trimmed_nums)\n           ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\nZeroDivisionError: division by zero"
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef trimmed_mean(nums):\n    \"\"\"\n    Calculate the mean of a list after dropping one occurrence of the minimum and one occurrence of the maximum.\n\n    Args:\n        nums (list): A list of numbers.\n\n    Returns:\n        float: The mean of the list after trimming, or None if the input is empty or has only one element.\n    \"\"\"\n    if len(nums) < 3:\n        return None\n    min_val = min(nums)\n    max_val = max(nums)\n    trimmed_nums = [x for x in nums if x not in (min_val, max_val)]\n    return sum(trimmed_nums) / len(trimmed_nums)\n\n# Edge case: when all values are equal, the mean of the rest equals that same value\nprint(trimmed_mean([1, 1, 1]))  # Should print 1.0\n```\n\n**",
+  "trace": "**\nI first checked for edge cases by returning None for lists with less than three elements. Then, I used list comprehension to create a new list (`trimmed_nums`) that excludes the minimum and maximum values from the input list. Finally, I returned the mean of this trimmed list using the built-in `sum` function divided by the length of the trimmed list.",
+  "totals": {
+    "time_s": -4.240236599999999,
+    "tokens": 42
+  },
+  "files": [
+    "20260704-151412-e81e20.crumbs.jsonl",
+    "20260704-151412-e81e20.trace.txt"
+  ]
+}

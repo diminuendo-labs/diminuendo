@@ -1,0 +1,3 @@
+**
+
+I approached this task by directly implementing the required functionality using Python's list comprehension feature. This concise syntax allows for a clear and readable implementation of the necessary operations: splitting on commas with `s.split(',')`, trimming whitespace with `field.strip()`, and filtering out empty fields by including the conditional `if field.strip()` in the list comprehension.

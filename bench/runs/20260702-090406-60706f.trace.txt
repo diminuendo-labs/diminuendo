@@ -1,0 +1,2 @@
+**
+I used a straightforward approach to iterate through each element in the input list `lst`. If an element is a list itself, I extended the result list with its items using the `extend` method. Otherwise, I simply appended the item to the result list. This ensures that only one level of nesting is flattened as required. The function handles nested lists within other nested lists by keeping those deeper levels intact, thus meeting the criteria for a correct implementation.

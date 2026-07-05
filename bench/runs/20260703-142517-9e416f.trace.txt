@@ -1,0 +1,2 @@
+**
+I implemented this function using Python's built-in `set` data structure to remove duplicates from the input list. This approach is concise and efficient because it has an average time complexity of O(n), where n is the number of elements in the list. I also included a docstring to highlight that the function handles the edge case for empty lists, which would otherwise return 0 due to `set([])` being an empty set.

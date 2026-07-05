@@ -1,0 +1,2 @@
+**
+I used a generator expression within the built-in `sum` function to count the unique single-appearances. The `set` of numbers is created first, which automatically removes duplicates. Then, I iterated over this set and checked how many times each number appears in the original list using the `count` method. If a number appears only once, it contributes 1 to the total sum, effectively counting its single-appearances. This approach is concise and readable while handling the edge case of an empty input list.

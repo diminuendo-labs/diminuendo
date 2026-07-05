@@ -1,0 +1,3 @@
+**
+
+To solve this task, I used list comprehension to generate the chunks. The outer loop iterates over the indices of the input list `lst`, incrementing by `k` each time. For each index `i`, a slice of `lst` from `i` to `i+k` is taken and padded with `None` if its length is less than `k`. This ensures that every chunk has exactly `k` elements, including padding for the last chunk. I chose this approach because it is concise and readable while also efficiently generating the desired output.

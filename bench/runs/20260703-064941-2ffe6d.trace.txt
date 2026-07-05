@@ -1,0 +1,2 @@
+**
+I chose to prioritize returning the last word among those with the shortest length when there is a tie. I achieved this by iterating over the words in reverse order, updating the longest word whenever I encounter a longer one. This ensures that if multiple words have the same maximum length, the last one encountered will be returned as the result. By doing so, I directly followed the task's instruction to "return the last such word, not the first" when there is a tie.

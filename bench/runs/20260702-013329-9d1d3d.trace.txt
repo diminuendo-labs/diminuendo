@@ -1,0 +1,2 @@
+** 
+The function `median` first checks if the input list `nums` is empty and returns `None` if it is, handling one of the edge cases directly. If not empty, it sorts the list using the built-in `sort()` method to ensure the numbers are in ascending order. It then calculates the middle index `mid`. If the length of the list `n` is even, it computes the average of the two middle numbers and returns it as a float. If `n` is odd, it simply returns the middle number. This approach ensures the function works correctly for both odd and even lengths of the input list.

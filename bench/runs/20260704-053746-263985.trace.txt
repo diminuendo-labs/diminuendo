@@ -1,0 +1,2 @@
+**
+I chose to implement this function using a simple and concise approach. Since we only need to consider the characters '(' and ')' and ignore everything else, I utilized the built-in `count()` method of Python strings to count the occurrences of these two characters in the input string. This method is efficient because it counts all occurrences and does not require iterating over the entire string multiple times. The edge case handled by this function is an empty string, which would also return True as per the problem statement.

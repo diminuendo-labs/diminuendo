@@ -1,0 +1,3 @@
+**
+
+The function `collapse_delims` takes a string `s` as input. It splits the string using the `split(',')` method, which handles consecutive commas by treating them as a single delimiter. After splitting, it filters out any empty strings that may result from leading or trailing commas. The pieces are then joined together with a single comma between each using the `join()` method. This approach ensures that all consecutive commas are treated as one split and that there are no extra commas at the beginning or end of the resulting string.

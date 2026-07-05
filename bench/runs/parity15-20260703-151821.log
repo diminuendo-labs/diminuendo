@@ -1,0 +1,51 @@
+ORIGIN PARITY 20260703-151821 (PACKET-015, the clean reverse test)
+performer=qwen2.5-coder:7b  audience=llama3.1:8b (v1, production)
+task=range_summary  cells=('none', 'rev', 'hand')  R=12  interleaved per rep in that fixed order  drift bar=2 of 12 (stated in the packet)
+byte checks: rev=True hand=True
+rep 0 none: ev=0.80 tools=0
+rep 0 rev: ev=1.00 tools=1
+rep 0 hand: ev=1.00 tools=1
+rep 1 none: ev=1.00 tools=0
+rep 1 rev: ev=1.00 tools=1
+rep 1 hand: ev=1.00 tools=1
+rep 2 none: ev=0.60 tools=0
+rep 2 rev: ev=1.00 tools=1
+rep 2 hand: ev=1.00 tools=1
+rep 3 none: ev=0.40 tools=0
+rep 3 rev: ev=1.00 tools=1
+rep 3 hand: ev=1.00 tools=1
+rep 4 none: ev=0.40 tools=0
+rep 4 rev: ev=0.60 tools=1
+rep 4 hand: ev=1.00 tools=1
+rep 5 none: ev=1.00 tools=0
+rep 5 rev: ev=1.00 tools=1
+rep 5 hand: ev=1.00 tools=1
+rep 6 none: ev=1.00 tools=0
+rep 6 rev: ev=0.60 tools=1
+rep 6 hand: ev=0.60 tools=1
+rep 7 none: ev=1.00 tools=0
+rep 7 rev: ev=1.00 tools=1
+rep 7 hand: ev=1.00 tools=1
+rep 8 none: ev=1.00 tools=0
+rep 8 rev: ev=1.00 tools=1
+rep 8 hand: ev=1.00 tools=1
+rep 9 none: ev=1.00 tools=0
+rep 9 rev: ev=0.60 tools=1
+rep 9 hand: ev=1.00 tools=1
+rep 10 none: ev=0.40 tools=0
+rep 10 rev: ev=1.00 tools=1
+rep 10 hand: ev=0.60 tools=1
+rep 11 none: ev=1.00 tools=0
+rep 11 rev: ev=1.00 tools=1
+rep 11 hand: ev=0.60 tools=1
+== POOLED RULE CHECK (passed/n per cell) ==
+  none: 8/12
+  rev: 12/12
+  hand: 12/12
+== PER-CHECK (none / rev / hand) ==
+  range_summary([1, 2, 3, 5]): 0.67 / 0.75 / 0.75
+  range_summary([3, 1, 2, 2]): 0.67 / 1.00 / 1.00  <-- rule
+  range_summary([5, 3, 1]): 0.67 / 0.75 / 0.75
+  range_summary([]): 1.00 / 1.00 / 1.00
+  range_summary([7]): 1.00 / 1.00 / 1.00
+GATE: PASSED. three cells at R=12 interleaved, byte checks asserted, tool audit clean, every run checkpointed, report persisted. The readings are applied in the packet RESULTS.

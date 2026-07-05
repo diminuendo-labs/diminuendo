@@ -1,0 +1,88 @@
+SYMMETRIC FORMS, VARIANT RUNG 2 20260704-234234 (PACKET-033, the pre-registered LAST G1 attempt)
+performer=qwen2.5-coder:7b  audience=llama3.1:8b (v1, production)
+ground=kth_ordered r2 (variant)  cells=('none', 'menu-form', 'directive')  R=12  stage A gate 9 of 12  reading bar 2 of 12  VOID-BY-FLOOR at none 2 of 12 or under
+one rule check: the unit IS the run and every count is in runs, n=12, said plainly
+the instrument is the standing one by identity; the delta is run-record naming, the three scaling constants, and the floor check, tier 1, named in RESULTS
+rule checks (the standing annotation): ["kth_ordered(['bb', 'ab', 'c'], 2)"]
+census taxonomy, stated before any run: single-key-sort, compound-key-sort, manual-scan, other, unrunnable
+priors: P004 clean checks 0.92 to 0.36 under the contradicting directive; menu 0.33 to 0.75; direction comparable, magnitudes not; old-input rung 2 qwen 10 of 12 in P026, old-input historical, never a qualification; P030 rung 3 14 of 24 against an 18-of-24 gate; variant rung 2 zero measurements exist
+GATE 1, THE CONTRADICTION GATE (directive28's committed rung 2 gate, both candidates):
+  candidate line 4 (shortest_word, stated_direction last):
+    kth_ordered(['bb', 'ab', 'c'], 2): rule 'bb' directive 'ab' DIFFERS: True
+    GATE: PASSES
+  candidate line 5 (longest_run_char, stated_direction last):
+    kth_ordered(['bb', 'ab', 'c'], 2): rule 'bb' directive 'ab' DIFFERS: True
+    GATE: PASSES
+GATE 2, THE BYTE CHECK (directive29's, the P029 store against production line 4):
+  store byte-identical, position asserted: True
+GATE 3, THE BYTE-FORM VERIFIER (directive30's):
+  emission count on matched features: 1
+  tool equals lesson concept plus applies_when: True
+  firewall control, tools on ground features: 0
+the directive text (the lesson's rule sentence, byte-verbatim, source field: rule): If multiple words have the same shortest length, the function should return the last such word encountered.
+A none rep 0: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 1: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 2: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 3: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 4: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 5: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 6: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 7: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 8: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 9: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 10: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 11: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+stage A gate: pooled rule 12 of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 12/12 readings-present); PASSES (gate at 9 of 12 or better)
+stage B on gated ground: interleaved triplets, ('none', 'menu-form', 'directive') per rep, readings against the stage B none cell only, floor checked before any reading
+B none rep 0: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+B menu-form rep 0: ev=1.00 tools=1 directives=0 shape=compound-key-sort
+B directive rep 0: ev=0.00 tools=0 directives=1 shape=compound-key-sort
+B none rep 1: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+B menu-form rep 1: ev=1.00 tools=1 directives=0 shape=compound-key-sort
+B directive rep 1: ev=0.33 tools=0 directives=1 shape=single-key-sort
+B none rep 2: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+B menu-form rep 2: ev=1.00 tools=1 directives=0 shape=compound-key-sort
+B directive rep 2: ev=1.00 tools=0 directives=1 shape=compound-key-sort
+B none rep 3: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+B menu-form rep 3: ev=1.00 tools=1 directives=0 shape=compound-key-sort
+B directive rep 3: ev=0.67 tools=0 directives=1 shape=single-key-sort
+B none rep 4: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+B menu-form rep 4: ev=1.00 tools=1 directives=0 shape=compound-key-sort
+B directive rep 4: ev=0.33 tools=0 directives=1 shape=compound-key-sort
+B none rep 5: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+B menu-form rep 5: ev=1.00 tools=1 directives=0 shape=compound-key-sort
+B directive rep 5: ev=0.67 tools=0 directives=1 shape=compound-key-sort
+B none rep 6: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+B menu-form rep 6: ev=1.00 tools=1 directives=0 shape=compound-key-sort
+B directive rep 6: ev=1.00 tools=0 directives=1 shape=compound-key-sort
+B none rep 7: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+B menu-form rep 7: ev=1.00 tools=1 directives=0 shape=compound-key-sort
+B directive rep 7: ev=0.67 tools=0 directives=1 shape=single-key-sort
+B none rep 8: ev=0.33 tools=0 directives=0 shape=compound-key-sort
+B menu-form rep 8: ev=1.00 tools=1 directives=0 shape=compound-key-sort
+B directive rep 8: ev=1.00 tools=0 directives=1 shape=compound-key-sort
+B none rep 9: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+B menu-form rep 9: ev=1.00 tools=1 directives=0 shape=compound-key-sort
+B directive rep 9: ev=1.00 tools=0 directives=1 shape=compound-key-sort
+B none rep 10: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+B menu-form rep 10: ev=1.00 tools=1 directives=0 shape=compound-key-sort
+B directive rep 10: ev=1.00 tools=0 directives=1 shape=compound-key-sort
+B none rep 11: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+B menu-form rep 11: ev=1.00 tools=1 directives=0 shape=compound-key-sort
+B directive rep 11: ev=0.67 tools=0 directives=1 shape=compound-key-sort
+VOID-BY-FLOOR check: none 11 of 12, floor at 2: floor clear, the readings proceed
+== STAGE B POOLED RULE (canonical, bar 2 of 12, against the stage B none cell) ==
+  none: 11/12 (diagnostic 11/12 readings-present; unrunnable rows 0)
+  menu-form: 12/12 (diagnostic 12/12 readings-present; unrunnable rows 0)
+  directive: 7/12 (diagnostic 7/12 readings-present; unrunnable rows 0)
+== STAGE B PER-CHECK canonical (none / menu-form / directive) ==
+  kth_ordered(['bb', 'ab', 'c'], 2): 0.92 / 1.00 / 0.58  <-- rule
+  kth_ordered(['dd', 'a', 'ccc'], 2): 0.92 / 1.00 / 0.58  <-- watch
+  kth_ordered(['a', 'bb'], 5): 1.00 / 1.00 / 0.92  <-- watch
+== CENSUS (shape distribution per cell, every cell run) ==
+  A|none: single-key-sort=0  compound-key-sort=12  manual-scan=0  other=0  unrunnable=0
+  B|directive: single-key-sort=3  compound-key-sort=9  manual-scan=0  other=0  unrunnable=0
+  B|menu-form: single-key-sort=0  compound-key-sort=12  manual-scan=0  other=0  unrunnable=0
+  B|none: single-key-sort=0  compound-key-sort=12  manual-scan=0  other=0  unrunnable=0
+census unrunnable against zero-readings divergence: 0 rows
+GATE: PASSED. build gates re-run as committed code (the standing instruments, by identity) before any model run, stage A arithmetic printed, stage B ran whole, audits clean from the rows (tools and directives both), census reported for every cell, every run checkpointed, report persisted. The readings are applied in the packet RESULTS. The seat neither taught nor learned.

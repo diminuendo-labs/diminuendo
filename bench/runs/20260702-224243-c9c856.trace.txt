@@ -1,0 +1,3 @@
+**
+
+The function `flatten_once(lst)` iterates through each element in the input list. If an element is a list itself, it extends the result list with the elements of that sublist using the `extend()` method, thus flattening one level of nesting. For non-list elements, it simply appends them to the result list as they are. This approach ensures that only one level of nesting is flattened while deeper levels remain nested. The function handles the edge case where an element can be a list itself.

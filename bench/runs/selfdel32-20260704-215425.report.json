@@ -1,0 +1,141 @@
+{
+  "selfdel32_id": "20260704-215425",
+  "packet": "PACKET-032",
+  "replicates": "PACKET-031, cells never pooled",
+  "performer": "mistral:7b",
+  "audience": "llama3.1:8b",
+  "ground": "safe_stats r1",
+  "repeats": 12,
+  "cells": [
+    "none",
+    "armed"
+  ],
+  "qualify_min": 4,
+  "rule_bar": "4 of 24",
+  "void_ceiling": "none at 20 of 24 or above",
+  "store_md5": "588e6eaf31f77559556d15b2d44e040f",
+  "stage_a": {
+    "pooled": {
+      "n": 24,
+      "passed": 17,
+      "present_n": 24,
+      "present_passed": 17,
+      "unrunnable_rows": 0
+    },
+    "fails": 7,
+    "qualify_min": 4,
+    "qualified": true
+  },
+  "stage_b": {
+    "ran": true,
+    "void_by_ceiling": false,
+    "pooled_rule_checks": {
+      "none": {
+        "n": 24,
+        "passed": 19,
+        "present_n": 24,
+        "present_passed": 19,
+        "unrunnable_rows": 0
+      },
+      "armed": {
+        "n": 24,
+        "passed": 16,
+        "present_n": 22,
+        "present_passed": 16,
+        "unrunnable_rows": 1
+      }
+    },
+    "check_table": {
+      "trimmed_mean([])": {
+        "rule_check": true,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "armed": {
+            "rows": 12,
+            "present_n": 11,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          }
+        }
+      },
+      "trimmed_mean([5, 5, 1, 9])": {
+        "rule_check": true,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 7,
+            "rate": 0.5833333333333334
+          },
+          "armed": {
+            "rows": 12,
+            "present_n": 11,
+            "passed": 5,
+            "rate": 0.4166666666666667
+          }
+        }
+      },
+      "trimmed_mean([3, 1, 2])": {
+        "rule_check": false,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 2,
+            "rate": 0.16666666666666666
+          },
+          "armed": {
+            "rows": 12,
+            "present_n": 11,
+            "passed": 3,
+            "rate": 0.25
+          }
+        }
+      }
+    },
+    "rule_disagreement": {
+      "none": {
+        "rows": 12,
+        "disagreeing_rows": 5
+      },
+      "armed": {
+        "rows": 12,
+        "disagreeing_rows": 6
+      }
+    }
+  },
+  "census": {
+    "A|none": {
+      "sort-slice-average": 12,
+      "loop-accumulate": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "B|none": {
+      "sort-slice-average": 12,
+      "loop-accumulate": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "B|armed": {
+      "sort-slice-average": 11,
+      "loop-accumulate": 0,
+      "other": 0,
+      "unrunnable": 1
+    }
+  },
+  "census_no_readings_divergence": 0,
+  "audit_ok": true,
+  "priors": {
+    "P031_cells_verbatim": "none 15 of 24, armed 20 of 24, GAIN at gap 5; never pooled with this packet's cells",
+    "P019_trait_cell": "FLAT, none 12/24, armed 13/24, cross-origin",
+    "candidacy_history": "14 of 24 (P026), 19 of 24 (P031 stage A), 15 of 24 (P031 stage B none, same-run)",
+    "P031_texture": "movement concentrated on the trim check the concept does not address; description only, no per-check prediction is pre-registered here"
+  },
+  "n_note": "Stage A gates only. The exit-against-exit reading, the two-cause caveat, observability naming, and effective-n sizing live in the packet and are applied in its RESULTS. Cells are never pooled across packets."
+}

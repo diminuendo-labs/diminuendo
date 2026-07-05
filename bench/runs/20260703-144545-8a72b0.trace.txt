@@ -1,0 +1,2 @@
+**
+I used a list comprehension to create the deduplicated list. The key insight is to use a `set` as a cache to keep track of seen items, allowing us to check for duplicates in O(1) time. To handle edge cases, I've included an example where the input list is empty.

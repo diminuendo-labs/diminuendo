@@ -1,0 +1,15 @@
+**
+
+To solve this problem, I followed these steps:
+
+1. **Edge Case Handling:** I first check if the input list `nums` is empty. If it is, I immediately return an empty string.
+
+2. **Sorting and Uniqueness:** Since we need distinct values in ascending order, I convert the list to a set to remove duplicates and then sort it. This ensures that consecutive numbers are adjacent.
+
+3. **Range Identification:** I iterate through the sorted list while keeping track of the start of each range. If the current number is not exactly one more than the previous start, I check if there's a single number or a range. If it's a range, I append `start-end` to the result; otherwise, I append just `start`. I then update the start to the current number.
+
+4. **Final Range Addition:** After the loop, I need to add the last range to the result. This step ensures that the final segment is included in the output.
+
+5. **Result Formatting:** Finally, I join all parts of the result list with a comma and a space, returning the formatted string.
+
+This approach ensures that the function is both correct and concise, adhering to the task requirements.

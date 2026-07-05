@@ -1,0 +1,4 @@
+**
+- The function `max_index` first checks if the input list `nums` is empty. If it is, the function returns `None`, handling the edge case of an empty list.
+- To find the index of the largest value, the function uses Python's built-in `max()` function to determine the maximum value in the list.
+- To get the last occurrence of this maximum value, the function reverses the list (`nums[::-1]`) and finds its first occurrence using the `index()` method. The index obtained is then adjusted by subtracting it from `len(nums) - 1` to find the correct position in the original list.

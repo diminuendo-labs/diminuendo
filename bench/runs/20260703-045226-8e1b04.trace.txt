@@ -1,0 +1,9 @@
+**
+
+The function `range_summary` first checks if the input list is empty and returns an empty string if true. It then sorts and removes duplicates from the input list to ensure the numbers are in ascending order without any repetition.
+
+It initializes variables `start` and `end` with the first element of the sorted list. As it iterates through the remaining elements, it checks if the current number is consecutive to the `end`. If so, it updates the `end`; otherwise, it appends the range from `start` to `end` (or just a single number if they are equal) to the result list and resets `start` and `end`.
+
+After the loop, it handles the last range in the list before returning the final string with ranges or numbers joined by commas.
+
+The edge case of an empty list is handled at the beginning of the function, ensuring that an empty input results in an empty output.

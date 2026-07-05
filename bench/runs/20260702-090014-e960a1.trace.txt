@@ -1,0 +1,2 @@
+**  
+I started by checking if the list is empty and returning `None` if it is, which handles one of the edge cases. I then sorted the list to ensure the numbers are in order. For odd-length lists, I returned the middle element directly. For even-length lists, I calculated the average of the two middle elements, casting the result as a float to handle any potential integer division issues, ensuring the output is always a float.

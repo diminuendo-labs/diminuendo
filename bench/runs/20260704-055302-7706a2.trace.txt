@@ -1,0 +1,2 @@
+**
+I chose to use a list comprehension to create a new list that includes only the elements from the input list. If an element is itself a list (checked using `isinstance`), it will be included as-is; otherwise, the element will be flattened and added to the new list. This approach allows for concise code while maintaining readability. I also considered edge cases, such as an empty list or a list with a single non-list element, which this function correctly handles.

@@ -1,0 +1,2 @@
+**
+I approached this task by using a combination of Python's built-in string methods, specifically `split()` to separate the input string into words and `title()` to capitalize each word. I also used an f-conditional expression (`word.title() if not word.isupper() else word`) to preserve entirely uppercase words as they are. This solution is concise and readable due to its simplicity and adherence to standard library methods, making it easy to understand and maintain.

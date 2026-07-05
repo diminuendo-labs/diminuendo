@@ -1,0 +1,3 @@
+**
+
+I implemented a simple iterative solution using a stack to track the opening parentheses. When encountering an opening parenthesis, I push it onto the stack; when encountering a closing parenthesis, I check if the stack is empty (indicating unbalanced parentheses) and then pop the corresponding opening parenthesis from the stack. At the end of processing the string, I return whether the stack is empty (indicating all pairs were properly matched). This approach handles the edge case where the input string is empty, which was specified as balanced.

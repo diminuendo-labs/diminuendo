@@ -1,0 +1,2 @@
+**
+I implemented the function by first checking for edge cases (n less than 1), as specified in the task. I then converted the input list to a set to remove duplicates and sorted it to prepare for finding the nth smallest value. Finally, I checked if n exceeds the number of unique values and returned None accordingly. This approach is concise and readable while ensuring that at least one edge case (n less than 1) is handled explicitly.

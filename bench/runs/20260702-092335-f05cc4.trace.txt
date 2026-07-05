@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking for the edge case where the input list is empty, returning an empty string immediately. I then sorted and deduplicated the list of numbers to ensure they are in ascending order. Finally, I iterated over the list to identify consecutive ranges, appending them as 'start-end' strings to a result list; single numbers were treated as such.

@@ -1,0 +1,2 @@
+**
+I solved this problem by using Python's built-in `set` function to remove duplicates from the input list. This is because sets in Python only store unique elements, so converting the list to a set and then back to a list with `list(set(nums))` would give us a list of distinct values. However, I chose not to do this conversion explicitly since it's unnecessary; we can directly pass the set to the `sum` function, which will ignore any duplicate values. This approach is concise and readable, meeting all the criteria.

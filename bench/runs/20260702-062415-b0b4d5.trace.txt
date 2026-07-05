@@ -1,0 +1,2 @@
+**
+I defined a function `flatten_once` that uses a list comprehension to iterate over the input list. If an element is a list (checked with `isinstance(item, list)`), it returns its first element (`item[0]`). Otherwise, it keeps the original element as is. This approach is concise and readable due to the clear intent of the code and the use of descriptive variable names.

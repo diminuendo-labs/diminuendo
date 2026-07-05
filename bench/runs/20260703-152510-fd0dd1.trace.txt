@@ -1,0 +1,7 @@
+**
+
+I started by checking if the input list `nums` is empty, and if so, returning an empty string as per the edge case. I then sorted the unique elements of the list using `sorted(set(nums))`. 
+
+Next, I used a while loop to iterate through the sorted list, identifying consecutive ranges. If a range was found (i.e., there are numbers that follow each other consecutively), it was added to the summary in 'start-end' format. If not, the single number was added.
+
+Finally, the individual parts of the summary were joined into a single string with commas separating them and returned.

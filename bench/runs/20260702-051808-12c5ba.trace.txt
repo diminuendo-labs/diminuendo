@@ -1,0 +1,2 @@
+**
+To solve the problem, I created a dictionary `counts` to keep track of the frequency of each number in the input list `nums`. I then iterated through the list and updated the counts accordingly. Finally, I used a generator expression within the `sum` function to count how many numbers appear exactly once by checking if their count is equal to 1. The edge case where the list is empty is explicitly handled by returning 0, as there are no unique values in an empty list.

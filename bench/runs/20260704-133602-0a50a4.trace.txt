@@ -1,0 +1,11 @@
+**
+
+I started by checking if the input list `pairs` is empty. If it is, I immediately return an empty list since there are no ranges to merge.
+
+Next, I sort the list of pairs based on their start values. This ensures that any potential overlaps or merges will be contiguous in the sorted list, making it easier to process them sequentially.
+
+I then initialize an empty list `merged` to store the resulting merged ranges. As I iterate through each pair in the sorted list, I check if there is an overlap with the last range in the `merged` list. If there is no overlap (i.e., the end of the last merged range is less than the start of the current pair), I simply add the current pair to the `merged` list.
+
+If there is an overlap, I merge the current pair with the last range in `merged` by updating the end value of the last range to be the maximum of its current end value and the end value of the current pair.
+
+Finally, I return the `merged` list, which contains all the merged ranges sorted by their start values.

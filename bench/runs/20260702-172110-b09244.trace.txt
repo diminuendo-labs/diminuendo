@@ -1,0 +1,2 @@
+**
+I implemented the `longest_word` function by using Python's built-in `split()` method to split the input string into a list of words. Then, I used the `max()` function with a custom sorting key (`key=len`) to find the longest word in the list. If the input string is empty, the `if words else ''` expression returns an empty string immediately without iterating over the non-existent list of words. This approach handles the edge case where the input string is empty and is concise while being readable.

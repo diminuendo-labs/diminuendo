@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for the edge case of an empty input list, which would otherwise cause errors when trying to sort or join the data. I then sorted and deduplicated the input list to make it easier to find consecutive runs. Finally, I used a loop to iterate over the sorted numbers, building up ranges as necessary and joining them together with commas at the end.

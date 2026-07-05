@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-123038-92575b",
+  "node_id": "task-20260704-123038-92575b",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function handles the edge case where an empty list is passed correctly.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 1
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n\n    nums.sort()\n    n = len(nums)\n    median = nums[(n-1)//2]\n    lower_threshold = median - (n+1)**0.5/2\n    upper_threshold = median + (n+1)**0.5/2\n\n    nums = [num for num in nums if num > lower_threshold and num < upper_threshold]\n\n    return sum(nums)/len(nums)\n```",
+  "trace": "I sorted the list of numbers (nums) first, and then calculated the median. After that, I calculated the thresholds for the minimum and maximum values to be removed. Using these thresholds, I filtered out the minimum and maximum values from the original list and finally computed the mean of the remaining list as a float. To handle an empty list, I return None in such cases.",
+  "totals": {
+    "time_s": 24.109874599999998,
+    "tokens": 698
+  },
+  "files": [
+    "20260704-123038-92575b.crumbs.jsonl",
+    "20260704-123038-92575b.trace.txt"
+  ]
+}

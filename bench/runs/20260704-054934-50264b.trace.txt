@@ -1,0 +1,2 @@
+**
+I chose to write a recursive function to flatten the input list. The base case is an empty list, which returns an empty list immediately. For each element in the list, I check if it's a list itself; if so, I recurse on that sublist and extend the result with its flattened elements. Otherwise, I append the non-list element directly to the result. This approach ensures that only one level of nesting is flattened, while deeper nesting stays nested.

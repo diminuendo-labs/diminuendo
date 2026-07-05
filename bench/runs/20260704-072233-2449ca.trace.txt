@@ -1,0 +1,5 @@
+**
+
+To solve this problem, I sorted the list of pairs primarily by their start time. Since we also need to handle cases where ranges touch but do not overlap (e.g., `[3, 5]` and `[5, 7]`), I added a secondary sort on the end time in descending order. This ensures that when two touching ranges are adjacent in the sorted list, they can be easily merged.
+
+The algorithm then iterates through the sorted pairs, merging them with the last range in the `merged` list if they overlap or touch, otherwise appending the new range to the `merged` list. This approach is efficient and concise, leveraging Python's built-in sorting and list operations. The edge case of an empty input list is handled by returning an empty list immediately.

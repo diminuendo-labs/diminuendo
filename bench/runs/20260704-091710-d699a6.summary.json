@@ -1,0 +1,33 @@
+{
+  "run_id": "20260704-091710-d699a6",
+  "node_id": "task-20260704-091710-d699a6",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "No explicit mention of an edge case in the code or comments",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 5,
+    "at least one edge case is named": 0
+  },
+  "evidence": {
+    "passed": false,
+    "results": [],
+    "error": "File \"C:\\Users\\bradl\\AppData\\Local\\Temp\\tmp0wvkwke8.py\", line 2\n    return [item for sublist in lst if isinstance(sublist, list) else sublist for item in sublist]\n                                                                 ^^^^\nSyntaxError: invalid syntax"
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef flatten_once(lst):\n    return [item for sublist in lst if isinstance(sublist, list) else sublist for item in sublist]\n```",
+  "trace": "The approach used here is a combination of list comprehension and the built-in `isinstance()` function. The double-for loop first iterates over each sublist within the input list (lst). If a sublist is found, its contents are yielded one by one, otherwise, the element remains unchanged. This ensures that only one level of nesting gets flattened and any deeper nesting stays intact. One edge case handled by this function is when there are no nested lists in the input list; in such a case, the original list will be returned as-is.",
+  "totals": {
+    "time_s": -1.5501365000000007,
+    "tokens": -60
+  },
+  "files": [
+    "20260704-091710-d699a6.crumbs.jsonl",
+    "20260704-091710-d699a6.trace.txt"
+  ]
+}

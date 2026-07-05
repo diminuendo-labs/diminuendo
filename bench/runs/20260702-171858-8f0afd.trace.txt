@@ -1,0 +1,2 @@
+**
+I approached this task by using the `Counter` class from Python's `collections` module to count the occurrences of each word in the input string. I used a regular expression to extract individual words from the string, converting it to lowercase beforehand to ensure accurate counting. To break ties alphabetically, I used the `max` function with a custom key that returns a tuple containing the word's count and itself; Python will compare tuples lexicographically by default.

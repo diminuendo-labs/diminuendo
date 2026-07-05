@@ -1,0 +1,3 @@
+**
+
+I chose a simple and efficient approach by leveraging Python's built-in string methods. Specifically, I used the `count` method to count the number of '(' characters in the input string and compared it with the count of ')' characters. This approach handles edge cases such as an empty string (which is balanced) and ensures that no closing parenthesis appears before its opening partner.

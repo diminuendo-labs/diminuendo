@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in methods for efficiency and readability. Specifically, I used the `split()` method to split the input string into a list of substrings separated by underscores, and then used the `capitalize()` method to capitalize the first character of each substring. This approach allows me to drop leading/trailing/repeated underscores in a single step.

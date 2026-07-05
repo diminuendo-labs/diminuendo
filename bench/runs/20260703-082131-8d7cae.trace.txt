@@ -1,0 +1,3 @@
+** 
+
+I approached this problem by iterating through the string while keeping track of the current character and its consecutive length. If a different character is encountered, I compared the current run's length with the maximum length found so far and updated the maximum values accordingly. Finally, I handled an edge case where the input string is empty by returning an empty string immediately. This ensures that the function works correctly for all possible inputs, including edge cases like an empty string.

@@ -1,0 +1,2 @@
+**
+I chose to use the `split` method to split the input string into a list of words separated by underscores. I then used a generator expression within `join` to capitalize each non-empty word and concatenate them together, effectively dropping any leading/trailing/repeated underscores. This approach is concise while still being readable due to its simplicity. One edge case it handles is an empty string returning ''.

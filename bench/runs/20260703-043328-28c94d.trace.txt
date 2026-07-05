@@ -1,0 +1,2 @@
+**  
+I started by importing the `Counter` class from the `collections` module to help with counting word occurrences efficiently. The function first checks if the input string is empty, returning an empty string if true. It then converts the string to lowercase and splits it into words. Using `Counter`, it counts the occurrences of each word. To handle ties, I extracted all words that have the maximum count and sorted them alphabetically. Finally, I returned the first word from this sorted list.

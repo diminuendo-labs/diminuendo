@@ -1,0 +1,1 @@
+In this solution, I use a dictionary to keep track of the occurrences of each number in the list. After counting all numbers, I find the maximum frequency and the corresponding value that breaks ties by checking for smaller values, which is the requested behavior according to the task description. To handle an edge case where there are no elements in the list, it returns None.

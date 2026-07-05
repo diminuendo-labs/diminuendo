@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `set` function, which automatically removes duplicates from a list. This makes it easy and efficient to calculate the sum of distinct values. To handle the edge case where the input list is empty (which would normally raise an error when trying to create a set), I added a simple check at the beginning of the function that returns 0 in this case.

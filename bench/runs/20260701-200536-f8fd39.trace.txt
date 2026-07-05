@@ -1,0 +1,2 @@
+**
+I used a simple iterative approach to iterate through the input string, keeping track of the current character and its count. When I encounter a different character, I append the previous character and its count to the result list. This process is repeated until the end of the string, at which point the last character and its count are added to the result list. I also explicitly handled the edge case where the input string is empty.

@@ -1,0 +1,33 @@
+{
+  "run_id": "20260704-054845-61fa63",
+  "node_id": "task-20260704-054845-61fa63",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function is correct, concise, and readable. However, it does not handle the edge case where nested lists are empty.",
+  "per_criterion": {
+    "correct": 5,
+    "concise_and_readable": 4,
+    "edge_case_handled": 3
+  },
+  "evidence": {
+    "passed": false,
+    "results": [],
+    "error": "File \"C:\\Users\\bradl\\AppData\\Local\\Temp\\tmpurcshzb7.py\", line 12\n    return [item for item in lst if not isinstance(item, list) else item[0] if len(item) == 1 else item]\n                                                               ^^^^\nSyntaxError: invalid syntax"
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting.\n\n    Args:\n        lst (list): The input list, which may contain nested lists.\n\n    Returns:\n        list: A new list with the same elements as the original list,\n              but with at most one level of nesting.\n    \"\"\"\n    return [item for item in lst if not isinstance(item, list) else item[0] if len(item) == 1 else item]\n```\n\n**",
+  "trace": "**\n\nI chose a simple and concise approach using list comprehension to implement the `flatten_once` function. This solution iterates over each element in the input list and checks whether it's a list itself. If an element is a list, its first element is extracted if the list contains only one item; otherwise, the entire list remains as is. I didn't explicitly handle edge cases like empty or zero-weight lists because they are handled implicitly by this general solution.",
+  "totals": {
+    "time_s": -3.0549177000000007,
+    "tokens": -51
+  },
+  "files": [
+    "20260704-054845-61fa63.crumbs.jsonl",
+    "20260704-054845-61fa63.trace.txt"
+  ]
+}

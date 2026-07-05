@@ -1,0 +1,2 @@
+**  
+I started by sorting the list and removing duplicates using `sorted(set(nums))` to ensure that each number is unique and in ascending order. Then, I iterated through the sorted list, identifying consecutive sequences. If a sequence was found (i.e., numbers incrementing by 1), it was collapsed into a 'start-end' format. Single numbers were appended as-is. Finally, the pieces were joined with commas to form the final result string. This approach ensures that the function is both concise and readable while handling edge cases such as empty lists gracefully.

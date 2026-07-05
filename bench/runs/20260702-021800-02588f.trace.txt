@@ -1,0 +1,2 @@
+**
+I chose to use a simple and straightforward approach by first handling the edge case of an empty input list, then sorting the list using Python's built-in `sort()` method. Next, I checked if the length of the sorted list is even or odd and applied the corresponding calculation for the median value. This approach keeps the code concise and readable while ensuring it meets the requirements of the task.

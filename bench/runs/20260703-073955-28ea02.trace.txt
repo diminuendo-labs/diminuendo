@@ -1,0 +1,2 @@
+**
+I implemented the clamp function using a simple and straightforward approach. I used Python's built-in `min` and `max` functions to clamp the value within the given range. The edge case where the range is degenerate (i.e., `lo > hi`) was handled by returning `None` immediately, as per the task's requirements. This implementation is concise and readable, and it meets all the specified criteria.

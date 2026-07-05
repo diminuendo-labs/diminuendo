@@ -1,0 +1,2 @@
+**
+To solve this task, I chose to use Python's built-in string method `split()` to break the input string into a list of words. This approach is efficient and readable. I then determined the maximum length of these words using a generator expression inside the `max()` function. Finally, I iterated over the reversed list of words to find the last word that matches this maximum length, thus handling ties correctly as specified. The edge case of an empty string is also handled gracefully by checking if the list of words is empty and returning an empty string in such cases.

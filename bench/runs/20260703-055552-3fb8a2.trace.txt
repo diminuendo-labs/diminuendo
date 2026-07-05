@@ -1,0 +1,2 @@
+**
+I approached this task by first defining a function `count_token` that takes two parameters: `s`, the input string, and `w`, the word to search for. To handle edge cases, I used list comprehension with the `split()` method to split the input string into whitespace-separated words, stripping leading and trailing punctuation from each word using `strip('.,!?;:')`. The resulting list of cleaned-up words is then joined back into a string with spaces in between using `' '.join(...)`. This allows for efficient case-insensitive counting with the `count()` method.

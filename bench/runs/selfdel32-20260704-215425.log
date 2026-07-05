@@ -1,0 +1,68 @@
+SELF-DELIVERY REPLICATION 20260704-215425 (PACKET-032, P031's design on fresh cells)
+performer=mistral:7b  audience=llama3.1:8b (v1, production)
+ground=safe_stats r1  cells=('none', 'armed')  R=12  stage A mixed gate 4 AND 4 of 24  drift bar 4 of 24  VOID-BY-CEILING at none 20 of 24 or above
+the harness is selfdel31 by identity; the delta is run-record naming and this replication scaffolding, tier 1, named in RESULTS
+the two-cause caveat rides every non-FLAT exit; the two packets' cells are never pooled, the reading is exit against exit
+priors: P031 none 15 of 24, armed 20 of 24, GAIN at gap 5; never pooled with this packet's cells; P019 FLAT, none 12/24, armed 13/24, cross-origin; candidacy 14 of 24 (P026), 19 of 24 (P031 stage A), 15 of 24 (P031 stage B none, same-run)
+GATE 1, THE BYTE CHECK:
+  store byte-identical to production line 8, position asserted: True
+  line 8 md5: 588e6eaf31f77559556d15b2d44e040f
+GATE 2, THE DELIVERY-PATH CHECK (production serving, genuine pin match):
+  menu serves the single-lesson store on ground features: 1 tool
+  tool equals lesson concept plus applies_when: True
+GATE 3, THE ANNOTATION: rule checks for safe_stats r1 (the standing annotation): ['trimmed_mean([])', 'trimmed_mean([5, 5, 1, 9])']
+A none rep 0: ev=0.67 tools=0 directives=0 shape=sort-slice-average
+A none rep 1: ev=0.33 tools=0 directives=0 shape=sort-slice-average
+A none rep 2: ev=1.00 tools=0 directives=0 shape=sort-slice-average
+A none rep 3: ev=0.33 tools=0 directives=0 shape=sort-slice-average
+A none rep 4: ev=0.67 tools=0 directives=0 shape=sort-slice-average
+A none rep 5: ev=0.67 tools=0 directives=0 shape=sort-slice-average
+A none rep 6: ev=1.00 tools=0 directives=0 shape=sort-slice-average
+A none rep 7: ev=1.00 tools=0 directives=0 shape=sort-slice-average
+A none rep 8: ev=0.33 tools=0 directives=0 shape=sort-slice-average
+A none rep 9: ev=0.33 tools=0 directives=0 shape=sort-slice-average
+A none rep 10: ev=0.33 tools=0 directives=0 shape=sort-slice-average
+A none rep 11: ev=0.33 tools=0 directives=0 shape=sort-slice-average
+stage A gate: pooled rule 17 passes, 7 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 17/24 readings-present); QUALIFIES (mixed means at least 4 of each)
+stage B on qualified ground: fresh interleaved cells, ('none', 'armed') per rep, readings against the stage B none cell only, headroom checked before any reading
+B none rep 0: ev=0.67 tools=0 directives=0 shape=sort-slice-average
+B armed rep 0: ev=0.33 tools=1 directives=0 shape=sort-slice-average
+B none rep 1: ev=0.33 tools=0 directives=0 shape=sort-slice-average
+B armed rep 1: ev=1.00 tools=1 directives=0 shape=sort-slice-average
+B none rep 2: ev=0.67 tools=0 directives=0 shape=sort-slice-average
+B armed rep 2: ev=0.33 tools=1 directives=0 shape=sort-slice-average
+B none rep 3: ev=1.00 tools=0 directives=0 shape=sort-slice-average
+B armed rep 3: ev=0.67 tools=1 directives=0 shape=sort-slice-average
+B none rep 4: ev=0.33 tools=0 directives=0 shape=sort-slice-average
+B armed rep 4: ev=0.33 tools=1 directives=0 shape=sort-slice-average
+B none rep 5: ev=0.33 tools=0 directives=0 shape=sort-slice-average
+B armed rep 5: ev=0.67 tools=1 directives=0 shape=sort-slice-average
+B none rep 6: ev=0.33 tools=0 directives=0 shape=sort-slice-average
+B armed rep 6: ev=0.33 tools=1 directives=0 shape=sort-slice-average
+B none rep 7: ev=0.33 tools=0 directives=0 shape=sort-slice-average
+B armed rep 7: ev=0.00 tools=1 directives=0 shape=unrunnable
+B none rep 8: ev=1.00 tools=0 directives=0 shape=sort-slice-average
+B armed rep 8: ev=1.00 tools=1 directives=0 shape=sort-slice-average
+B none rep 9: ev=0.67 tools=0 directives=0 shape=sort-slice-average
+B armed rep 9: ev=1.00 tools=1 directives=0 shape=sort-slice-average
+B none rep 10: ev=0.67 tools=0 directives=0 shape=sort-slice-average
+B armed rep 10: ev=0.33 tools=1 directives=0 shape=sort-slice-average
+B none rep 11: ev=0.67 tools=0 directives=0 shape=sort-slice-average
+B armed rep 11: ev=0.33 tools=1 directives=0 shape=sort-slice-average
+VOID-BY-CEILING check: none 19 of 24, ceiling at 20: headroom present, the reading proceeds
+== STAGE B POOLED RULE (canonical, bar 4 of 24, against the stage B none cell) ==
+  none: 19/24 (diagnostic 19/24 readings-present; unrunnable rows 0)
+  armed: 16/24 (diagnostic 16/22 readings-present; unrunnable rows 1)
+== EFFECTIVE-N (within-row rule-check disagreement) ==
+  none: 5 of 12 rows disagree across the two rule checks
+  armed: 6 of 12 rows disagree across the two rule checks
+== STAGE B PER-CHECK canonical (none / armed) ==
+  trimmed_mean([]): 1.00 / 0.92  <-- rule
+  trimmed_mean([5, 5, 1, 9]): 0.58 / 0.42  <-- rule
+  trimmed_mean([3, 1, 2]): 0.17 / 0.25  <-- watch
+== CENSUS (shape distribution per cell, every cell run) ==
+  A|none: sort-slice-average=12  loop-accumulate=0  other=0  unrunnable=0
+  B|armed: sort-slice-average=11  loop-accumulate=0  other=0  unrunnable=1
+  B|none: sort-slice-average=12  loop-accumulate=0  other=0  unrunnable=0
+census unrunnable against zero-readings divergence: 0 rows
+GATE: PASSED. build gates re-run as committed code (selfdel31's, by identity) before any model run, stage A arithmetic printed, stage B ran whole, audits clean from the rows, census reported for every cell, every run checkpointed, report persisted. The reading is applied in the packet RESULTS, exit against exit, never pooled. The seat neither taught nor learned.

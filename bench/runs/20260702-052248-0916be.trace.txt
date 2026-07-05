@@ -1,0 +1,2 @@
+**
+The function `chunk` takes a list `lst` and an integer `size`. If `size` is less than or equal to zero, it returns an empty list as specified. Otherwise, it uses a list comprehension to create chunks of the given `size`. The list comprehension iterates over the indices of `lst` in steps of `size`, slicing the list from each index up to `index + size` to form the chunks. This approach is concise and readable, directly mapping the problem statement into Python code.

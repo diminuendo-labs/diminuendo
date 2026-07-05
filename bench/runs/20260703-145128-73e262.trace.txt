@@ -1,0 +1,3 @@
+**
+
+I implemented the `nth_smallest` function by first checking if `n` is less than 1, in which case it returns `None`. I then converted the input list to a set to remove duplicates and sorted this set. Since Python's built-in sorting is stable, the order of equal elements will be preserved from their original appearance in the input. The function then simply returns the nth smallest distinct value if `n` is within the range of the number of distinct values; otherwise, it returns `None`. I chose to handle the edge case where the input list contains duplicates but no duplicates among distinct values explicitly.

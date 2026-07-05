@@ -1,0 +1,5 @@
+**
+- I split the input string by underscores to get individual tokens.
+- I then iterated over each token, capitalizing it if it's not in the exception list. Tokens that are exceptions remained unchanged.
+- The first token was converted to lowercase and concatenated with the rest of the capitalized tokens to form the final camel case string.
+- An edge case was handled where 'user_ID' is converted to 'userId', demonstrating how the function works when the last token is part of the exception list.

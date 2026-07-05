@@ -1,0 +1,2 @@
+**
+I started by handling the edge case where the input list is empty, returning an empty string immediately. I then sorted the unique elements of the list to ensure they are in ascending order and processed them to form ranges or single numbers as required. The use of a `while` loop allowed me to efficiently iterate through the sorted list and identify consecutive sequences, which were then formatted into the desired output format.

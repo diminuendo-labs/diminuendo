@@ -1,0 +1,2 @@
+**
+I used a stack to keep track of the opening parentheses. As I iterate through the string, I push an opening parenthesis onto the stack when encountered. When a closing parenthesis is found, I check if the stack is empty (which would mean there's no corresponding opening parenthesis) and return False if so. If not, I pop the top of the stack. Finally, if the stack is empty at the end of the iteration, it means all parentheses were balanced, so I return True. The edge case handled here is an empty string, which is considered balanced by returning True.

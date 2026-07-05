@@ -1,0 +1,2 @@
+**  
+I chose to approach this task by first converting the input string `s` to lowercase and splitting it into individual words. Then, I counted the occurrences of each word using a dictionary. After finding the maximum count, I sorted the words that have this maximum count alphabetically and returned the first one. This ensures that if there are ties in the frequency of words, the lexicographically smallest word is chosen. The function also handles an empty input string by returning an empty string immediately.

@@ -1,0 +1,3 @@
+**
+
+I chose to write a simple iterative function that uses a stack to keep track of the opening parentheses encountered so far. This approach allows us to efficiently check for balanced parentheses in linear time. By returning `False` as soon as we encounter a closing parenthesis without its matching opening partner, we also handle the edge case where a closing parenthesis appears before an opening one, as required by the problem statement. This solution is concise and readable, meeting both criteria for evaluation.

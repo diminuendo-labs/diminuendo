@@ -1,0 +1,10 @@
+**
+
+1. The function `most_common_word(s)` first checks if the input string `s` is empty and returns an empty string if true.
+2. It then converts all characters to lowercase and splits the string into words using whitespace as a delimiter.
+3. A dictionary `word_count` is used to count occurrences of each word.
+4. The maximum count (`max_count`) is determined from the values in the dictionary.
+5. A list comprehension filters out words that match the maximum count, and the list is sorted alphabetically.
+6. Finally, the function returns the first element of this sorted list, which is the most common word breaking ties alphabetically.
+
+This approach ensures that the function is correct, concise, and handles the edge case where a single character is repeated multiple times.

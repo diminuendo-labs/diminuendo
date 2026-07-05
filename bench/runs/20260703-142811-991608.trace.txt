@@ -1,0 +1,2 @@
+**
+I wrote this function by first handling the edge case of an empty input list. Then I used two sets: one to keep track of numbers we've seen so far (`num_set`), and another to store distinct pairs that sum to `target` (`pair_count`). By iterating over the input list only once, we achieve a time complexity of O(n).

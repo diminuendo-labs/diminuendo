@@ -1,0 +1,2 @@
+**  
+The `flatten_once` function uses a list comprehension to iterate through each element in the input list. If an element is itself a list, it is unpacked and its elements are added to the new list; otherwise, the element is added as is. This ensures that only one level of nesting is flattened. The edge case of an empty input list is directly handled by returning an empty list, which simplifies the logic without requiring additional checks.

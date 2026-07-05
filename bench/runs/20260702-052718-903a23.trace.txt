@@ -1,0 +1,3 @@
+**
+
+To solve this task, I used Python's built-in `split()` method to split the input string into a list of words. Then I applied the `min()` function with the `key` argument set to `len`, which returns the shortest word in the list. To handle edge cases where s consists only of spaces or is an empty string, I used the fact that `min()` ignores empty strings and defaulting to '' when no such words are found by using the `or ''` syntax. The code aims for conciseness and readability while following the provided documentation style.

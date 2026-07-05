@@ -1,0 +1,7 @@
+** 
+
+To solve this task, the function first checks if the input list is empty and returns an empty list if so. It then sorts the list of ranges based on their start values to ensure they are in ascending order. The function initializes a `merged` list with the first range from the sorted list.
+
+The function iterates over the remaining ranges, checking if each new range overlaps or is within distance 1 of the last range in the `merged` list. If it does, the end of the last merged range is updated to include the current range's end. If not, the current range is added as a new range to the `merged` list.
+
+This approach ensures that all overlapping and adjacent ranges are merged into single ranges, while non-overlapping ranges remain separate, and the final list is returned sorted by the start of each range.

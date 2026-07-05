@@ -1,0 +1,5 @@
+**
+
+I started by checking if the input list `nums` is empty, in which case I return an empty string. If not, I sort the list to bring consecutive numbers together. Then, I iterate through the sorted list using a while loop, keeping track of the start and end of each range. Whenever I encounter a gap between consecutive numbers (i.e., the next number is not `current_number + 1`), I add either a single number or a range (`start-end`) to the result list. After processing all numbers, I join the result list into a string separated by commas and return it.
+
+This approach ensures that each distinct value is processed only once and consecutive ranges are correctly collapsed.

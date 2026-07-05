@@ -1,0 +1,2 @@
+**
+I solved this problem by using a generator expression within the `join` function to capitalize each word after splitting the input string into words based on underscores. This approach allows for concise code while still being readable, as it clearly conveys the intent of the function. One edge case I handled is when the input string contains repeated underscores; these are dropped by the `split` method, resulting in a correct camelCase conversion.

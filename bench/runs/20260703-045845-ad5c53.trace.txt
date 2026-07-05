@@ -1,0 +1,2 @@
+** 
+I approached the task by first sorting and removing duplicates from the input list. Then, I iterated through the sorted list to identify consecutive numbers and collapse them into ranges if necessary. For each range or single number, I appended it to the result list in the required format. Finally, I joined the elements of the result list with commas to produce the final output string. The edge case where the input list is empty was handled by returning an empty string immediately.

@@ -1,0 +1,4 @@
+**
+To solve this problem, I first handle the edge case where the input list is empty. If it is, I return an empty string immediately. Next, I sort the list and remove duplicates using `set(nums)`, then convert it back to a sorted list. I iterate through this sorted list, identifying ranges by checking if consecutive numbers are sequential. When a range is identified, I add it in 'start-end' format or as a single number if there's only one element in the range. Finally, I join all parts with commas and return the result.
+
+This approach ensures that the function works correctly for both sorted and unsorted lists, handles duplicates, and collapses consecutive runs into ranges while keeping single numbers as is.

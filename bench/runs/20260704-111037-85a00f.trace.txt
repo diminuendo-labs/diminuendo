@@ -1,0 +1,2 @@
+**
+I chose a straightforward approach using a stack data structure to keep track of opening parentheses. As we iterate over the input string, we push opening parentheses onto the stack and pop them off when we encounter closing ones. If a closing parenthesis appears before its matching opening one (i.e., an empty stack), or if there are unmatched opening parentheses left at the end, we return False. This handles edge cases like an empty string or an unbalanced input string with extra closing parentheses.

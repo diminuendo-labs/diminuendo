@@ -1,0 +1,53 @@
+{
+  "run_id": "20260704-052459-f0d134",
+  "node_id": "task-20260704-052459-f0d134",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function is mostly correct, handles the edge case of a sublist with only one element, and is reasonably readable. However, it could be more concise.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness": 3,
+    "readability": 3,
+    "edge_cases_handled": 2
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting.\n\n    Args:\n        lst (list): The input list that may contain nested lists.\n\n    Returns:\n        list: A new list with only the first-level elements flattened.\n    \"\"\"\n    result = []\n    for element in lst:\n        if isinstance(element, list):\n            # Edge case: when a sublist has only one element\n            result.extend([element[0]] if len(element) == 1 else element)\n        else:\n            result.append(element)\n    return result\n```\n\n**",
+  "trace": "**\n\nI chose to use a simple iteration over the input list with a conditional statement to check if each element is a list. If it is, I extend the result list with its elements; otherwise, I append the element as is. This approach is concise and readable, making it easy to understand what the function does.",
+  "totals": {
+    "time_s": 26.369409599999997,
+    "tokens": 715
+  },
+  "files": [
+    "20260704-052459-f0d134.crumbs.jsonl",
+    "20260704-052459-f0d134.trace.txt"
+  ]
+}

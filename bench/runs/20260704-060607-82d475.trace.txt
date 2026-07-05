@@ -1,0 +1,2 @@
+**
+I approached this task by realizing that the problem doesn't require a stack or any complex data structure. Since we only care about '(' and ')', we can simply count the occurrences of each character in the string, and if they are equal, the parentheses are balanced. This solution is concise and readable, and it handles the edge case where an empty string is input (in which case both counts will be 0).

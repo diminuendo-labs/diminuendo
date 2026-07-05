@@ -1,0 +1,2 @@
+**
+I chose to use the Counter class from the collections module to efficiently count the occurrences of each word. When handling ties, I applied a rule for breaking ties alphabetically, and decided to implement it by finding the minimum value in the list of words with maximum count, effectively returning the last occurrence.

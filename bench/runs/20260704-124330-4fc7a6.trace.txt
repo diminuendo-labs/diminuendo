@@ -1,0 +1,9 @@
+1. First, I replaced all consecutive semicolons and commas with a single one to avoid the need to handle multiple run of the same delimiter. This simplifies the subsequent steps.
+
+2. After that, I stripped any leading or trailing whitespace from the input string, then split it using commas as delimiters. If the input is empty, an empty list is returned which will be handled later.
+
+3. Next, I filtered out any empty pieces from the list of pieces obtained in the previous step. This ensures that the output does not contain empty strings.
+
+4. Finally, I joined the remaining non-empty pieces with a single comma between each to obtain the final string.
+
+The edge case this function handles is when an input string contains only delimiters (commas or semicolons), in which case it will return an empty string instead of raising an exception.

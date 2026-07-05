@@ -1,0 +1,5 @@
+**
+
+The function `longest_word` first checks if the input string `s` is empty and returns an empty string if so. Otherwise, it splits the string into words using `split()`. It then finds the maximum length of these words using a generator expression within the `max()` function. Next, it creates a list comprehension to gather all words that have this maximum length, iterating in reverse order to ensure that the last word in case of ties is selected. Finally, it returns the first element from this list if it's not empty; otherwise, it returns an empty string.
+
+The edge case of an empty string is explicitly handled by checking `if not s` at the beginning of the function.

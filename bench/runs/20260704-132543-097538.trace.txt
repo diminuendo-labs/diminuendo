@@ -1,0 +1,2 @@
+**  
+I defined the function `chunk_pad` that takes a list `lst` and an integer `k`. I first check if the list is empty, returning an empty list immediately if true. Then, I use list comprehension to create chunks of size `k`. If the last chunk has fewer than `k` elements, I pad it with `None` by appending additional `None` values until its length equals `k`. This approach ensures that all chunks are exactly `k` elements long, even if the original list does not perfectly divide into equal parts.

@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-091930-610622",
+  "node_id": "task-20260704-091930-610622",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly handles the edge case of a list containing non-list elements, but it could be improved with more explicit handling of deeper nesting",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef flatten_once(lst):\n    flat = []\n    for element in lst:\n        if isinstance(element, list):\n            flat.extend(element)\n        else:\n            flat.append(element)\n    return flat\n```",
+  "trace": "In this solution, we iterate over the given input list and check each element to determine whether it's a list or not using `isinstance()`. If it is a list, we append all its elements to our output list using the extend() method. Otherwise, we simply append the non-list element to our output list.\n\nOne edge case that is handled by this function is when the input contains nested lists of any depth. Deeper levels of nesting will remain unchanged and only the first level will be flattened as required.",
+  "totals": {
+    "time_s": 24.8404952,
+    "tokens": 622
+  },
+  "files": [
+    "20260704-091930-610622.crumbs.jsonl",
+    "20260704-091930-610622.trace.txt"
+  ]
+}

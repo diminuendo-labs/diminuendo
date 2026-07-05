@@ -1,0 +1,2 @@
+**
+I implemented a function that takes a list of words and an integer `k` as input. I first checked for the edge case where `k` is less than or equal to 0, returning None in this case. Then, I used Python's built-in `sorted` function with a custom sorting key to sort the words by increasing length and then reverse alphabetically among words of equal length. Finally, I checked if `k` was within the range of the sorted list and returned the k-th word accordingly.

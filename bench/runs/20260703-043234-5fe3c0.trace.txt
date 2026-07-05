@@ -1,0 +1,10 @@
+**
+The function `most_common_word` takes a string `s` as input and returns the most common word in lowercase, breaking ties alphabetically. If the input string is empty, it returns an empty string.
+
+1. **Edge Case Handling:** The function first checks if the input string `s` is empty. If it is, it immediately returns an empty string to handle this edge case.
+   
+2. **Word Counting:** It then iterates over each word in the input string (after converting it to lowercase and splitting it by whitespace). For each word, it counts the occurrences using a dictionary `word_count`.
+
+3. **Sorting:** The function sorts the items of the dictionary based on two criteria: first, by the count in descending order (`-x[1]`), and second, alphabetically by the word itself (`x[0]`). This ensures that if there are multiple words with the same highest count, they will be ordered alphabetically.
+
+4. **Returning the Result:** Finally, it returns the first item of the sorted list, which is the most common word according to our criteria.

@@ -1,0 +1,3 @@
+**
+
+I chose to implement the function using a simple formula for calculating the mean, which is the sum of all numbers divided by the count of numbers. This approach makes the code concise and readable. I also handled the edge case where an empty list is passed as input, returning None in this scenario.

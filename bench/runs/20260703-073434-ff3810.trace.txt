@@ -1,0 +1,2 @@
+**  
+The function `third_largest_distinct` first converts the input list into a set to remove duplicates, then back into a list. If this list has fewer than three elements, it returns `None`. Otherwise, it sorts the list in reverse order and returns the third element, which is the third largest distinct value. This approach ensures that all values are unique before considering their ranking.

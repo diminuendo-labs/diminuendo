@@ -1,0 +1,3 @@
+**
+
+I implemented the `flatten_once` function using a simple iterative approach, which is suitable for this task due to its relatively small size and simplicity. I chose to use a list comprehension-like structure to flatten the elements in a single pass through the input list, rather than recursively flattening each sublist. This approach makes the code concise while still being readable. The edge case handled by this function is when the input list contains a single-element inner list, which is flattened into its sole element instead of being treated as a separate sublist.

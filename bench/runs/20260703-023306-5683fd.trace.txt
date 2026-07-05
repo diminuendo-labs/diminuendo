@@ -1,0 +1,2 @@
+**
+I chose to use a stack data structure to keep track of opening parentheses in the input string. This approach allows me to efficiently check for balancing by pushing each opening parenthesis onto the stack and popping it when a corresponding closing parenthesis is encountered. If a closing parenthesis appears before its opening partner (i.e., when the stack is empty), I immediately return False. Finally, after processing all characters in the string, I return whether the stack is still empty (indicating balanced parentheses).

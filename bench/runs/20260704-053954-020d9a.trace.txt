@@ -1,0 +1,2 @@
+**
+I chose to use a simple iterative approach, iterating over each element in the input list. I used Python's built-in `isinstance` function to check if an element is a list, and handled this case by appending its elements (if it has only one child) or the entire list itself to the result list. This handles the edge case of single-element lists without further nesting.

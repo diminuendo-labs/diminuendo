@@ -1,0 +1,2 @@
+** 
+I defined the function `longest_word(s)` to find the longest whitespace-separated word in a string. If the input string is empty, it returns an empty string. I split the string into words and iterate over them in reverse order to ensure that if there are ties for the longest word, the last one encountered is returned. The function keeps track of the maximum length and updates the result accordingly until all words have been processed. This approach ensures the code is concise and readable while correctly handling the edge case of an empty string.

@@ -1,0 +1,23 @@
+musician m_unique: verdict=fail (seeded fault)
+musician m_wordcount: verdict=pass
+principal review: {"section_pass": false, "flags_seen": 1, "verified": [{"concept": "text_stats", "node_id": "task-20260701-194637-a02744", "claim_upheld": true, "evidence_confirms": true}]}
+{
+  "section_id": "20260701-194637-sec",
+  "iterations": 3,
+  "nodes": 3,
+  "review": {
+    "section_pass": false,
+    "flags_seen": 1,
+    "verified": [
+      {
+        "concept": "text_stats",
+        "node_id": "task-20260701-194637-a02744",
+        "claim_upheld": true,
+        "evidence_confirms": true
+      }
+    ]
+  },
+  "flag_count": 1,
+  "flags_file": "20260701-194637-sec.flags.jsonl"
+}
+GATE 3: PASSED. iterations=3/3 (each node once, terminated), flags=1 (the seeded break, no echo), claims verified by the principal's own read against evidence.

@@ -1,0 +1,2 @@
+**  
+I chose to use Python's built-in `sorted` function with a custom key. The lambda function sorts primarily by the negative length of each word (to sort by increasing length in ascending order) and secondarily by the word itself (in reverse alphabetical order due to the negation). This handles both sorting criteria efficiently. The edge case where k is out of range is explicitly checked at the beginning, returning `None` as specified.

@@ -1,0 +1,2 @@
+**
+I chose to use the `split` method to split the string on commas, and then used list comprehension to drop any empty strings from the result. However, I realized that this approach would not correctly handle consecutive commas as a single split. Instead, I used `replace(",,", ",")` to replace double commas with a single comma before splitting, which solves this issue. Finally, I added an edge case check for empty input strings by returning an empty string in such cases.

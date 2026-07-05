@@ -1,0 +1,2 @@
+**
+I chose to use a list comprehension to create the new flattened list. This approach is concise and readable, as it clearly expresses the operation being performed on each element of the input list. To handle the edge case where the input list contains only one level of nesting, I used recursion to ensure that elements which are themselves lists are processed correctly.

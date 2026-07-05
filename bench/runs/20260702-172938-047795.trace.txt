@@ -1,0 +1,2 @@
+**
+I chose to handle the tie-break by returning the word that appears last in the input string. This approach is simple and efficient, as it doesn't require any additional data structures or operations. I also made sure to handle the edge case where the input string is empty, returning an empty string in this case.

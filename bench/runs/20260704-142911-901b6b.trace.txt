@@ -1,0 +1,3 @@
+** 
+
+To solve this task, I first checked for edge cases where the input list is empty or `k` is less than or equal to zero, returning `None` in such scenarios. Then, I used Python's `sorted()` function with a custom key. The key sorts primarily by the negative length of each word (`-len(x)`) to order words by increasing length from smallest to largest. For words of equal length, it uses reverse-alphabetical order (`x[::-1]`) by sorting them in descending order based on their reversed strings. This ensures that within each length group, words are ordered in reverse alphabetical sequence. Finally, I returned the `k`-th word (adjusted for zero-based indexing) or `None` if `k` is out of range.

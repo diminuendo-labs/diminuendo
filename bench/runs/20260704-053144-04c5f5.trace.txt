@@ -1,0 +1,2 @@
+**
+I used Python's built-in string methods, specifically the `split()` and `capitalize()` functions. I split the input string into words using underscores as delimiters and then capitalized each word except empty ones (which would be filtered out by the generator expression). This approach is concise and readable while handling edge cases such as an empty string or repeated underscores. The one named edge case handled by this function is the presence of leading, trailing, and repeated underscores.

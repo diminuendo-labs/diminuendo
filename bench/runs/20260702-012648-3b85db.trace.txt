@@ -1,0 +1,2 @@
+**
+To implement the `is_anagram` function, I started by defining a function that takes two parameters, `a` and `b`. The function first checks if both inputs are strings. If not, it raises a `ValueError` to handle this edge case explicitly. Then, it normalizes both strings by removing spaces and converting them to lowercase. Finally, it compares the sorted versions of the normalized strings to determine if they are anagrams. This approach ensures that the function is both correct and concise while handling the specified edge case clearly.

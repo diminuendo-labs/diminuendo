@@ -1,0 +1,7 @@
+I started by handling the edge case where the input string `s` is empty. If it is, I return an empty string immediately.
+
+Next, I split the input string into a list of words using the `split()` method. To find the longest word(s), I determine the maximum length of the words in the list. Then, I create a new list containing all words that have this maximum length. Since we need to return the last such word on ties, I reverse the list of words before filtering them.
+
+Finally, I return the first element of the filtered list, which corresponds to the last longest word encountered.
+
+This approach ensures that the function is both correct and concise, meeting the criteria provided.

@@ -1,0 +1,1 @@
+I used a list comprehension to iterate over the input list `lst`, using the step value `size` to generate chunks of the specified size. To handle the edge case where the list does not divide evenly, I included the `if` condition checking if the size is greater than zero before returning the result as an empty list when the size is zero or negative.

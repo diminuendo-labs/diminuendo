@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-053933-741ec5",
+  "node_id": "task-20260703-053933-741ec5",
+  "task": "Write a Python function count_distinct_pairs(nums, target) returning how many distinct unordered value pairs in the list sum to target, each distinct pair counted once no matter how many times its values repeat: [1, 3, 1, 3] with target 4 has exactly one such pair. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code meets all criteria, but does not explicitly name the empty list edge case.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_distinct_pairs([1, 3, 1, 3], 4)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      },
+      {
+        "call": "count_distinct_pairs([2, 2, 2], 4)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      },
+      {
+        "call": "count_distinct_pairs([0, 5, 2, 3, 5, 0], 5)",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_distinct_pairs([], 1)",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef count_distinct_pairs(nums, target):\n    seen = set()\n    pairs = set()\n    \n    for num in nums:\n        complement = target - num\n        if complement in seen:\n            # Create a sorted tuple to ensure unordered pairs are counted as the same\n            pair = tuple(sorted((num, complement)))\n            pairs.add(pair)\n        seen.add(num)\n        \n    return len(pairs)\n\n# Edge case: empty list should return 0\nprint(count_distinct_pairs([], 4))  # Output: 0\n```",
+  "trace": "- I used a set `seen` to keep track of numbers we've encountered so far.\n- Another set `pairs` is used to store unique pairs that sum up to the target, ensuring no duplicate pairs are counted by storing them as sorted tuples.\n- As we iterate through the list, for each number, we calculate its complement (the number needed to reach the target when added together). If this complement has been seen before, it means we've found a valid pair, which we add to our `pairs` set in a sorted manner to handle unordered pairs.\n- Finally, the length of `pairs` gives us the count of distinct pairs that sum to the target. This approach ensures that each pair is counted only once and handles duplicates correctly.",
+  "totals": {
+    "time_s": 24.4372531,
+    "tokens": 818
+  },
+  "files": [
+    "20260703-053933-741ec5.crumbs.jsonl",
+    "20260703-053933-741ec5.trace.txt"
+  ]
+}

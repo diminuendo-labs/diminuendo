@@ -1,0 +1,2 @@
+**  
+I started by sorting the unique numbers in the input list to ensure they are in ascending order. Then, I used a loop to iterate through the sorted list, identifying consecutive numbers and collapsing them into ranges as needed. The edge case of an empty list is handled by returning an empty string immediately.

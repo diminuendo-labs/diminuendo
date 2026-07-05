@@ -1,0 +1,8 @@
+**
+- First, I check if the input list `pairs` is empty. If it is, I immediately return an empty list.
+- I then sort the pairs to ensure they are in ascending order by their start values.
+- I initialize a new list `merged` with the first pair from the sorted list.
+- I iterate through the remaining pairs, checking if the current pair overlaps or is within distance `d` of the last pair in the merged list.
+- If it does, I merge them by updating the end of the last pair in the merged list to be the maximum of its current end and the current pair's end.
+- If it doesn't, I append the current pair to the merged list.
+- Finally, I return the merged list.

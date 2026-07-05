@@ -1,0 +1,2 @@
+**
+The function `token_case` takes a string `s` and an optional list of exceptions. It splits the input string by underscores to get individual tokens. Each token is processed: if it's not the first token (to avoid double capitalization) and not in the exceptions list, it is capitalized; otherwise, it is converted to lowercase. The processed tokens are then joined together without any separators. An edge case is handled where an empty string input results in an empty output string.

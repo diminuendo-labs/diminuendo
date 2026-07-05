@@ -1,0 +1,7 @@
+**
+
+1. **Edge Case Handling:** The function first checks if the input list `pairs` is empty. If it is, an empty list is returned immediately. This edge case handles scenarios where there are no ranges to merge.
+  
+2. **Sorting and Merging:** The pairs are sorted by their start values to ensure that we can process them in a logical order. A merged list starts with the first pair. As we iterate through the sorted pairs, if the current range overlaps or touches the last one in the merged list, they are merged into a single range. If not, the current range is added as it stands.
+
+This approach ensures that the function is both correct and concise while handling the edge case of an empty input gracefully.

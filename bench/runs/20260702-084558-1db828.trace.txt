@@ -1,0 +1,2 @@
+**
+I chose to use a simple and straightforward approach, calculating the mean by summing all elements in the list and dividing by its length. This meets the criteria of conciseness and readability. The edge case I specifically handled is an empty list (i.e., `nums == []`), which returns None according to the task's requirements.

@@ -1,0 +1,2 @@
+**
+I started by checking for the edge case of an empty list and returning it immediately. Then, I sorted the input pairs based on their start values to facilitate merging adjacent ranges. After that, I iterated through the sorted pairs and merged any ranges that were within distance 1 of each other by updating the end value of the last merged range. If a pair was not mergeable with the previous one, it was added as a new range in the result list. The function finally returns the list of merged ranges.

@@ -1,0 +1,8 @@
+**  
+The function `most_common_word(s)` first checks if the input string `s` is empty. If it is, it immediately returns an empty string as per the edge case requirement. 
+
+For non-empty strings, it proceeds to count the occurrences of each word by converting all words to lowercase and splitting the string into individual words. It uses a dictionary `word_count` to store these counts.
+
+Next, it identifies the highest count among all words using the `max()` function on the values of the `word_count` dictionary.
+
+Finally, it filters out the words that have this highest count and sorts them alphabetically. The first word in this sorted list is returned as the result.

@@ -1,0 +1,3 @@
+**
+
+I chose to handle the edge case where an empty list is passed as the only element of another list by raising a ValueError. This is because an empty list itself is a valid input but in this specific scenario, it cannot be part of a nested structure. To make my code concise and readable, I used clear docstrings for function description and raised an error with a descriptive message if the edge case occurs.

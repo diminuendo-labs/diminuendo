@@ -1,0 +1,15 @@
+**
+
+1. **Edge Case Handling**: The function first checks if the input list `nums` is empty. If it is, an empty string is returned immediately.
+
+2. **Sorting and Deduplication**: The input list is sorted and duplicates are removed using `set(nums)` to ensure each distinct value is processed only once.
+
+3. **Iterative Construction of Summary**:
+   - Initialize variables `start` and `end` with the first element of the sorted list.
+   - Iterate through the remaining elements, updating `end` if the current number continues the consecutive sequence. If not, append the current range (`start-end`) to the summary list and reset `start` and `end` to the new number.
+
+4. **Final Range Addition**: After the loop, add the last range to the summary list.
+   
+5. **Result Construction**: Join all elements in the summary list with commas to form the final string.
+
+This approach ensures that consecutive runs are collapsed into 'start-end' format and single numbers remain as single values, adhering to the requirements specified in the task.

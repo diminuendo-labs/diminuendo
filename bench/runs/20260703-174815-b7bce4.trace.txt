@@ -1,0 +1,7 @@
+First, the function sorts the unique numbers and initializes a list `runs` to store consecutive runs of numbers. We then iterate through the sorted set of unique numbers. If the current number is adjacent to the last number, we skip it by using the 'continue' statement.
+
+If there was a previous number (not the first iteration), we add a tuple containing the previous number and its successor as a run, and update `last` with the new number. We continue this process until we have processed all numbers in the input list.
+
+After that, we convert each element in `runs` to a string and join them into a comma-separated string (`result`). Then, for every second element in `runs` (which are our runs' start values), if they are not the end values minus one, we modify `result` to include a range representation. Finally, the function returns the processed result string.
+
+The edge case handled here is an empty list, which is returned as an empty string ''.

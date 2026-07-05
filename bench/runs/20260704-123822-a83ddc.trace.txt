@@ -1,0 +1,3 @@
+To achieve the required functionality, we first replace consecutive commas with a single comma using the `replace()` method. Then, we split the string on commas and remove any empty strings at the beginning and end of the resulting list. Finally, we join the remaining pieces back together into a single string, with each piece separated by a comma.
+
+An edge case that's handled is when there are multiple consecutive empty strings at the start or end of the input string. We remove all such empty strings from the beginning and end of the list, ensuring that they don't affect the final output.

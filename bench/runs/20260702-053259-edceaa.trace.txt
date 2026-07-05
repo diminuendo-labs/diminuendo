@@ -1,0 +1,2 @@
+**
+I implemented this function using a list comprehension to generate the chunks. The `range` function is used with a step of `size` to iterate over the indices of the input list. This approach is concise and efficient, as it avoids the need for explicit loops or conditional statements. I also explicitly handled the edge case where the size is zero or negative, returning an empty list in this situation.

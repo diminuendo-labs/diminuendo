@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for an edge case where an empty input is provided, and returning an empty list in that case. Then I sorted the input ranges by their start value to make it easier to merge adjacent ranges. Finally, I iterated through the sorted ranges, merging any adjacent ranges found into a single range stored as `current_range`, which was appended to the `merged` list when finished.

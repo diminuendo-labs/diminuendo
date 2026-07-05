@@ -1,0 +1,2 @@
+**
+I solved this task by first splitting the input string into a list of whitespace-separated words using the `split()` method. Then, I iterated over the reversed list of words to ensure that in case of a tie (i.e., multiple words having the same maximum length), the last word is returned instead of the first one. This approach meets the requirement of handling ties by ensuring that the last tied word is always returned.

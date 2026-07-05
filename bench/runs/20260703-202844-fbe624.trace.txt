@@ -1,0 +1,3 @@
+I used a tuple to store the two largest numbers found so far, with initial values of `float('-inf')`, which is the smallest possible floating point number in Python. This ensures that we start looking for the second largest from the maximum value in the list.
+
+I also utilized a set called `seen` to keep track of unique numbers encountered during the loop to handle the edge case where there are fewer than two distinct values. If a number already seen is found, the function returns None.

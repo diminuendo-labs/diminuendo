@@ -1,0 +1,2 @@
+**
+I implemented this function by first checking for the edge case of an empty list. If the list is empty, I immediately return 0. Otherwise, I create a dictionary `counts` to store the frequency of each number in the list, and a variable `max_count` to track the highest frequency seen so far. I then iterate over the list, updating the counts in `counts` and `max_count`. Finally, I use a list comprehension to find all distinct numbers that have the maximum count, and return their length as the result.

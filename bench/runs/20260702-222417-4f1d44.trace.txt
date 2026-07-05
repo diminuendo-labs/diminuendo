@@ -1,0 +1,5 @@
+**
+- **Edge Case Handling:** The function first checks if the input string `s` is empty. If it is, the function immediately returns an empty string.
+- **Word Counting:** It converts all characters to lowercase and splits the string into words using whitespace as a delimiter. Then, it counts the occurrences of each word using a dictionary.
+- **Finding the Most Common Word:** The maximum count is determined from the values in the dictionary. Words with this maximum count are collected in a list.
+- **Handling Ties Alphabetically:** If there are multiple words with the same highest count, they are sorted alphabetically and the first one (the smallest) is returned.

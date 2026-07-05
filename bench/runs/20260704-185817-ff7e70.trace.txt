@@ -1,0 +1,3 @@
+**
+
+To solve this task, I first checked for edge cases where the input list `words` is empty or `k` is less than 1, returning `None` in those scenarios. Then, I sorted the words based on two criteria: increasing length and reverse-alphabetical order for words of equal length. The sorting function used here uses a tuple where the first element is the length of the word (for ascending order) and the second element is the negative ASCII value of the first character (for descending order). Finally, I checked if `k` is within the valid range and returned the appropriate word or `None` if out of range.

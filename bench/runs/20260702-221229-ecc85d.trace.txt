@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `split()` method to split the string into words, and then used a generator expression with `title()` method to title-case each word. I also added a condition using `islower()` to check if a word is entirely lowercase before applying title-casing. This approach allows for concise code while still being easy to read and understand.

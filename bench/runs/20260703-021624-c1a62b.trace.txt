@@ -1,0 +1,7 @@
+**  
+The function `snake_to_camel` converts a snake_case string to camelCase by:
+1. Using `strip('_')` to remove any leading or trailing underscores.
+2. Splitting the string by underscores using `split('_')`.
+3. Capitalizing each word and joining them back together without underscores.
+
+This approach handles edge cases like multiple consecutive underscores (`__a__b_`) by effectively removing them, as well as empty strings by ensuring that no empty words are processed in the join operation.

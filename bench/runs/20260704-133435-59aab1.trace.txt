@@ -1,0 +1,7 @@
+**
+
+The function `merge_within` first checks if the input list is empty and returns an empty list if true. It then sorts the pairs based on their start values. If two pairs have the same start value, it further sorts them by their end values to ensure correct merging later. The merged list is initialized with the first pair from the sorted list.
+
+The function iterates over the remaining pairs in the sorted list. For each pair, it checks if it overlaps or touches the last interval in the merged list. If it does, it merges the intervals by updating the end of the last interval in the merged list to be the maximum of its current end and the end of the current pair. If the pair is non-overlapping, it simply appends the pair to the merged list.
+
+This approach ensures that all overlapping or touching intervals are merged correctly, and any gaps between intervals remain as separate lists. The function returns the sorted list of merged intervals.

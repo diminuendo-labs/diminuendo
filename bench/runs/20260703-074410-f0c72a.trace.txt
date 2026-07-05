@@ -1,0 +1,3 @@
+**
+
+I defined the function `split_csvish` with a docstring explaining its purpose. I used list comprehension to create the output list, which is more concise and readable than using a loop. The expression `s.split(',')` splits the input string into fields separated by commas, and the `if field.strip()` condition drops empty fields after trimming whitespace. This approach handles the edge case where an empty string returns an empty list `[]`.

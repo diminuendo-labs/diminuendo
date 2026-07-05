@@ -1,0 +1,2 @@
+**
+The function `kth_ordered` sorts the list of words based on two criteria. First, it sorts by the negative length of the words to get increasing length order. Second, for words of equal length, it uses a reverse lexicographical sort by reversing each word and sorting those. The lambda function in the `sorted` call handles these two sorting conditions. Finally, it returns the k-th word (adjusting for 0-based indexing). The edge case where k is out of range is handled at the beginning with a simple check and returning `None`.

@@ -1,0 +1,2 @@
+**
+I chose to use a set to remove duplicates from the list, as this operation is efficient for large lists. I then used Python's built-in `sorted` function to sort the distinct values in descending order, which allowed me to easily access the second largest value at index 1 (Python uses zero-based indexing). This approach handles the edge case of an empty list, which would raise a `ValueError` if we tried to create a set from it.

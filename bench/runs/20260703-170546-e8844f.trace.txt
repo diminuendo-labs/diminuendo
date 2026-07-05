@@ -1,0 +1,3 @@
+In this solution, I used a simple method to count the nesting depth by iterating through the characters in the string. For each opening bracket, we increase the depth counter and check if it's higher than the current maximum depth. When we encounter a closing bracket, we first ensure that the depth is not zero (to handle cases where a closing bracket appears before its opener) and then decrease the depth counter.
+
+To accommodate edge cases such as when there are unmatched or extra brackets, I added a check for situations in which the depth becomes negative before the closing bracket is found, in which case I return -1. Additionally, if the input string is empty, the function returns 0.

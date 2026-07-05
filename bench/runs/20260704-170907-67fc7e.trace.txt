@@ -1,0 +1,2 @@
+**
+I created the `token_case` function to convert an underscore-delimited string into camel case. The function first removes any leading or trailing whitespace and splits the string by underscores. It then processes each token, converting it to lowercase unless it's in the exception list ['URL', 'ID']. Finally, it joins all tokens together without any separator to form the camel case result. This approach ensures that the function is both correct and concise, adhering to the specified criteria.

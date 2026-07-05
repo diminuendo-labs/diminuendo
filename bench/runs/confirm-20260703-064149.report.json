@@ -1,0 +1,172 @@
+{
+  "confirm_id": "20260703-064149",
+  "arms": [
+    "none",
+    "menu"
+  ],
+  "repeats": 12,
+  "pairing_table": [
+    {
+      "lesson": "A/max_index/within_task",
+      "store": "A",
+      "pins": {
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "stated_direction": "last"
+      },
+      "matched_tasks": [
+        "longest_word"
+      ],
+      "structurally_empty": false
+    },
+    {
+      "lesson": "A/shortest_word/within_task",
+      "store": "A",
+      "pins": {
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "stated_direction": "last"
+      },
+      "matched_tasks": [
+        "longest_word"
+      ],
+      "structurally_empty": false
+    },
+    {
+      "lesson": "A/count_token/sibling",
+      "store": "A",
+      "pins": {
+        "rule_class": "normalize",
+        "rule_topic": "punctuation",
+        "stated_direction": null
+      },
+      "matched_tasks": [],
+      "structurally_empty": true
+    },
+    {
+      "lesson": "B/count_distinct_pairs/within_task",
+      "store": "B",
+      "pins": {
+        "rule_class": "distinctness",
+        "rule_topic": "pairs",
+        "stated_direction": null
+      },
+      "matched_tasks": [],
+      "structurally_empty": true
+    },
+    {
+      "lesson": "B/count_token/sibling",
+      "store": "B",
+      "pins": {
+        "rule_class": "normalize",
+        "rule_topic": "punctuation",
+        "stated_direction": null
+      },
+      "matched_tasks": [],
+      "structurally_empty": true
+    }
+  ],
+  "cross_seat_cells": [
+    {
+      "performer": "llama3.1:8b",
+      "task": "longest_word",
+      "store": "A",
+      "lessons": [
+        "A/max_index/within_task",
+        "A/shortest_word/within_task"
+      ]
+    }
+  ],
+  "pin_regression": [
+    {
+      "store": "B",
+      "task": "range_summary",
+      "tools": 0,
+      "passed": true
+    },
+    {
+      "store": "B",
+      "task": "snake_to_camel",
+      "tools": 0,
+      "passed": true
+    },
+    {
+      "store": "A",
+      "task": "balanced",
+      "tools": 0,
+      "passed": true
+    },
+    {
+      "store": "A",
+      "task": "most_common_word",
+      "tools": 0,
+      "passed": true
+    }
+  ],
+  "check_table": {
+    "llama3.1|longest_word|A": {
+      "longest_word('cat door bird')": {
+        "rule_check": true,
+        "arms": {
+          "none": {
+            "n": 12,
+            "passed": 2,
+            "rate": 0.16666666666666666
+          },
+          "menu": {
+            "n": 12,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          }
+        }
+      },
+      "longest_word('a bb cc d')": {
+        "rule_check": true,
+        "arms": {
+          "none": {
+            "n": 12,
+            "passed": 2,
+            "rate": 0.16666666666666666
+          },
+          "menu": {
+            "n": 12,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          }
+        }
+      },
+      "longest_word('')": {
+        "rule_check": false,
+        "arms": {
+          "none": {
+            "n": 12,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          },
+          "menu": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      },
+      "longest_word('one')": {
+        "rule_check": false,
+        "arms": {
+          "none": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "menu": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      }
+    }
+  },
+  "min_tools_armed": 2,
+  "n_note": "R=12 per arm per task on matched cross-seat cells. The reading rules live in the packet and are applied in its RESULTS, not here."
+}

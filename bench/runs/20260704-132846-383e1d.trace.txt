@@ -1,0 +1,9 @@
+**
+
+1. The function `chunk_pad` takes two arguments: a list (`lst`) and an integer (`k`) representing the chunk size.
+2. It first checks if `k` is less than or equal to zero and raises a `ValueError` if true, as it doesn't make sense to have non-positive chunk sizes.
+3. The function uses a list comprehension to iterate over the list in steps of `k`. For each iteration, it slices the list from index `i` to `i+k`.
+4. If the slice is shorter than `k`, it pads it with `None` by calculating the difference between `k` and the length of the slice, and appending `None` that many times.
+5. The padded chunks are collected into a new list, which is returned as the result.
+
+This approach ensures that every chunk has exactly `k` elements, and it handles the edge case where the input list is empty by returning an empty list.

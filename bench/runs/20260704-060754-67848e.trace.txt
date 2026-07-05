@@ -1,0 +1,2 @@
+**
+I approached this problem by focusing on the core logic required to determine balance. I realized that checking for equality between the counts of opening and closing parentheses would suffice, as this ensures that every opening parenthesis has a corresponding closing one. This approach is concise and readable, making it easy to understand and verify its correctness. The function handles the edge case of an empty string by returning True, which aligns with the problem's definition.

@@ -1,0 +1,65 @@
+SHAPE-STEERING REPLICATION 20260704-105603 (PACKET-025, the trigger)
+performer=llama3.1:8b  audience=qwen2.5-coder:7b (v1, production)
+ground=balanced (the one candidate, where the lead was born)  R=12
+qualification, canonical accounting: at least 4 passes AND 4 fails of 24 pooled
+reading 1 PRIMARY, the census: armed sweep count against none, both of 12 rows, bar 2 of 12
+reading 2 SECONDARY, pooled rule: standing bar 4 of 24; the two readings independent, neither flips the other
+byte check against production line 11: True
+armed-N2: gen_task=depth_max  pins normalize/delimiters  origin=mistral:7b  carries the flagged cross-topic residue, its delivery cell is its watch
+the census taxonomy, stated before any run (the selfdeliv24 balanced classifier, unchanged, identity-pinned by test, re-runnable: py shapesteer25.py census <rows-file>): counter-or-stack sweep, count-equality shortcut, other, unrunnable
+rule checks for balanced (the standing annotation): ["balanced('(a(b)c)')", "balanced(')(')"]
+A balanced none rep 0: ev=0.75 tools=0 shape=count-equality shortcut
+A balanced none rep 1: ev=0.75 tools=0 shape=count-equality shortcut
+A balanced none rep 2: ev=0.75 tools=0 shape=count-equality shortcut
+A balanced none rep 3: ev=1.00 tools=0 shape=counter-or-stack sweep
+A balanced none rep 4: ev=1.00 tools=0 shape=counter-or-stack sweep
+A balanced none rep 5: ev=1.00 tools=0 shape=counter-or-stack sweep
+A balanced none rep 6: ev=1.00 tools=0 shape=counter-or-stack sweep
+A balanced none rep 7: ev=0.75 tools=0 shape=count-equality shortcut
+A balanced none rep 8: ev=1.00 tools=0 shape=counter-or-stack sweep
+A balanced none rep 9: ev=1.00 tools=0 shape=counter-or-stack sweep
+A balanced none rep 10: ev=0.75 tools=0 shape=count-equality shortcut
+A balanced none rep 11: ev=0.75 tools=0 shape=count-equality shortcut
+stage A balanced: pooled rule 18 passes, 6 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 18/24 readings-present); QUALIFIES (mixed means at least 4 of each)
+stage B on qualified ground: fresh interleaved cells, ('none', 'armed-N2') per rep, the stage A cell gates and is never the baseline
+B balanced none rep 0: ev=1.00 tools=0 shape=counter-or-stack sweep
+B balanced armed-N2 rep 0: ev=0.75 tools=1 shape=count-equality shortcut
+B balanced none rep 1: ev=0.75 tools=0 shape=count-equality shortcut
+B balanced armed-N2 rep 1: ev=0.75 tools=1 shape=count-equality shortcut
+B balanced none rep 2: ev=0.75 tools=0 shape=count-equality shortcut
+B balanced armed-N2 rep 2: ev=1.00 tools=1 shape=counter-or-stack sweep
+B balanced none rep 3: ev=1.00 tools=0 shape=counter-or-stack sweep
+B balanced armed-N2 rep 3: ev=1.00 tools=1 shape=count-equality shortcut
+B balanced none rep 4: ev=0.75 tools=0 shape=count-equality shortcut
+B balanced armed-N2 rep 4: ev=1.00 tools=1 shape=counter-or-stack sweep
+B balanced none rep 5: ev=0.75 tools=0 shape=count-equality shortcut
+B balanced armed-N2 rep 5: ev=1.00 tools=1 shape=counter-or-stack sweep
+B balanced none rep 6: ev=1.00 tools=0 shape=counter-or-stack sweep
+B balanced armed-N2 rep 6: ev=0.75 tools=1 shape=count-equality shortcut
+B balanced none rep 7: ev=1.00 tools=0 shape=counter-or-stack sweep
+B balanced armed-N2 rep 7: ev=1.00 tools=1 shape=counter-or-stack sweep
+B balanced none rep 8: ev=0.75 tools=0 shape=count-equality shortcut
+B balanced armed-N2 rep 8: ev=0.75 tools=1 shape=count-equality shortcut
+B balanced none rep 9: ev=1.00 tools=0 shape=counter-or-stack sweep
+B balanced armed-N2 rep 9: ev=1.00 tools=1 shape=counter-or-stack sweep
+B balanced none rep 10: ev=0.75 tools=0 shape=count-equality shortcut
+B balanced armed-N2 rep 10: ev=0.75 tools=1 shape=count-equality shortcut
+B balanced none rep 11: ev=1.00 tools=0 shape=counter-or-stack sweep
+B balanced armed-N2 rep 11: ev=0.75 tools=1 shape=count-equality shortcut
+== READING 1 PRIMARY, census sweep counts (of 12 rows, bar 2 of 12) ==
+  none: 6/12 counter-or-stack sweep
+  armed-N2: 5/12 counter-or-stack sweep
+== READING 2 SECONDARY, pooled rule (canonical, bar 4 of 24) ==
+  none: 18/24 (diagnostic 18/24 readings-present; unrunnable rows 0)
+  armed-N2: 18/24 (diagnostic 18/24 readings-present; unrunnable rows 0)
+== STAGE B PER-CHECK canonical (none / armed-N2) ==
+  balanced('(a(b)c)'): 1.00 / 1.00  <-- rule
+  balanced(')('): 0.50 / 0.50  <-- rule
+  balanced(''): 1.00 / 1.00  <-- watch
+  balanced('((x)'): 1.00 / 1.00  <-- watch
+== CENSUS (shape distribution per cell, every cell run, the primary instrument) ==
+  A|none: counter-or-stack sweep=6  count-equality shortcut=6  other=0  unrunnable=0
+  B|armed-N2: counter-or-stack sweep=5  count-equality shortcut=7  other=0  unrunnable=0
+  B|none: counter-or-stack sweep=6  count-equality shortcut=6  other=0  unrunnable=0
+census unrunnable against zero-readings divergence: 0 rows
+GATE: PASSED. stage A arithmetic printed, stage B ran on qualified ground, byte check asserted, tool audit clean, census reported for every cell, every run checkpointed, report persisted. Both readings are applied in the packet RESULTS; canon is untouched by this session regardless of exit.

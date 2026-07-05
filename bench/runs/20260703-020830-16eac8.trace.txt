@@ -1,0 +1,9 @@
+** 
+
+1. The function `range_summary` first checks if the input list is empty and returns an empty string if it is.
+2. It then sorts the unique elements of the list to handle the ascending order and eliminate duplicates.
+3. Using a loop, it iterates through the sorted numbers and identifies consecutive runs by comparing each number with the previous one.
+4. When a non-consecutive number is found, it appends either the single number or the range (start-end) to the result list.
+5. Finally, it joins all elements of the result list into a string separated by commas and returns the formatted string.
+
+This approach ensures that consecutive runs are collapsed into 'start-end' format while single numbers remain as is.

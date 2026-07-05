@@ -1,0 +1,3 @@
+**
+
+I approached this problem by first cleaning the input string to remove non-alphabetic characters and convert it to lower case. Then, I used Python's built-in `Counter` class from the `collections` module to count the occurrences of each word. To break ties alphabetically, I filtered for words with the maximum count and returned the one that comes first in alphabetical order. The edge case where an empty string is passed as input is handled by explicitly returning an empty string in this scenario.

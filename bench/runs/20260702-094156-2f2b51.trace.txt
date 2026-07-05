@@ -1,0 +1,2 @@
+**
+I chose to implement this function using the `Counter` class from Python's standard library, which counts the occurrences of each word in the input string. To handle ties alphabetically, I used a list comprehension to get all words with the maximum count and then returned the minimum one (i.e., the last one encountered). This approach is concise and readable, and it handles the edge case where multiple words have the same maximum count by returning the last one.

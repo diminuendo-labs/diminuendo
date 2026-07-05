@@ -1,0 +1,3 @@
+**
+
+The function `nth_smallest` first checks if `n` is within the valid range (1 to number of distinct elements in `nums`). If not, it returns `None`. It then converts the list into a set to eliminate duplicates and sorts this set. Finally, it returns the nth smallest element by accessing the sorted list at index `n-1`, adhering to 0-based indexing in Python. This approach ensures that only distinct values are considered and handles edge cases where `n` is out of valid bounds.

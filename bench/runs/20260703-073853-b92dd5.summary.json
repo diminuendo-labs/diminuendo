@@ -1,0 +1,57 @@
+{
+  "run_id": "20260703-073853-b92dd5",
+  "node_id": "task-20260703-073853-b92dd5",
+  "task": "Write a Python function clamp(value, lo, hi) returning value clamped into the inclusive range lo to hi. When lo is greater than hi the range is degenerate: return None, never swap the bounds. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The given Python function clamp(value, lo, hi) correctly handles the edge case where lo > hi by returning None and does not swap the bounds as required.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "clamp(5, 1, 3)",
+        "ok": true,
+        "got": "3",
+        "expect": "3"
+      },
+      {
+        "call": "clamp(2, 3, 1)",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "clamp(0, -1, 1)",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "clamp(1, 1, 1)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef clamp(value, lo, hi):\n    if lo > hi:\n        return None\n    return max(lo, min(value, hi))\n```\n\n**",
+  "trace": "**\n\nI defined the function `clamp` that takes three parameters: `value`, `lo`, and `hi`. The first check ensures if `lo` is greater than `hi`, which makes the range degenerate. In such a case, the function returns `None`. If the range is valid, it uses Python's built-in `max` and `min` functions to clamp `value` within the inclusive range `[lo, hi]`. This approach ensures that the value is always between or at the bounds provided, and it handles the edge case where the lower bound is greater than the upper bound by returning `None`.",
+  "totals": {
+    "time_s": 17.965273500000002,
+    "tokens": 596
+  },
+  "files": [
+    "20260703-073853-b92dd5.crumbs.jsonl",
+    "20260703-073853-b92dd5.trace.txt"
+  ]
+}

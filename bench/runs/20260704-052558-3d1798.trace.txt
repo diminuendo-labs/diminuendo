@@ -1,0 +1,2 @@
+**
+I implemented the `flatten_once` function using a simple iterative approach. I used a for loop to iterate over each element in the input list, and an if statement to check whether the current element is a list. If it is, I added its items to the result list using the `extend` method; otherwise, I appended the element as is. This approach allows me to handle one edge case: an empty list, which will simply be returned unchanged.

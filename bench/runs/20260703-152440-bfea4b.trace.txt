@@ -1,0 +1,3 @@
+The function `range_summary` first checks if the input list is empty and returns an empty string if so. It then sorts the unique values of the input list to ensure they are in ascending order. The function uses a loop to iterate through the sorted list, identifying consecutive runs of numbers. For each run identified, it appends either a single number or a range (in the form 'start-end') to the `ranges` list. Finally, it joins all elements in `ranges` with commas and returns the resulting string.
+
+This approach ensures that the function is concise, readable, and handles consecutive runs correctly by collapsing them into ranges. The edge case of an empty input list is explicitly handled, returning an empty string as required.

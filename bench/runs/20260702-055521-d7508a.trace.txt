@@ -1,0 +1,3 @@
+**
+
+I started by sorting the list of pairs based on their start values to ensure that any potential overlaps or touches are adjacent. I then iterated through the sorted list, keeping a list of merged ranges. For each pair, if it overlaps with or touches the last range in the merged list, I updated the end of the last range. If not, I added the current pair as a new range in the merged list. This approach ensures that all overlapping or touching ranges are merged into a single range, and the final list is sorted by the start value of each range.

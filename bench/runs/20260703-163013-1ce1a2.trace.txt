@@ -1,0 +1,3 @@
+The function `equal_ignoring_spaces(a, b)` takes two strings as input and removes all whitespace characters using the `replace()` method and converts both to lowercase using the `lower()` method. Finally, it checks if the resulting strings are equal to return True or False accordingly.
+
+One edge case handled here is when both strings have identical words but different cases (e.g., "HELLO" and "hello"). The function correctly considers them as equal after removing spaces and converting to lowercase.

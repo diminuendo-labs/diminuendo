@@ -1,0 +1,2 @@
+**  
+I chose to split the input string using underscores and then iterate over each token. If a token is not in the exception list, it is capitalized; otherwise, it remains unchanged. The result is joined into a single string with no separators, and all characters are converted to lowercase at the end. This ensures that the function correctly handles edge cases such as when an underscore appears at the beginning or end of the input string.

@@ -1,0 +1,4 @@
+**
+I approached the problem by first checking if the input list is empty. If it is, I return an empty list immediately as there's nothing to process. Then, I use a list comprehension to create chunks of size `k` from the input list. After creating these chunks, I check if the last chunk has fewer than `k` elements. If so, I pad this chunk with `None` values until it reaches the required size of `k`. Finally, I return the list of chunks.
+
+This approach ensures that every chunk is exactly `k` elements long by padding the last chunk when necessary and handles an edge case where the input list is empty.

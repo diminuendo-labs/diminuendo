@@ -1,0 +1,3 @@
+I created a dictionary `counter` to count the frequency of each number in the input list. Then, I determined the maximum frequency and stored it in `max_count`. Next, I found all numbers with this maximum frequency using a list comprehension. Lastly, I returned the cardinality (number of elements) of the set obtained from this list to avoid double-counting modes that have multiple occurrences in the result.
+
+One edge case handled is when there are no repeated values in the input list, as the function would return 0 for an empty list.

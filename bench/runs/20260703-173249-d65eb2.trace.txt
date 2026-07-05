@@ -1,0 +1,5 @@
+The function `snake_to_camel(s)` takes a string `s` as an argument, which represents a snake-case identifier. It splits the string into words based on underscores using the `split()` method. To handle leading and trailing underscores, I added a check for empty strings in the beginning of the loop and skipped them.
+
+The function then iterates through the list of words. If the word is empty or an underscore, it skips it to avoid issues with edge cases such as `__a` becoming `A`. For non-empty words that are not underscores, it capitalizes the first letter and assigns it back to the word using the `capitalize()` method.
+
+Finally, it joins the list of words back together into a string with underscores separating each word, unless the list is empty (which represents an empty string).

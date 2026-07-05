@@ -1,0 +1,2 @@
+**
+I first handled the edge case where `k` is less than or equal to 0 by returning `None`. Then I sorted the input list using a lambda function as the sorting key, which returns a tuple for each word. The first element of the tuple is the length of the word (used for primary sorting), and the second element is the reverse of the word itself (used for secondary sorting). Finally, I used Python's list indexing with a try-except block to handle out-of-range indices.

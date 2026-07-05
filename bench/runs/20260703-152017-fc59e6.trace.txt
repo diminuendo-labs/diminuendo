@@ -1,0 +1,5 @@
+**
+
+I approached the problem by first ensuring that the input list is sorted and contains distinct values only. This is achieved using `sorted(set(nums))`. I then iterated through the list, identifying consecutive numbers to form ranges. When a non-consecutive number is encountered, the current range (or single number) is added to the result list. Finally, any remaining range or single number is appended before joining all parts into a single string separated by commas.
+
+This approach ensures that all edge cases are handled, including an empty input list and consecutive numbers. The code is concise and readable, meeting the specified criteria.

@@ -1,0 +1,3 @@
+In this solution, we first strip any leading or trailing whitespace from the input string to avoid adding unnecessary empty pieces during splitting. We use a set of delimiters (comma and semicolon) for better readability and performance. We remove any empty pieces at the start and end of the list containing all split pieces.
+
+Next, we handle an edge case where consecutive run(s) of multiple commas and/or semicolons are treated as a single delimiter by iterating through each piece in the list and checking if it consists of multiple delimiters. If so, we collapse them into one by joining them together. Finally, we return the final list as a string with a comma between each piece.

@@ -1,0 +1,2 @@
+**  
+I started by sorting the list to ensure the numbers are in ascending order. I then iterated through the sorted list, keeping track of the start of potential ranges. If a consecutive sequence is found (i.e., the next number is exactly one more than the current), the iteration continues until the sequence breaks. Depending on whether a range was formed or just a single number, it appends the appropriate string to the result list. Finally, I joined the list elements with commas to form the final output. The function handles an empty input by returning an empty string.

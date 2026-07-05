@@ -1,0 +1,3 @@
+**
+
+I implemented the median function by first sorting the input list in ascending order using the built-in `sort()` method. I then checked for the edge case where the input list is empty, returning None immediately if it is. To determine whether to return a single middle value or the average of two middle values, I used the modulo operator (`%`) to check if the length of the sorted list is odd (remainder 1) or even (remainder 0).

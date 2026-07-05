@@ -1,0 +1,2 @@
+**
+I began by checking for the edge case where the input list `nums` is empty. If it is, the function returns `None`. For non-empty lists, I initialized `max_value` to the last element of the list and `max_index` to its index. Then, I iterated through the list from right to left (excluding the first element), updating `max_value` and `max_index` whenever a larger or equal value is found. This ensures that if the largest value appears more than once, the index of its last occurrence is returned.

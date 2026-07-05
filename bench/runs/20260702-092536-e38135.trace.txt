@@ -1,0 +1,2 @@
+**
+I approached this problem by first sorting the input ranges based on their start value. Then, I iterated through the sorted list to identify overlapping or touching ranges and merge them. For edge cases, I specifically handled an empty input list, which would otherwise cause a runtime error when attempting to access `pairs[0]`. This implementation assumes that the input pairs are valid (i.e., each pair has exactly two elements), as this is not explicitly specified in the problem statement.

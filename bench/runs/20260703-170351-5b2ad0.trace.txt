@@ -1,0 +1,4 @@
+1. To split the string on commas, we utilize the `split()` function and provide it with the desired delimiter, which is a comma in this case.
+2. We trim whitespace around each field to clean up the data by employing the `strip()` method on every field generated from splitting the original string.
+3. To drop empty fields after trimming, we use an if condition within the list comprehension that checks whether the field is non-empty (i.e., not equal to an empty string) after stripping whitespace.
+4. As for the edge case, we handle a string with no commas or empty fields by first replacing multiple commas followed by whitespace with a single comma using the `replace()` method. This ensures that our function behaves consistently when encountering such an edge case.

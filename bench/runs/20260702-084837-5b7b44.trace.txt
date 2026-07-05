@@ -1,0 +1,3 @@
+**
+
+I chose to use the `replace` method to remove whitespace from both strings, as it is a built-in string method in Python. This approach allows for conciseness and readability by avoiding unnecessary imports or custom functions. To handle edge cases explicitly, I included a docstring that mentions one of the possible scenarios where empty strings are considered equal.

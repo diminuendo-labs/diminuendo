@@ -1,0 +1,3 @@
+**
+
+I chose to iterate through each character in the string directly without normalizing or preparing it first. This keeps the code concise and straightforward as I'm simply maintaining a running tally of open parentheses encountered versus closed ones. The function handles the edge case where an empty string is considered balanced (count initialized to 0).

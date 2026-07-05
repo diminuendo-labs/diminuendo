@@ -1,0 +1,180 @@
+{
+  "directive33_id": "20260704-234234",
+  "packet": "PACKET-033",
+  "program_exit": "the pre-registered LAST G1 attempt",
+  "performer": "qwen2.5-coder:7b",
+  "audience": "llama3.1:8b",
+  "ground": "kth_ordered r2 (variant)",
+  "repeats": 12,
+  "cells": [
+    "none",
+    "menu-form",
+    "directive"
+  ],
+  "gate_min": "9 of 12",
+  "rule_bar": "2 of 12",
+  "void_floor": "none at 2 of 12 or under",
+  "directive_text": "If multiple words have the same shortest length, the function should return the last such word encountered.",
+  "menu_form_landscape": [
+    {
+      "concept": "When handling ties in the task, always return the last word with the shortest length.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "stated_direction": "last"
+      }
+    }
+  ],
+  "stage_a": {
+    "pooled": {
+      "n": 12,
+      "passed": 12,
+      "present_n": 12,
+      "present_passed": 12,
+      "unrunnable_rows": 0
+    },
+    "gate_min": 9,
+    "passed": true
+  },
+  "stage_b": {
+    "ran": true,
+    "void_by_floor": false,
+    "pooled_rule_checks": {
+      "none": {
+        "n": 12,
+        "passed": 11,
+        "present_n": 12,
+        "present_passed": 11,
+        "unrunnable_rows": 0
+      },
+      "menu-form": {
+        "n": 12,
+        "passed": 12,
+        "present_n": 12,
+        "present_passed": 12,
+        "unrunnable_rows": 0
+      },
+      "directive": {
+        "n": 12,
+        "passed": 7,
+        "present_n": 12,
+        "present_passed": 7,
+        "unrunnable_rows": 0
+      }
+    },
+    "check_table": {
+      "kth_ordered(['bb', 'ab', 'c'], 2)": {
+        "rule_check": true,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          },
+          "menu-form": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "directive": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 7,
+            "rate": 0.5833333333333334
+          }
+        }
+      },
+      "kth_ordered(['dd', 'a', 'ccc'], 2)": {
+        "rule_check": false,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          },
+          "menu-form": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "directive": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 7,
+            "rate": 0.5833333333333334
+          }
+        }
+      },
+      "kth_ordered(['a', 'bb'], 5)": {
+        "rule_check": false,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "menu-form": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "directive": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          }
+        }
+      }
+    }
+  },
+  "census": {
+    "A|none": {
+      "single-key-sort": 0,
+      "compound-key-sort": 12,
+      "manual-scan": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "B|none": {
+      "single-key-sort": 0,
+      "compound-key-sort": 12,
+      "manual-scan": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "B|menu-form": {
+      "single-key-sort": 0,
+      "compound-key-sort": 12,
+      "manual-scan": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "B|directive": {
+      "single-key-sort": 3,
+      "compound-key-sort": 9,
+      "manual-scan": 0,
+      "other": 0,
+      "unrunnable": 0
+    }
+  },
+  "census_no_readings_divergence": 0,
+  "audit_ok": true,
+  "priors": {
+    "P004_ev_fraction_era": "clean checks 0.92 to 0.36 under the contradicting directive; menu 0.33 to 0.75; direction comparable, magnitudes not",
+    "old_input_rung2": "qwen 10 of 12 in P026, old-input historical, never a qualification",
+    "P030_rung3_close": "14 of 24 against an 18-of-24 gate",
+    "variant_rung2": "zero measurements exist"
+  },
+  "n_note": "Stage A gates only. The four readings and the program exit live in the packet and are applied in its RESULTS. One rule check: counts are in runs, n=12."
+}

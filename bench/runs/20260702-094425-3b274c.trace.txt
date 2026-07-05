@@ -1,0 +1,2 @@
+**
+I used the `split` method to split the input string into words separated by underscores, then used a generator expression with `capitalize` to capitalize each word. I filtered out empty strings from the list of words using a conditional (`if word`) to ensure that repeated and leading/trailing underscores are dropped. The result is joined back together into a single string using `''.join()`. This approach is concise and readable, while handling the specified edge case where an empty input string returns an empty output string.

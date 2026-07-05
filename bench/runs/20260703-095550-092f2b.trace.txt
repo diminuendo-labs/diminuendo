@@ -1,0 +1,4 @@
+**  
+I used Python's built-in `split` method to divide the string into words. I then found the longest word using the `max` function with the key parameter set to `len`. To handle ties by returning the last such word, I iterated over the words in reverse order until I found a word of the same length as the longest one.
+
+The edge case where "hello world hello" is included ensures that the function correctly handles strings with repeated longest words and returns the last occurrence.

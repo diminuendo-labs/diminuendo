@@ -1,0 +1,2 @@
+**
+I implemented the function using standard Python libraries, with a clear and concise structure. To handle edge cases, I first check for lists of length less than 3 (which would make it impossible to drop one occurrence each of the minimum and maximum values), returning None in these cases. The rest of the function is straightforward: find the minimum and maximum values, remove them from the list, calculate the mean if there are remaining elements. I chose a simple and explicit approach to ensure readability and maintainability.

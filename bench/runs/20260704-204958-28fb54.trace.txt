@@ -1,0 +1,4 @@
+- I created a function `trimmed_mean` that takes a list of numbers as input and returns the mean after removing one minimum and one maximum value.
+- If the list is empty, it returns None to indicate an invalid input.
+- To handle edge cases where both min and max occur more than once or less than twice, I check their count in the list and adjust accordingly.
+- For the remaining situations where min and/or max each appear only once, I remove one arbitrarily (either the first or last appearance) to calculate the mean of the remaining elements.

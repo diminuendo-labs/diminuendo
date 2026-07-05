@@ -1,0 +1,3 @@
+First, the function splits the input string `s` into a set of words after removing leading and trailing punctuation. This ensures that substrings inside longer words do not count as separate instances.
+Then, it converts all words to lowercase for case-insensitive comparison with the target word `w`. The set is used here to eliminate duplicates and make the time complexity O(n), where n is the number of unique words.
+The edge case handled here is when an empty string or a non-existent word is passed as `w`, in which case it returns 0.

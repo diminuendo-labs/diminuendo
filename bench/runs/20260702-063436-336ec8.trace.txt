@@ -1,0 +1,2 @@
+**
+I chose to implement a simple counting approach to check for balance. The idea is that for the string to be balanced, the number of opening and closing parentheses must be equal. I used the built-in `count` method of strings to count the occurrences of both '(' and ')'. This approach handles the edge case where the input string contains multiple pairs of matching parentheses but no unmatched ones, as in the example '((()))'.

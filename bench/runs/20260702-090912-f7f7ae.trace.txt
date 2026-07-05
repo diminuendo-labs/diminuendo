@@ -1,0 +1,8 @@
+To solve this task, I followed these steps:
+1. First, I checked if the input string `s` is empty. If it is, I immediately returned an empty string.
+2. Next, I split the string into a list of words using the `split()` method, which handles whitespace by default.
+3. I then found the maximum length of any word in the list using a generator expression within the `max()` function.
+4. To handle ties and return the last longest word, I used a list comprehension to filter out words with the maximum length, and then reversed this list to ensure the last occurrence is selected.
+5. Finally, I returned the first (and only) element of this filtered list.
+
+This approach ensures that the function is both correct and efficient while handling the edge case of an empty string gracefully.

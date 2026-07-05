@@ -1,0 +1,2 @@
+**  
+The function `chunk_pad` takes a list `lst` and an integer `k`. It first checks if the input list is empty or if `k` is less than or equal to zero. In such cases, it returns an empty list as there are no elements to chunk or chunk size is invalid. For valid inputs, it uses list comprehension to create chunks of size `k` and pads the final chunk with `None` if necessary. The padding is calculated using the modulo operator to determine how many extra None values need to be added to reach a total length divisible by `k`.

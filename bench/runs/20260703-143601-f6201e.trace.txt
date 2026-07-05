@@ -1,0 +1,2 @@
+**
+I implemented this function using a generator expression within a set comprehension to efficiently count distinct elements. The generator ensures only one pass through the list is made, and the set removes duplicates. I explicitly handled the edge case where an empty input list would be passed by noting that in such a scenario the function should return 0, aligning with mathematical expectation for empty sets.

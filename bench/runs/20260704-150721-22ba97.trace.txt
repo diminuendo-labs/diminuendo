@@ -1,0 +1,2 @@
+**
+I chose to use list comprehension to create a new list that excludes the minimum and maximum values. This approach is concise and readable, as it clearly conveys the intention of trimming the input list. I also handled the edge case where the input list has fewer than 3 elements by explicitly returning None in this situation.

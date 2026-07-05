@@ -1,0 +1,2 @@
+**
+I used a list comprehension to implement the `flatten_once` function. This concise syntax allows us to define and initialize variables within a single line, making the code more readable. I chose this approach because it directly matches the problem statement's requirements: flatten exactly one level of nesting.

@@ -1,0 +1,1 @@
+Firstly, I handled empty and None inputs by returning None to maintain consistency with the criteria. Then, I sorted the list of numbers in ascending order, removed the minimum and maximum values, calculated the arithmetic mean, and rounded it to two decimal places as per the criteria's requirements.

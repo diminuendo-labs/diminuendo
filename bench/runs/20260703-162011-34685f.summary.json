@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-162011-34685f",
+  "node_id": "task-20260703-162011-34685f",
+  "task": "Write a Python function count_unique(nums) returning how many values appear exactly once in the list. Values that repeat do not count at all: [1, 2, 2, 3] has two such values, 1 and 3. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly counts unique values in a list, excluding repeated values",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "handles edge case of empty list": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_unique([1, 2, 2, 3])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_unique([5, 5])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([7])",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef count_unique(nums):\n    return len(set(nums)) - len({num for num in set(nums) if nums.count(num) > 1})\n```",
+  "trace": "In this solution, I first convert the input list into a set to remove duplicate values and then calculate its length to get the total count of unique numbers. Next, I use a set comprehension to count the repeated numbers (those with a count greater than 1 in the original list). Finally, I subtract the count of repeated numbers from the total unique count to get the final result. This approach ensures that the function handles the edge case where all elements are unique or identical by returning 0 for an empty list and for lists containing only duplicates respectively. It also uses Python's built-in functions, set() and count(), making the code concise and readable.",
+  "totals": {
+    "time_s": 20.2749132,
+    "tokens": 637
+  },
+  "files": [
+    "20260703-162011-34685f.crumbs.jsonl",
+    "20260703-162011-34685f.trace.txt"
+  ]
+}

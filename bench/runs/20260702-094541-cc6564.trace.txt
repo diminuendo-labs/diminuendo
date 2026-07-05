@@ -1,0 +1,2 @@
+**
+I first checked for the edge case where the input list is empty, and returned an empty list in this case. Then I sorted the ranges by their start value to make merging easier. Next, I iterated over the sorted ranges, merging any overlapping or adjacent ranges into a single range. This was done by keeping track of the last merged range and checking if the current range overlaps with it; if so, the two ranges were merged together.

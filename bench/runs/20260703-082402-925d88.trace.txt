@@ -1,0 +1,2 @@
+**  
+The function `mode_count` first checks if the input list is empty. If it is, it returns 0 immediately as there are no values to compare. If the list is not empty, it uses a dictionary comprehension to create a frequency count of each number in the list. It then finds the maximum frequency using the `max()` function. Finally, it counts how many numbers have this maximum frequency and returns that count. This approach ensures that the function is both concise and readable while correctly handling the edge case of an empty input list.

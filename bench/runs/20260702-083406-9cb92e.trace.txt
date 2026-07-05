@@ -1,0 +1,4 @@
+**
+I chose to use a dictionary `num_counts` to keep track of the occurrences of each number. As I iterate through the list, I increment the count for each number. After populating the dictionary, I sum up the counts that are exactly 1 to get the final result.
+
+This approach ensures that all unique numbers (those with exactly one occurrence) are counted correctly, and it handles an edge case where the input list is empty by returning 0 immediately.

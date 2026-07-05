@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-220925-d31d61",
+  "node_id": "task-20260704-220925-d31d61",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly calculates the trimmed mean, handles an edge case for odd-length lists, and is mostly well-structured.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": false,
+        "got": "1.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n    sorted_nums = sorted(nums)\n    median = len(sorted_nums) // 2\n    min_index, max_index = 0, len(sorted_nums)-1\n\n    # Edge case: if the list has an odd number of elements,\n    # drop the middle element instead of one from each end.\n    if len(sorted_nums) % 2 != 0:\n        median -= 1\n\n    return sum(sorted_nums[min_index+1 : median]) / (median-1) + \\\n           sum(sorted_nums[median+1 : max_index]) / (len(sorted_nums)-median-1)\n```",
+  "trace": "I approached the task by first sorting the input list and determining the median index based on its length. To handle odd-length lists, I subtract one from the median index if necessary. Next, I calculate the sum of the numbers between the minimum (excluding it) and the median-1, as well as the sum of the numbers between the median+1 and the maximum (excluding it). Finally, I return the average of these two sums by dividing each by the number of elements in their respective ranges. This function returns None for an empty list and handles the edge case where the input list has an odd number of elements.",
+  "totals": {
+    "time_s": -1.727923200000001,
+    "tokens": -103
+  },
+  "files": [
+    "20260704-220925-d31d61.crumbs.jsonl",
+    "20260704-220925-d31d61.trace.txt"
+  ]
+}

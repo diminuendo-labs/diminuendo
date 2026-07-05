@@ -1,0 +1,3 @@
+**
+
+I chose a concise and readable approach by using a list comprehension. This allows me to handle both cases (elements that are lists or not) in one line of code, making the function easy to understand. I also included a docstring to provide context and clarify what the function does. The edge case this function handles is when an empty list is input; in this case, it returns an empty list as well, following the "boundary" rule for handling degenerate inputs.

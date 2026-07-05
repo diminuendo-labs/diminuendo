@@ -1,0 +1,3 @@
+**
+
+I approached this task by first splitting the input string into a list of words using the `split` method. I then created a dictionary to count the occurrences of each word. To handle the edge case where the input string contains only spaces (no words), I added a check at the beginning of the function to return an empty string in this case. Finally, I used the built-in `min` function with a custom key function to find the word with the lowest count, breaking ties alphabetically by using a tuple as the key value.

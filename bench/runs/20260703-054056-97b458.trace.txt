@@ -1,0 +1,2 @@
+**
+The function `sum_of_modes` first checks if the input list `nums` is empty. If it is, it returns 0 immediately as per the edge case. Then, it uses Python's `collections.Counter` to count the frequency of each number in the list. It determines the maximum frequency among all numbers. Next, it identifies all numbers that have this maximum frequency and sums them up before returning the result. This approach ensures that only distinct most frequent values are considered and counted once.

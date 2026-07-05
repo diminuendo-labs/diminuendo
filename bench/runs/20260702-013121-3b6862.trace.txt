@@ -1,0 +1,2 @@
+**
+I defined the function `is_palindrome` that takes a string `s` as input. I used list comprehension to filter out non-alphanumeric characters and converted the resulting string to lowercase using the `lower()` method. The function then checks if the filtered string is equal to its reverse (`s[::-1]`). This approach is concise, readable, and handles edge cases such as an empty string being considered a palindrome.

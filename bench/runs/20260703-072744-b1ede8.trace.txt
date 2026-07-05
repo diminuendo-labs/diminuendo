@@ -1,0 +1,2 @@
+**
+The function `longest_run_char(s)` iterates through the string `s` while keeping track of the current character and its consecutive run length. It updates the maximum length and the corresponding character whenever a longer sequence is found. If multiple sequences have the same length, it keeps the last one encountered. The edge case where an empty string is passed is handled by immediately returning an empty string.

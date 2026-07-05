@@ -1,0 +1,3 @@
+**
+
+The function `merge_ranges` first sorts the input list of ranges based on their starting values to ensure that any potential overlaps are adjacent. It then iterates through the sorted list, checking if the current range overlaps with the last added range in the merged list. If there is no overlap, it simply appends the new range. If there is an overlap, it merges the current range with the last one by updating the end value of the last range to be the maximum of its own and the current range's end value. This approach efficiently handles overlapping and touching ranges while maintaining the sorted order of the merged ranges. The edge case where the input list is empty is handled by returning an empty list directly, as no merging is necessary in this scenario.

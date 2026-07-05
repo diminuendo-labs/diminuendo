@@ -1,0 +1,3 @@
+In this solution, the provided function `shortest_word()` takes a string `s` as input and returns the shortest word from it. The string is split into individual words using the built-in `split()` method. Then, the `max()` function is used to find the maximum (or smallest in this case) value of the list based on the length of each word, with the key set to the `len()` function.
+
+To handle edge cases, if there are no words (empty string), it returns an empty string as specified. Additionally, if there are multiple words with the same shortest length, it returns the last such word rather than the first one by defining a default value in the `max()` function call. This allows for handling ties gracefully and efficiently.

@@ -1,0 +1,3 @@
+**
+
+I approached this task by first checking if the input string `s` is empty. If it is, I immediately return an empty list as specified. For non-empty strings, I split the string on commas and use a list comprehension to both strip whitespace from each field and filter out any fields that become empty after stripping (i.e., they contain only spaces). This concise method ensures that the function is both correct and easy to read.

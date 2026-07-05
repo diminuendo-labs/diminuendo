@@ -1,0 +1,10 @@
+**
+The function first checks if the input list `nums` is empty. If it is, it returns an empty string immediately as there are no numbers to process.
+
+Next, the list is sorted to facilitate the grouping of consecutive numbers. Variables `start` and `end` are initialized to the first element of the sorted list to mark the beginning of a potential range.
+
+The function then iterates through the sorted list starting from the second element. For each number, it checks if the current number is one more than the `end` of the current range. If so, it updates the `end`. If not, it appends the current range (either as a single number or a range) to the `ranges` list and resets `start` and `end` to the current number.
+
+After the loop, there's a final check to append the last range to the `ranges` list since it might not be added in the loop if it was the only element or part of a range.
+
+Finally, all ranges are joined with commas and returned as the result.

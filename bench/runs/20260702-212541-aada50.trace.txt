@@ -1,0 +1,7 @@
+**
+
+The function `title_words` takes a string `s` as input. It first checks if the string is empty or contains only whitespace. If so, it returns an empty string. Otherwise, it splits the string into words using `split()`, which handles multiple spaces correctly by collapsing them into single spaces.
+
+For each word, it checks if the word is already in all uppercase letters. If it is, the word is added to the result list as is. Otherwise, it uses `capitalize()` to title-case the word (making the first letter uppercase and the rest lowercase) and adds it to the result list.
+
+Finally, the function joins the title-cased words back into a single string with spaces in between using `' '.join(titled_words)` and returns this string. This approach ensures that the function is both concise and readable while correctly handling all specified requirements, including the edge case of an empty or whitespace-only input string.

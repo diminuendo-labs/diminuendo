@@ -1,0 +1,1 @@
+I used Python's `split()` method to break the string into words based on whitespace. To ensure that only lowercase words are counted, I added a condition in the generator expression inside `set()`. This approach automatically handles consecutive spaces as a single space because `split()` collapses multiple consecutive whitespace characters into a single delimiter.

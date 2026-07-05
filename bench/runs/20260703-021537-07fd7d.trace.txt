@@ -1,0 +1,2 @@
+**  
+The function `snake_to_camel` takes a string `s` and splits it into words based on underscores. It then constructs the camelCase version by capitalizing each word except the first one, converting it to lowercase if necessary. The use of list comprehension ensures that leading, trailing, and repeated underscores are effectively removed before processing. If the input string is empty or contains only underscores, an empty string is returned. This approach adheres to the given criteria while handling all specified edge cases efficiently.

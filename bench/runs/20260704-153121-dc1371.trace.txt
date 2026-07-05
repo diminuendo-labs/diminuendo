@@ -1,0 +1,2 @@
+**
+I implemented this function by using Python's built-in `sorted` function, which takes a key function to determine the sorting order. In this case, I used a lambda function that returns a tuple containing the length of each word and its reverse alphabetization (by negating it). This ensures words are first ordered by increasing length, then reverse-alphabetically among those with equal lengths. The edge case `k > len(words)` is handled by checking if k is within range before attempting to access the list at index k-1.

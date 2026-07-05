@@ -1,0 +1,1 @@
+I used a list comprehension to split the input string by commas and semicolons. Then, I used another while loop to iteratively collapse any consecutive delimiters into single ones, also removing empty pieces at the beginning and end. The edge case handled here is when there are two or more consecutive delimiters with no content between them.

@@ -1,0 +1,2 @@
+**
+I started by sorting the input pairs based on their start value and removing any zero-width ranges. This simplifies the merging process and prevents unnecessary checks for overlap. Then, I iterated over the sorted list of pairs, checking each range against the last one in the `merged` list to see if they overlap or touch. If they do, I merged them; otherwise, I added the current range to the `merged` list. This approach is concise and readable, with a clear focus on correctness.

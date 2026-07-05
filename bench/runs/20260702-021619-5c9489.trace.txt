@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `count()` method to count the occurrences of '(' and ')' in the string. This approach is concise and readable, and it directly addresses the problem by comparing the counts of opening and closing parentheses. I didn't need to iterate through the string or use a state machine because the `count()` method provides a straightforward way to solve this specific task.

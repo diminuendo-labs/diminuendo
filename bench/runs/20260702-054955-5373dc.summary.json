@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-054955-5373dc",
+  "node_id": "task-20260702-054955-5373dc",
+  "task": "Write a Python function median(nums) returning the middle value of the sorted list when the length is odd, or the average of the two middle values as a float when the length is even. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "reason": "The function accurately calculates the median of a list, handling edge cases and is well-written.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness": 5,
+    "readability": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "median([3, 1, 2])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "median([1, 2, 3, 4])",
+        "ok": true,
+        "got": "2.5",
+        "expect": "2.5"
+      },
+      {
+        "call": "median([5, 5])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "median([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n```python\ndef median(nums):\n    if not nums:\n        return None\n    sorted_nums = sorted(nums)\n    n = len(sorted_nums)\n    mid = n // 2\n    if n % 2 == 1:\n        return sorted_nums[mid]\n    else:\n        return (sorted_nums[mid - 1] + sorted_nums[mid]) / 2.0\n\n# Edge case: An empty list should return None.\nassert median([]) is None\n```\n\n**",
+  "trace": "**\n- The function `median` first checks if the input list `nums` is empty. If it is, it returns `None`.\n- It then sorts the list using Python's built-in `sorted()` function to ensure the numbers are in ascending order.\n- The length of the sorted list `n` is determined, and the middle index `mid` is calculated as `n // 2`.\n- If the length of the list is odd (`n % 2 == 1`), the function returns the value at the middle index.\n- If the length is even, it calculates the average of the two middle values by adding them together and dividing by 2.0 to ensure the result is a float.\n\nThis approach ensures that the median is calculated correctly for both odd and even lengths of lists, with clear handling of an edge case where the input list might be empty.",
+  "totals": {
+    "time_s": 19.882724699999997,
+    "tokens": 769
+  },
+  "files": [
+    "20260702-054955-5373dc.crumbs.jsonl",
+    "20260702-054955-5373dc.trace.txt"
+  ]
+}

@@ -1,0 +1,7 @@
+**
+
+The function `range_summary` takes a list of integers, removes duplicates by converting it to a set, and then sorts the numbers. It initializes an empty list `result` to store the final output parts.
+
+Using a loop, it iterates through the sorted numbers, checking if the current number is consecutive with the previous one. If not, it appends the appropriate range ('start' or 'start-end') to the result list and updates the start of the next potential range. After the loop, it handles the last range. Finally, it joins all parts in the result list with a comma and returns the string.
+
+This approach ensures that consecutive numbers are collapsed into ranges and duplicates are removed, adhering to the task requirements.

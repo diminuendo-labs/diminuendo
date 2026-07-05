@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-164209-824058",
+  "node_id": "task-20260703-164209-824058",
+  "task": "Write a Python function title_words(s) returning the string with every whitespace-separated word title-cased (first letter upper, the rest lower) and runs of whitespace collapsed to single spaces, except that words already entirely uppercase stay exactly as they are. An empty string returns ''. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function meets all requirements, but could be more readable with better variable names.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 1
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "title_words('hello  world')",
+        "ok": true,
+        "got": "'Hello World'",
+        "expect": "'Hello World'"
+      },
+      {
+        "call": "title_words('NASA rocks')",
+        "ok": true,
+        "got": "'NASA Rocks'",
+        "expect": "'NASA Rocks'"
+      },
+      {
+        "call": "title_words('mIxEd')",
+        "ok": true,
+        "got": "'Mixed'",
+        "expect": "'Mixed'"
+      },
+      {
+        "call": "title_words('')",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef title_words(s):\n    words = s.split()\n    for i, word in enumerate(words):\n        if not word.isupper():\n            words[i] = word[0].upper() + word[1:].lower()\n    return ' '.join(words)\n```",
+  "trace": "The function `title_words(s)` takes a string `s` and first splits it into words using the `split()` method. It then iterates through each word, checking if the word is entirely uppercase (using the `isupper()` method). If not, the word is title-cased by making the first letter uppercase and the rest lowercase. Finally, all run of multiple whitespaces are collapsed to a single space using the `join()` method. An edge case considered here is handling words that are already entirely uppercase and leaving them unchanged.",
+  "totals": {
+    "time_s": 18.2832493,
+    "tokens": 667
+  },
+  "files": [
+    "20260703-164209-824058.crumbs.jsonl",
+    "20260703-164209-824058.trace.txt"
+  ]
+}

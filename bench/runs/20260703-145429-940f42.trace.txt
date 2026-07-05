@@ -1,0 +1,2 @@
+**
+I chose to use a set to store the numbers we've seen so far, which allows us to efficiently check if the complement of each number is in the set. This approach avoids the need for nested loops and makes the code more concise while still ensuring correctness. The edge case I handled is an empty input list, where the function returns 0 as expected.

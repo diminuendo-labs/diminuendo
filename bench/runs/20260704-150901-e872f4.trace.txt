@@ -1,0 +1,3 @@
+**
+
+I first checked for edge cases, specifically returning `None` for lists with fewer than three elements. Then, I used the built-in Python functions `min()` and `max()` to find the minimum and maximum values in the list. Finally, I removed these two values from the list and calculated the mean using the `sum()` function and the length of the list. This approach is concise and readable, while also correctly handling the specified task requirements.

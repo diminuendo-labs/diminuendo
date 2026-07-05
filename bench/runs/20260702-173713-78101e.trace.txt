@@ -1,0 +1,2 @@
+**
+I chose to split the input string into a list of whitespace-separated words using `s.split()`. I then iterated over this list, keeping track of the maximum word length and its last occurrence index. If a longer word is found, or if a tie occurs with a later occurrence, the last occurrence index is updated accordingly. The function returns the longest word at its last occurrence index (or an empty string for an empty input).

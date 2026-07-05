@@ -1,0 +1,2 @@
+I approached this task by first splitting the input string 's' using underscores as separators to create a list of words. Then, I iterated through the list, checking if the current word is empty or the current and previous words are identical (case-insensitive). In such cases, I capitalized the current word. Finally, I joined the modified words back together with an underscore and returned the result.
+One edge case handled here is when there are consecutive underscores, which will be replaced by a single underscore in camelCase notation.

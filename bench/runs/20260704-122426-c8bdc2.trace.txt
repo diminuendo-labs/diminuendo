@@ -1,0 +1,5 @@
+I approached this problem by first sorting the input pairs based on their start values using the `sorted()` function with a custom comparison key. Then, I initialized an empty list to store the merged ranges.
+
+I iterated through the sorted pairs and maintained a reference to the last merged range in the result list. If the current pair overlaps or shares an endpoint with the last merged range, I updated its end value accordingly. Otherwise, I appended the current pair to the result list as a new merged range.
+
+The edge case handled here is when multiple non-overlapping ranges are present in the input, each of which remains separate and gets merged into different parts of the final result.

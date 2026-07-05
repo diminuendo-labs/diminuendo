@@ -1,0 +1,2 @@
+**
+I chose to use a generator expression within the `join` function to capitalize each word after splitting the input string at underscores. This approach allows us to efficiently handle repeated and leading/trailing underscores by simply filtering out empty strings from the list of words. One edge case this function handles is when the input string is empty, in which case it returns an empty string as specified.

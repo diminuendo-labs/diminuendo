@@ -1,0 +1,7 @@
+I created a function named `token_case` that takes an underscore-delimited identifier as its input. The function first checks if the input starts or ends with an exception token ('URL' or 'ID'). If it does, it returns the given form of the exception token.
+
+Next, the function replaces all underscores with spaces and converts the entire string to title case using the `replace` method. It then converts each space to no separator by replacing them with an empty string using another `replace` call.
+
+To handle the edge case where the first token is an exception token but not capitalized, I check if the first character of the camelCase string is uppercase and there exists a token in the exception list that is not equal to the first token's capitalized form. If this condition is true, the function returns the original camelCase without altering it since the first token is an exception token that should keep its exact form (regardless of whether it's capitalized or not).
+
+Finally, the function returns the modified camel case representation of the input identifier.

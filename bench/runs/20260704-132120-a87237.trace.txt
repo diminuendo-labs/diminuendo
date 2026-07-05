@@ -1,0 +1,5 @@
+** 
+- The function `chunk_pad` takes a list `lst` and an integer `k`. It first checks if the input list is empty, returning an empty list if true.
+- The list comprehension creates chunks of size `k` by iterating through the list in steps of `k`.
+- After creating all the chunks except the last one, it checks the length of the last chunk. If it's shorter than `k`, it appends `None` until it reaches the desired length.
+- Finally, the function returns the list of chunks, where each chunk is a sublist of the original list with exactly `k` elements (the last chunk being padded with `None` if necessary).

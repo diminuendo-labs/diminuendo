@@ -1,0 +1,1 @@
+I first ensure that the input list only contains unique values by using a set. Then I sort the list of unique values in descending order, which automatically puts them in their respective ranks (smallest to largest). If there are fewer than three distinct values, I return None to indicate this edge case. Otherwise, I return the third largest value from the sorted list.

@@ -1,0 +1,2 @@
+**
+I chose to iterate through the string `s` and maintain a counter `count` that increments for every '(' encountered and decrements for every ')' encountered. If at any point the counter becomes negative, it means there is a closing parenthesis before its opening partner, so I return False immediately. Finally, if the counter is zero after iterating through the entire string, it means all parentheses are balanced, so I return True. This approach handles the edge case where an empty string is considered balanced.

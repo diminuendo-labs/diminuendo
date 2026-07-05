@@ -1,0 +1,3 @@
+I created a function called `is_rotation` that takes two string arguments, `a` and `b`. It first checks if the lengths of the strings are equal. If they're not, it immediately returns False since strings of different lengths cannot be rotations of each other.
+
+If the lengths are the same, I implemented a simple approach to check if one string is a rotation of another by checking if concatenating either string with itself equals twice the length of the original input strings. This means that either `a + a` equals `b * 2` or `b + b` equals `a * 2`, which indicates that `b` is a rotation of `a`. I also handled an edge case by checking if both strings are empty; in this case, they count as rotations of each other.

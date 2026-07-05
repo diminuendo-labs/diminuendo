@@ -1,0 +1,2 @@
+**
+I chose to split the input string into a list of words using `split()`, then use a generator expression to find the maximum length and create a list of all words with that length. Finally, I returned the last word in this list (or an empty string if no words exist). The edge case where multiple longest words have the same index is handled implicitly by returning the last such word due to the use of `max_words[-1]`.

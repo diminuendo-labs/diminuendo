@@ -1,0 +1,2 @@
+** 
+I defined the function `kth_ordered` that takes a list of words and an integer k as input. The function first checks if k is within the valid range, returning `None` if it isn't (edge case). It then sorts the words by their length in ascending order using Python's built-in `sorted()` function with a custom key. For words of equal length, it uses the negative ASCII value of the first character to achieve reverse-alphabetical sorting. Finally, it returns the k-th word from the sorted list (adjusting for zero-based indexing).

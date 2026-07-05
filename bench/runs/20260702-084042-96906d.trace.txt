@@ -1,0 +1,2 @@
+**
+I implemented this function by first checking for the edge case of an empty list, in which case I returned `None`. Then, I used Python's built-in `max()` function to find the largest value in the list. To find its last occurrence index, I reversed the list and then used the `index()` method on the reversed list, subtracting the result from the length of the original list minus 1 to get the correct index. This approach is concise and readable while correctly handling edge cases.

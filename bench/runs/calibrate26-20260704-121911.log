@@ -1,0 +1,572 @@
+SUPPLY CALIBRATION 20260704-121911 (PACKET-026, the universal sweep)
+seats in gap order: mistral:7b (audience llama3.1:8b)  qwen2.5-coder:7b (audience llama3.1:8b)  llama3.1:8b (audience qwen2.5-coder:7b)  R=12, every row a bare none cell, tools=0, no lessons anywhere, audition firewall from birth
+qualification, the standing fraction generalized to n rule checks: at least 2n passes AND 2n fails of 12n pooled, canonical unrunnable-as-fail accounting
+families, taxonomies, and rule-check annotations, stated before any run (classifiers committed in supply_families.py, re-runnable: py calibrate26.py census <rows-file>):
+  chunk_pad: pins boundary/degenerate  named shape range-step comprehension (conflicted)  taxonomy: range-step comprehension, explicit loop-with-pad, other, unrunnable
+    r1 rule checks (1): ['chunk_pad([1, 2, 3, 4, 5], 2)']
+    r2 rule checks (2): ['chunk_pad([1, 2, 3, 4, 5], 3)', 'chunk_pad([1, 2], 5)']
+    r3 rule checks (2): ['chunk_pad([1, 2, 3, 4, 5], 3)', 'chunk_pad([1, 2], 5)']
+  merge_within: pins boundary/degenerate  named shape sort-and-sweep (conflicted)  taxonomy: sort-and-sweep, pairwise-other, unrunnable
+    r1 [control] rule checks (1): ['merge_within([[1, 3], [3, 6]])']
+    r2 rule checks (2): ['merge_within([[1, 3], [4, 6]])', 'merge_within([[1, 3], [5, 7]])']
+    r3 rule checks (2): ['merge_within([[1, 3], [5, 7]], 2)', 'merge_within([[1, 3], [4, 6]], 0)']
+  safe_stats: pins boundary/degenerate  named shape sort-slice-average (separable)  taxonomy: sort-slice-average, loop-accumulate, other, unrunnable
+    r1 rule checks (2): ['trimmed_mean([])', 'trimmed_mean([5, 5, 1, 9])']
+    r2 rule checks (4): ['trimmed_mean([])', 'trimmed_mean([7])', 'trimmed_mean([3, 9])', 'trimmed_mean([5, 5, 1, 9])']
+    r3 rule checks (5): ['trimmed_mean([])', 'trimmed_mean([7])', 'trimmed_mean([3, 9])', 'trimmed_mean([5, 5, 1, 9])', 'trimmed_mean([4, 4, 4, 4])']
+  collapse_delims: pins normalize/delimiters  named shape single-split (conflicted)  taxonomy: single-split, multi-split-or-regex, char-walk, other, unrunnable
+    r1 rule checks (2): ["collapse_delims('a,,b,,,c')", "collapse_delims(',a,b,')"]
+    r2 rule checks (2): ["collapse_delims('a,;b;;c')", "collapse_delims(';a;b,')"]
+    r3 rule checks (3): ["collapse_delims('a, ;b;; c')", "collapse_delims(',; a;b , ')", "collapse_delims('')"]
+  token_case: pins normalize/delimiters  named shape split-capitalize-join (separable)  taxonomy: split-capitalize-join, regex, char-walk, other, unrunnable
+    r1 rule checks (1): ["token_case('Set_timer_value')"]
+    r2 rule checks (2): ["token_case('get_URL_path')", "token_case('Set_timer_value')"]
+    r3 rule checks (2): ["token_case('URL_to_path')", "token_case('get_ID_count')"]
+  kth_ordered: pins tie_break/direction  named shape single-key-sort (conflicted)  taxonomy: single-key-sort, compound-key-sort, manual-scan, other, unrunnable
+    r1 [control] rule checks (1): ["kth_ordered(['dd', 'a', 'ccc'], 2)"]
+    r2 rule checks (1): ["kth_ordered(['aa', 'bb', 'c'], 2)"]
+    r3 rule checks (2): ["kth_ordered(['ab', 'ba', 'aa', 'c'], 2)", "kth_ordered(['ab', 'ba', 'aa', 'c'], 3)"]
+== SWEEP mistral:7b (audience llama3.1:8b) ==
+mistral:7b chunk_pad r1 none rep 0: ev=1.00 shape=range-step comprehension
+mistral:7b chunk_pad r1 none rep 1: ev=0.67 shape=range-step comprehension
+mistral:7b chunk_pad r1 none rep 2: ev=0.67 shape=range-step comprehension
+mistral:7b chunk_pad r1 none rep 3: ev=1.00 shape=range-step comprehension
+mistral:7b chunk_pad r1 none rep 4: ev=0.00 shape=unrunnable
+mistral:7b chunk_pad r1 none rep 5: ev=1.00 shape=range-step comprehension
+mistral:7b chunk_pad r1 none rep 6: ev=1.00 shape=range-step comprehension
+mistral:7b chunk_pad r1 none rep 7: ev=0.67 shape=range-step comprehension
+mistral:7b chunk_pad r1 none rep 8: ev=0.00 shape=range-step comprehension
+mistral:7b chunk_pad r1 none rep 9: ev=0.67 shape=range-step comprehension
+mistral:7b chunk_pad r1 none rep 10: ev=0.00 shape=range-step comprehension
+mistral:7b chunk_pad r1 none rep 11: ev=1.00 shape=range-step comprehension
+mistral:7b chunk_pad r1: pooled rule 5 passes, 7 fails of 12 canonical (unrunnable-as-fail; 1 unrunnable rows; diagnostic 5/11 readings-present); QUALIFIES (mixed means at least 2 of each)
+mistral:7b chunk_pad: KEPT at rung 1, the family stops for this seat
+mistral:7b merge_within r1 none rep 0: ev=0.75 shape=sort-and-sweep
+mistral:7b merge_within r1 none rep 1: ev=0.75 shape=sort-and-sweep
+mistral:7b merge_within r1 none rep 2: ev=0.75 shape=sort-and-sweep
+mistral:7b merge_within r1 none rep 3: ev=1.00 shape=sort-and-sweep
+mistral:7b merge_within r1 none rep 4: ev=1.00 shape=sort-and-sweep
+mistral:7b merge_within r1 none rep 5: ev=1.00 shape=sort-and-sweep
+mistral:7b merge_within r1 none rep 6: ev=0.25 shape=sort-and-sweep
+mistral:7b merge_within r1 none rep 7: ev=0.75 shape=sort-and-sweep
+mistral:7b merge_within r1 none rep 8: ev=0.75 shape=sort-and-sweep
+mistral:7b merge_within r1 none rep 9: ev=1.00 shape=sort-and-sweep
+mistral:7b merge_within r1 none rep 10: ev=0.00 shape=unrunnable
+mistral:7b merge_within r1 none rep 11: ev=1.00 shape=sort-and-sweep
+mistral:7b merge_within r1: pooled rule 10 passes, 2 fails of 12 canonical (unrunnable-as-fail; 1 unrunnable rows; diagnostic 10/11 readings-present); QUALIFIES (mixed means at least 2 of each) [CONTROL RUNG, UNEXPECTED QUALIFICATION]
+mistral:7b merge_within: KEPT at rung 1, the family stops for this seat
+mistral:7b safe_stats r1 none rep 0: ev=1.00 shape=sort-slice-average
+mistral:7b safe_stats r1 none rep 1: ev=0.67 shape=sort-slice-average
+mistral:7b safe_stats r1 none rep 2: ev=0.33 shape=sort-slice-average
+mistral:7b safe_stats r1 none rep 3: ev=0.33 shape=sort-slice-average
+mistral:7b safe_stats r1 none rep 4: ev=0.33 shape=sort-slice-average
+mistral:7b safe_stats r1 none rep 5: ev=0.33 shape=sort-slice-average
+mistral:7b safe_stats r1 none rep 6: ev=0.33 shape=sort-slice-average
+mistral:7b safe_stats r1 none rep 7: ev=0.33 shape=sort-slice-average
+mistral:7b safe_stats r1 none rep 8: ev=0.33 shape=sort-slice-average
+mistral:7b safe_stats r1 none rep 9: ev=0.33 shape=sort-slice-average
+mistral:7b safe_stats r1 none rep 10: ev=0.33 shape=sort-slice-average
+mistral:7b safe_stats r1 none rep 11: ev=1.00 shape=sort-slice-average
+mistral:7b safe_stats r1: pooled rule 14 passes, 10 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 14/24 readings-present); QUALIFIES (mixed means at least 4 of each)
+mistral:7b safe_stats: KEPT at rung 1, the family stops for this seat
+mistral:7b collapse_delims r1 none rep 0: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r1 none rep 1: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r1 none rep 2: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r1 none rep 3: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r1 none rep 4: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r1 none rep 5: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r1 none rep 6: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r1 none rep 7: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r1 none rep 8: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r1 none rep 9: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r1 none rep 10: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r1 none rep 11: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r1: pooled rule 0 passes, 24 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 0/24 readings-present); does not qualify (mixed means at least 4 of each)
+mistral:7b collapse_delims r2 none rep 0: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r2 none rep 1: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r2 none rep 2: ev=0.33 shape=single-split
+mistral:7b collapse_delims r2 none rep 3: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r2 none rep 4: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r2 none rep 5: ev=0.00 shape=single-split
+mistral:7b collapse_delims r2 none rep 6: ev=0.33 shape=single-split
+mistral:7b collapse_delims r2 none rep 7: ev=0.33 shape=single-split
+mistral:7b collapse_delims r2 none rep 8: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r2 none rep 9: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r2 none rep 10: ev=0.33 shape=multi-split-or-regex
+mistral:7b collapse_delims r2 none rep 11: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r2: pooled rule 0 passes, 24 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 0/24 readings-present); does not qualify (mixed means at least 4 of each)
+mistral:7b collapse_delims r3 none rep 0: ev=0.00 shape=unrunnable
+mistral:7b collapse_delims r3 none rep 1: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r3 none rep 2: ev=0.50 shape=single-split
+mistral:7b collapse_delims r3 none rep 3: ev=0.00 shape=single-split
+mistral:7b collapse_delims r3 none rep 4: ev=0.00 shape=multi-split-or-regex
+mistral:7b collapse_delims r3 none rep 5: ev=0.50 shape=single-split
+mistral:7b collapse_delims r3 none rep 6: ev=0.50 shape=single-split
+mistral:7b collapse_delims r3 none rep 7: ev=0.50 shape=multi-split-or-regex
+mistral:7b collapse_delims r3 none rep 8: ev=0.00 shape=other
+mistral:7b collapse_delims r3 none rep 9: ev=0.50 shape=single-split
+mistral:7b collapse_delims r3 none rep 10: ev=0.00 shape=single-split
+mistral:7b collapse_delims r3 none rep 11: ev=0.00 shape=single-split
+mistral:7b collapse_delims r3: pooled rule 5 passes, 31 fails of 36 canonical (unrunnable-as-fail; 1 unrunnable rows; diagnostic 5/33 readings-present); does not qualify (mixed means at least 6 of each)
+mistral:7b collapse_delims: rungs exhausted, nothing kept, the per-rung character is on the record
+mistral:7b token_case r1 none rep 0: ev=0.33 shape=split-capitalize-join
+mistral:7b token_case r1 none rep 1: ev=0.00 shape=unrunnable
+mistral:7b token_case r1 none rep 2: ev=0.00 shape=unrunnable
+mistral:7b token_case r1 none rep 3: ev=0.00 shape=split-capitalize-join
+mistral:7b token_case r1 none rep 4: ev=0.00 shape=unrunnable
+mistral:7b token_case r1 none rep 5: ev=0.33 shape=split-capitalize-join
+mistral:7b token_case r1 none rep 6: ev=0.33 shape=split-capitalize-join
+mistral:7b token_case r1 none rep 7: ev=0.00 shape=unrunnable
+mistral:7b token_case r1 none rep 8: ev=0.33 shape=split-capitalize-join
+mistral:7b token_case r1 none rep 9: ev=0.00 shape=split-capitalize-join
+mistral:7b token_case r1 none rep 10: ev=0.00 shape=unrunnable
+mistral:7b token_case r1 none rep 11: ev=0.00 shape=unrunnable
+mistral:7b token_case r1: pooled rule 0 passes, 12 fails of 12 canonical (unrunnable-as-fail; 6 unrunnable rows; diagnostic 0/6 readings-present); does not qualify (mixed means at least 2 of each)
+mistral:7b token_case r2 none rep 0: ev=0.00 shape=split-capitalize-join
+mistral:7b token_case r2 none rep 1: ev=0.00 shape=split-capitalize-join
+mistral:7b token_case r2 none rep 2: ev=0.00 shape=unrunnable
+mistral:7b token_case r2 none rep 3: ev=0.00 shape=split-capitalize-join
+mistral:7b token_case r2 none rep 4: ev=0.00 shape=split-capitalize-join
+mistral:7b token_case r2 none rep 5: ev=0.00 shape=unrunnable
+mistral:7b token_case r2 none rep 6: ev=0.00 shape=split-capitalize-join
+mistral:7b token_case r2 none rep 7: ev=0.00 shape=unrunnable
+mistral:7b token_case r2 none rep 8: ev=0.00 shape=unrunnable
+mistral:7b token_case r2 none rep 9: ev=0.00 shape=unrunnable
+mistral:7b token_case r2 none rep 10: ev=0.00 shape=unrunnable
+mistral:7b token_case r2 none rep 11: ev=0.00 shape=unrunnable
+mistral:7b token_case r2: pooled rule 0 passes, 24 fails of 24 canonical (unrunnable-as-fail; 7 unrunnable rows; diagnostic 0/10 readings-present); does not qualify (mixed means at least 4 of each)
+mistral:7b token_case r3 none rep 0: ev=0.00 shape=unrunnable
+mistral:7b token_case r3 none rep 1: ev=0.00 shape=unrunnable
+mistral:7b token_case r3 none rep 2: ev=0.00 shape=unrunnable
+mistral:7b token_case r3 none rep 3: ev=0.00 shape=unrunnable
+mistral:7b token_case r3 none rep 4: ev=0.00 shape=unrunnable
+mistral:7b token_case r3 none rep 5: ev=0.00 shape=unrunnable
+mistral:7b token_case r3 none rep 6: ev=0.00 shape=unrunnable
+mistral:7b token_case r3 none rep 7: ev=0.00 shape=unrunnable
+mistral:7b token_case r3 none rep 8: ev=0.00 shape=unrunnable
+mistral:7b token_case r3 none rep 9: ev=0.00 shape=unrunnable
+mistral:7b token_case r3 none rep 10: ev=0.00 shape=unrunnable
+mistral:7b token_case r3 none rep 11: ev=0.00 shape=unrunnable
+mistral:7b token_case r3: pooled rule 0 passes, 24 fails of 24 canonical (unrunnable-as-fail; 12 unrunnable rows; diagnostic 0/0 readings-present); does not qualify (mixed means at least 4 of each)
+mistral:7b token_case: rungs exhausted, nothing kept, the per-rung character is on the record
+mistral:7b kth_ordered r1 none rep 0: ev=0.00 shape=compound-key-sort
+mistral:7b kth_ordered r1 none rep 1: ev=0.00 shape=compound-key-sort
+mistral:7b kth_ordered r1 none rep 2: ev=0.00 shape=compound-key-sort
+mistral:7b kth_ordered r1 none rep 3: ev=0.33 shape=compound-key-sort
+mistral:7b kth_ordered r1 none rep 4: ev=0.00 shape=compound-key-sort
+mistral:7b kth_ordered r1 none rep 5: ev=0.33 shape=single-key-sort
+mistral:7b kth_ordered r1 none rep 6: ev=1.00 shape=compound-key-sort
+mistral:7b kth_ordered r1 none rep 7: ev=0.67 shape=single-key-sort
+mistral:7b kth_ordered r1 none rep 8: ev=0.67 shape=single-key-sort
+mistral:7b kth_ordered r1 none rep 9: ev=0.00 shape=unrunnable
+mistral:7b kth_ordered r1 none rep 10: ev=0.00 shape=compound-key-sort
+mistral:7b kth_ordered r1 none rep 11: ev=0.33 shape=single-key-sort
+mistral:7b kth_ordered r1: pooled rule 2 passes, 10 fails of 12 canonical (unrunnable-as-fail; 1 unrunnable rows; diagnostic 2/11 readings-present); QUALIFIES (mixed means at least 2 of each) [CONTROL RUNG, UNEXPECTED QUALIFICATION]
+mistral:7b kth_ordered: KEPT at rung 1, the family stops for this seat
+mistral:7b kept pool: (chunk_pad, r1), (merge_within, r1), (safe_stats, r1), (kth_ordered, r1)
+== SWEEP qwen2.5-coder:7b (audience llama3.1:8b) ==
+qwen2.5-coder:7b chunk_pad r1 none rep 0: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r1 none rep 1: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r1 none rep 2: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r1 none rep 3: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r1 none rep 4: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r1 none rep 5: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r1 none rep 6: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r1 none rep 7: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r1 none rep 8: ev=1.00 shape=explicit loop-with-pad
+qwen2.5-coder:7b chunk_pad r1 none rep 9: ev=0.33 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r1 none rep 10: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r1 none rep 11: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r1: pooled rule 11 passes, 1 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 11/12 readings-present); does not qualify (mixed means at least 2 of each)
+qwen2.5-coder:7b chunk_pad r2 none rep 0: ev=0.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r2 none rep 1: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r2 none rep 2: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r2 none rep 3: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r2 none rep 4: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r2 none rep 5: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r2 none rep 6: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r2 none rep 7: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r2 none rep 8: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r2 none rep 9: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r2 none rep 10: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r2 none rep 11: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r2: pooled rule 22 passes, 2 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 22/24 readings-present); does not qualify (mixed means at least 4 of each)
+qwen2.5-coder:7b chunk_pad r3 none rep 0: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r3 none rep 1: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r3 none rep 2: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r3 none rep 3: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r3 none rep 4: ev=0.60 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r3 none rep 5: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r3 none rep 6: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r3 none rep 7: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r3 none rep 8: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r3 none rep 9: ev=0.60 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r3 none rep 10: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r3 none rep 11: ev=1.00 shape=range-step comprehension
+qwen2.5-coder:7b chunk_pad r3: pooled rule 20 passes, 4 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 20/24 readings-present); QUALIFIES (mixed means at least 4 of each)
+qwen2.5-coder:7b chunk_pad: KEPT at rung 3, the family stops for this seat
+qwen2.5-coder:7b merge_within r1 none rep 0: ev=0.75 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r1 none rep 1: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r1 none rep 2: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r1 none rep 3: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r1 none rep 4: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r1 none rep 5: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r1 none rep 6: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r1 none rep 7: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r1 none rep 8: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r1 none rep 9: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r1 none rep 10: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r1 none rep 11: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r1: pooled rule 12 passes, 0 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 12/12 readings-present); does not qualify (mixed means at least 2 of each) [CONTROL RUNG]
+qwen2.5-coder:7b merge_within r2 none rep 0: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r2 none rep 1: ev=0.75 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r2 none rep 2: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r2 none rep 3: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r2 none rep 4: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r2 none rep 5: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r2 none rep 6: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r2 none rep 7: ev=0.75 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r2 none rep 8: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r2 none rep 9: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r2 none rep 10: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r2 none rep 11: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r2: pooled rule 22 passes, 2 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 22/24 readings-present); does not qualify (mixed means at least 4 of each)
+qwen2.5-coder:7b merge_within r3 none rep 0: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r3 none rep 1: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r3 none rep 2: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r3 none rep 3: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r3 none rep 4: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r3 none rep 5: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r3 none rep 6: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r3 none rep 7: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r3 none rep 8: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r3 none rep 9: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r3 none rep 10: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r3 none rep 11: ev=1.00 shape=sort-and-sweep
+qwen2.5-coder:7b merge_within r3: pooled rule 24 passes, 0 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 24/24 readings-present); does not qualify (mixed means at least 4 of each)
+qwen2.5-coder:7b merge_within: rungs exhausted, nothing kept, the per-rung character is on the record
+qwen2.5-coder:7b safe_stats r1 none rep 0: ev=1.00 shape=sort-slice-average
+qwen2.5-coder:7b safe_stats r1 none rep 1: ev=1.00 shape=sort-slice-average
+qwen2.5-coder:7b safe_stats r1 none rep 2: ev=0.33 shape=sort-slice-average
+qwen2.5-coder:7b safe_stats r1 none rep 3: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r1 none rep 4: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r1 none rep 5: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r1 none rep 6: ev=1.00 shape=sort-slice-average
+qwen2.5-coder:7b safe_stats r1 none rep 7: ev=1.00 shape=sort-slice-average
+qwen2.5-coder:7b safe_stats r1 none rep 8: ev=1.00 shape=sort-slice-average
+qwen2.5-coder:7b safe_stats r1 none rep 9: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r1 none rep 10: ev=1.00 shape=sort-slice-average
+qwen2.5-coder:7b safe_stats r1 none rep 11: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r1: pooled rule 23 passes, 1 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 23/24 readings-present); does not qualify (mixed means at least 4 of each)
+qwen2.5-coder:7b safe_stats r2 none rep 0: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r2 none rep 1: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r2 none rep 2: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r2 none rep 3: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r2 none rep 4: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r2 none rep 5: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r2 none rep 6: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r2 none rep 7: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r2 none rep 8: ev=1.00 shape=sort-slice-average
+qwen2.5-coder:7b safe_stats r2 none rep 9: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r2 none rep 10: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r2 none rep 11: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r2: pooled rule 48 passes, 0 fails of 48 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 48/48 readings-present); does not qualify (mixed means at least 8 of each)
+qwen2.5-coder:7b safe_stats r3 none rep 0: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r3 none rep 1: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r3 none rep 2: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r3 none rep 3: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r3 none rep 4: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r3 none rep 5: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r3 none rep 6: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r3 none rep 7: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r3 none rep 8: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r3 none rep 9: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r3 none rep 10: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r3 none rep 11: ev=1.00 shape=other
+qwen2.5-coder:7b safe_stats r3: pooled rule 60 passes, 0 fails of 60 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 60/60 readings-present); does not qualify (mixed means at least 10 of each)
+qwen2.5-coder:7b safe_stats: rungs exhausted, nothing kept, the per-rung character is on the record
+qwen2.5-coder:7b collapse_delims r1 none rep 0: ev=1.00 shape=single-split
+qwen2.5-coder:7b collapse_delims r1 none rep 1: ev=1.00 shape=single-split
+qwen2.5-coder:7b collapse_delims r1 none rep 2: ev=1.00 shape=single-split
+qwen2.5-coder:7b collapse_delims r1 none rep 3: ev=0.67 shape=single-split
+qwen2.5-coder:7b collapse_delims r1 none rep 4: ev=1.00 shape=single-split
+qwen2.5-coder:7b collapse_delims r1 none rep 5: ev=1.00 shape=single-split
+qwen2.5-coder:7b collapse_delims r1 none rep 6: ev=1.00 shape=single-split
+qwen2.5-coder:7b collapse_delims r1 none rep 7: ev=1.00 shape=single-split
+qwen2.5-coder:7b collapse_delims r1 none rep 8: ev=1.00 shape=single-split
+qwen2.5-coder:7b collapse_delims r1 none rep 9: ev=1.00 shape=single-split
+qwen2.5-coder:7b collapse_delims r1 none rep 10: ev=1.00 shape=single-split
+qwen2.5-coder:7b collapse_delims r1 none rep 11: ev=1.00 shape=single-split
+qwen2.5-coder:7b collapse_delims r1: pooled rule 23 passes, 1 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 23/24 readings-present); does not qualify (mixed means at least 4 of each)
+qwen2.5-coder:7b collapse_delims r2 none rep 0: ev=0.33 shape=single-split
+qwen2.5-coder:7b collapse_delims r2 none rep 1: ev=1.00 shape=multi-split-or-regex
+qwen2.5-coder:7b collapse_delims r2 none rep 2: ev=1.00 shape=multi-split-or-regex
+qwen2.5-coder:7b collapse_delims r2 none rep 3: ev=1.00 shape=multi-split-or-regex
+qwen2.5-coder:7b collapse_delims r2 none rep 4: ev=1.00 shape=multi-split-or-regex
+qwen2.5-coder:7b collapse_delims r2 none rep 5: ev=1.00 shape=multi-split-or-regex
+qwen2.5-coder:7b collapse_delims r2 none rep 6: ev=1.00 shape=multi-split-or-regex
+qwen2.5-coder:7b collapse_delims r2 none rep 7: ev=0.33 shape=single-split
+qwen2.5-coder:7b collapse_delims r2 none rep 8: ev=1.00 shape=multi-split-or-regex
+qwen2.5-coder:7b collapse_delims r2 none rep 9: ev=1.00 shape=multi-split-or-regex
+qwen2.5-coder:7b collapse_delims r2 none rep 10: ev=1.00 shape=multi-split-or-regex
+qwen2.5-coder:7b collapse_delims r2 none rep 11: ev=1.00 shape=multi-split-or-regex
+qwen2.5-coder:7b collapse_delims r2: pooled rule 20 passes, 4 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 20/24 readings-present); QUALIFIES (mixed means at least 4 of each)
+qwen2.5-coder:7b collapse_delims: KEPT at rung 2, the family stops for this seat
+qwen2.5-coder:7b token_case r1 none rep 0: ev=0.33 shape=split-capitalize-join
+qwen2.5-coder:7b token_case r1 none rep 1: ev=1.00 shape=split-capitalize-join
+qwen2.5-coder:7b token_case r1 none rep 2: ev=0.00 shape=split-capitalize-join
+qwen2.5-coder:7b token_case r1 none rep 3: ev=0.33 shape=split-capitalize-join
+qwen2.5-coder:7b token_case r1 none rep 4: ev=0.00 shape=split-capitalize-join
+qwen2.5-coder:7b token_case r1 none rep 5: ev=1.00 shape=split-capitalize-join
+qwen2.5-coder:7b token_case r1 none rep 6: ev=0.00 shape=split-capitalize-join
+qwen2.5-coder:7b token_case r1 none rep 7: ev=1.00 shape=split-capitalize-join
+qwen2.5-coder:7b token_case r1 none rep 8: ev=1.00 shape=split-capitalize-join
+qwen2.5-coder:7b token_case r1 none rep 9: ev=1.00 shape=split-capitalize-join
+qwen2.5-coder:7b token_case r1 none rep 10: ev=1.00 shape=split-capitalize-join
+qwen2.5-coder:7b token_case r1 none rep 11: ev=1.00 shape=split-capitalize-join
+qwen2.5-coder:7b token_case r1: pooled rule 7 passes, 5 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 7/12 readings-present); QUALIFIES (mixed means at least 2 of each)
+qwen2.5-coder:7b token_case: KEPT at rung 1, the family stops for this seat
+qwen2.5-coder:7b kth_ordered r1 none rep 0: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r1 none rep 1: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r1 none rep 2: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r1 none rep 3: ev=0.67 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r1 none rep 4: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r1 none rep 5: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r1 none rep 6: ev=0.67 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r1 none rep 7: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r1 none rep 8: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r1 none rep 9: ev=0.67 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r1 none rep 10: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r1 none rep 11: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r1: pooled rule 11 passes, 1 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 11/12 readings-present); does not qualify (mixed means at least 2 of each) [CONTROL RUNG]
+qwen2.5-coder:7b kth_ordered r2 none rep 0: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r2 none rep 1: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r2 none rep 2: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r2 none rep 3: ev=0.33 shape=single-key-sort
+qwen2.5-coder:7b kth_ordered r2 none rep 4: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r2 none rep 5: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r2 none rep 6: ev=0.33 shape=single-key-sort
+qwen2.5-coder:7b kth_ordered r2 none rep 7: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r2 none rep 8: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r2 none rep 9: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r2 none rep 10: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r2 none rep 11: ev=1.00 shape=compound-key-sort
+qwen2.5-coder:7b kth_ordered r2: pooled rule 10 passes, 2 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 10/12 readings-present); QUALIFIES (mixed means at least 2 of each)
+qwen2.5-coder:7b kth_ordered: KEPT at rung 2, the family stops for this seat
+qwen2.5-coder:7b kept pool: (chunk_pad, r3), (collapse_delims, r2), (token_case, r1), (kth_ordered, r2)
+== SWEEP llama3.1:8b (audience qwen2.5-coder:7b) ==
+llama3.1:8b chunk_pad r1 none rep 0: ev=1.00 shape=range-step comprehension
+llama3.1:8b chunk_pad r1 none rep 1: ev=1.00 shape=range-step comprehension
+llama3.1:8b chunk_pad r1 none rep 2: ev=1.00 shape=range-step comprehension
+llama3.1:8b chunk_pad r1 none rep 3: ev=0.33 shape=range-step comprehension
+llama3.1:8b chunk_pad r1 none rep 4: ev=1.00 shape=range-step comprehension
+llama3.1:8b chunk_pad r1 none rep 5: ev=1.00 shape=range-step comprehension
+llama3.1:8b chunk_pad r1 none rep 6: ev=1.00 shape=range-step comprehension
+llama3.1:8b chunk_pad r1 none rep 7: ev=0.33 shape=range-step comprehension
+llama3.1:8b chunk_pad r1 none rep 8: ev=1.00 shape=range-step comprehension
+llama3.1:8b chunk_pad r1 none rep 9: ev=1.00 shape=range-step comprehension
+llama3.1:8b chunk_pad r1 none rep 10: ev=1.00 shape=range-step comprehension
+llama3.1:8b chunk_pad r1 none rep 11: ev=1.00 shape=range-step comprehension
+llama3.1:8b chunk_pad r1: pooled rule 10 passes, 2 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 10/12 readings-present); QUALIFIES (mixed means at least 2 of each)
+llama3.1:8b chunk_pad: KEPT at rung 1, the family stops for this seat
+llama3.1:8b merge_within r1 none rep 0: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r1 none rep 1: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r1 none rep 2: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r1 none rep 3: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r1 none rep 4: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r1 none rep 5: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r1 none rep 6: ev=0.75 shape=pairwise-other
+llama3.1:8b merge_within r1 none rep 7: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r1 none rep 8: ev=0.50 shape=sort-and-sweep
+llama3.1:8b merge_within r1 none rep 9: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r1 none rep 10: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r1 none rep 11: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r1: pooled rule 11 passes, 1 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 11/12 readings-present); does not qualify (mixed means at least 2 of each) [CONTROL RUNG]
+llama3.1:8b merge_within r2 none rep 0: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r2 none rep 1: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r2 none rep 2: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r2 none rep 3: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r2 none rep 4: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r2 none rep 5: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r2 none rep 6: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r2 none rep 7: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r2 none rep 8: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r2 none rep 9: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r2 none rep 10: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r2 none rep 11: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r2: pooled rule 24 passes, 0 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 24/24 readings-present); does not qualify (mixed means at least 4 of each)
+llama3.1:8b merge_within r3 none rep 0: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r3 none rep 1: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r3 none rep 2: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r3 none rep 3: ev=0.75 shape=sort-and-sweep
+llama3.1:8b merge_within r3 none rep 4: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r3 none rep 5: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r3 none rep 6: ev=0.25 shape=sort-and-sweep
+llama3.1:8b merge_within r3 none rep 7: ev=0.75 shape=sort-and-sweep
+llama3.1:8b merge_within r3 none rep 8: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r3 none rep 9: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r3 none rep 10: ev=0.75 shape=sort-and-sweep
+llama3.1:8b merge_within r3 none rep 11: ev=1.00 shape=sort-and-sweep
+llama3.1:8b merge_within r3: pooled rule 19 passes, 5 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 19/24 readings-present); QUALIFIES (mixed means at least 4 of each)
+llama3.1:8b merge_within: KEPT at rung 3, the family stops for this seat
+llama3.1:8b safe_stats r1 none rep 0: ev=1.00 shape=sort-slice-average
+llama3.1:8b safe_stats r1 none rep 1: ev=1.00 shape=sort-slice-average
+llama3.1:8b safe_stats r1 none rep 2: ev=1.00 shape=other
+llama3.1:8b safe_stats r1 none rep 3: ev=1.00 shape=other
+llama3.1:8b safe_stats r1 none rep 4: ev=1.00 shape=other
+llama3.1:8b safe_stats r1 none rep 5: ev=1.00 shape=sort-slice-average
+llama3.1:8b safe_stats r1 none rep 6: ev=0.33 shape=other
+llama3.1:8b safe_stats r1 none rep 7: ev=1.00 shape=other
+llama3.1:8b safe_stats r1 none rep 8: ev=1.00 shape=other
+llama3.1:8b safe_stats r1 none rep 9: ev=1.00 shape=sort-slice-average
+llama3.1:8b safe_stats r1 none rep 10: ev=1.00 shape=sort-slice-average
+llama3.1:8b safe_stats r1 none rep 11: ev=1.00 shape=other
+llama3.1:8b safe_stats r1: pooled rule 23 passes, 1 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 23/24 readings-present); does not qualify (mixed means at least 4 of each)
+llama3.1:8b safe_stats r2 none rep 0: ev=1.00 shape=other
+llama3.1:8b safe_stats r2 none rep 1: ev=1.00 shape=sort-slice-average
+llama3.1:8b safe_stats r2 none rep 2: ev=1.00 shape=other
+llama3.1:8b safe_stats r2 none rep 3: ev=1.00 shape=sort-slice-average
+llama3.1:8b safe_stats r2 none rep 4: ev=0.60 shape=sort-slice-average
+llama3.1:8b safe_stats r2 none rep 5: ev=1.00 shape=other
+llama3.1:8b safe_stats r2 none rep 6: ev=0.80 shape=sort-slice-average
+llama3.1:8b safe_stats r2 none rep 7: ev=1.00 shape=other
+llama3.1:8b safe_stats r2 none rep 8: ev=1.00 shape=other
+llama3.1:8b safe_stats r2 none rep 9: ev=1.00 shape=other
+llama3.1:8b safe_stats r2 none rep 10: ev=1.00 shape=other
+llama3.1:8b safe_stats r2 none rep 11: ev=1.00 shape=sort-slice-average
+llama3.1:8b safe_stats r2: pooled rule 47 passes, 1 fails of 48 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 47/48 readings-present); does not qualify (mixed means at least 8 of each)
+llama3.1:8b safe_stats r3 none rep 0: ev=0.83 shape=other
+llama3.1:8b safe_stats r3 none rep 1: ev=1.00 shape=other
+llama3.1:8b safe_stats r3 none rep 2: ev=0.83 shape=other
+llama3.1:8b safe_stats r3 none rep 3: ev=1.00 shape=other
+llama3.1:8b safe_stats r3 none rep 4: ev=0.67 shape=sort-slice-average
+llama3.1:8b safe_stats r3 none rep 5: ev=1.00 shape=other
+llama3.1:8b safe_stats r3 none rep 6: ev=0.83 shape=sort-slice-average
+llama3.1:8b safe_stats r3 none rep 7: ev=1.00 shape=other
+llama3.1:8b safe_stats r3 none rep 8: ev=0.50 shape=other
+llama3.1:8b safe_stats r3 none rep 9: ev=0.00 shape=other
+llama3.1:8b safe_stats r3 none rep 10: ev=0.83 shape=loop-accumulate
+llama3.1:8b safe_stats r3 none rep 11: ev=0.83 shape=other
+llama3.1:8b safe_stats r3: pooled rule 46 passes, 14 fails of 60 canonical (unrunnable-as-fail; 1 unrunnable rows; diagnostic 46/55 readings-present); QUALIFIES (mixed means at least 10 of each)
+llama3.1:8b safe_stats: KEPT at rung 3, the family stops for this seat
+llama3.1:8b collapse_delims r1 none rep 0: ev=0.33 shape=multi-split-or-regex
+llama3.1:8b collapse_delims r1 none rep 1: ev=0.33 shape=multi-split-or-regex
+llama3.1:8b collapse_delims r1 none rep 2: ev=0.67 shape=multi-split-or-regex
+llama3.1:8b collapse_delims r1 none rep 3: ev=1.00 shape=multi-split-or-regex
+llama3.1:8b collapse_delims r1 none rep 4: ev=1.00 shape=multi-split-or-regex
+llama3.1:8b collapse_delims r1 none rep 5: ev=0.67 shape=multi-split-or-regex
+llama3.1:8b collapse_delims r1 none rep 6: ev=1.00 shape=single-split
+llama3.1:8b collapse_delims r1 none rep 7: ev=1.00 shape=single-split
+llama3.1:8b collapse_delims r1 none rep 8: ev=1.00 shape=single-split
+llama3.1:8b collapse_delims r1 none rep 9: ev=1.00 shape=multi-split-or-regex
+llama3.1:8b collapse_delims r1 none rep 10: ev=0.67 shape=multi-split-or-regex
+llama3.1:8b collapse_delims r1 none rep 11: ev=1.00 shape=multi-split-or-regex
+llama3.1:8b collapse_delims r1: pooled rule 17 passes, 7 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 17/24 readings-present); QUALIFIES (mixed means at least 4 of each)
+llama3.1:8b collapse_delims: KEPT at rung 1, the family stops for this seat
+llama3.1:8b token_case r1 none rep 0: ev=0.00 shape=split-capitalize-join
+llama3.1:8b token_case r1 none rep 1: ev=1.00 shape=split-capitalize-join
+llama3.1:8b token_case r1 none rep 2: ev=0.00 shape=split-capitalize-join
+llama3.1:8b token_case r1 none rep 3: ev=0.00 shape=split-capitalize-join
+llama3.1:8b token_case r1 none rep 4: ev=1.00 shape=split-capitalize-join
+llama3.1:8b token_case r1 none rep 5: ev=1.00 shape=split-capitalize-join
+llama3.1:8b token_case r1 none rep 6: ev=1.00 shape=split-capitalize-join
+llama3.1:8b token_case r1 none rep 7: ev=0.00 shape=split-capitalize-join
+llama3.1:8b token_case r1 none rep 8: ev=1.00 shape=split-capitalize-join
+llama3.1:8b token_case r1 none rep 9: ev=0.33 shape=split-capitalize-join
+llama3.1:8b token_case r1 none rep 10: ev=1.00 shape=split-capitalize-join
+llama3.1:8b token_case r1 none rep 11: ev=1.00 shape=split-capitalize-join
+llama3.1:8b token_case r1: pooled rule 7 passes, 5 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 7/12 readings-present); QUALIFIES (mixed means at least 2 of each)
+llama3.1:8b token_case: KEPT at rung 1, the family stops for this seat
+llama3.1:8b kth_ordered r1 none rep 0: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r1 none rep 1: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r1 none rep 2: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r1 none rep 3: ev=0.33 shape=compound-key-sort
+llama3.1:8b kth_ordered r1 none rep 4: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r1 none rep 5: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r1 none rep 6: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r1 none rep 7: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r1 none rep 8: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r1 none rep 9: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r1 none rep 10: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r1 none rep 11: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r1: pooled rule 0 passes, 12 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 0/12 readings-present); does not qualify (mixed means at least 2 of each) [CONTROL RUNG]
+llama3.1:8b kth_ordered r2 none rep 0: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r2 none rep 1: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r2 none rep 2: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r2 none rep 3: ev=0.67 shape=compound-key-sort
+llama3.1:8b kth_ordered r2 none rep 4: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r2 none rep 5: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r2 none rep 6: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r2 none rep 7: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r2 none rep 8: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r2 none rep 9: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r2 none rep 10: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r2 none rep 11: ev=0.33 shape=compound-key-sort
+llama3.1:8b kth_ordered r2: pooled rule 0 passes, 12 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 0/12 readings-present); does not qualify (mixed means at least 2 of each)
+llama3.1:8b kth_ordered r3 none rep 0: ev=1.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r3 none rep 1: ev=0.50 shape=compound-key-sort
+llama3.1:8b kth_ordered r3 none rep 2: ev=0.25 shape=compound-key-sort
+llama3.1:8b kth_ordered r3 none rep 3: ev=0.25 shape=compound-key-sort
+llama3.1:8b kth_ordered r3 none rep 4: ev=0.25 shape=compound-key-sort
+llama3.1:8b kth_ordered r3 none rep 5: ev=0.25 shape=compound-key-sort
+llama3.1:8b kth_ordered r3 none rep 6: ev=0.00 shape=compound-key-sort
+llama3.1:8b kth_ordered r3 none rep 7: ev=0.25 shape=compound-key-sort
+llama3.1:8b kth_ordered r3 none rep 8: ev=0.25 shape=compound-key-sort
+llama3.1:8b kth_ordered r3 none rep 9: ev=0.25 shape=compound-key-sort
+llama3.1:8b kth_ordered r3 none rep 10: ev=0.25 shape=compound-key-sort
+llama3.1:8b kth_ordered r3 none rep 11: ev=0.25 shape=compound-key-sort
+llama3.1:8b kth_ordered r3: pooled rule 2 passes, 22 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 2/24 readings-present); does not qualify (mixed means at least 4 of each)
+llama3.1:8b kth_ordered: rungs exhausted, nothing kept, the per-rung character is on the record
+llama3.1:8b kept pool: (chunk_pad, r1), (merge_within, r3), (safe_stats, r3), (collapse_delims, r1), (token_case, r1)
+== KEPT POOLS ==
+  mistral:7b: (chunk_pad, r1, 5/12), (merge_within, r1, 10/12), (safe_stats, r1, 14/24), (kth_ordered, r1, 2/12)
+  qwen2.5-coder:7b: (chunk_pad, r3, 20/24), (collapse_delims, r2, 20/24), (token_case, r1, 7/12), (kth_ordered, r2, 10/12)
+  llama3.1:8b: (chunk_pad, r1, 10/12), (merge_within, r3, 19/24), (safe_stats, r3, 46/60), (collapse_delims, r1, 17/24), (token_case, r1, 7/12)
+== MODERATOR-READY DESIGNATIONS (kept AND census at 9 of 12 or better on the named shape) ==
+  mistral:7b (chunk_pad, r1): 11/12 range-step comprehension (conflicted)
+  mistral:7b (merge_within, r1): 11/12 sort-and-sweep (conflicted)
+  mistral:7b (safe_stats, r1): 12/12 sort-slice-average (separable)
+  qwen2.5-coder:7b (chunk_pad, r3): 12/12 range-step comprehension (conflicted)
+  qwen2.5-coder:7b (token_case, r1): 12/12 split-capitalize-join (separable)
+  llama3.1:8b (chunk_pad, r1): 12/12 range-step comprehension (conflicted)
+  llama3.1:8b (merge_within, r3): 12/12 sort-and-sweep (conflicted)
+  llama3.1:8b (token_case, r1): 12/12 split-capitalize-join (separable)
+== CENSUS (shape distribution per cell, every cell run) ==
+  llama3.1:8b|chunk_pad|r1: range-step comprehension=12  explicit loop-with-pad=0  other=0  unrunnable=0
+  llama3.1:8b|collapse_delims|r1: single-split=3  multi-split-or-regex=9  char-walk=0  other=0  unrunnable=0
+  llama3.1:8b|kth_ordered|r1: single-key-sort=0  compound-key-sort=12  manual-scan=0  other=0  unrunnable=0
+  llama3.1:8b|kth_ordered|r2: single-key-sort=0  compound-key-sort=12  manual-scan=0  other=0  unrunnable=0
+  llama3.1:8b|kth_ordered|r3: single-key-sort=0  compound-key-sort=12  manual-scan=0  other=0  unrunnable=0
+  llama3.1:8b|merge_within|r1: sort-and-sweep=11  pairwise-other=1  unrunnable=0
+  llama3.1:8b|merge_within|r2: sort-and-sweep=12  pairwise-other=0  unrunnable=0
+  llama3.1:8b|merge_within|r3: sort-and-sweep=12  pairwise-other=0  unrunnable=0
+  llama3.1:8b|safe_stats|r1: sort-slice-average=5  loop-accumulate=0  other=7  unrunnable=0
+  llama3.1:8b|safe_stats|r2: sort-slice-average=5  loop-accumulate=0  other=7  unrunnable=0
+  llama3.1:8b|safe_stats|r3: sort-slice-average=2  loop-accumulate=1  other=9  unrunnable=0
+  llama3.1:8b|token_case|r1: split-capitalize-join=12  regex=0  char-walk=0  other=0  unrunnable=0
+  mistral:7b|chunk_pad|r1: range-step comprehension=11  explicit loop-with-pad=0  other=0  unrunnable=1
+  mistral:7b|collapse_delims|r1: single-split=0  multi-split-or-regex=12  char-walk=0  other=0  unrunnable=0
+  mistral:7b|collapse_delims|r2: single-split=4  multi-split-or-regex=8  char-walk=0  other=0  unrunnable=0
+  mistral:7b|collapse_delims|r3: single-split=7  multi-split-or-regex=3  char-walk=0  other=1  unrunnable=1
+  mistral:7b|kth_ordered|r1: single-key-sort=4  compound-key-sort=7  manual-scan=0  other=0  unrunnable=1
+  mistral:7b|merge_within|r1: sort-and-sweep=11  pairwise-other=0  unrunnable=1
+  mistral:7b|safe_stats|r1: sort-slice-average=12  loop-accumulate=0  other=0  unrunnable=0
+  mistral:7b|token_case|r1: split-capitalize-join=6  regex=0  char-walk=0  other=0  unrunnable=6
+  mistral:7b|token_case|r2: split-capitalize-join=5  regex=0  char-walk=0  other=0  unrunnable=7
+  mistral:7b|token_case|r3: split-capitalize-join=0  regex=0  char-walk=0  other=0  unrunnable=12
+  qwen2.5-coder:7b|chunk_pad|r1: range-step comprehension=11  explicit loop-with-pad=1  other=0  unrunnable=0
+  qwen2.5-coder:7b|chunk_pad|r2: range-step comprehension=12  explicit loop-with-pad=0  other=0  unrunnable=0
+  qwen2.5-coder:7b|chunk_pad|r3: range-step comprehension=12  explicit loop-with-pad=0  other=0  unrunnable=0
+  qwen2.5-coder:7b|collapse_delims|r1: single-split=12  multi-split-or-regex=0  char-walk=0  other=0  unrunnable=0
+  qwen2.5-coder:7b|collapse_delims|r2: single-split=2  multi-split-or-regex=10  char-walk=0  other=0  unrunnable=0
+  qwen2.5-coder:7b|kth_ordered|r1: single-key-sort=0  compound-key-sort=12  manual-scan=0  other=0  unrunnable=0
+  qwen2.5-coder:7b|kth_ordered|r2: single-key-sort=2  compound-key-sort=10  manual-scan=0  other=0  unrunnable=0
+  qwen2.5-coder:7b|merge_within|r1: sort-and-sweep=12  pairwise-other=0  unrunnable=0
+  qwen2.5-coder:7b|merge_within|r2: sort-and-sweep=12  pairwise-other=0  unrunnable=0
+  qwen2.5-coder:7b|merge_within|r3: sort-and-sweep=12  pairwise-other=0  unrunnable=0
+  qwen2.5-coder:7b|safe_stats|r1: sort-slice-average=7  loop-accumulate=0  other=5  unrunnable=0
+  qwen2.5-coder:7b|safe_stats|r2: sort-slice-average=1  loop-accumulate=0  other=11  unrunnable=0
+  qwen2.5-coder:7b|safe_stats|r3: sort-slice-average=0  loop-accumulate=0  other=12  unrunnable=0
+  qwen2.5-coder:7b|token_case|r1: split-capitalize-join=12  regex=0  char-walk=0  other=0  unrunnable=0
+census unrunnable against zero-readings divergence: 1 rows
+GATE: PASSED. seats swept whole in the stated order, rungs bottom-up with families stopping at their first mixed rung, arithmetic printed per rung, tool audit clean (tools=0 every row), census reported for every cell, every run checkpointed, report persisted. The structural readings are applied in the packet RESULTS. No seat taught or learned.

@@ -1,0 +1,58 @@
+{
+  "run_id": "20260704-091028-545c6b",
+  "node_id": "task-20260704-091028-545c6b",
+  "task": "Write a Python function median(nums) returning the middle value of the sorted list when the length is odd, or the average of the two middle values as a float when the length is even. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided Python function correctly calculates the median of a list, handles edge cases such as an empty list, and meets readability and conciseness standards.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "median([3, 1, 2])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "median([1, 2, 3, 4])",
+        "ok": true,
+        "got": "2.5",
+        "expect": "2.5"
+      },
+      {
+        "call": "median([5, 5])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "median([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef median(nums):\n    nums = sorted(nums)\n    length = len(nums)\n    if not nums:\n        return None\n\n    middle_index = (length - 1) // 2\n    if length % 2 == 0:\n        return (nums[middle_index] + nums[middle_index+1]) / 2\n    else:\n        return nums[middle_index]\n```",
+  "trace": "In this solution, the function `median()` takes a list of numbers and returns the middle value as a float in case of an even number of elements or the single middle value when the length is odd. The list is first sorted for accurate results. To handle an edge case where the input list is empty, we return None. The middle index is calculated by integer division, which automatically handles the situation when the length is even by rounding down for the first middle index and up for the second (in case of a tie). If the length is even, the two middle values are averaged to find the median.",
+  "totals": {
+    "time_s": 23.8618368,
+    "tokens": 720
+  },
+  "files": [
+    "20260704-091028-545c6b.crumbs.jsonl",
+    "20260704-091028-545c6b.trace.txt"
+  ]
+}

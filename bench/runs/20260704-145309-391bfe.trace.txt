@@ -1,0 +1,3 @@
+**
+
+To solve this task, I first checked for the edge case where the input list is empty and returned an empty list in that case. Then, I sorted the ranges by their start value using Python's built-in sort function with a custom key function. Finally, I iterated over the sorted ranges and merged any overlapping or adjacent ranges by updating the end value of the last merged range or adding a new merged range to the result. This approach ensures that the output is always in the correct order and only merges valid ranges based on their proximity.

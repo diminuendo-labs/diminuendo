@@ -1,0 +1,6 @@
+**
+1. **Sorting:** The function starts by sorting the input list of pairs based on their start values to ensure that we process them in a sequential manner.
+2. **Merging Logic:** It initializes a list `merged` with the first range from the sorted list. Then, it iterates through the remaining ranges and checks if the current range overlaps or is within distance `d` of the last range in the merged list. If so, it merges these ranges by updating the end value of the last merged range. Otherwise, it appends the current range to the merged list.
+3. **Edge Case:** The function handles an empty input list by returning an empty list immediately.
+
+This approach ensures that all overlapping and merging conditions are checked efficiently, resulting in a sorted and merged list of ranges as required.

@@ -1,0 +1,15 @@
+**
+
+The function `shortest_word(s)` takes a string `s` as input and returns the shortest whitespace-separated word. If there are multiple words with the same shortest length, it returns the last such word. If the input string is empty, it returns an empty string.
+
+To achieve this:
+1. The function first checks if the input string `s` is empty. If it is, it immediately returns an empty string.
+2. It then splits the string into a list of words using the `split()` method.
+3. A variable `min_length` is initialized to infinity (`float('inf')`) to keep track of the minimum word length encountered.
+4. Another variable `result` is initialized to store the current shortest word found.
+5. The function iterates over the list of words in reverse order using a for loop. This ensures that if there are ties, the last word is selected.
+6. For each word, it calculates its length and compares it with `min_length`.
+7. If the word's length is less than or equal to `min_length`, it updates both `min_length` and `result` with the current word.
+8. Finally, the function returns the result.
+
+This approach ensures that the function correctly handles edge cases, such as an empty input string, and efficiently finds the shortest word in a concise and readable manner.

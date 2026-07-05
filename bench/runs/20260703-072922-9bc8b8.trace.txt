@@ -1,0 +1,2 @@
+**
+I implemented this function by iterating over the input string and keeping track of the current character and its consecutive runs. If a new character is encountered or we reach the end of the string, I update the `max_run` variable if the current run is longer. This ensures that when multiple runs tie for longest, the last one is returned. The edge case where the input string is empty is explicitly handled at the beginning of the function.

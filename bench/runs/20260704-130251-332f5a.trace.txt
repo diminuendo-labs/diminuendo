@@ -1,0 +1,3 @@
+I first created a set for the exception list containing 'URL' and 'ID'. After that, I replaced all occurrences of '_' in the input string with a space. Then, I split the modified string into tokens and applied some manipulation on each token by using a loop. For tokens not in the exception list, I made sure to maintain the exact form for exceptions while lowercasing the first token and capitalizing all subsequent ones. Finally, I replaced spaces between the tokens with no separator before returning the final result.
+
+To handle an edge case, I specifically tested whether the combination of 'URL' and '_' in the input string gets handled correctly by checking if `token_case('my_URL')` returns 'myURL'.

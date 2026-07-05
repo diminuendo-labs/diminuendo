@@ -1,0 +1,2 @@
+**
+I wrote a concise function that leverages the `split` and `capitalize` methods of Python strings. The expression `''.join(...) for word in s.split('_') if word` effectively filters out empty substrings while splitting the input string, then capitalizes each non-empty substring with `word.capitalize()`, resulting in camelCase identifiers. I specifically addressed the edge case where an underscore is present at the start or end of the string by including a condition in the generator expression (`if word`) that only includes words for which this expression returns True.

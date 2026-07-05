@@ -1,0 +1,2 @@
+**
+I chose to use a stack-based approach, as it's a natural fit for checking parentheses balance. By iterating over the string and pushing opening parentheses onto the stack and popping them when a closing parenthesis is encountered, we can efficiently keep track of matching pairs without having to parse the entire string at once. I also included an explicit note about handling empty strings, as per the edge case criteria.

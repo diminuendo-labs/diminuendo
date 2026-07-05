@@ -1,0 +1,3 @@
+**
+
+I chose to use a simple and clear approach by iterating over each element in the input list. For elements that are lists themselves, I used the `extend` method to add all their items to the result list, effectively flattening one level of nesting. This way, I avoided creating nested structures or using complex list comprehensions, making the code concise and readable. The edge case of an empty list is handled implicitly by this approach, as it would not be added as a single element but its elements (which are none) would be ignored.

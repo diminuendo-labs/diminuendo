@@ -1,0 +1,2 @@
+**
+I first checked the length of the input list to handle edge cases where there are fewer than three elements. Then, I used the built-in `sorted` function to create a sorted copy of the list, which allowed me to easily drop one occurrence of both the minimum and maximum values by indexing into the list (`trimmed[1:-1]`). Finally, I calculated the sum of the remaining values and divided by the count of those values to get the trimmed mean. This approach is concise and readable, and it handles the edge case where the input list has fewer than three elements.

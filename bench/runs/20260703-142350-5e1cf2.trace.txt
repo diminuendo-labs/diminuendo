@@ -1,0 +1,2 @@
+**
+I used a dictionary to keep track of the count of each number in the list. This allows me to efficiently increment the count for each occurrence and reset it when a number is first encountered. I also included a simple check at the beginning to handle the edge case where the input list is empty, returning 0 immediately in this case. The function is concise and readable, with clear variable names and a docstring explaining its purpose.

@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to count the frequency of each word, and then used a lambda function as the `key` argument in `max` to break ties alphabetically. I chose this approach because it's concise and readable, while also handling edge cases like an empty string or non-alphanumeric characters. The `join` and `split` methods are used to extract the words from the input string, converting all characters to lowercase first.

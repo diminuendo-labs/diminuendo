@@ -1,0 +1,5 @@
+I created a function named `range_step` that takes three parameters: `start`, `stop`, and `step`. The function initializes an empty list called `result`. If the step is greater than 0, it checks if the start is greater than or equal to the stop; if so, it returns an empty list. Otherwise, it enters a while loop that continues as long as `start` is less than `stop`, adding the current value of `start` to the `result` list and incrementing `start` by the step.
+
+If the step is less than or equal to 0, it checks if the start is less than or equal to the stop; if so, it returns an empty list. Otherwise, it enters a while loop that continues as long as `start` is greater than the stop, adding the current value of `start` to the `result` list and decrementing `start` by the step.
+
+This approach handles the edge case where the input `step` is zero or negative. It also ensures the function never loops indefinitely or crashes.

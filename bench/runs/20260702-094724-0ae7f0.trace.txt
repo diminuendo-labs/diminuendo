@@ -1,0 +1,2 @@
+**
+I implemented the `flatten_once` function by iterating over each element in the input list. If an element is a list, its items are appended to the result using the `extend` method. This approach avoids deeper nesting and maintains the original structure when elements are not lists. I handled the edge case where the input list contains another list as one of its elements.

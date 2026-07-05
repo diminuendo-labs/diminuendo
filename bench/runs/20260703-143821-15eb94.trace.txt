@@ -1,0 +1,2 @@
+**
+I chose to solve this problem using a combination of set and list operations. By converting the input list to a set, I removed duplicates and ensured that all subsequent operations would operate on distinct values only. Then, I sorted the resulting set in descending order and returned the third element if it exists (i.e., when there are at least three distinct values). The edge case of an empty input list is handled implicitly by the `set` operation, which returns a set with zero elements for an empty input list.

@@ -1,0 +1,3 @@
+**
+
+The function `most_common_word(s)` processes the input string to find the most common word. It first handles the edge case where an empty string is provided and returns an empty string immediately. The string is then converted to lowercase and split into words, counting the occurrences of each word using a dictionary. After determining the maximum count, it filters out the words that have this count. Finally, it returns the lexicographically smallest word among those with the highest frequency. This approach ensures correctness by handling edge cases and maintaining readability through clear variable names and concise logic.

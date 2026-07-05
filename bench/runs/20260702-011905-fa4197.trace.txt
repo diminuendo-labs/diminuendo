@@ -1,0 +1,3 @@
+**
+
+I implemented the `flatten_once` function using a list comprehension. This allowed me to concisely iterate over each element in the input list and apply the flattening logic only when necessary. I chose this approach because it is straightforward and easy to understand, making the code both concise and readable. As for edge cases, one notable example that this function handles is an input list containing a single nested list: `flatten_once([1, [2, 3]])` would return `[1, [2, 3]]`, which preserves deeper nesting.

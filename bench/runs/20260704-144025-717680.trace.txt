@@ -1,0 +1,2 @@
+**
+I chose to use a list comprehension to generate the chunks. This approach is concise and readable, and allows me to handle the edge case of an empty list by returning an empty list directly. The `range` function is used to iterate over the indices of the input list in increments of `k`, and slicing (`lst[i:i+k]`) is used to extract each chunk.

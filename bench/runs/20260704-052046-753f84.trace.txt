@@ -1,0 +1,2 @@
+**
+I chose to first check for the edge case of an empty list, returning None immediately. Then, I used Python's built-in sorting function `sorted()` to ensure the input list is in ascending order. To calculate the median, I determined whether the length of the sorted list was odd or even and returned either the middle value or the average of the two middle values as a float. This approach allows for concise and readable code that handles both edge cases correctly.

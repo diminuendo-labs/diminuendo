@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-092948-105fc9",
+  "node_id": "task-20260702-092948-105fc9",
+  "task": "Write a Python function median(nums) returning the middle value of the sorted list when the length is odd, or the average of the two middle values as a float when the length is even. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function correctly calculates the median for both odd and even lengths, handles an empty list as specified, and the code is reasonably clear.",
+  "per_criterion": {
+    "the function is correct": 4,
+    "the code is concise and readable": 3,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "median([3, 1, 2])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "median([1, 2, 3, 4])",
+        "ok": true,
+        "got": "2.5",
+        "expect": "2.5"
+      },
+      {
+        "call": "median([5, 5])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "median([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef median(nums):\n    \"\"\"\n    Returns the middle value of a sorted list when length is odd, \n    or the average of the two middle values as a float when length is even.\n    \n    Edge case: Empty list returns None\n    \n    :param nums: A list of numbers to calculate the median from\n    :return: The median value of the input list as a float\n    \"\"\"\n    if not nums:\n        return None  # Handle empty list edge case\n\n    sorted_nums = sorted(nums)\n    length = len(sorted_nums)\n\n    middle_index = length // 2\n    if length % 2 == 1:\n        return sorted_nums[middle_index]\n    else:\n        return (sorted_nums[middle_index - 1] + sorted_nums[middle_index]) / 2.0\n```\n\n**",
+  "trace": "**\nI approached this task by first checking for the edge case of an empty list, returning None in that scenario. Then I sorted the input list to ensure the numbers are in order, regardless of their original arrangement. Next, I calculated the middle index of the sorted list using integer division (//) to determine whether the length is odd or even. Finally, I used conditional logic to return either the single middle value when the length is odd, or the average of the two middle values as a float when the length is even.",
+  "totals": {
+    "time_s": 21.9123427,
+    "tokens": 861
+  },
+  "files": [
+    "20260702-092948-105fc9.crumbs.jsonl",
+    "20260702-092948-105fc9.trace.txt"
+  ]
+}

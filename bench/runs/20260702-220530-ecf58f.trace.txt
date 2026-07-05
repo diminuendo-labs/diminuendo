@@ -1,0 +1,3 @@
+**
+
+To complete this task, I chose to use Python's built-in `split()` method to split the input string into a list of whitespace-separated words. The `min()` function with the `key` argument was then used to find the shortest word in the list. This approach is concise and readable, as it takes advantage of Python's built-in functionality while still being easy to understand. I also explicitly handled the edge case where the input string is empty by checking if the list of words is empty before attempting to return the minimum length word.

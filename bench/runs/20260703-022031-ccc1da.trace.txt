@@ -1,0 +1,3 @@
+**
+
+I implemented the function using a stack data structure to keep track of opening parentheses. As I iterate through the input string, I push opening parentheses onto the stack and pop them off when I encounter a closing parenthesis. If at any point I encounter a closing parenthesis but the stack is empty (indicating there's no matching opening parenthesis), or if the stack is not empty after iterating through the entire string, I return False to indicate unbalanced parentheses. This approach ensures that balanced strings are identified correctly while ignoring other characters in the input string.

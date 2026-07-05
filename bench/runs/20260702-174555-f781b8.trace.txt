@@ -1,0 +1,2 @@
+**
+I used a dictionary to store the word counts, where each key is a unique word and its corresponding value is a list containing the count of that word and its index in the input string. I then found the maximum count and checked if there are multiple occurrences with this count. If so, I returned the word at the last occurrence index; otherwise, I simply returned the first word with the maximum count (or an empty string if no words were present). I also made sure to handle the case where the input string is empty by returning an empty string in such a scenario.

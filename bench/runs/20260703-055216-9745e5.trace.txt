@@ -1,0 +1,2 @@
+**
+I defined a function `weighted_mean` that takes two lists as input: `values` and `weights`. I first check for the edge cases where either list is empty or the total weight is zero. If so, I return `None` to avoid any potential division-by-zero errors. Otherwise, I calculate the weighted sum by multiplying corresponding elements in `values` and `weights`, then divide by the total weight to get the weighted arithmetic mean.

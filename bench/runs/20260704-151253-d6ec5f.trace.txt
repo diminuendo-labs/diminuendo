@@ -1,0 +1,2 @@
+**
+I first checked for edge cases where the list has less than 3 elements. Then I sorted the list and dropped one occurrence of the minimum and one occurrence of the maximum value. Finally, I calculated the mean of the remaining numbers in the list. I chose to use a list comprehension to create the trimmed list of numbers, as it is concise and readable.

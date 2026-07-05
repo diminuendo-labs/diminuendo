@@ -1,0 +1,5 @@
+The function `depth_max(s)` takes a string `s` as input and calculates the maximum nesting depth of square brackets. It uses two variables, `depth` to keep track of the current nesting level and `max_depth` to store the highest nesting level found so far.
+
+The function iterates over each character in the input string `s`. If it encounters an opening bracket '[', it increments the `depth` counter. When it finds a closing bracket ']', it checks if the current depth is greater than zero (meaning the bracket is correctly placed) and updates `max_depth` with the new maximum depth found.
+
+If a closing bracket appears before its opener or any opener is never closed, the function returns -1 as per the given criteria. The edge case that the function handles is when it encounters an empty string; in this case, it correctly returns 0.

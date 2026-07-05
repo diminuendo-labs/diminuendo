@@ -1,0 +1,3 @@
+**
+
+I approached this problem by first checking the edge cases where the function would fail due to invalid input (start being at or past stop, or step being zero or negative). I then used a list comprehension to generate the desired range. The key part of this approach is how the `range` function in the list comprehension behaves when `step` is positive: it will only include numbers that are exactly `step` apart from each other.

@@ -1,0 +1,2 @@
+**
+I wrote this function using a straightforward approach to calculate the median of a list. First, I checked if the input list is empty and returned None in that case. Then, I sorted the list and calculated its length. If the length is odd, I returned the middle value as a float. If the length is even, I calculated the average of the two middle values as a float. I chose to use the `/ 2.0` syntax for floating point division in Python 3 to ensure that the result is always a float, regardless of the inputs.

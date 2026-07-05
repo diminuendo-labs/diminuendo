@@ -1,0 +1,2 @@
+**
+I implemented the `snake_to_camel` function using list comprehension and string methods. I chose to split the input string by underscores, filter out empty strings (which can result from leading/trailing or repeated underscores), and then join the remaining words with no separators. This approach is concise and readable, handling the edge case of an input string containing only one underscore (e.g., '_a_b') correctly.

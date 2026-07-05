@@ -1,0 +1,2 @@
+**
+I chose to use a simple and efficient approach by first normalizing the input list into a set of distinct numbers, which are then sorted in ascending order. This allows me to easily identify consecutive runs of numbers. I then iterate through the sorted list, keeping track of the current run of numbers and appending it to the result list as a 'start-end' range whenever a new number is encountered that doesn't continue the current run. I handled the edge case where an empty list is passed in by returning an empty string immediately at the beginning of the function.

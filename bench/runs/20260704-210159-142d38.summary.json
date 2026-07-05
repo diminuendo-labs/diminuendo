@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-210159-142d38",
+  "node_id": "task-20260704-210159-142d38",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly calculates the trimmed mean of a list, handles an empty input correctly, and has good readability.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "at least one edge case is handled": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": false,
+        "got": "raised ZeroDivisionError('division by zero')",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": false,
+        "got": "-3.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n\n    nums.sort()\n    min_index = max([i for i, n in enumerate(nums) if n == min(nums)]) - 1\n    max_index = len(nums) - min_index - 2\n    return sum(nums[min_index+1:max_index]) / (len(nums) - 4)\n```",
+  "trace": "I first checked for an empty list and returned None if it was the case. Then, I sorted the list in ascending order. After that, I calculated the indices of the minimum and maximum values, excluding one occurrence each by subtracting 1 from the first index and using the length minus the new first index minus 2 for the second index. Finally, I summed up the elements between those two excluded indices and divided the result by the number of elements left in the original list, effectively calculating the trimmed mean.\nThe edge case named is when the input list is empty, in which case the function returns None.",
+  "totals": {
+    "time_s": -0.9211164000000007,
+    "tokens": -84
+  },
+  "files": [
+    "20260704-210159-142d38.crumbs.jsonl",
+    "20260704-210159-142d38.trace.txt"
+  ]
+}

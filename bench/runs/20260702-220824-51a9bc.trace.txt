@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to efficiently count the frequency of each number. Then, I found the maximum count and iterated over the items in the counter, returning only the values with this maximum count. This approach ensures that distinct most frequent values are counted once, regardless of their frequency.

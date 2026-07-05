@@ -1,0 +1,2 @@
+**
+I defined the function `token_case(s)` that takes a string `s` as input. The list comprehension handles each token, applying capitalization only if it's not in the exceptions list ['URL', 'ID']. The `join()` method is used to concatenate the tokens without any separators. I included an edge case where the input contains 'user_ID', expecting 'userId' as the output to demonstrate how the function handles identifiers with already capitalized words.

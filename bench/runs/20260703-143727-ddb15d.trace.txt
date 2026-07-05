@@ -1,0 +1,2 @@
+**
+I chose to use a set to get the distinct numbers in the list, as it automatically removes duplicates. I then used the built-in `sorted` function with the `reverse=True` argument to sort the unique numbers in descending order. Finally, I checked if there are at least three unique numbers and returned the third largest one, or `None` otherwise. The empty input list edge case is handled by returning `None` immediately when the input list is empty.

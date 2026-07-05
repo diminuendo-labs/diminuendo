@@ -1,0 +1,5 @@
+**
+
+I created a function `collapse_delims` that takes a string `s`. I used the list comprehension to split the string on commas and filter out any empty pieces. The resulting pieces are then joined with a single comma between each using `','.join()`. This handles consecutive commas by treating them as a single delimiter and dropping any empty strings at the start and end of the result.
+
+One edge case this function doesn't explicitly handle is multiple consecutive commas at the beginning or end of the input string. Since these are filtered out in the list comprehension, they don't affect the final output. However, if handling such cases separately is needed, additional logic could be added to include them if desired.

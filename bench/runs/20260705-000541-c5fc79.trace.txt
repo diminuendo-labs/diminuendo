@@ -1,0 +1,4 @@
+**
+I started by checking for edge cases where `words` is empty or `k` is not a positive integer, returning `None` in those scenarios. I then grouped the words by their length using a dictionary. For each group of words with the same length, I sorted them reverse-alphabetically to handle the requirement for sorting words of equal length. After flattening the dictionary into a list and sorting it by increasing length (while maintaining the order within groups), I checked if `k` is out of range. Finally, I returned the word at index `k - 1` from the sorted list.
+
+This approach ensures that the function adheres to all given criteria, including handling edge cases like an empty input or a `k` value that's too large.

@@ -1,0 +1,52 @@
+{
+  "run_id": "20260705-000413-7877de",
+  "node_id": "task-20260705-000413-7877de",
+  "task": "Write a Python function kth_ordered(words, k) returning the k-th word, counting from 1, when the words are ordered by increasing length, and words of equal length are ordered reverse-alphabetically among themselves. Return None when k is out of range. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 1,
+  "reason": "The solution correctly implements the required functionality with clear and efficient code, handling an edge case where the input list of words is empty.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "kth_ordered(['bb', 'ab', 'c'], 2)",
+        "ok": true,
+        "got": "'bb'",
+        "expect": "'bb'"
+      },
+      {
+        "call": "kth_ordered(['dd', 'a', 'ccc'], 2)",
+        "ok": true,
+        "got": "'dd'",
+        "expect": "'dd'"
+      },
+      {
+        "call": "kth_ordered(['a', 'bb'], 5)",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef kth_ordered(words, k):\n    if not words or k <= 0:\n        return None\n    \n    from collections import defaultdict\n    \n    # Group words by their length\n    groups = defaultdict(list)\n    for word in words:\n        groups[len(word)].append(word)\n    \n    # Sort each group reverse-alphabetically\n    for group in groups.values():\n        group.sort(reverse=True)\n    \n    total_count = 0\n    result = None\n    \n    # Traverse groups to find the k-th ordered word\n    for length, group in sorted(groups.items()):\n        count = len(group)\n        if total_count + count >= k:\n            result = group[(k - total_count) - 1]\n            break\n        total_count += count\n    \n    return result\n```\n\n**",
+  "trace": "**\n\nThe function `kth_ordered` takes a list of words and an integer `k`. It first checks for edge cases where the input is empty or `k` is non-positive, returning `None` in such scenarios. The function uses a dictionary to group words by their lengths and then sorts each group reverse-alphabetically. It calculates the cumulative count of words and determines the k-th word by iterating through the sorted groups. If `k` falls within the range of any group, it extracts the appropriate word from that group and returns it. This ensures that if there are multiple words with the same shortest length, the last such word encountered is returned as required.",
+  "totals": {
+    "time_s": 25.0133983,
+    "tokens": 918
+  },
+  "files": [
+    "20260705-000413-7877de.crumbs.jsonl",
+    "20260705-000413-7877de.trace.txt"
+  ]
+}

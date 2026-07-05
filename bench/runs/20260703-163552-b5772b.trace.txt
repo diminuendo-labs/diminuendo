@@ -1,0 +1,2 @@
+The function uses the `collections.Counter` object to count the occurrences of each number in the list. We then find the mode, which is the most frequent value, using the `max()` function with a custom key that sorts items by their counts. After finding the mode, we iterate through the original list and sum up all instances where the count is 0 (meaning it is not the mode) or the number equals the mode itself.
+This approach handles an edge case where multiple modes exist; in such cases, it chooses one of them and adds up only the non-mode numbers.

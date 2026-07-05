@@ -1,0 +1,2 @@
+**  
+I used Python's `collections.Counter` to count the frequency of each number in the list. The most frequent numbers are determined by finding the maximum frequency value and then selecting all numbers that have this frequency. Finally, I sum these modes and return the result. The function handles an edge case where all elements are unique (returns the sum of the list since there is no mode).

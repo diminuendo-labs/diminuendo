@@ -1,0 +1,11 @@
+**
+
+1. **Use of Regular Expression:** The function uses `re.split` to handle multiple consecutive delimiters (both commas and semicolons) by providing the regular expression `[;,\s]+`. This ensures that any sequence of these characters is treated as a single delimiter.
+
+2. **Edge Case Handling:** The function includes an edge case for multiple consecutive delimiters, which are handled gracefully by the `re.split` method without additional logic.
+
+3. **Dropping Empty Pieces:** By using `filter(None, parts)`, we remove any empty strings that might result from leading or trailing delimiters or sequences of consecutive delimiters.
+
+4. **Rejoining with a Single Comma:** The resulting pieces are then joined back together into a single string with commas between them using `''.join(parts)`.
+
+This approach ensures the function is both correct and concise, adhering to the criteria provided.

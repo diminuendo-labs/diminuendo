@@ -1,0 +1,5 @@
+I used Python's built-in `sorted()` function to first sort the words by increasing length in lexicographical order when lengths are equal. The key for sorting is a tuple containing the word length and its reverse alphabetically sorted version using the `-x` parameter.
+
+Then, I calculated the total number of words (including those potentially out of range) and returned the k-th word if k falls within that range; otherwise, I return None to signify an out-of-range error.
+
+An edge case handled in this approach is when there are fewer than k words in the input list. In such cases, the function will return `None`.

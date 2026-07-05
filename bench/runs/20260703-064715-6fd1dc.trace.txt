@@ -1,0 +1,2 @@
+**
+I chose to follow the direction of prioritizing returning the last word among those with the shortest length in case of a tie. This is because the task states "On ties return the last such word, not the first." I used Python's built-in string splitting function `split()` to get a list of words from the input string `s`. I then checked if the list was empty and returned an empty string if so, handling the edge case where the input string is empty. Finally, I found the last longest word by iterating over the reversed list of words with lengths equal to the maximum length.

@@ -1,0 +1,3 @@
+**
+
+I solved this problem by using the built-in `split` method to split the input string into a list of words, and then used a generator expression with the `capitalize` method to capitalize each non-empty word. This approach is concise and readable, as it clearly expresses the intent of converting snake_case to camelCase. One edge case handled by this function is an empty string, which returns an empty string without any errors or unnecessary computations.

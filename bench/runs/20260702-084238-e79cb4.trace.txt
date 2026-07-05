@@ -1,0 +1,3 @@
+**
+
+I approached this task by first splitting the input string into a list of words using the `split()` method. I then checked if the list is empty (i.e., the input string was empty), and returned an empty string in that case to handle the edge case correctly. Finally, I used the `min()` function with the `key` argument set to `len` to find the shortest word in the list, returning the last such word in case of ties due to its last-element behavior.

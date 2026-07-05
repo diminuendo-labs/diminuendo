@@ -1,0 +1,3 @@
+The function takes a string `s` as input, which may contain comma-separated values with possible whitespace surrounding them. It first splits the string into a list of fields using the `split()` method and a comma delimiter. Then it applies the `strip()` method to each field to remove any leading or trailing whitespace. Finally, it removes any empty strings from the resulting list, returning only non-empty fields.
+
+One edge case this function handles is that if the input string does not contain any commas (i.e., it's a single field), it will still return a list with one element (the trimmed field) instead of an error or an empty list.

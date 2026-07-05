@@ -1,0 +1,2 @@
+**
+I chose a simple iterative approach, using a stack data structure to keep track of the opening parentheses. This way, when we encounter a closing parenthesis, we can check if there's a matching opening parenthesis on the stack. If not, or if the stack is empty (no matching opening parenthesis), the function immediately returns False. Finally, after iterating over all characters in the string, an empty stack means all parentheses were matched, so the function returns True. I handled the edge case where no matching opening parenthesis exists for a closing parenthesis.

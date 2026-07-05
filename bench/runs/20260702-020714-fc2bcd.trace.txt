@@ -1,0 +1,2 @@
+**
+I implemented this function by first checking for an edge case (an empty input list). Then, I sorted the ranges by their start value to make them easy to merge. I iterated through the sorted ranges, merging any that overlapped with the current range. If a non-overlapping range was found, I added the previous range to the result and started a new one.

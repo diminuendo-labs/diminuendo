@@ -1,0 +1,5 @@
+**  
+I used the `split` method to divide the input string `s` by underscores, effectively separating each word. The list comprehension iterates over these words, skipping any empty strings that may result from leading, trailing, or repeated underscores. The `capitalize` method is then applied to each non-empty word to convert it to camelCase, with the first letter of each word being uppercased and the rest lowercased. Finally, the modified words are joined together without any separators to form the final camelCase string.
+
+**Edge Case:**  
+The function handles leading, trailing, and repeated underscores by skipping empty strings in the list comprehension, ensuring that they do not affect the final output.

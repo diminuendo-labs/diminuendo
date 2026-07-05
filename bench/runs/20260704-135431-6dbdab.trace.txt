@@ -1,0 +1,3 @@
+**
+
+To solve this task, I first check if the input list `nums` is empty. If it is, the function returns `None`. Next, I sort the list to easily identify and remove the minimum and maximum values. These are then removed using Python's slicing technique (`sorted_nums[1:-1]`). After trimming, I check again if the resulting list has fewer than 2 elements (which means there were less than 3 unique numbers in the original list). In this edge case, I return `None` as it wouldn't be meaningful to calculate a mean. Finally, I calculate and return the mean of the trimmed list as a float.

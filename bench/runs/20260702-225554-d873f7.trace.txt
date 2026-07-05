@@ -1,0 +1,3 @@
+**
+
+I chose to use Python's built-in string methods `split` and `join` to break the input string into words, capitalize each word except the first one (which is already capitalized by default), and then join them back together. This approach is concise and readable, making it easy to understand what the function does. By using `capitalize`, I also handle the edge case where an empty string is passed in, as it will simply return an empty string.

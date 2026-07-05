@@ -1,0 +1,164 @@
+{
+  "parity21_id": "20260703-214759",
+  "performer": "qwen2.5-coder:7b",
+  "audience": "llama3.1:8b",
+  "task": "range_summary",
+  "cells": [
+    "none",
+    "rev",
+    "hand"
+  ],
+  "repeats": 12,
+  "drift_bar": "2 of 12",
+  "byte_checks": {
+    "rev": true,
+    "hand": true
+  },
+  "lessons": {
+    "rev": {
+      "concept": "When writing a function to sum distinct values, ensure that each value is counted only once regardless of how many times it repeats in the input list.",
+      "rule": "When the task states 'distinct values,' ignore repetitions and include each value only once in the calculation.",
+      "provenance": "engine"
+    },
+    "hand": {
+      "concept": "When the task states each distinct pair counts once regardless of repeats, honor the distinctness the task states.",
+      "rule": "each distinct pair counts once regardless of repeats",
+      "provenance": "hand"
+    }
+  },
+  "priors": {
+    "P15": {
+      "none": "8/12",
+      "rev": "12/12",
+      "hand": "12/12"
+    },
+    "P13": {
+      "R-none": "8/12",
+      "R-hand": "12/12"
+    },
+    "P7": {
+      "none": "0.50 at n=24"
+    }
+  },
+  "check_table": {
+    "range_summary([1, 2, 3, 5])": {
+      "rule_check": false,
+      "cells": {
+        "none": {
+          "n": 12,
+          "passed": 8,
+          "rate": 0.6666666666666666
+        },
+        "rev": {
+          "n": 12,
+          "passed": 8,
+          "rate": 0.6666666666666666
+        },
+        "hand": {
+          "n": 12,
+          "passed": 8,
+          "rate": 0.6666666666666666
+        }
+      }
+    },
+    "range_summary([3, 1, 2, 2])": {
+      "rule_check": true,
+      "cells": {
+        "none": {
+          "n": 12,
+          "passed": 4,
+          "rate": 0.3333333333333333
+        },
+        "rev": {
+          "n": 12,
+          "passed": 11,
+          "rate": 0.9166666666666666
+        },
+        "hand": {
+          "n": 12,
+          "passed": 10,
+          "rate": 0.8333333333333334
+        }
+      }
+    },
+    "range_summary([5, 3, 1])": {
+      "rule_check": false,
+      "cells": {
+        "none": {
+          "n": 12,
+          "passed": 8,
+          "rate": 0.6666666666666666
+        },
+        "rev": {
+          "n": 12,
+          "passed": 8,
+          "rate": 0.6666666666666666
+        },
+        "hand": {
+          "n": 12,
+          "passed": 8,
+          "rate": 0.6666666666666666
+        }
+      }
+    },
+    "range_summary([])": {
+      "rule_check": false,
+      "cells": {
+        "none": {
+          "n": 12,
+          "passed": 12,
+          "rate": 1.0
+        },
+        "rev": {
+          "n": 12,
+          "passed": 12,
+          "rate": 1.0
+        },
+        "hand": {
+          "n": 12,
+          "passed": 12,
+          "rate": 1.0
+        }
+      }
+    },
+    "range_summary([7])": {
+      "rule_check": false,
+      "cells": {
+        "none": {
+          "n": 12,
+          "passed": 12,
+          "rate": 1.0
+        },
+        "rev": {
+          "n": 12,
+          "passed": 12,
+          "rate": 1.0
+        },
+        "hand": {
+          "n": 12,
+          "passed": 12,
+          "rate": 1.0
+        }
+      }
+    }
+  },
+  "pooled_rule_checks": {
+    "none": {
+      "n": 12,
+      "passed": 4,
+      "rate": 0.3333333333333333
+    },
+    "rev": {
+      "n": 12,
+      "passed": 11,
+      "rate": 0.9166666666666666
+    },
+    "hand": {
+      "n": 12,
+      "passed": 10,
+      "rate": 0.8333333333333334
+    }
+  },
+  "tool_audit_ok": true,
+  "n_note": "R=12 per cell, one task, interleaved. The four signed readings and the 2-of-12 bar live in the packet; failed replications are named in its RESULTS."
+}

@@ -1,0 +1,1 @@
+I used a list comprehension to iterate through each element in the input list. If an element is not a list, it's kept as is; otherwise, its content is recursively flattened using the same function. The edge case handled here is that elements which are not lists will be preserved and only one level of nesting will be flattened. Deeper nesting remains nested in the output.

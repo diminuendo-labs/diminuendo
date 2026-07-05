@@ -1,0 +1,2 @@
+**
+To convert a snake_case identifier to camelCase, the function splits the input string by underscores and capitalizes each resulting word. It then joins these capitalized words together. This approach handles leading, trailing, and repeated underscores by filtering out empty strings resulting from consecutive underscores. An empty input string correctly returns an empty string as well.

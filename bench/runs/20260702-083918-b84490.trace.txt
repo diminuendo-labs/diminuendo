@@ -1,0 +1,5 @@
+**
+
+To implement the `equal_ignoring_spaces` function, I used Python's built-in string methods. By calling `replace(' ', '')`, I removed all whitespace characters from both strings. Then, applying `.lower()` to each ensures that character case is ignored during comparison. This method is concise and readable, adhering to the criteria of minimizing code length while maintaining clarity and functionality.
+
+One notable edge case this function handles gracefully is leading and trailing spaces in the input strings. Since `replace(' ', '')` removes all spaces regardless of their position (beginning, end, or within the string), this function correctly compares strings with varying amounts of whitespace without introducing any errors due to inconsistent spacing.

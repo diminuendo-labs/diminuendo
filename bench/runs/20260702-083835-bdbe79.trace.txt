@@ -1,0 +1,6 @@
+**
+- The function `count_word` takes two parameters, a string `s` and a word `w`. 
+- It first checks if either `s` or `w` is empty. If so, it returns 0 as an edge case.
+- The string `s` is converted to lowercase and split into a list of words using the `split()` method. This ensures that the comparison is case-insensitive.
+- The target word `w` is also converted to lowercase for the same reason.
+- Finally, the function counts how many times the target word appears in the list of words using the `count()` method and returns this count.

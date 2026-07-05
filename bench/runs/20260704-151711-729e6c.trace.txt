@@ -1,0 +1,2 @@
+**
+I approached this task by first recognizing that the problem can be solved using Python's built-in string methods `split` and `join`. I chose to use `replace` to simplify handling consecutive delimiters as one split. To address edge cases, such as strings that only contain commas, I added an explicit check for empty pieces at the start and end of the filtered list before joining them with a comma.

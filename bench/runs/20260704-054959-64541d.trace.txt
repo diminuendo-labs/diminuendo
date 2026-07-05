@@ -1,0 +1,3 @@
+**
+
+To solve this task, I chose a straightforward approach that iterates over the input list using a for loop. For each item in the list, it checks if the item is itself a list using the `isinstance` function. If it is a list and not empty (to handle edge case: empty sublists), it uses the `extend` method to add all its items to the result list. Otherwise, it simply appends the item to the result list. This approach ensures that only one level of flattening is applied, as required by the task.

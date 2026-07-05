@@ -1,0 +1,15 @@
+**
+
+To solve this problem, the function `kth_ordered` follows these steps:
+
+1. **Initial Check**: The function first checks if the input list `words` is empty or if `k` is less than or equal to 0. If either condition is true, it returns `None`.
+
+2. **Sorting**: It then sorts the words based on two criteria:
+   - By increasing length of the words.
+   - For words of the same length, it sorts them reverse-alphabetically by taking the ASCII value of the last character (using `-ord(x[-1])` to reverse the order).
+
+3. **Edge Case Handling**: The sorting ensures that if multiple words have the same shortest length, the function will return the last such word encountered because it sorts in descending order based on the reverse ASCII value.
+
+4. **Range Check**: After sorting, the function checks if `k` is within the range of the sorted list. If not, it returns `None`.
+
+5. **Return Result**: Finally, if everything is within bounds, it returns the k-th word (adjusting for zero-based indexing by using `k-1`).

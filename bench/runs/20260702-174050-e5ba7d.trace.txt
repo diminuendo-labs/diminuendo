@@ -1,0 +1,2 @@
+**
+I split the input string into a list of whitespace-separated words using `s.split()`. Then I find the maximum length among these words. To handle ties, I use a generator expression to get the index of the last occurrence of the word with this maximum length. If no such word is found (i.e., all words have different lengths), `next()` returns `None`, and the function returns an empty string. This approach meets all requirements, including handling the edge case where multiple words are of maximum length by returning the index of the last occurrence.

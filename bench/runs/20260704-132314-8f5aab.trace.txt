@@ -1,0 +1,3 @@
+**
+
+To solve this problem, I first handle the edge case where the input list is empty or `k` is non-positive. In such cases, an empty list is returned immediately. Then, I use a list comprehension to create chunks of size `k`. For each chunk, if it doesn't reach the required size of `k`, I append `None` until it does. This ensures that every chunk in the final output has exactly `k` elements.

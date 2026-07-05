@@ -1,0 +1,2 @@
+**
+I chose to use a dictionary `num_count` to store the count of each number in the list. This allows for efficient lookups and updates of the counts as we iterate through the list. When we encounter a number, we calculate its complement with respect to the target sum and check if it's already in `num_count`. If it is, we increment our pair count by the stored count of that complement.

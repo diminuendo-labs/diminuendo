@@ -1,0 +1,5 @@
+** 
+
+To solve this problem, I first handle the edge case where the input string `s` is empty or contains only whitespace by checking if `s.strip()` is empty. If it is, I return an empty string.
+
+Next, I split the string into a list of words using `s.split()`. To find the longest words, I determine the maximum length of the words with `max(len(word) for word in words)`. Then, I filter the list to include only those words that have this maximum length. Finally, I return the last word from this filtered list, which will be the longest word in case of a tie, as required by the problem statement.

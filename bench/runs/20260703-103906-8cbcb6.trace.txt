@@ -1,0 +1,3 @@
+** 
+
+To solve this problem, the function first checks if the input string `s` is empty. If it is, the function returns an empty string as per the edge case. Otherwise, the string is split into a list of words using the `split()` method. The length of the longest word is determined by finding the maximum length in the list of words. A list comprehension filters out all words that match this length, but since we need to break ties by selecting the last word in case of multiple candidates, the list comprehension iterates over the reversed list of words. Finally, the first element from this filtered list (which is the last longest word) is returned.

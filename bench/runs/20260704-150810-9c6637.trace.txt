@@ -1,0 +1,2 @@
+**
+I approached this task by first handling the edge cases where the list has less than 3 elements, as these do not follow the required behavior. For lists with more than two elements, I identified the minimum and maximum values, removed them from the list, and then calculated the mean of the remaining numbers. This implementation is concise and readable, following a clear step-by-step logic for handling the task requirements.

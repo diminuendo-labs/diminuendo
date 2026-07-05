@@ -1,0 +1,8 @@
+**
+
+I implemented the `token_case` function by splitting the input string `s` into tokens based on underscores. I then iterated over these tokens, applying the necessary transformations:
+- The first token is converted to lowercase.
+- Subsequent tokens are capitalized.
+- Tokens appearing in the exception list (`['URL', 'ID']`) remain unchanged.
+
+To ensure the function handles edge cases correctly, consider the following example: if the input string starts with an underscore (e.g., `'_example'`), it will be treated as an empty token followed by `'example'`. The function will handle this gracefully by converting the first non-empty token to lowercase.

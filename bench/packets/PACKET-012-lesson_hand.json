@@ -1,0 +1,17 @@
+{
+  "concept": "When several candidates tie on the stated measure, the task's stated tie direction picks the winner.",
+  "rule": "When candidates tie, return the one the task's stated tie direction selects.",
+  "applies_when": {
+    "operation": "write_code",
+    "target": "function",
+    "language": "python",
+    "size": "small",
+    "rule_class": "tie_break",
+    "rule_topic": "direction",
+    "stated_direction": "last"
+  },
+  "trail": {
+    "gen_task": "hand_authored",
+    "contrast_type": "hand_authored"
+  }
+}

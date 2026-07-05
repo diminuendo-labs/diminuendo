@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `set` data structure, which automatically removes duplicates. This makes it simple and efficient to calculate the sum of distinct values. The function is concise because it relies on this underlying functionality, eliminating the need for explicit iteration or conditional checks.

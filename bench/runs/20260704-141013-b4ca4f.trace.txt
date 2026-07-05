@@ -1,0 +1,2 @@
+**
+The function `collapse_delims` takes a string `s`, splits it by commas, filters out any empty strings resulting from consecutive or leading/trailing commas, and then joins the remaining pieces back together with a single comma. The key steps are using list comprehension to drop empty strings and the `join` method to concatenate the pieces. This approach ensures that only non-empty segments are retained and properly combined.

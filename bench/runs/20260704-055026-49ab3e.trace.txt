@@ -1,0 +1,2 @@
+**
+I implemented the function using a list comprehension to iterate over each element in the input list. I used `isinstance` to check if an element is a list and if so, only its first element is flattened and included in the output list. This approach ensures that deeper nesting is preserved and only one level of flattening is applied. The function handles edge case where the input list contains non-list elements, as they are left unchanged.

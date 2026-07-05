@@ -1,0 +1,2 @@
+**
+I used a lambda function as the sorting key to first sort by length and then alphabetically in reverse order. This approach is concise and readable, as it clearly conveys the logic behind the sorting process. The edge case where k is larger than the number of words is handled explicitly with a simple if statement.

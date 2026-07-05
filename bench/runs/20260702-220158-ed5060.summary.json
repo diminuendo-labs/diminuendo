@@ -1,0 +1,58 @@
+{
+  "run_id": "20260702-220158-ed5060",
+  "node_id": "task-20260702-220158-ed5060",
+  "task": "Write a Python function title_words(s) returning the string with every whitespace-separated word title-cased (first letter upper, the rest lower) and runs of whitespace collapsed to single spaces, except that words already entirely uppercase stay exactly as they are. An empty string returns ''. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly handles title casing, whitespace collapsing, and an empty string input.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "title_words('hello  world')",
+        "ok": true,
+        "got": "'Hello World'",
+        "expect": "'Hello World'"
+      },
+      {
+        "call": "title_words('NASA rocks')",
+        "ok": true,
+        "got": "'NASA Rocks'",
+        "expect": "'NASA Rocks'"
+      },
+      {
+        "call": "title_words('mIxEd')",
+        "ok": true,
+        "got": "'Mixed'",
+        "expect": "'Mixed'"
+      },
+      {
+        "call": "title_words('')",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n```python\ndef title_words(s):\n    if not s:\n        return ''\n    \n    words = s.split()\n    titled_words = []\n    \n    for word in words:\n        if word.isupper():\n            titled_words.append(word)\n        else:\n            titled_words.append(word.title())\n    \n    return ' '.join(titled_words)\n\n# Edge Case: Empty string\nprint(title_words(\"\"))  # Output: ''\n```\n\n**",
+  "trace": "**\nThe function `title_words(s)` processes the input string `s` by first splitting it into individual words. It then iterates over each word, checking if it is entirely uppercase using `word.isupper()`. If a word is entirely uppercase, it is added to the result list as is; otherwise, the word is title-cased using `word.title()` and added to the result list. Finally, the function joins the processed words back into a single string with spaces in between and returns this string. The edge case of an empty string is handled by immediately returning an empty string if the input is empty.",
+  "totals": {
+    "time_s": 19.6882922,
+    "tokens": 721
+  },
+  "files": [
+    "20260702-220158-ed5060.crumbs.jsonl",
+    "20260702-220158-ed5060.trace.txt"
+  ]
+}

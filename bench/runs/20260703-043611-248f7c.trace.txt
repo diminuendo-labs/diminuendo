@@ -1,0 +1,3 @@
+**
+
+I approached this problem by first converting the input string to lowercase and splitting it into words. I then used a dictionary to count the occurrences of each word. To handle ties alphabetically, I collected all words that had the maximum count and sorted them before returning the first element. The edge case where the input string is empty was handled by returning an empty string immediately if `s` is falsy.

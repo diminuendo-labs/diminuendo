@@ -1,0 +1,1 @@
+To ensure that each value is counted only once, I converted the input list into a set to remove duplicates and sorted it. This allows us to find the second last element in the sorted list, which represents the second largest distinct value. An edge case handled here is when there are fewer than two unique values, in which case the function returns None.

@@ -1,0 +1,3 @@
+The function `snake_to_camel` takes a string `s` as an argument, splits it using underscores as delimiters, and creates a new list of words. It then iterates through the words, converting the first word to lowercase and capitalizing the rest. Finally, it returns the resulting camelCase identifier.
+
+To handle edge cases where leading, trailing, or repeated underscores are present, the function doesn't consider them when creating the list of words and processing them accordingly. This ensures that the output is always in camelCase format with no extra underscores.

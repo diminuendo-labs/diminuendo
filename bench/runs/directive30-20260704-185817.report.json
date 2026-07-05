@@ -1,0 +1,63 @@
+{
+  "directive30_id": "20260704-185817",
+  "packet": "PACKET-030",
+  "performer": "qwen2.5-coder:7b",
+  "audience": "llama3.1:8b",
+  "ground": "kth_ordered r3",
+  "repeats": 12,
+  "cells": [
+    "none",
+    "menu-form",
+    "directive"
+  ],
+  "gate_min": "18 of 24",
+  "rule_bar": "4 of 24",
+  "directive_text": "If multiple words have the same shortest length, the function should return the last such word encountered.",
+  "menu_form_landscape": [
+    {
+      "concept": "When handling ties in the task, always return the last word with the shortest length.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "stated_direction": "last"
+      }
+    }
+  ],
+  "stage_a": {
+    "pooled": {
+      "n": 24,
+      "passed": 14,
+      "present_n": 24,
+      "present_passed": 14,
+      "unrunnable_rows": 0
+    },
+    "gate_min": 18,
+    "passed": false
+  },
+  "stage_b": {
+    "ran": false,
+    "pooled_rule_checks": {},
+    "check_table": {}
+  },
+  "census": {
+    "A|none": {
+      "single-key-sort": 3,
+      "compound-key-sort": 9,
+      "manual-scan": 0,
+      "other": 0,
+      "unrunnable": 0
+    }
+  },
+  "census_no_readings_divergence": 0,
+  "audit_ok": true,
+  "priors": {
+    "P004_ev_fraction_era": "clean checks 0.92 to 0.36 under the contradicting directive; menu 0.33 to 0.75; a different counter than pooled rule checks, direction comparable, magnitudes not",
+    "rung3_qwen": "no candidacy exists; the P026 sweep kept rung 2 at 10 of 12 and stopped; the stage A gate carries the risk deliberately",
+    "P029_structural": "the production serving path refuses this content on this ground, on the record"
+  },
+  "n_note": "Stage A gates only. The four readings, the observability naming, and the census's role live in the packet and are applied in its RESULTS. The menu-form cell measures the model, never the production path."
+}

@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-062000-b1c049",
+  "node_id": "task-20260702-062000-b1c049",
+  "task": "Write a Python function median(nums) returning the middle value of the sorted list when the length is odd, or the average of the two middle values as a float when the length is even. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function is mostly correct, concise, and handles the edge case of an empty list.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_case_handled": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "median([3, 1, 2])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "median([1, 2, 3, 4])",
+        "ok": true,
+        "got": "2.5",
+        "expect": "2.5"
+      },
+      {
+        "call": "median([5, 5])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "median([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef median(nums):\n    \"\"\"\n    Returns the middle value of a sorted list when length is odd, \n    or the average of the two middle values as a float when length is even.\n    \n    Edge case: an empty list returns None.\n    \"\"\"\n    if not nums:\n        return None  # edge case for empty list\n    \n    sorted_nums = sorted(nums)\n    n = len(sorted_nums)\n    \n    if n % 2 == 0:  # even\n        mid1, mid2 = sorted_nums[n // 2 - 1:n // 2 + 1]\n        return (mid1 + mid2) / 2\n    \n    else:  # odd\n        return sorted_nums[n // 2]\n```\n\n**",
+  "trace": "**\nI first checked for the edge case of an empty list, returning None in this instance. Then I sorted the input list to prepare it for median calculation. Depending on whether the length is even or odd, I either returned the average of the two middle values (when even) or the single middle value (when odd). This approach ensures that the function can handle both cases correctly and efficiently.",
+  "totals": {
+    "time_s": 22.754302000000003,
+    "tokens": 788
+  },
+  "files": [
+    "20260702-062000-b1c049.crumbs.jsonl",
+    "20260702-062000-b1c049.trace.txt"
+  ]
+}

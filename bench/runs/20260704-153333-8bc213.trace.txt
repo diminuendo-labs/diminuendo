@@ -1,0 +1,3 @@
+**
+
+I solved this problem using Python's built-in `sorted` function with a custom sorting key. The key is a tuple containing two elements: the length of each word, and its reverse alphabetical order. This ensures that words are first sorted by increasing length, and then words of equal length are ordered in reverse alphabetical order. I also added an edge case for when k is less than 1, returning None as per the problem statement.

@@ -1,0 +1,3 @@
+**
+
+I implemented this function using a list comprehension to create the chunks. The `range` function is used to generate indices into the input list that are spaced by `k`, effectively splitting it into consecutive chunks of size `k`. If the final chunk comes up short, I added a conditional expression to pad it with None as necessary. This approach handles the edge case where the input list has no elements, in which case an empty list is returned.

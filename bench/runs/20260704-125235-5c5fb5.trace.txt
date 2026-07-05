@@ -1,0 +1,5 @@
+The function takes a string `s`, and initially cleans it up by removing leading and trailing spaces using the `strip()` method. Next, we define a list of all possible delimiters (commas, semicolons, and spaces). The string is then split on these characters with `split()`.
+
+Empty pieces at the start or end are removed with a list comprehension that filters out any empty elements in `splits`. Subsequently, consecutive delimiters within the remaining elements are collapsed into single occurrences by grouping them with `itertools.groupby` and joining the groups with another list comprehension. Finally, the collapsed list is joined back into a single string with commas separating each piece, except when no pieces remain, in which case an empty string is returned.
+
+The edge case considered here is when the input string consists only of consecutive delimiters without any actual data—for example, "; ;". In this situation, the function would correctly return an empty string instead of a single comma.

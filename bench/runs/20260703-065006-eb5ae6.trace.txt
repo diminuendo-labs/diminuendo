@@ -1,0 +1,3 @@
+**
+
+I implemented a function that splits the input string into words using `s.split()`. Then, I iterate over the words in reverse order (`reversed(words)`) to ensure that in case of a tie, the last such word is returned. This approach follows the direction stated in the task, which prioritizes returning the last word among those with the shortest length when there's a tie. One edge case this function handles is an empty string, for which it returns an empty string `''`.

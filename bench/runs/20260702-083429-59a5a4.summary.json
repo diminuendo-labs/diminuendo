@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-083429-59a5a4",
+  "node_id": "task-20260702-083429-59a5a4",
+  "task": "Write a Python function count_unique(nums) returning how many values appear exactly once in the list. Values that repeat do not count at all: [1, 2, 2, 3] has two such values, 1 and 3. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "reason": "The code accurately counts unique values in the list.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_unique([1, 2, 2, 3])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_unique([5, 5])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([7])",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:** \n\n```python\ndef count_unique(nums):\n    if not nums:  # Edge case handling for an empty list\n        return 0\n    count_dict = {}\n    for num in nums:\n        if num in count_dict:\n            count_dict[num] += 1\n        else:\n            count_dict[num] = 1\n    return sum(1 for value in count_dict.values() if value == 1)\n```\n\n**",
+  "trace": "** \nI approached this problem by creating a dictionary to count the occurrences of each number in the list. Then, I used a generator expression within the `sum` function to count how many numbers have an occurrence of exactly one, thus appearing uniquely in the list. The edge case of an empty list is handled at the beginning by returning 0 immediately if the input list is empty.",
+  "totals": {
+    "time_s": 18.4590928,
+    "tokens": 675
+  },
+  "files": [
+    "20260702-083429-59a5a4.crumbs.jsonl",
+    "20260702-083429-59a5a4.trace.txt"
+  ]
+}

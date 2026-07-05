@@ -1,0 +1,15 @@
+**
+
+1. **Edge Case Handling**: The function first checks if the input list `nums` is empty. If it is, it immediately returns an empty string.
+  
+2. **Sorting and Deduplication**: It sorts the input list while removing duplicates using `sorted(set(nums))`.
+
+3. **Range Identification**:
+   - Initialize variables to track the start and end of the current range.
+   - Iterate through the sorted list starting from the second element.
+   - If the current number is consecutive to the previous one, update the end of the range.
+   - If not, append the current range (either a single number or a range) to the `ranges` list and reset the start to the current number.
+
+4. **Final Range Append**: After the loop, append the last range to the `ranges` list since it won't be added inside the loop.
+
+5. **Result Construction**: Join all ranges in the `ranges` list with commas to form the final result string and return it.

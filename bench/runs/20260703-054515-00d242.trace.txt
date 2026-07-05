@@ -1,0 +1,2 @@
+** 
+I first split the input string `s` into a list of words. Then, I iterate over each word in this list. If a word is already entirely uppercase, I append it to the result list without any changes. Otherwise, I title-case the word by capitalizing its first letter and making the rest lowercase before appending it to the result list. Finally, I join the titled words with a single space to form the resulting string, which I return. This approach ensures that all edge cases are handled correctly, including empty strings or strings with only whitespace characters.

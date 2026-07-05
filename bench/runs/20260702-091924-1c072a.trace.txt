@@ -1,0 +1,2 @@
+**
+I implemented this function using Python's built-in `split` method to split the string into a list of words. The `max` function is then used with the `key` argument set to `len`, which returns the word with the maximum length. If no words are found (i.e., the input string is empty), the `default=''` argument ensures that an empty string is returned, handling this edge case explicitly.

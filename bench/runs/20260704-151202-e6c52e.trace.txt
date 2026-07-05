@@ -1,0 +1,2 @@
+**
+To solve this problem, I first implemented a check to handle edge cases with fewer than three elements. Then, I sorted the list and dropped one minimum and one maximum value by summing all elements except the first and last. Finally, I calculated the mean of the remaining values by dividing the sum by the new length minus two, taking care to ensure that the operation is valid even when the original length was already three or more.

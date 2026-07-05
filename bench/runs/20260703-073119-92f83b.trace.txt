@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for the edge case where the input string is empty. If so, I immediately returned an empty string. Next, I converted the input string to lowercase and split it into individual words using the `split()` method. Then, I used a `Counter` object from the `collections` module to count the occurrences of each word in the list. Finally, I found the minimum frequency among all words and, in case of ties, returned the least frequent word by taking the minimum of a list comprehension that filtered out words with the same minimum frequency.

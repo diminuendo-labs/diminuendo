@@ -1,0 +1,11 @@
+**
+
+I started by checking if the input list `nums` is empty, returning an empty string immediately if it is. This handles the edge case where there are no numbers to process.
+
+Next, I sorted the list and removed duplicates using `sorted(set(nums))`. This ensures that all numbers are in ascending order and there are no repeated values.
+
+I then iterated through the list with a while loop. For each number, I checked if it is part of a consecutive range by comparing it to the next number(s). If it is part of a range, I continued iterating until the end of the range.
+
+If the current number stands alone (i.e., it's not part of a range), I appended its string representation to the result list. If it's part of a range, I appended the start and end numbers in the 'start-end' format.
+
+Finally, I joined all elements in the result list with commas and returned the resulting string.

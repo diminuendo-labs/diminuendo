@@ -1,0 +1,3 @@
+**
+
+I chose to split the input string into a list of words using the `split()` method. This is a common and concise way to separate whitespace-separated words in Python. I then used the built-in `max()` function with the `key` argument set to `len` to find the longest word, which returns the first occurrence in case of ties by default. However, since we want the last longest word on ties, I didn't use a custom key function, but rather simply returned the result of `max()`, relying on its documentation that it returns the first maximum value if there are multiple.

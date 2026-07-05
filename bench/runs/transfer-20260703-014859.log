@@ -1,0 +1,150 @@
+FOCUSED TRANSFER 20260703-014859 (PACKET-006)
+pairings=4  arms=('none', 'menu')  R=12  total runs=120
+P1 none rep 0 (longest_word): ev=0.50 tools=0
+P1 none rep 1 (longest_word): ev=0.50 tools=0
+P1 none rep 2 (longest_word): ev=0.50 tools=0
+P1 none rep 3 (longest_word): ev=0.50 tools=0
+P1 none rep 4 (longest_word): ev=0.50 tools=0
+P1 none rep 5 (longest_word): ev=0.50 tools=0
+P1 none rep 6 (longest_word): ev=0.50 tools=0
+P1 none rep 7 (longest_word): ev=0.50 tools=0
+P1 none rep 8 (longest_word): ev=0.50 tools=0
+P1 none rep 9 (longest_word): ev=0.50 tools=0
+P1 none rep 10 (longest_word): ev=1.00 tools=0
+P1 none rep 11 (longest_word): ev=0.50 tools=0
+P1 menu rep 0 (longest_word): ev=1.00 tools=1
+P1 menu rep 1 (longest_word): ev=0.50 tools=1
+P1 menu rep 2 (longest_word): ev=0.50 tools=1
+P1 menu rep 3 (longest_word): ev=0.75 tools=1
+P1 menu rep 4 (longest_word): ev=0.50 tools=1
+P1 menu rep 5 (longest_word): ev=1.00 tools=1
+P1 menu rep 6 (longest_word): ev=1.00 tools=1
+P1 menu rep 7 (longest_word): ev=0.50 tools=1
+P1 menu rep 8 (longest_word): ev=0.50 tools=1
+P1 menu rep 9 (longest_word): ev=0.50 tools=1
+P1 menu rep 10 (longest_word): ev=1.00 tools=1
+P1 menu rep 11 (longest_word): ev=1.00 tools=1
+P2 none rep 0 (range_summary): ev=0.60 tools=0
+P2 none rep 1 (range_summary): ev=1.00 tools=0
+P2 none rep 2 (range_summary): ev=1.00 tools=0
+P2 none rep 3 (range_summary): ev=0.40 tools=0
+P2 none rep 4 (range_summary): ev=0.60 tools=0
+P2 none rep 5 (range_summary): ev=0.40 tools=0
+P2 none rep 6 (range_summary): ev=0.60 tools=0
+P2 none rep 7 (range_summary): ev=0.80 tools=0
+P2 none rep 8 (range_summary): ev=1.00 tools=0
+P2 none rep 9 (range_summary): ev=1.00 tools=0
+P2 none rep 10 (range_summary): ev=1.00 tools=0
+P2 none rep 11 (range_summary): ev=1.00 tools=0
+P2 menu rep 0 (range_summary): ev=0.40 tools=1
+P2 menu rep 1 (range_summary): ev=0.60 tools=1
+P2 menu rep 2 (range_summary): ev=0.40 tools=1
+P2 menu rep 3 (range_summary): ev=0.40 tools=1
+P2 menu rep 4 (range_summary): ev=0.80 tools=1
+P2 menu rep 5 (range_summary): ev=1.00 tools=1
+P2 menu rep 6 (range_summary): ev=0.40 tools=1
+P2 menu rep 7 (range_summary): ev=1.00 tools=1
+P2 menu rep 8 (range_summary): ev=0.60 tools=1
+P2 menu rep 9 (range_summary): ev=0.40 tools=1
+P2 menu rep 10 (range_summary): ev=0.80 tools=1
+P2 menu rep 11 (range_summary): ev=0.40 tools=1
+P3 none rep 0 (snake_to_camel): ev=0.25 tools=0
+P3 none rep 1 (snake_to_camel): ev=0.25 tools=0
+P3 none rep 2 (snake_to_camel): ev=0.25 tools=0
+P3 none rep 3 (snake_to_camel): ev=0.25 tools=0
+P3 none rep 4 (snake_to_camel): ev=0.25 tools=0
+P3 none rep 5 (snake_to_camel): ev=0.25 tools=0
+P3 none rep 6 (snake_to_camel): ev=0.25 tools=0
+P3 none rep 7 (snake_to_camel): ev=0.25 tools=0
+P3 none rep 8 (snake_to_camel): ev=0.25 tools=0
+P3 none rep 9 (snake_to_camel): ev=0.25 tools=0
+P3 none rep 10 (snake_to_camel): ev=0.25 tools=0
+P3 none rep 11 (snake_to_camel): ev=0.25 tools=0
+P3 menu rep 0 (snake_to_camel): ev=0.75 tools=2
+P3 menu rep 1 (snake_to_camel): ev=0.25 tools=2
+P3 menu rep 2 (snake_to_camel): ev=0.50 tools=2
+P3 menu rep 3 (snake_to_camel): ev=0.25 tools=2
+P3 menu rep 4 (snake_to_camel): ev=0.25 tools=2
+P3 menu rep 5 (snake_to_camel): ev=0.00 tools=2
+P3 menu rep 6 (snake_to_camel): ev=0.25 tools=2
+P3 menu rep 7 (snake_to_camel): ev=0.25 tools=2
+P3 menu rep 8 (snake_to_camel): ev=0.75 tools=2
+P3 menu rep 9 (snake_to_camel): ev=0.25 tools=2
+P3 menu rep 10 (snake_to_camel): ev=0.25 tools=2
+P3 menu rep 11 (snake_to_camel): ev=0.25 tools=2
+P4 none rep 0 (snake_to_camel): ev=0.25 tools=0
+P4 none rep 0 (balanced): ev=1.00 tools=0
+P4 none rep 1 (snake_to_camel): ev=0.25 tools=0
+P4 none rep 1 (balanced): ev=1.00 tools=0
+P4 none rep 2 (snake_to_camel): ev=0.25 tools=0
+P4 none rep 2 (balanced): ev=0.75 tools=0
+P4 none rep 3 (snake_to_camel): ev=0.25 tools=0
+P4 none rep 3 (balanced): ev=0.75 tools=0
+P4 none rep 4 (snake_to_camel): ev=0.25 tools=0
+P4 none rep 4 (balanced): ev=0.75 tools=0
+P4 none rep 5 (snake_to_camel): ev=0.25 tools=0
+P4 none rep 5 (balanced): ev=1.00 tools=0
+P4 none rep 6 (snake_to_camel): ev=0.25 tools=0
+P4 none rep 6 (balanced): ev=0.75 tools=0
+P4 none rep 7 (snake_to_camel): ev=0.25 tools=0
+P4 none rep 7 (balanced): ev=0.75 tools=0
+P4 none rep 8 (snake_to_camel): ev=0.25 tools=0
+P4 none rep 8 (balanced): ev=1.00 tools=0
+P4 none rep 9 (snake_to_camel): ev=0.25 tools=0
+P4 none rep 9 (balanced): ev=0.75 tools=0
+P4 none rep 10 (snake_to_camel): ev=0.25 tools=0
+P4 none rep 10 (balanced): ev=1.00 tools=0
+P4 none rep 11 (snake_to_camel): ev=0.25 tools=0
+P4 none rep 11 (balanced): ev=1.00 tools=0
+P4 menu rep 0 (snake_to_camel): ev=0.25 tools=1
+P4 menu rep 0 (balanced): ev=0.75 tools=1
+P4 menu rep 1 (snake_to_camel): ev=0.25 tools=1
+P4 menu rep 1 (balanced): ev=1.00 tools=1
+P4 menu rep 2 (snake_to_camel): ev=0.25 tools=1
+P4 menu rep 2 (balanced): ev=0.75 tools=1
+P4 menu rep 3 (snake_to_camel): ev=0.25 tools=1
+P4 menu rep 3 (balanced): ev=0.75 tools=1
+P4 menu rep 4 (snake_to_camel): ev=0.25 tools=1
+P4 menu rep 4 (balanced): ev=0.75 tools=1
+P4 menu rep 5 (snake_to_camel): ev=0.25 tools=1
+P4 menu rep 5 (balanced): ev=1.00 tools=1
+P4 menu rep 6 (snake_to_camel): ev=0.25 tools=1
+P4 menu rep 6 (balanced): ev=0.75 tools=1
+P4 menu rep 7 (snake_to_camel): ev=0.25 tools=1
+P4 menu rep 7 (balanced): ev=0.75 tools=1
+P4 menu rep 8 (snake_to_camel): ev=0.25 tools=1
+P4 menu rep 8 (balanced): ev=1.00 tools=1
+P4 menu rep 9 (snake_to_camel): ev=0.25 tools=1
+P4 menu rep 9 (balanced): ev=0.75 tools=1
+P4 menu rep 10 (snake_to_camel): ev=0.25 tools=1
+P4 menu rep 10 (balanced): ev=1.00 tools=1
+P4 menu rep 11 (snake_to_camel): ev=0.25 tools=1
+P4 menu rep 11 (balanced): ev=0.75 tools=1
+== POOLED RULE CHECKS (passed/n per arm) ==
+  P1: none=2/24  menu=12/24
+  P2: none=9/12  menu=3/12
+  P3: none=0/12  menu=2/11
+  P4: none=18/36  menu=17/36
+== PER-CHECK (none / menu) ==
+  P1 longest_word('cat door bird'): 0.08 / 0.50  <-- rule
+  P1 longest_word('a bb cc d'): 0.08 / 0.50  <-- rule
+  P1 longest_word(''): 1.00 / 0.92
+  P1 longest_word('one'): 1.00 / 1.00
+  P2 range_summary([1, 2, 3, 5]): 0.58 / 0.33
+  P2 range_summary([3, 1, 2, 2]): 0.75 / 0.25  <-- rule
+  P2 range_summary([5, 3, 1]): 0.58 / 0.42
+  P2 range_summary([]): 1.00 / 1.00
+  P2 range_summary([7]): 1.00 / 1.00
+  P3 snake_to_camel('foo_bar_baz'): 0.00 / 0.18
+  P3 snake_to_camel('__a__b_'): 0.00 / 0.18  <-- rule
+  P3 snake_to_camel('word'): 0.00 / 0.18
+  P3 snake_to_camel(''): 1.00 / 0.91
+  P4 balanced('(a(b)c)'): 1.00 / 1.00  <-- rule
+  P4 balanced(')('): 0.50 / 0.42  <-- rule
+  P4 balanced(''): 1.00 / 1.00
+  P4 balanced('((x)'): 1.00 / 0.92
+  P4 snake_to_camel('foo_bar_baz'): 0.00 / 0.00
+  P4 snake_to_camel('__a__b_'): 0.00 / 0.00  <-- rule
+  P4 snake_to_camel('word'): 0.00 / 0.00
+  P4 snake_to_camel(''): 1.00 / 1.00
+GATE: PASSED. four pairings, both arms complete, every armed run carried tools (min=1), every run checkpointed, report persisted. The reading rules are applied in the packet RESULTS.

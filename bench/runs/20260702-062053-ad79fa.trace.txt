@@ -1,0 +1,2 @@
+**
+I implemented the `flatten_once` function by iterating over each element in the input list. If an element is a list itself, I append its items to the result list. Otherwise, I simply append the original element to the result list. I specifically handled the edge case where the nested list is empty, ensuring it's preserved as is. I aimed for concise and readable code by using clear variable names and comments.

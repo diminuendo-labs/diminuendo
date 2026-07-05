@@ -1,0 +1,2 @@
+**  
+I chose to iterate through the list from the end towards the beginning to ensure that if the largest value appears multiple times, its last occurrence's index is returned. This method avoids using additional libraries and keeps the solution concise. The function also includes an edge case check for an empty list, which returns `None` as specified in the criteria.

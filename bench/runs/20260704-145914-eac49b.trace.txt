@@ -1,0 +1,2 @@
+**
+I implemented the `merge_within` function using a simple and efficient approach. I first checked for the edge case of an empty input list, returning an empty list in this case. Then, I sorted the input pairs by their start value to make merging ranges easier. Finally, I iterated over the sorted pairs, merging adjacent or nearby ranges into a single range with updated end value if necessary. This approach ensures that merged ranges are always contiguous and sorted by start value as required.

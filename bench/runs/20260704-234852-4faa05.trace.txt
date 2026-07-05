@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `sorted` function with a custom key. The lambda function sorts primarily by the length of the words and secondarily by the negative ASCII value of the last character, effectively achieving reverse-alphabetical order for words of equal length. This approach handles ties correctly according to the given edge case: when returning the last word among those with the shortest length if there are multiple such words. The function also includes checks to handle out-of-range values for `k`.

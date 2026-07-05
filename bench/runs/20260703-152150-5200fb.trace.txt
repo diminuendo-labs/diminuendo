@@ -1,0 +1,3 @@
+**
+
+I started by sorting the list and removing duplicates to ensure that each value is counted only once. I then iterated through the sorted list, identifying consecutive ranges by checking if the next number is exactly one greater than the current number. If a range is found, it's formatted as 'start-end'. Single numbers are added as is. Finally, the result list is joined into a string with commas separating the values. This approach ensures that the function handles edge cases such as empty lists and consecutive runs efficiently while producing a clear and concise output.

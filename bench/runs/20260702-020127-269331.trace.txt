@@ -1,0 +1,2 @@
+**
+I implemented the `median` function to handle both odd and even lengths of the input list `nums`. The function first checks if the list is empty, returning `None` if it is. Then, it sorts the list. If the length of the sorted list is odd, the function returns the middle element as a float. If the length is even, it calculates the average of the two middle elements and returns that value as a float. This approach ensures correctness by handling all edge cases, including an empty input list.

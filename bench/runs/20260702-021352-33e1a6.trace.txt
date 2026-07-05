@@ -1,0 +1,2 @@
+**
+I chose a conceptual approach that involves sorting the input ranges by their start value, and then iterating through them to merge any overlapping or touching ranges. This is achieved using Python's built-in `sort()` method and a simple loop to update the list of merged ranges. I also handled the edge case where an empty list is passed as input, returning an empty list in this scenario.

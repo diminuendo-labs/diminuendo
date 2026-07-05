@@ -1,0 +1,3 @@
+**
+
+I chose to use a dictionary to keep track of the frequency of each number. This allows me to easily check how many times each number appears in the list and then count the numbers that appear exactly once. I also included an edge case where it returns 0 for an empty list, as per the requirements. The function is concise and readable, with clear variable names and docstrings explaining its purpose and parameters.

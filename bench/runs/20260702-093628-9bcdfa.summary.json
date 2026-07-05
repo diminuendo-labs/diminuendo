@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-093628-9bcdfa",
+  "node_id": "task-20260702-093628-9bcdfa",
+  "task": "Write a Python function median(nums) returning the middle value of the sorted list when the length is odd, or the average of the two middle values as a float when the length is even. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function correctly calculates the median for both odd and even lengths, handles empty lists, and includes a comment for the edge case.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "median([3, 1, 2])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "median([1, 2, 3, 4])",
+        "ok": true,
+        "got": "2.5",
+        "expect": "2.5"
+      },
+      {
+        "call": "median([5, 5])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "median([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef median(nums):\n    \"\"\"\n    Calculate the median of a list of numbers.\n\n    Args:\n        nums (list): A list of numbers.\n\n    Returns:\n        float or None: The median value, or None if the input list is empty.\n    \"\"\"\n    nums = sorted(nums)\n    n = len(nums)\n    \n    if n == 0:\n        return None\n    \n    middle_index = n // 2\n    if n % 2 != 0:  # odd length\n        return nums[middle_index]\n    else:  # even length\n        return (nums[middle_index - 1] + nums[middle_index]) / 2.0\n```\n\n**",
+  "trace": "**\nI implemented the median function by first sorting the input list of numbers in ascending order using the built-in `sorted` function. I then checked for the edge case where the input list is empty, returning `None` immediately. To calculate the median, I determined whether the length of the list was odd or even and applied the corresponding calculation: if it's odd, I return the middle value; if it's even, I return the average of the two middle values.",
+  "totals": {
+    "time_s": 22.769821399999998,
+    "tokens": 795
+  },
+  "files": [
+    "20260702-093628-9bcdfa.crumbs.jsonl",
+    "20260702-093628-9bcdfa.trace.txt"
+  ]
+}

@@ -1,0 +1,2 @@
+**
+I approached this problem by using two counters, `max_depth` and `current_depth`, to keep track of the maximum nesting depth encountered so far and the current depth as I iterate through the string. When a closing bracket is encountered before its opener or when an opener is never closed (i.e., `current_depth == 0`), I return -1 immediately. Finally, after iterating through the entire string, if `current_depth` is still not zero, it means there are unclosed openers and I return -1; otherwise, I return the maximum depth found.

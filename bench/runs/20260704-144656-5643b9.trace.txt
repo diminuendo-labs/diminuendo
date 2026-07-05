@@ -1,0 +1,2 @@
+**
+I solved this problem by iterating over each pair in the input list and checking for overlaps with existing merged ranges. If a pair overlaps with an existing merge, I extend that range; otherwise, I add it to the list of merges. Finally, I sort the list of merges by start value before returning. This approach allows me to handle overlapping and non-overlapping pairs efficiently while maintaining code conciseness and readability.

@@ -1,0 +1,2 @@
+**
+I used the built-in `sorted` function with a custom sorting key to achieve the desired ordering. The key is a tuple where the first element is the length of each word and the second element is the negative ASCII value of the first character (to sort reverse-alphabetically). I handled the edge case when `k` is greater than the number of words by catching the `IndexError` exception, returning `None` in this case. This approach allows for concise code while maintaining readability.

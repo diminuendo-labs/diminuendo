@@ -1,0 +1,2 @@
+**
+I chose to use a simple count-based approach to solve this problem. Since each opening parenthesis must be matched with a closing one, the total number of opening and closing parentheses should be equal for a balanced string. This property allows us to simply compare the counts of '(' and ')' in the string. I handled the edge case where an empty string is input as True, because there are no unbalanced parentheses in an empty string.

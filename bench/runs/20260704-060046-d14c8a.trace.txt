@@ -1,0 +1,3 @@
+**
+
+I approached this task by recognizing that a string of balanced parentheses will have an equal number of opening and closing parentheses. I chose to use Python's built-in `count()` method to count the occurrences of '(' and ')' in the input string, comparing these counts to determine if the string is balanced. This solution is concise because it only requires two lines of code, and readable because it uses a clear and descriptive variable name (`s`) and includes a docstring that explains the function's behavior and parameters.

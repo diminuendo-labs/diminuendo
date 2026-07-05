@@ -1,0 +1,13 @@
+**
+
+The function `merge_within` first checks if the input list `pairs` is empty. If it is, an empty list is returned immediately as there are no ranges to merge.
+
+Next, the list of pairs is sorted based on their starting values to ensure that we process them in a logical order. The sorted list is stored in the variable `merged`.
+
+A result list is initialized with the first range from the sorted list. This list will store the merged ranges.
+
+The function then iterates through each range in the sorted list starting from the second element. For each range, it checks if the current range overlaps or lies within distance `d` of the last range added to the result list. If they overlap (i.e., the start of the current range is less than or equal to the end of the last range plus `d`), the function updates the end of the last range in the result list to be the maximum of its current end and the end of the current range. This effectively merges the two ranges.
+
+If the current range does not overlap with the last range in the result list, it is added as a new range to the result list.
+
+Finally, the function returns the result list containing all merged ranges.

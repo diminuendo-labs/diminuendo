@@ -1,0 +1,8 @@
+**
+I started by checking if the input list `pairs` is empty. If it is, I immediately return an empty list as there's nothing to merge.
+
+Next, I initialize the `merged` list with the first element of the sorted `pairs`. Sorting ensures that we process ranges in order from smallest start time to largest.
+
+I then iterate through the rest of the sorted pairs. For each pair, I check if it overlaps or is within distance `d` of the last range in the `merged` list. If so, I merge them by updating the end time of the last merged range to the maximum end time between the current and the last range. If not, I add the current range as a new entry in the `merged` list.
+
+This approach ensures that all overlapping or close ranges are merged, and the result is sorted by start times. The use of sorting at the beginning simplifies the merging logic significantly.

@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-052923-31afdb",
+  "node_id": "task-20260702-052923-31afdb",
+  "task": "Write a Python function count_unique(nums) returning how many values appear exactly once in the list. Values that repeat do not count at all: [1, 2, 2, 3] has two such values, 1 and 3. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function does not handle the edge case of an empty list correctly. An empty list should return 0, but it will instead raise a KeyError.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_case_handling": 2
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_unique([1, 2, 2, 3])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_unique([5, 5])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([7])",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef count_unique(nums):\n    \"\"\"\n    Counts the number of unique values that appear only once in the list.\n\n    Args:\n        nums (list): A list of integers.\n\n    Returns:\n        int: The number of unique values that appear only once.\n    \"\"\"\n    return sum(1 for num in set(nums) if nums.count(num) == 1)\n```\n\n**",
+  "trace": "**\n\nI solved this task by using the built-in `set` function to remove duplicates from the list, and then iterating over these unique values to count those that appear exactly once. The edge case I considered is an empty list, which would cause a `ZeroDivisionError` in some approaches; with my solution, it simply returns 0 as intended. I chose to use the concise but clear approach of summing up the counts of unique numbers that appear only once, rather than trying to optimize for performance or using more complex data structures.",
+  "totals": {
+    "time_s": -1.8297954,
+    "tokens": 18
+  },
+  "files": [
+    "20260702-052923-31afdb.crumbs.jsonl",
+    "20260702-052923-31afdb.trace.txt"
+  ]
+}

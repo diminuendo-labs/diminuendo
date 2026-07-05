@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-204738-8fdae0",
+  "node_id": "task-20260704-204738-8fdae0",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly calculates the trimmed mean by dropping exactly one occurrence of the minimum and maximum values.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness": 4,
+    "readability": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n\n    nums.sort()\n    min_occurrences = nums.count(min(nums))\n    max_occurrences = nums.count(max(nums))\n\n    if (min_occurrences > 1) or (max_occurrences > 1):\n        nums = nums[1:-1]\n\n    return sum(nums) / len(nums)\n```",
+  "trace": "First, I sorted the list in ascending order to make it easier to identify minimum and maximum occurrences. Then, I calculated the number of occurrences for both the minimum and maximum values. If either value has more than one occurrence, I remove those values from the list while ensuring not to remove the first or last element. Finally, I calculate and return the mean of the remaining elements as a float. This function handles an edge case where either the minimum or maximum value might appear more than once in the list.",
+  "totals": {
+    "time_s": 27.411085,
+    "tokens": 693
+  },
+  "files": [
+    "20260704-204738-8fdae0.crumbs.jsonl",
+    "20260704-204738-8fdae0.trace.txt"
+  ]
+}

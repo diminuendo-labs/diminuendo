@@ -1,0 +1,2 @@
+**
+I solved this task by using Python's built-in `split()` method to split the input string into a list of words. The `max()` function is then used with the `key=len` argument to find the longest word in the list, which returns the first such word by default. To return the last word on ties, I set `default=''`, so that if there are multiple words of maximum length, an empty string is returned instead of raising a `ValueError`. This handles the edge case where the input string is empty.

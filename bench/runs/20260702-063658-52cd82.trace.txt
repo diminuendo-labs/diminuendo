@@ -1,0 +1,2 @@
+**
+I chose to use a simple iterative approach, checking each element in the input list to see if it's also a list. If so, I used the `extend` method to add its elements to the result list. This way, every other element is kept as is, and deeper nesting remains nested. One edge case this function handles is when the input list contains non-list elements at the top level.

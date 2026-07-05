@@ -1,0 +1,2 @@
+**
+I approached this task by using Python's built-in string methods `split` and `capitalize`. I chose to use a generator expression within the `join` method, which allows us to process each word individually while being memory-efficient. This function will handle an edge case where an input contains only underscores, e.g., `'___'`, returning an empty string as per the task's requirement.

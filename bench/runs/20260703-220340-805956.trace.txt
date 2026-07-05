@@ -1,0 +1,8 @@
+**
+1. **Handling the Edge Case:** The function first checks if the input list `nums` is empty. If it is, an empty string is immediately returned.
+2. **Sorting and Deduplication:** The input list is sorted and duplicates are removed by converting it to a set and back to a list.
+3. **Range Identification:** We iterate through the sorted list to identify consecutive numbers. When a gap is found, we add either a single number or a range (start-end) to the `ranges` list.
+4. **Final Adjustment:** After the loop, we ensure that any remaining sequence of numbers is added to the `ranges` list.
+5. **Output Formatting:** The ranges are joined into a string with commas and returned.
+
+This approach ensures the function is both correct and concise, adhering to the criteria provided.

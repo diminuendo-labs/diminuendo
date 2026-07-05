@@ -1,0 +1,3 @@
+**
+
+I used the `re` module to find all whitespace-separated words in the input string, converting it to lowercase first. This ensures that the function treats 'Word' and 'word' as the same word. I then counted the occurrences of each word using the `Counter` class from the `collections` module. To handle ties, I used a list comprehension to get all words with the maximum count, and then found the lexicographically smallest one using the built-in `min` function. This approach is concise and readable while handling the edge case where an empty string is input.

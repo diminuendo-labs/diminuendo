@@ -1,0 +1,57 @@
+{
+  "run_id": "20260704-091222-b2c533",
+  "node_id": "task-20260704-091222-b2c533",
+  "task": "Write a Python function median(nums) returning the middle value of the sorted list when the length is odd, or the average of the two middle values as a float when the length is even. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided Python function correctly calculates the median of a list, handles an edge case where an empty list returns None, and meets readability standards.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "median([3, 1, 2])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "median([1, 2, 3, 4])",
+        "ok": true,
+        "got": "2.5",
+        "expect": "2.5"
+      },
+      {
+        "call": "median([5, 5])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "median([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef median(nums):\n    if not nums:\n        return None\n    sorted_nums = sorted(nums)\n    mid_index = len(sorted_nums) // 2\n    if len(sorted_nums) % 2 == 1:\n        return sorted_nums[mid_index]\n    else:\n        return (sorted_nums[mid_index - 1] + sorted_nums[mid_index]) / 2\n```",
+  "trace": "I wrote a function `median(nums)` that first checks if the input list is empty, and returns None in such cases. If not, it sorts the list and calculates the middle index. When the length of the sorted list is odd, it returns the value at the calculated index. Otherwise, it computes the average of the two middle values and returns it as a float. An edge case considered here is when the input list is empty.",
+  "totals": {
+    "time_s": 26.547967999999997,
+    "tokens": 679
+  },
+  "files": [
+    "20260704-091222-b2c533.crumbs.jsonl",
+    "20260704-091222-b2c533.trace.txt"
+  ]
+}

@@ -1,0 +1,3 @@
+**
+
+To solve this problem, I chose to use Python's `collections.Counter` to count the occurrences of each word. After splitting the input string into individual words and converting them to lowercase, I determined the maximum count of any word. Then, I collected all words that have this maximum count. Finally, I returned the lexicographically smallest (i.e., alphabetically first) of these most common words. This approach ensures that ties are broken by selecting the word that comes first alphabetically, meeting the specified criteria.

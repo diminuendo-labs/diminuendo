@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `split()` method of strings in Python to split the input string into a list of words. This method splits on any amount of whitespace by default, which meets the problem's requirements. I then used the `max()` function with the `key` argument set to `len` to find the longest word among these. If the input string is empty (an edge case), `split()` returns an empty list and `default=''` ensures that an empty string is returned instead of raising a TypeError.

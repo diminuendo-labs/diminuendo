@@ -1,0 +1,2 @@
+** 
+I started by checking if the list is empty, returning an empty string as specified. Then, I initialized the prefix with the first string in the list. For each subsequent string, I reduced the length of the prefix from the end until it became a valid prefix for that string or became empty. This approach ensures that the function correctly identifies the longest common prefix among all strings in the list, handling cases where no common prefix exists by returning an empty string.

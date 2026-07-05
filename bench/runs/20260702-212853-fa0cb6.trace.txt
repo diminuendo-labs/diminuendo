@@ -1,0 +1,8 @@
+**
+1. The function `count_token` takes two parameters: a string `s` and a word `w`.
+2. It first checks if the input string `s` is empty. If it is, the function returns 0 as per the edge case.
+3. The regular expression `\b\w+\b` is used to find all whitespace-separated words in the string, effectively removing any leading or trailing punctuation from each word.
+4. It then counts how many of these cleaned words match `w`, ignoring case sensitivity by converting both the word and the input `w` to lowercase before comparison.
+5. Finally, it returns the count of matching words.
+
+This approach ensures that only whole words are considered, ignoring any substrings within longer words and handling punctuation as specified.

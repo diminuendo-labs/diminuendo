@@ -1,0 +1,3 @@
+**
+
+I first check if the input list is empty and return an empty string if true. Then, I sort the list to ensure the numbers are in ascending order. I initialize `start` and `end` with the first number of the sorted list. As I iterate through the rest of the numbers, I check if each number is consecutive to the current end. If it is, I update the end. If not, I append the range (or single number) to my results list and reset start and end to the current number. After the loop, I add the last range or number to the results list. Finally, I join all elements in the list with a comma and return the result. This approach ensures that consecutive numbers are collapsed into ranges, while single numbers remain as is.

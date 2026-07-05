@@ -1,0 +1,2 @@
+**
+I chose to implement this function using a stack data structure because it naturally fits the problem of matching pairs. The function iterates over each character in the input string and uses the opening parenthesis as a "push" operation on the stack, and the closing parenthesis as a "pop" operation. If there's no corresponding opening parenthesis before a closing one (the edge case), or if there are unmatched closing parentheses at the end of the iteration, the function returns False. Otherwise, it returns whether the stack is empty (indicating balanced parentheses).

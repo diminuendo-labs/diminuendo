@@ -1,0 +1,2 @@
+**
+I wrote a concise and readable function that meets the requirements by first checking for edge cases (empty lists, one-element lists, or two-element lists). If the list passes this check, I remove the minimum and maximum elements from the list using Python's built-in `min` and `max` functions, and then return the mean of the resulting list. This approach ensures that exactly one occurrence of the minimum and one occurrence of the maximum are dropped before calculating the mean.

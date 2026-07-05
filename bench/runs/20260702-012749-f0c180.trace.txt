@@ -1,0 +1,3 @@
+**
+
+The function `vowel_count` takes a string `s` as input and returns the number of vowels it contains. The implementation uses Python's `sum` function combined with a generator expression to count each occurrence of a vowel (both lowercase and uppercase are considered by converting the string to lowercase). The edge case handled is that both uppercase and lowercase vowels are counted, ensuring the function is case-insensitive.

@@ -1,0 +1,6 @@
+**
+I approached this task by first checking for an edge case where the input string is empty or contains only whitespace. In such cases, I return an empty string immediately.
+
+For the main logic, I split the string into individual words and then find the maximum length of these words using a generator expression. To handle ties (where multiple words have the same maximum length), I create a list comprehension that includes all words with the maximum length. Since we need to return the last such word in case of a tie, I reverse the list of words before selecting the first element.
+
+This approach ensures that the function is both correct and concise while handling ties as specified.

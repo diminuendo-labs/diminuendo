@@ -1,0 +1,8 @@
+**
+The function `count_word(s, w)` takes two parameters: a string `s` and a word `w`. It first checks if the input string `s` is empty. If it is, it returns 0 as there are no words to count.
+
+If the string is not empty, it splits the string into individual words using the `split()` method, which by default separates by whitespace. Then, it uses a generator expression within the `sum()` function to iterate through each word in the list of words. For each word, it checks if the lowercase version of the word matches the lowercase version of the target word `w`. If they match, it counts that word.
+
+Finally, it returns the total count of matching words.
+
+The edge case handled here is when the input string `s` is empty, as explicitly returning 0 in this scenario prevents unnecessary processing and ensures the function behaves predictably.

@@ -1,0 +1,2 @@
+**
+I chose a straightforward approach by first sorting the input pairs by their start values. Then, I iterated through the sorted pairs and checked if they overlap with the last merged range. If not, I added them to the merged list. If they do overlap, I updated the end value of the last merged range. This approach ensures that ranges are merged correctly while maintaining a linear time complexity.

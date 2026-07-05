@@ -1,0 +1,2 @@
+**
+I implemented a Python function that uses the built-in `split` and `max` functions to find the longest word in the given string. The `split` method splits the string into whitespace-separated words, which are then passed as arguments to the `max` function with the `key=len` argument. This ensures that the maximum length is chosen based on the length of each word. I also included an edge case by returning an empty string if the input string `s` is empty, which matches one of the specified criteria.

@@ -1,0 +1,3 @@
+**
+
+The function `chunk_pad` first checks if the input list `lst` is empty. If it is, an empty list is returned immediately to handle this edge case. Otherwise, a list comprehension is used to generate chunks of size `k` from the list. The slice operation `i:i + k` extracts elements in chunks of `k`. After generating these complete chunks, the function appends one last chunk filled with `None` values if there are fewer than `k` elements left over in the original list. This ensures that every chunk has exactly `k` elements.

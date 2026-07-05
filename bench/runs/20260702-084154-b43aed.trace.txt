@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `split()` function to split the input string into a list of whitespace-separated words. I then used the `min()` function with the `key` argument set to `len` to find the shortest word in the list. In case the input string is empty, the expression `words or ''` returns an empty string instead of raising an error.

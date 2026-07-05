@@ -1,0 +1,1 @@
+I used a list comprehension to iterate over the input list. If an element is not a list, it gets passed through unchanged (int, float, str, tuple etc.). If it's a list, I recursively call `flatten_once` on it to flatten one level of nesting. An edge case handled here is that empty lists or non-lists get returned as they are.

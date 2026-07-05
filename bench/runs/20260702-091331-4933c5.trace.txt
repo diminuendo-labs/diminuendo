@@ -1,0 +1,6 @@
+**
+- The function first checks if the input list `nums` is empty. If it is, an empty string is returned as per the edge case.
+- The list is sorted and duplicates are removed by converting it to a set and back to a list.
+- We then iterate through the sorted list using a while loop. For each number, we check if there are consecutive numbers following it. If so, we continue moving forward until we find the end of this run.
+- Depending on whether the start and end of the range are the same, we format either as 'start-end' or just 'start'.
+- Finally, we join all parts of the result with commas to form the final string and return it.

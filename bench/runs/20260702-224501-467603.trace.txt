@@ -1,0 +1,2 @@
+**
+I chose to implement the median function using a straightforward approach, sorting the input list and then checking if its length is odd or even. If it's odd, I simply return the middle element. If it's even, I calculate the average of the two middle elements. The edge case for an empty list is explicitly handled by returning None in this scenario.

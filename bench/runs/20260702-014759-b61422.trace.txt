@@ -1,0 +1,3 @@
+**
+
+I chose a straightforward approach to solve this problem by iterating through each element of the input list. If an element is another list, I used `extend()` to add its items to the result list. Otherwise, I simply appended the item to the result list. This ensures that exactly one level of nesting is flattened while deeper nested structures remain intact. The function handles any edge cases where elements within the input list are not lists or other iterable types.

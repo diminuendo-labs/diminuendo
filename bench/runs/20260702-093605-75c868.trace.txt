@@ -1,0 +1,2 @@
+**
+I chose to use a concise and readable solution that takes advantage of Python's built-in `max` function with the `split` method, which splits the input string into words. This approach allows me to handle the edge case where the input string is empty, as specified in the task requirements. I also considered the tie-break rule by using the `len` function as the key for the `max` function, ensuring that if there are multiple longest words, the last one encountered will be returned.

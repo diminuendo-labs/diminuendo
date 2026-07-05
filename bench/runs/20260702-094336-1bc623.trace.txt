@@ -1,0 +1,2 @@
+**
+I first handled the edge case of an empty list by immediately returning an empty string. Then I sorted and removed duplicates from the input list, as these do not affect the result. Next, I iterated over the distinct numbers, keeping track of the current range's start value; whenever a number is not one greater than the previous, or at the end of the iteration, I added the corresponding 'start-end' string to the result list (unless it was a single number).

@@ -1,0 +1,2 @@
+**
+I chose a simple iterative approach to solve this problem. I initialized two variables, `current_char` and `current_count`, to keep track of the current character being processed and its count. As I iterate through the string, if the current character matches the previous one, I increment the count; otherwise, I append the previous character's encoded form to the result list and reset `current_char` and `current_count`. At the end, I join the result list into a single string.

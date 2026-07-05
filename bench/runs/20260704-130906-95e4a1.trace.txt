@@ -1,0 +1,3 @@
+The function `token_case()` takes an underscore-delimited identifier as input. It first checks if the given string is in the exception list ['URL', 'ID']. If it is, then it returns the given string without any changes. Otherwise, it splits the string into tokens using underscores and capitalizes each token except for the first one.
+
+To handle an edge case, we check if the first token starts with a digit (e.g., "4ID"). In this case, we join all tokens together to maintain the correct order since 'ID' is an exception token that should not be modified. The capitalized version of the identifier is then returned as camelCase.

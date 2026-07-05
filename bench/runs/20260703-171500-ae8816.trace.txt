@@ -1,0 +1,1 @@
+The function `dedupe` takes a list of items as input, converts it into a set which automatically removes duplicates, and then converts the set back into a list to maintain the original order. This approach ensures that duplicates are eliminated while preserving the order of first appearance. One edge case handled here is when there are duplicate elements in the input list.

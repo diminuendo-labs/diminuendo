@@ -1,0 +1,10 @@
+**
+To solve the problem, I first handle the edge case where the input string is empty or contains only whitespace by checking `if not s.strip()`. If so, I return an empty string.
+
+Next, I split the string into words using `s.split()`, which handles multiple spaces correctly and returns a list of words.
+
+I then find the maximum length of these words using `max(len(word) for word in words)`.
+
+To handle ties (multiple words with the same longest length), I create a list of all words that have this maximum length by iterating over the reversed list of words. This ensures that if there are multiple longest words, the last one encountered is returned.
+
+Finally, I return the last word from this list if it exists, otherwise an empty string.

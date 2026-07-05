@@ -1,0 +1,15 @@
+**
+
+To solve the problem of finding the second largest distinct value in a list, I followed these steps:
+
+1. **Edge Case Handling**: First, I checked if the length of the list is less than 2. If so, I immediately returned `None` because there cannot be a second largest element.
+
+2. **Unique Elements**: Next, I converted the list to a set to remove any duplicate values and ensure that we are working with distinct elements only.
+
+3. **Finding Second Largest**: I then initialized two variables, `first` and `second`, to negative infinity to keep track of the largest and second largest unique numbers encountered in the list. As I iterated through the set, I updated these variables accordingly:
+   - If the current number is greater than `first`, it becomes the new `first`, and `first` takes the place of `second`.
+   - Otherwise, if the current number is between `first` and `second`, it updates `second`.
+
+4. **Return Result**: Finally, I returned `second` if it was updated from negative infinity; otherwise, I returned `None`. This handles the edge case where all elements in the list are the same.
+
+This approach ensures that the function is both correct and concise, with a clear separation of concerns for each step of the process.

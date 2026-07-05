@@ -1,0 +1,2 @@
+**
+I implemented this function by first sorting the input ranges by their start values. Then, I iterated over the sorted ranges and checked if each new range overlaps or sits within 1 unit of distance from the previous merged range. If it does, I merged them together. Otherwise, I added the new range to the list of merged ranges. This approach ensures that the function is both correct and efficient for handling a large number of input ranges. The edge case where an empty list is passed as input is explicitly handled by returning an empty list in this situation.

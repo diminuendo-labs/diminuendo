@@ -1,0 +1,3 @@
+**
+
+I chose to sort the input list by the start value of each range, which simplifies the merging process. This approach also ensures that non-overlapping ranges are adjacent in the sorted list, making it easier to merge them. I included a check for an empty input list and handled it as a special case to meet the edge case criteria.

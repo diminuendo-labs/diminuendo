@@ -1,0 +1,2 @@
+**
+I implemented this function using a combination of list comprehensions and the built-in `max()` function to find the maximum length of words in the input string. The `next()` function is used with a generator expression to find the last word of equal maximum length, if it exists. I chose to use this approach because it's concise and efficient, while still being easy to read and understand. This solution also handles the edge case where the input string contains only whitespace characters, in which case an empty string is returned.

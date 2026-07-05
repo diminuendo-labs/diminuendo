@@ -1,0 +1,2 @@
+**
+I chose to use a set to store the distinct pairs and their sorted tuples as keys. This allows me to efficiently count the number of distinct unordered pairs by simply taking the length of the set at the end. The edge case where an empty input list is returned 0 is handled with a simple conditional statement at the beginning of the function. I also used a nested loop structure to iterate over all possible pairs in the list, which has a time complexity of O(n^2) but is sufficient for this problem's constraints.

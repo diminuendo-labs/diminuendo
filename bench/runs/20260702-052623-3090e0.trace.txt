@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `max()` function to find the largest value in the list, and then use the `index()` method of lists to get its index. This approach is concise and readable, while also meeting the requirements of the task. The edge case it handles is when all numbers in the list are negative, in which case `max_index([])` would return 0 if an empty list were passed, but since we're working with a non-empty list here, this isn't directly relevant; however, the comment clarifies that the function is designed to handle such cases.

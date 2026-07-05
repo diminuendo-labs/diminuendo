@@ -1,0 +1,3 @@
+**
+
+I split the input string into tokens using underscore as a delimiter. Then I iterate over each token, keeping it lowercase unless it's an exception list item or it's the first token (which should always be lowercased). The function uses list comprehension to build the camel case string by concatenating all valid tokens without any separators. This solution handles edge cases such as when the input is a single underscore-delimited identifier (e.g., 'hello_world') and when an exception list item appears at the beginning of the identifier (e.g., 'URL_hello').

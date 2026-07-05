@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-170610-ab0401",
+  "node_id": "task-20260703-170610-ab0401",
+  "task": "Write a Python function depth_max(s) returning the maximum nesting depth of square brackets in the string, counting only the characters [ and ] and ignoring everything else. When a closing bracket appears before its opener, or any opener is never closed, return -1. An empty string returns 0. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly handles the nesting of square brackets, including edge cases.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "depth_max('[a[b]]')",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "depth_max(']fine[')",
+        "ok": true,
+        "got": "-1",
+        "expect": "-1"
+      },
+      {
+        "call": "depth_max('[[')",
+        "ok": false,
+        "got": "2",
+        "expect": "-1"
+      },
+      {
+        "call": "depth_max('')",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef depth_max(s):\n    depth, max_depth = 0, 0\n    for bracket in s:\n        if bracket == '[':\n            depth += 1\n            max_depth = max(max_depth, depth)\n        elif bracket == ']':\n            if not depth:\n                return -1  # edge case: closing bracket without opening one\n            depth -= 1\n    return max_depth\n```",
+  "trace": "The function `depth_max(s)` takes a string `s` as input and calculates the maximum nesting depth of square brackets. It uses two variables to keep track of the current depth and the maximum depth found so far. The inner loop iterates through each character in the string, incrementing or decrementing the depth accordingly when encountering an opening or closing bracket, respectively. An edge case is handled by checking if a closing bracket appears before its opener, in which case the function returns -1. To ensure that the function can handle an empty string correctly, it initializes the maximum depth to 0 instead of None.",
+  "totals": {
+    "time_s": -0.18971220000000066,
+    "tokens": -92
+  },
+  "files": [
+    "20260703-170610-ab0401.crumbs.jsonl",
+    "20260703-170610-ab0401.trace.txt"
+  ]
+}

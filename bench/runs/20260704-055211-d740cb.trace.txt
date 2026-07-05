@@ -1,0 +1,2 @@
+**
+I chose to use a list comprehension to concisely implement the desired behavior. To handle edge cases, I added a simple condition using `isinstance` to check if the input is a list; if so, it gets flattened, otherwise it's returned as is. This approach handles an edge case where a non-list element is present in the input (e.g., `[1, [2, 3], 'a']`).

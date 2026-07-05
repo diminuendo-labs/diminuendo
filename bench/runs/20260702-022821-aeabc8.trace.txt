@@ -1,0 +1,2 @@
+**
+I chose to approach this problem by first handling the edge case of an empty list. Then, I used Python's built-in `sorted` function and `set` data structure to get distinct numbers in ascending order. Next, I implemented a simple loop that tracks consecutive runs of numbers and appends range notation when necessary. This solution is concise and readable, using minimal lines of code while still clearly expressing the logic required for this problem.

@@ -1,0 +1,3 @@
+**
+
+I chose to use a stack data structure to keep track of the opening parentheses encountered so far. When I encounter a closing parenthesis, I check if the stack is empty; if it is, that means there's no matching opening parenthesis, so the string is not balanced. If the stack is not empty, I pop the last opening parenthesis from the stack. At the end, I return whether the stack is empty; if it is, then all parentheses were matched correctly. This approach ensures readability and conciseness while handling edge cases like an empty string being balanced.

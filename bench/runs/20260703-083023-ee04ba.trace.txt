@@ -1,0 +1,2 @@
+**
+I chose to use the `Counter` class from the `collections` module to efficiently count the frequency of each number in the list. This allowed me to easily identify the maximum frequency and then filter the numbers with that frequency to find the distinct modes. I explicitly handled the edge case where the input list is empty, as per the requirements.

@@ -1,0 +1,2 @@
+**
+I chose to use a concise and readable approach by utilizing Python's built-in string methods. The function splits the input string into a list of whitespace-separated words, then uses a generator expression to find the last word with the maximum length in case of a tie. This approach is efficient because it only iterates over the list once, and it handles the edge case where an empty string is returned when no words are found.

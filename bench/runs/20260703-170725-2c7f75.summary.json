@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-170725-2c7f75",
+  "node_id": "task-20260703-170725-2c7f75",
+  "task": "Write a Python function depth_max(s) returning the maximum nesting depth of square brackets in the string, counting only the characters [ and ] and ignoring everything else. When a closing bracket appears before its opener, or any opener is never closed, return -1. An empty string returns 0. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code meets all the requirements for correctness, conciseness, and readability.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 1
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "depth_max('[a[b]]')",
+        "ok": false,
+        "got": "-1",
+        "expect": "2"
+      },
+      {
+        "call": "depth_max(']fine[')",
+        "ok": true,
+        "got": "-1",
+        "expect": "-1"
+      },
+      {
+        "call": "depth_max('[[')",
+        "ok": true,
+        "got": "-1",
+        "expect": "-1"
+      },
+      {
+        "call": "depth_max('')",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef depth_max(s):\n    depth, max_depth = 0, 0\n    for bracket in s:\n        if bracket == '[':\n            depth += 1\n            max_depth = max(depth, max_depth)\n        elif bracket == ']':\n            if depth > 0:\n                depth -= 1\n            else:\n                return -1\n    return max_depth if not s else -1\n```",
+  "trace": "I approached this task by iterating through each character in the input string. Whenever I encounter an opening square bracket, I increment a depth counter and compare it to the maximum depth found so far. If I encounter a closing square bracket, I first check if there is an active depth before decrementing the depth counter. In case of a closing bracket without its corresponding opener or an opener without a corresponding closing bracket, I return -1. Additionally, I handle the edge case where the input string is empty by setting the maximum depth to 0 and returning it if no characters were processed.",
+  "totals": {
+    "time_s": -1.1295365000000004,
+    "tokens": -72
+  },
+  "files": [
+    "20260703-170725-2c7f75.crumbs.jsonl",
+    "20260703-170725-2c7f75.trace.txt"
+  ]
+}

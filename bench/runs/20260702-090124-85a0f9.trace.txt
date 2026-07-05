@@ -1,0 +1,2 @@
+**  
+I used Python's string `split` method to break the input string into words based on underscores, effectively handling leading and trailing underscores by ignoring empty strings from split. Then, I applied the `capitalize` method to each non-empty word to convert it to camelCase, ensuring the first character of each word (except the first one) is uppercase. This approach ensures that consecutive underscores are treated as a single delimiter, and any number of leading or trailing underscores are ignored.

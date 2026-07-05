@@ -1,0 +1,2 @@
+**  
+I used list comprehension to iterate through the original list in chunks of size `k`. For each chunk, if its length is less than `k`, I appended `None` values to it until its length matches `k`. This ensures that all chunks have exactly `k` elements. The edge case where an empty list is passed results in an empty list being returned, as expected.

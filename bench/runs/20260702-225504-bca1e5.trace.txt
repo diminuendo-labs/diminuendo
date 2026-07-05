@@ -1,0 +1,2 @@
+**
+I started by checking for the edge case where the input list `nums` is empty, in which case I return an empty string immediately. Then, I removed duplicates and sorted the numbers using `set` and `sorted`. To build the output string, I used a simple loop to iterate over the sorted numbers, keeping track of the previous number (`start`) and appending either a range or a single number to the result list as necessary. Finally, I joined the result list into a comma-separated string and returned it.

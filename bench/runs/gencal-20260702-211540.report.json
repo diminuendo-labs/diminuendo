@@ -1,0 +1,141 @@
+{
+  "gencal_id": "20260702-211540",
+  "models": {
+    "A": "qwen2.5-coder:7b",
+    "B": "llama3.1:8b"
+  },
+  "audience": {
+    "A": "llama3.1:8b",
+    "B": "qwen2.5-coder:7b"
+  },
+  "r_g": 3,
+  "table": {
+    "count_distinct_pairs": {
+      "rule_class": "distinctness",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "mixed",
+        "fails": 2,
+        "ev": [
+          0.75,
+          0.25,
+          1.0
+        ]
+      }
+    },
+    "sum_of_modes": {
+      "rule_class": "distinctness",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "weighted_mean": {
+      "rule_class": "boundary",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "range_step": {
+      "rule_class": "boundary",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "mixed",
+        "fails": 1,
+        "ev": [
+          1.0,
+          1.0,
+          0.75
+        ]
+      }
+    },
+    "title_words": {
+      "rule_class": "normalize",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "count_token": {
+      "rule_class": "normalize",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "mixed",
+        "fails": 2,
+        "ev": [
+          1.0,
+          0.25,
+          0.75
+        ]
+      }
+    }
+  },
+  "n_note": "R_G=3 per task per seat. Cases are direction for pool selection, not rates."
+}

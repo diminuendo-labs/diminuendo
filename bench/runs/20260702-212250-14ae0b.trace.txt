@@ -1,0 +1,2 @@
+**
+I implemented the function by directly calculating the weighted mean using a list comprehension to calculate the products of values and weights, then dividing this sum by the total weight. I chose to explicitly handle edge cases (empty lists and zero total weight) rather than relying on implicit checks or raising exceptions, as per the task's requirements. This ensures the function returns `None` in these situations instead of crashing.

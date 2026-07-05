@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-210131-b9d23a",
+  "node_id": "task-20260704-210131-b9d23a",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided solution correctly calculates the trimmed mean, handling an edge case where a list with less than three elements is input.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 1
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": false,
+        "got": "raised IndexError('list index out of range')",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": false,
+        "got": "raised IndexError('list index out of range')",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums or len(nums) < 3:\n        return None\n\n    nums.sort()\n    median = nums[len(nums) // 2]\n    left_cutoff = [n for n in nums if n > median][1]\n    right_cutoff = [n for n in nums if n < median][-2]\n    return sum([n for n in nums if n not in {left_cutoff, right_cutoff}]) / (len(nums) - 2)\n```",
+  "trace": "I chose to first handle the edge case of an empty or partially filled list by returning None. Then I sorted the input list and determined the median value, which would be the middle element when the list has an odd length or the average of the two middle elements for even-length lists. After finding the left cutoff (the second smallest number) and right cutoff (the second largest number), I calculated the sum of the remaining numbers in the list after excluding these extremes, divided by the total count minus 2 to find the trimmed mean.",
+  "totals": {
+    "time_s": -0.7650445999999995,
+    "tokens": -149
+  },
+  "files": [
+    "20260704-210131-b9d23a.crumbs.jsonl",
+    "20260704-210131-b9d23a.trace.txt"
+  ]
+}

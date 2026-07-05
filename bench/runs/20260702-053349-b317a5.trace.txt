@@ -1,0 +1,2 @@
+**
+I first checked for edge cases by returning immediately when either the input string `s` or the target word `w` is empty. I then split the input string into whitespace-separated words using the `split()` method, which returns a list of words. Finally, I used a generator expression to count the number of words in this list that match `w`, ignoring case by using the `casefold()` method. This approach is concise and readable, as it uses built-in methods and functions to perform the necessary operations.

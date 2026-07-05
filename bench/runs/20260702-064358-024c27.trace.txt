@@ -1,0 +1,2 @@
+**
+I chose to use the `count` method of strings to directly compare the number of opening and closing parentheses. This approach is concise and readable, as it leverages built-in string methods without requiring additional libraries or complexity. The function handles the edge case where an empty string is input, as `count` will return 0 for both '(' and ')', making the comparison trivial.

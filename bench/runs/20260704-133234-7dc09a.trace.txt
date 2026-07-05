@@ -1,0 +1,2 @@
+**
+To achieve this functionality, I used a list comprehension to iterate through the input list `lst` in steps of size `k`. For each slice of the list, if it is shorter than `k`, I padded it with `None` using list concatenation and `[None]*(k-len(lst[i:i+k]))`. This ensures that every chunk has exactly `k` elements, even if the final chunk is smaller. The function handles an empty list by returning an empty list, as specified in the requirements.

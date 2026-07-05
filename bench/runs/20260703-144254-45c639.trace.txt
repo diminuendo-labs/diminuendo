@@ -1,0 +1,2 @@
+**
+I chose to use a set to remove duplicates from the input list, then sort the resulting list in descending order. This approach is concise and efficient because it uses built-in Python functions (set and sorted). I considered handling edge cases, specifically when the input list contains only one distinct value or no values at all; this function handles both scenarios correctly by returning None in these cases.

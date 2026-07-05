@@ -1,0 +1,2 @@
+**
+I chose to implement the median calculation by first sorting the input list, as this allows for efficient retrieval of both the middle element(s) and the average of two middle elements when necessary. I also explicitly checked for an empty input list, which returns `None` to avoid potential errors. The function uses Python's built-in `sorted()` function and basic arithmetic operations to calculate the median, keeping the implementation concise while maintaining readability.

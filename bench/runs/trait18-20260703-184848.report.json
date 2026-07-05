@@ -1,0 +1,107 @@
+{
+  "trait18_id": "20260703-184848",
+  "performer": "mistral:7b",
+  "audience": "llama3.1:8b",
+  "task": "longest_word",
+  "cells": [
+    "none",
+    "armed"
+  ],
+  "repeats": 12,
+  "drift_bar": "4 of 24 pooled",
+  "byte_check": true,
+  "lessons": [
+    {
+      "concept": "When multiple consecutive character runs have the same length, return the last such run's character.",
+      "rule": "When several runs tie for longest, follow the direction to return the character of the last such run."
+    },
+    {
+      "concept": "When the task states to return the last occurrence or longest run, follow that direction.",
+      "rule": "Follow the stated direction of returning the last occurrence or longest run when applicable."
+    }
+  ],
+  "check_table": {
+    "longest_word('cat door bird')": {
+      "rule_check": true,
+      "watch": false,
+      "cells": {
+        "none": {
+          "n": 12,
+          "passed": 0,
+          "rate": 0.0
+        },
+        "armed": {
+          "n": 12,
+          "passed": 0,
+          "rate": 0.0
+        }
+      }
+    },
+    "longest_word('a bb cc d')": {
+      "rule_check": true,
+      "watch": false,
+      "cells": {
+        "none": {
+          "n": 12,
+          "passed": 0,
+          "rate": 0.0
+        },
+        "armed": {
+          "n": 12,
+          "passed": 1,
+          "rate": 0.08333333333333333
+        }
+      }
+    },
+    "longest_word('')": {
+      "rule_check": false,
+      "watch": true,
+      "cells": {
+        "none": {
+          "n": 12,
+          "passed": 3,
+          "rate": 0.25
+        },
+        "armed": {
+          "n": 12,
+          "passed": 1,
+          "rate": 0.08333333333333333
+        }
+      }
+    },
+    "longest_word('one')": {
+      "rule_check": false,
+      "watch": true,
+      "cells": {
+        "none": {
+          "n": 12,
+          "passed": 12,
+          "rate": 1.0
+        },
+        "armed": {
+          "n": 12,
+          "passed": 12,
+          "rate": 1.0
+        }
+      }
+    }
+  },
+  "pooled_rule_checks": {
+    "none": {
+      "n": 24,
+      "passed": 0,
+      "rate": 0.0
+    },
+    "armed": {
+      "n": 24,
+      "passed": 1,
+      "rate": 0.041666666666666664
+    }
+  },
+  "watch_checks": [
+    "longest_word('')",
+    "longest_word('one')"
+  ],
+  "tool_audit_ok": true,
+  "n_note": "R=12 per cell, one task, interleaved. The three-exit reading, the pre-registered HARM ambiguity, and the no-name boundary-watch live in the packet and are applied in its RESULTS, not here."
+}

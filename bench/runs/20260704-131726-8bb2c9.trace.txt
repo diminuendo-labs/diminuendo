@@ -1,0 +1,3 @@
+**
+
+To achieve the task, I used list comprehension to split the input list `lst` into chunks of size `k`. For each chunk, if its length is less than `k`, I padded it with `None` until it reached the desired size. This approach ensures that every chunk has exactly `k` elements, and it handles cases where the input list is empty by returning an empty list without any errors.

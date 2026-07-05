@@ -1,0 +1,2 @@
+**
+I first checked if the input list is empty and returned an empty list in that case. Then, I sorted the input list by the start value of each range using a lambda function as the sorting key. After that, I iterated over the sorted pairs and merged any overlapping ranges into the `merged` list. If a pair did not overlap with the last merged range, it was appended to the end of the `merged` list. This approach allows for efficient merging of overlapping ranges while maintaining the correct order of non-overlapping ranges.

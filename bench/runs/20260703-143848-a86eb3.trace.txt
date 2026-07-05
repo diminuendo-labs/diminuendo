@@ -1,0 +1,2 @@
+**
+I chose to use the `sorted` function with a conditional expression to find the third largest distinct value. This approach is concise and readable, as it directly addresses the task without requiring additional variables or complex logic. The edge case of an empty list is handled implicitly by the `set(nums)` operation, which returns an empty set when input is empty.

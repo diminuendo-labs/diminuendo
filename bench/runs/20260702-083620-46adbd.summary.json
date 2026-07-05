@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-083620-46adbd",
+  "node_id": "task-20260702-083620-46adbd",
+  "task": "Write a Python function average(nums) returning the arithmetic mean of the list as a float, even when the mean is a whole number. An empty list returns None, never zero. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "reason": "The function accurately calculates the arithmetic mean, handles empty lists correctly, and its code is mostly clear.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 4
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "average([1, 2])",
+        "ok": true,
+        "got": "1.5",
+        "expect": "1.5"
+      },
+      {
+        "call": "average([2, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      },
+      {
+        "call": "average([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "average([3])",
+        "ok": true,
+        "got": "3.0",
+        "expect": "3.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef average(nums):\n    if not nums:\n        return None\n    return sum(nums) / len(nums)\n```",
+  "trace": "The function `average` calculates the arithmetic mean of a list of numbers. It first checks if the input list `nums` is empty, in which case it returns `None`. If the list is not empty, it computes the average by dividing the sum of the list elements (`sum(nums)`) by the number of elements in the list (`len(nums)`). This ensures that even if the mean is a whole number, it is returned as a float. The function handles the edge case where an empty list should return `None`, avoiding division by zero or returning an incorrect result.",
+  "totals": {
+    "time_s": 17.6339502,
+    "tokens": 552
+  },
+  "files": [
+    "20260702-083620-46adbd.crumbs.jsonl",
+    "20260702-083620-46adbd.trace.txt"
+  ]
+}

@@ -1,0 +1,2 @@
+**
+I used a generator expression to create a set of numbers that appear only once in the list, and then returned the length of this set. This approach allows for efficient counting without creating intermediate data structures. I also included a docstring to document the function's behavior and handle the edge case explicitly, as per the requirements.

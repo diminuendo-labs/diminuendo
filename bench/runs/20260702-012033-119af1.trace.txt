@@ -1,0 +1,2 @@
+**  
+I chose to check if string `a` is a substring of `b` concatenated with itself. This approach ensures that all possible rotations of `b` are covered since any rotation will appear as a contiguous substring within this doubled version. The edge case where both strings are empty is automatically handled by the length check at the beginning, which returns `False` only if one string is empty and the other is not.

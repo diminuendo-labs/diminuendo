@@ -1,0 +1,2 @@
+**
+I achieved this by using a generator expression to create two lists: one for non-list elements and another for the first element of each nested list. I then concatenated these two lists together to get the final result. One edge case handled is when the input list contains an empty sublist, which would otherwise be discarded; instead, it is treated as a single element in the output.

@@ -1,0 +1,2 @@
+**
+I implemented the function using a set to remove duplicates from the list. Since sets only store unique elements, I can simply convert the input list into a set and get its length to count the number of distinct elements. This approach handles the edge case where the input list is empty (as an empty set has no elements), ensuring the function returns 0 in this scenario.

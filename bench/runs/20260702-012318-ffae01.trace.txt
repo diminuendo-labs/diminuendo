@@ -1,0 +1,2 @@
+**
+I chose to use a dictionary to keep track of the frequency of each number in the list. This allows me to efficiently look up complements (numbers that add up to the target with the current number) and count pairs. I also handled the edge case of an empty list, which would otherwise raise an error when trying to access `nums[0]`.

@@ -1,0 +1,1 @@
+I chose to use the built-in `max` function with the `key` parameter set to `len`. This approach ensures that the function returns the longest word in case of a tie by default. If there are no words (edge case where input is an empty string), it returns an empty string as specified.

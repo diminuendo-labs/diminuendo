@@ -1,0 +1,2 @@
+**
+I approached this problem by initializing variables to keep track of the maximum run length and character, as well as the current run length and character. I then iterated over the input string, incrementing the current run length whenever I encountered a matching character and resetting it otherwise. Whenever the current run length exceeded the maximum, I updated the maximum run length and character. This solution handles an edge case where the input string is empty by returning an empty string immediately.

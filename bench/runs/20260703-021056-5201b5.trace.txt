@@ -1,0 +1,3 @@
+**
+
+The function `snake_to_camel` takes a string `s` and uses Python's built-in `split` method to break the string into words based on underscores. It then iterates over these words, capitalizing each one (except empty strings resulting from leading/trailing/ repeated underscores) and joining them together without any separators. This results in a camelCase version of the input string. The edge case where the input is an empty string or consists entirely of underscores is handled by ensuring that only non-empty words are processed.

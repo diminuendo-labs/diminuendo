@@ -1,0 +1,2 @@
+**  
+I used a straightforward approach by iterating through each element of the input list. If an element is a list itself, I extended the result list with its elements using the `extend` method. Otherwise, I simply appended the item to the result list. This ensures that only one level of nesting is flattened as required. The function handles the edge case where an empty list or non-list items are present in the input without any issues.

@@ -1,0 +1,2 @@
+**
+I used Python's string methods to achieve the conversion from snake_case to camelCase. The `split('_')` method breaks the input string into words separated by underscores, and `capitalize()` is applied to each word to ensure it starts with a capital letter. The `strip('_')` at the end removes any leading or trailing underscores that might be left after processing. This approach handles repeated underscores by treating them as empty strings during the join operation. An empty string is correctly handled as an edge case, returning an empty string as required.

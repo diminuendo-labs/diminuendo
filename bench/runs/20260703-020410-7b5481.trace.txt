@@ -1,0 +1,7 @@
+**
+
+To solve this task, I first check if the input list `nums` is empty. If it is, I return an empty string immediately as per the edge case handling. Otherwise, I proceed to sort and remove duplicates from the list to ensure we are working with a unique, sorted sequence of numbers.
+
+I then iterate through the sorted list, keeping track of the start of a potential range (`start`). If the current number is not consecutive to the previous one (i.e., `nums[i] != nums[i - 1] + 1`), I append the appropriate segment ('single number' or 'range') to the summary list and update `start` to the current number.
+
+Finally, I handle the last range in the loop and join all elements of the summary list into a single string separated by commas. This solution is concise, readable, and handles the edge case of an empty input list as requested.

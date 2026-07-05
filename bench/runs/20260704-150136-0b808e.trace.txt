@@ -1,0 +1,2 @@
+**
+I approached this task by first checking if the input list is empty, returning None immediately to handle this edge case. I then used the built-in `min` and `max` functions to find the minimum and maximum values in the list. Finally, I created a new list that excludes these two extreme values and calculated the mean using the `sum` function and the length of the trimmed list. The solution is concise and readable, with clear comments explaining what each section does.

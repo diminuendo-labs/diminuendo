@@ -1,0 +1,2 @@
+**
+I started by checking if the input string is empty. If it is, I immediately return an empty string as per the edge case. Otherwise, I iterate over each word in the string, counting occurrences with a dictionary. To handle ties alphabetically and find the highest count, I sort the items of the dictionary first by the count in descending order (`-x[1]`) and then lexicographically (`x[0]`). The first item in this sorted list is the most common word according to the problem's requirements, which I then return.

@@ -1,0 +1,4 @@
+**
+I defined the function `range_step` which takes three parameters: `start`, `stop`, and `step`. The first condition checks if `step` is less than or equal to zero or if `start` is greater than or equal to `stop`, returning an empty list in either case. Otherwise, it uses Python's built-in `range` function to generate a sequence of numbers from `start` up to (but not including) `stop` with the specified `step`, and converts this range object to a list before returning it.
+
+This approach ensures that the function is concise and readable while handling all the specified criteria, including correctly managing edge cases where no valid sequence can be generated.

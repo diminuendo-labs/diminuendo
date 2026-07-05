@@ -1,0 +1,3 @@
+**
+
+The function `average` calculates the arithmetic mean of a list of numbers. It first checks if the input list `nums` is empty; if so, it returns `None`. Otherwise, it computes the sum of the list using the built-in `sum()` function and divides it by the length of the list using `len(nums)`, which gives the arithmetic mean. This approach ensures that the function correctly handles edge cases, such as an empty input list, and always returns a float, even for whole number means.

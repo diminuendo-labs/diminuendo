@@ -1,0 +1,3 @@
+**
+
+I started by sorting the list of numbers and removing any duplicates using `sorted(set(nums))`. This ensures that I only consider distinct values in ascending order. Then, I used a while loop to iterate through the sorted unique numbers. Inside the loop, I checked for consecutive sequences by comparing each number with the next one. If consecutive numbers are found, they were collapsed into a range. Non-consecutive numbers were added as single elements to the result list. Finally, the elements in the result list were joined with commas to form the final string output. The approach ensures that the function is both concise and readable while correctly handling edge cases such as an empty input list.

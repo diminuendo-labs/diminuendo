@@ -1,0 +1,2 @@
+** 
+The function `flatten_once` iterates through each element in the input list. If an element is a list itself, it expands that list into individual elements; otherwise, it keeps the element unchanged. This is achieved using a nested list comprehension where inner lists are explicitly converted to ensure they're not treated as single items. The edge case of handling empty lists is naturally managed by this implementation as no additional checks are required for non-existent elements during flattening.

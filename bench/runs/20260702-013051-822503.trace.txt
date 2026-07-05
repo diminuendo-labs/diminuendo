@@ -1,0 +1,2 @@
+**
+I wrote a concise and readable function using a generator expression within the built-in `sum` function. This approach allows us to efficiently count the vowels without creating an intermediate data structure. I specifically named the edge case of an empty string, as it's a common input scenario where other functions might raise an error or return incorrect results.

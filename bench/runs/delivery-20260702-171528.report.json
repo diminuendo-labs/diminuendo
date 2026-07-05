@@ -1,0 +1,228 @@
+{
+  "delivery_id": "20260702-171528",
+  "performer": "llama3.1:8b",
+  "audience": "qwen2.5-coder:7b",
+  "rule_class": "tie_break",
+  "tasks": [
+    "most_common_word",
+    "longest_word"
+  ],
+  "repeats": 12,
+  "lessons": [
+    {
+      "concept": "Handle the case where the largest value appears more than once by returning the index of its last occurrence.",
+      "rule": "When the largest value in the list appears more than once, return the index of its last occurrence, not the first.",
+      "trail": {
+        "node_id": "task-20260702-083208-9ad7a5",
+        "contrast_node_id": "task-20260702-083121-cd63fb",
+        "work_features": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "tie_break"
+        },
+        "gen_task": "max_index",
+        "contrast_type": "within_task"
+      }
+    },
+    {
+      "concept": "When the largest value appears more than once, return the index of its last occurrence.",
+      "rule": "If the largest value is found at multiple positions, return the index of the last occurrence instead of the first.",
+      "trail": {
+        "node_id": "task-20260702-084106-fbd3a8",
+        "contrast_node_id": "task-20260702-084042-96906d",
+        "work_features": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "tie_break"
+        },
+        "gen_task": "max_index",
+        "contrast_type": "within_task"
+      }
+    }
+  ],
+  "arms": {
+    "none": {
+      "n": 24,
+      "ev_mean": 0.5277777777777778,
+      "per_task": {
+        "most_common_word": 0.6388888888888888,
+        "longest_word": 0.4166666666666667
+      },
+      "min_tools": 0
+    },
+    "menu": {
+      "n": 24,
+      "ev_mean": 0.6979166666666666,
+      "per_task": {
+        "most_common_word": 0.8333333333333334,
+        "longest_word": 0.5625
+      },
+      "min_tools": 2
+    },
+    "directive": {
+      "n": 24,
+      "ev_mean": 0.3958333333333333,
+      "per_task": {
+        "most_common_word": 0.25,
+        "longest_word": 0.5416666666666666
+      },
+      "min_tools": 0
+    }
+  },
+  "check_table": {
+    "most_common_word": {
+      "most_common_word('b a b a c')": {
+        "tie_rule": true,
+        "arms": {
+          "none": {
+            "n": 12,
+            "passed": 4,
+            "rate": 0.3333333333333333
+          },
+          "menu": {
+            "n": 12,
+            "passed": 9,
+            "rate": 0.75
+          },
+          "directive": {
+            "n": 11,
+            "passed": 1,
+            "rate": 0.09090909090909091
+          }
+        }
+      },
+      "most_common_word('z z y')": {
+        "tie_rule": false,
+        "arms": {
+          "none": {
+            "n": 12,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          },
+          "menu": {
+            "n": 12,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          },
+          "directive": {
+            "n": 11,
+            "passed": 4,
+            "rate": 0.36363636363636365
+          }
+        }
+      },
+      "most_common_word('')": {
+        "tie_rule": false,
+        "arms": {
+          "none": {
+            "n": 12,
+            "passed": 8,
+            "rate": 0.6666666666666666
+          },
+          "menu": {
+            "n": 12,
+            "passed": 10,
+            "rate": 0.8333333333333334
+          },
+          "directive": {
+            "n": 11,
+            "passed": 4,
+            "rate": 0.36363636363636365
+          }
+        }
+      }
+    },
+    "longest_word": {
+      "longest_word('cat door bird')": {
+        "tie_rule": true,
+        "arms": {
+          "none": {
+            "n": 12,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "menu": {
+            "n": 12,
+            "passed": 3,
+            "rate": 0.25
+          },
+          "directive": {
+            "n": 12,
+            "passed": 5,
+            "rate": 0.4166666666666667
+          }
+        }
+      },
+      "longest_word('a bb cc d')": {
+        "tie_rule": true,
+        "arms": {
+          "none": {
+            "n": 12,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "menu": {
+            "n": 12,
+            "passed": 4,
+            "rate": 0.3333333333333333
+          },
+          "directive": {
+            "n": 12,
+            "passed": 5,
+            "rate": 0.4166666666666667
+          }
+        }
+      },
+      "longest_word('')": {
+        "tie_rule": false,
+        "arms": {
+          "none": {
+            "n": 12,
+            "passed": 8,
+            "rate": 0.6666666666666666
+          },
+          "menu": {
+            "n": 12,
+            "passed": 8,
+            "rate": 0.6666666666666666
+          },
+          "directive": {
+            "n": 12,
+            "passed": 5,
+            "rate": 0.4166666666666667
+          }
+        }
+      },
+      "longest_word('one')": {
+        "tie_rule": false,
+        "arms": {
+          "none": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "menu": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "directive": {
+            "n": 12,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          }
+        }
+      }
+    }
+  },
+  "tie_checks": [
+    "longest_word('a bb cc d')",
+    "longest_word('cat door bird')",
+    "most_common_word('b a b a c')"
+  ],
+  "n_note": "R=12 per arm per task, 2 tasks, three arms. Per-check cells are n=12. Direction at this n, not rates."
+}

@@ -1,0 +1,2 @@
+**
+I chose a list comprehension approach to implement the `flatten_once` function. This allows for concise and readable code that directly addresses the task's requirements. I handled the edge case where an element is already a list by recursively calling `flatten_once` on it, ensuring deeper nesting remains nested as intended. The approach ensures that only one level of nesting is flattened, as required.

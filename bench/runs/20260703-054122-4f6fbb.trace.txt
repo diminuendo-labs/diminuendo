@@ -1,0 +1,3 @@
+**
+
+I used Python's `collections.Counter` to count the frequency of each number in the list. I then found the maximum frequency and summed up all numbers that have this maximum frequency. The function handles an edge case where the input list is empty, returning 0 as specified.

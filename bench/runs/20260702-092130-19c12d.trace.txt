@@ -1,0 +1,2 @@
+**
+I chose a simple and concise approach by counting the occurrences of '(' and ')' in the string using Python's built-in `count()` method. This meets the requirements of ignoring everything else, as it only counts these two specific characters. I also considered the edge case where an empty string is balanced, as this would not raise any errors with my implementation.

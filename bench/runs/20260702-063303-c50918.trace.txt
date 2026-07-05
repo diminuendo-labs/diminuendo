@@ -1,0 +1,2 @@
+**
+I wrote the `median` function by first checking if the input list is empty and returning None in that case. Then, I sorted the input list to ensure it's in ascending order for accurate median calculation. Depending on whether the length of the list is even or odd, I either return the middle value or calculate the average of the two middle values as a float.

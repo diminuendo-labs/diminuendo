@@ -1,0 +1,3 @@
+**
+
+I chose to use a simple and straightforward approach by directly using the built-in `sum` function to calculate the sum of the numbers in the list, and then dividing by the length of the list. I handled the edge case where the input list is empty by returning None, as specified in the task requirements. This implementation meets all the criteria for being concise, readable, and correct, with clear documentation on what the function does and how it should be used.

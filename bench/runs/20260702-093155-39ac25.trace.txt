@@ -1,0 +1,3 @@
+**
+
+I chose to handle ties by returning the last common word alphabetically. This approach is concise and readable, making it suitable for small Python functions like this one. I also explicitly handled the edge case where the input string is empty, as per the task requirements. The `Counter` class from the `collections` module was used to efficiently count word frequencies.

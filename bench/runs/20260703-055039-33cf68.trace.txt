@@ -1,0 +1,2 @@
+**
+I chose to use a set to store the unique numbers from the input list, as this allows for efficient lookups when checking for complementary pairs. I then iterate over each number in the set, calculate its complement (target - i), and check if it's also in the set and not equal to i itself (to avoid counting duplicate pairs). The count is incremented for each valid pair found, but since we're counting distinct unordered pairs, we divide the total count by 2 at the end. This approach efficiently handles edge cases like an empty input list or lists with duplicate numbers.

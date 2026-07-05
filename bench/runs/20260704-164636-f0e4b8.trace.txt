@@ -1,0 +1,2 @@
+**  
+I started by splitting the input string `s` into individual tokens using `_` as the delimiter. I then used a list comprehension to process each token: if it's in the exceptions list, I keep it uppercase; otherwise, I capitalize it. Finally, I joined these processed tokens together without any separators. One notable edge case I handled is the transition from 'Id' to 'id', which ensures that after capitalization and joining, the original case of 'ID' is preserved as 'id'.

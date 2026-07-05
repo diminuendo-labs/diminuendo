@@ -1,0 +1,2 @@
+**
+I implemented a simple and efficient solution using Python's built-in sort function. I first sorted the input ranges by their start value to ensure that overlapping or adjacent ranges are adjacent in the list, making it easier to merge them. Then, I iterated over the sorted list of ranges, checking for overlap with the last merged range. If there was an overlap, I updated the end value of the last merged range; otherwise, I added the current range to the merged list. This approach ensures that the output is a single list of merged ranges in ascending order by start value.

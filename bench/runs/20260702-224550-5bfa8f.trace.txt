@@ -1,0 +1,2 @@
+**
+I used a list comprehension to iterate over each element in the input list. If an element is a list, I checked whether it's a singleton list (i.e., has only one element). If so, I flattened it by taking its sole element; otherwise, I kept the original nested list. This approach handles the edge case where a single-element nested list is passed as input, ensuring that it gets flattened correctly.

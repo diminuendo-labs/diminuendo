@@ -1,0 +1,13 @@
+**
+
+The function `merge_within` takes a list of ranges and merges those that overlap or are within one unit of each other. The process involves the following steps:
+
+1. **Sorting**: First, the input list of ranges is sorted based on their start values to ensure that any potential overlaps or adjacencies are adjacent in the list.
+
+2. **Merging**: A new list `merged` is initialized with the first range from the sorted list. The function then iterates through the remaining ranges and checks if the current range can be merged with the last range in the `merged` list:
+   - If the start of the current range is less than or equal to one unit more than the end of the last range in `merged`, they are considered overlapping or adjacent, and their end values are combined.
+   - Otherwise, the current range is added as a new separate range to `merged`.
+
+3. **Edge Case Handling**: The function handles an empty input list by immediately returning an empty list.
+
+This approach ensures that the function is both correct in its merging logic and concise in its implementation while maintaining readability.

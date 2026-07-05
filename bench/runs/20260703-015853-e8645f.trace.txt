@@ -1,0 +1,2 @@
+**
+I chose to iterate over the list of words in reverse order to ensure that if there are ties, I capture the last occurrence. This approach meets the task's directive on handling ties by returning the last such word encountered. By splitting the input string into a list of words and then iterating over this list, I can easily find the longest word while keeping track of its position for tie-breaking.

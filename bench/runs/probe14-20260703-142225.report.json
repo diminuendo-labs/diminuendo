@@ -1,0 +1,286 @@
+{
+  "probe14_id": "20260703-142225",
+  "performer": "llama3.1:8b",
+  "audience": "qwen2.5-coder:7b",
+  "rule_class": "distinctness",
+  "repeats": 6,
+  "enumeration": [
+    {
+      "name": "count_unique",
+      "pool": "generation",
+      "rule_topic": "values",
+      "generation_eligible": true,
+      "topic_in_apply_pool": true
+    },
+    {
+      "name": "sum_distinct",
+      "pool": "generation",
+      "rule_topic": "values",
+      "generation_eligible": true,
+      "topic_in_apply_pool": true
+    },
+    {
+      "name": "count_distinct_pairs",
+      "pool": "generation",
+      "rule_topic": "pairs",
+      "generation_eligible": true,
+      "topic_in_apply_pool": false
+    },
+    {
+      "name": "sum_of_modes",
+      "pool": "generation",
+      "rule_topic": "values",
+      "generation_eligible": true,
+      "topic_in_apply_pool": true
+    },
+    {
+      "name": "count_distinct_over",
+      "pool": "generation",
+      "rule_topic": "values",
+      "generation_eligible": true,
+      "topic_in_apply_pool": true
+    },
+    {
+      "name": "third_largest_distinct",
+      "pool": "generation",
+      "rule_topic": "values",
+      "generation_eligible": true,
+      "topic_in_apply_pool": true
+    },
+    {
+      "name": "mode_count",
+      "pool": "generation",
+      "rule_topic": "values",
+      "generation_eligible": true,
+      "topic_in_apply_pool": true
+    },
+    {
+      "name": "second_largest",
+      "pool": "apply",
+      "rule_topic": "values",
+      "generation_eligible": false,
+      "topic_in_apply_pool": true
+    },
+    {
+      "name": "dedupe",
+      "pool": "apply",
+      "rule_topic": "values",
+      "generation_eligible": false,
+      "topic_in_apply_pool": true
+    },
+    {
+      "name": "range_summary",
+      "pool": "apply",
+      "rule_topic": "values",
+      "generation_eligible": false,
+      "topic_in_apply_pool": true
+    },
+    {
+      "name": "nth_smallest",
+      "pool": "apply",
+      "rule_topic": "values",
+      "generation_eligible": false,
+      "topic_in_apply_pool": true
+    },
+    {
+      "name": "count_pairs",
+      "pool": "apply",
+      "rule_topic": "pairs",
+      "generation_eligible": false,
+      "topic_in_apply_pool": false
+    }
+  ],
+  "supply_table": [
+    {
+      "name": "count_unique",
+      "pool": "generation",
+      "rule_topic": "values",
+      "generation_eligible": true,
+      "topic_in_apply_pool": true,
+      "runs": 6,
+      "fails": 0,
+      "passes": 6,
+      "case": "all_pass",
+      "breaks_for_seat": false,
+      "conjunction_eligible": false
+    },
+    {
+      "name": "sum_distinct",
+      "pool": "generation",
+      "rule_topic": "values",
+      "generation_eligible": true,
+      "topic_in_apply_pool": true,
+      "runs": 6,
+      "fails": 1,
+      "passes": 5,
+      "case": "mixed",
+      "breaks_for_seat": true,
+      "conjunction_eligible": true
+    },
+    {
+      "name": "count_distinct_pairs",
+      "pool": "generation",
+      "rule_topic": "pairs",
+      "generation_eligible": true,
+      "topic_in_apply_pool": false,
+      "runs": 6,
+      "fails": 1,
+      "passes": 5,
+      "case": "mixed",
+      "breaks_for_seat": true,
+      "conjunction_eligible": false
+    },
+    {
+      "name": "sum_of_modes",
+      "pool": "generation",
+      "rule_topic": "values",
+      "generation_eligible": true,
+      "topic_in_apply_pool": true,
+      "runs": 6,
+      "fails": 0,
+      "passes": 6,
+      "case": "all_pass",
+      "breaks_for_seat": false,
+      "conjunction_eligible": false
+    },
+    {
+      "name": "count_distinct_over",
+      "pool": "generation",
+      "rule_topic": "values",
+      "generation_eligible": true,
+      "topic_in_apply_pool": true,
+      "runs": 6,
+      "fails": 0,
+      "passes": 6,
+      "case": "all_pass",
+      "breaks_for_seat": false,
+      "conjunction_eligible": false
+    },
+    {
+      "name": "third_largest_distinct",
+      "pool": "generation",
+      "rule_topic": "values",
+      "generation_eligible": true,
+      "topic_in_apply_pool": true,
+      "runs": 6,
+      "fails": 0,
+      "passes": 6,
+      "case": "all_pass",
+      "breaks_for_seat": false,
+      "conjunction_eligible": false
+    },
+    {
+      "name": "mode_count",
+      "pool": "generation",
+      "rule_topic": "values",
+      "generation_eligible": true,
+      "topic_in_apply_pool": true,
+      "runs": 6,
+      "fails": 0,
+      "passes": 6,
+      "case": "all_pass",
+      "breaks_for_seat": false,
+      "conjunction_eligible": false
+    },
+    {
+      "name": "second_largest",
+      "pool": "apply",
+      "rule_topic": "values",
+      "generation_eligible": false,
+      "topic_in_apply_pool": true,
+      "runs": 6,
+      "fails": 0,
+      "passes": 6,
+      "case": "all_pass",
+      "breaks_for_seat": false,
+      "conjunction_eligible": false
+    },
+    {
+      "name": "dedupe",
+      "pool": "apply",
+      "rule_topic": "values",
+      "generation_eligible": false,
+      "topic_in_apply_pool": true,
+      "runs": 6,
+      "fails": 0,
+      "passes": 6,
+      "case": "all_pass",
+      "breaks_for_seat": false,
+      "conjunction_eligible": false
+    },
+    {
+      "name": "range_summary",
+      "pool": "apply",
+      "rule_topic": "values",
+      "generation_eligible": false,
+      "topic_in_apply_pool": true,
+      "runs": 6,
+      "fails": 2,
+      "passes": 4,
+      "case": "mixed",
+      "breaks_for_seat": true,
+      "conjunction_eligible": false
+    },
+    {
+      "name": "nth_smallest",
+      "pool": "apply",
+      "rule_topic": "values",
+      "generation_eligible": false,
+      "topic_in_apply_pool": true,
+      "runs": 6,
+      "fails": 0,
+      "passes": 6,
+      "case": "all_pass",
+      "breaks_for_seat": false,
+      "conjunction_eligible": false
+    },
+    {
+      "name": "count_pairs",
+      "pool": "apply",
+      "rule_topic": "pairs",
+      "generation_eligible": false,
+      "topic_in_apply_pool": false,
+      "runs": 6,
+      "fails": 1,
+      "passes": 5,
+      "case": "mixed",
+      "breaks_for_seat": true,
+      "conjunction_eligible": false
+    }
+  ],
+  "eligible_pairs": [
+    {
+      "type": "within_task",
+      "fail_task": "sum_distinct",
+      "pass_task": "sum_distinct",
+      "rule_topic": "values"
+    }
+  ],
+  "distill_outcomes": [
+    {
+      "type": "within_task",
+      "fail_task": "sum_distinct",
+      "pass_task": "sum_distinct",
+      "rule_topic": "values",
+      "committed": true,
+      "rejects": [],
+      "outcome": "committed"
+    }
+  ],
+  "store_lessons": [
+    {
+      "concept": "When writing a function to sum distinct values, ensure that each value is counted only once regardless of how many times it repeats in the input list.",
+      "rule": "When the task states 'distinct values,' ignore repetitions and include each value only once in the calculation.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "distinctness",
+        "rule_topic": "values"
+      }
+    }
+  ],
+  "reverse_on_liftable_ground_reachable": true,
+  "n_note": "R=6 per task. A supply probe: counts, not claims, no treatment readings."
+}

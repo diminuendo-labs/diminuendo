@@ -1,0 +1,7 @@
+**
+
+The function `longest_word(s)` first checks if the input string `s` is empty or consists only of whitespace. If so, it returns an empty string as per the edge case handling.
+
+If not, it splits the string into a list of words using `split()`. It then iterates through these words in reverse order to ensure that if there are multiple longest words, the last one encountered is returned. For each word, it checks if its length is greater than or equal to the current maximum length (`max_len`). If so, it updates `max_len` and sets `longest` to the current word.
+
+Finally, after the loop, it returns the longest word found. This approach ensures that the function correctly handles ties by always returning the last longest word encountered in the input string.

@@ -1,0 +1,3 @@
+**
+
+The function `title_words(s)` processes a string by splitting it into individual words. For each word, it checks if the word is already in all uppercase letters using the `isupper()` method. If so, it appends the word unchanged to the result list. If not, it converts the word to title case using the `title()` method and appends that to the result list. Finally, it joins the list of words back into a single string with spaces in between, ensuring there are no leading or trailing whitespace by using `strip()`. This approach handles the edge case where words are already entirely uppercase without altering them, as specified.

@@ -1,0 +1,3 @@
+**
+
+I approached the task by first checking for an empty list and returning an empty string immediately if that's the case. I then sorted the list to ensure consecutive numbers are adjacent. Using a loop, I iterated through the sorted list while keeping track of the start and end of potential ranges. If the current number is one more than the last recorded end, I updated the end; otherwise, I recorded the range (or single number) and started a new range with the current number. Finally, after the loop, I recorded any remaining range and joined all recorded ranges into a string separated by commas.

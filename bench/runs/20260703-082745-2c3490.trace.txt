@@ -1,0 +1,2 @@
+**
+I solved this problem by iterating through the string `s` and keeping track of the current character and its consecutive count. If I encounter a different character, I check if the previous run was longer than one and also returns the last character of that run (if it's tied with other runs). This way, even when several runs tie for longest, the function will return the character of the last such run, not the first.

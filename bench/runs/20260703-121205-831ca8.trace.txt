@@ -1,0 +1,5 @@
+**
+
+I started by checking if the input list is empty and returning an empty string if it is. I then sorted the unique numbers in ascending order using `sorted(set(nums))`. Next, I iterated through the sorted list to identify consecutive numbers and group them into ranges. When a non-consecutive number is encountered, I checked if the range was a single number or a range and appended the appropriate string to the `ranges` list. Finally, I joined the `ranges` list with commas to form the output string.
+
+This approach ensures that the function handles consecutive numbers correctly and efficiently generates the desired string representation of the ranges.

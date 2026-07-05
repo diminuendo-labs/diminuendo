@@ -1,0 +1,3 @@
+**
+
+I approached this task by first checking if the input list is empty and raising a ValueError if so. This handles an edge case where an empty list would cause the function to fail. I then iterate over the list using enumerate to keep track of both the index and value of each element, keeping track of the maximum value seen so far and its corresponding index. When a larger value is encountered, I update both the maximum value and its index. Finally, I return the index of the largest value found, which will be that of the last occurrence when the maximum appears more than once.

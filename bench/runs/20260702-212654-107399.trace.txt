@@ -1,0 +1,2 @@
+**
+I used a combination of Python's built-in string methods and a generator expression to solve this task. The `split()` method splits the input string into words, which are then title-cased using the `title()` method if they are not already entirely uppercase (checked with `isupper()`). Finally, these title-cased words are joined back together with single spaces between them. This approach is concise and readable while correctly handling the edge case of an empty input string, which returns an empty string as per the task's requirements.

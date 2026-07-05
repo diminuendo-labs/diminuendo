@@ -1,0 +1,3 @@
+**
+
+I approached this problem by first checking if the input list is empty, which would cause a ZeroDivisionError or other unexpected behavior. If it's not empty, I create a frequency dictionary to count the occurrences of each number in the list. Then, I find the maximum frequency and use a list comprehension to get all numbers with that maximum frequency, returning their length as the result. This solution is concise and readable because it uses Python's built-in dictionary and max functions to simplify the code, while also being easy to follow due to its step-by-step structure.

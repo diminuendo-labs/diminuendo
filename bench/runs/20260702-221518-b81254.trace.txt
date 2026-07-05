@@ -1,0 +1,3 @@
+**
+
+The function `longest_word(s)` splits the input string `s` into a list of words using the `split()` method. It then checks if the resulting list is empty, returning an empty string as specified for this edge case. If there are words in the list, it finds the longest word by comparing their lengths with the `max()` function and returns that word. This solution is concise and readable, leveraging Python's built-in functions to achieve the desired outcome efficiently.

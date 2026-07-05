@@ -1,0 +1,2 @@
+**
+I chose to split the input string by underscores and use a generator expression to capitalize each word. This approach allows us to easily remove empty strings that result from trailing or repeated underscores. I also added a simple docstring to note the edge case of an empty string returning ''. The function is concise and readable, with a clear intent expressed through its name and docstring.

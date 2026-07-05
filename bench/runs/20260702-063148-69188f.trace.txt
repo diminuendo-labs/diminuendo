@@ -1,0 +1,3 @@
+**
+
+I chose to implement the function using Python's built-in `Counter` class from the `collections` module. This simplifies counting the occurrences of each word in the input string. For tie-breaking, I used a list comprehension to get all words with the highest count, and then selected the minimum value alphabetically, which corresponds to the last occurrence due to lexicographic ordering. This approach meets the "concept" rule mentioned in the provided context.

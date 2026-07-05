@@ -1,0 +1,1 @@
+I first check if `k` is within the valid range. If not, I return `None`. Then, I sort the list of words. The sorting key uses a tuple where the first element is negative length (to sort by increasing length) and the second element is the reverse word (for reverse-alphabetical order). Finally, I return the k-th word from the sorted list.

@@ -1,0 +1,5 @@
+**
+
+The `chunk_pad` function first checks if the input list is empty. If it is, it returns an empty list immediately to handle this edge case. The function then uses a list comprehension to split the original list into chunks of size `k`. After splitting, it checks the length of the last chunk. If the last chunk has fewer than `k` elements, it pads that chunk with `None` values until it reaches the desired length. Finally, it returns the list of padded chunks.
+
+This approach ensures the function is concise and readable while correctly handling edge cases such as an empty input list.

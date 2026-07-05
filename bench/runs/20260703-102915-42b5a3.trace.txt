@@ -1,0 +1,6 @@
+**
+The function `longest_word` takes a string `s` as input and returns the longest whitespace-separated word. It handles an edge case where an empty string is provided, returning an empty string in such cases.
+
+The approach involves splitting the string into words using Python's built-in `.split()` method. Then, it iterates through the list of words in reverse order to ensure that if there are multiple words with the same maximum length, the last one encountered is returned. During the iteration, it keeps track of the longest words found and updates them accordingly.
+
+This solution is concise and readable, following Pythonic practices such as using list comprehensions and built-in functions where appropriate.

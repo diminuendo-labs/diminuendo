@@ -1,0 +1,3 @@
+**
+
+I chose to implement the function using a for loop that iterates over each element in the input list. If an element is a list, I used the `extend` method to add all its elements to the result list; otherwise, I simply appended the element as is. To handle the edge case where the only element is an empty list and there are no other nested lists (e.g., `[[]]`), I added a check for this specific scenario.

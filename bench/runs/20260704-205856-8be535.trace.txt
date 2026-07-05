@@ -1,0 +1,3 @@
+To write the `trimmed_mean` function in Python, I first handle empty and None inputs by returning None. Then, to remove exactly one occurrence of the minimum and one occurrence of the maximum, I utilize the built-in `remove()` method after finding the minimum and maximum values in the list using the `min()` and `max()` functions respectively.
+
+To calculate the mean without including the trimmed minimum and maximum values, I first sort the list and find the median (the middle value). Then, I use a lambda function to filter the numbers above and below the median, sum them, and finally divide by the total number of non-trimmed values (length of the original list minus 2) to obtain the trimmed mean.

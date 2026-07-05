@@ -1,0 +1,2 @@
+**
+I solved this problem by iterating through the input string `s`, keeping track of the current character and its consecutive count. Whenever I encounter a different character, I update my variables for the maximum run character and length if necessary. At the end of the iteration, I check one last time to ensure that any trailing longest run is recorded as the return value. This approach handles the edge case where `s` is an empty string by immediately returning an empty string.

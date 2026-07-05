@@ -1,0 +1,3 @@
+I created a function `trimmed_mean()` that takes an input list of numbers. The function first checks if the list is empty, and returns None in such a case. If not, it sorts the list and finds the indices of the minimum and maximum values while accounting for potential duplicate elements by using a set.
+
+Then it skips one occurrence of the minimum and maximum values and calculates the sum of the remaining numbers in the sorted list, and finally returns their average as a float. The function handles an edge case where duplicates exist within the input list.

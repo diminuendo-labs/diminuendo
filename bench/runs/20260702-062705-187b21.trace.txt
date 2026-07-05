@@ -1,0 +1,2 @@
+**
+To solve this task, I first checked for the empty list edge case and returned an empty string. Then, I sorted the input list while removing duplicates using a set. Next, I iterated over the sorted list to identify consecutive runs of numbers and created ranges accordingly. I chose a simple iterative approach with a few conditional statements to keep the code concise and readable.

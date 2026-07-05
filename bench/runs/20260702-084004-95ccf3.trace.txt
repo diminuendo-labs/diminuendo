@@ -1,0 +1,4 @@
+**  
+To solve this task, I decided to use Python's built-in `replace` and `lower` methods. The `replace(" ", "")` method is used to eliminate all whitespace characters from both strings, ensuring that spaces do not affect the comparison. After removing whitespaces, both strings are converted to lowercase using `lower()` to ensure that the comparison is case-insensitive. This approach ensures that the function works correctly even if the input strings contain varying amounts of whitespace or different cases.
+
+The only edge case I explicitly handled was empty string comparisons. By ensuring that the normalization process results in an empty string if both inputs are empty, the function behaves as expected for this scenario.

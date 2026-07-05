@@ -1,0 +1,6 @@
+**
+The function `least_frequent_word(s)` first checks if the input string `s` is empty. If it is, the function immediately returns an empty string as specified in the edge case.
+
+If the string is not empty, the function proceeds to count the occurrences of each word using a dictionary `word_count`. It then determines the minimum count among all words and collects all words that have this minimum count into a list `result_words`.
+
+Finally, it sorts the list of result words alphabetically and returns the first element, which will be the lexicographically smallest word with the lowest frequency.

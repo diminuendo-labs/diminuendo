@@ -1,0 +1,3 @@
+**
+
+The function `range_step` checks if the `step` is less than or equal to zero or if `start` is greater than or equal to `stop`, immediately returning an empty list as per the criteria. If these conditions are not met, it proceeds to generate a list of integers from `start` up to but not including `stop`, advancing by `step`. The use of Python's built-in `range` function ensures that the loop is efficient and concise.

@@ -1,0 +1,1 @@
+I sorted the input list of words based on their lengths and within the same length, I ordered them reverse alphabetically. Then, I iterated through each list according to their lengths and returned the k-th word when it was found. The edge case handled here is when there are fewer than k words in a specific length group, in which case None will be returned as expected.

@@ -1,0 +1,8 @@
+**  
+1. **Edge Case Handling**: I started by checking if the input string `s` is empty. If it is, the function immediately returns an empty string.
+2. **Word Counting**: I converted all characters to lowercase and split the string into individual words using the `split()` method. Then, I created a dictionary `word_count` to store each word and its count.
+3. **Finding Maximum Count**: After populating the dictionary, I found the maximum count of any word using `max(word_count.values())`.
+4. **Filtering Words**: Next, I filtered out the words that have this maximum count into a list `common_words`.
+5. **Sorting and Returning**: Finally, I sorted the `common_words` list alphabetically (which is the default behavior of the `sorted()` function) and returned the first word in this list.
+
+This approach ensures that the function correctly identifies the most common word or words, breaking ties alphabetically, and handles the edge case where the input string is empty.

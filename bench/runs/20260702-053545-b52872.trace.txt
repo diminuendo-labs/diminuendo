@@ -1,0 +1,7 @@
+**
+
+The function `most_common_word` starts by checking if the input string is empty. If it is, it returns an empty string immediately as an edge case. The input string is then converted to lowercase and split into individual words. A dictionary `word_count` is used to keep track of the frequency of each word.
+
+Next, the function iterates through the list of words, updating the count for each word in the dictionary. After that, it finds the maximum count among all words. It then filters out the words that have this maximum count into a new list `common_words`. Finally, the function returns the lexicographically smallest word from the `common_words` list by using Python's built-in `min()` function.
+
+This approach ensures that the function is both correct and concise, adhering to the given criteria.

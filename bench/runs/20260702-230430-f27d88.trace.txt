@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `sorted` function to sort the input list, which has a time complexity of O(n log n), where n is the number of elements. I also used integer division (`//`) to calculate the middle index when the length of the list is odd. This approach ensures that the median calculation is accurate and efficient. The edge case I handled was an empty input list, returning `None` in this case as per the problem statement.

@@ -1,0 +1,2 @@
+**
+I solved this task by iterating through the input list and maintaining a running state of the previous number. When I encounter a number that is consecutive to the previous one, I update the previous number. When I find a non-consecutive number, I append the range or single number to the result list based on whether it's part of a larger run or not. I also handle the edge case where the input list has only one element, in which case it returns that element as is.

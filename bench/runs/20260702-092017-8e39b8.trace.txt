@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for the edge case of an empty list. Then I used a set to get the unique values in the input list and sorted them to ensure they are in ascending order. Next, I iterated over these distinct values, building up ranges by checking if each value is consecutive to the previous one; if not, or at the start, it appends a range string to the result list. Finally, if there's a last range, I append its end and join all the ranges together with commas.

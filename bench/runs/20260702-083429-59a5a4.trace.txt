@@ -1,0 +1,2 @@
+** 
+I approached this problem by creating a dictionary to count the occurrences of each number in the list. Then, I used a generator expression within the `sum` function to count how many numbers have an occurrence of exactly one, thus appearing uniquely in the list. The edge case of an empty list is handled at the beginning by returning 0 immediately if the input list is empty.

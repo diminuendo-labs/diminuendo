@@ -1,0 +1,3 @@
+**
+
+To solve this task, I first checked for edge cases such as an empty list of words or a k value that is out of range. Then, I used Python's `sorted` function with a custom key to order the words by length and reverse-alphabetically. The lambda function in the key ensures that shorter words come first and among words of equal length, the last letter determines the reverse-alphabetical order. Finally, I returned the k-th word (adjusting for 0-based indexing).

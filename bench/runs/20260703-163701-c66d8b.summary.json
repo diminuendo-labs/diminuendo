@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-163701-c66d8b",
+  "node_id": "task-20260703-163701-c66d8b",
+  "task": "Write a Python function weighted_mean(values, weights) returning the weighted arithmetic mean as a float. Empty lists return None, and a zero total weight also returns None, never a crash. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly handles an empty list of values, returning None.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 1
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "weighted_mean([1, 3], [1, 1])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      },
+      {
+        "call": "weighted_mean([2], [0])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "weighted_mean([], [])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "weighted_mean([1, 2], [0, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef weighted_mean(values, weights):\n    if not values or sum(weights) == 0:\n        return None\n    total = sum([value * weight for value, weight in zip(values, weights)])\n    average = total / sum(weights)\n    return average\n```",
+  "trace": "I created a function that takes two lists as arguments, `values` and `weights`, where each value corresponds to its respective weight. The edge case I addressed is when either of the input lists are empty or the total weight (sum of weights) is zero, in which case the function returns None instead of throwing an error. To calculate the weighted mean, I used a list comprehension to iterate through both lists and perform multiplication before summing up the results. Finally, I divide by the total weight to get the average value. The code is concise and readable for easy understanding.",
+  "totals": {
+    "time_s": 18.2109291,
+    "tokens": 629
+  },
+  "files": [
+    "20260703-163701-c66d8b.crumbs.jsonl",
+    "20260703-163701-c66d8b.trace.txt"
+  ]
+}

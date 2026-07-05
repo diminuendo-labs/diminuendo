@@ -1,0 +1,3 @@
+**
+
+The function `chunk_pad` takes a list and an integer as arguments. It uses list comprehension to create chunks of size `k`. For each chunk, it pads the end with `None` if the chunk is shorter than `k` using slicing and list multiplication. This ensures every chunk has exactly `k` elements. The function handles the edge case where an empty list is passed by returning an empty list.

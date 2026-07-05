@@ -1,0 +1,10 @@
+**
+To solve this task, I defined a function `count_word` that takes two parameters: `s`, the input string containing whitespace-separated words, and `w`, the word to match within the input string. The function first checks if the input string `s` is empty and returns 0 immediately if it is.
+
+I then convert both the input string `s` and the target word `w` to lowercase using the `lower()` method to handle case-insensitive comparison. This ensures that words like "Hello" and "hello" are considered equal.
+
+Next, I split the normalized input string into a list of individual words using the `split()` method. The `split()` method by default splits by whitespace, making it easy to isolate each word.
+
+Finally, I use the `count()` method on the list of words to count how many times the target word (in lowercase) appears in the list and return this count as the result.
+
+This approach ensures that the function is concise, readable, and correctly handles the edge case where the input string is empty.

@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-235153-ceb883",
+  "node_id": "task-20260704-235153-ceb883",
+  "task": "Write a Python function kth_ordered(words, k) returning the k-th word, counting from 1, when the words are ordered by increasing length, and words of equal length are ordered reverse-alphabetically among themselves. Return None when k is out of range. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly implements the required sorting logic, handles edge cases properly, and its code is well-written.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is handled": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "kth_ordered(['bb', 'ab', 'c'], 2)",
+        "ok": true,
+        "got": "'bb'",
+        "expect": "'bb'"
+      },
+      {
+        "call": "kth_ordered(['dd', 'a', 'ccc'], 2)",
+        "ok": true,
+        "got": "'dd'",
+        "expect": "'dd'"
+      },
+      {
+        "call": "kth_ordered(['a', 'bb'], 5)",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**```python\ndef kth_ordered(words, k):\n    if not words or k <= 0 or k > len(words):\n        return None\n    \n    sorted_words = sorted(words, key=lambda x: (len(x), -ord(x[-1])))\n    \n    return sorted_words[k-1]\n```\n\n**",
+  "trace": "** The function `kth_ordered` first checks if the input list is empty or if `k` is out of range. If either condition is true, it returns `None`. Otherwise, it sorts the words using a custom key in Python's `sorted()` function. The key is a tuple that first sorts by word length in ascending order and then by the ASCII value of the last character in descending order to handle reverse-alphabetical ordering for words of equal length. Finally, it returns the `k-1`th element from the sorted list (since Python lists are zero-indexed).",
+  "totals": {
+    "time_s": 22.4482826,
+    "tokens": 756
+  },
+  "files": [
+    "20260704-235153-ceb883.crumbs.jsonl",
+    "20260704-235153-ceb883.trace.txt"
+  ]
+}

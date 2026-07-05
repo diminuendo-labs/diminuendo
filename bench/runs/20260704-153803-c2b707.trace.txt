@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `sorted` function with a custom sorting key to order the words first by length and then alphabetically in reverse. This approach is concise and readable, as it leverages Python's existing functionality rather than requiring a custom sorting algorithm. The edge case of k > len(words) is handled explicitly in the function, returning None when k is out of range.

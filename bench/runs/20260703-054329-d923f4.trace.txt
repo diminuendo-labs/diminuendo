@@ -1,0 +1,5 @@
+**
+
+The function `range_step` checks if the `step` is less than or equal to zero or if the `start` value is greater than or equal to the `stop` value. If either condition is true, it returns an empty list as specified. Otherwise, it uses Python's built-in `range` function to generate a sequence of numbers from `start` up to but not including `stop`, with a step size of `step`. The resulting range object is then converted to a list and returned.
+
+The edge case handled by this function is when the `step` value is zero or negative, as these cases should result in an empty list according to the problem requirements.

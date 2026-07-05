@@ -1,0 +1,3 @@
+**
+
+The `chunk_pad` function first checks if the input list is empty. If it is, it returns an empty list immediately as there's nothing to process. For non-empty lists, it uses a list comprehension to create chunks of size `k`. After creating the initial chunks, it checks if the last chunk has fewer than `k` elements. If so, it appends `None` values until the chunk reaches the desired length of `k`. This ensures that every chunk in the output has exactly `k` elements, padding with `None` as necessary.

@@ -1,0 +1,5 @@
+The function `count_pairs(nums, target)` iterates through the input list `nums`. For each number, it calculates the difference between the target and the current number, which is effectively the remaining sum that another number in the list needs to have. If this difference exists as a key in the `counts` dictionary, it adds the corresponding count (which represents the number of such pairs) to the total.
+
+If the current number isn't already a key in the `counts` dictionary, it is added with an initial count of 0. Its count is then incremented by 1 to account for the possibility that the current number itself can form a pair with another number with the same value (an edge case not explicitly mentioned but still needs to be handled).
+
+Lastly, the function returns the total count of pairs found. The use of a dictionary allows for efficient lookups and updates, making the code more time-efficient as well as concise and readable.

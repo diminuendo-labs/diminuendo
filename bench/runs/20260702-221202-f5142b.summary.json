@@ -1,0 +1,59 @@
+{
+  "run_id": "20260702-221202-f5142b",
+  "node_id": "task-20260702-221202-f5142b",
+  "task": "Write a Python function title_words(s) returning the string with every whitespace-separated word title-cased (first letter upper, the rest lower) and runs of whitespace collapsed to single spaces, except that words already entirely uppercase stay exactly as they are. An empty string returns ''. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function does not handle leading and trailing spaces correctly, which is an edge case.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness": 3,
+    "readability": 3,
+    "edge_cases_handled": 2
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "title_words('hello  world')",
+        "ok": true,
+        "got": "'Hello World'",
+        "expect": "'Hello World'"
+      },
+      {
+        "call": "title_words('NASA rocks')",
+        "ok": true,
+        "got": "'NASA Rocks'",
+        "expect": "'NASA Rocks'"
+      },
+      {
+        "call": "title_words('mIxEd')",
+        "ok": true,
+        "got": "'Mixed'",
+        "expect": "'Mixed'"
+      },
+      {
+        "call": "title_words('')",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef title_words(s):\n    \"\"\"\n    Convert every whitespace-separated word to title case and collapse runs of whitespace.\n\n    Args:\n        s (str): The input string.\n\n    Returns:\n        str: The modified string.\n    \"\"\"\n    words = s.split()  # Split the string into a list of words\n    result = []  # Initialize an empty list to store the processed words\n\n    for word in words:\n        if word.isupper():  # Handle edge case: all uppercase words stay as is\n            result.append(word)\n        else:\n            result.append(word.title())  # Convert each word to title case\n\n    return ' '.join(result)  # Join the words back into a string with single spaces\n```\n\n**",
+  "trace": "**\n\nI approached this problem by first splitting the input string into a list of words using the `split()` method. Then, I iterated over each word and checked if it was entirely uppercase using the `isupper()` method. If it was, I added it to the result list as is; otherwise, I converted it to title case using the `title()` method and added it to the list. Finally, I joined the processed words back into a string with single spaces between them using the `join()` method. This approach allowed me to handle edge cases like all-uppercase words while maintaining concise and readable code.",
+  "totals": {
+    "time_s": -2.1540496000000005,
+    "tokens": -4
+  },
+  "files": [
+    "20260702-221202-f5142b.crumbs.jsonl",
+    "20260702-221202-f5142b.trace.txt"
+  ]
+}

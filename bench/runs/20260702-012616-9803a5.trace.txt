@@ -1,0 +1,2 @@
+**  
+I approached this task by iterating through the string and keeping track of the current character (`prev_char`) and its count. Whenever a different character is encountered, I append the current character and its count to the result list and reset the count for the new character. This way, the function handles run-length encoding efficiently. The edge case where an empty string is passed is handled by returning an empty string immediately at the beginning of the function.

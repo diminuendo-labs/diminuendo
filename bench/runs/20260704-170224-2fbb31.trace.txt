@@ -1,0 +1,11 @@
+**
+
+I started by defining the function `token_case(s)` that takes a string `s` as input. I used a list called `exceptions` to store tokens that should not be modified, such as 'URL' and 'ID'. 
+
+To handle leading and trailing whitespace, I stripped the input string using `strip()`. The string was then split into tokens based on underscores using `split('_')`.
+
+I iterated over each token with a loop. If the token is in the exceptions list, it was appended to the result list as is. For the first token (index 0), I converted it to lowercase and added it to the result. For all other tokens, I capitalized them before adding.
+
+Finally, I joined all the tokens in the result list into a single string using `''.join(result)` and returned it.
+
+I also included an edge case for handling empty strings by returning an empty string if that's the input.

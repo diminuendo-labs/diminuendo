@@ -1,0 +1,3 @@
+**
+
+I chose to iterate through the list twice: once to find the minimum and maximum, and another time to create the trimmed list. This approach allows me to maintain readability by keeping each operation on one line, while still making it clear what's happening. In handling the edge case where all values are equal (or very close), my function will simply drop one value as both the minimum and the maximum, effectively preserving equality among remaining numbers.

@@ -1,0 +1,2 @@
+**  
+I started by checking if the input list `lst` is empty or if `k` is less than or equal to zero. If either condition is true, I returned an empty list as specified in the edge case handling rule. Then, I iterated through the list in steps of size `k`, creating chunks and appending them to the result list. If a chunk was shorter than `k`, I padded it with `None` until it reached the desired length. This ensures that all chunks have exactly `k` elements, meeting the function's requirements.

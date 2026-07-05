@@ -1,0 +1,2 @@
+**
+I approached this task by first splitting the input string into a list of words using the `split()` method. I then iterated over this list in reverse order, keeping track of the longest word seen so far and its length. This ensures that if there are multiple words of the same maximum length, the last one encountered will be returned. I also explicitly handled the edge case where the input string is empty by returning an empty string immediately after splitting it.

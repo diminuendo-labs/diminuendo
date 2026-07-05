@@ -1,0 +1,2 @@
+**
+I wrote the function `longest_word` to first split the input string into a list of whitespace-separated words. To handle the edge case where the input string is empty, I added a simple check at the beginning of the function, returning an empty string if the list of words is also empty. Then, I used a generator expression to find the length of each word and the `max` function to determine the maximum length. Finally, I created a new list that only includes words with this maximum length and returned the last such word using index `-1`.

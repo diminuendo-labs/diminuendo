@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from Python's standard library to count the occurrences of each word. This allowed me to easily find the maximum count and then filter the words with that count. To break ties alphabetically, I used a list comprehension to get all words with the highest count, and then returned the minimum of this list (since `min` will compare strings lexicographically). The edge case is handled by checking if the input string is empty or contains only whitespace characters before attempting to split it into words.

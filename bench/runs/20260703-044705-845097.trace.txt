@@ -1,0 +1,4 @@
+**  
+I approached this task by first handling the edge case where the input string is empty. If the string is empty, I immediately return an empty string as specified. 
+
+For a non-empty string, I created a dictionary to count occurrences of each word in the string. After processing all words, I determined the maximum count and collected all words that have this highest count. Finally, I returned the lexicographically smallest word among these most common words using Python's built-in `min()` function. This approach ensures that ties are broken alphabetically as required.

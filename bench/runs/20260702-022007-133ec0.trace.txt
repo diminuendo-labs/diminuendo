@@ -1,0 +1,3 @@
+**
+
+I chose to use the concept of normalizing inputs by converting to lowercase and removing spaces before comparing their sorted versions. This simplifies the task of finding the most common word, as it eliminates the need for case sensitivity and whitespace consideration during the counting process. I applied this approach because it fits well with the criteria of conciseness and readability, making it an efficient solution for small-sized code. By using Python's built-in `lower()` method to convert the input string to lowercase and the `split()` method to separate words by spaces, the function can effectively handle edge cases such as empty strings and provide a clean and simple implementation.

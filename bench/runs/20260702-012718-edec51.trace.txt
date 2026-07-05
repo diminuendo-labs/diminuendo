@@ -1,0 +1,2 @@
+**
+The function `reverse_words(s)` takes a string `s` as input and reverses the order of words while normalizing runs of whitespace to single spaces. The `split()` method is used to split the sentence into words, automatically handling multiple consecutive whitespaces by treating them as a single space. The list of words is then reversed using slicing (`[::-1]`). Finally, `' '.join(...)` combines the reversed list of words back into a single string with each word separated by a single space. This approach ensures that the function is both correct and concise.

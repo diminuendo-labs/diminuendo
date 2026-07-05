@@ -1,0 +1,3 @@
+**
+
+I wrote a Python function `snake_to_camel` that uses list comprehension to split the input string into words, capitalize each word (excluding empty words), and join them back together. The edge case is handled by filtering out empty strings using an if condition in the generator expression of the `join` method. I chose this approach because it is concise, readable, and efficiently leverages built-in Python functions like `split`, `capitalize`, and `join`. This implementation also clearly handles the special case where the input string is empty, which meets one of the specified criteria.

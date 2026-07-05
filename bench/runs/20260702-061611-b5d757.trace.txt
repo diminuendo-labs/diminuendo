@@ -1,0 +1,2 @@
+** 
+To implement the `longest_word` function, I first check if the input string is empty and return an empty string if it is. Then, I split the string into individual words. Next, I find the maximum length of these words. After that, I create a list of words that have this maximum length. Finally, I return the last word from this list to handle ties as specified in the requirements. This approach ensures that the function is concise and readable while correctly handling edge cases like empty strings.

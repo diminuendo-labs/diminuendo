@@ -1,0 +1,2 @@
+The function iterates through the input list `lst`. For each element, it checks if the item is a built-in data type (integer, float, or string) using `isinstance()`. If so, it keeps the item as is. Otherwise, it recursively calls itself on the nested list and flattens one level of nesting.
+To handle an edge case, I ensured that the function doesn't attempt to flatten items that are not lists, thus preventing potential errors when dealing with non-list data structures.

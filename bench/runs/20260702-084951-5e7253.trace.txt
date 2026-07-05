@@ -1,0 +1,10 @@
+** 
+I started by checking if the input string `s` is empty. If it is, I immediately return an empty string as specified in the edge case.
+
+Next, I convert the entire string to lowercase and split it into individual words. This step ensures that the word counting is case-insensitive and handles punctuation correctly by treating words with trailing punctuation as the same word.
+
+I then create a dictionary `word_count` where keys are unique words and values are their counts. As I iterate through the list of words, I update the count for each word in the dictionary.
+
+To find the most common word(s), I sort the items in the `word_count` dictionary first by count in descending order (using `-x[1]`) and then alphabetically (using `x[0]`). The `sorted()` function returns a list of tuples, where each tuple contains a word and its count.
+
+Finally, I return the word from the first tuple in the sorted list, which will be the most common word with ties broken alphabetically.

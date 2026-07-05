@@ -1,0 +1,174 @@
+ARM THE FLOORS 20260704-051116 (PACKET-022)
+performer=llama3.1:8b  audience=qwen2.5-coder:7b (v1, production)
+sweeps (ranked): boundary=('merge_ranges', 'median', 'flatten_once')  normalize=('snake_to_camel', 'balanced')  R=12
+qualification, the PACKET-019 fraction scaled to the ground: at least 2 passes AND 2 fails of 12 pooled on one-rule ground, at least 4 AND 4 of 24 on two-rule ground
+drift bar per comparison, same scaling: 2 of 12 pooled one-rule, 4 of 24 pooled two-rule
+byte checks against the production lines: armed-B1=True armed-B2=True armed-N1=True armed-N2=True
+armed-B1: gen_task=chunk  pins boundary/degenerate  origin=mistral:7b
+armed-B2: gen_task=weighted_mean  pins boundary/*  origin=mistral:7b
+armed-N1: gen_task=split_csvish  pins normalize/delimiters  origin=mistral:7b
+armed-N2: gen_task=depth_max  pins normalize/delimiters  origin=mistral:7b
+rule checks for merge_ranges (the standing annotation): ['merge_ranges([[1, 3], [4, 6]])']
+rule checks for median (the standing annotation): ['median([5, 5])', 'median([])']
+rule checks for flatten_once (the standing annotation): ['flatten_once([1, [2, [3, 4]]])']
+rule checks for snake_to_camel (the standing annotation): ["snake_to_camel('__a__b_')"]
+rule checks for balanced (the standing annotation): ["balanced('(a(b)c)')", "balanced(')(')"]
+A boundary merge_ranges none rep 0: ev=0.75 tools=0
+A boundary merge_ranges none rep 1: ev=0.75 tools=0
+A boundary merge_ranges none rep 2: ev=0.75 tools=0
+A boundary merge_ranges none rep 3: ev=0.75 tools=0
+A boundary merge_ranges none rep 4: ev=0.75 tools=0
+A boundary merge_ranges none rep 5: ev=0.75 tools=0
+A boundary merge_ranges none rep 6: ev=0.75 tools=0
+A boundary merge_ranges none rep 7: ev=0.75 tools=0
+A boundary merge_ranges none rep 8: ev=0.75 tools=0
+A boundary merge_ranges none rep 9: ev=0.75 tools=0
+A boundary merge_ranges none rep 10: ev=0.50 tools=0
+A boundary merge_ranges none rep 11: ev=0.75 tools=0
+stage A boundary merge_ranges: pooled rule 0 passes, 12 fails of 12 (1 rule check(s) x 12); does not qualify (mixed means at least 2 of each)
+A boundary median none rep 0: ev=1.00 tools=0
+A boundary median none rep 1: ev=1.00 tools=0
+A boundary median none rep 2: ev=0.75 tools=0
+A boundary median none rep 3: ev=1.00 tools=0
+A boundary median none rep 4: ev=1.00 tools=0
+A boundary median none rep 5: ev=1.00 tools=0
+A boundary median none rep 6: ev=1.00 tools=0
+A boundary median none rep 7: ev=1.00 tools=0
+A boundary median none rep 8: ev=0.75 tools=0
+A boundary median none rep 9: ev=1.00 tools=0
+A boundary median none rep 10: ev=1.00 tools=0
+A boundary median none rep 11: ev=1.00 tools=0
+stage A boundary median: pooled rule 24 passes, 0 fails of 24 (2 rule check(s) x 12); does not qualify (mixed means at least 4 of each)
+A boundary flatten_once none rep 0: ev=0.33 tools=0
+A boundary flatten_once none rep 1: ev=0.33 tools=0
+A boundary flatten_once none rep 2: ev=1.00 tools=0
+A boundary flatten_once none rep 3: ev=0.33 tools=0
+A boundary flatten_once none rep 4: ev=1.00 tools=0
+A boundary flatten_once none rep 5: ev=1.00 tools=0
+A boundary flatten_once none rep 6: ev=1.00 tools=0
+A boundary flatten_once none rep 7: ev=1.00 tools=0
+A boundary flatten_once none rep 8: ev=1.00 tools=0
+A boundary flatten_once none rep 9: ev=1.00 tools=0
+A boundary flatten_once none rep 10: ev=0.33 tools=0
+A boundary flatten_once none rep 11: ev=1.00 tools=0
+stage A boundary flatten_once: pooled rule 8 passes, 4 fails of 12 (1 rule check(s) x 12); QUALIFIES (mixed means at least 2 of each)
+boundary sweep stops at its first qualifier: flatten_once
+A normalize snake_to_camel none rep 0: ev=0.25 tools=0
+A normalize snake_to_camel none rep 1: ev=0.25 tools=0
+A normalize snake_to_camel none rep 2: ev=0.25 tools=0
+A normalize snake_to_camel none rep 3: ev=0.25 tools=0
+A normalize snake_to_camel none rep 4: ev=0.25 tools=0
+A normalize snake_to_camel none rep 5: ev=0.75 tools=0
+A normalize snake_to_camel none rep 6: ev=0.25 tools=0
+A normalize snake_to_camel none rep 7: ev=0.25 tools=0
+A normalize snake_to_camel none rep 8: ev=0.25 tools=0
+A normalize snake_to_camel none rep 9: ev=0.25 tools=0
+A normalize snake_to_camel none rep 10: ev=0.25 tools=0
+A normalize snake_to_camel none rep 11: ev=0.25 tools=0
+stage A normalize snake_to_camel: pooled rule 0 passes, 12 fails of 12 (1 rule check(s) x 12); does not qualify (mixed means at least 2 of each)
+A normalize balanced none rep 0: ev=1.00 tools=0
+A normalize balanced none rep 1: ev=0.75 tools=0
+A normalize balanced none rep 2: ev=1.00 tools=0
+A normalize balanced none rep 3: ev=0.75 tools=0
+A normalize balanced none rep 4: ev=0.75 tools=0
+A normalize balanced none rep 5: ev=1.00 tools=0
+A normalize balanced none rep 6: ev=1.00 tools=0
+A normalize balanced none rep 7: ev=1.00 tools=0
+A normalize balanced none rep 8: ev=1.00 tools=0
+A normalize balanced none rep 9: ev=1.00 tools=0
+A normalize balanced none rep 10: ev=0.75 tools=0
+A normalize balanced none rep 11: ev=0.75 tools=0
+stage A normalize balanced: pooled rule 19 passes, 5 fails of 24 (2 rule check(s) x 12); QUALIFIES (mixed means at least 4 of each)
+normalize sweep stops at its first qualifier: balanced
+stage B boundary block on qualified ground flatten_once: fresh interleaved cells in the fixed order ('none', 'armed-B1', 'armed-B2'), the stage A cell gates and is never the baseline
+B boundary flatten_once none rep 0: ev=0.00 tools=0
+B boundary flatten_once armed-B1 rep 0: ev=1.00 tools=1
+B boundary flatten_once armed-B2 rep 0: ev=0.33 tools=1
+B boundary flatten_once none rep 1: ev=0.33 tools=0
+B boundary flatten_once armed-B1 rep 1: ev=0.33 tools=1
+B boundary flatten_once armed-B2 rep 1: ev=0.00 tools=1
+B boundary flatten_once none rep 2: ev=0.33 tools=0
+B boundary flatten_once armed-B1 rep 2: ev=0.00 tools=1
+B boundary flatten_once armed-B2 rep 2: ev=0.33 tools=1
+B boundary flatten_once none rep 3: ev=0.33 tools=0
+B boundary flatten_once armed-B1 rep 3: ev=1.00 tools=1
+B boundary flatten_once armed-B2 rep 3: ev=0.33 tools=1
+B boundary flatten_once none rep 4: ev=0.67 tools=0
+B boundary flatten_once armed-B1 rep 4: ev=1.00 tools=1
+B boundary flatten_once armed-B2 rep 4: ev=0.00 tools=1
+B boundary flatten_once none rep 5: ev=1.00 tools=0
+B boundary flatten_once armed-B1 rep 5: ev=0.33 tools=1
+B boundary flatten_once armed-B2 rep 5: ev=0.33 tools=1
+B boundary flatten_once none rep 6: ev=1.00 tools=0
+B boundary flatten_once armed-B1 rep 6: ev=0.00 tools=1
+B boundary flatten_once armed-B2 rep 6: ev=0.00 tools=1
+B boundary flatten_once none rep 7: ev=1.00 tools=0
+B boundary flatten_once armed-B1 rep 7: ev=0.33 tools=1
+B boundary flatten_once armed-B2 rep 7: ev=0.00 tools=1
+B boundary flatten_once none rep 8: ev=0.33 tools=0
+B boundary flatten_once armed-B1 rep 8: ev=0.67 tools=1
+B boundary flatten_once armed-B2 rep 8: ev=1.00 tools=1
+B boundary flatten_once none rep 9: ev=0.33 tools=0
+B boundary flatten_once armed-B1 rep 9: ev=1.00 tools=1
+B boundary flatten_once armed-B2 rep 9: ev=0.33 tools=1
+B boundary flatten_once none rep 10: ev=1.00 tools=0
+B boundary flatten_once armed-B1 rep 10: ev=0.33 tools=1
+B boundary flatten_once armed-B2 rep 10: ev=1.00 tools=1
+B boundary flatten_once none rep 11: ev=0.00 tools=0
+B boundary flatten_once armed-B1 rep 11: ev=0.33 tools=1
+B boundary flatten_once armed-B2 rep 11: ev=0.33 tools=1
+stage B normalize block on qualified ground balanced: fresh interleaved cells in the fixed order ('none', 'armed-N1', 'armed-N2'), the stage A cell gates and is never the baseline
+B normalize balanced none rep 0: ev=0.75 tools=0
+B normalize balanced armed-N1 rep 0: ev=0.75 tools=1
+B normalize balanced armed-N2 rep 0: ev=0.75 tools=1
+B normalize balanced none rep 1: ev=0.75 tools=0
+B normalize balanced armed-N1 rep 1: ev=1.00 tools=1
+B normalize balanced armed-N2 rep 1: ev=1.00 tools=1
+B normalize balanced none rep 2: ev=1.00 tools=0
+B normalize balanced armed-N1 rep 2: ev=0.75 tools=1
+B normalize balanced armed-N2 rep 2: ev=0.75 tools=1
+B normalize balanced none rep 3: ev=0.75 tools=0
+B normalize balanced armed-N1 rep 3: ev=0.75 tools=1
+B normalize balanced armed-N2 rep 3: ev=0.75 tools=1
+B normalize balanced none rep 4: ev=1.00 tools=0
+B normalize balanced armed-N1 rep 4: ev=0.75 tools=1
+B normalize balanced armed-N2 rep 4: ev=1.00 tools=1
+B normalize balanced none rep 5: ev=0.75 tools=0
+B normalize balanced armed-N1 rep 5: ev=0.75 tools=1
+B normalize balanced armed-N2 rep 5: ev=1.00 tools=1
+B normalize balanced none rep 6: ev=1.00 tools=0
+B normalize balanced armed-N1 rep 6: ev=1.00 tools=1
+B normalize balanced armed-N2 rep 6: ev=1.00 tools=1
+B normalize balanced none rep 7: ev=0.75 tools=0
+B normalize balanced armed-N1 rep 7: ev=0.75 tools=1
+B normalize balanced armed-N2 rep 7: ev=1.00 tools=1
+B normalize balanced none rep 8: ev=1.00 tools=0
+B normalize balanced armed-N1 rep 8: ev=1.00 tools=1
+B normalize balanced armed-N2 rep 8: ev=1.00 tools=1
+B normalize balanced none rep 9: ev=0.75 tools=0
+B normalize balanced armed-N1 rep 9: ev=0.75 tools=1
+B normalize balanced armed-N2 rep 9: ev=1.00 tools=1
+B normalize balanced none rep 10: ev=0.75 tools=0
+B normalize balanced armed-N1 rep 10: ev=0.75 tools=1
+B normalize balanced armed-N2 rep 10: ev=0.75 tools=1
+B normalize balanced none rep 11: ev=0.75 tools=0
+B normalize balanced armed-N1 rep 11: ev=0.75 tools=1
+B normalize balanced armed-N2 rep 11: ev=1.00 tools=1
+== STAGE B BOUNDARY (flatten_once) POOLED RULE CHECKS (passed/n per cell, bar 2 of 12 pooled) ==
+  none: 4/10
+  armed-B1: 4/10
+  armed-B2: 2/8
+== STAGE B BOUNDARY PER-CHECK (none / armed-B1 / armed-B2) ==
+  flatten_once([[1, 2], [3]]): 0.50 / 0.50 / 0.25  <-- watch
+  flatten_once([1, [2, [3, 4]]]): 0.40 / 0.40 / 0.25  <-- rule
+  flatten_once([]): 1.00 / 1.00 / 1.00  <-- watch
+== STAGE B NORMALIZE (balanced) POOLED RULE CHECKS (passed/n per cell, bar 4 of 24 pooled) ==
+  none: 16/24
+  armed-N1: 15/24
+  armed-N2: 20/24
+== STAGE B NORMALIZE PER-CHECK (none / armed-N1 / armed-N2) ==
+  balanced('(a(b)c)'): 1.00 / 1.00 / 1.00  <-- rule
+  balanced(')('): 0.33 / 0.25 / 0.67  <-- rule
+  balanced(''): 1.00 / 1.00 / 1.00  <-- watch
+  balanced('((x)'): 1.00 / 1.00 / 1.00  <-- watch
+GATE: PASSED. both sweeps ran in ranked order with the arithmetic printed, stage B boundary on flatten_once, normalize on balanced, all four byte checks asserted, tool audit clean, every run checkpointed, report persisted. The readings are applied in the packet RESULTS. The seat neither taught nor learned.

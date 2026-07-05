@@ -1,0 +1,3 @@
+**
+
+I chose to use Python's built-in `max` function with the `split` method to split the string into a list of words and then find the maximum length. This approach meets the requirements of conciseness and readability. To handle the case where multiple words have the same maximum length, I used the `key=len` argument in `max`, which returns the last word in case of a tie (since it iterates over the list from right to left).

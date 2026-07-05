@@ -1,0 +1,2 @@
+** 
+I chose to split the input string into a list of words using `split()`, which handles multiple spaces and trims whitespace by default. I then find the maximum length among these words using a generator expression with `max()`. To ensure that in case of a tie, the last word is returned, I iterate through the list of words in reverse order and return the first word that matches the maximum length. This approach is concise and readable while correctly handling edge cases such as an empty string input.

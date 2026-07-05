@@ -1,0 +1,2 @@
+**
+To solve this task, I first checked if the input list `words` is empty or if `k` is out of range. If either condition is true, I returned `None`. Then, I sorted the words using a custom key in the `sorted()` function. The key sorts primarily by length in ascending order and secondarily by the ASCII value of the first character in reverse order (to achieve reverse-alphabetical sorting). Finally, I returned the word at index `k-1` from the sorted list, as list indices are zero-based in Python.

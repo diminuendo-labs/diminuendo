@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for the edge case of an empty list, which returns 0 as per the problem statement. Then, I created a dictionary `counts` to store the frequency of each number in the list. After that, I found the maximum count and used a list comprehension to create a list of numbers with the maximum count. Finally, I returned the sum of these mode numbers after converting them to a set to eliminate duplicates.

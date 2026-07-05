@@ -1,0 +1,2 @@
+**
+I implemented the `longest_word` function by first splitting the input string into a list of whitespace-separated words. I then iterated through this list, keeping track of the maximum length found so far and its corresponding index (the last occurrence). If multiple words have the same maximum length, this approach ensures that the last one is returned. The edge case where an empty string returns '' is handled implicitly by checking for `max_len != 0` before returning a word from the list.

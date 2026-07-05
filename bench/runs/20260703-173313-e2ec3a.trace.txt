@@ -1,0 +1,1 @@
+The function `snake_to_camel(s)` takes a snake_case identifier as input, splits it by underscores, and iterates through each word to capitalize the first letter of every word except the first one. This way, multiple consecutive underscores are handled without affecting the output. An empty string returns an empty string as per the task requirements.

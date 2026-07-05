@@ -1,0 +1,8 @@
+**
+
+To solve this task, I followed these steps:
+1. **Edge Case Handling:** The function first checks if the input string `s` is empty. If it is, it returns an empty string immediately.
+2. **Word Counting:** The input string is converted to lowercase and split into individual words. A dictionary `word_count` is used to keep track of the frequency of each word.
+3. **Finding Maximum Count:** The maximum count of any word in the dictionary is determined using the `max()` function.
+4. **Identifying Most Common Words:** A list comprehension finds all words that have this maximum count.
+5. **Returning the Result:** Finally, the function returns the lexicographically smallest (alphabetically first) of these most common words using the `min()` function.

@@ -1,0 +1,2 @@
+**
+I implemented the function by first checking for the edge case where the input list is empty. Then, I created a set from the list to remove duplicates and store only unique numbers. Next, I iterated over the unique numbers to find both the maximum and the second maximum values, handling cases where there are fewer than two distinct values or when the same number appears more than twice.

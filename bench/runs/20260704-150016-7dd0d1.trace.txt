@@ -1,0 +1,3 @@
+**
+
+I implemented the function by first checking if the input list is empty, and returning None in this case. Then, I sorted the list to easily access the minimum and maximum values. I removed these two extreme values from the sorted list, and calculated the mean of the resulting list. This approach ensures that exactly one occurrence of the minimum and one occurrence of the maximum are dropped from the original list.

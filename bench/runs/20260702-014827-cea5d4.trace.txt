@@ -1,0 +1,2 @@
+**  
+I chose to use Python's built-in string methods and list comprehensions to achieve the conversion efficiently. The function splits the input string by underscores, strips any leading or trailing spaces from each segment, and then concatenates them with proper capitalization rules for camelCase. This approach ensures that the function is concise, readable, and correctly handles edge cases such as empty strings and multiple consecutive underscores.

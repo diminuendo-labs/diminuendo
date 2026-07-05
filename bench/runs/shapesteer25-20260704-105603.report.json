@@ -1,0 +1,174 @@
+{
+  "shapesteer25_id": "20260704-105603",
+  "packet": "PACKET-025",
+  "performer": "llama3.1:8b",
+  "audience": "qwen2.5-coder:7b",
+  "task": "balanced",
+  "repeats": 12,
+  "byte_check": true,
+  "store_prod_line": 11,
+  "annotations": [
+    "balanced('(a(b)c)')",
+    "balanced(')(')"
+  ],
+  "lesson": {
+    "concept": "Normalize delimiters before processing.",
+    "rule": "When the task states to normalize delimiters, ensure all relevant characters are standardized according to the specified rules (e.g., case normalization) before proceeding with the comparison or counting operation.",
+    "pins": {
+      "operation": "write_code",
+      "target": "function",
+      "language": "python",
+      "size": "small",
+      "rule_class": "normalize",
+      "rule_topic": "delimiters"
+    },
+    "gen_task": "depth_max",
+    "origin_seat": "mistral:7b"
+  },
+  "census_taxonomy": [
+    "counter-or-stack sweep",
+    "count-equality shortcut",
+    "other",
+    "unrunnable"
+  ],
+  "stage_a": {
+    "task": "balanced",
+    "pooled": {
+      "n": 24,
+      "passed": 18,
+      "present_n": 24,
+      "present_passed": 18,
+      "unrunnable_rows": 0
+    },
+    "fails": 6,
+    "qualify_min": 4,
+    "qualified": true
+  },
+  "stage_b": {
+    "ran": true,
+    "cells": [
+      "none",
+      "armed-N2"
+    ],
+    "census_bar": "2 of 12",
+    "rule_bar": "4 of 24",
+    "sweep_counts": {
+      "none": 6,
+      "armed-N2": 5
+    },
+    "pooled_rule_checks": {
+      "none": {
+        "n": 24,
+        "passed": 18,
+        "present_n": 24,
+        "present_passed": 18,
+        "unrunnable_rows": 0
+      },
+      "armed-N2": {
+        "n": 24,
+        "passed": 18,
+        "present_n": 24,
+        "present_passed": 18,
+        "unrunnable_rows": 0
+      }
+    },
+    "check_table": {
+      "balanced('(a(b)c)')": {
+        "rule_check": true,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "armed-N2": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      },
+      "balanced(')(')": {
+        "rule_check": true,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 6,
+            "rate": 0.5
+          },
+          "armed-N2": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 6,
+            "rate": 0.5
+          }
+        }
+      },
+      "balanced('')": {
+        "rule_check": false,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "armed-N2": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      },
+      "balanced('((x)')": {
+        "rule_check": false,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "armed-N2": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      }
+    }
+  },
+  "census": {
+    "A|none": {
+      "counter-or-stack sweep": 6,
+      "count-equality shortcut": 6,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "B|none": {
+      "counter-or-stack sweep": 6,
+      "count-equality shortcut": 6,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "B|armed-N2": {
+      "counter-or-stack sweep": 5,
+      "count-equality shortcut": 7,
+      "other": 0,
+      "unrunnable": 0
+    }
+  },
+  "census_no_readings_divergence": 0,
+  "tool_audit_ok": true,
+  "priors": {
+    "origin_lead_P022_armed_N2_on_balanced": "census 4 to 8 sweep of 12, pooled rule 16 to 20 of 24, post-hoc, unregistered, the observation this packet exists to test, never pooled with these cells",
+    "P022_stage_a_balanced": "19 passes 5 fails of 24, qualified",
+    "P022_llama_none_census_balanced": "8 shortcut, 4 sweep of 12"
+  },
+  "n_note": "Stage A gates only. Reading 1 lives on the census sweep counts, reading 2 on the pooled rule, independent by pre-registration; both are applied in the packet RESULTS by the reader. No exit here touches canon; a PASS unlocks conductor work only."
+}

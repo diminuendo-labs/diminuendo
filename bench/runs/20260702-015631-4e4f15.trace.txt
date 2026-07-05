@@ -1,0 +1,9 @@
+To solve this problem, I first handle the edge case where the input string is empty. If it is, the function returns an empty string immediately.
+
+Next, I split the input string into individual words and initialize a dictionary to count the occurrences of each word in lowercase (to ensure case-insensitivity).
+
+I iterate over the list of words, updating the count for each word in the dictionary.
+
+After counting all the words, I sort the dictionary items based on two criteria: first by the count in descending order, and second alphabetically in ascending order. This ensures that if there are ties in count, the lexicographically smallest word is chosen.
+
+Finally, I check if the sorted list of words is not empty (which could happen if all input strings were whitespace) and return the most common word from the sorted list.

@@ -1,0 +1,2 @@
+**
+I first checked for edge cases by ensuring the function returns `None` if the input list has less than 3 elements. I then identified the minimum and maximum values in the list, removed them from the original list to achieve the trimmed mean effect, and calculated the mean of the remaining numbers.

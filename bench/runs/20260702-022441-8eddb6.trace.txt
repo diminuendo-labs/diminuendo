@@ -1,0 +1,3 @@
+**
+
+I approached this task by focusing on the core requirement of calculating the median from a list of numbers. I used Python's built-in `sorted` function to sort the input list, as it is efficient and concise for small lists like in this case. To handle the edge case where an empty list is passed (which would otherwise raise an error), I added a simple check at the beginning of the function that returns `None`. This way, the function can return a meaningful result even when given invalid input, making it more robust and user-friendly.

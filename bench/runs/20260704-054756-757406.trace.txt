@@ -1,0 +1,2 @@
+**
+I approached this task by writing a straightforward and readable function that iterates over the input list's elements. For each element, I checked if it's a list using `isinstance`. If it is, I used the `extend` method to add its items to the result list; otherwise, I appended the element as is. I also explicitly handled the edge case of empty lists by skipping them to avoid adding an empty list to the result.

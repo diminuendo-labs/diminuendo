@@ -1,0 +1,2 @@
+** 
+The function `most_common_word(s)` takes a string `s` as input and returns the most common word in lowercase. If there are multiple words with the highest frequency, it returns the one that comes first alphabetically. An empty string is handled by returning an empty string. The approach uses a dictionary to count occurrences of each word, then filters for those with the maximum count and sorts them alphabetically before selecting the first one. This method ensures the function is both correct and efficient.

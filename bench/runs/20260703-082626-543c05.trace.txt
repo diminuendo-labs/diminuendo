@@ -1,0 +1,2 @@
+**
+I approached this task by first splitting the input string into a list of whitespace-separated words using the `split()` method. This allows me to easily find and compare the length of each word. I then used the built-in `min()` function with the `key` argument set to `len` to find the shortest word in the list. The edge case where an empty string is returned is explicitly handled by checking if the list of words is empty before attempting to find the shortest word.

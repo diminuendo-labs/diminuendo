@@ -1,0 +1,3 @@
+**
+
+I approached this task by first checking for the edge case of an empty input list and returning an empty list. I then sorted the input pairs based on their start values, as it's easier to merge adjacent ranges. Finally, I iterated over the sorted pairs, merging any overlapping or nearly overlapping ranges into a single range, while keeping track of the last merged range separately.

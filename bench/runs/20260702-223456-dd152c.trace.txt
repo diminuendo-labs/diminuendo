@@ -1,0 +1,11 @@
+**
+
+The function `longest_word(s)` takes a string `s` as input and returns the longest whitespace-separated word. If there are multiple words with the same maximum length, it returns the last one encountered. An empty string is handled by returning an empty string.
+
+- The function first checks if the input string `s` is empty. If it is, it immediately returns an empty string.
+- It then splits the string into a list of words using the `split()` method.
+- The longest word is determined using the `max()` function with the key set to `len`, which finds the word with the maximum length.
+- A list comprehension is used to create a new list, `last_longest_words`, that contains all words with the maximum length, but in reverse order of their appearance.
+- Finally, it returns the last word from this list if it exists; otherwise, it returns an empty string. This ensures that on ties for longest words, the last one encountered is returned.
+
+This approach ensures correctness and conciseness while handling edge cases effectively.

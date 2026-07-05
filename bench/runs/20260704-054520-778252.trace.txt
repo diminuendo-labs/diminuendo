@@ -1,0 +1,2 @@
+**
+I chose to implement this function using a simple iterative approach. I initialized an empty list `result` to store the flattened elements and then iterated over each element in the input list. If an element is itself a list, I used the `extend` method to add all its elements to `result`. Otherwise, I appended the element as-is. This implementation is concise and readable while handling edge cases like empty lists or non-list elements. The function also handles nested lists within other data structures (e.g., tuples) without issues due to Python's duck typing.

@@ -1,0 +1,2 @@
+**
+I implemented the function using a generator expression to split the input string into words (substrings separated by underscores) and then used `str.join()` to concatenate them with the first letter of each word capitalized. This approach is concise, readable, and efficient. The key edge case this code handles is an empty string, which returns an empty string as per the task requirements.

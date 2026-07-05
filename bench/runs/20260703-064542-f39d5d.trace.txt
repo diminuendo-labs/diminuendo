@@ -1,0 +1,2 @@
+**
+I defined a function `longest_word` that takes a string `s` as input. To find the longest whitespace-separated word, I used the built-in `split()` method to split the string into words. The `max()` function with the `key=len` argument was then used to find the word with the maximum length. If the input string is empty, the `default=''` parameter ensures that an empty string is returned instead of raising a ValueError.

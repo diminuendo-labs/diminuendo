@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for the edge case where an empty list is passed in. If the list is empty, I immediately return `None` as per the problem statement. Otherwise, I calculate the mean using the built-in `sum` and `len` functions, ensuring that floating-point division occurs even when all numbers are whole integers (a common gotcha). This solution is concise while still being readable due to the docstring and clear logic flow.

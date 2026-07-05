@@ -1,0 +1,4 @@
+**  
+The function `range_summary` takes a list of integers as input and first handles the edge case where the list is empty, returning an empty string immediately. It then sorts the list and removes duplicates using `sorted(set(nums))`. The function iterates through the sorted list to identify consecutive numbers and groups them into ranges or single numbers. For each group, it decides whether to append a range ('start-end') or a single number to the result list. Finally, it joins all parts of the summary with commas and returns the result string.
+
+This solution ensures that the function is concise and readable while correctly handling consecutive runs and single numbers in the input list.

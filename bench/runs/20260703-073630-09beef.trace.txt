@@ -1,0 +1,2 @@
+**  
+I used Python's `collections.Counter` to efficiently count the frequency of each number in the list. Then, I determined the maximum frequency. Finally, I counted how many numbers have this maximum frequency by using a list comprehension that filters out all numbers with frequencies equal to the max frequency. The function returns the count of these mode values. This approach is concise and leverages Python's powerful standard library for handling collections efficiently.

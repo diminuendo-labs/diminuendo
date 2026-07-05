@@ -1,0 +1,2 @@
+**
+I started by defining a function `median` that takes a list of numbers as input. The function first sorts the input list using the built-in `sorted` function. It then checks if the length of the sorted list is 0, in which case it returns None to handle the edge case where an empty list is passed in. If the length is even, it calculates the average of the two middle values and returns it as a float. Otherwise, it simply returns the middle value. I chose this approach because it's concise and easy to understand, while still handling all possible cases.

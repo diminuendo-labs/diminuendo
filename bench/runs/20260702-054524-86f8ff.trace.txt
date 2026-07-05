@@ -1,0 +1,12 @@
+**
+
+The function `most_common_word(s)` takes a string `s` as input and returns the most common lowercase whitespace-separated word. If multiple words have the same highest count, it returns the one that comes first alphabetically.
+
+1. The function starts by checking if the input string is empty. If it is, it returns an empty string.
+2. It then converts the string to lowercase and splits it into a list of words.
+3. A dictionary `word_count` is used to count occurrences of each word.
+4. The maximum count is determined using the `max()` function.
+5. A list comprehension is used to create a list of words that have the highest count.
+6. Finally, the list of common words is sorted alphabetically and the first word (which will be the one with the smallest lexicographical order) is returned.
+
+This approach ensures that the function is correct, concise, and handles edge cases appropriately.

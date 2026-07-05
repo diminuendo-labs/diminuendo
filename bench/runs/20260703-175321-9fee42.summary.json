@@ -1,0 +1,63 @@
+{
+  "run_id": "20260703-175321-9fee42",
+  "node_id": "task-20260703-175321-9fee42",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code meets all requirements, including the handling of an empty list which returns an empty string.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": false,
+        "got": "raised TypeError(\"'int' object is not iterable\")",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": false,
+        "got": "raised TypeError(\"'int' object is not subscriptable\")",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": false,
+        "got": "raised TypeError(\"'int' object is not subscriptable\")",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": false,
+        "got": "raised TypeError(\"'int' object is not subscriptable\")",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef range_summary(nums):\n    if not nums:\n        return ''\n    runs = []\n    current, count = nums[0], 1\n    for n in nums[1:]:\n        if n == current + 1:\n            count += 1\n        else:\n            runs.append((current, count))\n            current, count = n, 1\n    runs.append((current, count))\n    return ', '.join('-'.join(map(str, r)) if c > 1 else str(r[0]) for r, c in runs)\n```",
+  "trace": "I approached this task by iterating through the input list and keeping track of the current number and its count. When a new number is encountered, I add the previous run to a list if it has more than one occurrence, update the current number and its count, and continue iterating until all numbers have been processed. Finally, I join the runs into a string with commas separating them and 'start-end' ranges separated by hyphens. The edge case I considered is an empty list, for which I return an empty string.",
+  "totals": {
+    "time_s": -0.6898156000000011,
+    "tokens": -76
+  },
+  "files": [
+    "20260703-175321-9fee42.crumbs.jsonl",
+    "20260703-175321-9fee42.trace.txt"
+  ]
+}

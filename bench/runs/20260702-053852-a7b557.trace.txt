@@ -1,0 +1,13 @@
+**
+
+The function `most_common_word(s)` starts by checking if the input string `s` is empty. If it is, an empty string is returned as per the edge case.
+
+The input string is converted to lowercase and split into individual words using the `split()` method. A dictionary `word_count` is used to store the count of each word.
+
+Next, a loop iterates over the list of words, updating the count for each word in the `word_count` dictionary.
+
+After counting all the words, the function finds the maximum count using the `max()` function on the values of the `word_count` dictionary.
+
+A list comprehension is used to create a list of words that have the maximum count. This list is then sorted alphabetically using the `sorted()` function.
+
+Finally, the first word in the sorted list (which will be the lexicographically smallest in case of ties) is returned as the result.

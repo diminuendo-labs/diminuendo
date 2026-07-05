@@ -1,0 +1,2 @@
+**
+I chose a simple and straightforward approach by using the built-in `count` method in Python strings. This method returns the number of occurrences of the specified character in the string, allowing us to easily compare the counts of opening and closing parentheses. By doing this, we can handle all edge cases without needing additional complexity or loops. One key edge case handled is an empty string, which will return `True` as per the task's definition.

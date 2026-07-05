@@ -1,0 +1,5 @@
+**
+
+The function `range_summary` first checks if the input list `nums` is empty and returns an empty string if true. It then sorts the unique elements of the list in ascending order. Using a while loop, it iterates through the sorted numbers to identify ranges by checking consecutive values. If two or more consecutive numbers are found, they are collapsed into a range; otherwise, each number stands alone. Finally, the function joins all ranges (or single numbers) with commas and returns the result.
+
+The edge case of an empty list is handled by immediately returning an empty string without further processing.

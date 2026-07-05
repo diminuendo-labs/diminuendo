@@ -1,0 +1,2 @@
+**
+I chose to implement the function using a Counter object from the collections module, which efficiently counts the occurrences of each word in the input string. To handle ties alphabetically, I used a list comprehension to find all words with the highest count and then returned the minimum of these words, which corresponds to the one that appears last in lexicographical order. I also included a docstring to explain the function's behavior, including the edge case where an empty string returns an empty string.

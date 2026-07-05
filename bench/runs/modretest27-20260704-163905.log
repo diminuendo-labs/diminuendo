@@ -1,0 +1,115 @@
+MODERATOR RETEST 20260704-163905 (PACKET-027, on registry ground)
+performer=qwen2.5-coder:7b  audience=llama3.1:8b (v1, production)
+cells: FIGHTS = B1 (chunk lesson) on chunk_pad r3, predicts DOWN, bar 4 of 24 pooled; EXTENDS = N1 (split_csvish lesson) on token_case r1, predicts UP, bar 2 of 12 pooled  R=12
+stage A carries TWO gates per ground, qualification at the standing fraction and concentration at 9 of 12 on the named shape; registry entries are candidacy, never pre-qualification
+byte checks against production lines 8 and 10: armed-B1=True armed-N1=True
+armed-B1: gen_task=chunk  pins boundary/degenerate  origin=mistral:7b (first mistral-to-qwen exposure)
+armed-N1: gen_task=split_csvish  pins normalize/delimiters  origin=mistral:7b (first mistral-to-qwen exposure)
+census taxonomies, stated before any run (classifiers from supply_families.py unchanged, identity-pinned by test, re-runnable: py modretest27.py census <rows-file>):
+  chunk_pad: range-step comprehension, explicit loop-with-pad, other, unrunnable  named shape: range-step comprehension (conflicted)
+  rule checks for chunk_pad r3 (the standing annotation): ['chunk_pad([1, 2, 3, 4, 5], 3)', 'chunk_pad([1, 2], 5)']
+  token_case: split-capitalize-join, regex, char-walk, other, unrunnable  named shape: split-capitalize-join (separable)
+  rule checks for token_case r1 (the standing annotation): ["token_case('Set_timer_value')"]
+A fights chunk_pad r3 none rep 0: ev=1.00 tools=0 shape=range-step comprehension
+A fights chunk_pad r3 none rep 1: ev=0.20 tools=0 shape=range-step comprehension
+A fights chunk_pad r3 none rep 2: ev=1.00 tools=0 shape=range-step comprehension
+A fights chunk_pad r3 none rep 3: ev=1.00 tools=0 shape=range-step comprehension
+A fights chunk_pad r3 none rep 4: ev=0.20 tools=0 shape=range-step comprehension
+A fights chunk_pad r3 none rep 5: ev=1.00 tools=0 shape=range-step comprehension
+A fights chunk_pad r3 none rep 6: ev=1.00 tools=0 shape=range-step comprehension
+A fights chunk_pad r3 none rep 7: ev=1.00 tools=0 shape=range-step comprehension
+A fights chunk_pad r3 none rep 8: ev=0.20 tools=0 shape=range-step comprehension
+A fights chunk_pad r3 none rep 9: ev=1.00 tools=0 shape=range-step comprehension
+A fights chunk_pad r3 none rep 10: ev=1.00 tools=0 shape=range-step comprehension
+A fights chunk_pad r3 none rep 11: ev=1.00 tools=0 shape=explicit loop-with-pad
+stage A fights (chunk_pad r3) gate 1, qualification: pooled rule 18 passes, 6 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 18/24 readings-present); QUALIFIES (mixed means at least 4 of each)
+stage A fights gate 2, concentration: 11/12 on the named shape (range-step comprehension); CONCENTRATES (at least 9 of 12)
+A extends token_case r1 none rep 0: ev=0.33 tools=0 shape=split-capitalize-join
+A extends token_case r1 none rep 1: ev=1.00 tools=0 shape=split-capitalize-join
+A extends token_case r1 none rep 2: ev=0.33 tools=0 shape=split-capitalize-join
+A extends token_case r1 none rep 3: ev=0.33 tools=0 shape=split-capitalize-join
+A extends token_case r1 none rep 4: ev=1.00 tools=0 shape=split-capitalize-join
+A extends token_case r1 none rep 5: ev=0.00 tools=0 shape=split-capitalize-join
+A extends token_case r1 none rep 6: ev=0.00 tools=0 shape=split-capitalize-join
+A extends token_case r1 none rep 7: ev=0.00 tools=0 shape=split-capitalize-join
+A extends token_case r1 none rep 8: ev=0.00 tools=0 shape=split-capitalize-join
+A extends token_case r1 none rep 9: ev=1.00 tools=0 shape=split-capitalize-join
+A extends token_case r1 none rep 10: ev=0.33 tools=0 shape=split-capitalize-join
+A extends token_case r1 none rep 11: ev=1.00 tools=0 shape=split-capitalize-join
+stage A extends (token_case r1) gate 1, qualification: pooled rule 4 passes, 8 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 4/12 readings-present); QUALIFIES (mixed means at least 2 of each)
+stage A extends gate 2, concentration: 12/12 on the named shape (split-capitalize-join); CONCENTRATES (at least 9 of 12)
+stage B fights block on surviving ground chunk_pad r3: fresh interleaved cells ('none', 'armed-B1') per rep, the stage A cell gates and is never the baseline
+B fights chunk_pad r3 none rep 0: ev=1.00 tools=0 shape=range-step comprehension
+B fights chunk_pad r3 armed-B1 rep 0: ev=1.00 tools=1 shape=range-step comprehension
+B fights chunk_pad r3 none rep 1: ev=1.00 tools=0 shape=explicit loop-with-pad
+B fights chunk_pad r3 armed-B1 rep 1: ev=1.00 tools=1 shape=explicit loop-with-pad
+B fights chunk_pad r3 none rep 2: ev=1.00 tools=0 shape=range-step comprehension
+B fights chunk_pad r3 armed-B1 rep 2: ev=1.00 tools=1 shape=range-step comprehension
+B fights chunk_pad r3 none rep 3: ev=1.00 tools=0 shape=range-step comprehension
+B fights chunk_pad r3 armed-B1 rep 3: ev=1.00 tools=1 shape=range-step comprehension
+B fights chunk_pad r3 none rep 4: ev=1.00 tools=0 shape=range-step comprehension
+B fights chunk_pad r3 armed-B1 rep 4: ev=1.00 tools=1 shape=explicit loop-with-pad
+B fights chunk_pad r3 none rep 5: ev=1.00 tools=0 shape=range-step comprehension
+B fights chunk_pad r3 armed-B1 rep 5: ev=1.00 tools=1 shape=explicit loop-with-pad
+B fights chunk_pad r3 none rep 6: ev=1.00 tools=0 shape=range-step comprehension
+B fights chunk_pad r3 armed-B1 rep 6: ev=1.00 tools=1 shape=range-step comprehension
+B fights chunk_pad r3 none rep 7: ev=1.00 tools=0 shape=range-step comprehension
+B fights chunk_pad r3 armed-B1 rep 7: ev=1.00 tools=1 shape=range-step comprehension
+B fights chunk_pad r3 none rep 8: ev=1.00 tools=0 shape=range-step comprehension
+B fights chunk_pad r3 armed-B1 rep 8: ev=1.00 tools=1 shape=range-step comprehension
+B fights chunk_pad r3 none rep 9: ev=1.00 tools=0 shape=range-step comprehension
+B fights chunk_pad r3 armed-B1 rep 9: ev=1.00 tools=1 shape=explicit loop-with-pad
+B fights chunk_pad r3 none rep 10: ev=1.00 tools=0 shape=range-step comprehension
+B fights chunk_pad r3 armed-B1 rep 10: ev=0.20 tools=1 shape=range-step comprehension
+B fights chunk_pad r3 none rep 11: ev=1.00 tools=0 shape=explicit loop-with-pad
+B fights chunk_pad r3 armed-B1 rep 11: ev=0.60 tools=1 shape=range-step comprehension
+stage B extends block on surviving ground token_case r1: fresh interleaved cells ('none', 'armed-N1') per rep, the stage A cell gates and is never the baseline
+B extends token_case r1 none rep 0: ev=1.00 tools=0 shape=split-capitalize-join
+B extends token_case r1 armed-N1 rep 0: ev=0.67 tools=1 shape=split-capitalize-join
+B extends token_case r1 none rep 1: ev=0.00 tools=0 shape=split-capitalize-join
+B extends token_case r1 armed-N1 rep 1: ev=1.00 tools=1 shape=split-capitalize-join
+B extends token_case r1 none rep 2: ev=0.00 tools=0 shape=split-capitalize-join
+B extends token_case r1 armed-N1 rep 2: ev=1.00 tools=1 shape=split-capitalize-join
+B extends token_case r1 none rep 3: ev=1.00 tools=0 shape=split-capitalize-join
+B extends token_case r1 armed-N1 rep 3: ev=1.00 tools=1 shape=split-capitalize-join
+B extends token_case r1 none rep 4: ev=1.00 tools=0 shape=split-capitalize-join
+B extends token_case r1 armed-N1 rep 4: ev=0.00 tools=1 shape=split-capitalize-join
+B extends token_case r1 none rep 5: ev=1.00 tools=0 shape=split-capitalize-join
+B extends token_case r1 armed-N1 rep 5: ev=1.00 tools=1 shape=split-capitalize-join
+B extends token_case r1 none rep 6: ev=0.00 tools=0 shape=split-capitalize-join
+B extends token_case r1 armed-N1 rep 6: ev=0.33 tools=1 shape=split-capitalize-join
+B extends token_case r1 none rep 7: ev=0.00 tools=0 shape=split-capitalize-join
+B extends token_case r1 armed-N1 rep 7: ev=0.33 tools=1 shape=split-capitalize-join
+B extends token_case r1 none rep 8: ev=0.00 tools=0 shape=split-capitalize-join
+B extends token_case r1 armed-N1 rep 8: ev=0.00 tools=1 shape=split-capitalize-join
+B extends token_case r1 none rep 9: ev=1.00 tools=0 shape=split-capitalize-join
+B extends token_case r1 armed-N1 rep 9: ev=1.00 tools=1 shape=split-capitalize-join
+B extends token_case r1 none rep 10: ev=0.00 tools=0 shape=split-capitalize-join
+B extends token_case r1 armed-N1 rep 10: ev=1.00 tools=1 shape=split-capitalize-join
+B extends token_case r1 none rep 11: ev=0.33 tools=0 shape=split-capitalize-join
+B extends token_case r1 armed-N1 rep 11: ev=0.33 tools=1 shape=split-capitalize-join
+== STAGE B FIGHTS (chunk_pad r3, prediction DOWN) POOLED RULE (canonical, bar 4 of 24 pooled) ==
+  none: 24/24 (diagnostic 24/24 readings-present; unrunnable rows 0)
+  armed-B1: 20/24 (diagnostic 20/24 readings-present; unrunnable rows 0)
+== STAGE B FIGHTS PER-CHECK canonical (none / armed-B1) ==
+  chunk_pad([1, 2, 3, 4, 5], 3): 1.00 / 0.83  <-- rule
+  chunk_pad([1, 2], 5): 1.00 / 0.83  <-- rule
+  chunk_pad([9, 10, 11, 12], 2): 1.00 / 0.92  <-- watch
+  chunk_pad([], 2): 1.00 / 1.00  <-- watch
+  chunk_pad([5, 6, 7], 1): 1.00 / 0.92  <-- watch
+== STAGE B EXTENDS (token_case r1, prediction UP) POOLED RULE (canonical, bar 2 of 12 pooled) ==
+  none: 5/12 (diagnostic 5/11 readings-present; unrunnable rows 1)
+  armed-N1: 6/12 (diagnostic 6/12 readings-present; unrunnable rows 0)
+== STAGE B EXTENDS PER-CHECK canonical (none / armed-N1) ==
+  token_case('Set_timer_value'): 0.42 / 0.50  <-- rule
+  token_case('get_value'): 0.42 / 0.58  <-- watch
+  token_case('count'): 0.50 / 0.83  <-- watch
+== CENSUS (shape distribution per cell, every cell run) ==
+  A|extends|none: split-capitalize-join=12  regex=0  char-walk=0  other=0  unrunnable=0
+  A|fights|none: range-step comprehension=11  explicit loop-with-pad=1  other=0  unrunnable=0
+  B|extends|armed-N1: split-capitalize-join=12  regex=0  char-walk=0  other=0  unrunnable=0
+  B|extends|none: split-capitalize-join=12  regex=0  char-walk=0  other=0  unrunnable=0
+  B|fights|armed-B1: range-step comprehension=8  explicit loop-with-pad=4  other=0  unrunnable=0
+  B|fights|none: range-step comprehension=10  explicit loop-with-pad=2  other=0  unrunnable=0
+census unrunnable against zero-readings divergence: 1 rows
+GATE: PASSED. both stage A gates printed per ground, stage B ran on fights, extends, both byte checks asserted, tool audit clean, census reported for every cell, every run checkpointed, report persisted. The readings are applied in the packet RESULTS. The seat neither taught nor learned.

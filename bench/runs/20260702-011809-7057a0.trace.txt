@@ -1,0 +1,2 @@
+**  
+I first handle the edge case where the input list is empty, returning an empty string. I then sort the list to ensure that all consecutive numbers are adjacent. I iterate through the sorted list, tracking the start of a potential range and appending ranges or individual numbers to the result list as I go. Finally, I append any remaining number or range to the result and join them with commas before returning. This approach ensures that the function is both correct and concise while being easy to understand.

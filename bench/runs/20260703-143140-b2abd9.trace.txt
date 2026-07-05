@@ -1,0 +1,2 @@
+**
+I chose to use a dictionary `counts` to store the frequency of each number. This allowed me to easily find the maximum frequency and then filter the numbers with that frequency to get the modes. I also explicitly handled the edge case where the input list is empty, returning 0 in this case as per the problem statement.

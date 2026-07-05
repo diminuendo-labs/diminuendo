@@ -1,0 +1,89 @@
+DELIVERY TEST 20260702-171528 (PACKET-004)
+performer=llama3.1:8b  audience=qwen2.5-coder:7b (v1, production)
+arms=('none', 'menu', 'directive')  tasks=['most_common_word', 'longest_word']  R=12 per arm per task
+lessons: 2 aimed tie_break, misaimed excluded by loader
+arm none rep 0 (most_common_word): ev=1.00 tools=0 directives=0
+arm none rep 0 (longest_word): ev=0.50 tools=0 directives=0
+arm none rep 1 (most_common_word): ev=0.00 tools=0 directives=0
+arm none rep 1 (longest_word): ev=0.50 tools=0 directives=0
+arm none rep 2 (most_common_word): ev=0.67 tools=0 directives=0
+arm none rep 2 (longest_word): ev=0.25 tools=0 directives=0
+arm none rep 3 (most_common_word): ev=0.67 tools=0 directives=0
+arm none rep 3 (longest_word): ev=0.25 tools=0 directives=0
+arm none rep 4 (most_common_word): ev=0.33 tools=0 directives=0
+arm none rep 4 (longest_word): ev=0.50 tools=0 directives=0
+arm none rep 5 (most_common_word): ev=0.67 tools=0 directives=0
+arm none rep 5 (longest_word): ev=0.50 tools=0 directives=0
+arm none rep 6 (most_common_word): ev=0.33 tools=0 directives=0
+arm none rep 6 (longest_word): ev=0.50 tools=0 directives=0
+arm none rep 7 (most_common_word): ev=0.33 tools=0 directives=0
+arm none rep 7 (longest_word): ev=0.25 tools=0 directives=0
+arm none rep 8 (most_common_word): ev=1.00 tools=0 directives=0
+arm none rep 8 (longest_word): ev=0.50 tools=0 directives=0
+arm none rep 9 (most_common_word): ev=1.00 tools=0 directives=0
+arm none rep 9 (longest_word): ev=0.50 tools=0 directives=0
+arm none rep 10 (most_common_word): ev=1.00 tools=0 directives=0
+arm none rep 10 (longest_word): ev=0.25 tools=0 directives=0
+arm none rep 11 (most_common_word): ev=0.67 tools=0 directives=0
+arm none rep 11 (longest_word): ev=0.50 tools=0 directives=0
+arm menu rep 0 (most_common_word): ev=0.67 tools=2 directives=0
+arm menu rep 0 (longest_word): ev=0.50 tools=2 directives=0
+arm menu rep 1 (most_common_word): ev=1.00 tools=2 directives=0
+arm menu rep 1 (longest_word): ev=0.75 tools=2 directives=0
+arm menu rep 2 (most_common_word): ev=1.00 tools=2 directives=0
+arm menu rep 2 (longest_word): ev=0.50 tools=2 directives=0
+arm menu rep 3 (most_common_word): ev=0.67 tools=2 directives=0
+arm menu rep 3 (longest_word): ev=0.75 tools=2 directives=0
+arm menu rep 4 (most_common_word): ev=1.00 tools=2 directives=0
+arm menu rep 4 (longest_word): ev=0.50 tools=2 directives=0
+arm menu rep 5 (most_common_word): ev=0.67 tools=2 directives=0
+arm menu rep 5 (longest_word): ev=0.50 tools=2 directives=0
+arm menu rep 6 (most_common_word): ev=1.00 tools=2 directives=0
+arm menu rep 6 (longest_word): ev=0.50 tools=2 directives=0
+arm menu rep 7 (most_common_word): ev=1.00 tools=2 directives=0
+arm menu rep 7 (longest_word): ev=0.50 tools=2 directives=0
+arm menu rep 8 (most_common_word): ev=0.67 tools=2 directives=0
+arm menu rep 8 (longest_word): ev=1.00 tools=2 directives=0
+arm menu rep 9 (most_common_word): ev=0.33 tools=2 directives=0
+arm menu rep 9 (longest_word): ev=0.25 tools=2 directives=0
+arm menu rep 10 (most_common_word): ev=1.00 tools=2 directives=0
+arm menu rep 10 (longest_word): ev=0.50 tools=2 directives=0
+arm menu rep 11 (most_common_word): ev=1.00 tools=2 directives=0
+arm menu rep 11 (longest_word): ev=0.50 tools=2 directives=0
+arm directive rep 0 (most_common_word): ev=0.67 tools=0 directives=4
+arm directive rep 0 (longest_word): ev=1.00 tools=0 directives=4
+arm directive rep 1 (most_common_word): ev=0.00 tools=0 directives=4
+arm directive rep 1 (longest_word): ev=1.00 tools=0 directives=4
+arm directive rep 2 (most_common_word): ev=0.00 tools=0 directives=4
+arm directive rep 2 (longest_word): ev=0.75 tools=0 directives=4
+arm directive rep 3 (most_common_word): ev=0.00 tools=0 directives=4
+arm directive rep 3 (longest_word): ev=0.75 tools=0 directives=4
+arm directive rep 4 (most_common_word): ev=0.33 tools=0 directives=4
+arm directive rep 4 (longest_word): ev=0.00 tools=0 directives=4
+arm directive rep 5 (most_common_word): ev=0.67 tools=0 directives=4
+arm directive rep 5 (longest_word): ev=0.50 tools=0 directives=4
+arm directive rep 6 (most_common_word): ev=0.33 tools=0 directives=4
+arm directive rep 6 (longest_word): ev=0.25 tools=0 directives=4
+arm directive rep 7 (most_common_word): ev=0.00 tools=0 directives=4
+arm directive rep 7 (longest_word): ev=0.50 tools=0 directives=4
+arm directive rep 8 (most_common_word): ev=0.33 tools=0 directives=4
+arm directive rep 8 (longest_word): ev=0.50 tools=0 directives=4
+arm directive rep 9 (most_common_word): ev=0.33 tools=0 directives=4
+arm directive rep 9 (longest_word): ev=0.25 tools=0 directives=4
+arm directive rep 10 (most_common_word): ev=0.00 tools=0 directives=4
+arm directive rep 10 (longest_word): ev=0.25 tools=0 directives=4
+arm directive rep 11 (most_common_word): ev=0.33 tools=0 directives=4
+arm directive rep 11 (longest_word): ev=0.75 tools=0 directives=4
+== ARMS (ev_mean, n) ==
+  none: ev=0.53 n=24  most_common_word=0.64  longest_word=0.42
+  menu: ev=0.70 n=24  most_common_word=0.83  longest_word=0.56
+  directive: ev=0.40 n=24  most_common_word=0.25  longest_word=0.54
+== PER-CHECK PASS RATES (none / menu / directive) ==
+  longest_word(''): 0.67 / 0.67 / 0.42
+  longest_word('a bb cc d'): 0.00 / 0.33 / 0.42  <-- tie rule
+  longest_word('cat door bird'): 0.00 / 0.25 / 0.42  <-- tie rule
+  longest_word('one'): 1.00 / 1.00 / 0.92
+  most_common_word(''): 0.67 / 0.83 / 0.36
+  most_common_word('b a b a c'): 0.33 / 0.75 / 0.09  <-- tie rule
+  most_common_word('z z y'): 0.92 / 0.92 / 0.36
+GATE: PASSED. three arms at n=24 each, every run checkpointed, menu arm delivered tools on every run (min=2), per-check table persisted. The decision logic is applied in the packet RESULTS, not here.

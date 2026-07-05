@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking for the edge case where the input list is empty. Then, I used a loop to iterate over the sorted and unique numbers in the list, keeping track of the current run (i.e., consecutive numbers) and its maximum and minimum values. If the next number breaks the current run, I append the range representation of the current run to the result list if it has more than one number, and start a new run. Finally, after iterating over all numbers, I handle any remaining run with more than one number in the same way.

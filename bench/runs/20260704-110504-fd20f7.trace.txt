@@ -1,0 +1,2 @@
+**
+I chose to use the approach of simply counting the occurrences of each parenthesis type and checking for any mismatch, while also considering the edge case where a closing parenthesis appears before its opening partner. This simple yet efficient solution meets all the criteria. The use of `s.find(')')` handles the edge case where an empty string is balanced.

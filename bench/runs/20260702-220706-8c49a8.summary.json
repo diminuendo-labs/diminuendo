@@ -1,0 +1,58 @@
+{
+  "run_id": "20260702-220706-8c49a8",
+  "node_id": "task-20260702-220706-8c49a8",
+  "task": "Write a Python function count_distinct_pairs(nums, target) returning how many distinct unordered value pairs in the list sum to target, each distinct pair counted once no matter how many times its values repeat: [1, 3, 1, 3] with target 4 has exactly one such pair. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly counts distinct pairs, is reasonably concise and readable, and handles the edge case of an empty list.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness_and_readability": 4,
+    "edge_case_handled": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_distinct_pairs([1, 3, 1, 3], 4)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      },
+      {
+        "call": "count_distinct_pairs([2, 2, 2], 4)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      },
+      {
+        "call": "count_distinct_pairs([0, 5, 2, 3, 5, 0], 5)",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_distinct_pairs([], 1)",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef count_distinct_pairs(nums, target):\n    \"\"\"\n    Count distinct unordered pairs of values in a list that sum to a target value.\n\n    Args:\n        nums (list): The input list of numbers.\n        target (int): The target sum.\n\n    Returns:\n        int: The number of distinct unordered pairs with the given target sum.\n\n    Edge case: An empty list returns 0, as there are no valid pairs.\n    \"\"\"\n    if not nums:\n        return 0\n\n    num_set = set()\n    pair_count = set()\n\n    for num in nums:\n        complement = target - num\n        if complement in num_set:\n            # Sort the pair to ensure (a, b) is not counted as (b, a)\n            pair = tuple(sorted((num, complement)))\n            pair_count.add(pair)\n\n        num_set.add(num)\n\n    return len(pair_count)\n```\n\n**",
+  "trace": "**\nI approached this problem by first checking for the edge case of an empty list. If the input list is empty, I immediately return 0 as there are no valid pairs. Then, I used a set to store unique numbers encountered so far (`num_set`), and another set to store unique pairs that sum to the target (`pair_count`). For each number in the input list, I calculated its complement (the value needed to reach the target) and checked if it's already in `num_set`. If it is, I add a sorted version of the pair to `pair_count` to ensure distinct unordered pairs are counted correctly. Finally, I return the size of `pair_count`, which represents the number of distinct unordered pairs with the given target sum.",
+  "totals": {
+    "time_s": 22.5728881,
+    "tokens": 979
+  },
+  "files": [
+    "20260702-220706-8c49a8.crumbs.jsonl",
+    "20260702-220706-8c49a8.trace.txt"
+  ]
+}

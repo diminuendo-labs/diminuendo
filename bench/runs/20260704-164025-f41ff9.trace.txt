@@ -1,0 +1,9 @@
+**
+
+I started by handling the edge case where the input list `lst` is empty. If it is, the function immediately returns an empty list.
+
+Next, I used a list comprehension to create chunks of size `k` from the input list. The `range(0, len(lst), k)` generates indices for slicing the list in steps of `k`.
+
+After creating the initial list of chunks, I identified the last chunk and checked if its length was less than `k`. If it was, I appended `None` to make its length equal to `k`.
+
+Finally, I returned the modified list of chunks. This approach ensures that every chunk has exactly `k` elements, padding with `None` as necessary for any incomplete chunk.

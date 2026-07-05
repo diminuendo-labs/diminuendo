@@ -1,0 +1,1232 @@
+{
+  "calibrate26_id": "20260704-121911",
+  "packet": "PACKET-026",
+  "seats": [
+    {
+      "performer": "mistral:7b",
+      "audience": "llama3.1:8b"
+    },
+    {
+      "performer": "qwen2.5-coder:7b",
+      "audience": "llama3.1:8b"
+    },
+    {
+      "performer": "llama3.1:8b",
+      "audience": "qwen2.5-coder:7b"
+    }
+  ],
+  "repeats": 12,
+  "qualify_rule": "standing fraction generalized: 2n passes AND 2n fails of 12n pooled for n rule checks, canonical unrunnable-as-fail",
+  "family_order": [
+    "chunk_pad",
+    "merge_within",
+    "safe_stats",
+    "collapse_delims",
+    "token_case",
+    "kth_ordered"
+  ],
+  "control_rungs": [
+    [
+      "kth_ordered",
+      1
+    ],
+    [
+      "merge_within",
+      1
+    ]
+  ],
+  "annotations": {
+    "chunk_pad|r1": [
+      "chunk_pad([1, 2, 3, 4, 5], 2)"
+    ],
+    "chunk_pad|r2": [
+      "chunk_pad([1, 2, 3, 4, 5], 3)",
+      "chunk_pad([1, 2], 5)"
+    ],
+    "chunk_pad|r3": [
+      "chunk_pad([1, 2, 3, 4, 5], 3)",
+      "chunk_pad([1, 2], 5)"
+    ],
+    "merge_within|r1": [
+      "merge_within([[1, 3], [3, 6]])"
+    ],
+    "merge_within|r2": [
+      "merge_within([[1, 3], [4, 6]])",
+      "merge_within([[1, 3], [5, 7]])"
+    ],
+    "merge_within|r3": [
+      "merge_within([[1, 3], [5, 7]], 2)",
+      "merge_within([[1, 3], [4, 6]], 0)"
+    ],
+    "safe_stats|r1": [
+      "trimmed_mean([])",
+      "trimmed_mean([5, 5, 1, 9])"
+    ],
+    "safe_stats|r2": [
+      "trimmed_mean([])",
+      "trimmed_mean([7])",
+      "trimmed_mean([3, 9])",
+      "trimmed_mean([5, 5, 1, 9])"
+    ],
+    "safe_stats|r3": [
+      "trimmed_mean([])",
+      "trimmed_mean([7])",
+      "trimmed_mean([3, 9])",
+      "trimmed_mean([5, 5, 1, 9])",
+      "trimmed_mean([4, 4, 4, 4])"
+    ],
+    "collapse_delims|r1": [
+      "collapse_delims('a,,b,,,c')",
+      "collapse_delims(',a,b,')"
+    ],
+    "collapse_delims|r2": [
+      "collapse_delims('a,;b;;c')",
+      "collapse_delims(';a;b,')"
+    ],
+    "collapse_delims|r3": [
+      "collapse_delims('a, ;b;; c')",
+      "collapse_delims(',; a;b , ')",
+      "collapse_delims('')"
+    ],
+    "token_case|r1": [
+      "token_case('Set_timer_value')"
+    ],
+    "token_case|r2": [
+      "token_case('get_URL_path')",
+      "token_case('Set_timer_value')"
+    ],
+    "token_case|r3": [
+      "token_case('URL_to_path')",
+      "token_case('get_ID_count')"
+    ],
+    "kth_ordered|r1": [
+      "kth_ordered(['dd', 'a', 'ccc'], 2)"
+    ],
+    "kth_ordered|r2": [
+      "kth_ordered(['aa', 'bb', 'c'], 2)"
+    ],
+    "kth_ordered|r3": [
+      "kth_ordered(['ab', 'ba', 'aa', 'c'], 2)",
+      "kth_ordered(['ab', 'ba', 'aa', 'c'], 3)"
+    ]
+  },
+  "taxonomies": {
+    "chunk_pad": [
+      "range-step comprehension",
+      "explicit loop-with-pad",
+      "other",
+      "unrunnable"
+    ],
+    "merge_within": [
+      "sort-and-sweep",
+      "pairwise-other",
+      "unrunnable"
+    ],
+    "safe_stats": [
+      "sort-slice-average",
+      "loop-accumulate",
+      "other",
+      "unrunnable"
+    ],
+    "collapse_delims": [
+      "single-split",
+      "multi-split-or-regex",
+      "char-walk",
+      "other",
+      "unrunnable"
+    ],
+    "token_case": [
+      "split-capitalize-join",
+      "regex",
+      "char-walk",
+      "other",
+      "unrunnable"
+    ],
+    "kth_ordered": [
+      "single-key-sort",
+      "compound-key-sort",
+      "manual-scan",
+      "other",
+      "unrunnable"
+    ]
+  },
+  "seat_results": {
+    "mistral:7b": [
+      {
+        "seat": "mistral:7b",
+        "family": "chunk_pad",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 5,
+          "present_n": 11,
+          "present_passed": 5,
+          "unrunnable_rows": 1
+        },
+        "fails": 7,
+        "qualify_min": 2,
+        "qualified": true,
+        "character": "mixed",
+        "control": false
+      },
+      {
+        "seat": "mistral:7b",
+        "family": "merge_within",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 10,
+          "present_n": 11,
+          "present_passed": 10,
+          "unrunnable_rows": 1
+        },
+        "fails": 2,
+        "qualify_min": 2,
+        "qualified": true,
+        "character": "mixed",
+        "control": true
+      },
+      {
+        "seat": "mistral:7b",
+        "family": "safe_stats",
+        "rung": 1,
+        "pooled": {
+          "n": 24,
+          "passed": 14,
+          "present_n": 24,
+          "present_passed": 14,
+          "unrunnable_rows": 0
+        },
+        "fails": 10,
+        "qualify_min": 4,
+        "qualified": true,
+        "character": "mixed",
+        "control": false
+      },
+      {
+        "seat": "mistral:7b",
+        "family": "collapse_delims",
+        "rung": 1,
+        "pooled": {
+          "n": 24,
+          "passed": 0,
+          "present_n": 24,
+          "present_passed": 0,
+          "unrunnable_rows": 0
+        },
+        "fails": 24,
+        "qualify_min": 4,
+        "qualified": false,
+        "character": "floor-leaning",
+        "control": false
+      },
+      {
+        "seat": "mistral:7b",
+        "family": "collapse_delims",
+        "rung": 2,
+        "pooled": {
+          "n": 24,
+          "passed": 0,
+          "present_n": 24,
+          "present_passed": 0,
+          "unrunnable_rows": 0
+        },
+        "fails": 24,
+        "qualify_min": 4,
+        "qualified": false,
+        "character": "floor-leaning",
+        "control": false
+      },
+      {
+        "seat": "mistral:7b",
+        "family": "collapse_delims",
+        "rung": 3,
+        "pooled": {
+          "n": 36,
+          "passed": 5,
+          "present_n": 33,
+          "present_passed": 5,
+          "unrunnable_rows": 1
+        },
+        "fails": 31,
+        "qualify_min": 6,
+        "qualified": false,
+        "character": "floor-leaning",
+        "control": false
+      },
+      {
+        "seat": "mistral:7b",
+        "family": "token_case",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 0,
+          "present_n": 6,
+          "present_passed": 0,
+          "unrunnable_rows": 6
+        },
+        "fails": 12,
+        "qualify_min": 2,
+        "qualified": false,
+        "character": "floor-leaning",
+        "control": false
+      },
+      {
+        "seat": "mistral:7b",
+        "family": "token_case",
+        "rung": 2,
+        "pooled": {
+          "n": 24,
+          "passed": 0,
+          "present_n": 10,
+          "present_passed": 0,
+          "unrunnable_rows": 7
+        },
+        "fails": 24,
+        "qualify_min": 4,
+        "qualified": false,
+        "character": "floor-leaning",
+        "control": false
+      },
+      {
+        "seat": "mistral:7b",
+        "family": "token_case",
+        "rung": 3,
+        "pooled": {
+          "n": 24,
+          "passed": 0,
+          "present_n": 0,
+          "present_passed": 0,
+          "unrunnable_rows": 12
+        },
+        "fails": 24,
+        "qualify_min": 4,
+        "qualified": false,
+        "character": "floor-leaning",
+        "control": false
+      },
+      {
+        "seat": "mistral:7b",
+        "family": "kth_ordered",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 2,
+          "present_n": 11,
+          "present_passed": 2,
+          "unrunnable_rows": 1
+        },
+        "fails": 10,
+        "qualify_min": 2,
+        "qualified": true,
+        "character": "mixed",
+        "control": true
+      }
+    ],
+    "qwen2.5-coder:7b": [
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "chunk_pad",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 11,
+          "present_n": 12,
+          "present_passed": 11,
+          "unrunnable_rows": 0
+        },
+        "fails": 1,
+        "qualify_min": 2,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": false
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "chunk_pad",
+        "rung": 2,
+        "pooled": {
+          "n": 24,
+          "passed": 22,
+          "present_n": 24,
+          "present_passed": 22,
+          "unrunnable_rows": 0
+        },
+        "fails": 2,
+        "qualify_min": 4,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": false
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "chunk_pad",
+        "rung": 3,
+        "pooled": {
+          "n": 24,
+          "passed": 20,
+          "present_n": 24,
+          "present_passed": 20,
+          "unrunnable_rows": 0
+        },
+        "fails": 4,
+        "qualify_min": 4,
+        "qualified": true,
+        "character": "mixed",
+        "control": false
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "merge_within",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 12,
+          "present_n": 12,
+          "present_passed": 12,
+          "unrunnable_rows": 0
+        },
+        "fails": 0,
+        "qualify_min": 2,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": true
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "merge_within",
+        "rung": 2,
+        "pooled": {
+          "n": 24,
+          "passed": 22,
+          "present_n": 24,
+          "present_passed": 22,
+          "unrunnable_rows": 0
+        },
+        "fails": 2,
+        "qualify_min": 4,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": false
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "merge_within",
+        "rung": 3,
+        "pooled": {
+          "n": 24,
+          "passed": 24,
+          "present_n": 24,
+          "present_passed": 24,
+          "unrunnable_rows": 0
+        },
+        "fails": 0,
+        "qualify_min": 4,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": false
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "safe_stats",
+        "rung": 1,
+        "pooled": {
+          "n": 24,
+          "passed": 23,
+          "present_n": 24,
+          "present_passed": 23,
+          "unrunnable_rows": 0
+        },
+        "fails": 1,
+        "qualify_min": 4,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": false
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "safe_stats",
+        "rung": 2,
+        "pooled": {
+          "n": 48,
+          "passed": 48,
+          "present_n": 48,
+          "present_passed": 48,
+          "unrunnable_rows": 0
+        },
+        "fails": 0,
+        "qualify_min": 8,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": false
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "safe_stats",
+        "rung": 3,
+        "pooled": {
+          "n": 60,
+          "passed": 60,
+          "present_n": 60,
+          "present_passed": 60,
+          "unrunnable_rows": 0
+        },
+        "fails": 0,
+        "qualify_min": 10,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": false
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "collapse_delims",
+        "rung": 1,
+        "pooled": {
+          "n": 24,
+          "passed": 23,
+          "present_n": 24,
+          "present_passed": 23,
+          "unrunnable_rows": 0
+        },
+        "fails": 1,
+        "qualify_min": 4,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": false
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "collapse_delims",
+        "rung": 2,
+        "pooled": {
+          "n": 24,
+          "passed": 20,
+          "present_n": 24,
+          "present_passed": 20,
+          "unrunnable_rows": 0
+        },
+        "fails": 4,
+        "qualify_min": 4,
+        "qualified": true,
+        "character": "mixed",
+        "control": false
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "token_case",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 7,
+          "present_n": 12,
+          "present_passed": 7,
+          "unrunnable_rows": 0
+        },
+        "fails": 5,
+        "qualify_min": 2,
+        "qualified": true,
+        "character": "mixed",
+        "control": false
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "kth_ordered",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 11,
+          "present_n": 12,
+          "present_passed": 11,
+          "unrunnable_rows": 0
+        },
+        "fails": 1,
+        "qualify_min": 2,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": true
+      },
+      {
+        "seat": "qwen2.5-coder:7b",
+        "family": "kth_ordered",
+        "rung": 2,
+        "pooled": {
+          "n": 12,
+          "passed": 10,
+          "present_n": 12,
+          "present_passed": 10,
+          "unrunnable_rows": 0
+        },
+        "fails": 2,
+        "qualify_min": 2,
+        "qualified": true,
+        "character": "mixed",
+        "control": false
+      }
+    ],
+    "llama3.1:8b": [
+      {
+        "seat": "llama3.1:8b",
+        "family": "chunk_pad",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 10,
+          "present_n": 12,
+          "present_passed": 10,
+          "unrunnable_rows": 0
+        },
+        "fails": 2,
+        "qualify_min": 2,
+        "qualified": true,
+        "character": "mixed",
+        "control": false
+      },
+      {
+        "seat": "llama3.1:8b",
+        "family": "merge_within",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 11,
+          "present_n": 12,
+          "present_passed": 11,
+          "unrunnable_rows": 0
+        },
+        "fails": 1,
+        "qualify_min": 2,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": true
+      },
+      {
+        "seat": "llama3.1:8b",
+        "family": "merge_within",
+        "rung": 2,
+        "pooled": {
+          "n": 24,
+          "passed": 24,
+          "present_n": 24,
+          "present_passed": 24,
+          "unrunnable_rows": 0
+        },
+        "fails": 0,
+        "qualify_min": 4,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": false
+      },
+      {
+        "seat": "llama3.1:8b",
+        "family": "merge_within",
+        "rung": 3,
+        "pooled": {
+          "n": 24,
+          "passed": 19,
+          "present_n": 24,
+          "present_passed": 19,
+          "unrunnable_rows": 0
+        },
+        "fails": 5,
+        "qualify_min": 4,
+        "qualified": true,
+        "character": "mixed",
+        "control": false
+      },
+      {
+        "seat": "llama3.1:8b",
+        "family": "safe_stats",
+        "rung": 1,
+        "pooled": {
+          "n": 24,
+          "passed": 23,
+          "present_n": 24,
+          "present_passed": 23,
+          "unrunnable_rows": 0
+        },
+        "fails": 1,
+        "qualify_min": 4,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": false
+      },
+      {
+        "seat": "llama3.1:8b",
+        "family": "safe_stats",
+        "rung": 2,
+        "pooled": {
+          "n": 48,
+          "passed": 47,
+          "present_n": 48,
+          "present_passed": 47,
+          "unrunnable_rows": 0
+        },
+        "fails": 1,
+        "qualify_min": 8,
+        "qualified": false,
+        "character": "ceiling-leaning",
+        "control": false
+      },
+      {
+        "seat": "llama3.1:8b",
+        "family": "safe_stats",
+        "rung": 3,
+        "pooled": {
+          "n": 60,
+          "passed": 46,
+          "present_n": 55,
+          "present_passed": 46,
+          "unrunnable_rows": 1
+        },
+        "fails": 14,
+        "qualify_min": 10,
+        "qualified": true,
+        "character": "mixed",
+        "control": false
+      },
+      {
+        "seat": "llama3.1:8b",
+        "family": "collapse_delims",
+        "rung": 1,
+        "pooled": {
+          "n": 24,
+          "passed": 17,
+          "present_n": 24,
+          "present_passed": 17,
+          "unrunnable_rows": 0
+        },
+        "fails": 7,
+        "qualify_min": 4,
+        "qualified": true,
+        "character": "mixed",
+        "control": false
+      },
+      {
+        "seat": "llama3.1:8b",
+        "family": "token_case",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 7,
+          "present_n": 12,
+          "present_passed": 7,
+          "unrunnable_rows": 0
+        },
+        "fails": 5,
+        "qualify_min": 2,
+        "qualified": true,
+        "character": "mixed",
+        "control": false
+      },
+      {
+        "seat": "llama3.1:8b",
+        "family": "kth_ordered",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 0,
+          "present_n": 12,
+          "present_passed": 0,
+          "unrunnable_rows": 0
+        },
+        "fails": 12,
+        "qualify_min": 2,
+        "qualified": false,
+        "character": "floor-leaning",
+        "control": true
+      },
+      {
+        "seat": "llama3.1:8b",
+        "family": "kth_ordered",
+        "rung": 2,
+        "pooled": {
+          "n": 12,
+          "passed": 0,
+          "present_n": 12,
+          "present_passed": 0,
+          "unrunnable_rows": 0
+        },
+        "fails": 12,
+        "qualify_min": 2,
+        "qualified": false,
+        "character": "floor-leaning",
+        "control": false
+      },
+      {
+        "seat": "llama3.1:8b",
+        "family": "kth_ordered",
+        "rung": 3,
+        "pooled": {
+          "n": 24,
+          "passed": 2,
+          "present_n": 24,
+          "present_passed": 2,
+          "unrunnable_rows": 0
+        },
+        "fails": 22,
+        "qualify_min": 4,
+        "qualified": false,
+        "character": "floor-leaning",
+        "control": false
+      }
+    ]
+  },
+  "kept_pools": {
+    "mistral:7b": [
+      {
+        "family": "chunk_pad",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 5,
+          "present_n": 11,
+          "present_passed": 5,
+          "unrunnable_rows": 1
+        },
+        "control": false
+      },
+      {
+        "family": "merge_within",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 10,
+          "present_n": 11,
+          "present_passed": 10,
+          "unrunnable_rows": 1
+        },
+        "control": true
+      },
+      {
+        "family": "safe_stats",
+        "rung": 1,
+        "pooled": {
+          "n": 24,
+          "passed": 14,
+          "present_n": 24,
+          "present_passed": 14,
+          "unrunnable_rows": 0
+        },
+        "control": false
+      },
+      {
+        "family": "kth_ordered",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 2,
+          "present_n": 11,
+          "present_passed": 2,
+          "unrunnable_rows": 1
+        },
+        "control": true
+      }
+    ],
+    "qwen2.5-coder:7b": [
+      {
+        "family": "chunk_pad",
+        "rung": 3,
+        "pooled": {
+          "n": 24,
+          "passed": 20,
+          "present_n": 24,
+          "present_passed": 20,
+          "unrunnable_rows": 0
+        },
+        "control": false
+      },
+      {
+        "family": "collapse_delims",
+        "rung": 2,
+        "pooled": {
+          "n": 24,
+          "passed": 20,
+          "present_n": 24,
+          "present_passed": 20,
+          "unrunnable_rows": 0
+        },
+        "control": false
+      },
+      {
+        "family": "token_case",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 7,
+          "present_n": 12,
+          "present_passed": 7,
+          "unrunnable_rows": 0
+        },
+        "control": false
+      },
+      {
+        "family": "kth_ordered",
+        "rung": 2,
+        "pooled": {
+          "n": 12,
+          "passed": 10,
+          "present_n": 12,
+          "present_passed": 10,
+          "unrunnable_rows": 0
+        },
+        "control": false
+      }
+    ],
+    "llama3.1:8b": [
+      {
+        "family": "chunk_pad",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 10,
+          "present_n": 12,
+          "present_passed": 10,
+          "unrunnable_rows": 0
+        },
+        "control": false
+      },
+      {
+        "family": "merge_within",
+        "rung": 3,
+        "pooled": {
+          "n": 24,
+          "passed": 19,
+          "present_n": 24,
+          "present_passed": 19,
+          "unrunnable_rows": 0
+        },
+        "control": false
+      },
+      {
+        "family": "safe_stats",
+        "rung": 3,
+        "pooled": {
+          "n": 60,
+          "passed": 46,
+          "present_n": 55,
+          "present_passed": 46,
+          "unrunnable_rows": 1
+        },
+        "control": false
+      },
+      {
+        "family": "collapse_delims",
+        "rung": 1,
+        "pooled": {
+          "n": 24,
+          "passed": 17,
+          "present_n": 24,
+          "present_passed": 17,
+          "unrunnable_rows": 0
+        },
+        "control": false
+      },
+      {
+        "family": "token_case",
+        "rung": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 7,
+          "present_n": 12,
+          "present_passed": 7,
+          "unrunnable_rows": 0
+        },
+        "control": false
+      }
+    ]
+  },
+  "moderator_ready": {
+    "mistral:7b": [
+      {
+        "family": "chunk_pad",
+        "rung": 1,
+        "named_shape": "range-step comprehension",
+        "relationship": "conflicted",
+        "count": 11
+      },
+      {
+        "family": "merge_within",
+        "rung": 1,
+        "named_shape": "sort-and-sweep",
+        "relationship": "conflicted",
+        "count": 11
+      },
+      {
+        "family": "safe_stats",
+        "rung": 1,
+        "named_shape": "sort-slice-average",
+        "relationship": "separable",
+        "count": 12
+      }
+    ],
+    "qwen2.5-coder:7b": [
+      {
+        "family": "chunk_pad",
+        "rung": 3,
+        "named_shape": "range-step comprehension",
+        "relationship": "conflicted",
+        "count": 12
+      },
+      {
+        "family": "token_case",
+        "rung": 1,
+        "named_shape": "split-capitalize-join",
+        "relationship": "separable",
+        "count": 12
+      }
+    ],
+    "llama3.1:8b": [
+      {
+        "family": "chunk_pad",
+        "rung": 1,
+        "named_shape": "range-step comprehension",
+        "relationship": "conflicted",
+        "count": 12
+      },
+      {
+        "family": "merge_within",
+        "rung": 3,
+        "named_shape": "sort-and-sweep",
+        "relationship": "conflicted",
+        "count": 12
+      },
+      {
+        "family": "token_case",
+        "rung": 1,
+        "named_shape": "split-capitalize-join",
+        "relationship": "separable",
+        "count": 12
+      }
+    ]
+  },
+  "census": {
+    "mistral:7b|chunk_pad|r1": {
+      "range-step comprehension": 11,
+      "explicit loop-with-pad": 0,
+      "other": 0,
+      "unrunnable": 1
+    },
+    "mistral:7b|merge_within|r1": {
+      "sort-and-sweep": 11,
+      "pairwise-other": 0,
+      "unrunnable": 1
+    },
+    "mistral:7b|safe_stats|r1": {
+      "sort-slice-average": 12,
+      "loop-accumulate": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "mistral:7b|collapse_delims|r1": {
+      "single-split": 0,
+      "multi-split-or-regex": 12,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "mistral:7b|collapse_delims|r2": {
+      "single-split": 4,
+      "multi-split-or-regex": 8,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "mistral:7b|collapse_delims|r3": {
+      "single-split": 7,
+      "multi-split-or-regex": 3,
+      "char-walk": 0,
+      "other": 1,
+      "unrunnable": 1
+    },
+    "mistral:7b|token_case|r1": {
+      "split-capitalize-join": 6,
+      "regex": 0,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 6
+    },
+    "mistral:7b|token_case|r2": {
+      "split-capitalize-join": 5,
+      "regex": 0,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 7
+    },
+    "mistral:7b|token_case|r3": {
+      "split-capitalize-join": 0,
+      "regex": 0,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 12
+    },
+    "mistral:7b|kth_ordered|r1": {
+      "single-key-sort": 4,
+      "compound-key-sort": 7,
+      "manual-scan": 0,
+      "other": 0,
+      "unrunnable": 1
+    },
+    "qwen2.5-coder:7b|chunk_pad|r1": {
+      "range-step comprehension": 11,
+      "explicit loop-with-pad": 1,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|chunk_pad|r2": {
+      "range-step comprehension": 12,
+      "explicit loop-with-pad": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|chunk_pad|r3": {
+      "range-step comprehension": 12,
+      "explicit loop-with-pad": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|merge_within|r1": {
+      "sort-and-sweep": 12,
+      "pairwise-other": 0,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|merge_within|r2": {
+      "sort-and-sweep": 12,
+      "pairwise-other": 0,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|merge_within|r3": {
+      "sort-and-sweep": 12,
+      "pairwise-other": 0,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|safe_stats|r1": {
+      "sort-slice-average": 7,
+      "loop-accumulate": 0,
+      "other": 5,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|safe_stats|r2": {
+      "sort-slice-average": 1,
+      "loop-accumulate": 0,
+      "other": 11,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|safe_stats|r3": {
+      "sort-slice-average": 0,
+      "loop-accumulate": 0,
+      "other": 12,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|collapse_delims|r1": {
+      "single-split": 12,
+      "multi-split-or-regex": 0,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|collapse_delims|r2": {
+      "single-split": 2,
+      "multi-split-or-regex": 10,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|token_case|r1": {
+      "split-capitalize-join": 12,
+      "regex": 0,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|kth_ordered|r1": {
+      "single-key-sort": 0,
+      "compound-key-sort": 12,
+      "manual-scan": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "qwen2.5-coder:7b|kth_ordered|r2": {
+      "single-key-sort": 2,
+      "compound-key-sort": 10,
+      "manual-scan": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "llama3.1:8b|chunk_pad|r1": {
+      "range-step comprehension": 12,
+      "explicit loop-with-pad": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "llama3.1:8b|merge_within|r1": {
+      "sort-and-sweep": 11,
+      "pairwise-other": 1,
+      "unrunnable": 0
+    },
+    "llama3.1:8b|merge_within|r2": {
+      "sort-and-sweep": 12,
+      "pairwise-other": 0,
+      "unrunnable": 0
+    },
+    "llama3.1:8b|merge_within|r3": {
+      "sort-and-sweep": 12,
+      "pairwise-other": 0,
+      "unrunnable": 0
+    },
+    "llama3.1:8b|safe_stats|r1": {
+      "sort-slice-average": 5,
+      "loop-accumulate": 0,
+      "other": 7,
+      "unrunnable": 0
+    },
+    "llama3.1:8b|safe_stats|r2": {
+      "sort-slice-average": 5,
+      "loop-accumulate": 0,
+      "other": 7,
+      "unrunnable": 0
+    },
+    "llama3.1:8b|safe_stats|r3": {
+      "sort-slice-average": 2,
+      "loop-accumulate": 1,
+      "other": 9,
+      "unrunnable": 0
+    },
+    "llama3.1:8b|collapse_delims|r1": {
+      "single-split": 3,
+      "multi-split-or-regex": 9,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "llama3.1:8b|token_case|r1": {
+      "split-capitalize-join": 12,
+      "regex": 0,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "llama3.1:8b|kth_ordered|r1": {
+      "single-key-sort": 0,
+      "compound-key-sort": 12,
+      "manual-scan": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "llama3.1:8b|kth_ordered|r2": {
+      "single-key-sort": 0,
+      "compound-key-sort": 12,
+      "manual-scan": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "llama3.1:8b|kth_ordered|r3": {
+      "single-key-sort": 0,
+      "compound-key-sort": 12,
+      "manual-scan": 0,
+      "other": 0,
+      "unrunnable": 0
+    }
+  },
+  "census_no_readings_divergence": 1,
+  "tool_audit_ok": true,
+  "n_note": "Pure supply and audition instrumentation: no treatment, delivery, moderator, or trait claim under any outcome. Structural readings live in the packet and are applied in its RESULTS. Kept pools enter no standing pool without the conductor's ruling."
+}

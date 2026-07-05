@@ -1,0 +1,8 @@
+**
+- The function `median` first checks if the input list `nums` is empty. If it is, it returns `None`.
+- It then sorts the list using Python's built-in `sorted()` function to ensure the numbers are in ascending order.
+- The length of the sorted list `n` is determined, and the middle index `mid` is calculated as `n // 2`.
+- If the length of the list is odd (`n % 2 == 1`), the function returns the value at the middle index.
+- If the length is even, it calculates the average of the two middle values by adding them together and dividing by 2.0 to ensure the result is a float.
+
+This approach ensures that the median is calculated correctly for both odd and even lengths of lists, with clear handling of an edge case where the input list might be empty.

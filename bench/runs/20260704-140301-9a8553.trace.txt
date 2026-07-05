@@ -1,0 +1,2 @@
+**
+The function `trimmed_mean` first checks if the list has fewer than three elements. If it does, it returns `None` as per the criteria. Then, it removes one occurrence of the minimum and one occurrence of the maximum value from the list. Finally, it calculates and returns the mean of the remaining elements. This approach ensures that exactly one minimum and one maximum are dropped, and it handles edge cases like empty lists, one-element lists, and two-element lists as specified.

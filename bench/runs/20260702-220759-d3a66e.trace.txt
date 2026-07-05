@@ -1,0 +1,2 @@
+**
+I implemented this function by first checking for the edge case of an empty list. I then used a dictionary to count the frequency of each number in the list. Next, I found the maximum count and extracted the distinct numbers with that maximum count using a list comprehension. Finally, I returned the sum of these distinct most frequent values. I chose this approach because it's concise and readable, and handles the edge case explicitly as requested.

@@ -1,0 +1,7 @@
+**
+
+I first checked if the input list `pairs` is empty and returned an empty list immediately if it is. This handles one of the edge cases where no merging needs to occur.
+
+Next, I sorted the pairs based on their start time in ascending order and, to handle edge cases like overlapping ranges at the same start time, I broke ties by sorting end times in descending order. This ensures that when merging, we always consider extending the previous range if possible.
+
+I then iterated through the sorted list of pairs, checking if each pair overlaps with or is within distance `d` of the last range in my merged list. If it does, I merged them into a single range; otherwise, I added the new range to the merged list. This approach ensures that all overlapping and close ranges are merged correctly while maintaining the order and simplicity of the code.

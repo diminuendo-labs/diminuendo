@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-162335-125415",
+  "node_id": "task-20260703-162335-125415",
+  "task": "Write a Python function average(nums) returning the arithmetic mean of the list as a float, even when the mean is a whole number. An empty list returns None, never zero. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly handles the edge case where all numbers in the list are identical.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5,
+    "at least one edge case is named": 1
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "average([1, 2])",
+        "ok": true,
+        "got": "1.5",
+        "expect": "1.5"
+      },
+      {
+        "call": "average([2, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      },
+      {
+        "call": "average([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "average([3])",
+        "ok": true,
+        "got": "3.0",
+        "expect": "3.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef average(nums):\n    if not nums:\n        return None\n    else:\n        result = sum(nums) / len(nums)\n        # Handling the edge case where the mean is a whole number but not zero (i.e., all numbers in the list are identical)\n        if result == int(result):\n            return round(result, 6)\n        else:\n            return result\n```",
+  "trace": "To solve this task, I first checked if the given list `nums` is empty. If it is, then the function returns `None`. Otherwise, it calculates the arithmetic mean by taking the sum of all elements in the list and dividing it by the number of elements (i.e., the length of the list).\nTo ensure that the function also handles the edge case where the mean is a whole number but not zero (i.e., all numbers in the list are identical), I use the `round()` function to round the result to six decimal places when the calculated mean equals its integer value. This guarantees that the function will return a non-zero float even for this special case.",
+  "totals": {
+    "time_s": 19.9139155,
+    "tokens": 707
+  },
+  "files": [
+    "20260703-162335-125415.crumbs.jsonl",
+    "20260703-162335-125415.trace.txt"
+  ]
+}

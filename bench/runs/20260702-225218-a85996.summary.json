@@ -1,0 +1,52 @@
+{
+  "run_id": "20260702-225218-a85996",
+  "node_id": "task-20260702-225218-a85996",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function does not correctly flatten exactly one level of nesting and has a significant readability issue.",
+  "per_criterion": {
+    "correct": 4,
+    "concise_and_readable": 3,
+    "handles_edge_case": 2
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": false,
+        "got": "[1, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": false,
+        "got": "[1, 2]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef flatten_once(lst):\n    \"\"\"Flatten exactly one level of nesting.\n\n    Args:\n        lst (list): A list that may contain nested lists or other elements.\n\n    Returns:\n        list: The input list with exactly one level of nesting removed.\n    \"\"\"\n    return [x if not isinstance(x, list) else x[0] for x in lst]\n```\n**",
+  "trace": "**\nI chose to use a list comprehension to create the flattened list. This approach is concise and readable, allowing me to clearly express the logic of the function without unnecessary code. To handle edge cases, I ensured that elements other than lists contribute their items as is, which covers the case where a nested list contains only one element.",
+  "totals": {
+    "time_s": -1.530707399999999,
+    "tokens": 45
+  },
+  "files": [
+    "20260702-225218-a85996.crumbs.jsonl",
+    "20260702-225218-a85996.trace.txt"
+  ]
+}

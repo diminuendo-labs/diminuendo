@@ -1,0 +1,14 @@
+1. **Edge Case Handling**: The function first checks if the input list `nums` is empty. If it is, an empty string is returned immediately.
+   
+2. **Sorting and Deduplication**: The input list is sorted and duplicates are removed using `sorted(set(nums))`. This ensures that all numbers are in ascending order without repetition.
+
+3. **Range Identification and Formatting**:
+   - Initialize the `summary` list to store the final formatted strings.
+   - Iterate through the sorted list while keeping track of the start of each potential range (`start`).
+   - When a gap is found (i.e., `nums[i] != nums[i-1] + 1`), append the appropriate string ('single number' or 'range') to `summary`, then reset `start` to the current number.
+   
+4. **Final Range Addition**: After the loop, ensure that the last range/number is added to `summary`.
+
+5. **Joining Results**: The list of strings in `summary` is joined with commas and returned.
+
+This approach ensures the function is both correct and concise, addressing all specified criteria.

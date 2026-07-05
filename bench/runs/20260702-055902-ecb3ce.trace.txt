@@ -1,0 +1,7 @@
+**
+1. The function `longest_word(s)` takes a string `s` as input.
+2. It splits the string into words using `s.split()`, which handles multiple spaces and leading/trailing spaces by splitting only on whitespace.
+3. If the list of words is empty (i.e., the input string was empty), it returns an empty string.
+4. It calculates the maximum length of any word in the list using a generator expression inside the built-in `max()` function.
+5. It then filters the list of words to include only those with the maximum length, but in reverse order to ensure that if there are multiple such words, the last one is returned.
+6. Finally, it returns the first (and thus the longest) word from the filtered list.

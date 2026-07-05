@@ -1,0 +1,2 @@
+**
+I implemented the `shortest_word` function by utilizing a generator expression to split the input string into words, and then used the built-in `min` function with a custom key. The key takes into account both word length and its first occurrence in the string (to handle ties), making it concise while also addressing edge cases like an empty string or repeated identical shortest words.

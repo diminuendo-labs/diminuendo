@@ -1,0 +1,2 @@
+**
+I used a two-set approach to efficiently count distinct pairs. One set (`num_set`) keeps track of all unique numbers in the list, while another set (`pair_count`) stores the number of distinct unordered value pairs that sum to the target. This allows for fast lookup and counting of distinct pairs, resulting in concise code with a time complexity of O(n), where n is the length of the input list. I also explicitly handled the edge case of an empty input list by returning 0 immediately.

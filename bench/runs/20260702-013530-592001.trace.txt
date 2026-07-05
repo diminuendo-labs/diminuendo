@@ -1,0 +1,6 @@
+** 
+To solve the problem of finding the most common word in a given string, I used Python's `collections.Counter` to count occurrences of each word. The function first converts the input string to lowercase and splits it into words. If the resulting list is empty (i.e., the input string was empty or only contained whitespace), the function returns an empty string as specified.
+
+The most common words are then identified using `most_common()`. To handle ties alphabetically, a list comprehension filters out all words that do not have the maximum count found. Finally, `min()` is used to select the lexicographically smallest word among those with the highest count, which fulfills the requirement of breaking ties alphabetically.
+
+This approach ensures the function is both correct and efficient.

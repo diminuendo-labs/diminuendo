@@ -1,0 +1,2 @@
+**
+I chose to use the `Counter` class from the `collections` module to count the occurrences of each word. This allows me to efficiently find the maximum count and then retrieve all words with that count using a list comprehension. I also included an edge case check at the beginning of the function, which returns an empty string if the input is empty.

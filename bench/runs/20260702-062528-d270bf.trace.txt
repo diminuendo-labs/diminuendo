@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `Counter` class from the `collections` module to easily count the occurrences of each word. I then found the maximum count and used a list comprehension to get all words with this maximum count, finally returning the smallest of these words (in case of ties) or an empty string if the input is empty. This approach keeps the code concise while ensuring readability through clear variable names and docstrings.

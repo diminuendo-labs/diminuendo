@@ -1,0 +1,3 @@
+**
+
+To implement the `word_count` function, I leveraged Python's built-in string method `split()`, which splits a string into a list of words based on whitespace by default. By checking if the input string `s` is empty before splitting, I ensured that an edge case where an empty string is passed does not cause an error but instead returns 0, as there are no words in an empty string. The function's correctness was confirmed through example usage within the docstring, ensuring it meets the specified criteria for handling whitespace-separated words and managing the edge case of an empty string.

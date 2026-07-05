@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking for the edge cases where `step` is zero or negative, and when `start` is at or past `stop`. These conditions are checked with simple `if` statements to ensure an empty list is returned in these situations without attempting any further computation. I chose to use a single function with clear parameter names and a docstring to document the function's behavior, including the edge case it handles.

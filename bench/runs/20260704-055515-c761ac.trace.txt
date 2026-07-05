@@ -1,0 +1,3 @@
+**
+
+I chose a simple and straightforward approach by directly comparing the counts of opening and closing parentheses in the string. This is based on the fact that for every pair of matching parentheses, one is an opening parenthesis and one is a closing parenthesis. Since we're considering only these two characters and ignoring everything else, this approach works correctly as long as there are no mismatched or nested pairs (which would be caught by the comparison itself). I also explicitly noted the edge case that an empty string is considered balanced, which is handled by the fact that `count()` returns 0 for both '(' and ')' in an empty string.

@@ -1,0 +1,3 @@
+**
+
+I solved this task by using the built-in `set` function to remove duplicates from the list, and then iterating over these unique values to count those that appear exactly once. The edge case I considered is an empty list, which would cause a `ZeroDivisionError` in some approaches; with my solution, it simply returns 0 as intended. I chose to use the concise but clear approach of summing up the counts of unique numbers that appear only once, rather than trying to optimize for performance or using more complex data structures.

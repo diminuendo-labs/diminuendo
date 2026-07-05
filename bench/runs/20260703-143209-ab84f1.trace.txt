@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to efficiently count the frequency of each number. Then, I identified the maximum frequency and created a list of numbers that have this maximum frequency. Finally, I summed up the distinct values in this list using the `set` function. The edge case is handled by returning 0 immediately when an empty list is passed to the function.

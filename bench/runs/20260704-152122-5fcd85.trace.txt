@@ -1,0 +1,2 @@
+**
+I approached this task by first splitting the input string into tokens using underscores as delimiters. I then defined a helper function `capitalize_next_token` to modify tokens after the first one, ensuring that only the next token is capitalized in each iteration of the loop. This approach allows me to handle edge cases such as empty strings and maintain readability by keeping the code concise and straightforward.

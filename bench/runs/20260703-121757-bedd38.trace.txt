@@ -1,0 +1,6 @@
+**
+1. I first check if the input list `nums` is empty and return an empty string immediately if it is, as per the edge case.
+2. I sort the list to ensure that all consecutive numbers are adjacent, making it easier to identify ranges.
+3. I iterate through the sorted list, keeping track of the start of each potential range. If a number is not consecutive with its predecessor (i.e., `nums[i] != nums[i-1] + 1`), I add the current range to the `ranges` list and reset the start for the next potential range.
+4. After the loop, I handle the last range in the same way as within the loop.
+5. Finally, I join all ranges with commas and return the resulting string.

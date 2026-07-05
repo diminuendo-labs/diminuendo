@@ -1,0 +1,381 @@
+{
+  "probe_id": "20260702-083121",
+  "models": {
+    "A": "qwen2.5-coder:7b",
+    "B": "llama3.1:8b"
+  },
+  "audience": {
+    "A": "llama3.1:8b",
+    "B": "qwen2.5-coder:7b"
+  },
+  "generator": "qwen2.5-coder:7b",
+  "r_g": 3,
+  "gen_accounting": {
+    "A": [
+      {
+        "rule_class": "tie_break",
+        "cases": {
+          "max_index": "mixed",
+          "shortest_word": "mixed"
+        },
+        "lessons": [
+          {
+            "task": "max_index",
+            "type": "within_task",
+            "committed": true
+          },
+          {
+            "task": "shortest_word",
+            "type": "within_task",
+            "committed": true
+          }
+        ]
+      },
+      {
+        "rule_class": "distinctness",
+        "cases": {
+          "count_unique": "all_pass",
+          "sum_distinct": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      },
+      {
+        "rule_class": "boundary",
+        "cases": {
+          "average": "all_pass",
+          "chunk": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      },
+      {
+        "rule_class": "normalize",
+        "cases": {
+          "count_word": "all_pass",
+          "equal_ignoring_spaces": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      }
+    ],
+    "B": [
+      {
+        "rule_class": "tie_break",
+        "cases": {
+          "max_index": "mixed",
+          "shortest_word": "all_fail"
+        },
+        "lessons": [
+          {
+            "task": "max_index",
+            "type": "within_task",
+            "committed": true
+          }
+        ]
+      },
+      {
+        "rule_class": "distinctness",
+        "cases": {
+          "count_unique": "all_pass",
+          "sum_distinct": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      },
+      {
+        "rule_class": "boundary",
+        "cases": {
+          "average": "all_pass",
+          "chunk": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      },
+      {
+        "rule_class": "normalize",
+        "cases": {
+          "count_word": "all_pass",
+          "equal_ignoring_spaces": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      }
+    ]
+  },
+  "lesson_counts": {
+    "A": 2,
+    "B": 1
+  },
+  "apply_pool": [
+    "most_common_word",
+    "merge_ranges",
+    "longest_word",
+    "median",
+    "range_summary",
+    "flatten_once",
+    "snake_to_camel",
+    "balanced"
+  ],
+  "repeats": 3,
+  "per_cell_n": 24,
+  "cells": [
+    {
+      "cell": "A|none",
+      "tools": 0,
+      "n": 24,
+      "pass_rate": 0.5833333333333334,
+      "ev_mean": 0.8354166666666667,
+      "per_class": {
+        "boundary": {
+          "n": 9,
+          "ev_mean": 0.8888888888888888
+        },
+        "distinctness": {
+          "n": 3,
+          "ev_mean": 0.9333333333333332
+        },
+        "normalize": {
+          "n": 6,
+          "ev_mean": 0.7083333333333334
+        },
+        "tie_break": {
+          "n": 6,
+          "ev_mean": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "cell": "A|A",
+      "tools": 2,
+      "n": 24,
+      "pass_rate": 0.625,
+      "ev_mean": 0.8194444444444445,
+      "per_class": {
+        "boundary": {
+          "n": 9,
+          "ev_mean": 0.9166666666666666
+        },
+        "distinctness": {
+          "n": 3,
+          "ev_mean": 1.0
+        },
+        "normalize": {
+          "n": 6,
+          "ev_mean": 0.625
+        },
+        "tie_break": {
+          "n": 6,
+          "ev_mean": 0.7777777777777778
+        }
+      }
+    },
+    {
+      "cell": "A|B",
+      "tools": 1,
+      "n": 24,
+      "pass_rate": 0.5416666666666666,
+      "ev_mean": 0.7736111111111111,
+      "per_class": {
+        "boundary": {
+          "n": 9,
+          "ev_mean": 0.712962962962963
+        },
+        "distinctness": {
+          "n": 3,
+          "ev_mean": 0.7999999999999999
+        },
+        "normalize": {
+          "n": 6,
+          "ev_mean": 0.625
+        },
+        "tie_break": {
+          "n": 6,
+          "ev_mean": 1.0
+        }
+      }
+    },
+    {
+      "cell": "B|none",
+      "tools": 0,
+      "n": 24,
+      "pass_rate": 0.20833333333333334,
+      "ev_mean": 0.6118055555555556,
+      "per_class": {
+        "boundary": {
+          "n": 9,
+          "ev_mean": 0.6944444444444444
+        },
+        "distinctness": {
+          "n": 3,
+          "ev_mean": 0.20000000000000004
+        },
+        "normalize": {
+          "n": 6,
+          "ev_mean": 0.5833333333333334
+        },
+        "tie_break": {
+          "n": 6,
+          "ev_mean": 0.7222222222222222
+        }
+      }
+    },
+    {
+      "cell": "B|A",
+      "tools": 2,
+      "n": 24,
+      "pass_rate": 0.20833333333333334,
+      "ev_mean": 0.6319444444444444,
+      "per_class": {
+        "boundary": {
+          "n": 9,
+          "ev_mean": 0.75
+        },
+        "distinctness": {
+          "n": 3,
+          "ev_mean": 0.3333333333333333
+        },
+        "normalize": {
+          "n": 6,
+          "ev_mean": 0.5416666666666666
+        },
+        "tie_break": {
+          "n": 6,
+          "ev_mean": 0.6944444444444445
+        }
+      }
+    },
+    {
+      "cell": "B|B",
+      "tools": 1,
+      "n": 24,
+      "pass_rate": 0.2916666666666667,
+      "ev_mean": 0.6513888888888889,
+      "per_class": {
+        "boundary": {
+          "n": 9,
+          "ev_mean": 0.7222222222222222
+        },
+        "distinctness": {
+          "n": 3,
+          "ev_mean": 0.26666666666666666
+        },
+        "normalize": {
+          "n": 6,
+          "ev_mean": 0.5833333333333334
+        },
+        "tie_break": {
+          "n": 6,
+          "ev_mean": 0.8055555555555555
+        }
+      }
+    }
+  ],
+  "per_class": {
+    "boundary": {
+      "A|none": {
+        "n": 9,
+        "ev_mean": 0.8888888888888888
+      },
+      "A|A": {
+        "n": 9,
+        "ev_mean": 0.9166666666666666
+      },
+      "A|B": {
+        "n": 9,
+        "ev_mean": 0.712962962962963
+      },
+      "B|none": {
+        "n": 9,
+        "ev_mean": 0.6944444444444444
+      },
+      "B|A": {
+        "n": 9,
+        "ev_mean": 0.75
+      },
+      "B|B": {
+        "n": 9,
+        "ev_mean": 0.7222222222222222
+      }
+    },
+    "distinctness": {
+      "A|none": {
+        "n": 3,
+        "ev_mean": 0.9333333333333332
+      },
+      "A|A": {
+        "n": 3,
+        "ev_mean": 1.0
+      },
+      "A|B": {
+        "n": 3,
+        "ev_mean": 0.7999999999999999
+      },
+      "B|none": {
+        "n": 3,
+        "ev_mean": 0.20000000000000004
+      },
+      "B|A": {
+        "n": 3,
+        "ev_mean": 0.3333333333333333
+      },
+      "B|B": {
+        "n": 3,
+        "ev_mean": 0.26666666666666666
+      }
+    },
+    "normalize": {
+      "A|none": {
+        "n": 6,
+        "ev_mean": 0.7083333333333334
+      },
+      "A|A": {
+        "n": 6,
+        "ev_mean": 0.625
+      },
+      "A|B": {
+        "n": 6,
+        "ev_mean": 0.625
+      },
+      "B|none": {
+        "n": 6,
+        "ev_mean": 0.5833333333333334
+      },
+      "B|A": {
+        "n": 6,
+        "ev_mean": 0.5416666666666666
+      },
+      "B|B": {
+        "n": 6,
+        "ev_mean": 0.5833333333333334
+      }
+    },
+    "tie_break": {
+      "A|none": {
+        "n": 6,
+        "ev_mean": 0.8333333333333334
+      },
+      "A|A": {
+        "n": 6,
+        "ev_mean": 0.7777777777777778
+      },
+      "A|B": {
+        "n": 6,
+        "ev_mean": 1.0
+      },
+      "B|none": {
+        "n": 6,
+        "ev_mean": 0.7222222222222222
+      },
+      "B|A": {
+        "n": 6,
+        "ev_mean": 0.6944444444444445
+      },
+      "B|B": {
+        "n": 6,
+        "ev_mean": 0.8055555555555555
+      }
+    }
+  },
+  "n_note": "8 apply tasks x 3 repeats = n=24 per cell. Per-class n is per-cell and smaller, stated in per_class. Direction at this n, not rates. Volume decides."
+}

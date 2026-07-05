@@ -1,0 +1,9 @@
+** 
+
+I started by checking if the input list `pairs` is empty. If it is, I return an empty list as there are no ranges to merge.
+
+Next, I sort the pairs based on their start values to ensure that I process them in order. This makes it easier to determine if two consecutive ranges should be merged.
+
+I then iterate through each range and check if the current range overlaps or is within distance `d` of the last range in the merged list. If they overlap or are close enough, I merge them by updating the end value of the last range. If not, I append the current range to the merged list.
+
+This approach ensures that all overlapping or close ranges are merged into a single range and that the resulting list is sorted by start value.

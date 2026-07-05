@@ -1,0 +1,3 @@
+1. The function first checks if the input list is empty or if `k` is less than or equal to zero, which are edge cases that return an empty list immediately.
+2. It then uses a list comprehension to create chunks of size `k` from the list.
+3. To ensure all chunks have exactly `k` elements, it pads any final chunk with `None` if necessary. This is done by appending additional empty lists (`[]`) to the result until the length of each chunk is `k`.

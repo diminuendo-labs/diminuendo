@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-074533-27afbf",
+  "node_id": "task-20260703-074533-27afbf",
+  "task": "Write a Python function depth_max(s) returning the maximum nesting depth of square brackets in the string, counting only the characters [ and ] and ignoring everything else. When a closing bracket appears before its opener, or any opener is never closed, return -1. An empty string returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly handles the edge case where an opener is never closed, returning -1 in such cases.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5,
+    "at least one edge case is named": 1
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "depth_max('[a[b]]')",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "depth_max(']fine[')",
+        "ok": true,
+        "got": "-1",
+        "expect": "-1"
+      },
+      {
+        "call": "depth_max('[[')",
+        "ok": true,
+        "got": "-1",
+        "expect": "-1"
+      },
+      {
+        "call": "depth_max('')",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef depth_max(s):\n    depth = max_depth = 0\n    for char in s:\n        if char == '[':\n            depth += 1\n            max_depth = max(max_depth, depth)\n        elif char == ']':\n            depth -= 1\n            if depth < 0:\n                return -1\n    return max_depth if depth == 0 else -1\n```\n\n**",
+  "trace": "**\n\nI implemented the `depth_max` function to calculate the maximum nesting depth of square brackets in a given string. I maintained a counter `depth` to track the current depth and updated it as I encountered opening (`[`) and closing (`]`) brackets. The variable `max_depth` keeps track of the highest nesting level achieved.\n\nTo handle edge cases:\n- If the depth becomes negative at any point, it means there's a closing bracket without an matching opener, so I return -1.\n- An empty string returns 0, as there are no brackets to nest.\n- The function checks if the final depth is zero before returning `max_depth`, ensuring all openers have been closed.\n\nThis approach ensures the function is both correct and concise.",
+  "totals": {
+    "time_s": 18.7150274,
+    "tokens": 761
+  },
+  "files": [
+    "20260703-074533-27afbf.crumbs.jsonl",
+    "20260703-074533-27afbf.trace.txt"
+  ]
+}

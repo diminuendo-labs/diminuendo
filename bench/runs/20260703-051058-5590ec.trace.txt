@@ -1,0 +1,2 @@
+**  
+The function `range_summary` first checks if the input list `nums` is empty, returning an empty string if so. It then sorts the list to handle consecutive runs correctly. The algorithm iterates through the sorted list, keeping track of the current start and end of a sequence. When a break in the sequence is found (i.e., when the current number is not one more than the previous), it appends the range or single number to the result list. Finally, it handles any remaining range or single number before returning the joined string.

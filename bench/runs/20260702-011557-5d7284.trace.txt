@@ -1,0 +1,2 @@
+**
+I defined the function mode with a docstring to clearly describe its behavior and edge cases. To find the most frequent value, I used a dictionary freq to store the frequency of each number in the list. After counting frequencies, I identified the maximum frequency max_freq using the built-in max function. Finally, I filtered the numbers with this frequency to find all tied values, then returned the smallest one using the min function. This approach is concise and readable, while also handling the edge case where the input list is empty.

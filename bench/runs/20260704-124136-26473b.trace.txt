@@ -1,0 +1,2 @@
+The function first replaces consecutive commas with a single comma, making it easier to split the string later. Then, it splits the cleaned string on commas and removes any empty pieces at the start and end of the list. Finally, the remaining non-empty pieces are rejoined using a single comma between each.
+One edge case that is handled by this function is when there are consecutive commas at the beginning or end of the input string; these will be treated as a single delimiter rather than multiple ones.

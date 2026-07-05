@@ -1,0 +1,2 @@
+**
+I implemented this function by using a list comprehension to split the input string into words, convert each word and the target word to lowercase for case-insensitive comparison, and then count the number of matches. This approach is concise and readable due to its use of list comprehensions and built-in functions like `split()` and `lower()`. The edge case where an empty string s returns 0 is handled implicitly by the condition in the list comprehension.

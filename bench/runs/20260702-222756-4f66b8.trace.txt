@@ -1,0 +1,3 @@
+**
+
+First, I sorted the list of pairs by their start times to ensure that all potential overlaps are adjacent. Then, I iterated through the sorted list and checked if the current interval should be merged with the last one in the `merged` list. If there is no overlap or the intervals do not touch (the end of the previous interval is less than the start of the current), the current interval was appended to the result list. If they do overlap, I updated the end of the last interval in the `merged` list to be the maximum of its own end and the current interval's end. This approach ensures that all overlapping or touching intervals are merged into a single interval, and the final list is sorted by start time.

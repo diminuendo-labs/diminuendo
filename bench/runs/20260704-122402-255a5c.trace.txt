@@ -1,0 +1,1 @@
+I used a list comprehension to iterate over the input list `lst`. For each iteration, I'm creating a chunk of size `k`, padding it with `None` if the final chunk is shorter than `k`, and appending it to a new list. If `lst` is empty, an empty list is returned as expected. This solution handles an edge case where the list length might not be evenly divisible by k.

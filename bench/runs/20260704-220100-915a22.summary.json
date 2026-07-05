@@ -1,0 +1,51 @@
+{
+  "run_id": "20260704-220100-915a22",
+  "node_id": "task-20260704-220100-915a22",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided Python function trimmed_mean correctly calculates the mean of a list after removing one occurrence each of its minimum and maximum values, with clear handling of edge cases such as an empty input list.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": false,
+        "got": "0.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": false,
+        "got": "raised UnboundLocalError(\"cannot access local variable 'mid2' where it is not associated with a value\")",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n    nums.sort()\n    n = len(nums)\n    median_index = (n - 1) // 2\n    min_index, max_index = median_index, n - median_index - 1\n    if len(nums) % 2 == 0:\n        mid1, mid2 = nums[median_index], nums[median_index + 1]\n    else:\n        mid1 = nums[median_index]\n    trimmed_list = [n for n in nums if n not in (min(nums), max(nums))]\n    trimmed_sum = sum(trimmed_list)\n    return (trimmed_sum - min(mid1, mid2) - max(mid1, mid2)) / (len(trimmed_list) - 1)\n```",
+  "trace": "The function first checks if the input list is empty and returns None if it is. It then sorts the list and calculates the index of the median element. To handle an edge case where the length of the list is even, the function finds both the middle two elements. The function creates a new list that excludes the minimum and maximum values from the sorted input list. Finally, it calculates the sum of the trimmed list, subtracts the sum of the minimum and maximum values found earlier, and returns the result divided by the number of items in the trimmed list minus one to get the mean of the remaining elements.",
+  "totals": {
+    "time_s": -1.7280404000000011,
+    "tokens": -99
+  },
+  "files": [
+    "20260704-220100-915a22.crumbs.jsonl",
+    "20260704-220100-915a22.trace.txt"
+  ]
+}

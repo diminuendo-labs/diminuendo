@@ -1,0 +1,2 @@
+**  
+I used the `split()` method to break the string into words, then iterated through them in reverse order. This approach ensures that I would find and return the last longest word if there were ties. The function handles the edge case where the input string is empty by immediately returning an empty string.

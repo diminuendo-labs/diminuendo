@@ -1,0 +1,2 @@
+**
+I chose to use the `Counter` class from the `collections` module to count the occurrences of each word. This simplifies the code and allows us to easily find the maximum count. To break ties alphabetically, I used a list comprehension to find all words with the maximum count, and then returned the smallest one using the `min` function. The edge case handled is when the input string is empty, in which case an empty string is returned.

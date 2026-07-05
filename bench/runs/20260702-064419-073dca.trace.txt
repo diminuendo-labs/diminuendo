@@ -1,0 +1,3 @@
+**
+
+To solve this task, I first checked if the input string is empty or contains only whitespace characters. If so, I returned an empty string immediately. Then, I split the string into words (ignoring case) and counted their occurrences using the `Counter` class from the `collections` module. Finally, I used a lambda function as the key to find the most common word, which breaks ties alphabetically by also considering the alphabetical order of the words. This approach is concise and readable while handling the specified edge case correctly.

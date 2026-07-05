@@ -1,0 +1,2 @@
+**
+The function `nth_page` is designed to retrieve the nth page of a list, where each page has a specified size. It first checks for edge cases such as negative or zero size, and pages less than 1 or beyond the last possible page. If any of these conditions are met, it returns an empty list. Otherwise, it calculates the starting index based on the given page number and size, then slices the list to return the correct page. The approach ensures that the function is both correct and concise, adhering to the provided criteria.

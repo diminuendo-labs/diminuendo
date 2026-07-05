@@ -1,0 +1,2 @@
+**  
+I used a state machine approach to iterate through the sorted list of numbers. I kept track of the current range by adjusting `start` and `end`. When a non-consecutive number is encountered, I added the current range (or single number) to the result list. Finally, I handled any remaining range after the loop ends and joined all parts with commas. This approach ensures that the function correctly handles edge cases like an empty list or consecutive numbers.

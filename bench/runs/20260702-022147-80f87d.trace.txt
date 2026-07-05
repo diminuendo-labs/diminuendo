@@ -1,0 +1,2 @@
+**
+I chose to use the concept of iterating through the list and using a state machine to keep track of consecutive numbers. This approach is suitable for this task because it allows us to efficiently identify ranges of consecutive numbers and handle edge cases such as a single number or an empty list. I also handled the case where there are multiple numbers with no gaps between them, by only appending the first and last number of each range to the result list.

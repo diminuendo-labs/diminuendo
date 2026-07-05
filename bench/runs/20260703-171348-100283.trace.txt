@@ -1,0 +1,1 @@
+I used the `heapq` module to efficiently handle large datasets and maintain the order of values. For smaller lists, it is more practical to sort them directly using list's built-in sort method. The edge case I addressed is when the user requests more elements than the actual list length. In that scenario, I return all elements sorted in descending order.

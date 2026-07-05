@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to count the occurrences of each word. However, since we also need to break ties alphabetically, I used a lambda function within the `max` function to return the first item that maximizes both the count and the alphabetical order. This approach is concise and readable while meeting all criteria. The empty string edge case is handled by checking if the input list of words is empty before attempting to find the most common word.

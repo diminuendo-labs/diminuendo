@@ -1,0 +1,1 @@
+First, I sorted the input list `nums` and calculated the index of the median value. Then, I determined the indices for the minimum and maximum values, considering an edge case where the list has an even number of elements. Finally, I computed the sum of middle values (excluding the minimum and maximum) and divided it by the total count of such values to get the trimmed mean.

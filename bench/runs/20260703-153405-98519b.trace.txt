@@ -1,0 +1,7 @@
+1. **Edge Case Handling**: The function first checks if the input list `nums` is empty. If it is, it returns an empty string immediately.
+2. **Sorting and Deduplication**: The list is sorted and converted to a set to remove any duplicates.
+3. **Iterating and Grouping**: The function iterates through the sorted numbers, grouping consecutive numbers into ranges.
+4. **Appending Results**: For each group of consecutive numbers, it appends either the single number or the range (start-end) to the result list.
+5. **Final Joining**: Finally, it joins all parts in the result list with commas and returns the string.
+
+This approach ensures that the function is both correct and concise, handling edge cases like an empty input gracefully.

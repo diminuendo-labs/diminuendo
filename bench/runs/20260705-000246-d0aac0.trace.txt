@@ -1,0 +1,2 @@
+** 
+I approached this problem by first grouping the words based on their lengths using a dictionary. This allows for efficient sorting and selection of words according to the given criteria. After creating the grouped dictionary, I sorted each group reverse-alphabetically and then extended them into a single list named `sorted_words`. Finally, I returned the k-th word if it falls within the range of the list; otherwise, I returned None. This approach ensures that the function is both correct and concise, adhering to the criteria provided.

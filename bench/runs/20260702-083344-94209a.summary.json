@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-083344-94209a",
+  "node_id": "task-20260702-083344-94209a",
+  "task": "Write a Python function count_unique(nums) returning how many values appear exactly once in the list. Values that repeat do not count at all: [1, 2, 2, 3] has two such values, 1 and 3. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "reason": "The code is correct and handles the edge case of an empty list, but could be more concise with a dictionary comprehension.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness": 4,
+    "readability": 4
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_unique([1, 2, 2, 3])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_unique([5, 5])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([7])",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:** \n\n```python\ndef count_unique(nums):\n    if not nums:\n        return 0\n    counts = {}\n    for num in nums:\n        counts[num] = counts.get(num, 0) + 1\n    return sum(1 for count in counts.values() if count == 1)\n```\n\n**",
+  "trace": "** \n\nI first checked if the input list `nums` is empty and returned 0 immediately if it is. Then, I used a dictionary to count occurrences of each number. Finally, I calculated how many numbers have exactly one occurrence by summing up values in the dictionary that equal 1.",
+  "totals": {
+    "time_s": 17.454349,
+    "tokens": 614
+  },
+  "files": [
+    "20260702-083344-94209a.crumbs.jsonl",
+    "20260702-083344-94209a.trace.txt"
+  ]
+}

@@ -1,0 +1,2 @@
+**
+I used a regular expression to extract whitespace-separated words from the input string, removing any leading or trailing punctuation. I then compared these words to the target word `w` in a case-insensitive manner. The edge case where an empty string is passed as input is handled by checking if the input string has been stripped of whitespace and returning 0 immediately. This approach allows for concise and readable code while accurately meeting the task requirements.

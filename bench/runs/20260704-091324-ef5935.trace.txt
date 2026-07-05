@@ -1,0 +1,1 @@
+I sorted the input list to ensure the numbers are in order. If the length of the list is even, I calculated the average of the two middle values by adding them and dividing by 2. If the length of the list is odd, I simply returned the middle value directly. Additionally, I handled an edge case where an empty list is provided by returning None.

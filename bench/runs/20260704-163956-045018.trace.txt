@@ -1,0 +1,9 @@
+**
+
+1. **Edge Case Handling**: I first check if the input list `lst` is empty or if `k` is less than or equal to 0. If either condition is true, I immediately return an empty list since there's nothing to process.
+
+2. **Chunking**: I use a list comprehension to split the list into chunks of size `k`. This is done by iterating over the list with a step of `k`, slicing the list from index `i` to `i + k`.
+
+3. **Padding the Last Chunk**: After creating all the chunks, I check if the last chunk has fewer than `k` elements. If it does, I pad it with `None` until it reaches the desired size.
+
+4. **Return Result**: Finally, I return the list of chunks, ensuring that the padding is applied correctly to any short final chunk.

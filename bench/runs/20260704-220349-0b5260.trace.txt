@@ -1,0 +1,3 @@
+In the function, we first check if the list is empty and return None in that case. Then we sort the list to ensure that the minimum and maximum values are at the beginning and end of the sorted list. For lists with only one element, we return the only value as it acts both as the minimum and maximum.
+
+For lists with more than one element, we exclude exactly one occurrence of the minimum and one occurrence of the maximum by selecting elements from index 1 to n-2 (excluding the first and last elements), calculate the sum of these selected elements, and divide it by (n - 2) to find the mean.

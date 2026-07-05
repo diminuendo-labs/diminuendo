@@ -1,0 +1,2 @@
+**
+I implemented the function by first checking for edge cases where the input list has less than 3 elements. If so, I return None as per the problem statement. Otherwise, I calculate the minimum and maximum values in the list using built-in Python functions `min()` and `max()`. Then, I use a list comprehension to create a new list that excludes these two extreme values. Finally, I return the mean of this trimmed list by dividing its sum by its length.

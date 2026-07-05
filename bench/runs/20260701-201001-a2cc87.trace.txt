@@ -1,0 +1,3 @@
+**
+
+I thoroughly understood the problem requirements and edge cases before writing the code. I chose to use a simple and concise approach using Python's built-in `Counter` class from the `collections` module, which efficiently counts the occurrences of each word in the input string. The function then uses the `max` function with a custom key function to select the most common word, breaking ties alphabetically by comparing the words lexicographically.

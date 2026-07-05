@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-091807-29a5ed",
+  "node_id": "task-20260704-091807-29a5ed",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code meets all the specified requirements and handles edge cases correctly.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "edge case handling": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": false,
+        "got": "[[1, 2], [3]]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": false,
+        "got": "[1, [2, [3, 4]]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef flatten_once(lst):\n    return [i if isinstance(i, (int, float, str)) else list(flatten_once(i)) for i in lst]\n```",
+  "trace": "The function iterates through each element in the input list. If an element is a primitive data type like integer, float or string, it is kept as is. However, if an element is a list, it is recursively flattened by calling `flatten_once(i)`. This continues until we reach a level where there's no more nesting. The edge case we handle is when the input list contains both primitives and nested lists with no further nesting (one-level deep).",
+  "totals": {
+    "time_s": 0.09757459999999973,
+    "tokens": -48
+  },
+  "files": [
+    "20260704-091807-29a5ed.crumbs.jsonl",
+    "20260704-091807-29a5ed.trace.txt"
+  ]
+}

@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `set` data structure, which automatically removes duplicates. This makes it easy to achieve the desired result in a concise and readable way. I also included a docstring to highlight the edge case of an empty list returning 0, as per the requirements.

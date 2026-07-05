@@ -1,0 +1,58 @@
+{
+  "run_id": "20260704-052046-753f84",
+  "node_id": "task-20260704-052046-753f84",
+  "task": "Write a Python function median(nums) returning the middle value of the sorted list when the length is odd, or the average of the two middle values as a float when the length is even. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function is correct and handles the edge case of an empty list. The code is mostly concise and readable, with room for improvement in naming variables like `n` to something more descriptive.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness_and_readability": 4,
+    "edge_cases_handled": 3
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "median([3, 1, 2])",
+        "ok": false,
+        "got": "2.0",
+        "expect": "2"
+      },
+      {
+        "call": "median([1, 2, 3, 4])",
+        "ok": true,
+        "got": "2.5",
+        "expect": "2.5"
+      },
+      {
+        "call": "median([5, 5])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "median([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef median(nums):\n    \"\"\"\n    Calculate the middle value(s) of a sorted list.\n\n    Args:\n        nums (list): A list of numbers to calculate the median from.\n\n    Returns:\n        float or None: The median value if the input is non-empty, otherwise None.\n    \"\"\"\n    if not nums:\n        return None  # Edge case: empty list returns None\n    sorted_nums = sorted(nums)\n    n = len(sorted_nums)\n    middle_index = n // 2\n    if n % 2 == 1:\n        return float(sorted_nums[middle_index])\n    else:\n        return (sorted_nums[middle_index - 1] + sorted_nums[middle_index]) / 2.0\n```\n\n**",
+  "trace": "**\nI chose to first check for the edge case of an empty list, returning None immediately. Then, I used Python's built-in sorting function `sorted()` to ensure the input list is in ascending order. To calculate the median, I determined whether the length of the sorted list was odd or even and returned either the middle value or the average of the two middle values as a float. This approach allows for concise and readable code that handles both edge cases correctly.",
+  "totals": {
+    "time_s": -3.6929069000000005,
+    "tokens": 42
+  },
+  "files": [
+    "20260704-052046-753f84.crumbs.jsonl",
+    "20260704-052046-753f84.trace.txt"
+  ]
+}

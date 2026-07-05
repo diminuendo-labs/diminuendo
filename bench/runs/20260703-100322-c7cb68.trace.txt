@@ -1,0 +1,1 @@
+I chose to iterate over the list of words in reverse order, which allows me to easily handle ties by returning the last occurrence of the longest word. This approach ensures that the function is both correct and concise. The edge case of multiple words with the same length being returned correctly is handled by this method as well.

@@ -1,0 +1,2 @@
+**
+I chose a simple and concise approach by using Python's built-in `count` method to compare the number of opening and closing parentheses. This is a correct solution because an empty string is considered balanced (meets the edge case requirement), and it efficiently handles any string without iterating over its characters.

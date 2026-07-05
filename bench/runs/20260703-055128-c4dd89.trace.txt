@@ -1,0 +1,2 @@
+**
+I defined a function `sum_of_modes` that takes a list of numbers as input. To handle the edge case where the input list is empty, I added a simple check at the beginning of the function and returned 0 in this case. For the rest of the function, I used a dictionary to count the frequency of each number, then found the maximum count and the corresponding modes (the numbers that appear most frequently). Finally, I summed up these modes to get the result.

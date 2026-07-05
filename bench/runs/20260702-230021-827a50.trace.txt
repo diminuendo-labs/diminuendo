@@ -1,0 +1,2 @@
+**
+I implemented the `merge_ranges` function by first handling the edge case where the input is empty. Then, I iterated through each pair of ranges and checked if they overlap or touch; if so, merged them into a single range in-place. For non-overlapping pairs, I appended them to the result list. Finally, I sorted the merged ranges by their start value using Python's built-in `sorted` function with a lambda key function.

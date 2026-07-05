@@ -1,0 +1,58 @@
+{
+  "run_id": "20260702-215936-0bd726",
+  "node_id": "task-20260702-215936-0bd726",
+  "task": "Write a Python function weighted_mean(values, weights) returning the weighted arithmetic mean as a float. Empty lists return None, and a zero total weight also returns None, never a crash. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code meets all requirements.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "edge case handled": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "weighted_mean([1, 3], [1, 1])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      },
+      {
+        "call": "weighted_mean([2], [0])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "weighted_mean([], [])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "weighted_mean([1, 2], [0, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef weighted_mean(values, weights):\n    if not values or not weights or sum(weights) == 0:\n        return None\n    return sum(v * w for v, w in zip(values, weights)) / sum(weights)\n```",
+  "trace": "The function `weighted_mean` first checks if either the `values` list is empty, the `weights` list is empty, or the sum of the weights is zero. If any of these conditions are true, it returns `None`. Otherwise, it calculates the weighted mean using a generator expression that multiplies corresponding values and weights together and then sums up these products. The result is then divided by the total weight to get the final weighted arithmetic mean. This function avoids division by zero and ensures graceful handling of edge cases where the input lists might be empty or have a total weight of zero.",
+  "totals": {
+    "time_s": 18.375973100000003,
+    "tokens": 589
+  },
+  "files": [
+    "20260702-215936-0bd726.crumbs.jsonl",
+    "20260702-215936-0bd726.trace.txt"
+  ]
+}

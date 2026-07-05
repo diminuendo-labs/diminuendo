@@ -1,0 +1,3 @@
+**
+
+I chose to keep the code concise and simple by directly comparing the counts of opening and closing parentheses. This approach works because every opening parenthesis must be matched with a closing one, so if their counts are equal, it means all parentheses were correctly paired. I didn't normalize delimiters before processing as the problem statement explicitly asks for considering only '(' and ')' characters, making normalization unnecessary in this case.

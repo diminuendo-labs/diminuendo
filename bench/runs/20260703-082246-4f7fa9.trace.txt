@@ -1,0 +1,9 @@
+**
+
+The function `least_frequent_word(s)` starts by checking if the input string `s` is empty. If it is, the function returns an empty string immediately as per the edge case requirement.
+
+Next, the string is split into individual words using Python's built-in `.split()` method, which handles whitespace by default. Each word is converted to lowercase and counted using a dictionary `word_counts`.
+
+After counting, the minimum frequency (`min_count`) of any word is determined by taking the minimum value from the dictionary. Words that have this frequency are collected into a list `least_frequent_words`. 
+
+Finally, this list is sorted alphabetically (using Python's built-in `.sort()` method for lists) and the first element (the lexicographically smallest) is returned as the result. This ensures that in case of ties on frequency, the word that comes first alphabetically is selected.

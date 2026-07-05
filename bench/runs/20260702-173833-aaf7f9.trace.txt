@@ -1,0 +1,2 @@
+**
+I used the Counter class from the collections module to count the occurrences of each word in the input string. I then found the maximum count and created a list of words with this count. To find the last occurrence of these words, I used a generator expression within the max function to iterate over the indices of the words in the original string, stopping at the first one that matches the most common words. If there are no matching words (i.e., an empty string is input), it returns an empty string.

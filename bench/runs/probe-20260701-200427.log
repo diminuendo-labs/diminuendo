@@ -1,0 +1,26 @@
+TRANSFER PROBE 20260701-200427
+A=qwen2.5-coder:7b  B=llama3.1:8b  generator=qwen2.5-coder:7b (fixed)
+-- generating lessons from model A (qwen2.5-coder:7b) --
+gen run A: verdict=pass ev=1.00
+gen run A: verdict=pass ev=1.00
+store A: 2 lessons committed
+-- generating lessons from model B (llama3.1:8b) --
+gen run B: verdict=fail ev=1.00
+gen run B: verdict=pass ev=1.00
+store B: 2 lessons committed
+cell A|none: verdict=pass ev=1.00
+cell A|none: verdict=pass ev=1.00
+cell A|A: verdict=pass ev=1.00
+cell A|A: verdict=pass ev=1.00
+cell A|B: verdict=pass ev=1.00
+cell A|B: verdict=pass ev=1.00
+cell B|none: verdict=pass ev=1.00
+cell B|none: verdict=fail ev=0.00
+cell B|A: verdict=fail ev=1.00
+cell B|A: verdict=fail ev=0.67
+cell B|B: verdict=pass ev=1.00
+cell B|B: verdict=fail ev=1.00
+== MATRIX (ev_mean / pass_rate, rows=performer, cols=lessons) ==
+  A:  none=1.00/1.00  A=1.00/1.00  B=1.00/1.00
+  B:  none=0.50/0.50  A=0.83/0.00  B=1.00/0.50
+GATE 4: PASSED. six cells ran, both stores populated (A=2, B=2), every run checkpointed. The n is stated in the report and claims nothing.

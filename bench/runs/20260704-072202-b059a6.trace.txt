@@ -1,0 +1,2 @@
+**
+The function `merge_ranges` first checks if the input list is empty and returns an empty list if true. It then sorts the input pairs based on their start values to ensure they are in order. The algorithm iterates through the sorted list, merging overlapping or touching ranges into a single range by updating the end of the last merged range with the maximum end value encountered so far. This ensures that all overlapping or touching intervals are combined into a single interval.

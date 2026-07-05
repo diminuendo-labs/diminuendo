@@ -1,0 +1,2 @@
+**  
+The function `chunk_pad` takes a list `lst` and an integer `k`, and splits the list into chunks of size `k`. If the final chunk is smaller than `k`, it pads it with `None` to ensure all chunks have exactly `k` elements. The function handles edge cases such as when the input list is empty or when `k` is less than or equal to zero by returning an empty list.

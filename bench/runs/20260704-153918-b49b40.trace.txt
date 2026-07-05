@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `sorted` function with a custom sorting key to order the words by increasing length and then reverse-alphabetically. The edge case where the input list is empty is handled explicitly, as it would otherwise raise an exception when trying to access an index out of range. By using 1-indexing for the desired word's position `k`, I also handled another potential edge case (i.e., when `k` is less than or equal to 0).

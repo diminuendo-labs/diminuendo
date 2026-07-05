@@ -1,0 +1,2 @@
+**
+I chose to implement the approach where, in case of ties, we keep track of the index of the last longest word and return it at the end. This way, we ensure that we always return the last occurrence of a tied word. I applied this concept using Python's built-in `enumerate` function to get both the index and value of each word in the list. The edge case where an empty string is returned is handled by checking if `max_length` is not equal to 0 before returning `words[last_longest_word_index]`.

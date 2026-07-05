@@ -1,0 +1,3 @@
+**
+
+I chose to implement the function using a list comprehension, which provides a concise and readable way to perform the flattening operation. The list comprehension iterates over each element in the input list `lst`. If an element is a list itself (checked with `isinstance(sublist, list)`), it contributes its items in order by iterating over them; otherwise, it contributes itself as a single-element sublist. This approach efficiently handles one level of nesting while leaving deeper nesting intact. I also considered handling edge cases such as empty input lists or total weight being zero but decided against explicitly addressing these since they would not affect the output for this specific task.

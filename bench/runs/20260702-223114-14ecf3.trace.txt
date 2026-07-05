@@ -1,0 +1,7 @@
+**
+
+The function `merge_ranges` first checks if the input list is empty and returns an empty list if so. It then sorts the input pairs by their start time to ensure that any potential overlaps or touches are adjacent, simplifying the merging process.
+
+Next, it initializes a `merged` list with the first pair from the sorted list. The function iterates through the remaining pairs, checking for overlaps or touches with the last merged range. If an overlap or touch is found, it extends the last merged range to include the current one; otherwise, it appends the current range to the `merged` list.
+
+This approach ensures that all overlapping and touching ranges are merged into a single range and that the final list of merged ranges is sorted by their start times.

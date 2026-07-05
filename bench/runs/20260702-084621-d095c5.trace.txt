@@ -1,0 +1,2 @@
+**
+I used a list comprehension to generate the chunks of the given size. This approach is concise and readable, as it directly expresses the intent of splitting the list into consecutive chunks. I also added an edge case check at the beginning of the function to return an empty list when the input size is 0 or negative. This handles the special case where the desired chunk size is invalid.

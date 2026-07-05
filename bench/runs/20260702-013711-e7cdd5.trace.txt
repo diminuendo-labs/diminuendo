@@ -1,0 +1,3 @@
+**
+
+The function `range_summary` takes a list of integers, removes duplicates by converting it to a set and then back to a sorted list. It iterates through the sorted list to identify consecutive ranges or single numbers. If a range is found (i.e., consecutive numbers), it appends 'start-end' to the result; otherwise, it appends the single number. The results are joined with commas to form the final string. The edge case of an empty list is handled by immediately returning an empty string.

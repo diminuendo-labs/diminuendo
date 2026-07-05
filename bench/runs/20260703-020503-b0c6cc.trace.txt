@@ -1,0 +1,5 @@
+1. **Sorting**: The input list `nums` is sorted to ensure that consecutive numbers are adjacent.
+2. **Iterating and Grouping**: We iterate through the sorted list, grouping consecutive numbers into ranges.
+3. **Edge Case Handling**: An empty list returns an empty string, which is handled at the beginning of the function.
+4. **Appending Ranges**: After identifying a range (either a single number or a sequence of consecutive numbers), it is added to the result list in the correct format ('start-end' if more than one number, otherwise 'single_number').
+5. **Joining Results**: Finally, the ranges are joined with commas and returned as a string.

@@ -1,0 +1,5 @@
+**
+- The function `chunk_pad` uses list comprehension to iterate through the input list in steps of size `k`.
+- For each chunk, it slices the list from index `i` to `i+k`. If the slice is shorter than `k`, it pads the end with `None` using `[None]*(k - len(lst[i:i+k]))`.
+- This approach ensures that every chunk has exactly `k` elements, even if the final chunk does not have enough elements in the original list.
+- The function handles an edge case where the input list is empty by returning an empty list, which is correctly handled in the list comprehension.

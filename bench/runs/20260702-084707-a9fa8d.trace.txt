@@ -1,0 +1,2 @@
+**
+I implemented the `chunk` function using a list comprehension, which is suitable for this task due to its concise and readable nature. I first checked for edge cases where `size` is zero or negative, returning an empty list as per the problem statement. For positive sizes, I used slicing to split the input list into chunks of the given size. This approach also handles the case when the list does not divide evenly by using integer division (`//`) to calculate the number of chunks and their indices.

@@ -1,0 +1,5 @@
+**
+
+1. **Sorting**: I started by sorting the list of ranges based on their start times to ensure that any potential overlaps or touches are adjacent.
+2. **Merging Logic**: I iterated through the sorted list and maintained a `merged` list where each element is the last merged range. For each new range, if it overlaps or touches the last merged range, I updated the end time of the last merged range to be the maximum of both end times. If not, I appended the current range to the `merged` list.
+3. **Edge Case Handling**: The edge case where there is only one range in the input list was handled by checking if the input list is empty at the beginning and returning an empty list if true. This ensures that the function behaves correctly even with minimal input.

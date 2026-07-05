@@ -1,0 +1,2 @@
+**  
+I used Python's built-in string methods and list comprehension to achieve the conversion from snake_case to camelCase. The `split('_')` method breaks the input string into words based on underscores, and `capitalize()` ensures each word starts with a capital letter while the rest are in lowercase. I included a conditional check (`if word`) to skip empty strings that may result from leading, trailing, or repeated underscores, thus handling edge cases gracefully.

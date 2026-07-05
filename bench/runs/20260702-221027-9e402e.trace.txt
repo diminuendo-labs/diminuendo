@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `range` function in Python to generate the sequence of numbers, and then converted it to a list using the `list` function. This approach is concise and readable, and allows me to handle the edge case where `step` is zero or negative by simply returning an empty list immediately.

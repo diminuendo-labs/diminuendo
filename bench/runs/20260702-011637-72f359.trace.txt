@@ -1,0 +1,2 @@
+**
+I solved the problem by first checking for the edge case where the input is an empty list and returning an empty list immediately. Then I sorted the pairs by their start value, which makes it easy to merge overlapping ranges in a single pass. I used a simple loop to iterate over the sorted pairs, merging any overlaps or touching ranges into the `merged` list. This approach avoids the need for more complex data structures and algorithms, keeping the code concise and readable.

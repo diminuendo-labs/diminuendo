@@ -1,0 +1,2 @@
+** 
+I approached this task by first checking if the input list `nums` is empty, in which case I returned `None`. Next, I sorted the list using the built-in `sort()` method for efficiency and readability. Depending on whether the length of the list (`n`) is odd or even, I either returned the middle element directly (for an odd length) or calculated the average of the two middle elements (for an even length). This approach ensures that the function handles both cases correctly and efficiently.

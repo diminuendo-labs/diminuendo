@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-130159-e35bf4",
+  "node_id": "task-20260704-130159-e35bf4",
+  "task": "Write a Python function token_case(s) taking an underscore_delimited identifier and returning it in camel case: the first token lowercased, every later token capitalized, and the tokens joined with no separator. Tokens that appear in the exception list ['URL', 'ID'] keep their exact given form wherever they appear. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly handles camel case conversion for underscore-delimited identifiers, with the exception of tokens in the specified list.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "edge case handling": 3
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "token_case('get_URL_path')",
+        "ok": false,
+        "got": "raised TypeError('map() must have at least two arguments.')",
+        "expect": "'getURLPath'"
+      },
+      {
+        "call": "token_case('Set_timer_value')",
+        "ok": false,
+        "got": "raised TypeError('map() must have at least two arguments.')",
+        "expect": "'setTimerValue'"
+      },
+      {
+        "call": "token_case('get_value')",
+        "ok": false,
+        "got": "raised TypeError('map() must have at least two arguments.')",
+        "expect": "'getValue'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef token_case(s):\n exception_list = {'URL', 'ID'}\n tokens = s.split('_')\n camel_case = '_'.join(map(lambda x: (x if x in exception_list else (x[0].lower() + x[1:] if x else '')) for x in tokens))\n return camel_case.title()\n```",
+  "trace": "The function takes an underscore-delimited identifier as input and splits it into individual tokens using the `split` method with underscores as delimiter. Then, a lambda function is defined to handle each token. If a token is in the exception list ('URL', 'ID'), it remains unchanged. Otherwise, if the token has length greater than 1, its first character is converted to lowercase, and the rest of the string is capitalized (camelCase style). The final step involves joining all processed tokens into one camel-cased string using underscores as a temporary joiner and then converting it to title case by calling the `title` method on the result.",
+  "totals": {
+    "time_s": 0.855499,
+    "tokens": -86
+  },
+  "files": [
+    "20260704-130159-e35bf4.crumbs.jsonl",
+    "20260704-130159-e35bf4.trace.txt"
+  ]
+}

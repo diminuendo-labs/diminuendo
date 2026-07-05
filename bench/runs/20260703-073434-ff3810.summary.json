@@ -1,0 +1,57 @@
+{
+  "run_id": "20260703-073434-ff3810",
+  "node_id": "task-20260703-073434-ff3810",
+  "task": "Write a Python function third_largest_distinct(nums) returning the third largest distinct value in the list, or None when there are fewer than three distinct values. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly identifies the third largest distinct value in a list, and handles edge cases such as fewer than three distinct values.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "third_largest_distinct([5, 5, 4, 3])",
+        "ok": true,
+        "got": "3",
+        "expect": "3"
+      },
+      {
+        "call": "third_largest_distinct([2, 2, 1, 1])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "third_largest_distinct([9, 8, 7, 6])",
+        "ok": true,
+        "got": "7",
+        "expect": "7"
+      },
+      {
+        "call": "third_largest_distinct([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**  \n```python\ndef third_largest_distinct(nums):\n    distinct_nums = list(set(nums))\n    if len(distinct_nums) < 3:\n        return None\n    distinct_nums.sort(reverse=True)\n    return distinct_nums[2]\n```\n\n**",
+  "trace": "**  \nThe function `third_largest_distinct` first converts the input list into a set to remove duplicates, then back into a list. If this list has fewer than three elements, it returns `None`. Otherwise, it sorts the list in reverse order and returns the third element, which is the third largest distinct value. This approach ensures that all values are unique before considering their ranking.",
+  "totals": {
+    "time_s": 19.8020863,
+    "tokens": 553
+  },
+  "files": [
+    "20260703-073434-ff3810.crumbs.jsonl",
+    "20260703-073434-ff3810.trace.txt"
+  ]
+}

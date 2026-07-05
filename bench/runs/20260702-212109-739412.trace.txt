@@ -1,0 +1,2 @@
+**  
+I used a list comprehension to calculate the numerator of the weighted mean by multiplying each value by its corresponding weight. The `zip` function pairs each value with its weight. I then divided this sum by the total weight to get the mean. The function first checks if either the values list is empty or the total weight is zero, returning None in these edge cases to avoid division by zero and handle empty inputs gracefully.

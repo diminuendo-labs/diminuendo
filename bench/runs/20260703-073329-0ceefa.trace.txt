@@ -1,0 +1,2 @@
+**
+I used a generator expression within the `set` function to create a set of unique numbers from `nums` that are strictly greater than `k`. This approach is concise and efficient, as sets automatically eliminate duplicates. I also included an example edge case (empty list) in the docstring to highlight its handling by returning 0.

@@ -1,0 +1,2 @@
+**  
+I used Python's `split` method to divide the input string by underscores, effectively splitting it into words. The list comprehension then capitalizes each word and joins them together without any separators. This approach handles leading, trailing, and repeated underscores by ignoring empty strings that result from these cases. It also respects the rule that already uppercase words stay exactly as they are, as `capitalize` does not change a string if it is already in uppercase.

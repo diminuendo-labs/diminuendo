@@ -1,0 +1,4 @@
+**
+- The function `range_step` checks if the `step` is less than or equal to zero. If so, it returns an empty list since a non-positive step does not make sense for generating a sequence.
+- It also checks if `start` is greater than or equal to `stop`. In this case, it returns an empty list as there are no integers from `start` up to but not including `stop`.
+- If both conditions are satisfied, it proceeds to generate the list of integers using Python's built-in `range` function and converts it to a list before returning.

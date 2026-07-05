@@ -1,0 +1,58 @@
+{
+  "run_id": "20260702-220913-75c21c",
+  "node_id": "task-20260702-220913-75c21c",
+  "task": "Write a Python function weighted_mean(values, weights) returning the weighted arithmetic mean as a float. Empty lists return None, and a zero total weight also returns None, never a crash. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The edge case handling for zero total weight should be more explicitly named.",
+  "per_criterion": {
+    "the function is correct": 4,
+    "the code is concise and readable": 3,
+    "at least one edge case is named": 2
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "weighted_mean([1, 3], [1, 1])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      },
+      {
+        "call": "weighted_mean([2], [0])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "weighted_mean([], [])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "weighted_mean([1, 2], [0, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef weighted_mean(values, weights):\n    \"\"\"\n    Calculate the weighted arithmetic mean.\n\n    Args:\n        values (list): List of values to calculate the mean from.\n        weights (list): List of corresponding weights for each value.\n\n    Returns:\n        float: The weighted arithmetic mean. Returns None if input lists are empty or have zero total weight.\n    \"\"\"\n    if not values or not weights:\n        return None\n\n    # Edge case handling: Zero total weight\n    if sum(weights) == 0:\n        return None\n\n    return sum(v * w for v, w in zip(values, weights)) / sum(weights)\n```\n\n**",
+  "trace": "**\n\nI defined a Python function named `weighted_mean` that takes two lists as input, `values` and `weights`. The function first checks if either list is empty, returning `None` immediately in this case. Next, it checks if the total weight is zero by summing up all weights; again, returning `None` when no weight is present. Finally, the function uses a generator expression to calculate the weighted mean and divides by the sum of weights.",
+  "totals": {
+    "time_s": -2.6582508999999988,
+    "tokens": 22
+  },
+  "files": [
+    "20260702-220913-75c21c.crumbs.jsonl",
+    "20260702-220913-75c21c.trace.txt"
+  ]
+}

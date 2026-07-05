@@ -1,0 +1,22 @@
+GEN CALIBRATION 20260702-211540: 6 candidates x 2 seats x R_G=3
+A=qwen2.5-coder:7b  B=llama3.1:8b  no lessons, cross-family audience
+count_distinct_pairs seat A: all_pass (0/3 failed)
+count_distinct_pairs seat B: mixed (2/3 failed)
+sum_of_modes seat A: all_pass (0/3 failed)
+sum_of_modes seat B: all_pass (0/3 failed)
+weighted_mean seat A: all_pass (0/3 failed)
+weighted_mean seat B: all_pass (0/3 failed)
+range_step seat A: all_pass (0/3 failed)
+range_step seat B: mixed (1/3 failed)
+title_words seat A: all_pass (0/3 failed)
+title_words seat B: all_pass (0/3 failed)
+count_token seat A: all_pass (0/3 failed)
+count_token seat B: mixed (2/3 failed)
+== TABLE (case per task per seat) ==
+  count_distinct_pairs   [distinctness] A=all_pass B=mixed
+  sum_of_modes           [distinctness] A=all_pass B=all_pass
+  weighted_mean          [boundary    ] A=all_pass B=all_pass
+  range_step             [boundary    ] A=all_pass B=mixed
+  title_words            [normalize   ] A=all_pass B=all_pass
+  count_token            [normalize   ] A=all_pass B=mixed
+report: gencal-20260702-211540.report.json

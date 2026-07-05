@@ -1,0 +1,3 @@
+**
+
+To solve this problem, I first check if `k` is within the valid range. If not, I return `None`. Next, I group all words by their length into a dictionary where each key is a word length and each value is a list of words with that length. For each group of words of the same length, I sort them in reverse alphabetical order to meet the specified criteria. Finally, I concatenate all sorted lists and return the `k`-th element (adjusting for 0-based indexing by using `k-1`). This approach ensures that words are ordered by increasing length and reverse-alphabetically among those of equal length.

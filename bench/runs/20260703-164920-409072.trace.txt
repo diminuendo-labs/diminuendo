@@ -1,0 +1,5 @@
+The function takes a string `s` as input and first splits it into individual words by whitespace. It then initializes an empty dictionary `word_freq` to store the frequency of each unique word (lowercased).
+
+For each word, if it's not already in the dictionary, we initialize its count to 1; otherwise, we increment its count. Once all words have been processed, the function finds the word with the minimum count among those with the lowest frequency. If there are ties for the least frequent word, it breaks them alphabetically by sorting the words and returning the first one encountered.
+
+The edge case considered here is when the input string `s` is empty, in which case the function returns an empty string ('').

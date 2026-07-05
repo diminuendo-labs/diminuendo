@@ -1,0 +1,2 @@
+**
+I chose to use a direct and explicit approach, handling the empty inputs and zero total weight edge cases separately. I used list comprehensions and generator expressions where possible to make the code concise while maintaining readability. The function name `weighted_mean` clearly conveys its purpose, and docstrings provide additional context for users.

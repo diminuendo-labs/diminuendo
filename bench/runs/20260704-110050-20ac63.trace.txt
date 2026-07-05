@@ -1,0 +1,2 @@
+**
+I realized that for a string to be balanced, the number of opening parentheses must equal the number of closing parentheses. Since we're ignoring everything else, we can simply compare these counts using Python's built-in `count()` method. This approach is concise and readable, and it handles the edge case where an empty string is considered balanced because there are no unbalanced pairs to be found.

@@ -1,0 +1,2 @@
+**
+I used a list comprehension to iterate over the input items. A set called `seen` keeps track of items that have already been encountered. For each item, I check if it's in `seen`. If not, I add it to `seen` and include it in the output list. This approach ensures that duplicates are removed while preserving the order of first appearance.

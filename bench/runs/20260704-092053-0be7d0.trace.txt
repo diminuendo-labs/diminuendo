@@ -1,0 +1,3 @@
+The function `snake_to_camel(s)` takes a string `s` and converts it to camelCase by splitting the string on underscores (_). It then iterates over each word, checking if it's not an empty string. If it's not empty, it capitalizes the first letter of the word (upper()) and concatenates the rest of the word (word[1:]). The resulting camelCase string is then converted to title case using the .title() method.
+
+The edge case handled here is that multiple consecutive underscores are dropped, as in '__a__b_'.

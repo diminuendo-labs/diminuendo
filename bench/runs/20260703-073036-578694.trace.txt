@@ -1,0 +1,9 @@
+**
+
+I started by checking if the input string `s` is empty. If it is, I immediately return an empty string as per the edge case handling requirement.
+
+Next, I iterate through each word in the input string after converting it to lowercase and splitting it on whitespace. I maintain a dictionary `word_counts` where keys are words and values are their counts.
+
+After populating the dictionary with word counts, I find the minimum count using the `min()` function. Then, I create a list of words that have this minimum count.
+
+Finally, I sort this list alphabetically to handle ties according to the criteria and return the first element of this sorted list as the result.

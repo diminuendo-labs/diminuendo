@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `sorted` function to sort the input list, as it is efficient and readable. I also included a check for an empty input list at the beginning of the function, returning None in this case as per the requirements. The rest of the logic follows standard mathematical definitions of median for odd and even length lists.

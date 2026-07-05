@@ -1,0 +1,2 @@
+**
+I implemented a solution by first checking if the input list is empty, in which case I return an empty list. Then, I sort the pairs based on their start value. I initialize a `merged` list with the first pair and iterate through the rest of the sorted pairs. For each pair, I check if it overlaps or touches the last merged range; if so, I merge them by updating the end value of the last merged range. If not, I append the current pair to the `merged` list. This approach has a time complexity of O(n log n) due to the sorting step.

@@ -1,0 +1,3 @@
+**
+
+I implemented this function using the built-in `count()` method of Python strings. This approach is concise and readable because it directly addresses the problem's requirements without unnecessary complexity. I also did not use a stack data structure, which could be an alternative solution to keep track of opening parentheses, in order to minimize the code's size and improve readability. One edge case this function handles is when the input string is empty, as both `count('')` calls will return 0, making it balanced according to the problem statement.

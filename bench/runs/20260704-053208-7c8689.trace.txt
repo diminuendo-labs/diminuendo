@@ -1,0 +1,2 @@
+**
+I used list comprehension and the `split` method to split the input string into words separated by underscores. I then used a generator expression with `capitalize` to convert each word to camelCase, excluding empty strings that result from repeated or trailing underscores. This approach is concise and easy to read, and it efficiently handles edge cases like an empty string, which returns an empty string as expected.

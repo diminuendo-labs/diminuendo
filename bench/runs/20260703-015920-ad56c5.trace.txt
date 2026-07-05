@@ -1,0 +1,2 @@
+**
+I implemented the function by first splitting the input string into a list of whitespace-separated words. Then, I iterated over this list in reverse order to ensure that if there are multiple words with the maximum length, I return the last one encountered. This is achieved using the `reversed` function, which returns an iterator yielding the elements of the original iterable in reverse order. The edge case where an empty string is input is handled directly by returning an empty string from the function.

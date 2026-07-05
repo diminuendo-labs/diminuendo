@@ -1,0 +1,3 @@
+**
+
+To achieve the task, I used a list comprehension to iterate through the original list `lst` in steps of size `k`. For each chunk, if its length is less than `k`, I appended `None` values until it reached the desired size. This ensures that every chunk has exactly `k` elements, with padding added as needed for the last chunk. The edge case of an empty list returns an empty list without any modification.

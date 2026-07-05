@@ -1,0 +1,2 @@
+**
+I solved this task by first checking for the edge case where an empty list is provided, in which case I immediately return an empty string. Then, I converted the input list to a sorted set to remove duplicates and ensure the numbers are in ascending order. Finally, I iterated over the sorted list, grouping consecutive numbers together into either single values or ranges, and appended these to the result list before joining them with commas.

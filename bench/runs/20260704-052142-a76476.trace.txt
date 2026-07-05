@@ -1,0 +1,2 @@
+**
+I approached this task by first handling the edge case where the input list is empty. I used a simple `if not nums` check to immediately return `None` in this case. Then, I sorted the input list using the built-in `sorted` function and calculated the length of the sorted list. Depending on whether the length is odd or even, I either returned the middle value or the average of the two middle values as a float. This approach keeps the code concise while still handling the required edge case explicitly.

@@ -1,0 +1,2 @@
+**  
+The function `chunk_pad` takes a list `lst` and an integer `k`. It first checks if the input list is empty. If it is, it returns an empty list immediately. Otherwise, it uses a list comprehension to iterate through the list in chunks of size `k`. For each chunk, it pads with `None` using slicing and the `*` operator to repeat the `[None]` list enough times to make its length equal to `k`. The result is a new list where each sublist has exactly `k` elements.

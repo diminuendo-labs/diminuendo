@@ -1,0 +1,2 @@
+**
+I chose to solve this problem by simply counting the occurrences of '(' and ')' in the input string. This approach works because a string with balanced parentheses will have equal numbers of opening and closing brackets, so their counts will be the same. An edge case I explicitly handled is an empty string, which is considered balanced according to the problem statement.

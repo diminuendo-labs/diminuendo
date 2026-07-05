@@ -1,0 +1,3 @@
+**
+
+I implemented this function by iterating over each element in the input list, checking whether it's a list using `isinstance()`. If it is, I use the `extend()` method to add its items to the result list. This approach avoids recursion and should be efficient for large lists. To handle an edge case where the only element is an empty list (e.g., `[[]]`), I added a special condition that skips over such elements when encountered in the input list.

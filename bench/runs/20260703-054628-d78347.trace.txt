@@ -1,0 +1,6 @@
+** 
+I started by splitting the input string `s` into individual words using Python's built-in `split()` method. To handle the edge case where an empty string is provided, I immediately return 0 if there are no words. 
+
+For each word, I used a regular expression to strip any leading and trailing punctuation. This ensures that substrings within longer words do not interfere with the comparison. After stripping, I compared the stripped word (converted to lowercase for case-insensitive comparison) with the target word `w` (also converted to lowercase). If they match, I increment the counter. Finally, I return the count of matching words.
+
+This approach is concise and readable while correctly handling the specified edge case and other requirements of the task.

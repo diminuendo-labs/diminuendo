@@ -1,0 +1,2 @@
+**
+I implemented the `merge_within` function by first handling the edge case of an empty input list. Then, I sorted the input pairs by their start values to enable efficient iteration and merging. I used a simple iterative approach to merge adjacent or overlapping ranges, keeping track of the merged ranges in the `merged` list.

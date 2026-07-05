@@ -1,0 +1,326 @@
+THIRD-SEAT ONBOARDING 20260703-161320 (PACKET-017)
+STAGE 0: mistral:7b installed, confirmed before any run.
+seat=mistral:7b  audience=llama3.1:8b (cross-family, stated)  armed-lesson byte check=True
+stage 1: 40 tasks x R=6
+s1 max_index rep 0: ev=0.25 passed=False
+s1 max_index rep 1: ev=0.25 passed=False
+s1 max_index rep 2: ev=0.25 passed=False
+s1 max_index rep 3: ev=0.25 passed=False
+s1 max_index rep 4: ev=0.25 passed=False
+s1 max_index rep 5: ev=0.25 passed=False
+s1 shortest_word rep 0: ev=1.00 passed=True
+s1 shortest_word rep 1: ev=0.50 passed=False
+s1 shortest_word rep 2: ev=0.50 passed=False
+s1 shortest_word rep 3: ev=1.00 passed=True
+s1 shortest_word rep 4: ev=0.75 passed=False
+s1 shortest_word rep 5: ev=0.75 passed=False
+s1 count_unique rep 0: ev=1.00 passed=True
+s1 count_unique rep 1: ev=1.00 passed=True
+s1 count_unique rep 2: ev=1.00 passed=True
+s1 count_unique rep 3: ev=1.00 passed=True
+s1 count_unique rep 4: ev=1.00 passed=True
+s1 count_unique rep 5: ev=1.00 passed=True
+s1 sum_distinct rep 0: ev=1.00 passed=True
+s1 sum_distinct rep 1: ev=1.00 passed=True
+s1 sum_distinct rep 2: ev=1.00 passed=True
+s1 sum_distinct rep 3: ev=1.00 passed=True
+s1 sum_distinct rep 4: ev=1.00 passed=True
+s1 sum_distinct rep 5: ev=1.00 passed=True
+s1 average rep 0: ev=1.00 passed=True
+s1 average rep 1: ev=1.00 passed=True
+s1 average rep 2: ev=1.00 passed=True
+s1 average rep 3: ev=1.00 passed=True
+s1 average rep 4: ev=1.00 passed=True
+s1 average rep 5: ev=0.50 passed=False
+s1 chunk rep 0: ev=0.75 passed=False
+s1 chunk rep 1: ev=1.00 passed=True
+s1 chunk rep 2: ev=1.00 passed=True
+s1 chunk rep 3: ev=1.00 passed=True
+s1 chunk rep 4: ev=1.00 passed=True
+s1 chunk rep 5: ev=1.00 passed=True
+s1 count_word rep 0: ev=1.00 passed=True
+s1 count_word rep 1: ev=1.00 passed=True
+s1 count_word rep 2: ev=1.00 passed=True
+s1 count_word rep 3: ev=1.00 passed=True
+s1 count_word rep 4: ev=1.00 passed=True
+s1 count_word rep 5: ev=1.00 passed=True
+s1 equal_ignoring_spaces rep 0: ev=1.00 passed=True
+s1 equal_ignoring_spaces rep 1: ev=1.00 passed=True
+s1 equal_ignoring_spaces rep 2: ev=0.25 passed=False
+s1 equal_ignoring_spaces rep 3: ev=0.50 passed=False
+s1 equal_ignoring_spaces rep 4: ev=1.00 passed=True
+s1 equal_ignoring_spaces rep 5: ev=1.00 passed=True
+s1 count_distinct_pairs rep 0: ev=0.25 passed=False
+s1 count_distinct_pairs rep 1: ev=0.25 passed=False
+s1 count_distinct_pairs rep 2: ev=0.75 passed=False
+s1 count_distinct_pairs rep 3: ev=1.00 passed=True
+s1 count_distinct_pairs rep 4: ev=1.00 passed=True
+s1 count_distinct_pairs rep 5: ev=0.25 passed=False
+s1 sum_of_modes rep 0: ev=0.00 passed=False
+s1 sum_of_modes rep 1: ev=0.50 passed=False
+s1 sum_of_modes rep 2: ev=0.00 passed=False
+s1 sum_of_modes rep 3: ev=0.25 passed=False
+s1 sum_of_modes rep 4: ev=1.00 passed=True
+s1 sum_of_modes rep 5: ev=0.50 passed=False
+s1 weighted_mean rep 0: ev=1.00 passed=True
+s1 weighted_mean rep 1: ev=1.00 passed=True
+s1 weighted_mean rep 2: ev=1.00 passed=True
+s1 weighted_mean rep 3: ev=1.00 passed=True
+s1 weighted_mean rep 4: ev=0.75 passed=False
+s1 weighted_mean rep 5: ev=1.00 passed=True
+s1 range_step rep 0: ev=1.00 passed=True
+s1 range_step rep 1: ev=0.75 passed=False
+s1 range_step rep 2: ev=1.00 passed=True
+s1 range_step rep 3: ev=1.00 passed=True
+s1 range_step rep 4: ev=1.00 passed=True
+s1 range_step rep 5: ev=1.00 passed=True
+s1 title_words rep 0: ev=1.00 passed=True
+s1 title_words rep 1: ev=1.00 passed=True
+s1 title_words rep 2: ev=1.00 passed=True
+s1 title_words rep 3: ev=0.00 passed=False
+s1 title_words rep 4: ev=1.00 passed=True
+s1 title_words rep 5: ev=1.00 passed=True
+s1 count_token rep 0: ev=0.25 passed=False
+s1 count_token rep 1: ev=0.75 passed=False
+s1 count_token rep 2: ev=0.00 passed=False
+s1 count_token rep 3: ev=0.75 passed=False
+s1 count_token rep 4: ev=0.50 passed=False
+s1 count_token rep 5: ev=0.50 passed=False
+s1 longest_run_char rep 0: ev=0.25 passed=False
+s1 longest_run_char rep 1: ev=0.50 passed=False
+s1 longest_run_char rep 2: ev=0.00 passed=False
+s1 longest_run_char rep 3: ev=1.00 passed=True
+s1 longest_run_char rep 4: ev=0.75 passed=False
+s1 longest_run_char rep 5: ev=0.75 passed=False
+s1 least_frequent_word rep 0: ev=0.00 passed=False
+s1 least_frequent_word rep 1: ev=0.50 passed=False
+s1 least_frequent_word rep 2: ev=0.25 passed=False
+s1 least_frequent_word rep 3: ev=0.25 passed=False
+s1 least_frequent_word rep 4: ev=0.50 passed=False
+s1 least_frequent_word rep 5: ev=1.00 passed=True
+s1 count_distinct_over rep 0: ev=1.00 passed=True
+s1 count_distinct_over rep 1: ev=1.00 passed=True
+s1 count_distinct_over rep 2: ev=1.00 passed=True
+s1 count_distinct_over rep 3: ev=1.00 passed=True
+s1 count_distinct_over rep 4: ev=1.00 passed=True
+s1 count_distinct_over rep 5: ev=1.00 passed=True
+s1 third_largest_distinct rep 0: ev=1.00 passed=True
+s1 third_largest_distinct rep 1: ev=0.75 passed=False
+s1 third_largest_distinct rep 2: ev=1.00 passed=True
+s1 third_largest_distinct rep 3: ev=0.50 passed=False
+s1 third_largest_distinct rep 4: ev=1.00 passed=True
+s1 third_largest_distinct rep 5: ev=1.00 passed=True
+s1 mode_count rep 0: ev=1.00 passed=True
+s1 mode_count rep 1: ev=1.00 passed=True
+s1 mode_count rep 2: ev=1.00 passed=True
+s1 mode_count rep 3: ev=1.00 passed=True
+s1 mode_count rep 4: ev=1.00 passed=True
+s1 mode_count rep 5: ev=0.75 passed=False
+s1 clamp rep 0: ev=1.00 passed=True
+s1 clamp rep 1: ev=1.00 passed=True
+s1 clamp rep 2: ev=1.00 passed=True
+s1 clamp rep 3: ev=1.00 passed=True
+s1 clamp rep 4: ev=1.00 passed=True
+s1 clamp rep 5: ev=1.00 passed=True
+s1 nth_page rep 0: ev=0.75 passed=False
+s1 nth_page rep 1: ev=0.75 passed=False
+s1 nth_page rep 2: ev=0.75 passed=False
+s1 nth_page rep 3: ev=1.00 passed=True
+s1 nth_page rep 4: ev=0.75 passed=False
+s1 nth_page rep 5: ev=0.75 passed=False
+s1 split_csvish rep 0: ev=0.75 passed=False
+s1 split_csvish rep 1: ev=1.00 passed=True
+s1 split_csvish rep 2: ev=1.00 passed=True
+s1 split_csvish rep 3: ev=1.00 passed=True
+s1 split_csvish rep 4: ev=1.00 passed=True
+s1 split_csvish rep 5: ev=0.50 passed=False
+s1 depth_max rep 0: ev=0.75 passed=False
+s1 depth_max rep 1: ev=0.75 passed=False
+s1 depth_max rep 2: ev=0.75 passed=False
+s1 depth_max rep 3: ev=0.75 passed=False
+s1 depth_max rep 4: ev=0.75 passed=False
+s1 depth_max rep 5: ev=0.75 passed=False
+s1 second_largest rep 0: ev=0.50 passed=False
+s1 second_largest rep 1: ev=0.75 passed=False
+s1 second_largest rep 2: ev=1.00 passed=True
+s1 second_largest rep 3: ev=1.00 passed=True
+s1 second_largest rep 4: ev=1.00 passed=True
+s1 second_largest rep 5: ev=1.00 passed=True
+s1 most_common_word rep 0: ev=0.33 passed=False
+s1 most_common_word rep 1: ev=0.67 passed=False
+s1 most_common_word rep 2: ev=0.33 passed=False
+s1 most_common_word rep 3: ev=0.33 passed=False
+s1 most_common_word rep 4: ev=0.33 passed=False
+s1 most_common_word rep 5: ev=0.33 passed=False
+s1 top_k rep 0: ev=0.75 passed=False
+s1 top_k rep 1: ev=0.75 passed=False
+s1 top_k rep 2: ev=0.75 passed=False
+s1 top_k rep 3: ev=0.75 passed=False
+s1 top_k rep 4: ev=0.75 passed=False
+s1 top_k rep 5: ev=0.50 passed=False
+s1 dedupe rep 0: ev=0.75 passed=False
+s1 dedupe rep 1: ev=0.75 passed=False
+s1 dedupe rep 2: ev=0.50 passed=False
+s1 dedupe rep 3: ev=0.75 passed=False
+s1 dedupe rep 4: ev=0.75 passed=False
+s1 dedupe rep 5: ev=1.00 passed=True
+s1 mode rep 0: ev=0.75 passed=False
+s1 mode rep 1: ev=0.75 passed=False
+s1 mode rep 2: ev=0.50 passed=False
+s1 mode rep 3: ev=0.50 passed=False
+s1 mode rep 4: ev=0.25 passed=False
+s1 mode rep 5: ev=1.00 passed=True
+s1 merge_ranges rep 0: ev=0.75 passed=False
+s1 merge_ranges rep 1: ev=0.50 passed=False
+s1 merge_ranges rep 2: ev=0.75 passed=False
+s1 merge_ranges rep 3: ev=0.50 passed=False
+s1 merge_ranges rep 4: ev=0.50 passed=False
+s1 merge_ranges rep 5: ev=0.50 passed=False
+s1 longest_word rep 0: ev=1.00 passed=True
+s1 longest_word rep 1: ev=0.25 passed=False
+s1 longest_word rep 2: ev=0.50 passed=False
+s1 longest_word rep 3: ev=0.25 passed=False
+s1 longest_word rep 4: ev=0.25 passed=False
+s1 longest_word rep 5: ev=0.50 passed=False
+s1 median rep 0: ev=1.00 passed=True
+s1 median rep 1: ev=1.00 passed=True
+s1 median rep 2: ev=1.00 passed=True
+s1 median rep 3: ev=0.75 passed=False
+s1 median rep 4: ev=1.00 passed=True
+s1 median rep 5: ev=1.00 passed=True
+s1 range_summary rep 0: ev=0.40 passed=False
+s1 range_summary rep 1: ev=0.20 passed=False
+s1 range_summary rep 2: ev=0.40 passed=False
+s1 range_summary rep 3: ev=0.40 passed=False
+s1 range_summary rep 4: ev=0.20 passed=False
+s1 range_summary rep 5: ev=0.40 passed=False
+s1 flatten_once rep 0: ev=0.00 passed=False
+s1 flatten_once rep 1: ev=0.33 passed=False
+s1 flatten_once rep 2: ev=0.33 passed=False
+s1 flatten_once rep 3: ev=0.33 passed=False
+s1 flatten_once rep 4: ev=0.33 passed=False
+s1 flatten_once rep 5: ev=0.33 passed=False
+s1 snake_to_camel rep 0: ev=0.50 passed=False
+s1 snake_to_camel rep 1: ev=0.50 passed=False
+s1 snake_to_camel rep 2: ev=0.75 passed=False
+s1 snake_to_camel rep 3: ev=0.50 passed=False
+s1 snake_to_camel rep 4: ev=0.75 passed=False
+s1 snake_to_camel rep 5: ev=0.75 passed=False
+s1 nth_smallest rep 0: ev=1.00 passed=True
+s1 nth_smallest rep 1: ev=1.00 passed=True
+s1 nth_smallest rep 2: ev=1.00 passed=True
+s1 nth_smallest rep 3: ev=1.00 passed=True
+s1 nth_smallest rep 4: ev=1.00 passed=True
+s1 nth_smallest rep 5: ev=0.75 passed=False
+s1 is_rotation rep 0: ev=0.75 passed=False
+s1 is_rotation rep 1: ev=0.50 passed=False
+s1 is_rotation rep 2: ev=0.75 passed=False
+s1 is_rotation rep 3: ev=0.75 passed=False
+s1 is_rotation rep 4: ev=0.50 passed=False
+s1 is_rotation rep 5: ev=0.50 passed=False
+s1 truncate_words rep 0: ev=1.00 passed=True
+s1 truncate_words rep 1: ev=1.00 passed=True
+s1 truncate_words rep 2: ev=1.00 passed=True
+s1 truncate_words rep 3: ev=1.00 passed=True
+s1 truncate_words rep 4: ev=1.00 passed=True
+s1 truncate_words rep 5: ev=1.00 passed=True
+s1 balanced rep 0: ev=1.00 passed=True
+s1 balanced rep 1: ev=1.00 passed=True
+s1 balanced rep 2: ev=1.00 passed=True
+s1 balanced rep 3: ev=1.00 passed=True
+s1 balanced rep 4: ev=1.00 passed=True
+s1 balanced rep 5: ev=1.00 passed=True
+s1 interleave rep 0: ev=0.33 passed=False
+s1 interleave rep 1: ev=0.00 passed=False
+s1 interleave rep 2: ev=0.00 passed=False
+s1 interleave rep 3: ev=0.00 passed=False
+s1 interleave rep 4: ev=0.00 passed=False
+s1 interleave rep 5: ev=0.33 passed=False
+s1 count_pairs rep 0: ev=1.00 passed=True
+s1 count_pairs rep 1: ev=0.25 passed=False
+s1 count_pairs rep 2: ev=1.00 passed=True
+s1 count_pairs rep 3: ev=0.50 passed=False
+s1 count_pairs rep 4: ev=0.50 passed=False
+s1 count_pairs rep 5: ev=1.00 passed=True
+== STAGE 1 SUPPLY TABLE ==
+  max_index                [generation] all_fail  (6/6 failed) HEADROOM CONJUNCTION
+  shortest_word            [generation] mixed     (4/6 failed) HEADROOM CONJUNCTION
+  count_unique             [generation] all_pass  (0/6 failed) 
+  sum_distinct             [generation] all_pass  (0/6 failed) 
+  average                  [generation] mixed     (1/6 failed) HEADROOM
+  chunk                    [generation] mixed     (1/6 failed) HEADROOM CONJUNCTION
+  count_word               [generation] all_pass  (0/6 failed) 
+  equal_ignoring_spaces    [generation] mixed     (2/6 failed) HEADROOM
+  count_distinct_pairs     [generation] mixed     (4/6 failed) HEADROOM
+  sum_of_modes             [generation] mixed     (5/6 failed) HEADROOM CONJUNCTION
+  weighted_mean            [generation] mixed     (1/6 failed) HEADROOM CONJUNCTION
+  range_step               [generation] mixed     (1/6 failed) HEADROOM CONJUNCTION
+  title_words              [generation] mixed     (1/6 failed) HEADROOM
+  count_token              [generation] all_fail  (6/6 failed) HEADROOM
+  longest_run_char         [generation] mixed     (5/6 failed) HEADROOM CONJUNCTION
+  least_frequent_word      [generation] mixed     (5/6 failed) HEADROOM CONJUNCTION
+  count_distinct_over      [generation] all_pass  (0/6 failed) 
+  third_largest_distinct   [generation] mixed     (2/6 failed) HEADROOM CONJUNCTION
+  mode_count               [generation] mixed     (1/6 failed) HEADROOM CONJUNCTION
+  clamp                    [generation] all_pass  (0/6 failed) 
+  nth_page                 [generation] mixed     (5/6 failed) HEADROOM CONJUNCTION
+  split_csvish             [generation] mixed     (2/6 failed) HEADROOM CONJUNCTION
+  depth_max                [generation] all_fail  (6/6 failed) HEADROOM CONJUNCTION
+  second_largest           [apply     ] mixed     (2/6 failed) HEADROOM
+  most_common_word         [apply     ] all_fail  (6/6 failed) HEADROOM
+  top_k                    [apply     ] all_fail  (6/6 failed) HEADROOM
+  dedupe                   [apply     ] mixed     (5/6 failed) HEADROOM
+  mode                     [apply     ] mixed     (5/6 failed) HEADROOM
+  merge_ranges             [apply     ] all_fail  (6/6 failed) HEADROOM
+  longest_word             [apply     ] mixed     (5/6 failed) HEADROOM
+  median                   [apply     ] mixed     (1/6 failed) HEADROOM
+  range_summary            [apply     ] all_fail  (6/6 failed) HEADROOM
+  flatten_once             [apply     ] all_fail  (6/6 failed) HEADROOM
+  snake_to_camel           [apply     ] all_fail  (6/6 failed) HEADROOM
+  nth_smallest             [apply     ] mixed     (1/6 failed) HEADROOM
+  is_rotation              [apply     ] all_fail  (6/6 failed) HEADROOM
+  truncate_words           [apply     ] all_pass  (0/6 failed) 
+  balanced                 [apply     ] all_pass  (0/6 failed) 
+  interleave               [apply     ] all_fail  (6/6 failed) HEADROOM
+  count_pairs              [apply     ] mixed     (3/6 failed) HEADROOM
+== ELIGIBLE CONTRAST PAIRS (enumerated, not distilled): 8 ==
+  tie_break/direction within_task: fail=shortest_word pass=shortest_word
+  tie_break/direction within_task: fail=longest_run_char pass=longest_run_char
+  distinctness/values within_task: fail=sum_of_modes pass=sum_of_modes
+  distinctness/values within_task: fail=third_largest_distinct pass=third_largest_distinct
+  boundary/degenerate within_task: fail=chunk pass=chunk
+  boundary/degenerate within_task: fail=weighted_mean pass=weighted_mean
+  normalize/delimiters within_task: fail=split_csvish pass=split_csvish
+  normalize/delimiters sibling: fail=depth_max pass=count_word
+stage 2: range_summary shows headroom (6/6 failed), running the trait reading at R=12
+s2 rep 0 none: ev=0.20 tools=0
+s2 rep 0 armed: ev=0.00 tools=1
+s2 rep 1 none: ev=0.20 tools=0
+s2 rep 1 armed: ev=0.20 tools=1
+s2 rep 2 none: ev=0.40 tools=0
+s2 rep 2 armed: ev=0.40 tools=1
+s2 rep 3 none: ev=0.20 tools=0
+s2 rep 3 armed: ev=0.20 tools=1
+s2 rep 4 none: ev=0.20 tools=0
+s2 rep 4 armed: ev=0.40 tools=1
+s2 rep 5 none: ev=0.20 tools=0
+s2 rep 5 armed: ev=0.20 tools=1
+s2 rep 6 none: ev=0.20 tools=0
+s2 rep 6 armed: ev=0.00 tools=1
+s2 rep 7 none: ev=0.20 tools=0
+s2 rep 7 armed: ev=0.20 tools=1
+s2 rep 8 none: ev=0.40 tools=0
+s2 rep 8 armed: ev=0.00 tools=1
+s2 rep 9 none: ev=0.20 tools=0
+s2 rep 9 armed: ev=0.20 tools=1
+s2 rep 10 none: ev=0.20 tools=0
+s2 rep 10 armed: ev=0.40 tools=1
+s2 rep 11 none: ev=0.20 tools=0
+s2 rep 11 armed: ev=0.20 tools=1
+== STAGE 2 PER-CHECK (none / armed) ==
+  range_summary([1, 2, 3, 5]): 0.00 / 0.00
+  range_summary([3, 1, 2, 2]): 0.00 / 0.00  <-- rule
+  range_summary([5, 3, 1]): 0.00 / 0.00
+  range_summary([]): 1.00 / 0.50
+  range_summary([7]): 0.17 / 0.50
+GATE: PASSED. stage 0 printed first, stage 1 complete at R=6 across both pools, stage 2 ran at R=12, every run checkpointed, report persisted. The seat neither taught nor learned.

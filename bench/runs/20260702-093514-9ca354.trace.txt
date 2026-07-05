@@ -1,0 +1,3 @@
+**
+
+I chose to implement a solution that handles ties by sorting all words with the maximum count alphabetically and returning the last one. This approach is more concise than maintaining an index of the last occurrence, as it directly addresses the requirement without requiring additional data structures or operations. The use of Counter from the collections module simplifies word counting and lookup.

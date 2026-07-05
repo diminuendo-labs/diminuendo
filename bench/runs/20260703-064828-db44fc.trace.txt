@@ -1,0 +1,2 @@
+**
+I chose to prioritize returning the last word among those with the shortest length when there's a tie. This is achieved by finding all words of maximum length and then selecting the one that appears last in the input string. I also handled the edge case where the input string is empty, returning an empty string as per the task requirements.

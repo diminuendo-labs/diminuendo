@@ -1,0 +1,7 @@
+**
+
+To achieve the desired functionality, I first split the input string `s` by underscores into a list of tokens. Then, I iterate over these tokens to apply the following transformations:
+- The first token is converted to lowercase.
+- Each subsequent token is capitalized.
+
+I handle an edge case where certain tokens ('URL', 'ID') should remain in their exact form regardless of their position. This is done by checking each token against a predefined list of exceptions and appending it to the result unchanged if it matches.

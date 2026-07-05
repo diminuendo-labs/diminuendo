@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in string methods, specifically `split` and `capitalize`, to achieve the conversion. I wrote a simple generator expression within the `join` function that splits the input string into words based on underscores, capitalizes each word (excluding empty strings), and joins them together with no separator. This approach is concise and easy to read, making it suitable for a small Python function like this one. The edge case handled by this function is an empty string, which returns an empty string as expected.

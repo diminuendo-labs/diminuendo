@@ -1,0 +1,2 @@
+**
+I implemented the function using Python's built-in `Counter` class from the `collections` module to count word frequencies efficiently. I then used a lambda function as the key for the `max` function to first sort by frequency and break ties alphabetically. The edge case is handled at the beginning of the function, where an empty string returns '', avoiding unnecessary computations.

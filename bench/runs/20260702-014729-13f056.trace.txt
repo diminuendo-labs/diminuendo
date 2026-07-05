@@ -1,0 +1,10 @@
+**
+
+1. **Edge Case Handling:** I first check if the input list `nums` is empty and return an empty string immediately if it is. This handles the edge case of an empty list.
+2. **Sorting:** The list is sorted to ensure that consecutive numbers are adjacent, making it easier to detect ranges.
+3. **Iterative Processing:** I iterate through the sorted list while maintaining two pointers (`start` and `end`) to track the current range being processed.
+4. **Range Detection:** If a number is consecutive to the `end` of the current range, I update the `end`. Otherwise, I append the current range (either as a single number or as a range) to the result list and reset the pointers for the new range.
+5. **Final Range Append:** After the loop, I append the last range to the result list.
+6. **Result Compilation:** The ranges are joined into a string with commas and returned.
+
+This approach ensures that the function is both correct and concise, handling all specified criteria effectively.

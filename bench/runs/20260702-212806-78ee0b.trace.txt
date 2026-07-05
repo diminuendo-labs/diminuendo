@@ -1,0 +1,9 @@
+**
+
+To implement the `count_token` function, I first used regular expressions to strip leading and trailing punctuation from each word in the input string `s`. The pattern `^[^\w]+|[^\w]+$` matches any non-word character at the start or end of a word. This ensures that only alphanumeric characters remain.
+
+Next, I split the processed string into individual words using the `split()` method, which by default splits by whitespace.
+
+Finally, I used a generator expression within the `sum()` function to count how many words match the target word `w` after converting both to lowercase for case-insensitive comparison. This approach is concise and readable, adhering to Pythonic conventions.
+
+I also included an edge case where the input string `s` is empty. In this scenario, the function returns 0, as there are no words to count.

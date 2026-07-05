@@ -1,0 +1,3 @@
+**
+
+The function `count_distinct_over` first checks if the input list `nums` is empty. If it is, the function returns 0 immediately as per the edge case handling. If not, it proceeds to create a set from the list, which automatically removes any duplicate values. Then, it counts how many distinct values in this set are strictly greater than the given threshold `k`. This count is then returned.

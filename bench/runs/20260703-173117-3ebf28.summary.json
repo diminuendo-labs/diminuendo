@@ -1,0 +1,52 @@
+{
+  "run_id": "20260703-173117-3ebf28",
+  "node_id": "task-20260703-173117-3ebf28",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided function correctly flattens exactly one level of nesting and handles the edge case of nested empty lists",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": false,
+        "got": "[[1, 2], [3]]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": false,
+        "got": "[1, [2, [3, 4]]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef flatten_once(lst):\n    return [elem if isinstance(elem, (int, float, str)) else [x for x in elem] for elem in lst]\n```",
+  "trace": "The function uses a list comprehension to iterate through each element in the input list. If an element is not a list (meaning it's an integer, float, or string), it remains as-is. Otherwise, the function flattens that sublist by iterating over its contents and appending them to the result list. The edge case we handle is when there are nested lists within other nested lists, as deeper nesting will remain intact since this function only flattens one level of nesting.",
+  "totals": {
+    "time_s": 0.33044100000000043,
+    "tokens": -28
+  },
+  "files": [
+    "20260703-173117-3ebf28.crumbs.jsonl",
+    "20260703-173117-3ebf28.trace.txt"
+  ]
+}

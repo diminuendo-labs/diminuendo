@@ -1,0 +1,2 @@
+**  
+The function `merge_within` first checks if the input list `pairs` is empty and returns an empty list immediately if so. It then sorts the pairs by their start times to ensure that any potential overlaps are adjacent in the sorted list. The sorted list is processed linearly, merging overlapping or nearly overlapping ranges into a single range whenever possible. If the current range does not overlap or merge with the last range in the `merged` list, it is appended as is. This approach ensures that the output list is both merged and sorted correctly.

@@ -1,0 +1,3 @@
+**
+
+I started by sorting the list of pairs to ensure they are in ascending order. This simplifies the merging process since we only need to check each pair against the last one in the merged list. I then iterated through the sorted list and checked if the current range overlaps with or is within a distance `d` from the last range in the merged list. If it does, I merged them by updating the end of the last range. If not, I appended the new range to the merged list. This approach ensures that all overlapping or closely adjacent ranges are merged into a single range.

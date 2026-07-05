@@ -1,0 +1,123 @@
+{
+  "reverse_id": "20260703-095406",
+  "performer": "qwen2.5-coder:7b",
+  "audience": "llama3.1:8b",
+  "task": "longest_word",
+  "arms": [
+    "none",
+    "menu"
+  ],
+  "repeats": 12,
+  "lessons": [
+    {
+      "concept": "When multiple consecutive character runs have the same length, return the last such run's character.",
+      "rule": "When several runs tie for longest, follow the direction to return the character of the last such run.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "stated_direction": "last"
+      },
+      "trail": {
+        "gen_task": "longest_run_char",
+        "contrast_type": "within_task"
+      }
+    },
+    {
+      "concept": "When the task states to return the last occurrence or longest run, follow that direction.",
+      "rule": "Follow the stated direction of returning the last occurrence or longest run when applicable.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "stated_direction": "last"
+      },
+      "trail": {
+        "gen_task": "max_index",
+        "contrast_type": "sibling"
+      }
+    }
+  ],
+  "check_table": {
+    "longest_word('cat door bird')": {
+      "rule_check": true,
+      "arms": {
+        "none": {
+          "n": 12,
+          "passed": 8,
+          "rate": 0.6666666666666666
+        },
+        "menu": {
+          "n": 12,
+          "passed": 5,
+          "rate": 0.4166666666666667
+        }
+      }
+    },
+    "longest_word('a bb cc d')": {
+      "rule_check": true,
+      "arms": {
+        "none": {
+          "n": 12,
+          "passed": 8,
+          "rate": 0.6666666666666666
+        },
+        "menu": {
+          "n": 12,
+          "passed": 5,
+          "rate": 0.4166666666666667
+        }
+      }
+    },
+    "longest_word('')": {
+      "rule_check": false,
+      "arms": {
+        "none": {
+          "n": 12,
+          "passed": 12,
+          "rate": 1.0
+        },
+        "menu": {
+          "n": 12,
+          "passed": 12,
+          "rate": 1.0
+        }
+      }
+    },
+    "longest_word('one')": {
+      "rule_check": false,
+      "arms": {
+        "none": {
+          "n": 12,
+          "passed": 12,
+          "rate": 1.0
+        },
+        "menu": {
+          "n": 12,
+          "passed": 12,
+          "rate": 1.0
+        }
+      }
+    }
+  },
+  "pooled_rule_checks": {
+    "none": {
+      "n": 24,
+      "passed": 16,
+      "rate": 0.6666666666666666
+    },
+    "menu": {
+      "n": 24,
+      "passed": 10,
+      "rate": 0.4166666666666667
+    }
+  },
+  "min_tools_armed": 2,
+  "n_note": "R=12 per arm, one task, per-check cells are n=12. The reading rules live in the packet and are applied in its RESULTS, not here."
+}

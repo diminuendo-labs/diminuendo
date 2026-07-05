@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from Python's `collections` module to efficiently count the occurrences of each word. I then found the maximum count, identified all words with this count using a list comprehension, and finally selected the lexicographically smallest of these words in case of a tie, as required by the problem statement. I also included an edge case for an empty input string, returning an empty string in this scenario.

@@ -1,0 +1,8 @@
+**  
+The `count_token` function first checks if the input string is empty, immediately returning 0 in such cases as per the edge case. It then splits the input string into words using the `split()` method which handles multiple spaces between words and leading/trailing spaces effectively.
+
+A helper function `clean_word(word)` is used to strip punctuation from each word by leveraging Python's `string.punctuation` constant, which contains all ASCII punctuation characters.
+
+For counting, a generator expression inside the `sum()` function iterates over each word, cleans it using `clean_word`, and compares it with the target word `w` in a case-insensitive manner. The sum of truthy values (1 for True, 0 for False) gives the final count of matching words.
+
+This solution is concise and readable while ensuring that all specified criteria are met, including handling edge cases like empty input strings.

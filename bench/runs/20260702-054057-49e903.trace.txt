@@ -1,0 +1,2 @@
+**  
+I approached the problem by using a list comprehension to iterate through each element in the input list. If an element is a list itself, I used `[*sublist]` to ensure that it is flattened exactly one level deep and then extended the outer list with these elements. If an element is not a list, it is simply added as is to the resulting list. This method handles the edge case of flattening an empty list gracefully, returning an empty list as expected.

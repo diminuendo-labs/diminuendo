@@ -1,0 +1,2 @@
+**
+I defined a function `snake_to_camel` that takes a string `s` as input. I used the built-in `split` method to split the string into words, and then used a generator expression with `capitalize` to capitalize each word (except empty ones). This approach is concise and readable, and it handles the edge case where the input string contains only underscores, returning an empty string as expected.

@@ -1,0 +1,3 @@
+**
+
+I created a function `most_common_word` that first checks if the input string is empty. If it is, the function returns an empty string immediately. For non-empty strings, the function converts all characters to lowercase and splits them into individual words. It then counts the occurrences of each word using a dictionary. After determining the maximum count, it filters out the words with that count and sorts them alphabetically before returning the first one. This ensures that in case of ties, the word that comes first alphabetically is returned. The edge case of an empty string is handled by checking if `s` is empty at the beginning of the function.

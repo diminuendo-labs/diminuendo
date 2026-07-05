@@ -1,0 +1,3 @@
+The function `nth_page()` takes three arguments: a list of items, an optional size for the pages, and a page number. It first ensures that the page size is positive by taking the maximum between zero and the provided size. Then, it creates a list of pages using a list comprehension to slice the original list into consecutive chunks of the specified size.
+
+Finally, if the requested page number is valid (i.e., within the range of available pages), it returns that particular page. Otherwise, it returns an empty list as per the task's requirements. A notable edge case this function handles is when there are not enough items in the list to fit a full-sized page, and it still properly returns an appropriate result based on the provided number of items.

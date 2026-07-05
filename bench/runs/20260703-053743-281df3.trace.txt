@@ -1,0 +1,15 @@
+**
+
+The function `shortest_word(s)` is designed to find the shortest whitespace-separated word in a given string `s`. To handle ties, it returns the last such word encountered. Here's how I approached this:
+
+1. **Edge Case Handling:** The function first checks if the input string `s` is empty. If it is, the function immediately returns an empty string.
+
+2. **Splitting the String:** The input string is split into a list of words using the `split()` method. This handles whitespace separation and ignores any extra spaces.
+
+3. **Finding Minimum Length:** A generator expression is used to find the minimum length among all words in the list. This is done efficiently by iterating through the list once.
+
+4. **Selecting Words of Minimum Length:** Another list comprehension filters out words that are equal to this minimum length, but it iterates over the list in reverse order using `reversed()`. This ensures that if there are multiple shortest words, the last one is selected.
+
+5. **Returning the Result:** The first element from the filtered list (which will be the last word of the minimum length encountered) is returned as the result.
+
+This approach is concise and readable while ensuring all specified criteria are met.

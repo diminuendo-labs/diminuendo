@@ -1,0 +1,5 @@
+**
+
+To solve this task, I first defined the `exceptions` list containing the tokens that should remain unchanged. Then, I split the input string into a list of tokens using the underscore as delimiter. For edge case handling, if there's only one token in the list and it's an exception, I return it immediately with all characters uppercased.
+
+To handle the general case where more than one token is present, I initialized the `result` list with the first token lowercased. Then, for each remaining token, I append it to the result either capitalized if not an exception or as-is if it's in the exceptions list. Finally, I join all tokens in the result list without any separator and return the resulting camel case string.

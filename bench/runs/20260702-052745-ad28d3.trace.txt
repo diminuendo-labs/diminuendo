@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `split()` function, which splits a string into a list of words separated by whitespace. I then used the `min()` function with the `key` argument set to `len`, which returns the word with the minimum length in the list. If no words are found (i.e., the input string is empty), the `or` expression returns an empty string, handling the edge case where there are no words to find.

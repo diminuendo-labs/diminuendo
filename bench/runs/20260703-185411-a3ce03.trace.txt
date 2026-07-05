@@ -1,0 +1,5 @@
+The function takes a string `s` as input. It first splits the string into individual words using the `split()` method. The length of each word is then calculated and stored in a list. By using the built-in `max()` function with a lambda expression, we find the maximum length among all the words.
+
+Finally, the function uses another lambda expression within max() to compare and return the longest word (if multiple such words exist) based on their lengths. In case of ties, it prioritizes the last occurrence of the tied words instead of the first one, as per the specified criteria.
+
+An edge case handled is when there are no words in the input string; in this scenario, an empty string ('') will be returned.

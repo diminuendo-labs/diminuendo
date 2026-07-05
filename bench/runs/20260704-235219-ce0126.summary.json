@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-235219-ce0126",
+  "node_id": "task-20260704-235219-ce0126",
+  "task": "Write a Python function kth_ordered(words, k) returning the k-th word, counting from 1, when the words are ordered by increasing length, and words of equal length are ordered reverse-alphabetically among themselves. Return None when k is out of range. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 1,
+  "reason": "The function passes all criteria, including correctly handling out-of-range k values.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "kth_ordered(['bb', 'ab', 'c'], 2)",
+        "ok": true,
+        "got": "'bb'",
+        "expect": "'bb'"
+      },
+      {
+        "call": "kth_ordered(['dd', 'a', 'ccc'], 2)",
+        "ok": true,
+        "got": "'dd'",
+        "expect": "'dd'"
+      },
+      {
+        "call": "kth_ordered(['a', 'bb'], 5)",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef kth_ordered(words, k):\n    if not words or k <= 0:\n        return None\n    \n    sorted_words = []\n    \n    # Group words by their length\n    length_dict = {}\n    for word in words:\n        length = len(word)\n        if length not in length_dict:\n            length_dict[length] = []\n        length_dict[length].append(word)\n    \n    # Sort groups reverse-alphabetically and append to sorted_words\n    for length in sorted(length_dict.keys()):\n        sorted_words.extend(sorted(length_dict[length], reverse=True))\n    \n    # Return the k-th word if within range, otherwise None\n    return sorted_words[k-1] if k <= len(sorted_words) else None\n\n# Edge case: when k is out of range\nprint(kth_ordered([\"apple\", \"banana\", \"cherry\"], 4))  # Output: None\n```\n\n**",
+  "trace": "**\n\nTo solve this problem, I first handle the edge cases by checking if the input list `words` is empty or if `k` is less than or equal to zero. If either condition is true, the function returns `None`.\n\nNext, I use a dictionary (`length_dict`) to group words by their lengths. This allows me to process words of each length separately.\n\nFor each length in the sorted order, I sort the list of words of that length reverse-alphabetically and append them to the main `sorted_words` list. By appending these groups in increasing length order, we ensure that the final list is ordered by word length as required.\n\nFinally, I return the k-th word from the `sorted_words` list if it exists; otherwise, I return `None`. This approach ensures that words of equal length are ordered reverse-alphabetically and handles the edge case where `k` is out of range.",
+  "totals": {
+    "time_s": 26.484273,
+    "tokens": 1002
+  },
+  "files": [
+    "20260704-235219-ce0126.crumbs.jsonl",
+    "20260704-235219-ce0126.trace.txt"
+  ]
+}

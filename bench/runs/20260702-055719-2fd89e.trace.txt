@@ -1,0 +1,2 @@
+**
+The function `snake_to_camel` takes a string `s` in snake_case format and converts it to camelCase. It uses Python's string methods to split the input by underscores, capitalize each resulting word, and join them together without any spaces. The expression `word.capitalize() or '_'` ensures that single underscores are not removed if they are part of the input (e.g., handling cases like '__a__b_'). Additionally, this approach correctly handles an empty string, returning it as is since there's nothing to convert.

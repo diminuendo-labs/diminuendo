@@ -1,0 +1,3 @@
+**
+
+The function `flatten_once` takes a list as an argument and uses a list comprehension to iterate over each element. If the element is a list, it unpacks that list; otherwise, it keeps the element as is. This approach ensures that only one level of nesting is flattened while preserving deeper nested structures. The function handles the edge case where elements are not lists, keeping them in their original form without causing errors during the iteration and unpacking process.

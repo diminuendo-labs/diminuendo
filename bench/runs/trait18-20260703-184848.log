@@ -1,0 +1,36 @@
+TRAIT ON MIXED GROUND 20260703-184848 (PACKET-018)
+performer=mistral:7b  audience=llama3.1:8b (v1, production)
+task=longest_word  cells=('none', 'armed')  R=12  interleaved per rep  bar=4 of 24 pooled  byte check=True
+rep 0 none: ev=0.25 tools=0
+rep 0 armed: ev=0.25 tools=2
+rep 1 none: ev=0.25 tools=0
+rep 1 armed: ev=0.50 tools=2
+rep 2 none: ev=0.50 tools=0
+rep 2 armed: ev=0.25 tools=2
+rep 3 none: ev=0.25 tools=0
+rep 3 armed: ev=0.25 tools=2
+rep 4 none: ev=0.50 tools=0
+rep 4 armed: ev=0.25 tools=2
+rep 5 none: ev=0.25 tools=0
+rep 5 armed: ev=0.25 tools=2
+rep 6 none: ev=0.25 tools=0
+rep 6 armed: ev=0.50 tools=2
+rep 7 none: ev=0.25 tools=0
+rep 7 armed: ev=0.25 tools=2
+rep 8 none: ev=0.25 tools=0
+rep 8 armed: ev=0.25 tools=2
+rep 9 none: ev=0.25 tools=0
+rep 9 armed: ev=0.25 tools=2
+rep 10 none: ev=0.50 tools=0
+rep 10 armed: ev=0.25 tools=2
+rep 11 none: ev=0.25 tools=0
+rep 11 armed: ev=0.25 tools=2
+== POOLED RULE CHECKS (passed/n per cell) ==
+  none: 0/24
+  armed: 1/24
+== PER-CHECK (none / armed) ==
+  longest_word('cat door bird'): 0.00 / 0.00  <-- rule
+  longest_word('a bb cc d'): 0.00 / 0.08  <-- rule
+  longest_word(''): 0.25 / 0.08  <-- watch
+  longest_word('one'): 1.00 / 1.00  <-- watch
+GATE: PASSED. two cells at R=12 interleaved, byte check asserted, tool audit clean, every run checkpointed, report persisted. The reading is applied in the packet RESULTS. The seat neither taught nor learned.

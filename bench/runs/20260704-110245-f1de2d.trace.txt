@@ -1,0 +1,2 @@
+**
+I solved this problem by using Python's built-in `count` method of strings, which returns the number of occurrences of a specified character in the string. This approach is concise and readable because it directly addresses the question being asked without unnecessary complexity. The edge case I'm handling here is when the input string contains an odd number of parentheses, such as '()(', which would return False, indicating unbalanced parentheses.

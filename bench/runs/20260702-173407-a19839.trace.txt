@@ -1,0 +1,2 @@
+**
+I chose to implement a function that uses the Counter class from the collections module to count the occurrences of each word. To handle ties alphabetically and edge case where input is an empty string, I used list comprehension to filter out words with maximum counts and then iterated over the original string in reverse order to find the last occurrence of the first most common word. This approach ensures concise code readability while adhering to the given criteria.

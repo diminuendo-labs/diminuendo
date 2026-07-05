@@ -1,0 +1,2 @@
+**
+I used a generator expression to filter the numbers that are strictly greater than k, and then converted it to a set to remove duplicates. I chose this approach because it is concise and readable, and it handles the edge case of an empty list by returning 0 (since an empty set has no elements). The function meets all criteria specified in the task.

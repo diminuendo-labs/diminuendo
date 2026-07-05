@@ -1,0 +1,3 @@
+**
+
+I chose to use a dictionary to store the count of each number in the list. This allows for efficient lookup and update of complement counts, resulting in a time complexity of O(n). I also added an edge case check at the beginning to handle empty lists, as required by the task. The rest of the function iterates over the list once, counting pairs as we go.

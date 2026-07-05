@@ -1,0 +1,2 @@
+**
+I chose to solve this task by first sorting and deduping the input list, then iterating over the sorted unique numbers. I maintained a running range of consecutive numbers and appended it to the result when it ended or if it was a single number. This approach handles the edge case where the input is an empty list, which returns an empty string as specified. By storing pairs in a way that disregards order, I ensured that distinct pairs are counted only once.

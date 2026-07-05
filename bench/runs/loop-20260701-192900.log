@@ -1,0 +1,111 @@
+== RUN 1: no landscape ==
+{
+  "run_id": "20260701-192900-b69c83",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "reason": "The code effectively finds the longest common prefix while handling an edge case where an empty list is provided.",
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "longest_common_prefix(['flower','flow','flight'])",
+        "ok": true,
+        "got": "'fl'",
+        "expect": "'fl'"
+      },
+      {
+        "call": "longest_common_prefix([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "longest_common_prefix(['dog','racecar','car'])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "longest_common_prefix(['same'])",
+        "ok": true,
+        "got": "'same'",
+        "expect": "'same'"
+      }
+    ],
+    "error": null
+  }
+}
+== LESSON: engine distillation ==
+{
+  "concept": "When writing a function to solve a problem, always consider edge cases and think about how the solution will handle them before proceeding with the main logic.",
+  "applies_when": {
+    "operation": "write_code",
+    "target": "function",
+    "language": "python",
+    "size": "small"
+  },
+  "confidence": 0.5,
+  "provenance": "engine",
+  "trail": {
+    "node_id": "task-20260701-192900-b69c83",
+    "work_features": {
+      "operation": "write_code",
+      "target": "function",
+      "language": "python",
+      "size": "small"
+    }
+  },
+  "ts": 1782959380.4942098
+}
+== RUN 2: consumes the menu ==
+landscape handed to the performer: [
+  {
+    "concept": "When writing functions to find the longest common prefix among a list of strings, it's crucial to consider the edge case of an empty list early on. This ensures that your function handles all possible inputs gracefully without unnecessary computations.",
+    "applies_when": {
+      "operation": "write_code",
+      "target": "function",
+      "language": "python",
+      "size": "small"
+    }
+  },
+  {
+    "concept": "When writing a function to solve a problem, always consider edge cases and think about how the solution will handle them before proceeding with the main logic.",
+    "applies_when": {
+      "operation": "write_code",
+      "target": "function",
+      "language": "python",
+      "size": "small"
+    }
+  }
+]
+{
+  "run_id": "20260701-192940-f1c582",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "reason": "The solution meets all the required criteria with a simple and effective implementation.",
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "first_unique_char('leetcode')",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "first_unique_char('aabb')",
+        "ok": true,
+        "got": "-1",
+        "expect": "-1"
+      },
+      {
+        "call": "first_unique_char('')",
+        "ok": true,
+        "got": "-1",
+        "expect": "-1"
+      }
+    ],
+    "error": null
+  }
+}
+GATE 2: PASSED. engine-produced=True, tools consumed by run 2=2. n=1, any 'improvement' is noise either way.

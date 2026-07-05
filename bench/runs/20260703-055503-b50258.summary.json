@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-055503-b50258",
+  "node_id": "task-20260703-055503-b50258",
+  "task": "Write a Python function title_words(s) returning the string with every whitespace-separated word title-cased (first letter upper, the rest lower) and runs of whitespace collapsed to single spaces, except that words already entirely uppercase stay exactly as they are. An empty string returns ''. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function is correct and handles at least one edge case effectively.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_case_handling": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "title_words('hello  world')",
+        "ok": true,
+        "got": "'Hello World'",
+        "expect": "'Hello World'"
+      },
+      {
+        "call": "title_words('NASA rocks')",
+        "ok": true,
+        "got": "'NASA Rocks'",
+        "expect": "'NASA Rocks'"
+      },
+      {
+        "call": "title_words('mIxEd')",
+        "ok": true,
+        "got": "'Mixed'",
+        "expect": "'Mixed'"
+      },
+      {
+        "call": "title_words('')",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef title_words(s):\n    \"\"\"\n    Capitalizes every whitespace-separated word, collapses consecutive spaces,\n    and leaves entirely uppercase words unchanged.\n\n    :param s: input string\n    :return: processed string with title-cased words and collapsed whitespace\n    \"\"\"\n    return ' '.join(word.title() if not word.isupper() else word for word in s.split())\n```\n\n**",
+  "trace": "**\nI approached this task by using a combination of Python's built-in string methods, specifically `split()` to separate the input string into words and `title()` to capitalize each word. I also used an f-conditional expression (`word.title() if not word.isupper() else word`) to preserve entirely uppercase words as they are. This solution is concise and readable due to its simplicity and adherence to standard library methods, making it easy to understand and maintain.",
+  "totals": {
+    "time_s": 19.3394605,
+    "tokens": 665
+  },
+  "files": [
+    "20260703-055503-b50258.crumbs.jsonl",
+    "20260703-055503-b50258.trace.txt"
+  ]
+}

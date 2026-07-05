@@ -1,0 +1,2 @@
+**
+I chose to use the `Counter` class from the `collections` module to count the occurrences of each word. This allows for concise and readable code. The edge case is handled by checking if the input string is empty using the `strip()` method, which removes leading and trailing whitespace. If it's empty, an empty string is returned.

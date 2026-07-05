@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to count the occurrences of each word. To break ties alphabetically, I used a lambda function as the `key` argument in the `max` function, which returns a tuple containing the count and the word itself. This allows the `max` function to first compare counts and then words lexicographically if counts are equal. The edge case of an empty string is handled by checking if the input string is stripped of whitespace (i.e., it's just whitespace) before processing it.

@@ -1,0 +1,2 @@
+**
+I chose to use a simple loop that iterates over each element in the input list. For elements that are lists themselves, I used the `extend` method to add all their inner elements to the result list. This approach is concise and readable, and it handles one edge case: if an input list contains only non-list elements (e.g., `[1, 2, 'a', 'b']`), the function will return a new list with those elements as is.

@@ -1,0 +1,3 @@
+**
+
+The function `kth_ordered` first checks for edge cases where `words` is empty or `k` is non-positive, returning `None` in these scenarios. It then groups the words by their length and sorts each group reverse-alphabetically. After that, it flattens these sorted groups into a single list and finally returns the k-th word (adjusted for 0-based indexing). The function handles the edge case where `k` is out of range by checking the length of the flattened list before returning the word at position `k-1`.

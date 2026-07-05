@@ -1,0 +1,4 @@
+**
+I handled the edge case where the input string `s` is empty. To do this, I checked if the list of words `words` was empty after splitting the string by whitespace. If it was, I immediately returned an empty string.
+
+For finding the most common word, I used the `Counter` class from the `collections` module to count the occurrences of each word in the string. Then, I found the maximum count and filtered the counter for words with this count. To break ties alphabetically, I sorted these tied words alphabetically using the `min` function.

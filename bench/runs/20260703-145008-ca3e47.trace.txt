@@ -1,0 +1,2 @@
+**
+I chose to use a set to store the unique numbers in the list, as this allows us to efficiently handle duplicate values and count distinct elements. I then check if n is within valid bounds before sorting the distinct numbers and returning the nth smallest one (note: we subtract 1 from n because Python uses 0-based indexing). This function handles an edge case where the input list contains duplicate values, as these will be automatically ignored when creating the set of distinct numbers.

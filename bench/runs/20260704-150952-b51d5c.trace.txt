@@ -1,0 +1,2 @@
+**
+I chose to sort the input list first to make it easy to find the minimum and maximum values. This approach assumes that finding these two values is a straightforward task after sorting. By using a list comprehension to create a new list with the minimum and maximum values removed, I avoided creating an additional data structure or modifying the original list.

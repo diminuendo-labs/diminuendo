@@ -1,0 +1,3 @@
+**
+
+The function `range_summary` takes a list of integers as input and returns a string summary. The approach involves first sorting the list to handle consecutive numbers easily. It then iterates through the sorted list, identifying sequences of consecutive numbers by checking if each number is exactly one greater than the previous. When a sequence is identified, it either adds a single number (if no sequence) or a range (`start-end`) to the result list. Finally, it joins all elements in the result list with commas to form the final string and returns it. The function handles an edge case where the input list is empty by immediately returning an empty string.

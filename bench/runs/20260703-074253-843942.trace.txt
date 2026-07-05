@@ -1,0 +1,2 @@
+**
+The function `split_csvish` takes a string `s` as input and splits it into fields based on commas. It then uses a list comprehension to iterate over each field, stripping any leading or trailing whitespace. Only fields that are not empty after trimming are included in the resulting list. If the input string is empty, the function returns an empty list. This approach ensures that the output list contains only non-empty fields with no leading or trailing whitespace.

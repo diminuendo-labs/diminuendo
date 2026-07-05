@@ -1,0 +1,3 @@
+**
+
+To solve this task, I chose to sort the input pairs by their start value first. Then, I iterated over the sorted pairs and checked if each range overlaps with or is close enough to the last merged range. If it does, I updated the end of the last merged range to be the maximum of its current end and the end of the current pair. Otherwise, I appended the current pair as a new merged range. This approach ensures that all overlapping ranges are merged while maintaining the correct order.

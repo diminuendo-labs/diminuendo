@@ -1,0 +1,2 @@
+**
+To solve this task, I first handle the edge case where the input list is empty, returning an empty string immediately. Then, I sort the input list and remove duplicates by converting it to a set and back to a sorted list. This ensures that the numbers are in ascending order and unique. Next, I iterate through the sorted list, identifying consecutive sequences and formatting them as 'start-end' if they span more than one number. Single numbers are added as is. Finally, I join all segments with commas to form the final result string.

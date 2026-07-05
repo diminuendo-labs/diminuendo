@@ -1,0 +1,3 @@
+I used Python's built-in string method `split('_')` to break the underscore-delimited identifier into a list of tokens. Then, I looped through each token and checked if it is present in the exception list. If not, I created camelCase by lowercasing the first letter of the token and capitalizing the rest, or simply added the token as-is if it was in the exception list. Finally, I ensured that the result starts with a capitalized letter and returned it.
+
+An edge case to handle is when there's an empty token (such as "_") in the input string, which would cause a problem when joining the tokens together. By explicitly checking for this edge case and adding an empty string instead, I ensured that my function works correctly regardless of such situations.

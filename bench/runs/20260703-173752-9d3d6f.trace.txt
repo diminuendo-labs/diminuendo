@@ -1,0 +1,3 @@
+To solve this task, I first checked if the lengths of the two input strings were equal. If they were, it meant that one string was a rotation of the other or they were identical (in which case they count as rotations). In such a case, we can quickly determine if they are rotations by checking if concatenating the first string twice results in the second string (a + a == b * 2). If the lengths were not equal, I immediately returned False because strings of different lengths cannot be rotations.
+
+Finally, I handled an edge case where both input strings are empty; in that situation, they can be considered as rotations of each other.

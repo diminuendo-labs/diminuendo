@@ -1,0 +1,5 @@
+**
+
+I defined a generator expression within a list comprehension to create the flattened list. The `isinstance` function checks each element of the input list to see if it's a list; if so, it's included in the new list as is (i.e., nested), otherwise its value is used directly. This approach allows for efficient handling of arbitrarily long lists without needing to handle edge cases explicitly at every step.
+
+One notable edge case this function handles is when the input is an empty list (`[]`). In this case, it correctly returns an empty list.

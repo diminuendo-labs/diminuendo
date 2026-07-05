@@ -1,0 +1,3 @@
+**
+
+I started by checking the edge case where the input list is empty. Then I used a dictionary to count the frequency of each number in the list. Next, I found the maximum frequency and summed up all numbers with that frequency, effectively counting them only once regardless of how often they appear. This approach allows for concise and readable code while handling the specified edge case.

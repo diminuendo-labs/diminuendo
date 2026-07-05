@@ -1,0 +1,2 @@
+**
+I approached this problem by considering the properties of string rotations. I realized that if `b` is a rotation of `a`, then `a` must be a substring of `b + b`. This led me to use the `in` operator, which checks for substring membership. To handle the edge case where both strings are empty, I added a simple length check. By combining these two conditions with an `and` operator, I arrived at a concise and readable solution.

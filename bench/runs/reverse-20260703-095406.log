@@ -1,0 +1,36 @@
+REVERSE CELL 20260703-095406 (PACKET-011)
+performer=qwen2.5-coder:7b  audience=llama3.1:8b (v1, production)
+task=longest_word  arms=('none', 'menu')  R=12  lessons=2 llama-origin, pins live
+none rep 0: ev=0.50 tools=0
+none rep 1: ev=1.00 tools=0
+none rep 2: ev=1.00 tools=0
+none rep 3: ev=0.50 tools=0
+none rep 4: ev=1.00 tools=0
+none rep 5: ev=1.00 tools=0
+none rep 6: ev=1.00 tools=0
+none rep 7: ev=1.00 tools=0
+none rep 8: ev=0.50 tools=0
+none rep 9: ev=0.50 tools=0
+none rep 10: ev=1.00 tools=0
+none rep 11: ev=1.00 tools=0
+menu rep 0: ev=0.50 tools=2
+menu rep 1: ev=1.00 tools=2
+menu rep 2: ev=0.50 tools=2
+menu rep 3: ev=0.50 tools=2
+menu rep 4: ev=1.00 tools=2
+menu rep 5: ev=1.00 tools=2
+menu rep 6: ev=0.50 tools=2
+menu rep 7: ev=0.50 tools=2
+menu rep 8: ev=1.00 tools=2
+menu rep 9: ev=1.00 tools=2
+menu rep 10: ev=0.50 tools=2
+menu rep 11: ev=0.50 tools=2
+== POOLED RULE CHECKS (passed/n per arm) ==
+  none: 16/24
+  menu: 10/24
+== PER-CHECK (none / menu) ==
+  longest_word('cat door bird'): 0.67 / 0.42  <-- rule
+  longest_word('a bb cc d'): 0.67 / 0.42  <-- rule
+  longest_word(''): 1.00 / 1.00
+  longest_word('one'): 1.00 / 1.00
+GATE: PASSED. both arms at R=12, every armed run carried tools (min=2), every run checkpointed, report persisted. The reading is applied in the packet RESULTS.

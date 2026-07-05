@@ -1,0 +1,8 @@
+**
+1. **Edge Case Handling:** The function first checks if the input list `nums` is empty. If it is, an empty string is returned immediately.
+2. **Sorting and Iteration:** The list is sorted to handle consecutive numbers easily. We then iterate through the sorted list while keeping track of the start and end of the current range.
+3. **Range Identification:** As we iterate, if the next number is exactly one more than the current end, it continues the range. Otherwise, the current range is added to the result list, and a new range starts with the current number.
+4. **Final Range Addition:** After the loop, the last range is added to the result list outside the loop.
+5. **Result Construction:** The ranges are joined into a single string separated by commas and returned.
+
+This approach ensures that consecutive numbers are collapsed into ranges and the function is correct, concise, and handles edge cases like an empty input list.

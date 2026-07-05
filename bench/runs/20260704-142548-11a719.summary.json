@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-142548-11a719",
+  "node_id": "task-20260704-142548-11a719",
+  "task": "Write a Python function kth_ordered(words, k) returning the k-th word, counting from 1, when the words are ordered by increasing length, and words of equal length are ordered reverse-alphabetically among themselves. Return None when k is out of range. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided Python function kth_ordered(words, k) correctly implements the specified logic for ordering words by length and then reverse-alphabetically for equal lengths.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "kth_ordered(['dd', 'a', 'ccc'], 2)",
+        "ok": true,
+        "got": "'dd'",
+        "expect": "'dd'"
+      },
+      {
+        "call": "kth_ordered(['a', 'bb'], 1)",
+        "ok": true,
+        "got": "'a'",
+        "expect": "'a'"
+      },
+      {
+        "call": "kth_ordered(['a'], 3)",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**  \n```python\ndef kth_ordered(words, k):\n    # Handle the edge case where k is out of range\n    if k < 1 or k > len(words):\n        return None\n    \n    # Sort words by length, then reverse-alphabetically for equal lengths\n    sorted_words = sorted(words, key=lambda x: (len(x), -ord(x[-1])))\n    \n    # Return the k-th word\n    return sorted_words[k-1]\n```\n\n**",
+  "trace": "**  \nThe function `kth_ordered` first checks if `k` is within the valid range. If not, it returns `None`. It then sorts the list of words based on their length in ascending order. For words of equal length, it uses a secondary key that considers the ASCII value of the last character in reverse order to ensure reverse-alphabetical sorting. Finally, it returns the k-th word from the sorted list.",
+  "totals": {
+    "time_s": 24.1149414,
+    "tokens": 717
+  },
+  "files": [
+    "20260704-142548-11a719.crumbs.jsonl",
+    "20260704-142548-11a719.trace.txt"
+  ]
+}

@@ -1,0 +1,2 @@
+** 
+I started by sorting the pairs first. Sorting is crucial as it allows us to process ranges in a sequential manner, making merging straightforward. After sorting, I iterated through the list of sorted pairs, maintaining a list of merged pairs. For each pair, if it overlaps or touches the last added merged pair, I expanded the end of the last merged pair to include the current one. If not, I simply appended the new non-overlapping pair to the result. This approach ensures that all overlapping ranges are merged while preserving the order of start times in the final output.

@@ -1,0 +1,2 @@
+**
+I chose to use the "concept" approach, which states that when there are multiple words of maximum length, we should return the index of its last occurrence. I implemented this by iterating over the list of words in reverse order and keeping track of the longest word seen so far. This ensures that if there is a tie for the longest word, we will return the last such word encountered, which satisfies the "on ties return the last such word" requirement.

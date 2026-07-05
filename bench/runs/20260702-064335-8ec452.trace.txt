@@ -1,0 +1,2 @@
+**
+I implemented the function using list comprehension and the `str.split()` method to split the input string into words. The `if word` condition handles the edge case where there are repeated or leading/trailing underscores, as it ensures that empty strings (resulting from consecutive underscores) are skipped. The resulting list of words is then joined with `join()`, with each word capitalized using `str.capitalize()` to achieve camelCase formatting.

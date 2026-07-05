@@ -1,0 +1,63 @@
+{
+  "run_id": "20260703-020855-347909",
+  "node_id": "task-20260703-020855-347909",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The solution correctly implements the range summary functionality with a clear and efficient approach.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": false,
+        "got": "'1, 2, 3, 5'",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": false,
+        "got": "'1, 2, 3'",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": false,
+        "got": "'1, 3, 5'",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": true,
+        "got": "'7'",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n```python\ndef range_summary(nums):\n    if not nums:\n        return ''\n    \n    nums.sort()\n    ranges = []\n    start = nums[0]\n    \n    for i in range(1, len(nums)):\n        if nums[i] != nums[i - 1]:\n            if nums[i - 1] == start:\n                ranges.append(str(start))\n            else:\n                ranges.append(f\"{start}-{nums[i - 1]}\")\n            start = nums[i]\n    \n    # Handle the last range\n    if nums[-1] == start:\n        ranges.append(str(start))\n    else:\n        ranges.append(f\"{start}-{nums[-1]}\")\n    \n    return ', '.join(ranges)\n```\n\n**",
+  "trace": "**\nTo solve this problem, I first sort the list to ensure that all consecutive numbers are adjacent. Then, I iterate through the sorted list while keeping track of the start of each range. If the current number is different from the previous one, it means we've reached the end of a range. I append the appropriate format (either just the number or a range) to the `ranges` list. Finally, I join all ranges with commas and return the result. This approach handles the edge case where an empty list returns an empty string efficiently.",
+  "totals": {
+    "time_s": -2.1311985,
+    "tokens": -138
+  },
+  "files": [
+    "20260703-020855-347909.crumbs.jsonl",
+    "20260703-020855-347909.trace.txt"
+  ]
+}

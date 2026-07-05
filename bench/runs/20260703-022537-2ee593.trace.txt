@@ -1,0 +1,2 @@
+**
+I used Python's built-in string methods `split()` to split the input string into words separated by underscores, and then combined each word with its first character capitalized using a generator expression within the `join()` method. This approach is concise and readable while handling leading, trailing, and repeated underscores correctly, including one edge case where an empty string returns an empty string. The `if word` condition ensures that empty strings in the list of words are skipped when joining them together.

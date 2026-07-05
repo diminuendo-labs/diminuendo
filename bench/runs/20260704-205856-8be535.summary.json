@@ -1,0 +1,51 @@
+{
+  "run_id": "20260704-205856-8be535",
+  "node_id": "task-20260704-205856-8be535",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code does not handle the case when the minimum or maximum value appears more than once in the list.",
+  "per_criterion": {
+    "the function is correct": 4,
+    "code is concise and readable": 3
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": false,
+        "got": "raised ZeroDivisionError('division by zero')",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": false,
+        "got": "0.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n\n    nums.remove(min(nums))\n    nums.remove(max(nums))\n    median = sorted(nums)[len(nums)//2]\n    return sum(filter(lambda x: x > median, nums)) + sum(filter(lambda x: x < median, nums)) / (len(nums)-2)\n```",
+  "trace": "To write the `trimmed_mean` function in Python, I first handle empty and None inputs by returning None. Then, to remove exactly one occurrence of the minimum and one occurrence of the maximum, I utilize the built-in `remove()` method after finding the minimum and maximum values in the list using the `min()` and `max()` functions respectively.\n\nTo calculate the mean without including the trimmed minimum and maximum values, I first sort the list and find the median (the middle value). Then, I use a lambda function to filter the numbers above and below the median, sum them, and finally divide by the total number of non-trimmed values (length of the original list minus 2) to obtain the trimmed mean.",
+  "totals": {
+    "time_s": -0.6586002999999998,
+    "tokens": -211
+  },
+  "files": [
+    "20260704-205856-8be535.crumbs.jsonl",
+    "20260704-205856-8be535.trace.txt"
+  ]
+}

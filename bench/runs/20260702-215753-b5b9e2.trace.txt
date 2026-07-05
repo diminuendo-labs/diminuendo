@@ -1,0 +1,11 @@
+**
+
+The function `sum_of_modes` takes a list of integers as input and returns the sum of the distinct most frequent values in the list. To achieve this:
+
+1. **Edge Case Handling**: The function first checks if the input list is empty. If it is, the function immediately returns 0.
+2. **Frequency Counting**: Using Python's `collections.Counter`, it counts the frequency of each number in the list.
+3. **Finding Maximum Frequency**: It determines the maximum frequency among all numbers.
+4. **Identifying Modes**: It collects all numbers that have this maximum frequency, which are referred to as modes.
+5. **Summing Distinct Modes**: Finally, it returns the sum of these distinct mode values. By converting the list of modes to a set before summing, duplicate values are automatically excluded.
+
+This approach ensures that the function is both correct and concise, adhering to the criteria provided.

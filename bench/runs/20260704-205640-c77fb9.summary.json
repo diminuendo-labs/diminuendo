@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-205640-c77fb9",
+  "node_id": "task-20260704-205640-c77fb9",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly calculates the trimmed mean after dropping exact occurrences of minimum and maximum, handles empty list edge case, and has a clear structure.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n\n    sorted_nums = sorted(nums)\n    min_occurrences = sorted_nums.count(min(sorted_nums))\n    max_occurrences = sorted_nums.count(max(sorted_nums))\n\n    if min_occurrences > 1 or max_occurrences > 1:\n        nums_copy = nums[:]\n        nums_copy.remove(min(nums))\n        nums_copy.remove(max(nums))\n        sorted_nums = sorted(nums_copy)\n\n    return sum(sorted_nums[1:-1]) / (len(sorted_nums) - 2)\n```",
+  "trace": "To solve this task, I first sorted the input list and removed multiple occurrences of minimum and maximum values if they exist. I then calculated the sum of the middle values between the minimum and maximum and divided it by the number of remaining values minus 2 to get the trimmed mean. To handle an edge case, I accounted for scenarios where there are more than one occurrence of minimum or maximum values in the input list.",
+  "totals": {
+    "time_s": 23.7635925,
+    "tokens": 791
+  },
+  "files": [
+    "20260704-205640-c77fb9.crumbs.jsonl",
+    "20260704-205640-c77fb9.trace.txt"
+  ]
+}

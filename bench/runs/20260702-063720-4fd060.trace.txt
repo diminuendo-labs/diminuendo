@@ -1,0 +1,3 @@
+**
+
+I chose to split the input string by '_' and then capitalize each resulting substring using a generator expression. This approach is concise and easy to read, making it suitable for this task. I also considered edge cases like an empty string or strings with leading/trailing/triple underscores, but as per the requirements, such inputs should return an empty string without raising any errors.

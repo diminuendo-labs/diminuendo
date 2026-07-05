@@ -1,0 +1,2 @@
+**
+I chose to use list comprehension and the `split` method to break down the input string into words, then used a generator expression with `capitalize` to capitalize each word. This approach is concise and readable, handling edge cases like repeated or trailing underscores by simply ignoring them when splitting the string. The function also handles an empty string correctly, returning an empty string as required.

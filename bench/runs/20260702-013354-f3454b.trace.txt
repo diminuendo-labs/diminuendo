@@ -1,0 +1,2 @@
+** 
+To implement the `range_summary` function, I first handle the edge case where the input list is empty by returning an empty string. Then, I sort and de-duplicate the list to ensure we only work with distinct values in ascending order. Using a while loop, I iterate through the sorted list, identifying ranges of consecutive numbers and formatting them correctly as either single numbers or ranges. The results are collected in a list and joined into a single string separated by commas before being returned.

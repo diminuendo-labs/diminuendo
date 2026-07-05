@@ -1,0 +1,5 @@
+The `nth_page()` function takes a list of items, a size for the pages, and a page number n. The edge case considered is when the page size is zero or negative.
+
+I chose to first ensure the page size was positive by using the max() function to get the maximum value between the given size and 1. Then, I calculated the total number of pages needed by taking the integer quotient of the length of items divided by page_size and adding 1 if there's a remaining item that doesn't fit into a full-sized page.
+
+Next, I calculated the starting index for the given page based on its zero-based position and page size, and the ending index was set to the minimum between the starting index plus the page_size and the length of items. Finally, I returned the portion of the list from the start index to the end index as the desired page.

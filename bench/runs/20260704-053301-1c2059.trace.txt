@@ -1,0 +1,2 @@
+**
+I used Python's built-in string methods `split` and `capitalize` to convert the input string from snake_case to camelCase. I used a generator expression to iterate over each non-empty word in the split result, capitalizing each one with `capitalize`. This approach is concise and readable, as it uses simple and well-documented functions. The edge case handled by this function is when the input string contains only underscores (e.g., '_a_b_'), which returns an empty string.

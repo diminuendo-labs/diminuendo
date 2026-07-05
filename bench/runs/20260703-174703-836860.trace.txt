@@ -1,0 +1,5 @@
+The function `count_pairs` takes a list of numbers `nums` and a target number as input. It initializes the counter `count` to zero. Then it creates a dictionary `num_dict`, where each unique number in the list is associated with its index.
+
+For every number in the list, it checks if its complement (the target minus that number) exists in the `num_dict`. If so, it verifies that the current number and the complement are not equal to avoid counting duplicate pairs and that they correspond to different indices, which ensures that equal values at different indices count as distinct pairs. Finally, it increments the counter if all conditions are met and returns the total count of valid pairs.
+
+The edge case considered in this solution is when a number and its complement appear at the same index. In such cases, they will not be counted as distinct pairs because their indices are the same.

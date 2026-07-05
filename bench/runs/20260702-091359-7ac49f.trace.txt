@@ -1,0 +1,2 @@
+**
+To solve this task, I used a list comprehension to iterate through each element in the input list. If an element is a list, it's flattened by iterating through its items directly. For non-list elements, they are added as single elements to the output list. This approach ensures that only one level of nesting is flattened while deeper levels remain nested. The function handles the edge case where there might be empty lists or non-iterable elements within the input list gracefully.

@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-152608-464c5f",
+  "node_id": "task-20260704-152608-464c5f",
+  "task": "Write a Python function kth_ordered(words, k) returning the k-th word, counting from 1, when the words are ordered by increasing length, and words of equal length are ordered reverse-alphabetically among themselves. Return None when k is out of range. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function does not handle the edge case where k is 0.",
+  "per_criterion": {
+    "the function is correct": 4,
+    "the code is concise and readable": 3,
+    "at least one edge case is named": 2
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "kth_ordered(['dd', 'a', 'ccc'], 2)",
+        "ok": false,
+        "got": "raised TypeError(\"bad operand type for unary -: 'str'\")",
+        "expect": "'dd'"
+      },
+      {
+        "call": "kth_ordered(['a', 'bb'], 1)",
+        "ok": false,
+        "got": "raised TypeError(\"bad operand type for unary -: 'str'\")",
+        "expect": "'a'"
+      },
+      {
+        "call": "kth_ordered(['a'], 3)",
+        "ok": false,
+        "got": "raised TypeError(\"bad operand type for unary -: 'str'\")",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef kth_ordered(words, k):\n    \"\"\"\n    Returns the k-th word when words are ordered by increasing length \n    and then reverse-alphabetically among equal lengths.\n\n    Args:\n        words (list): list of words to be ordered.\n        k (int): index of word to return (1-indexed).\n\n    Returns:\n        str: k-th word, or None if k is out of range.\n\n    Raises:\n        TypeError: if words is not a list or k is not an integer.\n    \"\"\"\n    if not isinstance(words, list) or not all(isinstance(word, str) for word in words):\n        raise ValueError(\"Input must be a list of strings\")\n    \n    if not isinstance(k, int) or k < 1:\n        return None\n\n    # sort the list by length first and then alphabetically\n    sorted_words = sorted(words, key=lambda x: (len(x), -x))\n    \n    # since indices are 0-indexed but we want 1-indexed, adjust k\n    k -= 1\n    \n    if k < len(sorted_words):\n        return sorted_words[k]\n    else:\n        return None\n```\n**",
+  "trace": "**\nI chose to use the built-in `sorted` function with a custom sorting key to achieve the desired ordering. The key function uses a tuple where the first element is the length of the word (which sorts in ascending order) and the second element is the negative of the word itself (which sorts in descending alphabetical order). This way, words with equal lengths are ordered reverse-alphabetically among themselves. I also included input validation to handle edge cases such as non-list inputs or invalid indices.",
+  "totals": {
+    "time_s": -4.7678852,
+    "tokens": 17
+  },
+  "files": [
+    "20260704-152608-464c5f.crumbs.jsonl",
+    "20260704-152608-464c5f.trace.txt"
+  ]
+}

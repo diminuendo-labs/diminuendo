@@ -1,0 +1,137 @@
+{
+  "selfdel31_id": "20260704-204738",
+  "packet": "PACKET-031",
+  "performer": "mistral:7b",
+  "audience": "llama3.1:8b",
+  "ground": "safe_stats r1",
+  "repeats": 12,
+  "cells": [
+    "none",
+    "armed"
+  ],
+  "qualify_min": 4,
+  "rule_bar": "4 of 24",
+  "store_md5": "588e6eaf31f77559556d15b2d44e040f",
+  "stage_a": {
+    "pooled": {
+      "n": 24,
+      "passed": 19,
+      "present_n": 24,
+      "present_passed": 19,
+      "unrunnable_rows": 0
+    },
+    "fails": 5,
+    "qualify_min": 4,
+    "qualified": true
+  },
+  "stage_b": {
+    "ran": true,
+    "pooled_rule_checks": {
+      "none": {
+        "n": 24,
+        "passed": 15,
+        "present_n": 22,
+        "present_passed": 15,
+        "unrunnable_rows": 1
+      },
+      "armed": {
+        "n": 24,
+        "passed": 20,
+        "present_n": 24,
+        "present_passed": 20,
+        "unrunnable_rows": 0
+      }
+    },
+    "check_table": {
+      "trimmed_mean([])": {
+        "rule_check": true,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 11,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          },
+          "armed": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      },
+      "trimmed_mean([5, 5, 1, 9])": {
+        "rule_check": true,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 11,
+            "passed": 4,
+            "rate": 0.3333333333333333
+          },
+          "armed": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 8,
+            "rate": 0.6666666666666666
+          }
+        }
+      },
+      "trimmed_mean([3, 1, 2])": {
+        "rule_check": false,
+        "cells": {
+          "none": {
+            "rows": 12,
+            "present_n": 11,
+            "passed": 4,
+            "rate": 0.3333333333333333
+          },
+          "armed": {
+            "rows": 12,
+            "present_n": 12,
+            "passed": 7,
+            "rate": 0.5833333333333334
+          }
+        }
+      }
+    },
+    "rule_disagreement": {
+      "none": {
+        "rows": 12,
+        "disagreeing_rows": 7
+      },
+      "armed": {
+        "rows": 12,
+        "disagreeing_rows": 4
+      }
+    }
+  },
+  "census": {
+    "A|none": {
+      "sort-slice-average": 12,
+      "loop-accumulate": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "B|none": {
+      "sort-slice-average": 11,
+      "loop-accumulate": 0,
+      "other": 0,
+      "unrunnable": 1
+    },
+    "B|armed": {
+      "sort-slice-average": 10,
+      "loop-accumulate": 0,
+      "other": 2,
+      "unrunnable": 0
+    }
+  },
+  "census_no_readings_divergence": 0,
+  "audit_ok": true,
+  "priors": {
+    "P019_trait_cell": "FLAT, none 12/24, armed 13/24, cross-origin instrument",
+    "P026_candidacy_this_ground": "14 of 24, census 12 of 12 sort-slice-average; candidacy is not qualification",
+    "self_delivery": "zero measurements exist; P024 was refused by qualification"
+  },
+  "n_note": "Stage A gates only. The three-exit reading, the two-cause caveat, observability naming, and effective-n sizing live in the packet and are applied in its RESULTS."
+}

@@ -1,0 +1,3 @@
+**
+
+I approached this task by recognizing it as a typical problem of evaluating whether a set of brackets is balanced. I decided to use a simple iterative approach using a stack data structure, which is well-suited for this type of problem. The key insight is that when an opening parenthesis is encountered, it gets pushed onto the stack; and when a closing parenthesis is encountered, the top element on the stack (which should be an opening parenthesis) is popped off. This ensures that every opening parenthesis has a corresponding closing parenthesis. To make the code concise and readable, I included comments explaining the logic behind each section of the function.

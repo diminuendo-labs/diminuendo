@@ -1,0 +1,3 @@
+**
+
+To write this function, I first split the input string into components using the underscore as a separator. This effectively drops leading and trailing underscores. Then, I used a generator expression to capitalize each component that is not empty (handling the edge case where the string contains consecutive underscores), and joined them together with no separators. The result is a camelCase version of the original snake_case identifier.

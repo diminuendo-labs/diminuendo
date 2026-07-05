@@ -1,0 +1,58 @@
+{
+  "run_id": "20260704-073151-9e326c",
+  "node_id": "task-20260704-073151-9e326c",
+  "task": "Write a Python function median(nums) returning the middle value of the sorted list when the length is odd, or the average of the two middle values as a float when the length is even. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code meets all the specified requirements and handles an edge case correctly.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness": 4,
+    "readability": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "median([3, 1, 2])",
+        "ok": false,
+        "got": "2.0",
+        "expect": "2"
+      },
+      {
+        "call": "median([1, 2, 3, 4])",
+        "ok": true,
+        "got": "2.5",
+        "expect": "2.5"
+      },
+      {
+        "call": "median([5, 5])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "median([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef median(nums):\n    if not nums:\n        return None\n    sorted_nums = sorted(nums)\n    n = len(sorted_nums)\n    mid = n // 2\n    if n % 2 == 0:\n        return (sorted_nums[mid - 1] + sorted_nums[mid]) / 2.0\n    else:\n        return float(sorted_nums[mid])\n```",
+  "trace": "To implement the `median` function, I first check if the input list is empty and return `None` if it is, handling the edge case of an empty list. Then, I sort the list to arrange the numbers in ascending order. Depending on whether the length of the sorted list is odd or even, I calculate the median accordingly: for an even number of elements, I take the average of the two middle numbers; for an odd number, I return the middle number directly as a float. This solution ensures correctness and readability while addressing the edge case of empty input.",
+  "totals": {
+    "time_s": 1.0196073000000005,
+    "tokens": -55
+  },
+  "files": [
+    "20260704-073151-9e326c.crumbs.jsonl",
+    "20260704-073151-9e326c.trace.txt"
+  ]
+}

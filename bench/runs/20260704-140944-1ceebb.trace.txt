@@ -1,0 +1,6 @@
+**
+To implement the `collapse_delims` function, I followed these steps:
+1. **Splitting and Filtering:** I used the `split(',')` method to break the input string into pieces based on commas. The list comprehension `[piece for piece in s.split(',') if piece]` filters out any empty strings that might result from consecutive commas.
+2. **Joining with a Single Comma:** Finally, I joined the non-empty pieces back together using `','.join(pieces)`, ensuring there is only one comma between each piece.
+
+This approach ensures that the function handles consecutive commas correctly and drops empty pieces as specified. The edge case of an empty string or a string containing only commas is handled by returning an empty string, as the filtering step naturally excludes all empty pieces in such cases.

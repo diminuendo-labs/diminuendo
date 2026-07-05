@@ -1,0 +1,2 @@
+**
+I implemented the `kth_ordered` function using Python's built-in `sorted` function with a custom sorting key. The key is a tuple where the first element is the length of each word, and the second element is the reverse alphabetical order of each word (ensuring words of equal length are ordered correctly). I chose this approach because it is concise and readable, and leverages Python's built-in functionality for efficient sorting. The edge case of an empty input list is explicitly handled by returning `None` regardless of the value of `k`.

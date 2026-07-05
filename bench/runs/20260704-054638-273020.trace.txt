@@ -1,0 +1,2 @@
+**
+I chose a simple iterative approach to solve this problem. I initialized an empty list `result` to store the flattened elements and then iterated over each element in the input list `lst`. If an element is a list, I used the `extend` method to add its items to `result`; otherwise, I appended it as is. This approach handles the edge case where the input list contains a single non-list element (e.g., `[1]`).

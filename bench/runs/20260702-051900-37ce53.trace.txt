@@ -1,0 +1,3 @@
+** 
+
+I used Python's `collections.Counter` to efficiently count the occurrences of each value in the list. Then, I iterated through the counts and summed up those that were exactly 1, indicating they appear only once. This approach is concise and leverages built-in functionality for readability and performance. The edge case of an empty list is handled by the `sum` function, which returns 0 if no values meet the condition.

@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-015754-b40cda",
+  "node_id": "task-20260702-015754-b40cda",
+  "task": "Write a Python function median(nums) returning the middle value of the sorted list when the length is odd, or the average of the two middle values as a float when the length is even. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "reason": "The solution correctly implements the median calculation, is well-written, and handles an empty input list as specified.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "median([3, 1, 2])",
+        "ok": false,
+        "got": "2.0",
+        "expect": "2"
+      },
+      {
+        "call": "median([1, 2, 3, 4])",
+        "ok": true,
+        "got": "2.5",
+        "expect": "2.5"
+      },
+      {
+        "call": "median([5, 5])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "median([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef median(nums):\n    if not nums:\n        return None\n    \n    nums.sort()\n    n = len(nums)\n    \n    if n % 2 == 1:\n        return float(nums[n // 2])\n    else:\n        return (nums[n // 2 - 1] + nums[n // 2]) / 2.0\n```\n\n**",
+  "trace": "**\n\nThe function `median` first checks if the input list `nums` is empty and returns `None` if it is. If not, it sorts the list in ascending order. Depending on whether the length of the sorted list (`n`) is odd or even, the function calculates the median by either returning the middle element directly (for odd lengths) or averaging the two middle elements (for even lengths). This approach ensures that the function handles both cases correctly and efficiently.",
+  "totals": {
+    "time_s": -1.3433431999999996,
+    "tokens": -420
+  },
+  "files": [
+    "20260702-015754-b40cda.crumbs.jsonl",
+    "20260702-015754-b40cda.trace.txt"
+  ]
+}

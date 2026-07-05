@@ -1,0 +1,2 @@
+**  
+I chose to split the input string into a list of words using `s.split()`. This handles multiple consecutive spaces correctly by returning an empty list if there are no words. I then used the built-in `max()` function with `key=len` to find the longest word. Since `max()` returns the first maximum in case of ties, this naturally gives me the last longest word as required by the task. If the input string is empty, `s.split()` will result in an empty list, and returning an empty string adheres to the edge case handling requirement.

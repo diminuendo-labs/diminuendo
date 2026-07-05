@@ -1,0 +1,10 @@
+**
+
+To implement the `token_case` function, I followed these steps:
+
+1. **Splitting the Input:** The input string `s` is split into tokens using the underscore (`_`) as a delimiter.
+2. **Handling the First Token:** The first token is converted to lowercase and added to the result list.
+3. **Processing Subsequent Tokens:** For each subsequent token, if it's in the exception list (defaulting to `['URL', 'ID']`), it's added unchanged. Otherwise, it's capitalized and added to the result list.
+4. **Joining Tokens:** The tokens in the result list are joined together without any separators to form the final camel case string.
+
+The edge case considered is when the input string consists of a single word without an underscore. In this scenario, the function should return the word unchanged, as it's already in camel case. This is handled by the assertion at the end of the code snippet.

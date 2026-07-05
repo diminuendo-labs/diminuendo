@@ -1,0 +1,3 @@
+**
+
+The function `token_case(s)` takes an underscore-delimited string `s` and converts it to camel case. It first splits the string into tokens using the `_` as a delimiter. Then, it processes each token: if the token is in the exception list `['URL', 'ID']`, it keeps its exact form; otherwise, it capitalizes it. The resulting tokens are joined together with no separators, and the first token is converted to lowercase before concatenation. This approach ensures that all tokens except those in the exception list are correctly transformed to camel case while preserving the specified exceptions.

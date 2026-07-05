@@ -1,0 +1,3 @@
+**
+
+I first handle the edge case of an empty list by returning an empty string immediately. Then, I sort and deduplicate the input list to ensure that consecutive numbers are next to each other and there are no duplicates. Next, I iterate through the sorted list while tracking the start of a range. When I encounter a number that is not one more than its predecessor, I append the current range (or single number) to the result list and update the start of the next potential range. After the loop, I handle the last range in the same way. Finally, I join all parts of the result list into a string separated by commas and return it. This approach ensures that consecutive numbers are collapsed into ranges while single numbers remain as such.

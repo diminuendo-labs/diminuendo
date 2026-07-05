@@ -1,0 +1,3 @@
+**
+
+I started by checking if the input string `s` is empty. If it is, I return an empty string as specified. Otherwise, I split the string into a list of words using `split()`. To find the length of the shortest word, I used a generator expression within the `min()` function. Finally, I iterate over the reversed list of words to ensure that in case of ties, the last such word is returned, and I return the first word that matches the shortest length.

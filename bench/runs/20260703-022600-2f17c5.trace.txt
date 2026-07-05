@@ -1,0 +1,2 @@
+**
+I chose to implement a stack-based solution, where an opening parenthesis '(' pushes a character onto the stack and a closing parenthesis ')' attempts to pop one from the stack. If a closing parenthesis appears before its partner (i.e., when the stack is empty), or if there are unmatched closing parentheses at the end of the string, the function returns False. This approach efficiently handles strings with many nested parentheses, including edge case examples like an empty string, which is considered balanced.

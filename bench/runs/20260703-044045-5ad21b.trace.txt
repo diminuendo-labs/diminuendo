@@ -1,0 +1,13 @@
+**
+
+I created a Python function `most_common_word(s)` that takes a string `s` as input and returns the lowercase whitespace-separated word with the highest count, breaking ties alphabetically. If the input string is empty, it returns an empty string.
+
+To achieve this:
+1. I first check if the input string `s` is empty. If it is, I return an empty string.
+2. I split the input string into a list of words and convert them to lowercase using `lower().split()`.
+3. I use a dictionary `word_count` to count occurrences of each word.
+4. I iterate through the list of words, updating the count in the dictionary.
+5. I sort the dictionary items based on the count (descending) and then alphabetically (ascending).
+6. Finally, I return the most common word by accessing the first item of the sorted list.
+
+This approach ensures that ties are broken alphabetically and efficiently handles edge cases like an empty string.

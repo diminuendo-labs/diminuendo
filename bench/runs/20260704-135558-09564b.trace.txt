@@ -1,0 +1,2 @@
+**: 
+The function `trimmed_mean` first checks if the input list is empty, returning `None` in that case. If the list contains only one element, it returns that element as a float since there are no elements to trim. For longer lists, it sorts the list and removes the smallest and largest elements, then calculates the mean of the remaining elements. The edge case handled is when the list has only one element, ensuring the function does not attempt to access non-existent indices or perform division by zero.

@@ -1,0 +1,2 @@
+**
+I wrote a function `median` that takes a list of numbers as input and returns the median value. I first checked for the edge case where the input list is empty, in which case I returned None. Then, I sorted the input list and determined whether its length was odd or even using the modulo operator. If it's odd, I simply returned the middle value; if it's even, I returned the average of the two middle values as a float.

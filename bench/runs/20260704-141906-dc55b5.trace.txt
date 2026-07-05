@@ -1,0 +1,8 @@
+**
+
+1. **Token Splitting:** The input string `s` is split into a list of tokens using the underscore `_` as the delimiter.
+2. **Exception Handling and Capitalization:** A list comprehension is used to iterate through each token, capitalizing it if it's not in the exception list `['URL', 'ID']`. Tokens in the exception list remain unchanged.
+3. **Concatenation and Lowercasing:** The resulting list of tokens is joined together without any separator to form a single string. The entire string is then converted to lowercase to ensure proper camel case formatting, although this step may not be necessary depending on the specific requirements or edge cases.
+4. **Edge Case Handling:** The function handles the edge case where tokens in the exception list `['URL', 'ID']` are present in the input string by ensuring they retain their exact form during the conversion to camel case.
+
+This approach ensures that the function is both concise and readable while correctly handling the specified requirements and edge cases.

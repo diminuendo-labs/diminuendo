@@ -1,0 +1,2 @@
+**
+I chose to sort the input list first based on the start time of each range. This allows for an efficient linear scan where we can easily identify overlapping or touching ranges and merge them accordingly. The function handles edge cases such as an empty input list by returning an empty list immediately.

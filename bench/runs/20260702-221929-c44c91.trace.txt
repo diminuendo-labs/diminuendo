@@ -1,0 +1,8 @@
+**
+
+1. **Sorting and Uniqueness**: First, I sorted the list of numbers to ensure they are in ascending order. Using `set(nums)` removes any duplicates.
+2. **Iterating with Ranges**: I iterated through the sorted unique numbers, tracking the start and end of consecutive ranges.
+3. **Appending Results**: When a break in consecutive sequence is detected, I appended either a single number or a range (start-end) to the result list.
+4. **Final Cleanup**: After the loop, there might be one last range to append. This handles the edge case where the input list consists of a single number or multiple consecutive numbers.
+
+This approach ensures the function works efficiently and is easy to understand while handling all specified criteria and edge cases.

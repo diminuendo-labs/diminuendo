@@ -1,0 +1,3 @@
+I wrote a Python function called `trimmed_mean` that takes a list of numbers as input and returns the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum. In case the list is empty, it returns None. I handled an edge case where there's only one element in the list by ensuring that at least two elements remain in the list after trimming.
+
+To accomplish this, I first sort the input list using Python's built-in `sort()` method. Then, I slice the sorted list to exclude the minimum and maximum values and their adjacent occurrences (since we are only dropping one occurrence of each). Finally, I compute the mean by summing up the remaining elements and dividing by their count.

@@ -1,0 +1,3 @@
+** 
+
+The function `median` takes a list of numbers as input and returns the median value. If the list is empty, it returns `None`. The list is first sorted to ensure that the numbers are in ascending order. The length of the list is determined, and based on whether this length is odd or even, the appropriate calculation for the median is performed. For an odd length, the middle element is returned directly. For an even length, the average of the two middle elements (one less and one more than the index `n // 2`) is calculated and returned as a float. This approach handles the edge case where the input list might be empty, returning `None` in such scenarios.

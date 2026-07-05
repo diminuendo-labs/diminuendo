@@ -1,0 +1,5 @@
+**
+
+To solve this task, I first split the input string `s` using commas as delimiters. This results in a list of strings that may include empty strings due to consecutive commas or leading/trailing commas. To handle these cases, I use a list comprehension that filters out any empty strings from the resulting list. Finally, I join the non-empty pieces back together with a single comma between each using `','.join(pieces)`. This approach ensures that only valid pieces are returned, and consecutive delimiters result in a single split.
+
+One notable edge case this function handles is input strings that start or end with one or more commas. These cases would normally result in empty strings at the beginning or end of the list, which our filtering step removes.

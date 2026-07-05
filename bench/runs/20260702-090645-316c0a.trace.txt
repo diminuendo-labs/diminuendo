@@ -1,0 +1,11 @@
+**
+
+- The function `range_summary` starts by checking if the input list is empty. If it is, it returns an empty string immediately as per the edge case handling.
+  
+- The input list is first sorted and duplicates are removed to ensure we're working with unique and ordered values.
+
+- We use a while loop to iterate through the sorted numbers. For each number, we check if there's a consecutive range (i.e., the next number is exactly one greater). If such a range exists, we continue moving forward until the end of the range is found.
+
+- Once a range or single number is identified, it's formatted and added to the summary list. If it was a range, it's formatted as 'start-end'; if not, it remains a single number.
+
+- Finally, the summary list items are joined with commas to form the final result string.

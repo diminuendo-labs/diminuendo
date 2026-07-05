@@ -1,0 +1,11 @@
+**
+
+To implement the `kth_ordered` function, I first check for edge cases where the input list is empty or `k` is less than 1. If any of these conditions are met, the function returns `None`.
+
+Next, I group the words by their lengths and determine the maximum length among them. This allows me to iterate from the longest word length down to 1.
+
+Within each group, I sort the words in reverse-alphabetical order because the problem specifies that words of equal length should be ordered this way.
+
+I then collect these sorted words into a single list. Finally, if `k` is within the bounds of the sorted list (i.e., less than or equal to its length), I return the `k-th` word. If `k` is out of range, I return `None`.
+
+This approach ensures that the function correctly handles edge cases and efficiently finds the desired word based on the specified ordering criteria.

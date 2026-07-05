@@ -1,0 +1,3 @@
+**
+
+I chose the approach of utilizing Python's built-in string methods, specifically `strip()` for removing leading and trailing whitespace (or in this case, underscores), and `title()` to capitalize the first letter of each word. This concise solution effectively handles the edge cases mentioned, including empty strings returning ''. By leveraging these built-in functions, I ensured that the code is both efficient and readable.

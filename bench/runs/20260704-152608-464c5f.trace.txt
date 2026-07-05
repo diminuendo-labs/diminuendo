@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `sorted` function with a custom sorting key to achieve the desired ordering. The key function uses a tuple where the first element is the length of the word (which sorts in ascending order) and the second element is the negative of the word itself (which sorts in descending alphabetical order). This way, words with equal lengths are ordered reverse-alphabetically among themselves. I also included input validation to handle edge cases such as non-list inputs or invalid indices.

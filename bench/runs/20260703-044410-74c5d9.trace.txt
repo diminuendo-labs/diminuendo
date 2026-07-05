@@ -1,0 +1,13 @@
+**
+
+I started by handling the edge case where the input string `s` is empty. If it is, I immediately return an empty string.
+
+Next, I split the input string into a list of words, converting them to lowercase in the process. This ensures that the word counting is case-insensitive.
+
+Then, I used a dictionary `word_count` to store the frequency of each word.
+
+After that, I determined the maximum count among all words using the `max()` function.
+
+I then created a list `common_words` containing only those words that have the maximum count. This step ensures that if there are multiple words with the same highest count, they are all considered.
+
+Finally, I returned the lexicographically smallest word from `common_words`, ensuring that in case of ties, the word appearing first alphabetically is chosen.

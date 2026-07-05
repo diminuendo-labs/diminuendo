@@ -1,0 +1,2 @@
+**
+I implemented the function using a list comprehension to filter out duplicates, leveraging the fact that adding an item to a set is an O(1) operation. The `seen` set keeps track of encountered items, and I chose this approach over other methods like sorting or using dictionaries for its conciseness and readability. One edge case handled by this function is when the input list contains identical elements, preserving their order as per the problem statement.

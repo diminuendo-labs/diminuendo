@@ -1,0 +1,1 @@
+I used a set to ensure that each value in the list is only counted once. Then I sorted the distinct values in reverse order and took the first two elements as the largest and second-largest numbers, handling the edge case where the largest number appears more than once by returning None if max2 equals max1.

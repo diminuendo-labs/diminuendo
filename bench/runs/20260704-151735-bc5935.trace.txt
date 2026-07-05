@@ -1,0 +1,3 @@
+**
+
+I chose to use a simple string replacement to handle the edge case of consecutive commas, then split on commas. I used list operations to drop empty pieces at the start and end of the resulting list. Finally, I rejoined the remaining pieces with commas using the `join` method. This approach keeps the code concise while still clearly expressing the desired behavior.

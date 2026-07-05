@@ -1,0 +1,2 @@
+**
+I approached this problem by first handling the edge case of an empty list, which returns None as per the requirements. Then, I used Python's built-in `sorted` function to sort the input list in ascending order. Depending on whether the length of the sorted list is odd or even, I returned either the middle value (for odd lengths) or the average of the two middle values (for even lengths). The code is concise and readable, making it easy to understand and maintain.

@@ -1,0 +1,15 @@
+**
+
+The function `most_common_word(s)` takes a string `s` as input and returns the most common word in lowercase, breaking ties alphabetically. If the input string is empty, it returns an empty string.
+
+1. **Normalization**: The input string is converted to lowercase to ensure case-insensitivity and split into individual words using whitespace as the delimiter.
+   
+2. **Counting**: A `Counter` object from Python's `collections` module is used to count the occurrences of each word in the list of words.
+
+3. **Finding Maximum Frequency**: The maximum frequency of any word is determined by finding the highest value in the `Counter` dictionary.
+
+4. **Filtering and Sorting**: A list comprehension filters out words that have the maximum frequency, and these words are then sorted lexicographically to handle ties.
+
+5. **Returning Result**: The function returns the first word from the sorted list of most common words.
+
+The solution handles the edge case where multiple words share the highest frequency by returning the one that appears first alphabetically.

@@ -1,0 +1,2 @@
+**
+I chose to handle the edge cases of an empty list first, as it would prevent further operations from occurring. I then found the minimum and maximum values in the list using built-in functions `min()` and `max()`, and removed them individually from the list. Finally, I calculated the sum of the remaining elements using the `sum()` function and divided by the length of the list to get the trimmed mean.

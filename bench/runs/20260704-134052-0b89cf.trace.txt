@@ -1,0 +1,8 @@
+**
+I started by checking if the input list `pairs` is empty. If it is, I immediately return an empty list as there are no ranges to merge.
+
+Next, I sorted the pairs based on their start values to ensure they are in ascending order. This makes it easier to identify overlapping or close ranges later.
+
+I then iterated through each range `[start, end]` and checked if it overlaps with the last range in the `merged` list (i.e., if the start of the current range is within one unit of the end of the last merged range). If they do overlap, I merged them by updating the end of the last range to be the maximum of the two end values. If they don't overlap, I simply appended the current range to the `merged` list.
+
+Finally, I returned the `merged` list containing all the non-overlapping and merged ranges.

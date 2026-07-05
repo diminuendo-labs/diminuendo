@@ -1,0 +1,7 @@
+**
+1. **Edge Case Handling:** The function first checks if the input string `s` is empty. If it is, the function immediately returns an empty string.
+2. **Splitting the String:** The string `s` is split into a list of words using the `split()` method, which by default splits based on whitespace.
+3. **Finding the Longest Word:** The `max()` function is used with the key parameter set to `len` to find the longest word in the list. If there are ties (multiple words of the same length), `max()` returns the last one encountered due to its left-to-right processing.
+4. **Return Result:** The longest word found is returned as the result.
+
+This approach ensures that the function is both concise and readable, while correctly handling edge cases such as empty strings.

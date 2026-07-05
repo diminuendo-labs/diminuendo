@@ -1,0 +1,2 @@
+** 
+I created a list comprehension to generate chunks of size `k` from the input list. If the final chunk is shorter than `k`, I used a while loop to append `None` until it reaches the desired length. I also added an edge case check for an empty list, returning an empty list if that condition is met.

@@ -1,0 +1,2 @@
+**
+I implemented a straightforward approach that first checks for the edge case where the input is an empty list. Then, I sorted the input pairs by their start values using Python's built-in `sort` method with a lambda function as the key. This allows me to easily merge overlapping ranges in a single pass through the sorted list.

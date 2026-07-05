@@ -1,0 +1,6 @@
+**
+
+1. **Sorting:** The function first sorts the input list to ensure that consecutive numbers are adjacent.
+2. **Iterating and Grouping:** It iterates through the sorted list, grouping consecutive numbers into ranges.
+3. **Edge Case Handling:** An empty list is handled by returning an empty string immediately.
+4. **String Construction:** Finally, it constructs the result string by joining the groups with commas, ensuring that single numbers are not represented as ranges.

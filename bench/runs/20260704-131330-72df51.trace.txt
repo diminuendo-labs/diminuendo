@@ -1,0 +1,3 @@
+To solve this problem, I used Python's built-in `sort()` function with a custom key function to first sort the words by their length and then within equal-length groups in reverse alphabetical order. I kept track of the total word count and checked if k was within range before returning the requested word.
+
+The edge case I named is when k is out of range, i.e., less than or greater than the total number of words. In such cases, the function returns `None`.

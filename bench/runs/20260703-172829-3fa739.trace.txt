@@ -1,0 +1,6 @@
+1. I first initialize an empty list called `runs` to store the ranges of numbers in the input list.
+2. I set two variables, `start` and `end`, to the initial number in the list (`nums[0]`) to begin tracking the first run.
+3. Then I iterate over the remaining numbers in the input list (`nums`). If the current number is greater than `end + 1`, it indicates that we have finished a run and should add the previously tracked range to the `runs` list.
+4. In this case, I also update the `start` and `end` variables for the next run. This continues until all numbers in the input list have been processed.
+5. At the end, I handle the last run by adding the final number (`end`) to the `runs` list if it's different from the starting number (`start`).
+6. Finally, I sort the list of runs and join consecutive runs with commas before returning the resulting string. This function also handles an edge case where the input list is empty by simply returning an empty string ('').

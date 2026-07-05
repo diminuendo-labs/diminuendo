@@ -1,0 +1,3 @@
+In this implementation, the input string `s` is converted to a set of lowercase whitespace-separated words. A dictionary `counts` maps each unique word to its occurrence count within the input string. The most frequent word with its count is then extracted using Python's built-in `max()` function and returned as output. In case of a tie, the alphabetically first word wins.
+
+Edge case: An empty string is handled by returning an empty string, i.e., no word has the highest count.

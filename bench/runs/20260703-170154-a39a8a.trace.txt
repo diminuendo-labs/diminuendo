@@ -1,0 +1,5 @@
+The function `nth_page` takes three parameters - `items`, `size`, and `n`. It first checks if the size is zero or negative, or n is less than 1. If any of these conditions are true, it returns an empty list.
+
+Then it generates a list of pages by slicing the items into chunks of the given size. If the length of items is less than the size, it only creates as many pages as possible.
+
+Finally, it attempts to return the n-th page from the generated list of pages. If the page number exceeds the total number of pages (i.e., there's an IndexError), it returns an empty list as the edge case handling.

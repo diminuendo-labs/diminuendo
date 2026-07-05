@@ -1,0 +1,2 @@
+**  
+I approached this problem by first handling an edge case where `words` is empty or `k` is out of range, returning `None` in such cases. Then, I used Python's built-in `sorted` function with a custom key to sort the words. The key sorts primarily by word length in ascending order (`len(word)`) and secondarily by the reverse ASCII value of the first character (`-ord(word[0])`). This ensures that words of equal length are ordered reverse-alphabetically. Finally, I returned the `k-th` word from the sorted list, adjusting for zero-indexing by using `k-1`.

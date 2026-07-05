@@ -1,0 +1,3 @@
+**
+
+I chose to use a simple stack-based approach to solve this problem. The function iterates through the input string, pushing every opening parenthesis onto the stack and popping one when it encounters a closing parenthesis. If at any point it tries to pop from an empty stack (indicating no matching opening parenthesis), it immediately returns False. Finally, if there are no parentheses left on the stack after iterating over the entire string (or if the string is empty), it means every opening parenthesis has been matched and the function returns True.

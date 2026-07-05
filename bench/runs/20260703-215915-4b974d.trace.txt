@@ -1,0 +1,5 @@
+**
+
+The function `range_summary` is designed to handle a list of integers by first ensuring the list is sorted and unique. It then iterates through the numbers, identifying ranges and single numbers. When a break in the sequence is found, it appends either a single number or a range (start-end) to the result list. Finally, it joins all parts with commas to form the final string.
+
+This approach ensures that consecutive runs are collapsed into ranges while individual numbers remain as such, adhering to the task requirements. The edge case where an empty list is passed is handled by immediately returning an empty string.

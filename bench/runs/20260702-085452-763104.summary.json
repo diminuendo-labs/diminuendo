@@ -1,0 +1,50 @@
+{
+  "run_id": "20260702-085452-763104",
+  "node_id": "task-20260702-085452-763104",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "reason": "The provided code correctly handles the given task with one edge case being deeper nesting.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**  \n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting in a list.\n\n    Args:\n    lst (list): The input list potentially containing nested lists.\n\n    Returns:\n    list: A new list with only one level of nesting flattened.\n    \"\"\"\n    result = []\n    for item in lst:\n        if isinstance(item, list):\n            result.extend(item)\n        else:\n            result.append(item)\n    return result\n```\n\n**",
+  "trace": "**  \nThe `flatten_once` function iterates through each element of the input list. If an element is a list itself, it extends the result list with its items; otherwise, it appends the item as is. This approach ensures that only one level of nesting is flattened, addressing the requirement. The code uses straightforward iteration and conditional checks to achieve this functionality in a concise manner, enhancing readability.",
+  "totals": {
+    "time_s": 16.880991599999998,
+    "tokens": 654
+  },
+  "files": [
+    "20260702-085452-763104.crumbs.jsonl",
+    "20260702-085452-763104.trace.txt"
+  ]
+}

@@ -1,0 +1,30 @@
+GENERATION PASS 20260703-053623 (PACKET-008, full gates)
+A=qwen2.5-coder:7b  B=llama3.1:8b  generator=qwen2.5-coder:7b (fixed)
+gen pool=8 tasks x R_G=3 x 2 seats
+-- seat A (qwen2.5-coder:7b), contrastive with sibling fallback, R_G=3, full gates --
+seat A (max_index): within_task lesson committed
+seat A (shortest_word): within_task lesson committed
+seat A (distinctness): no contrast, both siblings all_pass, nothing broke
+seat A (boundary): no contrast, both siblings all_pass, nothing broke
+  within_task attempt 1 rejected [aim_screen]: aim screen: rule text shares no ground with the failing check
+  within_task attempt 2 rejected [aim_screen]: aim screen: rule text shares no ground with the failing check
+  sibling attempt 1 rejected [aim_screen]: aim screen: rule text shares no ground with the failing check
+seat A (count_token): sibling lesson committed
+store A: 3 lessons committed
+-- seat B (llama3.1:8b), contrastive with sibling fallback, R_G=3, full gates --
+seat B (tie_break): no contrast, all_fail with no passing sibling
+seat B (count_distinct_pairs): within_task lesson committed
+seat B (boundary): no contrast, both siblings all_pass, nothing broke
+  within_task attempt 1 rejected [aim_screen]: aim screen: rule text shares no ground with the failing check
+  within_task attempt 2 rejected [aim_screen]: aim screen: rule text shares no ground with the failing check
+seat B (count_token): sibling lesson committed
+store B: 2 lessons committed
+== SCREEN ACCOUNTING (rejections by reason) ==
+  aim_screen: 5
+== COMMITTED LESSONS (pins) ==
+  A [max_index] class=tie_break topic=direction direction=last
+  A [shortest_word] class=tie_break topic=direction direction=last
+  A [count_token] class=normalize topic=punctuation direction=None
+  B [count_distinct_pairs] class=distinctness topic=pairs direction=None
+  B [count_token] class=normalize topic=punctuation direction=None
+GATE: PASSED. both seats ran the full pool at R_G=3, every run checkpointed, screen accounting and committed lessons with pins persisted. Lessons A=3, B=2; fewer and cleaner is the intended direction, stated in the packet.

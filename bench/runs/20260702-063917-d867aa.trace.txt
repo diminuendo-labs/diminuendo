@@ -1,0 +1,2 @@
+**
+I started by handling the edge case where the input list is empty, as it returns None. Then, I used Python's built-in `sorted()` function to sort the input list in ascending order. Next, I checked if the length of the sorted list was odd or even using the modulo operator (`n % 2 == 1`), and returned either the middle element (for an odd-length list) or the average of the two middle elements (for an even-length list). The `//` operator is used for integer division to get the index of the middle element(s).

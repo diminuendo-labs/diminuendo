@@ -1,0 +1,3 @@
+**
+
+To implement the `chunk_pad` function, I used a list comprehension to iterate through the input list `lst` in chunks of size `k`. For each chunk, if it is shorter than `k`, I padded it with `None` using another list slice that calculates how many `None` values are needed (`k - len(lst[i:i+k])`). This approach ensures that every chunk has exactly `k` elements. The function handles an empty list by returning an empty list as required, and it works correctly for any input list and chunk size `k`.

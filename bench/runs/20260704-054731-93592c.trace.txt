@@ -1,0 +1,2 @@
+**
+I chose to implement the function using a list comprehension, which allows me to concisely and efficiently flatten one level of nesting. I also included a docstring to provide context and explanation for how the function works. To address the edge case where the input lists are empty or the total weight is zero (not applicable in this specific task), I could have added additional error handling, but it was not required according to the criteria provided.

@@ -1,0 +1,1 @@
+I sorted the list of numbers (nums) first, and then calculated the median. After that, I calculated the thresholds for the minimum and maximum values to be removed. Using these thresholds, I filtered out the minimum and maximum values from the original list and finally computed the mean of the remaining list as a float. To handle an empty list, I return None in such cases.

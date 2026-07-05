@@ -1,0 +1,2 @@
+**
+I started by checking if the input list has less than 3 elements, in which case I return None. Then, I find the minimum and maximum values in the list using built-in functions. To trim one occurrence of each, I remove them from the list (keeping their indices) before calculating the mean. This approach is straightforward but handles edge cases correctly.

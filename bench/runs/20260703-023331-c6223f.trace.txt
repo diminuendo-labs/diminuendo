@@ -1,0 +1,2 @@
+**
+I chose a concise and readable approach by using list comprehension to split the input string into words, capitalize each word (excluding empty strings), and then join them together. I also added a docstring to clearly explain what the function does and how it should be used. In terms of edge cases, I considered one where an empty string is passed in: since splitting an empty string returns an empty list, the function will return an empty string as expected, handling this case correctly.

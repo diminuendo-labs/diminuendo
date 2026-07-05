@@ -1,0 +1,4 @@
+**
+The function `snake_to_camel` converts a snake_case string to camelCase by first stripping any leading or trailing underscores using `strip('_')`. It then splits the cleaned string into words based on underscores using `split('_')`, filters out any empty strings that might result from consecutive underscores, and capitalizes each word. Finally, it joins these capitalized words together to form the camelCase string.
+
+The edge case `___` is handled by returning an empty string, as demonstrated in the assertion at the end of the code snippet. This ensures that multiple leading or trailing underscores are correctly converted to an empty string without introducing any unwanted characters or extra logic.

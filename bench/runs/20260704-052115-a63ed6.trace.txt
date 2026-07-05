@@ -1,0 +1,2 @@
+**
+I chose to directly implement the logic for calculating the median in a single function, as it's relatively straightforward and doesn't require any complex operations. I also included a simple check for an empty list at the beginning of the function, which handles one edge case mentioned in the task description. By using Python's built-in `sorted` function to sort the input list, I kept the code concise while ensuring that the output is correct even if the input list is not already sorted.

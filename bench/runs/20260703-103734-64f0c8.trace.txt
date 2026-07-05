@@ -1,0 +1,2 @@
+**
+The function `longest_word(s)` splits the input string into a list of words using the `split()` method. It then finds the maximum length among these words and iterates over the list in reverse to find the last word that has this maximum length, adhering to the task's requirement of returning the last such word on ties. If the input string is empty, it returns an empty string as specified.

@@ -1,0 +1,2 @@
+**
+I approached this problem by first handling the edge case of an empty list, returning 0 as per the requirements. Then, I created a dictionary to store the frequency of each number in the list. After finding the maximum frequency, I generated a list of modes (numbers with the maximum frequency). Finally, I used a set to ensure that each mode is counted only once and returned their sum.

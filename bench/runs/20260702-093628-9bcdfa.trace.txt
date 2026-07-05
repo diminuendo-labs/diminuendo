@@ -1,0 +1,2 @@
+**
+I implemented the median function by first sorting the input list of numbers in ascending order using the built-in `sorted` function. I then checked for the edge case where the input list is empty, returning `None` immediately. To calculate the median, I determined whether the length of the list was odd or even and applied the corresponding calculation: if it's odd, I return the middle value; if it's even, I return the average of the two middle values.

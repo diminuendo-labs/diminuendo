@@ -1,0 +1,2 @@
+**
+I chose a recursive approach to handle the flattening process. The function iterates over each element in the input list. If an element is a list, it calls itself with that sublist as the new input and extends the result with its output. This way, only one level of nesting is removed. I handled the edge case where the input list contains a mix of nested lists and other elements, ensuring they are all preserved in the flattened output.

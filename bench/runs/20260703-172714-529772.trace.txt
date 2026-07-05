@@ -1,0 +1,5 @@
+The function first checks if the input list is empty and returns an empty string in that case. It then initializes a result list, a start variable set to the first number of the input, and a count variable initialized to 1.
+
+For each subsequent number in the input list, it checks if the current number plus one equals the start variable. If so, it increments the count. If not, it appends the range represented by the start and count (if the count is greater than 1) or the single number as a string to the result list and resets the start and count for the next iteration.
+
+After iterating through the entire input list, it handles the last range and any remaining single number in the same manner as before, appending them to the result list if necessary. Finally, it joins all elements in the result list with commas and returns the string. This approach ensures that consecutive runs are collapsed into 'start-end' while single numbers remain single numbers, and also handles the edge case where the input list is empty.

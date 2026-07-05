@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-161948-eff28f",
+  "node_id": "task-20260703-161948-eff28f",
+  "task": "Write a Python function count_unique(nums) returning how many values appear exactly once in the list. Values that repeat do not count at all: [1, 2, 2, 3] has two such values, 1 and 3. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly handles an empty list, as it returns 0",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_unique([1, 2, 2, 3])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_unique([5, 5])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([7])",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef count_unique(nums):\n    counter = {}\n    for num in nums:\n        if num in counter:\n            del counter[num]\n        else:\n            counter[num] = None\n    return len(counter)\n```",
+  "trace": "I created a dictionary to store the count of each number. Then, I iterated through the input list, checking if each number exists in the dictionary. If it does exist, I remove the key-value pair; otherwise, I add a new key-value pair with the value set to `None`. At last, I return the length of the dictionary, which represents the count of numbers that appear exactly once in the list. The edge case handled here is when there are no unique values in the list (empty list).",
+  "totals": {
+    "time_s": 18.9760421,
+    "tokens": 632
+  },
+  "files": [
+    "20260703-161948-eff28f.crumbs.jsonl",
+    "20260703-161948-eff28f.trace.txt"
+  ]
+}

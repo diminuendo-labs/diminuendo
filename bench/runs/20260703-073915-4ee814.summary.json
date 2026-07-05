@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-073915-4ee814",
+  "node_id": "task-20260703-073915-4ee814",
+  "task": "Write a Python function clamp(value, lo, hi) returning value clamped into the inclusive range lo to hi. When lo is greater than hi the range is degenerate: return None, never swap the bounds. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly handles the degenerate range case where lo > hi.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "clamp(5, 1, 3)",
+        "ok": true,
+        "got": "3",
+        "expect": "3"
+      },
+      {
+        "call": "clamp(2, 3, 1)",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "clamp(0, -1, 1)",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "clamp(1, 1, 1)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n```python\ndef clamp(value, lo, hi):\n    \"\"\"Clamp a value within the inclusive range [lo, hi].\n    \n    If lo > hi, return None as the range is degenerate.\n    \n    Args:\n        value (float): The value to be clamped.\n        lo (float): The lower bound of the range.\n        hi (float): The upper bound of the range.\n        \n    Returns:\n        float or None: Clamped value or None if range is degenerate.\n    \"\"\"\n    if lo > hi:\n        return None\n    return max(lo, min(value, hi))\n```\n\n**",
+  "trace": "**\nThe function `clamp` takes three arguments: `value`, `lo`, and `hi`. It first checks if the lower bound (`lo`) is greater than the upper bound (`hi`). If so, it returns `None` because a degenerate range (where `lo > hi`) does not make sense for clamping. If the range is valid, it uses Python's built-in `max` and `min` functions to ensure that the value is clamped within the inclusive range `[lo, hi]`. This approach ensures that the function is both correct and concise while handling the edge case of a degenerate range.",
+  "totals": {
+    "time_s": 19.3585611,
+    "tokens": 778
+  },
+  "files": [
+    "20260703-073915-4ee814.crumbs.jsonl",
+    "20260703-073915-4ee814.trace.txt"
+  ]
+}

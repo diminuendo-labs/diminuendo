@@ -1,0 +1,2 @@
+**
+I defined a function `trimmed_mean` that takes a list of numbers as input. I first check if the length of the list is less than 3 and return `None` in this case, as per the problem statement. Then, I find the minimum and maximum values in the list, remove them from the list, and calculate the mean of the remaining elements using the sum function divided by the count of the elements. This approach handles the edge case where the input list has only one or two elements.

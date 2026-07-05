@@ -1,0 +1,2 @@
+**
+I chose to use the "tie_break" approach, which states that when there are multiple occurrences of the maximum value, I should return the index of its last occurrence. In this case, since we're dealing with words instead of indices, I used the `reversed` function to iterate over the list of words in reverse order. This way, if there's a tie for the longest word, it will always be the one that comes last in the string.

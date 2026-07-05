@@ -1,0 +1,3 @@
+The function `most_common_word` takes a string `s`, checks for edge cases where the string is empty or contains only whitespace by using `strip()`, and then proceeds to find the most common word. It converts all words to lowercase and splits the string into individual words. The `Counter` class from Python's `collections` module is used to count occurrences of each word. The `most_common()` method returns a list of tuples with words sorted by their frequency in descending order, and then the code filters out the words that have the highest frequency, sorts them alphabetically, and returns the first one.
+
+This approach handles edge cases such as empty or whitespace-only strings by returning an empty string immediately.

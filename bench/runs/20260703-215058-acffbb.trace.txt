@@ -1,0 +1,4 @@
+**
+I started by checking if the input list is empty. If it is, I immediately return an empty string as specified in the edge case. If not, I sort the list to make it easier to identify consecutive sequences. I then iterate through the sorted list while keeping track of the start and end of a potential range. Whenever there's a break in the sequence (either due to a duplicate or a non-consecutive number), I append the current range (or single number) to the result list. Finally, I handle any remaining range after the loop and join all elements in the result list with commas before returning it.
+
+This approach ensures that the function is both correct and concise, handling edge cases such as empty input lists or lists with only one number correctly.

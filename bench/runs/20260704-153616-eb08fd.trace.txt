@@ -1,0 +1,2 @@
+**
+I solved this problem by defining a custom sorting key that first compares two words by their lengths and then alphabetically. I used Python's built-in `sorted` function to sort the input list based on this key, which allows me to leverage its stability (i.e., maintaining equal elements' relative order). The edge case where an empty list or invalid k is provided was explicitly handled by returning None immediately in that scenario.

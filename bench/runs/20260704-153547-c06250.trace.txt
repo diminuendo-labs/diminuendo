@@ -1,0 +1,3 @@
+**
+
+I defined a function `kth_ordered` that takes two parameters: `words`, a list of strings to be ordered, and `k`, the position of the desired word. To handle edge cases efficiently, I added input validation to check if `k` is within the range of the number of elements in the `words` list. If it's out of range, the function returns `None`. The ordering is performed using Python's built-in `sorted` function with a custom key that combines the length of each word and its reverse-alphabetical order. This ensures that words are first ordered by increasing length, and then those with equal lengths are ordered reverse-alphabetically among themselves.

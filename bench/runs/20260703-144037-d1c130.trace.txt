@@ -1,0 +1,2 @@
+**
+I chose to use a dictionary to store the frequency of each number, which allows us to efficiently keep track of the maximum frequency and the numbers that tie for it. The `get` method is used to initialize the count to 0 if a number is not yet in the dictionary, and then we iterate through the list again to find all numbers with the maximum frequency. I also explicitly handled the edge case where the input list is empty by returning 0 immediately at the beginning of the function.

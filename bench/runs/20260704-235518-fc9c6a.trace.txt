@@ -1,0 +1,2 @@
+**
+To solve this task, I first handle the edge case where `k` is out of range by returning `None`. Next, I group words by their length using a dictionary. For each group of words with the same length, I sort them reverse-alphabetically. Finally, I concatenate all sorted groups and return the k-th word (adjusted for zero-based indexing). This ensures that words are ordered first by increasing length and then reverse-alphabetically among words of equal length.

@@ -1,0 +1,2 @@
+** 
+I created the `token_case` function that splits the input string by underscores into a list of tokens. I then use a list comprehension to process each token, capitalizing it unless it's in the exception list. The first token is always converted to lowercase, and all tokens are joined together without any separators to form the final camel case string. This approach ensures that the function handles edge cases where tokens are already in uppercase or are part of the exception list correctly.

@@ -1,0 +1,2 @@
+In this solution, we first convert the list `nums` to a set, which removes any duplicate values. Then, we use Python's built-in `sum()` function to add up all the unique elements in the set. In case an empty list is passed, the set will be empty as well, and calling `sum()` on an empty set returns 0.
+One edge case handled here is when the input list contains duplicates, ensuring that each value is counted only once in the final sum.

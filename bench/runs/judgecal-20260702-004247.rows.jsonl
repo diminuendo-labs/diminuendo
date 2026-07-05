@@ -1,0 +1,28 @@
+{"cond": "v1|qwen", "node_id": "task-20260701-203645-8cbf70", "truth_clean": false, "verdict": "fail", "reason": "The function does not handle the edge case where multiple characters have the same frequency and are tied alphabetically correctly."}
+{"cond": "v1|qwen", "node_id": "task-20260701-210508-f0f063", "truth_clean": false, "verdict": "pass", "reason": "The function is mostly correct, handles edge cases well, and the code is somewhat readable."}
+{"cond": "v1|qwen", "node_id": "task-20260701-203611-39600e", "truth_clean": true, "verdict": "pass", "reason": "The function is mostly correct, handles edge cases well, and the code is somewhat readable."}
+{"cond": "v1|qwen", "node_id": "task-20260701-210435-4c047f", "truth_clean": true, "verdict": "fail", "reason": "The function does not handle the edge case where there are multiple modes with the same frequency correctly."}
+{"cond": "v1|qwen", "node_id": "task-20260701-210542-208adc", "truth_clean": true, "verdict": "fail", "reason": "The function does not handle the edge case where there are multiple characters with the same longest run length correctly."}
+{"cond": "v1|qwen", "node_id": "task-20260701-210616-bed7f1", "truth_clean": true, "verdict": "pass", "reason": "The function correctly squares numeric inputs and handles non-numeric inputs with a clear error message."}
+{"cond": "v1|qwen", "node_id": "task-20260701-210646-7239ce", "truth_clean": true, "verdict": "pass", "reason": "The function is correct, handles negative integers as an edge case, and the code is reasonably concise."}
+{"cond": "v1|llama", "node_id": "task-20260701-203645-8cbf70", "truth_clean": false, "verdict": "pass", "reason": "The solution meets all requirements, but could be slightly more concise."}
+{"cond": "v1|llama", "node_id": "task-20260701-210508-f0f063", "truth_clean": false, "verdict": "pass", "reason": "The solution meets all the requirements."}
+{"cond": "v1|llama", "node_id": "task-20260701-203611-39600e", "truth_clean": true, "verdict": "pass", "reason": "The function correctly identifies the most frequent lowercase letter in a string, handling edge cases such as an empty input string."}
+{"cond": "v1|llama", "node_id": "task-20260701-210435-4c047f", "truth_clean": true, "verdict": "pass", "reason": "The solution meets all the requirements."}
+{"cond": "v1|llama", "node_id": "task-20260701-210542-208adc", "truth_clean": true, "verdict": "pass", "reason": "The code meets all the specified criteria."}
+{"cond": "v1|llama", "node_id": "task-20260701-210616-bed7f1", "truth_clean": true, "verdict": "pass", "reason": "The function correctly squares a number, handles non-numeric inputs, and has clear documentation."}
+{"cond": "v1|llama", "node_id": "task-20260701-210646-7239ce", "truth_clean": true, "verdict": "pass", "reason": "The provided Python function correctly implements the is_even(n) logic, handles negative integers as an edge case, and adheres to coding standards for conciseness and readability."}
+{"cond": "v2|qwen", "node_id": "task-20260701-203645-8cbf70", "truth_clean": false, "verdict": "pass", "reason": "The function correctly identifies the most frequent character, breaks ties alphabetically, and handles an empty string edge case."}
+{"cond": "v2|qwen", "node_id": "task-20260701-210508-f0f063", "truth_clean": false, "verdict": "pass", "reason": "The function correctly identifies the longest word, breaks ties alphabetically, and handles an empty string edge case."}
+{"cond": "v2|qwen", "node_id": "task-20260701-203611-39600e", "truth_clean": true, "verdict": "pass", "reason": "The function correctly identifies the most frequent lowercase letter, breaks ties alphabetically, and handles empty strings as specified."}
+{"cond": "v2|qwen", "node_id": "task-20260701-210435-4c047f", "truth_clean": true, "verdict": "fail", "reason": "The edge case of an empty list is not named in the function's docstring."}
+{"cond": "v2|qwen", "node_id": "task-20260701-210542-208adc", "truth_clean": true, "verdict": "pass", "reason": "The function is correct for the given criteria. It handles edge cases and ties alphabetically as required."}
+{"cond": "v2|qwen", "node_id": "task-20260701-210616-bed7f1", "truth_clean": true, "verdict": "pass", "reason": "The function correctly handles the edge case of non-numeric input by raising a ValueError. The code is generally concise and readable, though it could be slightly more concise."}
+{"cond": "v2|qwen", "node_id": "task-20260701-210646-7239ce", "truth_clean": true, "verdict": "pass", "reason": "The function correctly identifies even numbers, handles negative integers as input, and is concise and readable."}
+{"cond": "v2|llama", "node_id": "task-20260701-203645-8cbf70", "truth_clean": false, "verdict": "pass", "reason": ""}
+{"cond": "v2|llama", "node_id": "task-20260701-210508-f0f063", "truth_clean": false, "verdict": "pass", "reason": ""}
+{"cond": "v2|llama", "node_id": "task-20260701-203611-39600e", "truth_clean": true, "verdict": "pass", "reason": ""}
+{"cond": "v2|llama", "node_id": "task-20260701-210435-4c047f", "truth_clean": true, "verdict": "pass", "reason": ""}
+{"cond": "v2|llama", "node_id": "task-20260701-210542-208adc", "truth_clean": true, "verdict": "pass", "reason": ""}
+{"cond": "v2|llama", "node_id": "task-20260701-210616-bed7f1", "truth_clean": true, "verdict": "pass", "reason": ""}
+{"cond": "v2|llama", "node_id": "task-20260701-210646-7239ce", "truth_clean": true, "verdict": "pass", "reason": ""}

@@ -1,0 +1,2 @@
+**
+I first checked if the input list `nums` is empty and returned `None` immediately if it is, as an edge case. If not empty, I sorted the list to arrange the numbers in ascending order. Then, depending on whether the length of the list is odd or even, I calculated the median accordingly: averaging the two middle numbers for an even length, or returning the middle number for an odd length. This approach ensures the function works correctly and efficiently for various input sizes.

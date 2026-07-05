@@ -1,0 +1,2 @@
+**
+I chose to implement the function using Python's built-in sorting functionality, which ensures that the input list is in ascending order for both odd and even length cases. This approach also allows for easy handling of edge cases like empty lists, which return `None` as per the task requirements. To make the code concise while still being readable, I used clear variable names and included a docstring to explain the function's behavior.

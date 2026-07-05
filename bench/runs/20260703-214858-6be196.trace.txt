@@ -1,0 +1,2 @@
+** 
+I started by sorting the list of numbers and removing duplicates using `sorted(set(nums))`. Then, I iterated through the sorted list, identifying consecutive sequences. For each sequence, if it was more than one number long, I added a range in the format 'start-end' to the result list; otherwise, I added the single number. Finally, I joined all parts of the result list into a string separated by commas and returned it. The edge case where the input list is empty is handled by immediately returning an empty string.

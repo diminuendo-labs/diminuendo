@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to count the occurrences of each word in the input string. To ensure that ties are broken alphabetically, I used a tuple as the sorting key, where the first element is the word's count and the second element is the word itself (as a string). This approach allows Python's default comparison behavior to break ties in a case-insensitive manner.

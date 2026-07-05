@@ -1,0 +1,2 @@
+**
+I chose to use the `Counter` class from the `collections` module to count the occurrences of each word. This allowed me to easily find the maximum count and then retrieve all words with that count. To handle ties, I used a list comprehension to get all words with the max count, and then returned the lexicographically smallest one using the `min` function. I also explicitly checked for an empty input string at the beginning of the function to return an empty string in this case.

@@ -1,0 +1,1 @@
+First, I combined both lists and made one longer list if necessary. Then, I created a generator to slice the combined list every other element up to half of its length (or until the end if the list is even-length). This approach ensures that the result alternates elements from the two input lists and handles the edge case where one list might be longer than the other.

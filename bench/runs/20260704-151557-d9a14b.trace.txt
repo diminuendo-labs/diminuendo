@@ -1,0 +1,2 @@
+**
+I approached this task by first considering how to handle the edge case of an input string consisting entirely of commas. I chose to use `replace` to remove any double commas, and then split on single commas as usual. This way, consecutive commas will be treated as one split, simplifying the subsequent logic. Finally, I used a list comprehension and `join` to reassemble the pieces into a single string with commas between each piece.

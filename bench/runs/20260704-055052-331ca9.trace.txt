@@ -1,0 +1,3 @@
+**
+
+To solve this task, I chose a simple iterative approach to ensure conciseness and readability. The function `flatten_once` iterates over each element in the input list `lst`. If an element is a list itself (checked using `isinstance(element, list)`), its items are added to the result list using `extend()`. Otherwise, the element is appended directly to the result list. I also handled the edge case of an empty input by explicitly checking for it and returning an empty list as expected. This approach allows for a clear and straightforward implementation while meeting the criteria set forth in the task.

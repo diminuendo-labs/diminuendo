@@ -1,0 +1,2 @@
+**
+I chose to use a dictionary `num_count` to count the occurrences of each number in the list. This allows us to efficiently look up the counts for each number when checking for pairs. I then used a set `pairs` to store the distinct unordered value pairs, adding each pair as a tuple in sorted order to ensure that equivalent pairs (e.g., `(1, 2)` and `(2, 1)`) are not counted multiple times. The edge case where an empty list is passed is handled by immediately returning 0 when checking `if not nums`.

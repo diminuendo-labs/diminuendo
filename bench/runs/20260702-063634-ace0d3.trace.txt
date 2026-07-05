@@ -1,0 +1,3 @@
+**
+
+I approached this problem by first handling the edge case where the input list is empty. I then sorted the list to ensure that the code can efficiently find consecutive ranges. Next, I iterated over the sorted list, keeping track of the current range (start and end values). When a new number was encountered that wasn't part of the current sequence, it would append the previous range to the result list if it wasn't already a single number. After iterating over all numbers, any remaining range in memory is appended to the result. Finally, I joined the ranges with commas to produce the desired output string.

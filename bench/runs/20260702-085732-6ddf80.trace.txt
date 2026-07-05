@@ -1,0 +1,4 @@
+**
+I started by sorting the list and removing duplicates using `set(nums)`. This ensures that all numbers are in ascending order without repetition. Then, I used a while loop to iterate through the sorted list. For each number, I checked if it forms a consecutive run with subsequent numbers. If it does, I continued to the next number in the run. If not, I added either a single number or a range ('start-end') to the result list. Finally, I joined the elements of the result list into a string separated by commas and returned it.
+
+This approach ensures that consecutive runs are collapsed into ranges while handling edge cases such as an empty input list gracefully.

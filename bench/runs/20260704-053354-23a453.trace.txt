@@ -1,0 +1,2 @@
+**
+I approached this task by recognizing that a string is balanced when the number of opening parentheses equals the number of closing parentheses. I chose to use Python's built-in `count()` method, which returns the number of occurrences of its argument in the string. This solution has an edge case: it correctly handles empty strings as balanced.

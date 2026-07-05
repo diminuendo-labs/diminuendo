@@ -1,0 +1,9 @@
+**
+
+The function `trimmed_mean` calculates the mean of a list after removing one occurrence of the minimum and one occurrence of the maximum value. If the input list is empty, it returns `None`. The approach involves:
+
+1. Sorting the list to easily identify and remove the minimum and maximum values.
+2. Summing up the remaining elements (excluding the first and last elements).
+3. Calculating the mean by dividing the sum by the count of remaining elements.
+
+This method ensures that exactly one occurrence of each extreme value is removed, and it handles empty lists as specified.

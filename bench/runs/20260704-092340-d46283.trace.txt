@@ -1,0 +1,5 @@
+In the given Python function, `snake_to_camel`, we first split the input string using underscores as a delimiter to get a list of words. Then, we iterate through each word in the list, creating a new variable `camelCase`. If the word is not empty, we add the uppercase first letter (obtained using the square bracket notation) followed by the rest of the word to `camelCase`.
+
+To handle an edge case where there are leading and/or trailing underscores in the input string, we ensure that no empty strings are added to our words list during the splitting process. Then, if the first or last word is empty (i.e., all spaces or no characters), we skip it during the iteration through the words list.
+
+Lastly, we use the `title()` method on the final camelCase string to ensure that the first letter of the output is lowercase unless it's the first character in the string. This way, the function converts strings like '_foo_bar_baz' to 'FooBarBaz', which is the correct format for camelCase identifiers.

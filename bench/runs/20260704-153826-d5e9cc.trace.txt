@@ -1,0 +1,3 @@
+**
+
+I chose to use the built-in `sorted` function with a custom sorting key that combines length and reverse alphabetical order. This approach is concise and readable, and it handles the edge case where the input list is empty by returning `None` immediately. I also added docstrings to provide clear information about the function's parameters, return value, and behavior.

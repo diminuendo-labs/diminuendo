@@ -1,0 +1,1 @@
+I chose to split the input string into words and then iterate over them in reverse order. This allows me to easily handle ties by returning the last word with the maximum length, as required. The function first checks if the list of words is empty and returns an empty string if so, handling the edge case where the input is an empty string.

@@ -1,0 +1,2 @@
+**
+I chose to implement the function by first checking for the base cases where the list is empty or has fewer than three elements. Then, I found the minimum and maximum values in the list using the built-in `min` and `max` functions. Next, I handled the edge case where all values are equal by removing one occurrence of the minimum value. Finally, I removed both occurrences of the minimum and maximum values from the list and calculated the mean of the remaining values by summing them up and dividing by their count.

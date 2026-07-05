@@ -1,0 +1,2 @@
+**  
+I created a function `interleave` that takes two lists `a` and `b` as arguments. The function uses list comprehension and the `zip` function to pair elements from both lists, interleaving them into a single list. If one list is longer than the other, I used slicing and the `extend` method to append any remaining elements from the longer list to the result after completing the interleaving process. This approach ensures that all elements are considered, even if they don't have a pair in the other list.

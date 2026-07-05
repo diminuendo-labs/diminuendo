@@ -1,0 +1,2 @@
+**
+I chose a simple approach to solve this problem by directly comparing the counts of opening and closing parentheses in the input string. This works because an empty string is considered balanced (meets the criteria), and every opening parenthesis must be matched with a closing one, so if there are as many closing parentheses as opening ones, they are balanced. I did not see the need for any more complex logic given this requirement.

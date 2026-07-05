@@ -1,0 +1,2 @@
+**
+I chose to approach this task by writing a concise function that directly compares the counts of opening and closing parentheses in the string. I did not normalize delimiters before processing as it would add unnecessary complexity for this specific problem. The function correctly handles the edge case where an empty string is considered balanced, which matches the problem statement's requirements.

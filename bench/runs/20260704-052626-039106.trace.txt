@@ -1,0 +1,2 @@
+**
+I chose to use a simple iterative approach with a for loop and conditional checks. The function iterates over each element in the input list, checking if it's a list using `isinstance`. If it is, the elements of that inner list are added to the result; otherwise, the original element is appended. This way, only one level of nesting is removed, deeper levels remaining intact. I also included an edge case for empty lists, where no new sublist should be created.

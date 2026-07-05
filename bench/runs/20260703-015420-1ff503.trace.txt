@@ -1,0 +1,2 @@
+**
+I chose to implement this task by first splitting the input string into individual words using `s.split()`. If the resulting list of words is empty (i.e., the input was a single whitespace), I return an empty string. Otherwise, I find the maximum length of all words using a generator expression and then use another generator expression with `next()` to find the last word that has this maximum length, returning it as soon as one is found. This approach ensures that if multiple words are of equal maximum length, it returns the last such word.

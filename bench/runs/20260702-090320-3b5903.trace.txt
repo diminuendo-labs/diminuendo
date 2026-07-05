@@ -1,0 +1,2 @@
+**
+I started by checking if the input list `nums` is empty, returning `None` as specified for this edge case. Then, I sorted the list and calculated the middle index. If the length of the list is even, I returned the average of the two middle numbers. If the length is odd, I returned the middle number directly. This approach ensures the function works correctly for both even and odd lengths, as well as handling the empty list edge case gracefully.

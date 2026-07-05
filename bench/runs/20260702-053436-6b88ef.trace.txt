@@ -1,0 +1,2 @@
+**
+I implemented the function by using the `replace` method to remove all whitespace characters from both input strings, then applied the `lower` method to convert them to lowercase. This approach is concise and readable, as it directly addresses the task requirements. I also considered an edge case where inputs might be empty strings; in this scenario, the function would still return True, which aligns with the expected behavior for equality checks on empty strings.

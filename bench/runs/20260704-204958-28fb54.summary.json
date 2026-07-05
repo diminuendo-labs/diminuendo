@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-204958-28fb54",
+  "node_id": "task-20260704-204958-28fb54",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly implements the trimmed mean calculation, handles an empty list as expected, and identifies a relevant edge case.",
+  "per_criterion": {
+    "the function is correct": 4,
+    "code is concise and readable": 3,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": false,
+        "got": "raised TypeError(\"unsupported operand type(s) for /: 'int' and 'NoneType'\")",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n\n    nums.sort()\n    if len(nums) < 3:\n        return sum(nums[1:-1]) / (len(nums[1:-1]) if len(nums[1:-1]) else 2)\n\n    min_occurrences = nums.count(min(nums))\n    max_occurrences = nums.count(max(nums))\n\n    if min_occurrences >= 2 or max_occurrences >= 2:\n        return sum(nums[1: -1]) / (len(nums[1:-1]) if len(nums[1:-1]) else 2)\n\n    # edge case: when min and max each appear only once, we drop one of them arbitrarily\n    nums.remove(min(nums))\n    nums.remove(max(nums))\n    return sum(nums) / (len(nums) if len(nums) > 1 else None)\n```",
+  "trace": "- I created a function `trimmed_mean` that takes a list of numbers as input and returns the mean after removing one minimum and one maximum value.\n- If the list is empty, it returns None to indicate an invalid input.\n- To handle edge cases where both min and max occur more than once or less than twice, I check their count in the list and adjust accordingly.\n- For the remaining situations where min and/or max each appear only once, I remove one arbitrarily (either the first or last appearance) to calculate the mean of the remaining elements.",
+  "totals": {
+    "time_s": 0.5460086000000004,
+    "tokens": -111
+  },
+  "files": [
+    "20260704-204958-28fb54.crumbs.jsonl",
+    "20260704-204958-28fb54.trace.txt"
+  ]
+}

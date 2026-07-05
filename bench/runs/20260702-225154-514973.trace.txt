@@ -1,0 +1,2 @@
+**
+I approached this problem by first handling the edge case where the input list is empty. I then converted the list to a set to remove duplicates, and sorted it in ascending order. I iterated over the sorted list, keeping track of the start and end of each range, and appending either a single number or a range to the result list as appropriate. Finally, I joined the elements of the result list with commas to produce the desired output string.

@@ -1,0 +1,6 @@
+**
+1. **Input Validation:** The function first checks if the chunk size `k` is greater than zero to ensure that it can handle non-positive values gracefully by raising a `ValueError`.
+2. **Chunking Logic:** It uses list comprehension to iterate through the original list in steps of `k`, creating chunks of size `k`.
+3. **Padding Logic:** After generating the complete chunks, it calculates how many padding chunks are needed to reach the total chunk size `k` and appends them as empty lists.
+
+This approach ensures that the function is both concise and readable, and it handles the edge case where `k` is less than or equal to zero.

@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-062641-cc3ef2",
+  "node_id": "task-20260702-062641-cc3ef2",
+  "task": "Write a Python function median(nums) returning the middle value of the sorted list when the length is odd, or the average of the two middle values as a float when the length is even. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function is correct, the code is mostly concise and readable, and it handles one edge case named.",
+  "per_criterion": {
+    "correct": 5,
+    "concise_and_readable": 4,
+    "at_least_one_edge_case_named": 3
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "median([3, 1, 2])",
+        "ok": false,
+        "got": "1",
+        "expect": "2"
+      },
+      {
+        "call": "median([1, 2, 3, 4])",
+        "ok": true,
+        "got": "2.5",
+        "expect": "2.5"
+      },
+      {
+        "call": "median([5, 5])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "median([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef median(nums):\n    \"\"\"\n    Calculate the median of a list of numbers.\n\n    Args:\n        nums (list): A sorted list of numbers.\n\n    Returns:\n        float or None: The middle value if the length is odd, \n            otherwise the average of the two middle values. \n            If the input list is empty, returns None.\n    \"\"\"\n    if not nums:\n        return None  # Edge case: empty list\n\n    n = len(nums)\n    mid = n // 2\n    if n % 2 == 1:\n        return nums[mid]\n    else:\n        return (nums[mid - 1] + nums[mid]) / 2.0\n```\n\n**",
+  "trace": "**\nI implemented the median function by first checking for the edge case of an empty list, returning None in this case. Then, I calculated the middle index `mid` of the input list using integer division (`//`). Depending on whether the length is odd or even, I returned either the middle value directly or the average of the two middle values as a float. I chose to use integer division for simplicity and because it's sufficient for this specific task.",
+  "totals": {
+    "time_s": -0.503373400000001,
+    "tokens": 26
+  },
+  "files": [
+    "20260702-062641-cc3ef2.crumbs.jsonl",
+    "20260702-062641-cc3ef2.trace.txt"
+  ]
+}

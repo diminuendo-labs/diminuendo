@@ -1,0 +1,1 @@
+I used Python's string replace method to eliminate consecutive commas before splitting the string. Then, I filtered out any empty pieces at the start and end by only joining non-empty pieces. To handle the edge case where there may be run of leading or trailing empty strings, I removed them from the list before joining the remaining pieces with a single comma separator.

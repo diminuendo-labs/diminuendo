@@ -1,0 +1,2 @@
+**
+I solved this problem by first handling the edge case of an empty list. Then, I used a Counter from the collections module to get a dictionary with the frequency of each number in the list. Next, I found the maximum count and filtered the numbers that have this maximum count. Finally, I used a set to remove duplicates among the modes (in case there are multiple numbers with the same maximum frequency) and returned their sum.

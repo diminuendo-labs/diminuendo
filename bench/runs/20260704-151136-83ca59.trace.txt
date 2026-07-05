@@ -1,0 +1,3 @@
+**
+
+I approached this problem by first checking for edge cases where the input list has less than 3 elements. If such a case is encountered, I immediately return None. Then, I used Python's built-in min and max functions to find the minimum and maximum values in the list, and removed one occurrence of each from the list. Finally, I calculated the mean of the remaining numbers by summing them up and dividing by the number of elements. This solution is concise and readable, and it handles an edge case where all values are equal (in which case one of them will still be dropped as both minimum and maximum).

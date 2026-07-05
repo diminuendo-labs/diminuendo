@@ -1,0 +1,2 @@
+**  
+I started by ensuring the list is sorted and all elements are unique. I then iterate through the list, tracking the start and end of consecutive sequences. When a break in the sequence is detected, I add the current range (or single number) to the result list. Finally, I join all parts with commas to form the final output string. This approach handles edge cases such as an empty list and maintains readability through clear variable names and straightforward logic.

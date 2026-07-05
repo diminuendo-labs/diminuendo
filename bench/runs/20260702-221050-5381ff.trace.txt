@@ -1,0 +1,2 @@
+**
+I implemented the function using a simple conditional statement to check for edge cases (start at or past stop and zero or negative step). If either condition is met, an empty list is returned immediately. Otherwise, I used Python's built-in `range` function with the provided start, stop, and step values to generate the desired list of integers. This approach ensures that the function is concise and readable while also handling the specified edge cases correctly.

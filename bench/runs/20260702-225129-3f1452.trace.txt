@@ -1,0 +1,2 @@
+**
+I started by checking for the edge case where the input list is empty, and returning None if so. I then sorted the input list to ensure it's in order before proceeding. To calculate the median, I determined whether the length of the list was odd or even, and used conditional logic to return either the middle value (for an odd length) or the average of the two middle values (for an even length).

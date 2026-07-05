@@ -1,0 +1,1 @@
+I approached the task by first stripping any leading or trailing underscores from the input string. Then, I split the string into individual words using underscores as delimiters. Each word was capitalized and concatenated together to form the camelCase string. The edge case of an empty string is handled gracefully by returning an empty string as well.

@@ -1,0 +1,3 @@
+**
+
+I approached this task by first checking for the edge case where the input list is empty. If it is, I immediately return 0 as per the problem statement. Then, I created a frequency dictionary `freq` to keep track of each number's count in the list. After that, I found the maximum frequency and used a list comprehension to find all numbers with this frequency. Finally, I returned the length of this list to get the answer.

@@ -1,0 +1,2 @@
+** 
+I chose to use Python's built-in `sorted` function with a custom key. The key sorts primarily by the length of the words and secondarily by the negative ASCII value of the first character (to reverse-alphabetical order). This ensures that words of equal length are ordered correctly among themselves. I also added an edge case check at the beginning to handle cases where `k` is out of range or when `words` is empty, returning `None` in those scenarios.

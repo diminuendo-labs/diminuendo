@@ -1,0 +1,2 @@
+**
+I implemented the `merge_within` function by first checking for an edge case where the input list is empty. If so, I return an empty list immediately. Next, I sorted the input pairs based on their start value to ensure that ranges with smaller starts come first. This allowed me to merge overlapping and adjacent ranges in a single pass through the sorted list.

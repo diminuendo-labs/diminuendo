@@ -1,0 +1,275 @@
+{
+  "coverage_id": "20260703-084650",
+  "demand_source": "demand-20260703-071812.report.json",
+  "qwen_headroom_tasks": [
+    "balanced",
+    "flatten_once",
+    "longest_word",
+    "median",
+    "merge_ranges",
+    "most_common_word",
+    "range_summary",
+    "snake_to_camel"
+  ],
+  "before": {
+    "stores": [
+      "genpass-20260703-053623-lessons_A.jsonl",
+      "genpass-20260703-053623-lessons_B.jsonl"
+    ],
+    "table": [
+      {
+        "lesson": "A/max_index/within_task",
+        "seat": "A",
+        "store": "genpass-20260703-053623-lessons_A.jsonl",
+        "pins": {
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "matched_tasks": [
+          "longest_word"
+        ],
+        "structurally_empty": false
+      },
+      {
+        "lesson": "A/shortest_word/within_task",
+        "seat": "A",
+        "store": "genpass-20260703-053623-lessons_A.jsonl",
+        "pins": {
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "matched_tasks": [
+          "longest_word"
+        ],
+        "structurally_empty": false
+      },
+      {
+        "lesson": "A/count_token/sibling",
+        "seat": "A",
+        "store": "genpass-20260703-053623-lessons_A.jsonl",
+        "pins": {
+          "rule_class": "normalize",
+          "rule_topic": "punctuation",
+          "stated_direction": null
+        },
+        "matched_tasks": [],
+        "structurally_empty": true
+      },
+      {
+        "lesson": "B/count_distinct_pairs/within_task",
+        "seat": "B",
+        "store": "genpass-20260703-053623-lessons_B.jsonl",
+        "pins": {
+          "rule_class": "distinctness",
+          "rule_topic": "pairs",
+          "stated_direction": null
+        },
+        "matched_tasks": [],
+        "structurally_empty": true
+      },
+      {
+        "lesson": "B/count_token/sibling",
+        "seat": "B",
+        "store": "genpass-20260703-053623-lessons_B.jsonl",
+        "pins": {
+          "rule_class": "normalize",
+          "rule_topic": "punctuation",
+          "stated_direction": null
+        },
+        "matched_tasks": [],
+        "structurally_empty": true
+      }
+    ],
+    "summary": {
+      "lessons": 5,
+      "empties": [
+        "A/count_token/sibling",
+        "B/count_distinct_pairs/within_task",
+        "B/count_token/sibling"
+      ],
+      "empty_rate": "3/5",
+      "cross_seat_cells": [
+        {
+          "performer": "llama",
+          "task": "longest_word",
+          "lessons": [
+            "A/max_index/within_task",
+            "A/shortest_word/within_task"
+          ]
+        }
+      ],
+      "reverse_direction_cells": []
+    }
+  },
+  "after": {
+    "stores": [
+      "genpass-20260703-053623-lessons_A.jsonl",
+      "genpass-20260703-053623-lessons_B.jsonl",
+      "genpass-20260703-081801-lessons_A.jsonl",
+      "genpass-20260703-081801-lessons_B.jsonl"
+    ],
+    "table": [
+      {
+        "lesson": "A/max_index/within_task",
+        "seat": "A",
+        "store": "genpass-20260703-053623-lessons_A.jsonl",
+        "pins": {
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "matched_tasks": [
+          "longest_word"
+        ],
+        "structurally_empty": false
+      },
+      {
+        "lesson": "A/shortest_word/within_task",
+        "seat": "A",
+        "store": "genpass-20260703-053623-lessons_A.jsonl",
+        "pins": {
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "matched_tasks": [
+          "longest_word"
+        ],
+        "structurally_empty": false
+      },
+      {
+        "lesson": "A/count_token/sibling",
+        "seat": "A",
+        "store": "genpass-20260703-053623-lessons_A.jsonl",
+        "pins": {
+          "rule_class": "normalize",
+          "rule_topic": "punctuation",
+          "stated_direction": null
+        },
+        "matched_tasks": [],
+        "structurally_empty": true
+      },
+      {
+        "lesson": "B/count_distinct_pairs/within_task",
+        "seat": "B",
+        "store": "genpass-20260703-053623-lessons_B.jsonl",
+        "pins": {
+          "rule_class": "distinctness",
+          "rule_topic": "pairs",
+          "stated_direction": null
+        },
+        "matched_tasks": [],
+        "structurally_empty": true
+      },
+      {
+        "lesson": "B/count_token/sibling",
+        "seat": "B",
+        "store": "genpass-20260703-053623-lessons_B.jsonl",
+        "pins": {
+          "rule_class": "normalize",
+          "rule_topic": "punctuation",
+          "stated_direction": null
+        },
+        "matched_tasks": [],
+        "structurally_empty": true
+      },
+      {
+        "lesson": "A/max_index/within_task",
+        "seat": "A",
+        "store": "genpass-20260703-081801-lessons_A.jsonl",
+        "pins": {
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "matched_tasks": [
+          "longest_word"
+        ],
+        "structurally_empty": false
+      },
+      {
+        "lesson": "A/shortest_word/within_task",
+        "seat": "A",
+        "store": "genpass-20260703-081801-lessons_A.jsonl",
+        "pins": {
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "matched_tasks": [
+          "longest_word"
+        ],
+        "structurally_empty": false
+      },
+      {
+        "lesson": "B/longest_run_char/within_task",
+        "seat": "B",
+        "store": "genpass-20260703-081801-lessons_B.jsonl",
+        "pins": {
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "matched_tasks": [
+          "longest_word"
+        ],
+        "structurally_empty": false
+      },
+      {
+        "lesson": "B/max_index/sibling",
+        "seat": "B",
+        "store": "genpass-20260703-081801-lessons_B.jsonl",
+        "pins": {
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "matched_tasks": [
+          "longest_word"
+        ],
+        "structurally_empty": false
+      }
+    ],
+    "summary": {
+      "lessons": 9,
+      "empties": [
+        "A/count_token/sibling",
+        "B/count_distinct_pairs/within_task",
+        "B/count_token/sibling"
+      ],
+      "empty_rate": "3/9",
+      "cross_seat_cells": [
+        {
+          "performer": "llama",
+          "task": "longest_word",
+          "lessons": [
+            "A/max_index/within_task",
+            "A/shortest_word/within_task",
+            "A/max_index/within_task",
+            "A/shortest_word/within_task"
+          ]
+        },
+        {
+          "performer": "qwen",
+          "task": "longest_word",
+          "lessons": [
+            "B/longest_run_char/within_task",
+            "B/max_index/sibling"
+          ]
+        }
+      ],
+      "reverse_direction_cells": [
+        {
+          "lesson": "B/longest_run_char/within_task",
+          "task": "longest_word"
+        },
+        {
+          "lesson": "B/max_index/sibling",
+          "task": "longest_word"
+        }
+      ]
+    }
+  }
+}

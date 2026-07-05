@@ -1,0 +1,2 @@
+**
+The function `snake_to_camel` takes a string in snake_case format and converts it to camelCase. It splits the input string by underscores, capitalizes each resulting word, and joins them together without any separators. The use of `''.join(...)` ensures that there are no leading or trailing underscores in the final output, and it handles repeated underscores by skipping empty strings that result from splitting. An empty string is correctly returned as an empty string due to the `if word` condition, which filters out any empty strings created by consecutive underscores.

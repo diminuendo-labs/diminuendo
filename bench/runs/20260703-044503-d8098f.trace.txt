@@ -1,0 +1,3 @@
+**
+
+To solve this problem, I first checked if the input string `s` is empty. If it is, I returned an empty string as specified. Next, I converted the entire string to lowercase and split it into individual words. I then created a dictionary to count the occurrences of each word. After counting, I found the maximum count. Finally, I filtered out the words that have this maximum count and sorted them alphabetically. The first word in this sorted list is returned as the result. This approach ensures that ties are broken alphabetically and handles the edge case where the input string is empty.

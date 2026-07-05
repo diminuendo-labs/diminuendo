@@ -1,0 +1,2 @@
+**
+I chose to use the `split` method to split the input string into words, and then used a generator expression with `capitalize` to convert each non-empty word to camelCase. I also included a check for empty strings at the end of the function, which returns an empty string as specified by the task. This approach is concise and readable, and handles the edge case of an empty input string.

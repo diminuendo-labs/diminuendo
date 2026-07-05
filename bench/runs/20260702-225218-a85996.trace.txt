@@ -1,0 +1,2 @@
+**
+I chose to use a list comprehension to create the flattened list. This approach is concise and readable, allowing me to clearly express the logic of the function without unnecessary code. To handle edge cases, I ensured that elements other than lists contribute their items as is, which covers the case where a nested list contains only one element.

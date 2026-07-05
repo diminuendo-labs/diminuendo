@@ -1,0 +1,3 @@
+** 
+
+I first checked if the input list `nums` is empty and returned 0 immediately if it is. Then, I used a dictionary to count occurrences of each number. Finally, I calculated how many numbers have exactly one occurrence by summing up values in the dictionary that equal 1.

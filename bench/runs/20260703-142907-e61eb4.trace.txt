@@ -1,0 +1,3 @@
+**
+
+I used a two-pass approach to solve this problem. First, I created a set `num_set` to store unique numbers in the list as we iterate through it. This allows us to check if a number's complement is already present in the set in constant time. In each iteration, I calculate the complement of the current number with respect to the target sum and add its unordered pair key to the `pairs` set. Finally, I return the size of the `pairs` set, which represents the count of distinct unordered pairs that sum to the target. This approach is concise and efficient, and it handles the edge case where the input list is empty.

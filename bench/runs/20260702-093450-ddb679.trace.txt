@@ -1,0 +1,3 @@
+**
+
+I approached this task by implementing a stack-based solution to keep track of the opening parentheses. As I iterated through the string, whenever an opening parenthesis was encountered, it was pushed onto the stack. When a closing parenthesis was encountered, its corresponding opening partner would be popped from the stack. If at any point the stack became empty when encountering a closing parenthesis, it immediately returned False as unbalanced. Finally, after iterating through the entire string, I checked if the stack was empty; if so, it meant that every opening parenthesis had been matched with a corresponding closing one, and thus the function returned True.

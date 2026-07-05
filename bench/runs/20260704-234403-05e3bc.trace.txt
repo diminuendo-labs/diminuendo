@@ -1,0 +1,2 @@
+**  
+I decided to use Python's built-in `sorted()` function with a custom key. The key sorts primarily by the negative length of the words (to sort them in increasing order of length) and secondarily by the words themselves (to sort words of equal length reverse-alphabetically). This ensures that the words are ordered according to the specified criteria. I then checked if `k` is within the valid range, returning the appropriate word or `None`.

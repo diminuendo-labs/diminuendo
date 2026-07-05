@@ -1,0 +1,2 @@
+**
+I chose to use a set to eliminate duplicates, as it is a built-in Python data structure that does exactly this. This approach is concise and readable, making it easy for others to understand what the function does. The edge case of an empty list returning 0 is handled implicitly by the fact that an empty set has no elements, so summing over it returns 0.

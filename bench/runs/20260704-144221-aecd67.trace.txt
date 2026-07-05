@@ -1,0 +1,2 @@
+**
+I started by sorting the input list of pairs based on their start values, as this makes it easy to merge adjacent ranges. I then iterated through the sorted list, keeping track of the last merged range. If a new range overlaps with or shares an endpoint with the last merged range, I updated the end value of the last merged range. Otherwise, I added the new range to the list of merged ranges. This approach ensures that all adjacent ranges are merged into contiguous intervals, while preserving the order of non-overlapping ranges.

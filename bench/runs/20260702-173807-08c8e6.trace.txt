@@ -1,0 +1,2 @@
+**
+I solved this problem by splitting the input string into a list of words using `s.split()`, then iterating through the list to find the longest word. If I encounter a tie, I update the `max_index` variable with the index of the last occurrence of the longest word. Finally, I return either the longest word or its last index based on whether there was a tie.

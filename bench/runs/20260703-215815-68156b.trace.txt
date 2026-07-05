@@ -1,0 +1,8 @@
+**
+I started by checking if the input list `nums` is empty and returning an empty string if it is. This handles one edge case where there are no numbers to process.
+
+Next, I sorted the list and removed duplicates by converting it into a set and back to a list. Sorting ensures that consecutive numbers are adjacent, which simplifies the range collapsing logic.
+
+I then iterated through the sorted list, using two pointers to identify consecutive runs of numbers. When a run is detected, I formatted it as 'start-end' and added it to the `ranges` list. If a single number is encountered, it was directly added as a string.
+
+Finally, I joined all the elements in the `ranges` list with commas to produce the final output string. This approach ensures that the function is both correct and concise while handling edge cases effectively.

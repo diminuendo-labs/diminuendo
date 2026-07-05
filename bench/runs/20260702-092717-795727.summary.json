@@ -1,0 +1,51 @@
+{
+  "run_id": "20260702-092717-795727",
+  "node_id": "task-20260702-092717-795727",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function does not correctly flatten exactly one level of nesting and lacks a clear naming for an edge case.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_case_handled": 2
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": false,
+        "got": "[[1, 2], [3]]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": false,
+        "got": "[[2, [3, 4]], 1]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting in a list.\n\n    Args:\n        lst (list): The input list to be flattened.\n\n    Returns:\n        list: A new list with the first level of nesting removed.\n    \"\"\"\n    return [item for item in lst if isinstance(item, list)] + [i for i in lst if not isinstance(i, list)]\n```\n\n**",
+  "trace": "**\n\nI chose to use a combination of list comprehensions and conditional statements to implement the function. The first part `[item for item in lst if isinstance(item, list)]` creates a new list with only the elements that are lists themselves, effectively removing one level of nesting. The second part `[i for i in lst if not isinstance(i, list)]` then takes the remaining elements and adds them to the result. This approach allows for concise and readable code while still handling edge cases, such as an input list containing a single nested list or a mix of nested and non-nested lists.",
+  "totals": {
+    "time_s": -1.333283999999999,
+    "tokens": -1
+  },
+  "files": [
+    "20260702-092717-795727.crumbs.jsonl",
+    "20260702-092717-795727.trace.txt"
+  ]
+}

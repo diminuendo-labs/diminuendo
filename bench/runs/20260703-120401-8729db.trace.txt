@@ -1,0 +1,5 @@
+**
+
+1. **Sorting and Removing Duplicates:** I first sort the list of numbers to ensure they are in ascending order and use `set()` to remove any duplicates.
+2. **Iterating and Grouping Ranges:** I then iterate through the sorted list, grouping consecutive numbers into ranges. If a number is not consecutive, it checks if the current group is a single number or a range and appends it to the result list.
+3. **Handling Edge Cases:** The function handles an empty list by returning an empty string immediately. It also correctly formats single numbers as individual entries rather than ranges.

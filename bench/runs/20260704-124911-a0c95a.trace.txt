@@ -1,0 +1,3 @@
+The function first identifies all occurrences of commas, semicolons, and spaces using `re.findall`. It then groups consecutive delimiters (or a delimiter followed by a non-delimiter) with the help of `itertools.groupby`. The resulting list excludes groups consisting only of empty pieces.
+
+The string is then split into pieces based on spaces, delimiters found in the original string and any delimiters in between that have been grouped together (collapsed). The final result is a concatenation of these pieces with a comma separating each one. To handle an edge case where only delimiters are present in the input string, it checks if the resulting list is empty and returns an empty string in that scenario.

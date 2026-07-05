@@ -1,0 +1,2 @@
+**
+I implemented this function using a stack data structure to keep track of the opening parentheses encountered so far. When a closing parenthesis is encountered, I check if the stack is empty (i.e., there's no matching opening parenthesis) and return False if it is. Finally, after processing the entire string, I return whether the stack is empty (indicating that all parentheses were balanced). This approach ensures that we correctly handle edge cases like an empty string.

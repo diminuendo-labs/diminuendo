@@ -1,0 +1,2 @@
+**
+I chose to use the `split()` method to split the input string into a list of substrings separated by underscores. I then used the `strip()` method with an underscore as the character to remove leading and trailing underscores, followed by `title()` to capitalize the first letter of each substring (except for the first one), and finally replaced any remaining spaces with an empty string using `replace()`. The edge case that this function handles is when the input string starts or ends with one or more underscores, which are all dropped.

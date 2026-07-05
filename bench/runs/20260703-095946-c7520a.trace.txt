@@ -1,0 +1,3 @@
+**
+
+I chose to use Python's built-in `max` function with the `key=len` argument to find the longest word. However, since ties need to be broken by returning the last such word, I iterated through the list of words in reverse order and returned the first word that matched the length of the longest word found by `max`. This ensures that if there are multiple words with the same maximum length, the last one is selected. The edge case where an empty string is inputted is handled by checking if the list of words is empty and returning an empty string in that case.

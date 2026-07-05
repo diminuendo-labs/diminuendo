@@ -1,0 +1,2 @@
+**
+I chose a simple and concise approach by using the built-in `count` method of Python strings, which returns the number of occurrences of the given character. This method is sufficient because it only counts the parentheses and ignores any other characters in the string. I also included a docstring to provide context for the function's purpose. The edge case handled here is an empty string, which would pass the `count` comparison with no issues.

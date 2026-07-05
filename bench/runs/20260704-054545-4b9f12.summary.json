@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-054545-4b9f12",
+  "node_id": "task-20260704-054545-4b9f12",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function is mostly correct, handles one level of nesting, and has a clear edge case.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_case_handled": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": false,
+        "got": "[[1, 2], [3]]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": false,
+        "got": "[1, [2, [3, 4]]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting in a list.\n\n    Args:\n        lst (list): The input list, possibly with nested lists.\n\n    Returns:\n        list: A new list where each element is either the original or its first item if it's a list.\n    \n    Raises:\n        ValueError: If an empty list is passed as the only element of another list.\n\n    Examples:\n        >>> flatten_once([1, 2, [3, 4], 5])\n        [1, 2, [3, 4], 5]\n        >>> flatten_once([[1, 2], [3, [4]]])\n        [[1, 2], [3, [4]]]\n        >>> flatten_once([[], []])\n        ValueError: Cannot have an empty list as the only element of another list.\n    \"\"\"\n    if len(lst) == 1 and isinstance(lst[0], list):\n        if not lst[0]:\n            raise ValueError(\"Cannot have an empty list as the only element of another list.\")\n        return [lst[0]]\n    result = []\n    for elem in lst:\n        if isinstance(elem, list):\n            result.append(elem)\n        else:\n            result.append(elem)\n    return result\n```\n\n**",
+  "trace": "**\n\nI chose to handle the edge case where an empty list is passed as the only element of another list by raising a ValueError. This is because an empty list itself is a valid input but in this specific scenario, it cannot be part of a nested structure. To make my code concise and readable, I used clear docstrings for function description and raised an error with a descriptive message if the edge case occurs.",
+  "totals": {
+    "time_s": -4.885169699999999,
+    "tokens": -39
+  },
+  "files": [
+    "20260704-054545-4b9f12.crumbs.jsonl",
+    "20260704-054545-4b9f12.trace.txt"
+  ]
+}

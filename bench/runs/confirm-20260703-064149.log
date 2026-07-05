@@ -1,0 +1,44 @@
+CONFIRMATION ARMS 20260703-064149 (PACKET-009)
+lessons=5  apply tasks=8
+== PAIRING TABLE (from the pins) ==
+  A/max_index/within_task pins={'rule_class': 'tie_break', 'rule_topic': 'direction', 'stated_direction': 'last'} -> ['longest_word']
+  A/shortest_word/within_task pins={'rule_class': 'tie_break', 'rule_topic': 'direction', 'stated_direction': 'last'} -> ['longest_word']
+  A/count_token/sibling pins={'rule_class': 'normalize', 'rule_topic': 'punctuation', 'stated_direction': None} -> nothing  <-- STRUCTURALLY EMPTY
+  B/count_distinct_pairs/within_task pins={'rule_class': 'distinctness', 'rule_topic': 'pairs', 'stated_direction': None} -> nothing  <-- STRUCTURALLY EMPTY
+  B/count_token/sibling pins={'rule_class': 'normalize', 'rule_topic': 'punctuation', 'stated_direction': None} -> nothing  <-- STRUCTURALLY EMPTY
+cross-seat armed cells: [('llama3.1:8b', 'longest_word', 'A')]
+== PIN REGRESSION (mismatch cells must deliver zero tools) ==
+  store B on range_summary: tools=0 ok
+  store B on snake_to_camel: tools=0 ok
+  store A on balanced: tools=0 ok
+  store A on most_common_word: tools=0 ok
+llama3.1|longest_word|A none rep 0: ev=1.00 tools=0
+llama3.1|longest_word|A none rep 1: ev=1.00 tools=0
+llama3.1|longest_word|A none rep 2: ev=0.50 tools=0
+llama3.1|longest_word|A none rep 3: ev=0.50 tools=0
+llama3.1|longest_word|A none rep 4: ev=0.50 tools=0
+llama3.1|longest_word|A none rep 5: ev=0.50 tools=0
+llama3.1|longest_word|A none rep 6: ev=0.25 tools=0
+llama3.1|longest_word|A none rep 7: ev=0.50 tools=0
+llama3.1|longest_word|A none rep 8: ev=0.50 tools=0
+llama3.1|longest_word|A none rep 9: ev=0.50 tools=0
+llama3.1|longest_word|A none rep 10: ev=0.50 tools=0
+llama3.1|longest_word|A none rep 11: ev=0.50 tools=0
+llama3.1|longest_word|A menu rep 0: ev=1.00 tools=2
+llama3.1|longest_word|A menu rep 1: ev=1.00 tools=2
+llama3.1|longest_word|A menu rep 2: ev=1.00 tools=2
+llama3.1|longest_word|A menu rep 3: ev=1.00 tools=2
+llama3.1|longest_word|A menu rep 4: ev=1.00 tools=2
+llama3.1|longest_word|A menu rep 5: ev=1.00 tools=2
+llama3.1|longest_word|A menu rep 6: ev=1.00 tools=2
+llama3.1|longest_word|A menu rep 7: ev=1.00 tools=2
+llama3.1|longest_word|A menu rep 8: ev=1.00 tools=2
+llama3.1|longest_word|A menu rep 9: ev=1.00 tools=2
+llama3.1|longest_word|A menu rep 10: ev=0.50 tools=2
+llama3.1|longest_word|A menu rep 11: ev=1.00 tools=2
+== PER-CHECK (none / menu) ==
+  llama3.1|longest_word|A longest_word('cat door bird'): 0.17 / 0.92  <-- rule
+  llama3.1|longest_word|A longest_word('a bb cc d'): 0.17 / 0.92  <-- rule
+  llama3.1|longest_word|A longest_word(''): 0.92 / 1.00
+  llama3.1|longest_word|A longest_word('one'): 1.00 / 1.00
+GATE: PASSED. pairing table complete with empties named, 1 matched cross-seat cell(s) at R=12 per arm, pin regression clean (4/4), every run checkpointed, report persisted. The reading is applied in the packet RESULTS.

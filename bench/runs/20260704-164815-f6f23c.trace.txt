@@ -1,0 +1,2 @@
+**
+I defined the function `token_case` that takes an input string `s` and an optional exception list. The string is split by underscores into tokens. Each token is processed: if it's not in the exceptions list, it's converted to lowercase; otherwise, it remains unchanged. Finally, the tokens are joined together without any separators to form the camel case output. This approach ensures that the function handles underscores as separators and applies the specified casing rules correctly.

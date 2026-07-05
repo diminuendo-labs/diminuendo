@@ -1,0 +1,51 @@
+{
+  "run_id": "20260702-090101-bda220",
+  "node_id": "task-20260702-090101-bda220",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "reason": "All criteria are met",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**  \n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting in a list.\n    Elements that are lists contribute their items in order, while other elements are kept as is.\n    \n    Edge case handled: an empty input list returns an empty list.\n\n    :param lst: List to be flattened.\n    :return: A new list with exactly one level of nesting flattened.\n    \"\"\"\n    return [item for sublist in lst for item in (sublist if isinstance(sublist, list) else [sublist])]\n```\n\n**",
+  "trace": "**  \nThe `flatten_once` function uses a list comprehension to iterate through each element in the input list. If an element is itself a list, it is unpacked and its elements are added to the new list; otherwise, the element is added as is. This ensures that only one level of nesting is flattened. The edge case of an empty input list is directly handled by returning an empty list, which simplifies the logic without requiring additional checks.",
+  "totals": {
+    "time_s": 18.6233765,
+    "tokens": 698
+  },
+  "files": [
+    "20260702-090101-bda220.crumbs.jsonl",
+    "20260702-090101-bda220.trace.txt"
+  ]
+}

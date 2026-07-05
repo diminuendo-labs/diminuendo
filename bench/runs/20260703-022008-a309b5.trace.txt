@@ -1,0 +1,3 @@
+**
+
+I implemented the `snake_to_camel` function using a generator expression within the built-in string method `join`. This concise approach allows for efficient processing of the input string. The edge case I explicitly handled is an empty string, which returns an empty string as expected (i.e., '""' is returned).

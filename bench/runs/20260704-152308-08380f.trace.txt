@@ -1,0 +1,2 @@
+**
+I implemented the `token_case` function by splitting the input string into individual tokens using underscore as a delimiter. I then iterated over these tokens, applying rules to handle edge cases (like 'ID' being capitalized and 'id' being lowercased) and general cases (lowercasing the first token and capitalizing every other one). Finally, I joined the modified tokens back together without any separator. The function is concise, readable, and handles the specified edge case.

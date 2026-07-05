@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `sorted` function with a custom sorting key. The key is a tuple where the first element is the length of each word and the second element is the reverse of the word itself (to handle equal lengths). This allows for efficient ordering by both criteria at once. The edge case of an empty input list is also explicitly handled to avoid unnecessary computations or errors.

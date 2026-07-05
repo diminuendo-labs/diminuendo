@@ -1,0 +1,2 @@
+**
+I solved this problem by first handling the edge case of an empty input list, which returns an empty output list. Then, I sorted the input pairs by their start value to make it easier to merge overlapping ranges. Finally, I iterated through the sorted pairs and added each range to the `merged` list if it didn't overlap with the last merged range. If there was an overlap, I updated the last merged range to include both endpoints.

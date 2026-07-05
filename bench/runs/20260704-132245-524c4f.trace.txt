@@ -1,0 +1,2 @@
+**  
+To solve this task, I used a list comprehension to iterate through the input list `lst` in steps of size `k`. For each chunk, if its length is less than `k`, I appended `None` values until it reached the required size. This approach ensures that every chunk has exactly `k` elements, and it handles edge cases such as an empty list by returning an empty list without any modifications.

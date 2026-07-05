@@ -1,0 +1,4 @@
+**
+The function `range_summary` first handles the edge case where the input list is empty, returning an empty string immediately. It then sorts and removes duplicates from the input list to ensure that each distinct value is considered only once. The function iterates through the sorted list, identifying consecutive ranges by checking if the current number is exactly one more than the previous number. When a range is identified, it is either appended as a single number or in 'start-end' format to the `ranges` list. After processing all numbers, the final range is appended to ensure that all numbers are included in the result. Finally, the ranges are joined with commas and returned as the output string.
+
+This approach ensures that the function is correct, concise, and handles the edge case of an empty input list gracefully.

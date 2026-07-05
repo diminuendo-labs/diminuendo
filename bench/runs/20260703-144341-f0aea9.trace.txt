@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for the edge case of an empty input list, which would cause a `ValueError` in the subsequent steps. To handle this, I added a simple check with a length condition to see if there are fewer than two distinct values in the list. If so, I return `None`. Otherwise, I convert the list to a set (to remove duplicates), sort it in descending order, and return the second element (`[1]`) of the resulting sorted list. This approach is concise, readable, and meets all the requirements.

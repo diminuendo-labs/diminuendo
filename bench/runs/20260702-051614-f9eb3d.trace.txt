@@ -1,0 +1,2 @@
+** 
+I approached the problem by iterating through the list in reverse order. This allows me to ensure that if there are multiple occurrences of the maximum value, I capture the index of the last occurrence. The function handles an edge case where the input list is empty, returning `None` in such scenarios. This method ensures both correctness and readability while meeting the criteria for a concise implementation.

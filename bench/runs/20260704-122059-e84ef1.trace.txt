@@ -1,0 +1,1 @@
+I used list comprehension to split the input list into chunks of size k. If the final chunk is shorter than k, I create a list with None values to pad it up to the desired length. To handle an empty list, I added a condition that checks if there are any remaining elements after the last complete chunk and only pads in this case.

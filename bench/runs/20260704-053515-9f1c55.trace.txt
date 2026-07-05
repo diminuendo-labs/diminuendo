@@ -1,0 +1,3 @@
+**
+
+I approached this task by recognizing that a string is balanced when it has an equal number of opening and closing parentheses. This simple condition can be checked using Python's `count()` method, which returns the frequency of each character in the string. I chose to ignore all characters other than '(' and ')' as per the problem statement. The function handles the edge case where the input is an empty string, since an empty string is indeed balanced according to the problem definition.

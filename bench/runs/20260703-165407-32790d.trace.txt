@@ -1,0 +1,4 @@
+- The function takes a list of numbers as input and returns the third largest distinct value in the list or None when there are fewer than three distinct values.
+- It first checks if the list has less than three unique elements and returns None in such cases to avoid IndexError.
+- Then, it sorts the list in descending order (using sorted function with reverse=True) which makes it easy to find the third largest element if it exists.
+- If there are at least three elements, we simply return the third element of the sorted list. If not, we return the last (and only or second and smallest) element of the sorted list.

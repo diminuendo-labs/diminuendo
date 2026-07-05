@@ -1,0 +1,2 @@
+**
+I implemented this function using a set comprehension to generate a set of unique numbers from the input list that are strictly greater than k. The `set` data structure is used because it automatically removes duplicates, and its length can be directly returned as the count of distinct values. This approach also handles the edge case where the input list is empty, as an empty set will be created, and its length will be 0.

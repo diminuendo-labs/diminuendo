@@ -1,0 +1,2 @@
+**
+I chose to use the built-in sort function of Python's list data type to simplify the process, and then handle the cases for odd and even lengths separately. I also made sure to explicitly check for an empty input list as an edge case. The approach is straightforward and easy to understand, making it concise and readable. This solution has a time complexity of O(n log n) due to the sorting operation.

@@ -1,0 +1,2 @@
+**
+I solved this problem by first handling the edge case of an empty list. Then, I sorted and deduplicated the input numbers to get a sorted list of unique values. Next, I iterated through the sorted list, tracking whether each number is part of a consecutive run or not, and appending ranges or individual numbers as necessary. This approach allowed me to minimize the amount of conditional logic while still producing the desired output format.

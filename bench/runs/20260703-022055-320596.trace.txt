@@ -1,0 +1,3 @@
+**
+
+To solve this task, I used list comprehension to remove all occurrences of the underscore character from the input string `s`. This effectively drops leading, trailing, and repeated underscores. The resulting string is then passed through the built-in `title()` function, which capitalizes the first letter of each word (i.e., converts it to camelCase). This approach is concise and readable, and it handles the edge case where an empty string is input (`''` returns `''`).

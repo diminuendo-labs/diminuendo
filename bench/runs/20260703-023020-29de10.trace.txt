@@ -1,0 +1,3 @@
+**
+
+I chose to directly manipulate the input string using Python's built-in string methods, rather than creating intermediate lists or other data structures. The `strip()` method is used to remove leading and trailing underscores, followed by `title()` to capitalize each word (except for the first one), and finally `replace()` to remove any remaining underscores. This approach results in concise and readable code that directly achieves the desired transformation.

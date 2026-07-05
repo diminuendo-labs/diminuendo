@@ -1,0 +1,24 @@
+RESISTANT-PAIR MINING 20260703-211439 (PACKET-020, counts not claims)
+source=onboard17-20260703-161320 stage 1 artifacts, 240 rows on disk
+generator=qwen2.5-coder:7b (fixed)  pairs=8 in class order
+pair tie_break within_task: fail=shortest_word pass=shortest_word
+  -> committed
+pair tie_break within_task: fail=longest_run_char pass=longest_run_char
+  -> committed
+pair distinctness within_task: fail=sum_of_modes pass=sum_of_modes
+  -> committed
+pair distinctness within_task: fail=third_largest_distinct pass=third_largest_distinct
+  -> committed
+pair boundary within_task: fail=chunk pass=chunk
+  -> committed
+pair boundary within_task: fail=weighted_mean pass=weighted_mean
+  -> committed
+pair normalize within_task: fail=split_csvish pass=split_csvish
+  -> committed
+pair normalize sibling: fail=depth_max pass=count_word
+  -> committed
+== CLOSING COUNTS ==
+  attempts=8  accepts=8  rejects_by_screen=none
+  store classes: ['boundary', 'distinctness', 'normalize', 'tie_break']
+CLOSING: the record now holds its first gated boundary-class lesson: YES; its first gated normalize-class lesson: YES.
+GATE: PASSED. all eight pairs attempted in order, every outcome reported with rejects named by screen, store packet-local only, production stores untouched.

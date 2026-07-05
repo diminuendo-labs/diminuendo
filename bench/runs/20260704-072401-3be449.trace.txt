@@ -1,0 +1,3 @@
+**
+
+I first sorted the list of ranges based on their start times to ensure that any potential merging happens in a logical order. Then, I iterated through each range and checked if it could be merged with the last one in the result list (`merged`). If it couldn't (meaning they don't overlap or touch), I appended the current range to `merged`. If they did overlap or touch, I updated the end time of the last range in `merged` to the maximum end time between the two overlapping ranges. This way, all overlapping or touching ranges are merged into a single range, and the result is sorted by start time as required.

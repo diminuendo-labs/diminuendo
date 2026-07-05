@@ -1,0 +1,3 @@
+**
+
+I chose to handle the edge case where the input is an empty list by including a docstring that describes how the function behaves with degenerate inputs. However, I did not implement this explicitly in the code as it is already handled naturally when `isinstance(lst, list)` returns False and `lst` is treated as any other element. The function works by iterating over each item in the input list and checking if it's a list itself; if so, its elements are added to the result list, otherwise the original item is appended. This approach ensures that exactly one level of nesting is removed, while deeper levels remain intact.

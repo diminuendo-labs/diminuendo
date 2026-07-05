@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-071912-f46976",
+  "node_id": "task-20260704-071912-f46976",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided Python function correctly flattens exactly one level of nesting in a list, ignoring empty sublists during the process.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting in a list. Elements that are lists contribute their items in order,\n    and every other element is kept as is. Deeper nesting stays nested.\n    \n    Edge Case Handled: Empty sublists within the input list are ignored during flattening.\n    \"\"\"\n    result = []\n    for item in lst:\n        if isinstance(item, list):\n            result.extend(item)\n        else:\n            result.append(item)\n    return result\n```\n\n**",
+  "trace": "**\n\nTo implement the `flatten_once` function, I iterated through each element of the input list. If an element is a list itself, I extended the result list with its items. Otherwise, I appended the item as it is. This ensures that only one level of nesting is flattened. To handle the edge case where there are empty sublists within the input list, these are ignored during the flattening process, maintaining their structure in the output.",
+  "totals": {
+    "time_s": 23.311964,
+    "tokens": 712
+  },
+  "files": [
+    "20260704-071912-f46976.crumbs.jsonl",
+    "20260704-071912-f46976.trace.txt"
+  ]
+}

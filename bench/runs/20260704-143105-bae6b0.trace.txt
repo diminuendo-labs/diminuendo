@@ -1,0 +1,2 @@
+**
+I chose to sort the list of words using a custom key in Python's `sort` method. The key is defined as a lambda function that first sorts by the negative length of each word (to get increasing order of lengths) and then by reverse lexicographical order (to handle equal lengths). This way, words are sorted correctly according to the problem statement. After sorting, I directly return the k-th word (adjusted for zero-based indexing with `k-1`). If k is out of range, I handle it by returning `None`.

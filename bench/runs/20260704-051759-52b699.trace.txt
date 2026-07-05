@@ -1,0 +1,2 @@
+**
+I implemented the median function by first sorting the input list. Then, I checked if the list was empty and returned None in that case. Next, I determined the middle index of the sorted list. If the length of the list is odd, I simply returned the value at the middle index as a float. Otherwise, I returned the average of the two middle values as a float.

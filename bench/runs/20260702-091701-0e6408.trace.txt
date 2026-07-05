@@ -1,0 +1,9 @@
+1. **Edge Case Handling**: I started by checking if the input list `nums` is empty. If it is, the function immediately returns an empty string.
+2. **Sorting**: The input list is sorted to ensure that consecutive numbers are adjacent, making it easier to identify ranges.
+3. **Range Identification and Construction**: 
+   - Initialize `start` and `end` with the first element of the sorted list.
+   - Iterate through the sorted list starting from the second element. If the current number (`num`) is one more than `end`, update `end`. Otherwise, a range has been identified (either a single number or a sequence). Append the appropriate string ('number' or 'start-end') to the `ranges` list and reset `start` and `end`.
+4. **Final Range**: After the loop, there might be one last range that needs to be added.
+5. **Result Construction**: The ranges in the `ranges` list are joined into a single string with commas and returned.
+
+This approach ensures that all numbers are processed efficiently, and consecutive runs are correctly collapsed into ranges while individual numbers remain as is.

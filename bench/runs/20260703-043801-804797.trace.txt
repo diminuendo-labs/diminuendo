@@ -1,0 +1,11 @@
+**
+
+I began by defining the function `most_common_word(s)`, which takes a string `s` as input. The first step is to handle the edge case where `s` is an empty string, returning an empty string immediately if this condition is met.
+
+Next, I split the input string into individual words using the `split()` method and convert all characters to lowercase to ensure that the word counting is case-insensitive.
+
+I then created a dictionary `word_count` to store each unique word from the input string along with its count. This is done by iterating over the list of words, incrementing the count for each occurrence of a word.
+
+After constructing the word count dictionary, I determine the highest count using the `max()` function applied to the values of `word_count`. Then, I create a list comprehension that filters out all words having this maximum count.
+
+Finally, I use Python's built-in `min()` function along with `sorted(result)` to ensure that if there are multiple words with the same highest frequency, the alphabetically first word is returned. This approach meets both the correctness and readability criteria by providing a clear and concise implementation of the task.

@@ -1,0 +1,2 @@
+**  
+To solve the task, I first sorted the unique elements of the input list `nums`. I then iterated through the sorted list to identify consecutive numbers and collapse them into ranges. If a number is not consecutive (i.e., it breaks the sequence), I added the current range or single number to the result list. Finally, I joined all parts of the summary with commas to produce the final output string. This approach ensures that the function handles edge cases such as an empty list and correctly formats ranges and single numbers.

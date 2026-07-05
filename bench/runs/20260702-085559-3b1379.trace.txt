@@ -1,0 +1,7 @@
+**
+
+I started by checking if the input string is empty. If it is, I return an empty string as specified. Otherwise, I convert all characters to lowercase and split the string into individual words.
+
+Next, I created a dictionary to count the occurrences of each word. After populating this dictionary, I determine the maximum count. Then, I generate a list of all words that have this maximum count. Finally, I return the lexicographically smallest word from this list using Python's built-in `min` function.
+
+This approach ensures the function is both correct and concise, meeting the specified criteria.

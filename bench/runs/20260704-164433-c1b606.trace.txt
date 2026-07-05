@@ -1,0 +1,2 @@
+**
+The function `token_case(s)` takes an underscore-delimited string `s` as input. It splits the string into tokens using `_` as the delimiter. For each token after the first, if it is not in the exception list ['URL', 'ID'], it converts it to lowercase. All other tokens (including the first one) are capitalized and joined together to form a camelCase string. The edge case handled is when an input string starts with "id_", as expected output is "idUrl".

@@ -1,0 +1,7 @@
+**
+
+1. **Sorting**: The function first sorts the list of ranges based on their start times to ensure that we process them in chronological order.
+
+2. **Merging**: It initializes a list `merged` with the first range and then iterates through the remaining ranges. For each range, it checks if it overlaps or touches the last range in the `merged` list. If it does, it extends the last range to cover both current and previous ranges. If not, it appends the current range to the `merged` list.
+
+3. **Edge Case**: The function includes a demonstration of handling a single-element range, which is a straightforward edge case where no merging occurs.

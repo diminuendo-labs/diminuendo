@@ -1,0 +1,2 @@
+**
+I used Python's `collections.Counter` to count the frequency of each number in the list. I then determined the maximum frequency and summed up all distinct numbers that appear with this highest frequency. This approach ensures that each distinct most frequent value is counted once, regardless of how many times it appears in the list. The function handles an empty list by returning 0, as specified.

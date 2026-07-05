@@ -1,0 +1,2 @@
+**
+The function `collapse_delims(s)` first splits the input string `s` using commas. It then uses a list comprehension to filter out any empty or whitespace-only pieces from the resulting list. The remaining pieces are joined back together with a single comma between each, and the result is returned. This approach ensures that consecutive commas are treated as one split, and all unwanted empty pieces are dropped. The function also handles the edge case where the input string `s` is an empty or whitespace-only string by returning an empty string in such cases.

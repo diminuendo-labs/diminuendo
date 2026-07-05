@@ -1,0 +1,2 @@
+**
+I solved this task by first checking for the edge case where the input list is empty. Then I used Python's built-in `sorted` function to sort the list in descending order. Finally, I sliced the sorted list to return either the top k elements (if k is non-negative) or all elements if k is negative or zero. I chose this approach because it is simple and efficient, using built-in functions to handle sorting and slicing.

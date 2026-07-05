@@ -1,0 +1,2 @@
+**
+I chose to prioritize the last word among those with the shortest length when there's a tie, as stated in the task. This approach ensures that the function follows the direction given and returns the expected result even when multiple words have the same maximum length. To handle ties efficiently, I iterated over the reversed list of words instead of using Python's built-in `max` function with a key argument.

@@ -1,0 +1,3 @@
+**
+
+I chose to use a list comprehension and the `capitalize` method to convert each snake_case segment to camelCase. This approach is concise and readable while also allowing me to handle the edge case of empty strings, which would otherwise cause an error when trying to capitalize the first character. I split the input string into segments using `_` as the delimiter and then used a generator expression to capitalize each segment before joining them together with `''`.

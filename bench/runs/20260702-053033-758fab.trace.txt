@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `set` data structure to remove duplicates from the input list. This is a concise and efficient way to achieve the desired result, as sets in Python only store unique elements. The `sum` function is then used to calculate the sum of these distinct values. I specifically mentioned the edge case where an empty list is returned 0, which handles the scenario where no input values are provided.

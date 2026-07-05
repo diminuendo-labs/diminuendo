@@ -1,0 +1,2 @@
+**
+I wrote a concise function that directly calculates the median based on whether the list length is odd or even. To handle edge cases, I first check if the input list is empty and return None immediately. For non-empty lists, I use integer division (`//`) to find the middle index `mid`, and then use conditional expressions to return either the single middle value (if odd) or the average of two middle values (if even).

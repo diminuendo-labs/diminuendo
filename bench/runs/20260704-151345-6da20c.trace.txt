@@ -1,0 +1,2 @@
+**
+I approached this task by first checking the length of the input list and returning None if it's less than 3, as per the problem statement. Then, I found the minimum and maximum values in the list using built-in functions `min` and `max`. Next, I created a new list `trimmed_nums` that excludes these two extreme values. If all numbers in the trimmed list are equal (which would be an edge case), I return any of them; otherwise, I calculate and return the mean by summing up the trimmed list and dividing it by its length.

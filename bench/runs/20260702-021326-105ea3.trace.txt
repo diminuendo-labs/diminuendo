@@ -1,0 +1,3 @@
+**
+
+I chose to normalize the input string by converting it to lowercase and removing spaces using Python's built-in `split()` method. This approach simplifies the problem of comparing words with different cases and makes the code more readable. To handle ties, I used a list comprehension to find all words with the maximum frequency, and then returned the smallest one alphabetically using the built-in `min()` function. The edge case for empty strings is handled by checking if the input string is not stripped of whitespace characters before proceeding.

@@ -1,0 +1,2 @@
+** 
+I created a function `shortest_word(s)` that first checks if the input string `s` is empty and returns an empty string if so. If not, it splits the string into words using the `split()` method. It then determines the minimum length of these words using a generator expression within the `min()` function. Finally, it iterates over the list of words in reverse order to return the last word with the minimum length found. This approach ensures that ties are broken by returning the last such word as specified.

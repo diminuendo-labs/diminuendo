@@ -1,0 +1,3 @@
+**
+
+I chose a straightforward approach to solve this task. Since the function only needs to check for balance between opening and closing parentheses, I didn't see the need to implement any stack-based or more complex algorithms that would make the code longer than necessary. The `count` method of Python strings is sufficient to compare the number of opening and closing parentheses, which directly indicates whether they are balanced.

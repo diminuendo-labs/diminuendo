@@ -1,0 +1,3 @@
+**
+
+I approached the problem by first grouping words by their length using a dictionary. For each group, I sorted the words in reverse-alphabetical order to handle the requirement for equal-length words. After organizing all words according to the specified criteria, I flattened the list of lists and returned the k-th word (adjusted for 0-indexing). The function also includes an edge case check at the beginning to return `None` if the input list is empty or if `k` is out of range.

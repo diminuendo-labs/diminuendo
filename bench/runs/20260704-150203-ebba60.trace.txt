@@ -1,0 +1,3 @@
+**
+
+To solve this problem, I first checked for the edge case where the input list is empty. If so, I returned None as per the task's requirements. Next, I sorted the input list to easily identify its minimum and maximum values. Then, I used a list comprehension to create a new list that excludes these two extreme values. Finally, I calculated the mean of this trimmed list by summing its elements and dividing by its length.

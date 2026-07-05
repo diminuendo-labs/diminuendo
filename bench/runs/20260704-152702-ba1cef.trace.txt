@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `sorted` function in Python, which allows for a custom sorting key. This makes the code concise and readable. The edge case of k being out of range is handled directly at the beginning of the function, making it clear that this condition should always be checked before proceeding with the rest of the logic.

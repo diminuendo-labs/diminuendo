@@ -1,0 +1,3 @@
+**
+
+I used Python's regular expressions (`re.split`) to handle splitting the string by both commas and semicolons. The regex pattern `[;,]+` matches one or more consecutive commas or semicolons as a single delimiter. Then, I filtered out any empty strings from the resulting list of pieces using a list comprehension. Finally, I joined the remaining pieces with a single comma between each using `','.join(pieces)`. This approach ensures that all delimiters are treated uniformly and that leading/trailing empty segments are removed.

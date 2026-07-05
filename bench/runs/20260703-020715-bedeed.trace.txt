@@ -1,0 +1,2 @@
+**  
+I started by handling the edge case where the input list is empty, returning an empty string immediately. Then, I sorted and deduplicated the input list using `sorted(set(nums))` to ensure each number appears only once and they are in ascending order. Next, I iterated through the sorted list, identifying consecutive runs of numbers. For each run, I checked if it consisted of a single number or a range and formatted it accordingly. Finally, I joined all parts with commas to form the final result string.

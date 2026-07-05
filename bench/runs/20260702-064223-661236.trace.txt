@@ -1,0 +1,2 @@
+**
+I chose to implement the median calculation using a straightforward approach, sorting the input list and then checking its length to determine whether it's odd or even. In the case of an empty list, I immediately returned None as specified in the problem statement. For brevity, I combined the logic for calculating both odd-length and even-length medians into a single function using conditional expressions. This approach is concise while still being readable due to the clear structure and comments.

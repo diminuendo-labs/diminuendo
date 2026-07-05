@@ -1,0 +1,3 @@
+**
+
+The `balanced` function iterates through each character in the input string. It maintains a counter that increments for every opening parenthesis '(' and decrements for every closing parenthesis ')'. If at any point the counter goes negative, it means there's a closing parenthesis before its corresponding opening one, so the function returns `False`. Finally, if the counter is zero after processing all characters, it indicates that parentheses are balanced, and the function returns `True`. An edge case this function handles is an empty string, which is considered balanced since there are no parentheses to be unbalanced.

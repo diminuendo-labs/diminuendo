@@ -1,0 +1,2 @@
+**
+I defined a function `chunk_pad` that takes two arguments: the input list `lst` and the desired chunk size `k`. The function uses a list comprehension to split the input list into chunks of size `k`, padding the final chunk with None as necessary. I chose this approach because it is concise and readable, and it allows for easy handling of edge cases such as an empty list or a list whose length is not perfectly divisible by `k`. The one edge case that this function handles is when the input list is empty, in which case it returns an empty list.

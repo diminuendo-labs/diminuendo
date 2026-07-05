@@ -1,0 +1,2 @@
+**
+I used the built-in `sorted` function with a custom sorting key to order the words according to the problem statement. The sorting key is a tuple where the first element is the length of the word and the second element is the reverse alphabetical order of the word (achieved by negating the string). This ensures that words are ordered by increasing length, and then reverse-alphabetically among themselves. I also added an edge case to handle when `k` is less than 1, returning None in this case.

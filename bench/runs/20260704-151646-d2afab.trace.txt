@@ -1,0 +1,2 @@
+**
+I split the string on commas, then replace any consecutive commas with a single comma. This effectively collapses consecutive delimiters. Finally, I filter out any empty strings (which can arise from leading/trailing empties) and join the remaining pieces back together with commas. I also included an edge case comment to explicitly note that an empty input string returns an empty list as expected.

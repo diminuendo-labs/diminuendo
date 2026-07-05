@@ -1,0 +1,2 @@
+The function takes a list of numbers and sorts them in descending order using the sort() method with reverse=True. If the length of the sorted list is less than 2, it means there are fewer than two distinct values, so we return None. Otherwise, the second largest number is the first element after the highest one, which we return.
+This solution uses a simple and efficient approach to handle the given task while being concise and readable. It also handles an edge case where there may be less than two unique numbers in the list.

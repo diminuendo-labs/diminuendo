@@ -1,0 +1,2 @@
+**
+I first checked for the edge case of an empty list by returning None immediately. Then, I converted the input list to a set to remove duplicates and get distinct values. Finally, I used the built-in `sorted` function to sort the distinct numbers in ascending order and returned the second-to-last element (index -2), which corresponds to the second largest value.

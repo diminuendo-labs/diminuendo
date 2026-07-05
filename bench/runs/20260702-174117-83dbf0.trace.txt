@@ -1,0 +1,2 @@
+**
+I used the `re` module to extract words from the input string using a regular expression, converting them to lowercase first. I then used `Counter` from the `collections` module to count the occurrences of each word. To handle the case where multiple words have the same maximum count, I created a list of these words and returned the last one (i.e., the one that appears latest in the string). If the input string is empty, the function returns an empty string.

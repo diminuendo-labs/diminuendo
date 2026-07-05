@@ -1,0 +1,5 @@
+**
+
+The function `kth_ordered` takes two parameters: a list of words and an integer `k`. The goal is to return the k-th word in a specific order. First, it checks if the input is valid (non-empty list and positive k). It then sorts the words using a custom key in Python's `sorted` function. The lambda function `-len(x)` ensures that words are ordered by length in increasing order, with negative sign to reverse the order when lengths are equal. For words of equal length, it uses `x[::-1]` to sort them reverse-alphabetically. After sorting, it checks if k is within the range of the sorted list and returns the word at position `k - 1`. If k is out of range, it returns `None`.
+
+The edge case where the input list is empty is handled by checking if `words` is not empty before proceeding with further operations. This prevents errors in subsequent steps when calling `len()` or accessing elements of an empty list.

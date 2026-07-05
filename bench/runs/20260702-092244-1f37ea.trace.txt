@@ -1,0 +1,3 @@
+**
+
+I approached this task by using Python's built-in `split()` method to split the input string into a list of whitespace-separated words. Then I used the `max()` function with the `key` argument set to `len` to find the longest word in the list. This approach is concise and readable, and it correctly handles an empty string by returning an empty string, as per the problem statement's requirements.

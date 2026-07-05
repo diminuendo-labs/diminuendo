@@ -1,0 +1,3 @@
+First, I created a list of indices where the delimiters appear (commas, semicolons, and spaces). Then, I used a generator expression to split the string into pieces using consecutive delimiters as boundaries, excluding any empty pieces. Finally, I rejoined these pieces with commas between each piece.
+
+One edge case handled is when there are no delimiters in the input string, in which case the function returns an empty string ("").

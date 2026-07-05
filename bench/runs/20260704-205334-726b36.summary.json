@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-205334-726b36",
+  "node_id": "task-20260704-205334-726b36",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The solution correctly implements the trimmed mean calculation, handles edge cases like empty lists or lists with less than two elements, and achieves a good balance between conciseness and readability.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums or len(nums) < 2:\n        return None\n\n    nums.sort()\n    min_occurrences = nums[0] == nums[1] and 2\n    max_occurrences = nums[-1] == nums[-2] and 2\n\n    if not (min_occurrences or max_occurrences):\n        return sum(nums[1:-1]) / len(nums[1:-1])\n\n    if min_occurrences:\n        nums.pop(0)\n    if max_occurrences:\n        nums.pop(-1)\n\n    return sum(nums) / (len(nums) - 2)\n```",
+  "trace": "We first handle the edge case of an empty or single-element list by returning None. Then, we sort the input list and check for cases where both minimum and maximum values have more than one occurrence. If neither case is true, we calculate the mean of all but the first and last elements (excluding them since they're either the minimum or maximum). If one or both of the cases are true, we remove the corresponding element(s) from the list and recalculate the trimmed mean. The resulting function returns a float representing the trimmed mean of the list.",
+  "totals": {
+    "time_s": 23.252659700000002,
+    "tokens": 932
+  },
+  "files": [
+    "20260704-205334-726b36.crumbs.jsonl",
+    "20260704-205334-726b36.trace.txt"
+  ]
+}

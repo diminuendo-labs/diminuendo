@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-235418-6a2165",
+  "node_id": "task-20260704-235418-6a2165",
+  "task": "Write a Python function kth_ordered(words, k) returning the k-th word, counting from 1, when the words are ordered by increasing length, and words of equal length are ordered reverse-alphabetically among themselves. Return None when k is out of range. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly handles the edge case when k or words list is empty, sorting is done as required and it returns None for out of range k",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "kth_ordered(['bb', 'ab', 'c'], 2)",
+        "ok": true,
+        "got": "'bb'",
+        "expect": "'bb'"
+      },
+      {
+        "call": "kth_ordered(['dd', 'a', 'ccc'], 2)",
+        "ok": true,
+        "got": "'dd'",
+        "expect": "'dd'"
+      },
+      {
+        "call": "kth_ordered(['a', 'bb'], 5)",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n```python\ndef kth_ordered(words, k):\n    if not words or k < 1:\n        return None\n    \n    # Sort by length ascending, then reverse-alphabetically for words of equal length\n    sorted_words = sorted(words, key=lambda x: (len(x), -ord(x[0])))\n    \n    if k > len(sorted_words):\n        return None\n    \n    return sorted_words[k-1]\n```\n\n**",
+  "trace": "**\nThe function `kth_ordered` first checks for edge cases where the input list `words` is empty or `k` is less than 1, returning `None` in these scenarios. It then sorts the words based on their length in ascending order and, for words of equal length, sorts them reverse-alphabetically by converting each word's first character to its ASCII value (negated to achieve reverse ordering). After sorting, it checks if `k` is within the bounds of the sorted list and returns the k-th word, adjusting for zero-based indexing.",
+  "totals": {
+    "time_s": 27.1805211,
+    "tokens": 726
+  },
+  "files": [
+    "20260704-235418-6a2165.crumbs.jsonl",
+    "20260704-235418-6a2165.trace.txt"
+  ]
+}

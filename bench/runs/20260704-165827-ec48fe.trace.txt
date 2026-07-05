@@ -1,0 +1,7 @@
+**
+
+To implement the `chunk_pad` function, I started by handling the edge case where the input list is empty or `k` is less than or equal to zero. In such cases, an empty list is returned immediately.
+
+The main logic involves iterating through the input list in steps of size `k` to create chunks. For each chunk, if its length is less than `k`, it is padded with `None` until it reaches the desired length. These padded chunks are then collected into the result list, which is finally returned.
+
+This approach ensures that every chunk has exactly `k` elements, and it handles the edge case of an empty input list gracefully.

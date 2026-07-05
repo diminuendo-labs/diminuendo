@@ -1,0 +1,4 @@
+**
+To address the task, I first check if the list has fewer than three elements. If so, I return `None` as specified in the criteria. For lists with three or more elements, I remove one occurrence of the minimum and one occurrence of the maximum value using the `remove` method. Finally, I calculate and return the mean of the remaining numbers by dividing their sum by their count.
+
+This approach ensures that exactly one of each the minimum and maximum values is removed, and it handles the edge case where all elements are equal as described in the criteria. The code is concise and readable, adhering to Python best practices.

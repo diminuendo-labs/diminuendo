@@ -1,0 +1,2 @@
+**
+I achieved this by using the built-in `split()` method to split the input string into a list of words. I then used the `min()` function with the `key` argument set to `len`, which returns the shortest word in the list. In case of ties, `min()` will return the first such word; since we want to return the last one, this works as desired. The edge case for an empty string is handled by checking if the length of the list of words is 0 before trying to find the minimum length.

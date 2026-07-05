@@ -1,0 +1,3 @@
+To accomplish this task, I first created a function `average()` that takes a list of numbers as an input. The function checks if the input list is empty, in which case it returns `None`. Then, the arithmetic mean is calculated by dividing the sum of the numbers in the list by its length.
+
+To handle edge cases where the mean may be a whole number (such as when all values are the same), I check if the difference between the mean and its integer representation is zero. If that's true, I convert the mean to a float and return it; otherwise, I round the mean to four decimal places before returning it. This approach ensures that the function always returns a float value, even when the mean is a whole number.

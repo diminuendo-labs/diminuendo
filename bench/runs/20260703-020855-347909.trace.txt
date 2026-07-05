@@ -1,0 +1,2 @@
+**
+To solve this problem, I first sort the list to ensure that all consecutive numbers are adjacent. Then, I iterate through the sorted list while keeping track of the start of each range. If the current number is different from the previous one, it means we've reached the end of a range. I append the appropriate format (either just the number or a range) to the `ranges` list. Finally, I join all ranges with commas and return the result. This approach handles the edge case where an empty list returns an empty string efficiently.

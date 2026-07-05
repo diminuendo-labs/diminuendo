@@ -1,0 +1,2 @@
+**
+I used the `split` method to split the input string into words, and then used a generator expression with `capitalize` to capitalize each word. I filtered out empty strings using an `if` condition inside the generator expression. This approach is concise and readable, and it handles the edge case where the input string contains only underscores (in which case an empty string will be returned).

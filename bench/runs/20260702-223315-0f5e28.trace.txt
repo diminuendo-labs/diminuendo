@@ -1,0 +1,2 @@
+**
+I started by stripping leading and trailing underscores using `s.strip('_')` to handle edge cases where the input might have underscores at the ends. Then I split the string by underscores with `split('_')`, which gives a list of words. The `enumerate` function is used to iterate over this list, capitalizing each word except for the first one (which should not be capitalized) and joining them back together into a single string. This approach ensures that all edge cases are handled correctly, including leading/trailing underscores and repeated underscores between words.

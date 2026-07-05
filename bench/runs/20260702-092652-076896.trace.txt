@@ -1,0 +1,3 @@
+**
+
+I approached this problem by first checking for the edge case of an empty input list and returning an empty string. Then, I sorted the input list to handle duplicates and unsorted input, and initialized variables to keep track of the current and previous numbers in a run. As I iterated through the sorted list, I checked if each number was consecutive to the previous one, and if not, added the complete run to the result and reset the start and end variables. Finally, I added the last run to the result and joined all the pieces together with commas.

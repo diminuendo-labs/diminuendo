@@ -1,0 +1,3 @@
+**
+
+I approached this task by utilizing Python's built-in string method `split()` to divide the input string into a list of words. Then I used the `max()` function with its default behavior (comparing the first elements of each tuple) to find the longest word in the list, which is equivalent to finding the maximum length. This solution handles an edge case where the input string contains no whitespace characters, returning an empty string in this scenario as per the requirements.

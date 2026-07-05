@@ -1,0 +1,2 @@
+**
+I chose to use a list comprehension to create the output list. This approach is concise and readable because it directly expresses the transformation needed on each element of the input list. I handled the edge case where an empty list is passed as input; this function will return an empty list in such a case, which seems like a reasonable behavior given that there's no nesting to remove.

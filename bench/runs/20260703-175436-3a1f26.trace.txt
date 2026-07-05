@@ -1,0 +1,1 @@
+First, I sorted the list and removed duplicates by converting it to a set. Then, I iterated through the sorted list and collapsed consecutive runs of numbers into ranges. If a number was not part of a range, it remained as a single number. Edge case handled: if there are no distinct values in the list, the function returns an empty string ''.

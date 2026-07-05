@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `sorted` function to sort the input list, as this is a straightforward way to ensure that the list is in the correct order. I then used simple conditional statements to handle the edge cases of an empty list and an even or odd length list. The code is concise and readable, with clear variable names and a docstring describing the function's behavior.

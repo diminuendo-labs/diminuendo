@@ -1,0 +1,3 @@
+**
+
+I chose to use the `Counter` class from the `collections` module to efficiently count the occurrences of each word. This approach is concise and readable as it directly maps to the problem statement without unnecessary intermediate steps. I also explicitly handled the edge case where the input string is empty, returning an empty string in this scenario.

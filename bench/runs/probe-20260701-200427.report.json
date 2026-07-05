@@ -1,0 +1,55 @@
+{
+  "probe_id": "20260701-200427",
+  "models": {
+    "A": "qwen2.5-coder:7b",
+    "B": "llama3.1:8b"
+  },
+  "audience": {
+    "A": "llama3.1:8b",
+    "B": "qwen2.5-coder:7b"
+  },
+  "generator": "qwen2.5-coder:7b",
+  "lesson_counts": {
+    "A": 2,
+    "B": 2
+  },
+  "cells": [
+    {
+      "cell": "A|none",
+      "tools": 0,
+      "pass_rate": 1.0,
+      "ev_mean": 1.0
+    },
+    {
+      "cell": "A|A",
+      "tools": 2,
+      "pass_rate": 1.0,
+      "ev_mean": 1.0
+    },
+    {
+      "cell": "A|B",
+      "tools": 2,
+      "pass_rate": 1.0,
+      "ev_mean": 1.0
+    },
+    {
+      "cell": "B|none",
+      "tools": 0,
+      "pass_rate": 0.5,
+      "ev_mean": 0.5
+    },
+    {
+      "cell": "B|A",
+      "tools": 2,
+      "pass_rate": 0.0,
+      "ev_mean": 0.8333333333333333
+    },
+    {
+      "cell": "B|B",
+      "tools": 2,
+      "pass_rate": 0.5,
+      "ev_mean": 1.0
+    }
+  ],
+  "n_note": "Two application tasks per cell, seven evidence checks. A first read of the harness, not a verdict on transfer. At this n even direction is weak. Volume decides."
+}

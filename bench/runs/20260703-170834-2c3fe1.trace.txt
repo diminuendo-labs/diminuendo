@@ -1,0 +1,5 @@
+I used a simple approach to tackle this task. I first sorted the unique elements of the list in descending order. Then, I initialized two variables `max1`, and `max2` to hold the first and second largest distinct values respectively, initially set to negative infinity as we are dealing with numbers only.
+
+I then iterated through the sorted list, and if the current number is greater than `max1`, I updated both `max1` and `max2`. If the current number is between `max1` and `max2` but not equal to either, I updated only `max2`.
+
+Finally, I returned `max2` only if there were at least two distinct values in the list, or `None` otherwise. This approach handles the edge case where there are fewer than two distinct values in the list.

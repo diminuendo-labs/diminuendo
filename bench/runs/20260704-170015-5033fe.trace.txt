@@ -1,0 +1,7 @@
+**
+
+The function `token_case` takes an underscore-delimited string `s` and converts it to camel case while respecting the exceptions specified in `exception_list`. The list comprehension iterates through each token, capitalizing all except those in the exception list. The tokens are then joined together to form the final camel case string. This approach ensures that the function is both concise and readable, adhering to the given criteria.
+
+**Edge Case:**
+
+One notable edge case handled by this function is when a token matches an entry in the `exception_list`. These tokens remain unchanged throughout the conversion process, ensuring their exact form is preserved wherever they appear in the input string.

@@ -1,0 +1,1 @@
+I implemented the `snake_to_camel` function using Python's string methods. The function splits the input string by underscores, capitalizes each non-empty word, and joins them together without leading or trailing underscores. This approach ensures that the resulting camelCase string is correctly formatted according to the given rules.

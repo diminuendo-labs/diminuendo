@@ -1,0 +1,2 @@
+**
+I handled the edge case of empty lists, one-element lists, and two-element lists by checking if the length of the input list is less than 3 in the function. If it is, I immediately return None. For larger lists, I sorted the numbers, dropped the minimum and maximum values (by removing them from their positions), and then calculated the mean of the remaining numbers. This approach ensures that the function always returns a valid result for input lists with at least three elements.

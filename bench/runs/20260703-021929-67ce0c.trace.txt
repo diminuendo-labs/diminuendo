@@ -1,0 +1,2 @@
+**
+I achieved this task by using the built-in `strip()` method to remove leading and trailing underscores, followed by the `replace()` method to remove any remaining underscores. Finally, I used the `capitalize()` method to capitalize the first letter of each word, converting it to camelCase. The function also implicitly handles the edge case where the input string is empty or contains only underscores, returning an empty string in these cases.

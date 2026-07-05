@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to efficiently count the frequency of each number in the list. To handle ties, I created a list of numbers with the maximum frequency and returned the smallest value in this list using the `min` function. This approach is concise and readable while also being efficient due to the use of `Counter`. The edge case where an empty list is input is explicitly handled by returning `None` immediately at the beginning of the function.

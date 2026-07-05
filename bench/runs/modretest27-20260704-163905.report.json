@@ -1,0 +1,339 @@
+{
+  "modretest27_id": "20260704-163905",
+  "packet": "PACKET-027",
+  "performer": "qwen2.5-coder:7b",
+  "audience": "llama3.1:8b",
+  "repeats": 12,
+  "sides": {
+    "fights": {
+      "family": "chunk_pad",
+      "rung": 3,
+      "armed_cell": "armed-B1",
+      "prediction": "DOWN"
+    },
+    "extends": {
+      "family": "token_case",
+      "rung": 1,
+      "armed_cell": "armed-N1",
+      "prediction": "UP"
+    }
+  },
+  "byte_checks": {
+    "armed-B1": true,
+    "armed-N1": true
+  },
+  "lessons": {
+    "armed-B1": {
+      "concept": "Handle empty and None inputs by returning an empty list.",
+      "rule": "When the input list is empty or None, return an empty list instead of attempting to process it.",
+      "pins": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "boundary",
+        "rule_topic": "degenerate"
+      },
+      "gen_task": "chunk",
+      "origin_seat": "mistral:7b"
+    },
+    "armed-N1": {
+      "concept": "When writing a function to split and normalize a string, ensure that leading and trailing whitespace is removed from each field and empty fields are discarded.",
+      "rule": "Follow the direction the task states by trimming whitespace around each field and dropping fields that are empty after trimming.",
+      "pins": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "normalize",
+        "rule_topic": "delimiters"
+      },
+      "gen_task": "split_csvish",
+      "origin_seat": "mistral:7b"
+    }
+  },
+  "stage_a": {
+    "fights": {
+      "side": "fights",
+      "family": "chunk_pad",
+      "rung": 3,
+      "pooled": {
+        "n": 24,
+        "passed": 18,
+        "present_n": 24,
+        "present_passed": 18,
+        "unrunnable_rows": 0
+      },
+      "fails": 6,
+      "qualify_min": 4,
+      "qualified": true,
+      "named_shape": "range-step comprehension",
+      "concentration": 11,
+      "concentrated": true,
+      "survives": true
+    },
+    "extends": {
+      "side": "extends",
+      "family": "token_case",
+      "rung": 1,
+      "pooled": {
+        "n": 12,
+        "passed": 4,
+        "present_n": 12,
+        "present_passed": 4,
+        "unrunnable_rows": 0
+      },
+      "fails": 8,
+      "qualify_min": 2,
+      "qualified": true,
+      "named_shape": "split-capitalize-join",
+      "concentration": 12,
+      "concentrated": true,
+      "survives": true
+    }
+  },
+  "stage_b": {
+    "fights": {
+      "cells": [
+        "none",
+        "armed-B1"
+      ],
+      "drift_bar": "4 of 24 pooled",
+      "check_table": {
+        "chunk_pad([1, 2, 3, 4, 5], 3)": {
+          "rule_check": true,
+          "cells": {
+            "none": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "armed-B1": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 10,
+              "rate": 0.8333333333333334
+            }
+          }
+        },
+        "chunk_pad([1, 2], 5)": {
+          "rule_check": true,
+          "cells": {
+            "none": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "armed-B1": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 10,
+              "rate": 0.8333333333333334
+            }
+          }
+        },
+        "chunk_pad([9, 10, 11, 12], 2)": {
+          "rule_check": false,
+          "cells": {
+            "none": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "armed-B1": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 11,
+              "rate": 0.9166666666666666
+            }
+          }
+        },
+        "chunk_pad([], 2)": {
+          "rule_check": false,
+          "cells": {
+            "none": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "armed-B1": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 12,
+              "rate": 1.0
+            }
+          }
+        },
+        "chunk_pad([5, 6, 7], 1)": {
+          "rule_check": false,
+          "cells": {
+            "none": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "armed-B1": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 11,
+              "rate": 0.9166666666666666
+            }
+          }
+        }
+      },
+      "pooled_rule_checks": {
+        "none": {
+          "n": 24,
+          "passed": 24,
+          "present_n": 24,
+          "present_passed": 24,
+          "unrunnable_rows": 0
+        },
+        "armed-B1": {
+          "n": 24,
+          "passed": 20,
+          "present_n": 24,
+          "present_passed": 20,
+          "unrunnable_rows": 0
+        }
+      }
+    },
+    "extends": {
+      "cells": [
+        "none",
+        "armed-N1"
+      ],
+      "drift_bar": "2 of 12 pooled",
+      "check_table": {
+        "token_case('Set_timer_value')": {
+          "rule_check": true,
+          "cells": {
+            "none": {
+              "rows": 12,
+              "present_n": 11,
+              "passed": 5,
+              "rate": 0.4166666666666667
+            },
+            "armed-N1": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 6,
+              "rate": 0.5
+            }
+          }
+        },
+        "token_case('get_value')": {
+          "rule_check": false,
+          "cells": {
+            "none": {
+              "rows": 12,
+              "present_n": 11,
+              "passed": 5,
+              "rate": 0.4166666666666667
+            },
+            "armed-N1": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 7,
+              "rate": 0.5833333333333334
+            }
+          }
+        },
+        "token_case('count')": {
+          "rule_check": false,
+          "cells": {
+            "none": {
+              "rows": 12,
+              "present_n": 11,
+              "passed": 6,
+              "rate": 0.5
+            },
+            "armed-N1": {
+              "rows": 12,
+              "present_n": 12,
+              "passed": 10,
+              "rate": 0.8333333333333334
+            }
+          }
+        }
+      },
+      "pooled_rule_checks": {
+        "none": {
+          "n": 12,
+          "passed": 5,
+          "present_n": 11,
+          "present_passed": 5,
+          "unrunnable_rows": 1
+        },
+        "armed-N1": {
+          "n": 12,
+          "passed": 6,
+          "present_n": 12,
+          "present_passed": 6,
+          "unrunnable_rows": 0
+        }
+      }
+    }
+  },
+  "census": {
+    "A|fights|none": {
+      "range-step comprehension": 11,
+      "explicit loop-with-pad": 1,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "A|extends|none": {
+      "split-capitalize-join": 12,
+      "regex": 0,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "B|fights|none": {
+      "range-step comprehension": 10,
+      "explicit loop-with-pad": 2,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "B|fights|armed-B1": {
+      "range-step comprehension": 8,
+      "explicit loop-with-pad": 4,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "B|extends|none": {
+      "split-capitalize-join": 12,
+      "regex": 0,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "B|extends|armed-N1": {
+      "split-capitalize-join": 12,
+      "regex": 0,
+      "char-walk": 0,
+      "other": 0,
+      "unrunnable": 0
+    }
+  },
+  "census_no_readings_divergence": 1,
+  "tool_audit_ok": true,
+  "priors": {
+    "P023_refusals_old_ground": "flatten_once 11p/1f, merge_ranges 1p/11f, median 24/24: the first moderator test never got its ground",
+    "P026_registry_candidacy": {
+      "chunk_pad_r3_qwen": "qualified 20/24, census 12/12 range-step comprehension; candidacy only, re-proven here",
+      "token_case_r1_qwen": "qualified 7/12, census 12/12 split-capitalize-join; candidacy only, re-proven here"
+    },
+    "anchors_calibrated_not_confirming": {
+      "longest_word_FIGHTS": "tie lessons on qwen, three same-direction declines, gaps 6/24, 4/24, 11/24",
+      "range_summary_EXTENDS": "lifts on qwen, replicated: 8/12 to 12/12 (P15), 4/12 to 11/12 (P21)"
+    },
+    "transfer_edge": "mistral-origin to qwen has no readings anywhere; every armed row here is its first exposure"
+  },
+  "n_note": "Stage A gates only, both gates required. The four signed readings, the attribution caveat, the no-name watch columns, and the harm reconciliation live in the packet and are applied in its RESULTS. Census never flips a signed exit."
+}

@@ -1,0 +1,2 @@
+**  
+The function `snake_to_camel` first removes any leading or trailing underscores using `strip('_')`. It then splits the string into words based on underscores using `split('_')`. For each non-empty word, it capitalizes the first letter and joins them together without any separators. This approach ensures that repeated underscores are handled correctly and that leading/trailing underscores do not affect the output.

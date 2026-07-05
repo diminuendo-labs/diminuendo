@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-205308-b4cf7b",
+  "node_id": "task-20260704-205308-b4cf7b",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly calculates the trimmed mean, handles an empty input list, and uses a clear naming convention.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": false,
+        "got": "raised ZeroDivisionError('division by zero')",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": false,
+        "got": "0.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n    nums.sort()\n    n = len(nums)\n    median_idx = (n - 1) // 2\n    min_idx, max_idx = int(0.1 * n), int(0.9 * n)\n    return sum(nums[min_idx + 1:median_idx]) / (n - 4 if len(nums) > 3 else n - 2)\n```",
+  "trace": "The function first checks if the list is empty and returns None in that case. Then it sorts the list and calculates the indices for the minimum, maximum, and median values. The trimmed mean is calculated as the average of all elements except the smallest (excluding one occurrence) and the largest (also excluding one occurrence). If the length of the list is less than 4, we adjust the number of elements to exclude by 2 instead of 4 to handle edge cases when the length is exactly 3.",
+  "totals": {
+    "time_s": -0.44592349999999925,
+    "tokens": -56
+  },
+  "files": [
+    "20260704-205308-b4cf7b.crumbs.jsonl",
+    "20260704-205308-b4cf7b.trace.txt"
+  ]
+}

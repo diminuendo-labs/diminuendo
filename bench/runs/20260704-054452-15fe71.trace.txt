@@ -1,0 +1,3 @@
+**
+
+I chose a concise and readable approach using list comprehension to solve the problem. I used the `isinstance` function to check if an element is a list, and if so, added its elements to the new list; otherwise, I simply added the original element to the new list. This way, only the first level of nesting is flattened, while deeper nesting stays nested. I also included a docstring with an example usage of the function.

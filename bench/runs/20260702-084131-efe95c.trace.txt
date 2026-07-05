@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `max` function to find the largest value in the list. This approach is concise and readable, as it leverages a well-known function for finding the maximum value. I also added an edge case check to handle the situation where the input list is empty, which would cause a `ValueError` if we tried to call `max(nums)` directly.

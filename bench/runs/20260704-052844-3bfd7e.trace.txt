@@ -1,0 +1,2 @@
+**
+I chose a simple approach using Python's built-in string methods. The `replace` method is used to remove all underscores, and then the `capitalize` method is used to capitalize the first letter of each word. This effectively converts snake_case to camelCase while dropping leading, trailing, and repeated underscores. One edge case this function handles is when an empty string is passed in, as it returns an empty string as expected.

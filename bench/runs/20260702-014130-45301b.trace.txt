@@ -1,0 +1,2 @@
+**
+The function `snake_to_camel` takes a string `s` as input and converts it from snake_case to camelCase. It splits the input string by underscores, capitalizes each resulting word (excluding empty strings due to leading/trailing/repeated underscores), and then joins them together without any separators. This approach ensures that all words are concatenated in camelCase format, handling edge cases like multiple or trailing underscores by filtering out empty strings during the join operation.

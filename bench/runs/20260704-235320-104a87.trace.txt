@@ -1,0 +1,3 @@
+**
+
+To solve the problem, I first checked if `k` is within the valid range. If not, I returned `None`. Then, I sorted the words using Python's built-in `sorted()` function with a custom key. The key sorts primarily by length in ascending order and secondarily by the ASCII value of the last character in reverse order (i.e., descending). Finally, I returned the word at index `k-1` from the sorted list. This approach ensures that words of equal length are ordered reverse-alphabetically as required.

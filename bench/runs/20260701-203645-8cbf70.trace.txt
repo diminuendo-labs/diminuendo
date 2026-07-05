@@ -1,0 +1,2 @@
+**
+I chose to use the `collections.Counter` class to count the frequency of each character in the string. This allows for concise and readable code, while also handling the edge case where the input string is empty (in which case it returns an empty string). The `min` function with a custom key function is used to find the most frequent character, breaking ties alphabetically by comparing the characters lexicographically.

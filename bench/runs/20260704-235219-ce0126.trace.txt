@@ -1,0 +1,9 @@
+**
+
+To solve this problem, I first handle the edge cases by checking if the input list `words` is empty or if `k` is less than or equal to zero. If either condition is true, the function returns `None`.
+
+Next, I use a dictionary (`length_dict`) to group words by their lengths. This allows me to process words of each length separately.
+
+For each length in the sorted order, I sort the list of words of that length reverse-alphabetically and append them to the main `sorted_words` list. By appending these groups in increasing length order, we ensure that the final list is ordered by word length as required.
+
+Finally, I return the k-th word from the `sorted_words` list if it exists; otherwise, I return `None`. This approach ensures that words of equal length are ordered reverse-alphabetically and handles the edge case where `k` is out of range.

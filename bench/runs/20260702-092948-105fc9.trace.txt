@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for the edge case of an empty list, returning None in that scenario. Then I sorted the input list to ensure the numbers are in order, regardless of their original arrangement. Next, I calculated the middle index of the sorted list using integer division (//) to determine whether the length is odd or even. Finally, I used conditional logic to return either the single middle value when the length is odd, or the average of the two middle values as a float when the length is even.

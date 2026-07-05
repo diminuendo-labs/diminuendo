@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `split` method to separate the input string into a list of words, and then used a generator expression with `max` to find the maximum count. To break ties alphabetically, I filtered the list of words for those that have the maximum count and returned the lexicographically smallest one using `min`. I also handled the edge case where the input string is empty by returning an empty string.

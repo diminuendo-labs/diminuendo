@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `split` method to split the input string into a list of words. This is concise and readable, as it eliminates the need for manual loop iteration or string manipulation. To handle the edge case where the input string is empty, I used the `default` argument in `max`, which returns an empty string if the input list is empty.

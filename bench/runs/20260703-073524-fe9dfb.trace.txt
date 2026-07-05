@@ -1,0 +1,2 @@
+**
+I first handled the edge case of an empty list by checking if `nums` is truthy. Then, I converted the list to a set to remove duplicates and stored it in `distinct_nums`. I sorted this set in descending order as a list called `sorted_distinct_nums`. Finally, I checked if there were at least three distinct values and returned the third largest value (at index 2) or None otherwise. This approach is concise and readable due to its simplicity and directness.

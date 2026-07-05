@@ -1,0 +1,7 @@
+1. The function `range_step(start, stop, step)` checks for invalid input and returns an empty list in such cases to prevent errors.
+
+2. If the start value is greater than or equal to stop, it also returns an empty list because no integers should be generated in this scenario.
+
+3. For valid inputs, a while loop is used to generate a sequence of numbers starting from `start` and incrementing by `step`. The loop continues until the current number becomes greater than or equal to `stop`. This ensures that the range does not include the stop value.
+
+4. One edge case handled in this solution is when start is equal to stop but step is greater than 1, where an empty list should be returned since no numbers are generated.

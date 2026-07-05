@@ -1,0 +1,1 @@
+I used Python's `collections.Counter` to count occurrences of each word. The function first checks if the input string is empty and returns an empty string if true. It then splits the input into lowercase words, counts their occurrences, finds the maximum count, filters words that match this count, sorts them alphabetically, and returns the first one from the sorted list.

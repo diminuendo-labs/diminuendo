@@ -1,0 +1,2 @@
+** 
+I started by sorting the list of pairs based on their start times to ensure that any overlapping or touching ranges are adjacent. Then, I iterated through the sorted list and compared each range with the last one in the `merged` list. If there was an overlap or touch, I updated the end time of the last merged range. Otherwise, I added the current range to the `merged` list. This approach ensures that all overlapping or touching ranges are merged into a single range, and the result is sorted by start time.

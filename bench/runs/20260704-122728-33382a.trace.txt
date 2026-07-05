@@ -1,0 +1,7 @@
+To solve this task, I first checked that the input list is not empty and returned an empty list if it was. Then, to merge overlapping or adjacent ranges, I chose to use a heap to sort the ranges by their ends, with a negative sign for easier comparison.
+
+I started building the merged list by adding the first range from the input list, which might already be the final result if the list is empty or contains only one range. Next, I added the remaining ranges (excluding the first one) to a heap, sorted in ascending order of starts.
+
+To merge overlapping ranges, I maintained a merged list with the merged and unmerged ranges. If the end of the current merged range is less than the start of the next range in the heap, I append that next range to the merged list. This process continues until there are no more ranges left in the heap or the current merged range's end is greater than or equal to the next range's start.
+
+Lastly, I sorted the final merged list and returned it as a result. The edge case I handled was when the first range ends before the next one starts; in this scenario, I add the next range to the merged list without merging, since these ranges must stay separate.

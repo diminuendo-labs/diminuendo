@@ -1,0 +1,2 @@
+**  
+I approached this task by splitting the input string `s` on underscores to isolate individual words, using a generator expression. I then capitalized each word and joined them together without any separators. The condition `if word` ensures that leading, trailing, and repeated underscores are ignored, as empty strings resulting from these cases do not contribute to the final output. This method is both concise and readable, effectively converting snake_case identifiers to camelCase.

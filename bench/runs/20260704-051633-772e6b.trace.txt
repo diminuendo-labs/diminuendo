@@ -1,0 +1,2 @@
+**
+I implemented this function using a simple sorting-based approach, taking advantage of Python's built-in `sort` method. I first checked for an edge case where the input list is empty, returning an empty list in that case. Then, after sorting the pairs based on their start values, I iterated through them to merge overlapping or touching ranges by updating the end value of the last merged range if necessary. This resulted in a concise and readable implementation with clear variable names and minimal comments.

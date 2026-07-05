@@ -1,0 +1,3 @@
+**
+
+I chose to implement the `trimmed_mean` function by first checking for the edge case where the input list is empty. If so, I immediately return None. Otherwise, I sort the input list and identify the minimum and maximum values. Since the problem requires exactly one occurrence of each extreme value to be dropped, I check if the length of the list is less than three; if it is, I raise a ValueError because there aren't enough elements to drop two unique values. Finally, I create a new list by removing the minimum and maximum values from the original list, calculate the sum of this trimmed list, and return its mean (sum divided by count).

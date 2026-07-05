@@ -1,0 +1,3 @@
+**
+
+I chose a simple and straightforward approach to solving this task. Since we only need to consider the presence of '(' and ')' characters, I used the built-in `count()` method to compare their counts in the string. This approach is concise and easy to understand, making it suitable for this specific problem. By ignoring all other characters, I implicitly handled the edge case where everything else than parentheses is present in the input string.

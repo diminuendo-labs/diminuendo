@@ -1,0 +1,2 @@
+**
+I started by checking for the edge case of an empty input list, returning an empty list in this case. I then sorted the input list by start value to make it easier to merge adjacent ranges. The main part of the function iterates over the sorted pairs, merging any that overlap or sit within distance `d` of each other into a single range. This was achieved using simple list slicing and max/min functions for updating merged ranges.

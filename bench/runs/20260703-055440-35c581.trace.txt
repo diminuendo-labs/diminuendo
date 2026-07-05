@@ -1,0 +1,2 @@
+**
+I used Python's built-in string methods `title()` and `isupper()` to achieve the desired title-casing behavior, while also handling words that are already entirely uppercase. To collapse whitespace runs, I split the input string into words using `split()`, then rejoined them with a single space in between each word using `' '.join(...)`. This approach is concise and easy to read, making it suitable for this task.

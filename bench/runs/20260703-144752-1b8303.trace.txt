@@ -1,0 +1,3 @@
+**
+
+I first sorted and deduplicated the input list to simplify the range-finding process. I then iterated over the list, adding a single number to the result when it was not part of a consecutive run with the previous number. When a non-consecutive number was encountered, I added a 'start-end' string representing the current range to the result and updated the start of the next potential range. The final edge case handled is when the input list is empty, which returns an empty string as per the problem statement.

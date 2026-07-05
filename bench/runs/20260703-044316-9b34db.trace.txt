@@ -1,0 +1,6 @@
+- The function `most_common_word` takes a string `s` as input and processes it to find the most common word, breaking ties alphabetically.
+- It first checks if the input string is empty. If so, it returns an empty string as specified.
+- The string is converted to lowercase and split into words. A dictionary `word_count` is used to keep track of the count of each word.
+- After counting, it finds the maximum count using `max(word_count.values())`.
+- A list comprehension filters out the words that have this maximum count and sorts them alphabetically. The last element in this sorted list (which will be the lexicographically largest in case of a tie) is returned as the result.
+- An edge case is provided where multiple words have the same highest count, and it is verified that 'banana' is returned.

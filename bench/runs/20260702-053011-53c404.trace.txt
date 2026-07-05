@@ -1,0 +1,2 @@
+**
+I approached this task by directly utilizing Python's built-in `set` data structure to eliminate duplicates from the input list. This allows us to then use the `sum` function, which will count each distinct value only once. By using the set comprehension syntax (`set(nums)`), we can create a new iterable with unique elements, thereby simplifying the implementation and making it concise while maintaining readability.

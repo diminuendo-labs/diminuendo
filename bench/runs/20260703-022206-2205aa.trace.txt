@@ -1,0 +1,2 @@
+**
+I chose to implement this function using Python's built-in `count` method, which returns the number of occurrences of a substring in the given string. This approach is concise and readable because it directly addresses the task at hand: checking if the counts of '(' and ')' are equal. I also named the edge case "An empty string is balanced" explicitly, as it's an important consideration to include in the function's documentation.

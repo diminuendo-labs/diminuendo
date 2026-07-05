@@ -1,0 +1,4 @@
+- First, we remove consecutive commas using the replace() function, replacing ",,," with a single comma.
+- Then, we split the string on commas and filter out any empty pieces.
+- Finally, we join the remaining non-empty pieces with a comma between each.
+- To handle edge cases where there may be leading or trailing commas, we remove them before splitting to ensure that they are not included in the result.

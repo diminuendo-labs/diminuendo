@@ -1,0 +1,1 @@
+In this solution, we first convert the list to a set which automatically removes any duplicate values. Then we use Python's built-in `sum()` function to add up all the elements in the set. The edge case I handled is when the input list is empty; it returns 0 as expected. This approach ensures the code is concise, readable, and efficient by using sets for removing duplicates.

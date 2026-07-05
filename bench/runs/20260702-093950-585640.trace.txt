@@ -1,0 +1,2 @@
+**
+I implemented the function by first checking if the input list is empty, and returning None in that case. Then, I sorted the input list using the built-in `sorted` function to ensure it's in ascending order. Next, I calculated the middle index of the sorted list using integer division (`//`). Finally, I checked if the length of the list is even or odd, and returned either the average of the two middle values or the single middle value accordingly.

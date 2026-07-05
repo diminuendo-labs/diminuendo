@@ -1,0 +1,2 @@
+**
+I chose to solve this problem by using Python's built-in `count` method, which returns the number of occurrences of a substring in a string. This approach is concise and readable, as it directly addresses the task without requiring additional data structures or algorithms. I also handled the edge case where an empty string is considered balanced, as there are no parentheses to unbalance.

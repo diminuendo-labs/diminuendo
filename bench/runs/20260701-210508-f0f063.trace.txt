@@ -1,0 +1,2 @@
+**
+I solved this task by using the built-in `split()` method to split the input string into a list of words. I then used a generator expression within the `max()` function to find the maximum length and break ties alphabetically by comparing the lengths of the words first, and their lexicographical order as a tiebreaker. Finally, I handled the edge case where the input string is empty by returning an empty string with the `or` operator.

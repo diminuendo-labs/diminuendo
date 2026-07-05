@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `split()` method to split the input string into a list of words. This is more efficient and readable than iterating through the string manually. I also used Python's `max()` function with the `key` argument set to `len` to find the longest word, which simplifies the code and ensures that in case of ties, the last such word is returned.

@@ -1,0 +1,3 @@
+**
+
+I chose to first sort and remove duplicates from the input list, then iterate over it to find consecutive ranges. This approach simplifies the logic for handling single numbers and collapsing runs into ranges. I used a two-pointer technique to track the start and end of each range, which made it easy to append them to the result list when they're complete.

@@ -1,0 +1,1 @@
+I chose to use the `max()` function with a custom key to find the most common word. The key is a tuple where the first element is the negative of the count (to sort in descending order) and the second element is the word itself (to break ties alphabetically). This approach ensures that the function is concise and readable while correctly handling the edge case of an empty string.

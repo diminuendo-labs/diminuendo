@@ -1,0 +1,3 @@
+**
+
+I chose to sort the input list first based on the 'start' value of each pair. This allows us to process the ranges in order, ensuring that we can efficiently merge any overlapping or adjacent pairs without having to re-scan the entire list. To handle the edge case where the input is empty, I added a check before processing the pairs.

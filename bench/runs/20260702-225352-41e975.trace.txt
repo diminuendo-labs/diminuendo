@@ -1,0 +1,3 @@
+**
+
+I approached this task by first sorting the input ranges based on their start value. This allows us to iterate over the pairs and merge overlapping ranges in a single pass. I chose to use a simple iterative approach, keeping track of the current range being built and updating it whenever an overlap is found.

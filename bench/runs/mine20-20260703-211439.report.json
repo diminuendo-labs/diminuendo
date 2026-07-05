@@ -1,0 +1,289 @@
+{
+  "mine20_id": "20260703-211439",
+  "source_run": "onboard17-20260703-161320",
+  "generator": "qwen2.5-coder:7b",
+  "pairs": [
+    {
+      "type": "within_task",
+      "rule_class": "tie_break",
+      "fail_task": "shortest_word",
+      "pass_task": "shortest_word"
+    },
+    {
+      "type": "within_task",
+      "rule_class": "tie_break",
+      "fail_task": "longest_run_char",
+      "pass_task": "longest_run_char"
+    },
+    {
+      "type": "within_task",
+      "rule_class": "distinctness",
+      "fail_task": "sum_of_modes",
+      "pass_task": "sum_of_modes"
+    },
+    {
+      "type": "within_task",
+      "rule_class": "distinctness",
+      "fail_task": "third_largest_distinct",
+      "pass_task": "third_largest_distinct"
+    },
+    {
+      "type": "within_task",
+      "rule_class": "boundary",
+      "fail_task": "chunk",
+      "pass_task": "chunk"
+    },
+    {
+      "type": "within_task",
+      "rule_class": "boundary",
+      "fail_task": "weighted_mean",
+      "pass_task": "weighted_mean"
+    },
+    {
+      "type": "within_task",
+      "rule_class": "normalize",
+      "fail_task": "split_csvish",
+      "pass_task": "split_csvish"
+    },
+    {
+      "type": "sibling",
+      "rule_class": "normalize",
+      "fail_task": "depth_max",
+      "pass_task": "count_word"
+    }
+  ],
+  "outcomes": [
+    {
+      "type": "within_task",
+      "rule_class": "tie_break",
+      "fail_task": "shortest_word",
+      "pass_task": "shortest_word",
+      "attempted": true,
+      "committed": true,
+      "outcome": "committed",
+      "rejects": []
+    },
+    {
+      "type": "within_task",
+      "rule_class": "tie_break",
+      "fail_task": "longest_run_char",
+      "pass_task": "longest_run_char",
+      "attempted": true,
+      "committed": true,
+      "outcome": "committed",
+      "rejects": []
+    },
+    {
+      "type": "within_task",
+      "rule_class": "distinctness",
+      "fail_task": "sum_of_modes",
+      "pass_task": "sum_of_modes",
+      "attempted": true,
+      "committed": true,
+      "outcome": "committed",
+      "rejects": []
+    },
+    {
+      "type": "within_task",
+      "rule_class": "distinctness",
+      "fail_task": "third_largest_distinct",
+      "pass_task": "third_largest_distinct",
+      "attempted": true,
+      "committed": true,
+      "outcome": "committed",
+      "rejects": []
+    },
+    {
+      "type": "within_task",
+      "rule_class": "boundary",
+      "fail_task": "chunk",
+      "pass_task": "chunk",
+      "attempted": true,
+      "committed": true,
+      "outcome": "committed",
+      "rejects": []
+    },
+    {
+      "type": "within_task",
+      "rule_class": "boundary",
+      "fail_task": "weighted_mean",
+      "pass_task": "weighted_mean",
+      "attempted": true,
+      "committed": true,
+      "outcome": "committed",
+      "rejects": []
+    },
+    {
+      "type": "within_task",
+      "rule_class": "normalize",
+      "fail_task": "split_csvish",
+      "pass_task": "split_csvish",
+      "attempted": true,
+      "committed": true,
+      "outcome": "committed",
+      "rejects": []
+    },
+    {
+      "type": "sibling",
+      "rule_class": "normalize",
+      "fail_task": "depth_max",
+      "pass_task": "count_word",
+      "attempted": true,
+      "committed": true,
+      "outcome": "committed",
+      "rejects": []
+    }
+  ],
+  "counts": {
+    "attempts": 8,
+    "accepts": 8,
+    "rejects_by_screen": {}
+  },
+  "store_classes": [
+    "boundary",
+    "distinctness",
+    "normalize",
+    "tie_break"
+  ],
+  "store_lessons": [
+    {
+      "concept": "When handling ties in the task, always return the last word with the shortest length.",
+      "rule": "If multiple words have the same shortest length, the function should return the last such word encountered.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "stated_direction": "last"
+      },
+      "trail": {
+        "gen_task": "shortest_word",
+        "contrast_type": "within_task",
+        "origin_seat": "mistral:7b"
+      }
+    },
+    {
+      "concept": "When multiple runs have the same length, choose the character of the last such run.",
+      "rule": "When several consecutive runs of a single character tie for longest, return the character that appears in the string last.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "stated_direction": "last"
+      },
+      "trail": {
+        "gen_task": "longest_run_char",
+        "contrast_type": "within_task",
+        "origin_seat": "mistral:7b"
+      }
+    },
+    {
+      "concept": "When calculating the sum of modes, only distinct values should be considered, each counted once.",
+      "rule": "When the task states that the function should return the sum of the distinct most frequent values in the list, ensure that each mode is counted only once regardless of its frequency.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "distinctness",
+        "rule_topic": "values"
+      },
+      "trail": {
+        "gen_task": "sum_of_modes",
+        "contrast_type": "within_task",
+        "origin_seat": "mistral:7b"
+      }
+    },
+    {
+      "concept": "When the task states to find a distinct value, consider each unique element separately without repetition.",
+      "rule": "when the task specifies 'distinct' values, ensure that all returned elements are unique and not repeated in the output.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "distinctness",
+        "rule_topic": "values"
+      },
+      "trail": {
+        "gen_task": "third_largest_distinct",
+        "contrast_type": "within_task",
+        "origin_seat": "mistral:7b"
+      }
+    },
+    {
+      "concept": "Handle empty and None inputs by returning an empty list.",
+      "rule": "When the input list is empty or None, return an empty list instead of attempting to process it.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "boundary",
+        "rule_topic": "degenerate"
+      },
+      "trail": {
+        "gen_task": "chunk",
+        "contrast_type": "within_task",
+        "origin_seat": "mistral:7b"
+      }
+    },
+    {
+      "concept": "Handle cases where the input lists are empty or the total weight is zero by returning None.",
+      "rule": "When the task states that the function should return None for empty lists or a zero total weight, follow this direction.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "boundary",
+        "rule_topic": "*"
+      },
+      "trail": {
+        "gen_task": "weighted_mean",
+        "contrast_type": "within_task",
+        "origin_seat": "mistral:7b"
+      }
+    },
+    {
+      "concept": "When writing a function to split and normalize a string, ensure that leading and trailing whitespace is removed from each field and empty fields are discarded.",
+      "rule": "Follow the direction the task states by trimming whitespace around each field and dropping fields that are empty after trimming.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "normalize",
+        "rule_topic": "delimiters"
+      },
+      "trail": {
+        "gen_task": "split_csvish",
+        "contrast_type": "within_task",
+        "origin_seat": "mistral:7b"
+      }
+    },
+    {
+      "concept": "Normalize delimiters before processing.",
+      "rule": "When the task states to normalize delimiters, ensure all relevant characters are standardized according to the specified rules (e.g., case normalization) before proceeding with the comparison or counting operation.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "normalize",
+        "rule_topic": "delimiters"
+      },
+      "trail": {
+        "gen_task": "depth_max",
+        "contrast_type": "sibling",
+        "origin_seat": "mistral:7b"
+      }
+    }
+  ],
+  "n_note": "A supply packet: counts, no treatment claims, no delivery arms. Admission to production stores is a separate ruling."
+}

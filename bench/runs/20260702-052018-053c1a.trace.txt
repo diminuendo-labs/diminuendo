@@ -1,0 +1,2 @@
+**  
+I chose to use Python's built-in `set` data structure, which automatically removes duplicates from a list. The function first checks if the input list is empty and returns 0 in that case (edge case handling). For non-empty lists, it converts the list into a set, computes its sum using the `sum()` function, and returns this sum. This approach ensures that each value is counted only once regardless of how many times it repeats in the original list.

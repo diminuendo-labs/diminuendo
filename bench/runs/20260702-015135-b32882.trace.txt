@@ -1,0 +1,2 @@
+** 
+I used a straightforward approach to solve this task by iterating through each element in the input list. If an element is a list itself, I extended the result list with its elements. Otherwise, I simply appended the element as it is. This ensures that only one level of nesting is flattened, and deeper structures remain nested. The edge case handled here is that if the input contains non-list items (e.g., integers, strings), they are preserved in their original form and order.

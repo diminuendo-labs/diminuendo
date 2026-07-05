@@ -1,0 +1,5 @@
+I approached this task by first checking if the input string `s` is empty. If it is, I immediately return an empty string since there are no words to consider.
+
+Next, I split the input string into a list of words using `s.split()`. This handles the edge case where the input string might contain leading or trailing whitespace, as well as multiple spaces between words.
+
+I then find the shortest word by using Python's built-in `min` function with the `key=len` argument. This gives me the first word with the minimum length if there are ties. However, since we need to return the last such word in case of a tie, I iterate through the list of words in reverse order and return the first word that matches the maximum length found. This ensures that on ties, the last word is returned as required.

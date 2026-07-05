@@ -1,0 +1,2 @@
+** 
+I used a list comprehension to iterate through the input list `lst` in steps of size `k`. For each chunk, I extended it with `None` values if its length was less than `k`, ensuring that every chunk has exactly `k` elements. This approach handles the edge case where the input list is empty by returning an empty list immediately.

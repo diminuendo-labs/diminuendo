@@ -1,0 +1,3 @@
+**
+
+To solve this problem, I used Python's `collections.Counter` to count the occurrences of each word in the input string. The string is first converted to lowercase and split into individual words. Then, I sorted the list of tuples returned by `most_common()` method based on the count (in descending order) and lexicographical order (for ties). Finally, I return the first element from this sorted list, which will be the word with the highest frequency, breaking ties alphabetically. If the input string is empty, an empty string is returned as specified.

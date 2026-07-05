@@ -1,0 +1,2 @@
+**
+I chose to use a list comprehension to create the flattened list. This allows me to concisely iterate over each element in `lst` and check its type. If an element is a list, it contributes its items in order; otherwise, it is kept as is. The edge case I handle is when `lst` itself is empty or contains non-list elements - the function will return an empty list or the original elements, respectively.

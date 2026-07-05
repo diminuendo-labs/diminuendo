@@ -1,0 +1,1 @@
+I used list comprehension to split the input list into consecutive chunks of size `k`. For the final chunk, if it's shorter than `k`, I pad it with None. Lastly, I combined both the padded and non-padded chunks. I chose this approach for its concise and readable nature while still handling the edge case where the final chunk might be shorter than the desired size `k`.

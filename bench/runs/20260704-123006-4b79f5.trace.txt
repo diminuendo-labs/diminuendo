@@ -1,0 +1,3 @@
+The function takes a list of [start, end] pairs as input and first sorts them by the start value. It then iterates through each pair in sorted order. If the current pair starts before the last merged range ends (i.e., they do not overlap), it appends the current pair to the merged list. Otherwise, it merges the current pair with the last merged range by updating its end value if necessary. An empty list is returned when no input pairs are provided.
+
+One edge case handled in this solution is when two ranges overlap or share an endpoint, they will be merged into one range as required.

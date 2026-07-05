@@ -1,0 +1,3 @@
+**
+
+I approached this task by first handling the edge case where an empty string is passed to the function, which should return 0. Then, I split the input string `s` into individual words using Python's built-in `split()` method. For each word, I stripped any leading or trailing punctuation and converted it to lowercase to ensure a case-insensitive comparison. Finally, I compared each processed word with the target word `w` in a case-insensitive manner and incremented the counter if they match. This solution is concise and readable, leveraging Python's string methods for efficient processing.

@@ -1,0 +1,2 @@
+**
+I chose to iterate through the list using `enumerate` to get both the index and value of each element. I kept track of the maximum value seen so far (`max_val`) and its last occurrence's index (`max_index`). In the case where the input list is empty, the function returns `None`. This handles an edge case by explicitly checking for the empty list condition before entering the loop.

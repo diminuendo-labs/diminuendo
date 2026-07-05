@@ -1,0 +1,2 @@
+**  
+The function `chunk_pad` is designed to split a list into chunks of size `k`, padding the final chunk with `None` if necessary. The approach handles edge cases by returning an empty list when the input list is empty or `k` is less than or equal to zero. The solution uses list comprehension to create the chunks and concatenates it with a padded chunk if needed, ensuring every chunk has exactly `k` elements.

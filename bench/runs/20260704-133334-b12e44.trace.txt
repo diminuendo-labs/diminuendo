@@ -1,0 +1,8 @@
+**
+I approached the problem by first checking if the input list `pairs` is empty. If it is, I return an empty list as there are no ranges to merge.
+
+For non-empty lists, I start by sorting the pairs based on their starting value and, in case of a tie, by their ending value in descending order. This helps in easily merging overlapping or adjacent ranges when iterating through them.
+
+I initialize `merged` with the first range from the sorted list. Then, for each subsequent range, I check if it overlaps or touches the last merged range. If it does, I extend the end of the last merged range to include the current range's end. If not, I append the current range as a new segment in `merged`.
+
+This method ensures that all overlapping and adjacent ranges are merged correctly, and the final list is sorted by start value.

@@ -1,0 +1,2 @@
+**
+I chose a simple and direct approach to solve this task. Since we only care about the count of opening and closing parentheses, I used Python's built-in `count` method for strings, which returns the number of occurrences of its first argument in the string. This function works well because it handles edge cases such as an empty string (in which case both counts are 0) and any input with an unequal number of parentheses (in which case the counts will be different).

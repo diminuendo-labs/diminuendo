@@ -1,0 +1,1 @@
+I used a Python set to remove duplicates since sets automatically eliminate duplicate elements. Then, I converted the resulting set back into a list to maintain the original order of first appearance. An edge case handled here is when an empty list is provided, as it will still return an empty list without raising any errors.

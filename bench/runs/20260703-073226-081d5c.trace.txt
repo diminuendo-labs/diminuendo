@@ -1,0 +1,2 @@
+**
+The function `count_distinct_over` first checks if the input list `nums` is empty. If it is, the function returns 0 immediately as there are no elements to compare against `k`. If the list is not empty, it converts the list into a set named `distinct_nums` to remove any duplicate values and ensure each value is counted once. Then, it uses a generator expression within the `sum` function to count how many distinct numbers in `distinct_nums` are strictly greater than `k`. The result is returned as the final output.

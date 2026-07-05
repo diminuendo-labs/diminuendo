@@ -1,0 +1,3 @@
+**
+
+I approached this task by first writing a function that splits the input string on commas using the `split` method. However, I noticed that consecutive delimiters are treated as multiple splits, so I used the `replace` method to replace any occurrences of two or more consecutive commas with a single comma. This allows me to correctly split the string into pieces. Finally, I used the `filter` function in conjunction with a generator expression to drop any empty strings from the list before joining the remaining pieces back together with commas using the `join` method.

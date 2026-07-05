@@ -1,0 +1,2 @@
+**
+I chose to use the `Counter` class from Python's built-in `collections` module to efficiently count the occurrences of each word. This approach is concise and readable, and handles edge cases well. Specifically, it removes leading/trailing whitespace from the input string using the `strip()` method before processing, which is a common edge case that should be handled when working with strings in Python.

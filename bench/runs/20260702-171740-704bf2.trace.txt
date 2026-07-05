@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `split()` method to split the input string into a list of words, and then used the `max()` function with the `key=len` argument to find the longest word. I also included an `or ''` expression at the end to handle the case where the input string is empty. This ensures that an empty string is returned as expected in this edge case.

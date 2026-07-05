@@ -1,0 +1,3 @@
+**
+
+I chose to write this function by leveraging Python's built-in methods, specifically `split()` and list slicing, to efficiently process the input string. This approach allows for a clean and readable implementation that directly addresses the requirements of the task. I handled the edge case of empty strings by first checking if the input string is empty after removing leading and trailing whitespace using `strip()`.

@@ -1,0 +1,3 @@
+** 
+
+The function `count_distinct_pairs` efficiently counts distinct unordered pairs in a list that sum to the target. It uses a set to keep track of seen numbers and another set to store unique pairs. For each number in the list, it calculates its complement (the difference between the target and the current number) and checks if this complement has been seen before. If so, it adds the pair (in sorted order to avoid duplicates like (3, 1) and (1, 3)) to the `pairs` set. Finally, it returns the size of the `pairs` set, which represents the count of distinct pairs. This approach ensures that each pair is counted only once regardless of how many times its values repeat in the list.

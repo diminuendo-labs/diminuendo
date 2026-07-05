@@ -1,0 +1,2 @@
+**  
+I chose to first check if the input string is empty and return an empty string if true. This handles the edge case where there are no words. Next, I split the string into lowercase words and use a dictionary to count occurrences of each word. After determining the maximum count, I create a list of words that have this highest frequency. Finally, I sort this list alphabetically and return the first element, which is the lexicographically smallest word among those with the most occurrences.

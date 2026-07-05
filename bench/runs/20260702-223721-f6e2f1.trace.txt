@@ -1,0 +1,8 @@
+**
+1. **Input Handling:** The function first checks if the input string `s` is empty. If it is, it returns an empty string.
+2. **Word Counting:** It converts the entire string to lowercase and splits it into individual words. A dictionary `word_count` is used to store each word along with its count.
+3. **Finding Maximum Count:** The maximum count of any word is determined using the `max()` function on the values of the dictionary.
+4. **Selecting Most Common Words:** A list comprehension finds all words that have this maximum count.
+5. **Handling Ties:** To break ties alphabetically, it uses the `min()` function on the list of most common words.
+
+This approach ensures the function is both concise and readable while correctly handling edge cases such as empty input strings.

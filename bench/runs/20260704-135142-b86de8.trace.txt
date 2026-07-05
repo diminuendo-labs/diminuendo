@@ -1,0 +1,2 @@
+**
+The function `trimmed_mean` first checks if the input list `nums` is empty, returning `None` in that case. If not, it sorts the list and then removes the first (minimum) and last (maximum) elements using Python's slice notation. The mean of the remaining numbers is then calculated and returned as a float. This approach ensures that exactly one occurrence of the minimum and maximum are removed, and handles the edge case where the input list is empty by returning `None`.

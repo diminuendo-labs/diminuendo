@@ -1,0 +1,2 @@
+**
+I used Python's `collections.Counter` to efficiently count the occurrences of each word after converting the entire input string to lowercase and splitting it into individual words. To handle ties alphabetically, I filtered out the words that have the highest count and then selected the smallest one among them using the `min` function. The edge case where the input string is empty is handled by immediately returning an empty string.

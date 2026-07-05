@@ -1,0 +1,2 @@
+**
+I implemented this function by using Python's built-in `split()` method to split the input string into a list of words. Then, I used the `max()` function with the `key` argument set to `len` to find the longest word in the list. If the input string is empty, the `split()` method will return an empty list, and the `if-else` condition handles this edge case by returning an empty string.

@@ -1,0 +1,2 @@
+**  
+To solve this problem, I first sort the list of pairs by their start times and then iterate through the sorted list to merge overlapping or touching ranges. The key insight is that after sorting, any overlap or touch will be consecutive in the sorted order, allowing us to efficiently check for and handle these cases. I used a simple if-else statement to decide whether to extend the last merged range or add a new one to the result list. This approach ensures that the code is both correct and concise while handling edge cases like empty input gracefully.

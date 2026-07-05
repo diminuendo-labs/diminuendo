@@ -1,0 +1,258 @@
+{
+  "genpass_id": "20260703-053623",
+  "models": {
+    "A": "qwen2.5-coder:7b",
+    "B": "llama3.1:8b"
+  },
+  "generator": "qwen2.5-coder:7b",
+  "r_g": 3,
+  "accounting": {
+    "A": [
+      {
+        "rule_class": "tie_break",
+        "cases": {
+          "max_index": "mixed",
+          "shortest_word": "mixed"
+        },
+        "lessons": [
+          {
+            "task": "max_index",
+            "type": "within_task",
+            "committed": true
+          },
+          {
+            "task": "shortest_word",
+            "type": "within_task",
+            "committed": true
+          }
+        ]
+      },
+      {
+        "rule_class": "distinctness",
+        "cases": {
+          "count_distinct_pairs": "all_pass",
+          "sum_of_modes": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      },
+      {
+        "rule_class": "boundary",
+        "cases": {
+          "weighted_mean": "all_pass",
+          "range_step": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      },
+      {
+        "rule_class": "normalize",
+        "cases": {
+          "title_words": "all_pass",
+          "count_token": "mixed"
+        },
+        "lessons": [
+          {
+            "task": "count_token",
+            "type": "within_task",
+            "committed": false
+          },
+          {
+            "task": "count_token",
+            "sibling": "title_words",
+            "type": "sibling",
+            "committed": true
+          }
+        ]
+      }
+    ],
+    "B": [
+      {
+        "rule_class": "tie_break",
+        "cases": {
+          "max_index": "all_fail",
+          "shortest_word": "all_fail"
+        },
+        "lessons": [],
+        "reason": "all_fail with no passing sibling"
+      },
+      {
+        "rule_class": "distinctness",
+        "cases": {
+          "count_distinct_pairs": "mixed",
+          "sum_of_modes": "all_pass"
+        },
+        "lessons": [
+          {
+            "task": "count_distinct_pairs",
+            "type": "within_task",
+            "committed": true
+          }
+        ]
+      },
+      {
+        "rule_class": "boundary",
+        "cases": {
+          "weighted_mean": "all_pass",
+          "range_step": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      },
+      {
+        "rule_class": "normalize",
+        "cases": {
+          "title_words": "all_pass",
+          "count_token": "mixed"
+        },
+        "lessons": [
+          {
+            "task": "count_token",
+            "type": "within_task",
+            "committed": false
+          },
+          {
+            "task": "count_token",
+            "sibling": "title_words",
+            "type": "sibling",
+            "committed": true
+          }
+        ]
+      }
+    ]
+  },
+  "rejections": [
+    {
+      "seat": "A",
+      "task": "count_token",
+      "type": "within_task",
+      "attempt": 1,
+      "reason": "aim_screen",
+      "detail": "aim screen: rule text shares no ground with the failing check"
+    },
+    {
+      "seat": "A",
+      "task": "count_token",
+      "type": "within_task",
+      "attempt": 2,
+      "reason": "aim_screen",
+      "detail": "aim screen: rule text shares no ground with the failing check"
+    },
+    {
+      "seat": "A",
+      "task": "count_token",
+      "type": "sibling",
+      "attempt": 1,
+      "reason": "aim_screen",
+      "detail": "aim screen: rule text shares no ground with the failing check"
+    },
+    {
+      "seat": "B",
+      "task": "count_token",
+      "type": "within_task",
+      "attempt": 1,
+      "reason": "aim_screen",
+      "detail": "aim screen: rule text shares no ground with the failing check"
+    },
+    {
+      "seat": "B",
+      "task": "count_token",
+      "type": "within_task",
+      "attempt": 2,
+      "reason": "aim_screen",
+      "detail": "aim screen: rule text shares no ground with the failing check"
+    }
+  ],
+  "rejections_by_reason": {
+    "aim_screen": 5
+  },
+  "lessons": {
+    "A": [
+      {
+        "concept": "When the task states to return the index of the last occurrence of the largest value, ensure your function follows this direction.",
+        "rule": "if the largest value appears more than once, return the index of its last occurrence",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "trail": {
+          "gen_task": "max_index",
+          "contrast_type": "within_task"
+        }
+      },
+      {
+        "concept": "When the task states to return the last word in case of a tie, prioritize returning the last word among those with the shortest length.",
+        "rule": "If there are multiple words with the same minimum length, follow the direction the task states by returning the last such word.",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "trail": {
+          "gen_task": "shortest_word",
+          "contrast_type": "within_task"
+        }
+      },
+      {
+        "concept": "When a task states that you should normalize or strip certain elements (like punctuation), always follow the stated direction before proceeding with the core operation.",
+        "rule": "Follow any stated direction for normalization (e.g., removing leading/trailing punctuation) when processing input strings in your function.",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "normalize",
+          "rule_topic": "punctuation"
+        },
+        "trail": {
+          "gen_task": "count_token",
+          "contrast_type": "sibling"
+        }
+      }
+    ],
+    "B": [
+      {
+        "concept": "When the task states that distinct pairs should be counted, ensure that each pair is unique regardless of how many times its values repeat in the input list.",
+        "rule": "Follow the direction the task states to count distinct unordered value pairs only once.",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "distinctness",
+          "rule_topic": "pairs"
+        },
+        "trail": {
+          "gen_task": "count_distinct_pairs",
+          "contrast_type": "within_task"
+        }
+      },
+      {
+        "concept": "When the task states to normalize text, follow the stated direction for handling punctuation.",
+        "rule": "Follow the direction the task states regarding punctuation normalization.",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "normalize",
+          "rule_topic": "punctuation"
+        },
+        "trail": {
+          "gen_task": "count_token",
+          "contrast_type": "sibling"
+        }
+      }
+    ]
+  },
+  "n_note": "R_G=3 per task per seat, one pass. Supply and screen accounting, not a treatment measurement."
+}

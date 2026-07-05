@@ -1,0 +1,64 @@
+{
+  "run_id": "20260703-175733-a0f447",
+  "node_id": "task-20260703-175733-a0f447",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code meets all requirements, correctly handling the input list and edge cases.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": false,
+        "got": "'1-3, 3-4, 5-6'",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": false,
+        "got": "'3-4, 1-4'",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": false,
+        "got": "'5-6, 3-4, 1-2'",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": false,
+        "got": "'7-8'",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef range_summary(nums):\n    if not nums:\n        return ''\n    runs = []\n    current, length = nums[0], 1\n    for n in nums[1:]:\n        if n == current + 1:\n            length += 1\n        else:\n            runs.append((current, current + length))\n            current, length = n, 1\n    runs.append((current, current + length))\n    return ', '.join('-'.join(map(str, r)) if len(r) > 1 else str(r[0]) for r in runs)\n```",
+  "trace": "The function first initializes an empty list 'runs' to store the runs of consecutive numbers. It iterates through the input list and checks if the current number plus one equals the next number, incrementing a counter if it does. When it encounters a number that is not part of the previous run (i.e., different by more than 1), it appends the current run to 'runs' and resets the current number and length counter. Once all numbers are processed, it iterates through 'runs', collapsing multiple numbers into ranges and joining them with commas. The edge case handled here is when an empty list is passed, in which case the function returns an empty string.",
+  "totals": {
+    "time_s": -2.118317900000001,
+    "tokens": -103
+  },
+  "files": [
+    "20260703-175733-a0f447.crumbs.jsonl",
+    "20260703-175733-a0f447.trace.txt"
+  ]
+}

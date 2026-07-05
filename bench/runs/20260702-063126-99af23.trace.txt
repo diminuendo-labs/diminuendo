@@ -1,0 +1,2 @@
+**
+I chose to solve this problem by using the built-in `count` method of Python strings. This method returns the number of occurrences of a substring in the given string, which makes it perfect for counting the number of parentheses of each type. I didn't need any loops or conditional statements because `count` already does what we want, making the code concise and readable. One edge case this function handles is an empty string, which returns True since there are no unbalanced parentheses.

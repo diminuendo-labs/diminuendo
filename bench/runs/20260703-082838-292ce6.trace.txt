@@ -1,0 +1,2 @@
+**
+I approached this problem by first splitting the input string into a list of words using the `split` method, and converting them to lowercase. Then I created a dictionary where each word is a key and its frequency is the value. To handle the edge case where the input string is empty, I added a simple check at the beginning of the function. Finally, I used the built-in `min` function with a custom key function to find the word with the lowest frequency, breaking ties alphabetically.

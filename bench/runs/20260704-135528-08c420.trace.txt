@@ -1,0 +1,2 @@
+**
+I approached the task by first checking for edge cases where the input list is empty or has fewer than three elements. In such cases, it's impossible to remove one minimum and one maximum without violating the requirement, so I return `None`. For valid lists, I remove one occurrence of the minimum and one occurrence of the maximum value using the `remove` method. Finally, I calculate the mean of the remaining numbers by summing them up and dividing by their count, returning the result as a float. This approach ensures that the function is both correct and concise.

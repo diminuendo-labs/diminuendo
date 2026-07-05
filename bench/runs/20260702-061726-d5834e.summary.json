@@ -1,0 +1,51 @@
+{
+  "run_id": "20260702-061726-d5834e",
+  "node_id": "task-20260702-061726-d5834e",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "reason": "The provided code meets all the specified requirements.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting in a list.\n\n    :param lst: List with potential nested elements.\n    :return: A new list with one level of nesting flattened.\n    \n    Edge Case: If the input is not iterable, it returns the input as is.\n    \"\"\"\n    try:\n        return [item for sublist in lst for item in (sublist if isinstance(sublist, list) else [sublist])]\n    except TypeError:\n        return lst\n```\n\n**",
+  "trace": "**\n\nThe function `flatten_once(lst)` takes a single parameter `lst`, which is expected to be a list. It attempts to flatten the list exactly one level deep. This is achieved by using a list comprehension that iterates over each element in the input list. If an element is a list, it expands it into individual elements; otherwise, it keeps the element as is.\n\nTo handle the edge case where the input might not be iterable (e.g., integers or strings), the function includes a `try-except` block to catch `TypeError`. If a `TypeError` occurs during the iteration, indicating that an element is not iterable, the function returns the original input unchanged. This ensures robustness in cases where the input data types are uncertain.",
+  "totals": {
+    "time_s": 22.7975063,
+    "tokens": 759
+  },
+  "files": [
+    "20260702-061726-d5834e.crumbs.jsonl",
+    "20260702-061726-d5834e.trace.txt"
+  ]
+}

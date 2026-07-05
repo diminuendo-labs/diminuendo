@@ -1,0 +1,7 @@
+**
+
+1. **Validation:** The function first checks if the chunk size `k` is greater than 0. If not, it raises a `ValueError` because a non-positive chunk size doesn't make sense for this task.
+2. **Chunking and Padding:** It uses a list comprehension to iterate over the input list in steps of `k`. For each slice of the list (chunk), it pads with `None` if necessary by comparing its length to `k`.
+3. **Edge Case Handling:** The edge case where `k <= 0` is handled by raising an exception, ensuring that the function behaves predictably and avoids potential errors due to invalid input.
+
+This approach ensures that the function is both correct and concise while handling a specified edge case clearly.

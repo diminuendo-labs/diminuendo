@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to count the occurrences of each word. Then, I found the maximum count and checked if there are multiple words with this count. If so, I found the index of their last occurrence by iterating over the input string again and returning the last index where one of these words appears. This approach ensures that in case of a tie, we return the index of the last occurrence instead of the first, as per the problem requirements.

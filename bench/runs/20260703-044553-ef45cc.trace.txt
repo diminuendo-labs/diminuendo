@@ -1,0 +1,1 @@
+I used Python's `collections.Counter` to efficiently count occurrences of each word. After filtering the words that match the maximum count and sorting them alphabetically, I returned the last one in the list, which handles ties by choosing the word that appears last alphabetically as per the edge case requirement.

@@ -1,0 +1,3 @@
+**
+
+I implemented the function using a simple conditional check for edge cases. When either `step` is zero or negative or when `start` is greater than or equal to `stop`, I immediately return an empty list. For other cases, I used Python's built-in `range()` function in conjunction with `list()` to generate the desired sequence of numbers. This approach allows for concise and readable code while ensuring that the function handles the specified edge case correctly.

@@ -1,0 +1,2 @@
+**
+I chose to sort the input ranges by their start value first, which simplifies the merging process. Then, I iterated through the sorted ranges and merged any overlapping or touching ranges into a single range. The edge case of an empty input list is handled directly in the function by returning an empty list.

@@ -1,0 +1,2 @@
+**
+I implemented the function `longest_word(s)` by first checking if the input string `s` is empty or contains only whitespaces. If so, I immediately return an empty string as per the edge case. Otherwise, I split the string into a list of words and use the `max()` function with the `key=len` parameter to find the longest word. Since `max()` returns the first occurrence in case of ties by default, I ensured that if there's a tie for the longest length, the last word encountered is returned as required.

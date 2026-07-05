@@ -1,0 +1,2 @@
+**
+The function `shortest_word` takes a string `s` as input. First, it checks if the string is empty and returns an empty string immediately if true. If not, it splits the string into words using `split()`. It then finds the minimum length of these words. Using list comprehension, it collects all words that have this minimum length, but in reverse order to ensure that in case of ties, the last word is returned. Finally, it returns the last word from this list or an empty string if the list is empty.

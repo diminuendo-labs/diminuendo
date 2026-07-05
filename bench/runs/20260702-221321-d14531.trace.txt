@@ -1,0 +1,2 @@
+**
+I used the `re` module to find all word tokens in the input string using `\b\w+\b`, which matches any word character (equivalent to [a-zA-Z0-9_]) between word boundaries. The `findall` method returns a list of matched words, which I then iterate over with a generator expression to count occurrences of the target token after stripping punctuation and comparing case-insensitively. This approach ensures that substrings inside longer words are never counted, as required.

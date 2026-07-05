@@ -1,0 +1,2 @@
+**
+I implemented the function using a dictionary to store the frequency of each number and then used the built-in `max` function with a custom key to find the maximum frequency. I also handled the edge case where an empty list is passed, returning 0 as per the problem statement. The solution uses a set to iterate over unique numbers in the list, counting them only if their frequency matches the maximum.

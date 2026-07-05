@@ -1,0 +1,2 @@
+**
+I started by sorting the list to ensure that consecutive numbers are adjacent. I then iterated through the sorted list, checking if each number is one more than the previous. If it isn't, I add the appropriate range or single number to the result list. This approach handles edge cases like an empty list and ensures that all distinct values are included. The function uses a concise loop to generate the output string efficiently.

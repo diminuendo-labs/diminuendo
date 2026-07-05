@@ -1,0 +1,2 @@
+**
+I used a set comprehension to generate a new set containing only the numbers that appear exactly once in the original list. A set is used here because it automatically removes duplicates, so we don't need to explicitly filter out repeated values. This approach meets the edge case of an empty list, since `len(set())` returns 0.

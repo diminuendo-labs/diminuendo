@@ -1,0 +1,2 @@
+**
+I first handled the edge case of an empty input list by returning an empty string. Then, I sorted and removed duplicates from the input list to prepare it for the range-finding logic. Next, I iterated through the sorted list, checking if each number is one more than the previous; if so, I combined them into a 'start-end' range, otherwise I just appended the current number as a single value. Finally, I joined all these ranges and numbers with commas to produce the desired output string.

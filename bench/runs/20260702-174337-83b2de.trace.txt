@@ -1,0 +1,2 @@
+**
+I solved this task by using Python's built-in `split()` method to split the string into words, and then applying the `max()` function with the `key=len` argument to find the longest word. I also used a conditional expression (`if s.strip()`) to handle the edge case where the input is a single space, returning an empty string in this case. This approach is concise and readable, and it directly addresses the requirements of the task.

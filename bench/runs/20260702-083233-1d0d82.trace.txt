@@ -1,0 +1,9 @@
+**
+
+1. **Edge Case Handling:** The function first checks if the input string `s` is empty or contains only whitespace using `if not s.strip()`. If true, it returns an empty string `''`.
+
+2. **Splitting and Finding Minimum Length:** The string is split into words using `s.split()`, which handles multiple spaces between words and leading/trailing spaces correctly.
+
+3. **Iterating Backwards for Last Word:** To return the last shortest word in case of ties, the function iterates over the words in reverse order using a generator expression within `next()`. This ensures that the first word encountered with the minimum length is returned, which is actually the last one due to the reverse iteration.
+
+4. **Conciseness and Readability:** The solution uses Python's built-in functions and methods like `split()`, `min()`, and a generator expression, which are both concise and easy to understand.

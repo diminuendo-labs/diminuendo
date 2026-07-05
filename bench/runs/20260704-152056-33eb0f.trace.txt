@@ -1,0 +1,3 @@
+**
+
+I chose a straightforward approach by splitting the input string into tokens using `_` as the separator. I then created a list comprehension to handle exceptions ('URL' and 'ID') while lowercasing the first token and capitalizing the rest. To avoid issues with empty strings (which could occur if the input was an underscore-delimited identifier of two or more consecutive underscores), I used a conditional expression in the `join` method to capitalize tokens only when necessary, effectively preserving their original case.

@@ -1,0 +1,1 @@
+I used Python's built-in functions set() and count() to find the unique values and their occurrences, respectively. I then subtracted the count of repeated values from the total number of unique elements to get the desired result. This approach handles edge cases where there are no repeated elements as well as when all elements are repeated (in which case it returns 0).

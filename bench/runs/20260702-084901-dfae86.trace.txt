@@ -1,0 +1,3 @@
+**
+
+I chose a straightforward approach by leveraging Python's built-in string methods `replace()` and `lower()`. These methods allow us to efficiently remove whitespace characters and lowercase both strings. I also considered edge cases, such as when the input is not a string (e.g., an integer or a list), which would raise an error if not handled properly. However, in this case, we are assuming that the inputs will be valid strings.

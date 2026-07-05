@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for the edge case where the input string is empty, returning an empty string in that case. I then used Python's built-in `Counter` class from the `collections` module to count the occurrences of each word in the string. To find the most common word, I used the `max` function with a custom key function that first sorts by count and then alphabetically by word. Finally, I found the index of the last occurrence of the most common word using the `index` method and returned it if there are multiple occurrences.

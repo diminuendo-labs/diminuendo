@@ -1,0 +1,2 @@
+**
+I chose to use a straightforward approach with a Counter object from the collections module. This allows me to easily get the maximum count and then filter out words that have this count. To break ties alphabetically, I used Python's built-in min function, which returns the smallest item in an iterable. In this case, since we're looking for the last occurrence of the first alphabetical word, using min will return the correct result. I also included a docstring to mention the edge case where an empty string is input, as per the requirements.

@@ -1,0 +1,3 @@
+First, I handled the edge cases where `step` is zero or negative by returning an empty list. Then, I initialized a variable `result` to store the generated sequence and another variable `current` to keep track of the current number in the sequence.
+
+For handling the starting point being equal to or greater than the stopping point, I returned an empty list as it is not valid to generate a range with such conditions. Finally, I used a while loop to iterate through the numbers and append them to `result` until the current number becomes greater than or equal to the stopping point.

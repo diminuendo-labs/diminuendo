@@ -1,0 +1,3 @@
+**
+
+I used the built-in `Counter` class from Python's `collections` module to efficiently count the frequency of each number in the list. Then I found the maximum count using the `max` function with the `values()` method of the counter object. Finally, I used a generator expression to sum up only the distinct most frequent values, which each contribute their value once to the sum, regardless of how often they appeared. The edge case for an empty list is explicitly handled at the beginning of the function.

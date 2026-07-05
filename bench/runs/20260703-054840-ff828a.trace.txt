@@ -1,0 +1,2 @@
+**
+I achieved this by utilizing Python's built-in `split()` method to divide the input string into a list of whitespace-separated words. Then I applied the `min()` function with the `key` argument set to `len`, which returns the shortest word (or one of them in case of ties, as per the requirement). This approach is concise and readable, handling the edge case where an empty string is input, returning an empty string as expected.

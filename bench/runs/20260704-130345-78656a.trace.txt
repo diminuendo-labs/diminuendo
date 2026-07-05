@@ -1,0 +1,3 @@
+The `token_case` function takes an underscore-delimited identifier, splits it into individual tokens, and then checks each token against a provided exception list. If the token is not in the exception list, we convert the first token to lowercase and later tokens to capitalized case before joining them together without separators.
+
+The edge case I named here involves exceptions such as 'URL' and 'ID', which are treated specially and kept in their exact given form wherever they appear. This is necessary since URLs and IDs are often used in programming, and it is common to keep them consistent with the original casing.

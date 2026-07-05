@@ -1,0 +1,2 @@
+**
+I used the built-in `max` function to find the longest word in the string. The `split` method is used to split the input string into a list of words, and the `default=''` argument ensures that an empty string is returned if the input string is empty. By using `key=len`, I ensure that the maximum word is the one with the greatest length, which also handles ties by returning the last such word.

@@ -1,0 +1,2 @@
+**
+I used Python's built-in string methods `split()` to split the string into words and `title()` to convert each word to title case. I also used a generator expression with an if-else condition to check whether each word is entirely uppercase before applying the conversion. The edge case handled by this function is when the input string contains no whitespace, in which case the original string is returned without modification.

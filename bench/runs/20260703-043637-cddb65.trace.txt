@@ -1,0 +1,2 @@
+**
+I used Python's `collections.Counter` to efficiently count the occurrences of each word in the input string. After normalizing the string to lowercase and splitting it into words, I determined the highest frequency and filtered out the words that match this frequency. Finally, I returned the alphabetically first word among these candidates. This approach ensures both correctness and readability while handling the specified edge case.

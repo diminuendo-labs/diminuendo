@@ -1,0 +1,5 @@
+I approached the task by first sorting the input list of pairs based on their start values using the built-in `sorted()` function in Python. Then, I initialized an empty list to store the merged ranges.
+
+To merge overlapping or sharing endpoint ranges, I maintained a current range which initially was set as the first pair from the sorted list. For each subsequent pair, if its start value is less than or equal to the end value of the current range, I updated the end value of the current range with the maximum between the new end and the old one. Otherwise, once the condition fails, I append the merged current range to the merged_ranges list and set the current range as the newly encountered pair.
+
+Finally, I appended the last remaining current range (which may not have been merged due to the edge case) to the merged_ranges list and returned it. The edge case being handled here is when there are no overlapping ranges in the input list, where each range would be treated as a separate range in the output list.

@@ -1,0 +1,2 @@
+**
+I chose to use a list comprehension to strip leading and trailing punctuation from each word, convert them to lowercase, and split the input string into individual words. This approach makes the code concise while maintaining readability. The function then uses the `sum` function with a generator expression to count the occurrences of the target word in the list of stripped and lowercased words. I also explicitly mentioned the edge case where an empty string is passed as input, which returns 0 according to the problem statement.

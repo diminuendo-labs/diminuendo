@@ -1,0 +1,2 @@
+**
+I used Python's built-in string methods `split()` and `capitalize()` to efficiently process the input string. I chose to use generator expression instead of list comprehension to avoid creating intermediate lists, making the code more memory-efficient. The edge case handled by this function is an empty string, which will return an empty string as expected.

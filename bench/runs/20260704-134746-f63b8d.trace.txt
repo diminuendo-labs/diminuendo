@@ -1,0 +1,2 @@
+**
+I sorted the input list of pairs to ensure they are in ascending order based on their start values. I then iterated through each pair and checked if it can be merged with the last one in the `merged` list by comparing their start and end values adjusted by the distance `d`. If the current range overlaps or is within the specified distance from the last range, they are merged into a single range. Otherwise, the current range is added to the `merged` list as a new segment. The function returns the merged list of ranges in sorted order.

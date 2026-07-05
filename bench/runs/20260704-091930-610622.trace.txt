@@ -1,0 +1,3 @@
+In this solution, we iterate over the given input list and check each element to determine whether it's a list or not using `isinstance()`. If it is a list, we append all its elements to our output list using the extend() method. Otherwise, we simply append the non-list element to our output list.
+
+One edge case that is handled by this function is when the input contains nested lists of any depth. Deeper levels of nesting will remain unchanged and only the first level will be flattened as required.

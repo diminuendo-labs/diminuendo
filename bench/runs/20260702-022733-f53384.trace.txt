@@ -1,0 +1,2 @@
+**
+I chose to approach this problem using Python's built-in `split()` method for splitting the input string into a list of whitespace-separated words. This is an effective way to implement the functionality required by the task, as it allows us to easily iterate over each word in the input string and find the longest one. I also included a check to return an empty string if the input string consists only of whitespace characters, handling this edge case explicitly.

@@ -1,0 +1,9 @@
+**
+1. The function first checks if the input list `nums` is empty and returns an empty string immediately if it is.
+2. It sorts the list to ensure that consecutive numbers are adjacent.
+3. It initializes `summary`, `start`, and `end` with the first element of the sorted list.
+4. It iterates through the sorted list starting from the second element:
+   - If the current number (`num`) is exactly one more than `end`, it updates `end`.
+   - Otherwise, it appends either a single number or a range to `summary` based on whether `start` equals `end`, and then resets `start` and `end` to the current number.
+5. After the loop, it handles the last segment of numbers by appending it to `summary`.
+6. Finally, it joins all elements in `summary` with commas and returns the resulting string.

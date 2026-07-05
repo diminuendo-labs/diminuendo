@@ -1,0 +1,2 @@
+**:
+I used a list comprehension to create the chunks. For each index `i` from 0 to the length of the input list `lst`, with increments of `k`, I created a slice `lst[i:i+k]` which represents a chunk of size up to `k`. If this slice is shorter than `k`, I padded it with enough `None` values to make its length `k` using `[None]*(k-len(lst[i:i+k]))`. This approach ensures that every chunk in the output list has exactly `k` elements, and the function handles an empty input list by returning an empty list.

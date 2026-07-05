@@ -1,0 +1,64 @@
+{
+  "run_id": "20260702-092335-f05cc4",
+  "node_id": "task-20260702-092335-f05cc4",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function does not correctly handle edge cases and has logical errors.",
+  "per_criterion": {
+    "correctness": 3,
+    "conciseness": 2,
+    "readability": 2,
+    "edge_cases": 1
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": false,
+        "got": "'1,3-4,2-1,3-2'",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": false,
+        "got": "'1,2-1'",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": false,
+        "got": "'1,1-2,3-4,3-2'",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": false,
+        "got": "''",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef range_summary(nums):\n    if not nums:\n        return ''\n\n    distinct_nums = sorted(set(nums))\n    result = []\n\n    for i in range(len(distinct_nums) - 1):\n        diff = distinct_nums[i + 1] - distinct_nums[i]\n        if diff == 1:\n            continue\n        elif diff > 1:\n            last_range = f'{distinct_nums[i]}-{distinct_nums[i+1]-1}'\n            result.append(last_range)\n\n    if distinct_nums[0] != distinct_nums[-1]:\n        single_num = str(distinct_nums[0])\n        result.insert(0, single_num)\n\n    for num in distinct_nums[1:-1]:\n        range_str = f'{num}-{num-1}'\n        result.insert(len(result), range_str)\n\n    return ','.join(result)\n```\n\n**",
+  "trace": "**\nI approached this problem by first checking for the edge case where the input list is empty, returning an empty string immediately. I then sorted and deduplicated the list of numbers to ensure they are in ascending order. Finally, I iterated over the list to identify consecutive ranges, appending them as 'start-end' strings to a result list; single numbers were treated as such.",
+  "totals": {
+    "time_s": -2.8618404,
+    "tokens": 37
+  },
+  "files": [
+    "20260702-092335-f05cc4.crumbs.jsonl",
+    "20260702-092335-f05cc4.trace.txt"
+  ]
+}

@@ -1,0 +1,3 @@
+**
+
+I chose to write a simple iterative function that processes the input string character by character. When it encounters an opening parenthesis, it pushes it onto a stack; when it encounters a closing parenthesis, it checks if there's a matching opening one on top of the stack (i.e., not empty). After processing all characters, the function returns True only if the stack is empty, indicating that all parentheses were properly matched. I didn't normalize delimiters before processing because this problem specifically asks for handling only '(' and ')' characters, so normalization wouldn't add any value here. The edge case of an empty string being balanced is explicitly handled in the docstring.

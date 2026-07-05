@@ -1,0 +1,3 @@
+**
+
+To solve this task, I used a set to keep track of the numbers that have been seen so far and another set to store the distinct pairs. This approach allows for efficient lookups when checking if a pair has been seen before. By sorting the elements in each pair (if they are different) and storing them as tuples, I can ensure that equivalent pairs are treated as the same regardless of their order. The edge case where an empty list is passed to the function is explicitly handled by returning 0 immediately.

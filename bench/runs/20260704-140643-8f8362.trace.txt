@@ -1,0 +1,2 @@
+**  
+I first checked if the list length is less than or equal to 2, in which case I immediately returned `None` as specified. Then, I removed one occurrence of both the minimum and maximum values from the list using the `remove()` method. Finally, I calculated the mean by summing the remaining numbers and dividing by their count, returning the result as a float. This approach ensures that the function handles all edge cases as required, including when all values are equal.

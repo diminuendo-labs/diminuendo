@@ -1,0 +1,3 @@
+**
+
+I approached this task by first identifying the core requirements: splitting the string, treating consecutive commas as one split, dropping empty strings at the start and end, and rejoining with single commas between each piece. I chose to use a list comprehension for filtering out empty strings, which is concise and readable while clearly expressing the intent. To handle the edge case of input with leading or trailing spaces around commas, I included a brief note in the function's docstring rather than coding it explicitly, as this is typically handled by the `split` method when called without arguments.

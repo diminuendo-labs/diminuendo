@@ -1,0 +1,51 @@
+{
+  "run_id": "20260702-064310-7802a0",
+  "node_id": "task-20260702-064310-7802a0",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function correctly flattens one level of nesting. It is reasonably concise but could benefit from better readability. The edge case where the input is a single-element nested list is handled well.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_case_handling": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting.\n\n    Args:\n        lst (list): The input list to be flattened.\n\n    Returns:\n        list: A new list with one level of nesting removed.\n    \"\"\"\n    result = []\n    for item in lst:\n        if isinstance(item, list):\n            # Handle edge case where the input is a single-element nested list\n            if len(item) == 1 and not isinstance(item[0], list):\n                result.append(item[0])\n            else:\n                result.extend(item)\n        else:\n            result.append(item)\n    return result\n```\n\n**",
+  "trace": "**\nI approached this task by using a simple iterative approach with a for loop to iterate over the input list. I used the `isinstance` function to check if an item is a list, and if so, extended the result list with its items. If the item is not a list, it's simply appended to the result list. This way, deeper nesting stays nested as required. The edge case handled is when the input list contains a single-element nested list, where only the innermost element is extracted and added to the result.",
+  "totals": {
+    "time_s": 20.6286928,
+    "tokens": 785
+  },
+  "files": [
+    "20260702-064310-7802a0.crumbs.jsonl",
+    "20260702-064310-7802a0.trace.txt"
+  ]
+}

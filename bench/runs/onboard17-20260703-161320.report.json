@@ -1,0 +1,634 @@
+{
+  "onboard17_id": "20260703-161320",
+  "seat": "mistral:7b",
+  "audience": "llama3.1:8b",
+  "stage0_installed": true,
+  "armed_byte_check": true,
+  "stage1": {
+    "repeats": 6,
+    "supply_table": [
+      {
+        "name": "max_index",
+        "pool": "generation",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "runs": 6,
+        "fails": 6,
+        "passes": 0,
+        "case": "all_fail",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "shortest_word",
+        "pool": "generation",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "runs": 6,
+        "fails": 4,
+        "passes": 2,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "count_unique",
+        "pool": "generation",
+        "rule_class": "distinctness",
+        "rule_topic": "values",
+        "runs": 6,
+        "fails": 0,
+        "passes": 6,
+        "case": "all_pass",
+        "headroom": false,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "sum_distinct",
+        "pool": "generation",
+        "rule_class": "distinctness",
+        "rule_topic": "values",
+        "runs": 6,
+        "fails": 0,
+        "passes": 6,
+        "case": "all_pass",
+        "headroom": false,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "average",
+        "pool": "generation",
+        "rule_class": "boundary",
+        "rule_topic": "empty",
+        "runs": 6,
+        "fails": 1,
+        "passes": 5,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "chunk",
+        "pool": "generation",
+        "rule_class": "boundary",
+        "rule_topic": "degenerate",
+        "runs": 6,
+        "fails": 1,
+        "passes": 5,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "count_word",
+        "pool": "generation",
+        "rule_class": "normalize",
+        "rule_topic": "case",
+        "runs": 6,
+        "fails": 0,
+        "passes": 6,
+        "case": "all_pass",
+        "headroom": false,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "equal_ignoring_spaces",
+        "pool": "generation",
+        "rule_class": "normalize",
+        "rule_topic": "whitespace",
+        "runs": 6,
+        "fails": 2,
+        "passes": 4,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "count_distinct_pairs",
+        "pool": "generation",
+        "rule_class": "distinctness",
+        "rule_topic": "pairs",
+        "runs": 6,
+        "fails": 4,
+        "passes": 2,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "sum_of_modes",
+        "pool": "generation",
+        "rule_class": "distinctness",
+        "rule_topic": "values",
+        "runs": 6,
+        "fails": 5,
+        "passes": 1,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "weighted_mean",
+        "pool": "generation",
+        "rule_class": "boundary",
+        "rule_topic": "degenerate",
+        "runs": 6,
+        "fails": 1,
+        "passes": 5,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "range_step",
+        "pool": "generation",
+        "rule_class": "boundary",
+        "rule_topic": "degenerate",
+        "runs": 6,
+        "fails": 1,
+        "passes": 5,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "title_words",
+        "pool": "generation",
+        "rule_class": "normalize",
+        "rule_topic": "case",
+        "runs": 6,
+        "fails": 1,
+        "passes": 5,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "count_token",
+        "pool": "generation",
+        "rule_class": "normalize",
+        "rule_topic": "punctuation",
+        "runs": 6,
+        "fails": 6,
+        "passes": 0,
+        "case": "all_fail",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "longest_run_char",
+        "pool": "generation",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "runs": 6,
+        "fails": 5,
+        "passes": 1,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "least_frequent_word",
+        "pool": "generation",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "runs": 6,
+        "fails": 5,
+        "passes": 1,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "count_distinct_over",
+        "pool": "generation",
+        "rule_class": "distinctness",
+        "rule_topic": "values",
+        "runs": 6,
+        "fails": 0,
+        "passes": 6,
+        "case": "all_pass",
+        "headroom": false,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "third_largest_distinct",
+        "pool": "generation",
+        "rule_class": "distinctness",
+        "rule_topic": "values",
+        "runs": 6,
+        "fails": 2,
+        "passes": 4,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "mode_count",
+        "pool": "generation",
+        "rule_class": "distinctness",
+        "rule_topic": "values",
+        "runs": 6,
+        "fails": 1,
+        "passes": 5,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "clamp",
+        "pool": "generation",
+        "rule_class": "boundary",
+        "rule_topic": "degenerate",
+        "runs": 6,
+        "fails": 0,
+        "passes": 6,
+        "case": "all_pass",
+        "headroom": false,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "nth_page",
+        "pool": "generation",
+        "rule_class": "boundary",
+        "rule_topic": "degenerate",
+        "runs": 6,
+        "fails": 5,
+        "passes": 1,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "split_csvish",
+        "pool": "generation",
+        "rule_class": "normalize",
+        "rule_topic": "delimiters",
+        "runs": 6,
+        "fails": 2,
+        "passes": 4,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "depth_max",
+        "pool": "generation",
+        "rule_class": "normalize",
+        "rule_topic": "delimiters",
+        "runs": 6,
+        "fails": 6,
+        "passes": 0,
+        "case": "all_fail",
+        "headroom": true,
+        "conjunction_eligible": true
+      },
+      {
+        "name": "second_largest",
+        "pool": "apply",
+        "rule_class": "distinctness",
+        "rule_topic": "values",
+        "runs": 6,
+        "fails": 2,
+        "passes": 4,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "most_common_word",
+        "pool": "apply",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "runs": 6,
+        "fails": 6,
+        "passes": 0,
+        "case": "all_fail",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "top_k",
+        "pool": "apply",
+        "rule_class": "boundary",
+        "rule_topic": "degenerate",
+        "runs": 6,
+        "fails": 6,
+        "passes": 0,
+        "case": "all_fail",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "dedupe",
+        "pool": "apply",
+        "rule_class": "distinctness",
+        "rule_topic": "values",
+        "runs": 6,
+        "fails": 5,
+        "passes": 1,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "mode",
+        "pool": "apply",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "runs": 6,
+        "fails": 5,
+        "passes": 1,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "merge_ranges",
+        "pool": "apply",
+        "rule_class": "boundary",
+        "rule_topic": "degenerate",
+        "runs": 6,
+        "fails": 6,
+        "passes": 0,
+        "case": "all_fail",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "longest_word",
+        "pool": "apply",
+        "rule_class": "tie_break",
+        "rule_topic": "direction",
+        "runs": 6,
+        "fails": 5,
+        "passes": 1,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "median",
+        "pool": "apply",
+        "rule_class": "boundary",
+        "rule_topic": "degenerate",
+        "runs": 6,
+        "fails": 1,
+        "passes": 5,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "range_summary",
+        "pool": "apply",
+        "rule_class": "distinctness",
+        "rule_topic": "values",
+        "runs": 6,
+        "fails": 6,
+        "passes": 0,
+        "case": "all_fail",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "flatten_once",
+        "pool": "apply",
+        "rule_class": "boundary",
+        "rule_topic": "degenerate",
+        "runs": 6,
+        "fails": 6,
+        "passes": 0,
+        "case": "all_fail",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "snake_to_camel",
+        "pool": "apply",
+        "rule_class": "normalize",
+        "rule_topic": "delimiters",
+        "runs": 6,
+        "fails": 6,
+        "passes": 0,
+        "case": "all_fail",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "nth_smallest",
+        "pool": "apply",
+        "rule_class": "distinctness",
+        "rule_topic": "values",
+        "runs": 6,
+        "fails": 1,
+        "passes": 5,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "is_rotation",
+        "pool": "apply",
+        "rule_class": "boundary",
+        "rule_topic": "empty",
+        "runs": 6,
+        "fails": 6,
+        "passes": 0,
+        "case": "all_fail",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "truncate_words",
+        "pool": "apply",
+        "rule_class": "normalize",
+        "rule_topic": "whitespace",
+        "runs": 6,
+        "fails": 0,
+        "passes": 6,
+        "case": "all_pass",
+        "headroom": false,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "balanced",
+        "pool": "apply",
+        "rule_class": "normalize",
+        "rule_topic": "delimiters",
+        "runs": 6,
+        "fails": 0,
+        "passes": 6,
+        "case": "all_pass",
+        "headroom": false,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "interleave",
+        "pool": "apply",
+        "rule_class": "boundary",
+        "rule_topic": "degenerate",
+        "runs": 6,
+        "fails": 6,
+        "passes": 0,
+        "case": "all_fail",
+        "headroom": true,
+        "conjunction_eligible": false
+      },
+      {
+        "name": "count_pairs",
+        "pool": "apply",
+        "rule_class": "distinctness",
+        "rule_topic": "pairs",
+        "runs": 6,
+        "fails": 3,
+        "passes": 3,
+        "case": "mixed",
+        "headroom": true,
+        "conjunction_eligible": false
+      }
+    ],
+    "eligible_pairs": [
+      {
+        "type": "within_task",
+        "rule_class": "tie_break",
+        "fail_task": "shortest_word",
+        "pass_task": "shortest_word",
+        "rule_topic": "direction"
+      },
+      {
+        "type": "within_task",
+        "rule_class": "tie_break",
+        "fail_task": "longest_run_char",
+        "pass_task": "longest_run_char",
+        "rule_topic": "direction"
+      },
+      {
+        "type": "within_task",
+        "rule_class": "distinctness",
+        "fail_task": "sum_of_modes",
+        "pass_task": "sum_of_modes",
+        "rule_topic": "values"
+      },
+      {
+        "type": "within_task",
+        "rule_class": "distinctness",
+        "fail_task": "third_largest_distinct",
+        "pass_task": "third_largest_distinct",
+        "rule_topic": "values"
+      },
+      {
+        "type": "within_task",
+        "rule_class": "boundary",
+        "fail_task": "chunk",
+        "pass_task": "chunk",
+        "rule_topic": "degenerate"
+      },
+      {
+        "type": "within_task",
+        "rule_class": "boundary",
+        "fail_task": "weighted_mean",
+        "pass_task": "weighted_mean",
+        "rule_topic": "degenerate"
+      },
+      {
+        "type": "within_task",
+        "rule_class": "normalize",
+        "fail_task": "split_csvish",
+        "pass_task": "split_csvish",
+        "rule_topic": "delimiters"
+      },
+      {
+        "type": "sibling",
+        "rule_class": "normalize",
+        "fail_task": "depth_max",
+        "pass_task": "count_word",
+        "rule_topic": "delimiters"
+      }
+    ]
+  },
+  "stage2": {
+    "ran": true,
+    "repeats": 12,
+    "drift_bar": "2 of 12",
+    "check_table": {
+      "range_summary([1, 2, 3, 5])": {
+        "rule_check": false,
+        "cells": {
+          "none": {
+            "n": 12,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "armed": {
+            "n": 12,
+            "passed": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "range_summary([3, 1, 2, 2])": {
+        "rule_check": true,
+        "cells": {
+          "none": {
+            "n": 12,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "armed": {
+            "n": 12,
+            "passed": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "range_summary([5, 3, 1])": {
+        "rule_check": false,
+        "cells": {
+          "none": {
+            "n": 12,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "armed": {
+            "n": 12,
+            "passed": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "range_summary([])": {
+        "rule_check": false,
+        "cells": {
+          "none": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "armed": {
+            "n": 12,
+            "passed": 6,
+            "rate": 0.5
+          }
+        }
+      },
+      "range_summary([7])": {
+        "rule_check": false,
+        "cells": {
+          "none": {
+            "n": 12,
+            "passed": 2,
+            "rate": 0.16666666666666666
+          },
+          "armed": {
+            "n": 12,
+            "passed": 6,
+            "rate": 0.5
+          }
+        }
+      }
+    },
+    "tool_audit_ok": true
+  },
+  "n_note": "Stage 1 is a probe, counts not claims. Stage 2's signed three-exit reading and the 2-of-12 bar live in the packet and are applied in its RESULTS."
+}

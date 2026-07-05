@@ -1,0 +1,2 @@
+The function `longest_word(s)` splits the input string `s` into a list of words using the space character as the delimiter. Then, it applies the built-in `max()` function with a custom key (a function that computes a comparison value for each element in the iterable). In this case, the key function is `len`, which returns the length of each word. If there are no words (i.e., an empty string), the function returns an empty string ''.
+An edge case handled here is when the input string doesn't contain any whitespace, in which case it correctly returns an empty string.

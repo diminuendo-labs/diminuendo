@@ -1,0 +1,2 @@
+**  
+I handled the edge case where the input list is empty by returning an empty list at the beginning of the function. For the main logic, I used a list comprehension to iterate through the list and create chunks of size `k`. If the last chunk is smaller than `k`, it pads with `None` using another list comprehension. This approach ensures that the code is concise and readable while handling the specified edge case appropriately.

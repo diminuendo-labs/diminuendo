@@ -1,0 +1,2 @@
+**
+I implemented this function by utilizing Python's built-in `split()` method to divide the input string into a list of words, and then using the `min()` function with the `key` argument set to `len` to find the shortest word. I also included an edge case in the docstring where it explicitly states that an empty string returns ''. The concise nature of this solution makes it easy to read and understand.

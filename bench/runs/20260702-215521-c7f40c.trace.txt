@@ -1,0 +1,6 @@
+**
+The function `shortest_word(s)` takes a string `s` as input and returns the shortest whitespace-separated word. If the input string is empty, it returns an empty string.
+
+To find the shortest word, we first check if the string is empty and return an empty string immediately if true. Otherwise, we split the string into words using the `split()` method, which splits by whitespace.
+
+Next, we use the `min()` function with the `key=len` argument to find the shortest word among the list of words. To ensure that in case of ties, the last such word is returned, we iterate over the list from the end towards the beginning using a for loop. During this iteration, if we find a word with the length equal to that of the current shortest word, we return it immediately. This approach ensures that we handle edge cases and return the correct result efficiently.

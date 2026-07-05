@@ -1,0 +1,2 @@
+**
+The `median` function first checks if the input list `nums` is empty and returns `None` if true. It then sorts the list in ascending order. The length of the sorted list is stored in `n`, and the middle index is calculated using integer division (`n // 2`). If `n` is even, the median is the average of the two middle numbers, which are accessed with indices `mid - 1` and `mid`. If `n` is odd, the median is the single middle number at index `mid`. This approach ensures that the function correctly handles both even and odd lengths of lists.

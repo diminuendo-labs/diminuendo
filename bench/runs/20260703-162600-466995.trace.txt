@@ -1,0 +1,1 @@
+The function uses list comprehension to create a new list containing the chunks of the given size. The `range(0, len(lst), size)` generates indices at which to start each chunk. If the size is zero or negative, it returns an empty list. An edge case handled here is when the input list is empty (in that case, the function also returns an empty list).

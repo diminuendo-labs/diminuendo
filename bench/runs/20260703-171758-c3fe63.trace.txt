@@ -1,0 +1,1 @@
+The function uses a dictionary to store the frequency of each number in the list. It then finds the maximum frequency and iterates through the dictionary to find the smallest number with that frequency, breaking ties in favor of the smaller number. The edge case handled is when the input list is empty, in which case the function returns None.

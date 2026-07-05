@@ -1,0 +1,2 @@
+**
+I chose to use the `Counter` class from the `collections` module to count the occurrences of each word in the input string. This allows for concise and readable code. I also included a clear docstring to explain what the function does, its parameters, and its return value. The edge case for an empty string is explicitly handled at the beginning of the function, as requested.

@@ -1,0 +1,2 @@
+**
+I handled the edge case where an empty list is passed to the function by returning an empty string immediately. I used a single loop to iterate over the sorted and deduplicated numbers, keeping track of the start and end of each range. When encountering a new number that's not consecutive with the current end, I append the previous range (if it's not a single number) and start a new one. This approach allows me to avoid unnecessary comparisons and keep the code concise.

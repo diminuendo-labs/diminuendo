@@ -1,0 +1,2 @@
+**
+I solved the problem by first removing duplicates and sorting the input list in ascending order. Then, I iterated through the sorted list to identify consecutive runs of numbers and build the ranges. When a gap is found (i.e., `num != start + 1`), I added the current range to the output list if it's not already a single number, and reset the starting point for the next range. This approach ensures that consecutive runs are collapsed into 'start-end' ranges, while single numbers remain as single numbers.

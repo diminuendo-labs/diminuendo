@@ -1,0 +1,6 @@
+- I first check if the input string is empty. If it is, I immediately return an empty string as specified.
+- I convert the entire string to lowercase and split it into individual words.
+- I create a dictionary to count occurrences of each word.
+- I find the maximum count among all words.
+- I filter out the words that have this maximum count.
+- Finally, I use `min()` with these words to break ties alphabetically and return the smallest one.

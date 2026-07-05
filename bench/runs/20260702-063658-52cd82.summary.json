@@ -1,0 +1,51 @@
+{
+  "run_id": "20260702-063658-52cd82",
+  "node_id": "task-20260702-063658-52cd82",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function is correct, the code is mostly concise and readable, but one edge case (empty list handling) could be better.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness_and_readability": 4,
+    "edge_case_handled": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting.\n\n    Args:\n        lst (list): A list that may contain other lists as elements.\n\n    Returns:\n        list: A new list with one level of nesting removed.\n    \"\"\"\n    result = []\n    for elem in lst:\n        if isinstance(elem, list):\n            result.extend(elem)\n        else:\n            result.append(elem)\n    return result\n```\n\n**",
+  "trace": "**\nI chose to use a simple iterative approach, checking each element in the input list to see if it's also a list. If so, I used the `extend` method to add its elements to the result list. This way, every other element is kept as is, and deeper nesting remains nested. One edge case this function handles is when the input list contains non-list elements at the top level.",
+  "totals": {
+    "time_s": 17.7787582,
+    "tokens": 671
+  },
+  "files": [
+    "20260702-063658-52cd82.crumbs.jsonl",
+    "20260702-063658-52cd82.trace.txt"
+  ]
+}

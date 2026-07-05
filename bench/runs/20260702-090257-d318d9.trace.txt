@@ -1,0 +1,3 @@
+**
+
+To solve this problem, I first handle the edge case where the input string `s` is empty by returning an empty string. Then, I split the string into individual words and iterate over them in reverse order to ensure that if there are multiple longest words, the last one is returned. During each iteration, I keep track of the maximum word length encountered so far and store any word that matches this maximum length in a list. Finally, I return the last element from this list, which will be the last longest word encountered. This approach ensures that the function meets all the criteria specified.

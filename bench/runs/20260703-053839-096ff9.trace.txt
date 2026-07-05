@@ -1,0 +1,11 @@
+**
+
+I started by checking if the input string `s` is empty. If it is, I return an empty string immediately as per the edge case requirement.
+
+Next, I split the string into a list of words using `s.split()`. This handles multiple spaces and leading/trailing whitespace effectively.
+
+To find the shortest length, I use a generator expression inside `min(len(word) for word in words)`, which iterates over each word to determine the minimum length.
+
+Then, I create a list comprehension to gather all words that have this shortest length. By iterating over the words in reverse order with `reversed(words)`, I ensure that if there are ties (multiple shortest words), the last one is selected.
+
+Finally, I return the last element of this list (`shortest_words[-1]`) which is the shortest word as per the requirement.

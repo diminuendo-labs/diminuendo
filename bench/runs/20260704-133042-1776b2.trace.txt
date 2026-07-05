@@ -1,0 +1,2 @@
+**  
+I implemented the function using list comprehension. The expression `lst[i:i+k]` slices the list from index `i` to `i+k`. To ensure each chunk has exactly `k` elements, I appended `[None]*(k - len(lst[i:i+k]))`, which adds `None` values if the slice is shorter than `k`. The loop iterates over the list in steps of `k` using `range(0, len(lst), k)`, ensuring that each chunk starts at the correct position. This approach handles all edge cases efficiently and concisely.

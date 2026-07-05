@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for an edge case where the input list is empty, returning an empty list in that case. Then, I sorted the input ranges by their start value using the built-in `sort()` method and a lambda function as the key. After sorting, I iterated through the ranges to merge any overlapping or adjacent ranges. In each iteration, if a current range overlaps with the last merged range, I updated the last range in the merged list; otherwise, I added the current range to the merged list.

@@ -1,0 +1,3 @@
+**
+
+To solve this problem, I chose to use a set to remove duplicates from the input list. This is more efficient than using a list comprehension or other methods for removing duplicates, especially for large lists of integers. By sorting the resulting set in descending order and returning the third element (index 2), I ensured that the function correctly handles edge cases such as when there are fewer than three distinct values.

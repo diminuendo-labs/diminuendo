@@ -1,0 +1,2 @@
+**
+I solved the problem by first converting the input list to a sorted set of distinct numbers. Then, I iterated over this sorted list, building up ranges and appending them to the result list as needed. When encountering consecutive numbers, I merged them into a single range by keeping track of both the start and end values of each current range. The function handles the edge case where an empty input list is given, returning an empty string in this case.

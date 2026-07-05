@@ -1,0 +1,6 @@
+**
+
+- I started by checking if the input list is empty. If it is, I immediately return `None` to handle this edge case.
+- Next, I initialized `max_val` and `max_index` with the last element of the list and its index respectively. This way, even if all elements are equal (including negative numbers), they will be correctly identified as the maximum.
+- I then iterate through the list from right to left starting from the second-to-last element. During each iteration, I compare the current element with `max_val`. If the current element is greater than or equal to `max_val`, I update `max_val` and set `max_index` to the current index.
+- Finally, after completing the loop, I return `max_index`, which holds the index of the last occurrence of the maximum value in the list.

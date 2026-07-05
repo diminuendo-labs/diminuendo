@@ -1,0 +1,3 @@
+In this solution, I handled the empty and None inputs by returning None. To compute the trimmed mean, we first sort the input list and count the occurrences of the minimum and maximum values. If the minimum or maximum value appears more than once in the sorted list, an error is raised to handle the edge case where the input list should contain unique minimum and maximum values.
+
+Next, we determine the median index and calculate the sum of the sorted list. After that, we subtract either the minimum or maximum value (depending on its count) from the sum based on whether it needs to be removed. Lastly, we return the trimmed sum divided by the total number of valid elements in the list (the length minus two if the list has more than two elements).

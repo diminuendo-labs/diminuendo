@@ -1,0 +1,2 @@
+** 
+I implemented the `kth_ordered` function by first checking if the input list is empty or if `k` is out of range, returning `None` in such cases. For valid inputs, I used Python's built-in `sorted` function with a custom key. The key sorts primarily by the length of each word and secondarily by the ASCII value of the last character in reverse order to achieve reverse-alphabetical sorting for words of equal length. Finally, I returned the `k-th` word from the sorted list (adjusting for zero-based indexing).

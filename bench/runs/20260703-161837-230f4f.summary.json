@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-161837-230f4f",
+  "node_id": "task-20260703-161837-230f4f",
+  "task": "Write a Python function count_unique(nums) returning how many values appear exactly once in the list. Values that repeat do not count at all: [1, 2, 2, 3] has two such values, 1 and 3. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The submitted code meets all the specified criteria.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_unique([1, 2, 2, 3])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_unique([5, 5])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([7])",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef count_unique(nums):\n    return len(set(nums)) - len({num for num in nums if nums.count(num) > 1})\n```",
+  "trace": "I used Python's built-in functions set() and count() to find the unique values and their occurrences, respectively. I then subtracted the count of repeated values from the total number of unique elements to get the desired result. This approach handles edge cases where there are no repeated elements as well as when all elements are repeated (in which case it returns 0).",
+  "totals": {
+    "time_s": 18.592662699999998,
+    "tokens": 572
+  },
+  "files": [
+    "20260703-161837-230f4f.crumbs.jsonl",
+    "20260703-161837-230f4f.trace.txt"
+  ]
+}

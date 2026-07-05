@@ -1,0 +1,2 @@
+**
+I chose to use a simple iterative approach, splitting the input string into words and iterating over them in reverse order. This way, if there's a tie for the longest word, we'll find it last and return that one. I also included an explicit docstring to describe the function's behavior. The edge case of returning an empty string when given an empty input is handled by simply not splitting the input string.

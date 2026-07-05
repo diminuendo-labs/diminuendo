@@ -1,0 +1,2 @@
+**
+I used the concept of handling string manipulation tasks in Python by considering edge cases related to whitespace. Specifically, I applied the idea of using built-in methods such as `strip()` or in this case, `rstrip()`, to remove leading and trailing whitespace before processing the string. This ensured that the function behaves correctly even when given an input with only trailing whitespace. By using a simple and efficient approach, I was able to write a concise and readable function that meets all the requirements specified in the task.

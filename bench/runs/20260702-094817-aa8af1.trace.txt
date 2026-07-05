@@ -1,0 +1,2 @@
+**
+I implemented a simple stack-based approach to solve this problem. The function iterates over each character in the string, pushing opening parentheses onto the stack and popping them when a closing parenthesis is encountered. If a closing parenthesis appears before its matching partner (i.e., the stack is empty), or if there are unmatched opening parentheses at the end of the string, the function returns False; otherwise, it returns True. This approach ensures that an empty string is considered balanced, as required by the problem statement.

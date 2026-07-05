@@ -1,0 +1,2 @@
+**
+I chose the approach of keeping track of the longest word seen so far and updating it whenever a longer word is found. This way, when there are multiple words of maximum length, the last one encountered is returned. I also included a docstring to explain what the function does and how it behaves in edge cases, including empty strings. This approach handles the tie-breaking rule by design, as it always returns the last maximum-length word seen.

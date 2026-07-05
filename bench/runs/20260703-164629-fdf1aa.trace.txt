@@ -1,0 +1,3 @@
+To solve this problem, I created a function that iterates through the input string and checks if each character matches the current one. If it does, the count of consecutive characters is increased; otherwise, the counter is reset. The longest run of characters is stored along with its last occurrence in the variables `max_length` and `last_char`. Finally, an empty string is returned when no characters appear more than once in the input string.
+
+One edge case I handled was when there are several consecutive runs of equal length. In this situation, the function returns the character from the last such run instead of the first one, as specified in the task description.

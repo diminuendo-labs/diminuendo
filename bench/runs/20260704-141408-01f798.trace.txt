@@ -1,0 +1,2 @@
+**  
+I used Python's `re` module to handle splitting by multiple delimiters (either commas or semicolons). The `strip()` method is called on the input string to remove leading and trailing whitespace before splitting. I then filter out any empty strings from the resulting list of pieces. Finally, I join the non-empty pieces with a single comma in between. This approach ensures that consecutive delimiters are treated as one split, and empty pieces at the start or end of the input string are dropped.

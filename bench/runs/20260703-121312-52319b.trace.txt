@@ -1,0 +1,2 @@
+**  
+To solve this problem, I first handle the edge case of an empty list by returning an empty string. Then, I sort and deduplicate the input list to ensure it is in ascending order and contains no duplicates. Using a for loop, I iterate through the list to identify consecutive ranges and single numbers, appending them appropriately to a result list. Finally, I join the elements of this list with commas and return the resulting string.

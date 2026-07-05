@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking for an edge case where the input list is empty. If so, I returned an empty list immediately. Then, I sorted the pairs based on their start value using Python's built-in sort method with a lambda function as the key. After that, I iterated over the sorted pairs and merged any overlapping or touching ranges by updating the last range in my result list `merged`. If a pair didn't overlap with the previous one, it was appended to the result list.

@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-055014-f3d3fc",
+  "node_id": "task-20260703-055014-f3d3fc",
+  "task": "Write a Python function count_distinct_pairs(nums, target) returning how many distinct unordered value pairs in the list sum to target, each distinct pair counted once no matter how many times its values repeat: [1, 3, 1, 3] with target 4 has exactly one such pair. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function is mostly correct and handles the edge cases well.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_cases_handled": 2
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "count_distinct_pairs([1, 3, 1, 3], 4)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      },
+      {
+        "call": "count_distinct_pairs([2, 2, 2], 4)",
+        "ok": false,
+        "got": "0",
+        "expect": "1"
+      },
+      {
+        "call": "count_distinct_pairs([0, 5, 2, 3, 5, 0], 5)",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_distinct_pairs([], 1)",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef count_distinct_pairs(nums, target):\n    \"\"\"\n    Count distinct unordered value pairs in the list that sum to target.\n\n    Args:\n        nums (list): List of numbers.\n        target (int): Target sum.\n\n    Returns:\n        int: Number of distinct pairs that sum to target.\n    \"\"\"\n    if not nums:  # Handle edge case: empty list\n        return 0\n    \n    seen = set()\n    count = set()\n    \n    for num in nums:\n        complement = target - num\n        \n        if complement == num:  # Handle edge case: perfect square\n            if complement in seen and (complement, num) not in count:\n                count.add((num, complement))\n        \n        else:\n            pair = tuple(sorted((num, complement)))\n            \n            if pair in seen:\n                continue\n            \n            seen.add(num)\n            seen.add(complement)\n            \n            count.add(pair)\n    \n    return len(count)\n```\n\n**",
+  "trace": "**\n\nTo solve this task, I used a set to keep track of the numbers that have been seen so far and another set to store the distinct pairs. This approach allows for efficient lookups when checking if a pair has been seen before. By sorting the elements in each pair (if they are different) and storing them as tuples, I can ensure that equivalent pairs are treated as the same regardless of their order. The edge case where an empty list is passed to the function is explicitly handled by returning 0 immediately.",
+  "totals": {
+    "time_s": -4.939865900000001,
+    "tokens": 5
+  },
+  "files": [
+    "20260703-055014-f3d3fc.crumbs.jsonl",
+    "20260703-055014-f3d3fc.trace.txt"
+  ]
+}

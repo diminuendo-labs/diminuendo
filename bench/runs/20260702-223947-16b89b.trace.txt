@@ -1,0 +1,2 @@
+**  
+To solve the task, I decided to split the input string `s` by underscores `_`. This naturally handles leading, trailing, and repeated underscores as they result in empty strings when split. Using a generator expression within `''.join()`, each non-empty word is capitalized using `.capitalize()` and then joined together without any separators. This approach ensures that only complete words are considered for capitalization, adhering to the snake_to_camel naming convention. The edge case where an empty string is passed directly returns an empty string as well.

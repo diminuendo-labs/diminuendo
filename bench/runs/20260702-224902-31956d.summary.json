@@ -1,0 +1,33 @@
+{
+  "run_id": "20260702-224902-31956d",
+  "node_id": "task-20260702-224902-31956d",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function does not correctly handle nested elements beyond one level and lacks a clear edge case.",
+  "per_criterion": {
+    "correct": 3,
+    "concise_and_readable": 2,
+    "at_least_one_edge_case_named": 1
+  },
+  "evidence": {
+    "passed": false,
+    "results": [],
+    "error": "File \"C:\\Users\\bradl\\AppData\\Local\\Temp\\tmphxduk7cy.py\", line 11\n    return [x for x in lst if isinstance(x, list) else x]\n                                                  ^^^^\nSyntaxError: invalid syntax"
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting.\n\n    Args:\n        lst (list): The input list, potentially containing nested lists.\n\n    Returns:\n        list: A new list with elements from the original list and its first-level sublists.\n    \"\"\"\n    return [x for x in lst if isinstance(x, list) else x]\n```\n\n**",
+  "trace": "**\n\nI implemented the `flatten_once` function using a list comprehension to create a new list that includes all elements from the input list. This approach is concise and easy to understand. I chose to use the `isinstance` function to check if an element is a list, which allows me to keep non-list elements as-is and only flatten the first level of nesting. The edge case this function handles is when the input list contains empty lists, which will be ignored in the flattened output.",
+  "totals": {
+    "time_s": -2.8165157,
+    "tokens": 16
+  },
+  "files": [
+    "20260702-224902-31956d.crumbs.jsonl",
+    "20260702-224902-31956d.trace.txt"
+  ]
+}

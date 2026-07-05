@@ -1,0 +1,3 @@
+**
+
+I chose to use a simple and concise approach using list comprehension. I defined the function `flatten_once` that takes a list as input and returns a new list with elements from sublists added at the correct positions. This approach is clear and effective, allowing me to efficiently flatten one level of nesting while preserving deeper nesting. The edge case this function handles is when the input list itself is a sublist within another list, in which case it will be flattened correctly.

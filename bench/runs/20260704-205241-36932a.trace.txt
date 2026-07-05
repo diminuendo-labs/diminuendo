@@ -1,0 +1,3 @@
+First, I sorted the input list of numbers in ascending order. Then, I identified the index of the middle element if the list has an odd length or the indices of the two middle elements when the list has an even length.
+
+Next, I calculated the sum of all elements excluding the first and last occurrences of minimum and maximum values, and divided it by the number of remaining elements minus 2 to get the trimmed mean as a float. In case of an empty list, I returned None as specified in the criteria.

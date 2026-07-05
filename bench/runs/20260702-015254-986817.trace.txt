@@ -1,0 +1,2 @@
+**
+I chose to use a dictionary to count the occurrences of each word after preprocessing the input string by converting it to lowercase and stripping any leading/trailing whitespace. After counting, I found the maximum frequency and then sorted the words that had this frequency alphabetically before returning the first one in the sorted list. This approach ensures the function is both correct and concise while handling edge cases like empty strings gracefully.

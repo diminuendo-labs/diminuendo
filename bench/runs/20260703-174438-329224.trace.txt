@@ -1,0 +1,1 @@
+The approach is to first concatenate the two input lists, then create a list of every other element using slicing, and finally handle the edge case where one list is longer than the other by appending the remaining elements from the longer list to the result. This ensures that when one list ends, it's followed by the entirety of the second list if it has more items.

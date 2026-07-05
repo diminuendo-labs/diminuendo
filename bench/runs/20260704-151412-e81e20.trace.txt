@@ -1,0 +1,2 @@
+**
+I first checked for edge cases by returning None for lists with less than three elements. Then, I used list comprehension to create a new list (`trimmed_nums`) that excludes the minimum and maximum values from the input list. Finally, I returned the mean of this trimmed list using the built-in `sum` function divided by the length of the trimmed list.

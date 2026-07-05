@@ -1,0 +1,2 @@
+**
+I chose to use the `collections.Counter` class to efficiently count the occurrences of each word. To break ties alphabetically when there are multiple words with the same highest count, I used a list comprehension to create a list of all such words and then returned the lexicographically smallest one using the built-in `min` function. This approach is concise and readable, handling the edge case where an empty string returns ''.

@@ -1,0 +1,7 @@
+**
+- The function first checks if the input list is empty and returns an empty list if true.
+- It initializes a `merged` list with the first range from the input, ensuring it's sorted.
+- The function then iterates over each subsequent range in the input list. For each range, it compares the start of the current range to the end of the last merged range.
+- If the gap between the ends is 2 or less, the ranges overlap or are adjacent enough that they should be merged into one by extending the end of the last range.
+- If the gap is greater than 2, the current range is added as a new entry in the `merged` list.
+- Finally, the function returns the merged list sorted by the start of each range.

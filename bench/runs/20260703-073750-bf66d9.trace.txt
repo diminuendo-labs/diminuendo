@@ -1,0 +1,2 @@
+**
+I started by checking for the edge case of an empty list, which should return 0. Then I used a dictionary to count the frequency of each number and iterated over the list to keep track of the maximum frequency and the corresponding distinct modes. When a new number has a higher or equal frequency than the current maximum, it is added to the set of modes. This ensures that only distinct modes are counted. The function returns the size of the set of modes at the end.

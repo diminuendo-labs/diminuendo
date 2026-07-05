@@ -1,0 +1,2 @@
+**
+I approached this task by directly implementing a generator expression that uses list slicing to create the desired chunks. I also added an immediate check at the beginning of the function to handle the edge case where `size` is zero or negative. This ensures that the function returns an empty list as specified, without needing further iterations over the input list.

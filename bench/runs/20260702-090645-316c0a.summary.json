@@ -1,0 +1,63 @@
+{
+  "run_id": "20260702-090645-316c0a",
+  "node_id": "task-20260702-090645-316c0a",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "reason": "The function meets all requirements and passes the provided test case.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness": 4,
+    "readability": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": true,
+        "got": "'1-3,5'",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": true,
+        "got": "'1-3'",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": true,
+        "got": "'1,3,5'",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": true,
+        "got": "'7'",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef range_summary(nums):\n    if not nums:\n        return ''\n    \n    nums = sorted(set(nums))\n    summary = []\n    i = 0\n    \n    while i < len(nums):\n        start = nums[i]\n        while i + 1 < len(nums) and nums[i] == nums[i + 1] - 1:\n            i += 1\n        if start != nums[i]:\n            summary.append(f'{start}-{nums[i]}')\n        else:\n            summary.append(str(start))\n        i += 1\n    \n    return ','.join(summary)\n\n# Edge case: An empty list should return an empty string.\nempty_list_test = range_summary([])\nassert empty_list_test == '', \"Edge case of an empty list failed.\"\n```\n\n**",
+  "trace": "**\n\n- The function `range_summary` starts by checking if the input list is empty. If it is, it returns an empty string immediately as per the edge case handling.\n  \n- The input list is first sorted and duplicates are removed to ensure we're working with unique and ordered values.\n\n- We use a while loop to iterate through the sorted numbers. For each number, we check if there's a consecutive range (i.e., the next number is exactly one greater). If such a range exists, we continue moving forward until the end of the range is found.\n\n- Once a range or single number is identified, it's formatted and added to the summary list. If it was a range, it's formatted as 'start-end'; if not, it remains a single number.\n\n- Finally, the summary list items are joined with commas to form the final result string.",
+  "totals": {
+    "time_s": 21.5770531,
+    "tokens": 944
+  },
+  "files": [
+    "20260702-090645-316c0a.crumbs.jsonl",
+    "20260702-090645-316c0a.trace.txt"
+  ]
+}

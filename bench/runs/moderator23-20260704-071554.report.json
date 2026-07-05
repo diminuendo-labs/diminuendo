@@ -1,0 +1,149 @@
+{
+  "moderator23_id": "20260704-071554",
+  "packet": "PACKET-023",
+  "performer": "qwen2.5-coder:7b",
+  "audience": "llama3.1:8b",
+  "repeats": 12,
+  "sweeps": {
+    "fights": [
+      "flatten_once",
+      "merge_ranges"
+    ],
+    "extends": [
+      "median"
+    ]
+  },
+  "qualify_rule": "standing fraction, canonical accounting: 2 of 12 pooled one-rule, 4 of 24 pooled two-rule, passes AND fails, unrunnable-as-fail",
+  "byte_check": true,
+  "annotations": {
+    "flatten_once": [
+      "flatten_once([1, [2, [3, 4]]])"
+    ],
+    "merge_ranges": [
+      "merge_ranges([[1, 3], [4, 6]])"
+    ],
+    "median": [
+      "median([5, 5])",
+      "median([])"
+    ]
+  },
+  "lesson": {
+    "concept": "Handle empty and None inputs by returning an empty list.",
+    "rule": "When the input list is empty or None, return an empty list instead of attempting to process it.",
+    "pins": {
+      "operation": "write_code",
+      "target": "function",
+      "language": "python",
+      "size": "small",
+      "rule_class": "boundary",
+      "rule_topic": "degenerate"
+    },
+    "gen_task": "chunk",
+    "origin_seat": "mistral:7b"
+  },
+  "census_taxonomy": {
+    "flatten_once": [
+      "comprehension",
+      "loop-with-branch",
+      "other",
+      "unrunnable"
+    ],
+    "merge_ranges": [
+      "sweep",
+      "other",
+      "unrunnable"
+    ],
+    "median": [
+      "sort-and-index",
+      "other",
+      "unrunnable"
+    ]
+  },
+  "stage_a": {
+    "fights": [
+      {
+        "task": "flatten_once",
+        "rule_checks": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 11,
+          "present_n": 12,
+          "present_passed": 11,
+          "unrunnable_rows": 0
+        },
+        "fails": 1,
+        "qualify_min": 2,
+        "qualified": false
+      },
+      {
+        "task": "merge_ranges",
+        "rule_checks": 1,
+        "pooled": {
+          "n": 12,
+          "passed": 1,
+          "present_n": 12,
+          "present_passed": 1,
+          "unrunnable_rows": 0
+        },
+        "fails": 11,
+        "qualify_min": 2,
+        "qualified": false
+      }
+    ],
+    "extends": [
+      {
+        "task": "median",
+        "rule_checks": 2,
+        "pooled": {
+          "n": 24,
+          "passed": 24,
+          "present_n": 24,
+          "present_passed": 24,
+          "unrunnable_rows": 0
+        },
+        "fails": 0,
+        "qualify_min": 4,
+        "qualified": false
+      }
+    ]
+  },
+  "grounds": {
+    "fights": null,
+    "extends": null
+  },
+  "stage_b": {},
+  "census": {
+    "A|fights|flatten_once|none": {
+      "comprehension": 2,
+      "loop-with-branch": 10,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "A|fights|merge_ranges|none": {
+      "sweep": 12,
+      "other": 0,
+      "unrunnable": 0
+    },
+    "A|extends|median|none": {
+      "sort-and-index": 12,
+      "other": 0,
+      "unrunnable": 0
+    }
+  },
+  "census_no_readings_divergence": 0,
+  "tool_audit_ok": true,
+  "priors": {
+    "anchors_calibrated_not_confirming": {
+      "longest_word_FIGHTS": "tie lessons on qwen, three same-direction declines, gaps 6/24, 4/24, 11/24, direction never a rate",
+      "range_summary_EXTENDS": "lifts on qwen, replicated: none 8/12 to rev 12/12 and hand 12/12 (P15), none 4/12 to rev 11/12 and hand 10/12 (P21)"
+    },
+    "boundary_class_to_qwen": "no prior boundary-class delivery cell to this seat exists; these are the first",
+    "calibration_n1_seatA": {
+      "flatten_once": 0.33,
+      "merge_ranges": 0.75,
+      "median": 1.0
+    },
+    "collateral_safety": "the amplifier's harm columns clean four consecutive measurements"
+  },
+  "n_note": "Stage A gates only. The three signed readings, the census's pre-registered descriptive role, and the no-name watch columns live in the packet and are applied in its RESULTS. Census data never flips a signed exit."
+}

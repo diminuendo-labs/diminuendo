@@ -1,0 +1,9 @@
+**
+
+1. **Edge Case Handling:** The function first checks if the input list `pairs` is empty. If it is, an empty list is returned immediately as there are no ranges to merge.
+
+2. **Sorting:** The input list of pairs is sorted based on their start values. This ensures that any potential merging can be done in a sequential manner, simplifying the merging logic.
+
+3. **Merging Logic:** A single loop iterates through the sorted pairs starting from the second element. For each pair, it checks if there is an overlap or if the current pair is within distance 1 of the last merged pair. If so, it extends the end of the last merged pair to cover the current one. Otherwise, it appends the current pair as a new segment in the merged list.
+
+This approach ensures that all overlapping and close pairs are merged correctly while maintaining the sorted order of the ranges in the output.

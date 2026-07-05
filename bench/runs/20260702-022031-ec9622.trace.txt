@@ -1,0 +1,2 @@
+**
+I chose to approach this problem by sorting the input pairs and then iterating through them to merge overlapping ranges. This is a straightforward and efficient way to solve the problem, as it avoids the need for complex data structures or algorithms. I also included an edge case in the docstring to highlight that an empty input list will be returned as an empty list. The code itself is concise and readable, with clear comments to explain its behavior.

@@ -1,0 +1,3 @@
+First, I created a set `nums_greater` to store only the distinct values that are strictly greater than `k`. Using a set allows me to remove duplicate values as sets automatically do not allow duplicates. Lastly, I returned the length of the set `nums_greater`, which gives us the count of distinct numbers greater than `k`.
+
+One edge case this function handles is when `nums` is empty, it returns 0. By using a set initially, if there are no elements in `nums` that are greater than `k`, then the length of the set will still be zero (since sets are empty), and the function correctly returns 0.

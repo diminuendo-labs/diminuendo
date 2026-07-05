@@ -1,0 +1,2 @@
+1. To avoid duplicate counting of elements and to make the function more efficient, I converted the input list into a set.
+2. Then, I used a generator expression to iterate through the set and count only the numbers greater than `k`. This approach guarantees that each number will be counted once no matter how many times it repeats in the original list.

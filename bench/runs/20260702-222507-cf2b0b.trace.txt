@@ -1,0 +1,2 @@
+**
+I chose to split the input string into a list of words using `s.split()`. I then find the maximum length of these words. To handle ties and ensure that the last longest word is returned, I iterate over the list in reverse order using `reversed(words)` and return the first word that matches the maximum length found. This approach ensures that if there are multiple words with the same maximum length, the last one encountered will be selected. The function also handles the edge case where an empty string is passed, returning an empty string as specified.

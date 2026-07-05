@@ -1,0 +1,3 @@
+**
+
+I started by handling the edge case where the input list is empty, returning an empty string immediately. Then, I sorted the list and removed duplicates using `set(nums)`. I iterated through the unique, sorted numbers, identifying consecutive sequences and adding them to the result list either as a single number or as a range. This approach ensures that each distinct value is counted once and that consecutive runs are collapsed into ranges.

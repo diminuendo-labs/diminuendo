@@ -1,0 +1,63 @@
+{
+  "run_id": "20260703-020437-a7cc28",
+  "node_id": "task-20260703-020437-a7cc28",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The solution meets all the criteria, correctly handling edge cases.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": true,
+        "got": "'1-3,5'",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": true,
+        "got": "'1-3'",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": true,
+        "got": "'1,3,5'",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": true,
+        "got": "'7'",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef range_summary(nums):\n    if not nums:\n        return ''\n    \n    nums = sorted(set(nums))\n    summary = []\n    i = 0\n    \n    while i < len(nums):\n        start = nums[i]\n        while i + 1 < len(nums) and nums[i + 1] == nums[i] + 1:\n            i += 1\n        if start != nums[i]:\n            summary.append(f'{start}-{nums[i]}')\n        else:\n            summary.append(str(start))\n        i += 1\n    \n    return ','.join(summary)\n```\n\n**",
+  "trace": "**\n\nTo achieve the desired functionality, the function first checks if the input list is empty and returns an empty string if it is. It then sorts the unique elements of the list to ensure they are in ascending order. The function iterates through the sorted list, identifying consecutive ranges and appending them to a summary list in the required format. If a single number is encountered, it is also added as a separate element. Finally, the function joins all elements of the summary list into a string separated by commas. This approach ensures that the code is both concise and readable while correctly handling various edge cases, including an empty input list.",
+  "totals": {
+    "time_s": 21.0717261,
+    "tokens": 829
+  },
+  "files": [
+    "20260703-020437-a7cc28.crumbs.jsonl",
+    "20260703-020437-a7cc28.trace.txt"
+  ]
+}

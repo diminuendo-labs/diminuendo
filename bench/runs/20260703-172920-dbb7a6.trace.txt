@@ -1,0 +1,3 @@
+The provided function uses a generator expression to iterate through the input list `lst`. If an element is a list (checked using `isinstance()`), it yields each element from that list. Otherwise, it simply yields the non-list element. This way, the function flattens one level of nesting without affecting deeper nestings and preserves other types of elements like strings or numbers.
+
+One edge case handled by this function is when the input list contains sublists with mixed content (e.g., a list containing both integers and lists). The function correctly flattens only those sublists while keeping the other integer values intact.

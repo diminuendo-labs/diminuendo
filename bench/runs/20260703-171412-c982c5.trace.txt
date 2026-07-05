@@ -1,0 +1,2 @@
+- I created a function `top_k(nums, k)` that sorts the unique numbers in the list `nums` in descending order using the built-in `sorted()` function and sets aside duplicates with the set data type.
+- The sorted list is then sliced to return the first `min(len(nums), k)` elements which ensures we return at most the specified `k` values, even if it exceeds the length of the list. If 'k' is zero or negative, an empty list is returned.

@@ -1,0 +1,2 @@
+**
+I implemented this function using a dictionary `counts` to store the frequency of each number. After counting frequencies, I found the maximum frequency `max_count`. Then, I used a list comprehension to find all numbers with this maximum frequency. Finally, I returned the sum of these modes, converted to a set to remove duplicates and then summed up. The edge case for an empty list is explicitly handled at the beginning of the function.

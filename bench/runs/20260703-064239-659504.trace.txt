@@ -1,0 +1,2 @@
+**
+I approached this task by defining a function `longest_word` that takes a string `s` as input. To find the longest whitespace-separated word, I used Python's built-in `split()` method to split the string into a list of words. Since on ties the function should return the last such word, I used the `max()` function with the `key=len` argument to specify that we're interested in finding the longest word. In case the input string is empty (an edge case), the function returns an empty string as per the problem statement.

@@ -1,0 +1,2 @@
+**
+I sorted the input ranges by start value and then by length (to break ties) using a lambda function as the sorting key. This ensures that when two ranges have the same start value, the one with the larger end value comes first, which is necessary for correct merging. I also handled the edge case of an empty input list by returning an empty list. The code iterates over the sorted ranges and merges adjacent ones where possible, maintaining a running list of merged ranges.

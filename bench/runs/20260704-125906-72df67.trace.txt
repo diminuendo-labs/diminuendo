@@ -1,0 +1,5 @@
+The function `token_case(s)` takes an underscore-delimited identifier and returns it in camel case. It first defines a set containing the exceptions ('URL', 'ID'). Then, it splits the string by underscores to get individual tokens. The function iterates through each token and checks if it is in the exception list. If it is, it keeps the token as it is (with underscore) to maintain its exact form wherever it appears.
+
+For tokens not in the exceptions, it checks whether there is a previous token (to decide whether to capitalize the first letter or not). If there's no previous token, it simply converts the token to lowercase. Otherwise, it converts the current token's first letter to uppercase and joins the rest of the tokens with no separator.
+
+Finally, it removes the last underscore if it exists (an edge case). The function handles this edge case by checking if the resulting string starts and ends with an underscore (as a result of having exceptions with underscores) and removing the last underscore if necessary.

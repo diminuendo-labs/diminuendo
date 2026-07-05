@@ -1,0 +1,3 @@
+**
+
+I approached this task by first validating the input to handle the edge case where `k` is out of range or when `words` is empty. Then, I grouped the words by their length and stored them in a dictionary. For each group, I sorted the words reverse-alphabetically since words of equal length should be ordered that way. Finally, I combined these groups into a single sorted list and returned the k-th word (adjusting for 0-based indexing). This method ensures that the words are first organized by their lengths in increasing order and then alphabetically in decreasing order within each group.

@@ -1,0 +1,2 @@
+**
+I chose to split the input string into a list of words using the `split()` method, which is a concise and readable way to handle whitespace-separated words. To find the longest word(s) and their last occurrence in case of ties, I used a generator expression within the `max()` function to get the length of each word, then used another generator expression with `next()` to iterate over the reversed list of words and return the first (i.e., last due to reversal) one that has the maximum length. If no such word exists (e.g., an empty string), I returned an empty string.

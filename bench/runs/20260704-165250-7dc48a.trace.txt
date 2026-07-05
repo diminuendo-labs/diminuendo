@@ -1,0 +1,7 @@
+**
+
+I started by checking if the input list is empty or if the chunk size `k` is less than or equal to zero. If either condition is true, I immediately return an empty list since there's nothing meaningful to process.
+
+Next, I iterate through the list in steps of `k`, creating chunks and appending them to the result list. For each chunk that doesn't reach the desired length `k`, I add `None` elements until it does.
+
+This approach ensures that every chunk has exactly `k` elements, and it handles edge cases like an empty input list or a non-positive chunk size gracefully by returning an empty list.

@@ -1,0 +1,2 @@
+**
+I chose to use a set data structure to store the numbers for efficient lookups. To avoid counting duplicate pairs, I used another set to store distinct pairs as frozensets (since lists are not hashable). This approach allows me to iterate through the set of numbers once and count distinct pairs in O(n) time complexity. The edge case of an empty list is handled explicitly with a simple return statement at the beginning of the function.

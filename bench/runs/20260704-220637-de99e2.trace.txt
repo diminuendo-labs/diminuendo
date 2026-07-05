@@ -1,0 +1,1 @@
+I implemented the function using Python's built-in sorting, which sorts the input list `nums` in ascending order. The edge case I addressed is when the list length is even, where I take the average of the two middle numbers excluding the minimum and maximum values. Additionally, to account for empty lists, I return `None`.

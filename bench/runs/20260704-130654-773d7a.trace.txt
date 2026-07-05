@@ -1,0 +1,4 @@
+The function `token_case(s)` takes an underscore-delimited identifier and returns it in camel case. The first step is to split the string into tokens based on underscores. I created a list of exceptions where 'URL' and 'ID' need to be kept as-is. Then, I iterate over each token and check if it meets certain conditions:
+1. It must not be the first token (i == 0)
+2. It should not be in the exception list
+If both conditions are true, the token is capitalized by calling `.capitalize()`. Finally, I join the tokens back together either with underscores if any exception token appears or without separators otherwise.

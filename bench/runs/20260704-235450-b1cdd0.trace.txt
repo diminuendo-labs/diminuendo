@@ -1,0 +1,7 @@
+** 
+
+To solve the problem, we first check if the input list `words` is empty or if `k` is out of valid range. If either condition is true, we return `None`. 
+
+For the sorting step, we use Python's built-in `sorted()` function with a custom key. The key is a tuple where the first element is the length of each word and the second element is the negative ASCII value of the last character of each word (to achieve reverse-alphabetical order). This ensures that words are primarily sorted by length in ascending order, and for words of equal length, they are sorted reverse-alphabetically. 
+
+Finally, we return the `k-th` word from the sorted list, adjusting for zero-indexing by using `k-1`.

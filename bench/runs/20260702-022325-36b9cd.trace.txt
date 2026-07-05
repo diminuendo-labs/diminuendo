@@ -1,0 +1,3 @@
+**
+
+I chose the approach of utilizing Python's built-in `Counter` class from the `collections` module to efficiently count the occurrences of each word in the input string. This concise and readable method is well-suited for this task, as it automatically handles edge cases such as empty strings by returning an empty string. By using a lambda function within the `max` function, I was able to break ties alphabetically while maintaining readability.

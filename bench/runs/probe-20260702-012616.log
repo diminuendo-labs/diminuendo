@@ -1,0 +1,167 @@
+TRANSFER PROBE 20260702-012616
+A=qwen2.5-coder:7b  B=llama3.1:8b  generator=qwen2.5-coder:7b (fixed)
+apply pool=8 tasks  repeats=3  per-cell n=24
+-- generating lessons from model A (qwen2.5-coder:7b) --
+gen run A (rle): verdict=pass ev=1.00
+gen run A (is_anagram): verdict=pass ev=1.00
+gen run A (reverse_words): verdict=pass ev=1.00
+gen run A (vowel_count): verdict=pass ev=1.00
+gen run A (is_palindrome): verdict=pass ev=1.00
+gen run A (word_count): verdict=pass ev=1.00
+store A: 6 lessons committed
+-- generating lessons from model B (llama3.1:8b) --
+gen run B (rle): verdict=pass ev=1.00
+gen run B (is_anagram): verdict=pass ev=1.00
+gen run B (reverse_words): verdict=fail ev=1.00
+gen run B (vowel_count): verdict=pass ev=1.00
+gen run B (is_palindrome): verdict=pass ev=1.00
+gen run B (word_count): verdict=fail ev=1.00
+store B: 6 lessons committed
+cell A|none rep 0 (most_common_word): verdict=pass ev=1.00
+cell A|none rep 0 (merge_ranges): verdict=fail ev=0.75
+cell A|none rep 0 (longest_word): verdict=pass ev=1.00
+cell A|none rep 0 (median): verdict=pass ev=1.00
+cell A|none rep 0 (range_summary): verdict=pass ev=1.00
+cell A|none rep 0 (flatten_once): verdict=pass ev=1.00
+cell A|none rep 0 (snake_to_camel): verdict=fail ev=0.25
+cell A|none rep 0 (balanced): verdict=pass ev=1.00
+cell A|none rep 1 (most_common_word): verdict=pass ev=1.00
+cell A|none rep 1 (merge_ranges): verdict=fail ev=0.75
+cell A|none rep 1 (longest_word): verdict=fail ev=0.50
+cell A|none rep 1 (median): verdict=fail ev=0.75
+cell A|none rep 1 (range_summary): verdict=fail ev=0.60
+cell A|none rep 1 (flatten_once): verdict=pass ev=1.00
+cell A|none rep 1 (snake_to_camel): verdict=fail ev=0.25
+cell A|none rep 1 (balanced): verdict=pass ev=1.00
+cell A|none rep 2 (most_common_word): verdict=pass ev=1.00
+cell A|none rep 2 (merge_ranges): verdict=fail ev=0.75
+cell A|none rep 2 (longest_word): verdict=pass ev=1.00
+cell A|none rep 2 (median): verdict=fail ev=0.75
+cell A|none rep 2 (range_summary): verdict=fail ev=0.60
+cell A|none rep 2 (flatten_once): verdict=pass ev=1.00
+cell A|none rep 2 (snake_to_camel): verdict=fail ev=0.25
+cell A|none rep 2 (balanced): verdict=pass ev=1.00
+cell A|A rep 0 (most_common_word): verdict=pass ev=1.00
+cell A|A rep 0 (merge_ranges): verdict=fail ev=0.75
+cell A|A rep 0 (longest_word): verdict=pass ev=1.00
+cell A|A rep 0 (median): verdict=fail ev=0.75
+cell A|A rep 0 (range_summary): verdict=fail ev=0.40
+cell A|A rep 0 (flatten_once): verdict=pass ev=1.00
+cell A|A rep 0 (snake_to_camel): verdict=fail ev=0.25
+cell A|A rep 0 (balanced): verdict=pass ev=1.00
+cell A|A rep 1 (most_common_word): verdict=pass ev=1.00
+cell A|A rep 1 (merge_ranges): verdict=fail ev=0.75
+cell A|A rep 1 (longest_word): verdict=pass ev=1.00
+cell A|A rep 1 (median): verdict=fail ev=0.75
+cell A|A rep 1 (range_summary): verdict=fail ev=0.40
+cell A|A rep 1 (flatten_once): verdict=pass ev=1.00
+cell A|A rep 1 (snake_to_camel): verdict=fail ev=0.50
+cell A|A rep 1 (balanced): verdict=pass ev=1.00
+cell A|A rep 2 (most_common_word): verdict=pass ev=1.00
+cell A|A rep 2 (merge_ranges): verdict=fail ev=0.75
+cell A|A rep 2 (longest_word): verdict=fail ev=0.50
+cell A|A rep 2 (median): verdict=fail ev=0.75
+cell A|A rep 2 (range_summary): verdict=fail ev=0.60
+cell A|A rep 2 (flatten_once): verdict=pass ev=1.00
+cell A|A rep 2 (snake_to_camel): verdict=pass ev=1.00
+cell A|A rep 2 (balanced): verdict=pass ev=1.00
+cell A|B rep 0 (most_common_word): verdict=pass ev=1.00
+cell A|B rep 0 (merge_ranges): verdict=fail ev=0.75
+cell A|B rep 0 (longest_word): verdict=fail ev=0.50
+cell A|B rep 0 (median): verdict=pass ev=1.00
+cell A|B rep 0 (range_summary): verdict=fail ev=0.60
+cell A|B rep 0 (flatten_once): verdict=pass ev=1.00
+cell A|B rep 0 (snake_to_camel): verdict=fail ev=0.25
+cell A|B rep 0 (balanced): verdict=pass ev=1.00
+cell A|B rep 1 (most_common_word): verdict=pass ev=1.00
+cell A|B rep 1 (merge_ranges): verdict=pass ev=1.00
+cell A|B rep 1 (longest_word): verdict=pass ev=1.00
+cell A|B rep 1 (median): verdict=fail ev=0.75
+cell A|B rep 1 (range_summary): verdict=pass ev=1.00
+cell A|B rep 1 (flatten_once): verdict=pass ev=1.00
+cell A|B rep 1 (snake_to_camel): verdict=fail ev=0.25
+cell A|B rep 1 (balanced): verdict=pass ev=1.00
+cell A|B rep 2 (most_common_word): verdict=pass ev=1.00
+cell A|B rep 2 (merge_ranges): verdict=fail ev=0.75
+cell A|B rep 2 (longest_word): verdict=fail ev=0.50
+cell A|B rep 2 (median): verdict=fail ev=0.75
+cell A|B rep 2 (range_summary): verdict=fail ev=0.80
+cell A|B rep 2 (flatten_once): verdict=pass ev=1.00
+cell A|B rep 2 (snake_to_camel): verdict=fail ev=0.25
+cell A|B rep 2 (balanced): verdict=pass ev=1.00
+cell B|none rep 0 (most_common_word): verdict=fail ev=0.67
+cell B|none rep 0 (merge_ranges): verdict=fail ev=0.75
+cell B|none rep 0 (longest_word): verdict=fail ev=0.50
+cell B|none rep 0 (median): verdict=pass ev=1.00
+cell B|none rep 0 (range_summary): verdict=fail ev=0.60
+cell B|none rep 0 (flatten_once): verdict=fail ev=0.00
+cell B|none rep 0 (snake_to_camel): verdict=fail ev=0.25
+cell B|none rep 0 (balanced): verdict=fail ev=0.75
+cell B|none rep 1 (most_common_word): verdict=fail ev=0.67
+cell B|none rep 1 (merge_ranges): verdict=fail ev=0.75
+cell B|none rep 1 (longest_word): verdict=fail ev=0.50
+cell B|none rep 1 (median): verdict=fail ev=0.75
+cell B|none rep 1 (range_summary): verdict=fail ev=0.40
+cell B|none rep 1 (flatten_once): verdict=fail ev=1.00
+cell B|none rep 1 (snake_to_camel): verdict=fail ev=0.25
+cell B|none rep 1 (balanced): verdict=fail ev=0.75
+cell B|none rep 2 (most_common_word): verdict=fail ev=0.67
+cell B|none rep 2 (merge_ranges): verdict=fail ev=0.75
+cell B|none rep 2 (longest_word): verdict=pass ev=1.00
+cell B|none rep 2 (median): verdict=pass ev=1.00
+cell B|none rep 2 (range_summary): verdict=fail ev=0.40
+cell B|none rep 2 (flatten_once): verdict=fail ev=0.33
+cell B|none rep 2 (snake_to_camel): verdict=fail ev=0.25
+cell B|none rep 2 (balanced): verdict=pass ev=1.00
+cell B|A rep 0 (most_common_word): verdict=pass ev=1.00
+cell B|A rep 0 (merge_ranges): verdict=fail ev=0.75
+cell B|A rep 0 (longest_word): verdict=fail ev=0.50
+cell B|A rep 0 (median): verdict=pass ev=1.00
+cell B|A rep 0 (range_summary): verdict=pass ev=1.00
+cell B|A rep 0 (flatten_once): verdict=fail ev=0.00
+cell B|A rep 0 (snake_to_camel): verdict=fail ev=0.25
+cell B|A rep 0 (balanced): verdict=fail ev=0.75
+cell B|A rep 1 (most_common_word): verdict=fail ev=0.67
+cell B|A rep 1 (merge_ranges): verdict=fail ev=0.75
+cell B|A rep 1 (longest_word): verdict=fail ev=0.50
+cell B|A rep 1 (median): verdict=pass ev=1.00
+cell B|A rep 1 (range_summary): verdict=pass ev=1.00
+cell B|A rep 1 (flatten_once): verdict=fail ev=0.00
+cell B|A rep 1 (snake_to_camel): verdict=fail ev=0.25
+cell B|A rep 1 (balanced): verdict=fail ev=0.75
+cell B|A rep 2 (most_common_word): verdict=fail ev=0.67
+cell B|A rep 2 (merge_ranges): verdict=fail ev=0.75
+cell B|A rep 2 (longest_word): verdict=fail ev=1.00
+cell B|A rep 2 (median): verdict=pass ev=1.00
+cell B|A rep 2 (range_summary): verdict=fail ev=0.20
+cell B|A rep 2 (flatten_once): verdict=fail ev=0.67
+cell B|A rep 2 (snake_to_camel): verdict=fail ev=0.00
+cell B|A rep 2 (balanced): verdict=fail ev=1.00
+cell B|B rep 0 (most_common_word): verdict=fail ev=0.67
+cell B|B rep 0 (merge_ranges): verdict=fail ev=0.75
+cell B|B rep 0 (longest_word): verdict=fail ev=0.25
+cell B|B rep 0 (median): verdict=fail ev=0.75
+cell B|B rep 0 (range_summary): verdict=pass ev=1.00
+cell B|B rep 0 (flatten_once): verdict=pass ev=1.00
+cell B|B rep 0 (snake_to_camel): verdict=fail ev=0.25
+cell B|B rep 0 (balanced): verdict=fail ev=0.75
+cell B|B rep 1 (most_common_word): verdict=fail ev=0.33
+cell B|B rep 1 (merge_ranges): verdict=fail ev=0.75
+cell B|B rep 1 (longest_word): verdict=fail ev=0.50
+cell B|B rep 1 (median): verdict=fail ev=1.00
+cell B|B rep 1 (range_summary): verdict=fail ev=0.20
+cell B|B rep 1 (flatten_once): verdict=fail ev=0.33
+cell B|B rep 1 (snake_to_camel): verdict=fail ev=0.25
+cell B|B rep 1 (balanced): verdict=fail ev=0.75
+cell B|B rep 2 (most_common_word): verdict=fail ev=0.33
+cell B|B rep 2 (merge_ranges): verdict=fail ev=0.75
+cell B|B rep 2 (longest_word): verdict=fail ev=0.50
+cell B|B rep 2 (median): verdict=pass ev=1.00
+cell B|B rep 2 (range_summary): verdict=pass ev=1.00
+cell B|B rep 2 (flatten_once): verdict=fail ev=0.00
+cell B|B rep 2 (snake_to_camel): verdict=fail ev=0.25
+cell B|B rep 2 (balanced): verdict=fail ev=0.75
+== MATRIX (ev_mean / pass_rate, rows=performer, cols=lessons) ==
+  A:  none=0.80/0.54  A=0.80/0.50  B=0.80/0.54
+  B:  none=0.62/0.17  A=0.64/0.25  B=0.59/0.17
+GATE: PASSED. six cells ran at n=24 each, both stores populated (A=6, B=6), every run checkpointed. The n is stated in the report and claims nothing beyond itself.

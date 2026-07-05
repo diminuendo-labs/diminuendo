@@ -1,0 +1,3 @@
+**
+
+I chose to use a dictionary to keep track of the counts of each number. This allows me to efficiently increment and retrieve the count for each number as I iterate through the list. In the edge case where the input list is empty, I explicitly return 0 instead of trying to sum an empty iterable, which would raise a ZeroDivisionError or other unexpected behavior.

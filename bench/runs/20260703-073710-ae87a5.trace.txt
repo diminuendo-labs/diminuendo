@@ -1,0 +1,3 @@
+** 
+
+To solve this task, I first check if the input list `nums` is empty and return 0 immediately as an edge case. If the list is not empty, I use a dictionary `freq` to keep track of the frequency of each number in the list. As I populate this dictionary, I also keep updating `max_freq` with the highest frequency found so far. Finally, I count how many numbers have a frequency equal to `max_freq` and return that count. This approach ensures the function is both concise and readable while correctly handling the edge case of an empty input list.

@@ -1,0 +1,2 @@
+**
+I chose to use a list comprehension to find all occurrences of the longest word(s) and then return the last one, which directly addresses the tie-break requirement. This approach is concise and easy to read. The edge case of an empty string is explicitly handled by returning an empty string in this case, as per the problem statement.

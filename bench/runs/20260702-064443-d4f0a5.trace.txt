@@ -1,0 +1,3 @@
+**
+
+I solved the problem by first removing duplicate ranges and sorting them by start. Then I iterated over the sorted pairs to identify overlapping or touching ranges. When a new range starts where the current one ends, I append the current range to the result list (if it's not empty) and update the current range with the new one. At the end, if there is still a current range left, I append it to the result list as well. This approach ensures that the output ranges are sorted by start and that overlapping or touching ranges are merged together.

@@ -1,0 +1,3 @@
+**
+
+I chose to use list comprehension with the `split` and `capitalize` methods, as they efficiently handle the splitting of the input string into words and capitalizing each word. This approach is concise while still maintaining readability through the use of descriptive variable names (`word`). The edge case handled by this function is an empty string, which would return an empty string ''.

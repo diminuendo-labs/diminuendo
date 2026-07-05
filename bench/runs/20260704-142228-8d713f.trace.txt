@@ -1,0 +1,2 @@
+**
+The function `token_case` takes a string `s`, splits it into tokens based on underscores, and then processes each token. If the token is not in the exception list (either 'URL' or 'ID'), it is capitalized; otherwise, it remains unchanged. The first token is always converted to lowercase to ensure proper camel case formatting. Finally, all tokens are joined together without any separators. This approach ensures that the function handles both typical and edge cases correctly.

@@ -1,0 +1,2 @@
+**  
+I chose to handle the edge case where an empty list is passed by returning `None` at the beginning of the function. For non-empty lists, I sorted the list using Python's built-in `sort()` method and then calculated the median based on whether the length of the list is odd or even. If the length is even, I returned the average of the two middle elements as a float. If the length is odd, I returned the middle element as a float. This approach ensures that the function handles all specified cases correctly and efficiently.

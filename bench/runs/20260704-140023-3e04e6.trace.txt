@@ -1,0 +1,2 @@
+**  
+The function `trimmed_mean` first checks if the input list `nums` has two or fewer elements. If it does, it returns `None` as specified in the criteria. For lists with more than two elements, it sorts the list, removes the first and last elements (which are the minimum and maximum values), calculates the sum of the remaining elements, and divides by their count to return the mean. This approach ensures the function is concise and readable while correctly handling the edge case of two-element lists.

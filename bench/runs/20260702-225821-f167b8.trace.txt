@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking for the edge case of an empty input list. Then I sorted and removed duplicates from the input list to simplify the logic. Next, I iterated over the list to identify consecutive runs and appended either a single number or a range to the result list as appropriate. Finally, I joined the elements of the result list with commas to produce the desired output string.

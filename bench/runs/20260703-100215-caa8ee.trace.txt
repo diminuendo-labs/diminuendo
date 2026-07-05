@@ -1,0 +1,2 @@
+**  
+I used Python's built-in `split()` method to break the string into a list of words. Then, I applied the `max()` function with the `key=len` argument to find the longest word. This approach ensures that in case of ties (multiple words of the same maximum length), the last one is returned as per the stated criteria. The function also handles the edge case where an empty string is passed by returning an empty string itself.

@@ -1,0 +1,2 @@
+**
+I chose to first sort the input list while removing duplicates using a set. This allows me to iterate over the list once, keeping track of whether I'm in a consecutive run or not. If I encounter a number that's one more than the previous (i.e., we're in a consecutive run), I update the end value; otherwise, I start a new range. The final result is built by joining these ranges together with commas.

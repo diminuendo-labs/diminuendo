@@ -1,0 +1,2 @@
+**
+I chose to use a generator expression within the built-in `sum` function to count the occurrences of the word. This approach is concise and readable, as it directly expresses the intent of counting matching words. I also made sure to handle edge cases, such as empty strings, by relying on the behavior of string methods like `split()` and comparing case-insensitively using `casefold()`.

@@ -1,0 +1,2 @@
+**
+I implemented a simple and concise solution by using Python's built-in `count()` method to compare the number of opening and closing parentheses. This approach handles the edge case where an empty string is considered balanced, as the count of both '(' and ')' would be zero, making them equal. The function ignores all characters other than '(' and ')', which satisfies the requirement that only these two characters should be considered for balance.

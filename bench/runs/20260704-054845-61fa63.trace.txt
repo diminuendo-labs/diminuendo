@@ -1,0 +1,3 @@
+**
+
+I chose a simple and concise approach using list comprehension to implement the `flatten_once` function. This solution iterates over each element in the input list and checks whether it's a list itself. If an element is a list, its first element is extracted if the list contains only one item; otherwise, the entire list remains as is. I didn't explicitly handle edge cases like empty or zero-weight lists because they are handled implicitly by this general solution.

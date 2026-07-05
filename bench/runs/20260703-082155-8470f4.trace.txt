@@ -1,0 +1,3 @@
+** 
+
+The function `least_frequent_word(s)` processes the input string to find the word with the lowest frequency. It first checks if the input string is empty and returns an empty string immediately if true. The input string is converted to lowercase and split into words. A dictionary, `word_count`, is used to count occurrences of each word. After counting, it finds the minimum count among all words. It then filters out words that have this minimum count and sorts them alphabetically before returning the first one from the sorted list. This ensures that ties are broken alphabetically as required.

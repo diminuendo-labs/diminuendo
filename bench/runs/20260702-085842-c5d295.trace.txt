@@ -1,0 +1,3 @@
+**
+
+I chose to iterate through the string while maintaining a counter that increases for every '('. For every ')', I decrease the counter. If at any point the counter becomes negative, it means there's a closing parenthesis before its corresponding opening one, so the function returns `False` immediately. Finally, after the loop, if the counter is back to zero, all parentheses are balanced and the function returns `True`. This approach ensures the code is concise and readable while handling the edge case where a closing parenthesis appears before its opening partner.

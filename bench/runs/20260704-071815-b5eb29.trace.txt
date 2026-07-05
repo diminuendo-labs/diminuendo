@@ -1,0 +1,6 @@
+**
+
+- The function `flatten_once` takes a list as input and iterates through each element.
+- If an element is a list, it extends the `flat_list` with its items, thus flattening one level of nesting.
+- If an element is not a list, it simply appends the element to `flat_list`.
+- This approach ensures that only the first level of nesting is flattened, and deeper levels remain nested.

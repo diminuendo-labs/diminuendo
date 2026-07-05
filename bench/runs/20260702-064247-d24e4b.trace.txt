@@ -1,0 +1,2 @@
+**
+I approached this task by first checking for the edge case where the input list `nums` is empty, returning an empty string in that case. Then I used Python's built-in set function to remove duplicates and sorted to sort the distinct numbers. Next, I iterated over the sorted numbers, creating ranges whenever a consecutive sequence was found, joining them into strings with commas at the end.

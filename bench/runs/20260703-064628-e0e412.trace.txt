@@ -1,0 +1,2 @@
+**
+I chose to use a simple loop that iterates over the words in reverse order, keeping track of the maximum length and the corresponding word. When encountering a longer word, it updates `max_len` and `longest_word`. This approach ensures that the last occurrence of a tied longest word is prioritized. I also included an empty string check at the end to handle the edge case where the input string is empty, as per the task's requirements.

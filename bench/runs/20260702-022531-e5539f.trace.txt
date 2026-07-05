@@ -1,0 +1,3 @@
+**
+
+I chose to implement this function using a simple iterative approach with a loop that iterates over each element in the input list. I used Python's built-in `isinstance()` function to check if an element is a list, and if so, extended the result list with its elements. This approach is concise and readable, handling edge cases such as lists containing single-element sublists correctly.

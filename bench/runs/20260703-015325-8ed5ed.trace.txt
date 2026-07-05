@@ -1,0 +1,2 @@
+**
+I chose to use a list comprehension to find the longest whitespace-separated words, and then took the first one. If there are ties, this approach ensures that the last word in the original string is returned, as required. I also explicitly handled the edge case where the input string is empty, returning an empty string in this case.

@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-215407-e0a4b3",
+  "node_id": "task-20260702-215407-e0a4b3",
+  "task": "Write a Python function max_index(nums) returning the index of the largest value in the list. When the largest value appears more than once, return the index of its last occurrence, not the first. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code accurately finds the last occurrence of the maximum value in a list.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "max_index([1, 3, 3])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "max_index([5])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "max_index([2, 1, 2])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "max_index([4, 1])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:** \n```python\ndef max_index(nums):\n    \"\"\"\n    Finds the index of the largest value in a list. Returns the last occurrence if the maximum value appears multiple times.\n\n    Edge Case:\n    If the input list is empty, returns None.\n    \"\"\"\n    if not nums:  # Edge case handling for empty list\n        return None\n    \n    max_val = max(nums)\n    last_index = len(nums) - 1 - nums[::-1].index(max_val)\n    \n    return last_index\n```\n\n**",
+  "trace": "**\n- The function `max_index` first checks if the input list `nums` is empty. If it is, the function returns `None`, handling the edge case of an empty list.\n- To find the index of the largest value, the function uses Python's built-in `max()` function to determine the maximum value in the list.\n- To get the last occurrence of this maximum value, the function reverses the list (`nums[::-1]`) and finds its first occurrence using the `index()` method. The index obtained is then adjusted by subtracting it from `len(nums) - 1` to find the correct position in the original list.",
+  "totals": {
+    "time_s": 20.8256461,
+    "tokens": 720
+  },
+  "files": [
+    "20260702-215407-e0a4b3.crumbs.jsonl",
+    "20260702-215407-e0a4b3.trace.txt"
+  ]
+}

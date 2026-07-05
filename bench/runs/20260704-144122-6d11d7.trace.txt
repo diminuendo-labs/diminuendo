@@ -1,0 +1,2 @@
+**
+I implemented the function using a list comprehension to create each chunk. I used slicing (`lst[i:i+k]`) to extract chunks of size `k` from the input list `lst`, and added `None`s as necessary to pad out the final chunk. To handle the edge case of an empty list, the function simply returns an empty list, as specified in the requirements.

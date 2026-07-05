@@ -1,0 +1,2 @@
+**
+I chose to handle the edge case where the input string is empty by returning an empty string. This is a common and straightforward approach to handling invalid inputs. I used the `Counter` class from the `collections` module to count the frequency of each word, which made it easy to identify the most common words. To break ties alphabetically, I filtered the list of most common words to only include those with the highest count, and then returned the smallest one using the `min` function.

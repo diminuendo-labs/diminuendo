@@ -1,0 +1,5 @@
+I started by defining the function `longest_word(s)` that takes a string `s` as input. I first check for the edge case where the string is empty, returning an empty string if true. Then, I split the string into words using `s.split()`, which handles multiple spaces correctly by splitting on whitespace. I initialize variables to keep track of the maximum length and the resulting word.
+
+I iterate through the list of words in reverse order (using `reversed(words)`). For each word, I check its length. If it's greater than or equal to the current maximum length, I update both the maximum length and the result with the current word. This ensures that if there are ties on length, the last word is returned.
+
+Finally, I return the result, which will be the longest word found in the string according to the specified rules.

@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking the degenerate range condition (lo > hi). If true, I immediately return None as per the task requirements. Then, I used Python's built-in `min` and `max` functions to clamp the value within the [lo, hi] range. This concise implementation is readable and handles the edge case where a non-integer value falls outside the integer range [lo, hi].

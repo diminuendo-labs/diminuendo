@@ -1,0 +1,3 @@
+The function first iterates through the input list and creates a dictionary to store each unique number and its repetition count. Afterward, it checks for every number if there exists another number in the list that makes up the target sum by subtracting the current number from the target. When a matching pair is found, it increments the count variable.
+
+An additional edge case is handled by explicitly checking if the sum of all numbers equals twice the target to find pairs where one number is already counted in the dictionary, but its complement hasn't been encountered yet. These pairs are added to the final count as well.

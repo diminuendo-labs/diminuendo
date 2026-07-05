@@ -1,0 +1,3 @@
+**
+
+I approached this task by using a stack data structure to keep track of the opening parentheses. When I encounter an opening parenthesis, I push it onto the stack; when I encounter a closing parenthesis, I check if the stack is empty (in which case the string is unbalanced) and then pop the top element from the stack. After iterating over all characters in the string, I return whether the stack is empty (indicating balanced parentheses). I chose to handle the edge case of an empty string explicitly by considering it as balanced according to the problem statement.

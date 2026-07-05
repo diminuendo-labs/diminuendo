@@ -1,0 +1,2 @@
+**
+I approached the task by first checking if the input string `s` is empty. If it is, I immediately return an empty string as specified. Next, I split the string into words using the `split()` method, which handles whitespace separation by default. Then, I iterate through the list of words in reverse order to ensure that in case of a tie (words of the same length), the last word encountered is returned. During this iteration, I keep track of the longest word found so far and update it if a longer word is discovered. Finally, I return the longest word found.

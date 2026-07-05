@@ -1,0 +1,2 @@
+**
+I chose to use a generator expression within a list comprehension to achieve the flattening. This approach is concise and readable while also being efficient as it only needs to iterate over the input list once. The edge case handled by this function is when the input list contains an empty nested list, in which case the original element is preserved.

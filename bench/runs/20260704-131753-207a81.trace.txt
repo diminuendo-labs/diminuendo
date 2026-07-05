@@ -1,0 +1,9 @@
+**
+
+1. **Understanding the Task**: The task requires splitting a list into fixed-size chunks (of size `k`). If any chunk does not reach `k` elements, it should be padded with `None`.
+
+2. **Iterative Chunking**: We use a list comprehension to iterate over the input list in steps of `k`. For each iteration, we slice the list from the current index (`i`) to `i+k`.
+
+3. **Padding**: If the sliced chunk is shorter than `k`, we pad it with `None` by calculating how many `None`s are needed and appending them to the chunk.
+
+4. **Edge Case Handling**: The provided edge case is an empty list, which is handled correctly as `range(0, 0, k)` yields no elements, resulting in an empty list being returned.

@@ -1,0 +1,1 @@
+I utilized list comprehension to iterate over the input list `lst` with a defined step of `k`. For each iteration, I slice the sub-list and append necessary 'None' values when the final chunk comes up short. In case of an empty list, I return an empty list as per the task requirements. The edge case considered here is the handling of an empty list.

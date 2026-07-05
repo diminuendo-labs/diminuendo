@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-164147-b4b5ad",
+  "node_id": "task-20260703-164147-b4b5ad",
+  "task": "Write a Python function title_words(s) returning the string with every whitespace-separated word title-cased (first letter upper, the rest lower) and runs of whitespace collapsed to single spaces, except that words already entirely uppercase stay exactly as they are. An empty string returns ''. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code passes all specified criteria, correctly modifying title casing of words while preserving already uppercase strings.",
+  "per_criterion": {
+    "the function is correct": 4,
+    "code is concise and readable": 4,
+    "edge case handling": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "title_words('hello  world')",
+        "ok": true,
+        "got": "'Hello World'",
+        "expect": "'Hello World'"
+      },
+      {
+        "call": "title_words('NASA rocks')",
+        "ok": true,
+        "got": "'NASA Rocks'",
+        "expect": "'NASA Rocks'"
+      },
+      {
+        "call": "title_words('mIxEd')",
+        "ok": true,
+        "got": "'Mixed'",
+        "expect": "'Mixed'"
+      },
+      {
+        "call": "title_words('')",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef title_words(s):\n    words = s.split()\n    for i, word in enumerate(words):\n        if not word.isupper():\n            words[i] = word[0].upper() + word[1:].lower()\n    return ' '.join(words)\n```",
+  "trace": "I first split the input string by whitespace into a list of words. Then, I iterate through each word and check if it is entirely uppercase using `isupper()`. If it's not entirely uppercase, I title-case it (first letter upper, the rest lower). Finally, I collapse all runs of multiple spaces into single spaces by joining the list back into a string with a single space separator. The edge case handled here is that words already entirely uppercase stay exactly as they are.",
+  "totals": {
+    "time_s": 18.178930100000002,
+    "tokens": 651
+  },
+  "files": [
+    "20260703-164147-b4b5ad.crumbs.jsonl",
+    "20260703-164147-b4b5ad.trace.txt"
+  ]
+}

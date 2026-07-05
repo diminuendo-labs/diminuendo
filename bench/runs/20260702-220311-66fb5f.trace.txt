@@ -1,0 +1,2 @@
+**  
+The function `count_token` takes a string `s` and a word `w` as input. To handle the edge case of an empty string, it first checks if `s.strip()` is empty and returns 0 if true. It then normalizes the target word `w` to lower case for case-insensitive comparison. The string `s` is split into words using a regular expression that matches word boundaries (`\b\w+\b`), which ensures that only standalone words are considered, ignoring punctuation within longer words. Finally, it counts how many of these words match the normalized target word and returns this count.

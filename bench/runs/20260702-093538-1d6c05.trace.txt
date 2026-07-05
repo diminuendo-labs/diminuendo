@@ -1,0 +1,2 @@
+**
+I implemented this function by first checking if the input list is empty and returning an empty output in that case. Then, I iterated over each range pair in the input list, checking for overlaps or touching ranges with the last range in the current merged list. If there was no overlap, the new range was appended to the list; otherwise, the overlapping range was merged with the last one by updating its end value and pushing it back onto the list. Finally, I sorted the merged list of ranges before returning it.

@@ -1,0 +1,3 @@
+**
+
+I chose to use the concept of "When writing functions to process strings, consider using Python's built-in methods like `split()` and list slicing for efficiency and readability." This approach allows me to take advantage of the `split()` method to split the input string into a list of words, which is then used to find the longest word(s) by iterating over them with a generator expression. The final result is the last word in case of ties, ensuring the function behaves as described.

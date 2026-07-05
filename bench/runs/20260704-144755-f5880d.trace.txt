@@ -1,0 +1,2 @@
+**
+I implemented this function by first checking for the edge case of an empty input list, in which case it returns an empty list. Then I sorted the input ranges by their start value using a lambda function as the key. This allows me to iterate over the ranges and check for adjacent or overlapping pairs, merging them if necessary.

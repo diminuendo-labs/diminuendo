@@ -1,0 +1,2 @@
+** 
+I first check if `k` is within the valid range. If not, I return `None`. Then, I sort the words using a custom key in Python's `sorted()` function. The key sorts primarily by length in descending order (`-len(x)`), and secondarily reverse-alphabetically (`x[::-1]`). This ensures that longer words come first, and within equal lengths, words are sorted in reverse alphabetical order. Finally, I return the word at index `k-1` from the sorted list to account for 1-based indexing.

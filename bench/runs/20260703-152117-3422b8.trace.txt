@@ -1,0 +1,3 @@
+The function `range_summary` takes a list of integers as input and returns a string with the distinct values in ascending order, collapsing consecutive runs into 'start-end' format. The approach involves first sorting the unique elements of the list and then iterating through it to identify consecutive sequences. If a sequence is found, it's added to the result list in the appropriate format ('start-end'). If not, it remains as a single number. Finally, all parts are joined with commas and returned.
+
+The edge case handled here is an empty list, which returns an empty string immediately.

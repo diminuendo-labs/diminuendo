@@ -1,0 +1,2 @@
+**
+I chose a straightforward approach by simply comparing the counts of '(' and ')' characters in the string. This method ignores any other characters, including those at the beginning or end of the string (e.g., '()'). Since the task requires ignoring everything else, this implementation effectively handles edge cases like an empty string (which is balanced) and strings with other types of parentheses.

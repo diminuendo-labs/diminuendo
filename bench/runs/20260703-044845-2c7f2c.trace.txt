@@ -1,0 +1,11 @@
+**
+
+The function `most_common_word(s)` takes a string `s` as input and returns the most common word in lowercase. If there are multiple words with the same highest frequency, it returns the one that appears first alphabetically.
+
+1. **Edge Case Handling:** The function first checks if the input string is empty. If it is, an empty string is returned immediately.
+2. **Counting Words:** A dictionary `word_count` is used to store the count of each word. The string is split into words, and each word is converted to lowercase before counting.
+3. **Finding Maximum Count:** The maximum count is determined using the `max()` function on the values of the `word_count` dictionary.
+4. **Selecting Most Common Words:** A list comprehension is used to create a list of words that have the maximum count.
+5. **Sorting and Returning:** The list of common words is sorted alphabetically, and the first element (which will be the lexicographically smallest word) is returned.
+
+This approach ensures that the function correctly identifies the most common word while handling ties by choosing the word that comes first alphabetically.

@@ -1,0 +1,2 @@
+**
+I approached this task by first converting the input list to a set to remove duplicates and then sorting the resulting set in ascending order. This allows me to easily access the nth smallest distinct value, which I can do using integer indexing (`n-1`) because Python uses 0-based indexing. I also included a check at the end to handle cases where `n` is less than 1 or exceeds the number of distinct values, returning `None` in these cases as per the task requirements.

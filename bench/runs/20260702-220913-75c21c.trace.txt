@@ -1,0 +1,3 @@
+**
+
+I defined a Python function named `weighted_mean` that takes two lists as input, `values` and `weights`. The function first checks if either list is empty, returning `None` immediately in this case. Next, it checks if the total weight is zero by summing up all weights; again, returning `None` when no weight is present. Finally, the function uses a generator expression to calculate the weighted mean and divides by the sum of weights.

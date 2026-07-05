@@ -1,0 +1,2 @@
+**
+I used the `re` module for regular expressions to strip leading and trailing punctuation from each word, ensuring substrings inside longer words are never counted. The `split()` function splits the input string into a list of tokens (words), which are then processed with a generator expression in the `sum` function. I chose to compare case-insensitively by converting both the token and the target word to lowercase before comparing, ensuring that the edge case of an empty string 's' returns 0 is handled correctly.

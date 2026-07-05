@@ -1,0 +1,3 @@
+**
+
+I chose to use the approach "When the largest value appears more than once, return the index of its last occurrence." This is because we need to handle the case where there are multiple words with the same maximum length. I implemented this by iterating over each word in the string and keeping track of the longest word found so far (`last_longest_word`). If a new word is found that is longer than or equal to the current longest word, it becomes the new `last_longest_word`. If there are ties, I check if the last occurrence of the tied words appears later in the string. This way, we ensure that the function returns the last such word on ties, not the first.

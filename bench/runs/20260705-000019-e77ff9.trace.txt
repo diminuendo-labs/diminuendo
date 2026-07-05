@@ -1,0 +1,11 @@
+**
+1. **Edge Case Handling:** The function first checks if the input `words` is empty or if `k` is out of the valid range (less than 1 or greater than the length of `words`). If any of these conditions are met, it returns `None`.
+2. **Grouping and Sorting:**
+   - Words are grouped by their length using a dictionary comprehension where each key is the length of the word.
+   - Within each group, words are sorted in reverse alphabetical order.
+   - The groups themselves are then sorted by increasing length.
+3. **Flattening and Retrieving the k-th Word:** 
+   - The nested lists are flattened into a single list using a list comprehension.
+   - The k-th word (considering 1-indexed positions) is returned from this flattened list.
+
+This approach ensures that the words are ordered correctly as specified in the problem statement.

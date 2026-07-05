@@ -1,0 +1,2 @@
+**
+I started by handling the edge case where the input string `s` is empty, returning an empty string immediately. Then, I split the string into words and iterated through them in reverse order to handle ties correctly (returning the last word with the minimum length). During this iteration, I kept track of the current minimum word length and collected all words that match or exceed this length. Finally, I returned the last word from the collected list, which will be the shortest word in case of a tie.

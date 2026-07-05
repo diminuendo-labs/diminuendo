@@ -1,0 +1,2 @@
+**
+I chose a simple and efficient approach to this task. The key insight is that parentheses in a balanced string always come in pairs, so we can simply count the number of opening and closing parentheses and compare them. This solution handles the edge case of an empty string (which is considered balanced) and ignores any characters other than '(' and ')', as per the problem statement.

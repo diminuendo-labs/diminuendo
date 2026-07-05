@@ -1,0 +1,3 @@
+**
+
+I approached the problem by first sorting the input list of ranges based on their start times. This makes it easier to identify and merge overlapping or touching ranges in a single pass through the list. After sorting, I used a simple loop to iterate through the sorted ranges, merging them when necessary and appending new ranges to the result list when they do not overlap. The edge case handled here is an empty input list, which returns an empty list as expected.

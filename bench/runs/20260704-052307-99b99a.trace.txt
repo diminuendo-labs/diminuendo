@@ -1,0 +1,3 @@
+**
+
+I chose to use a list comprehension with two conditions to separate the elements that are lists and those that aren't. This approach is concise and easy to read, making it well-suited for this task. The function handles edge cases such as empty lists and non-list inputs correctly, ensuring it meets all criteria.

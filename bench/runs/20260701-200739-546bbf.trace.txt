@@ -1,0 +1,2 @@
+**  
+I started by checking if the input string is empty. If it is, I return an empty string as per the edge case requirement. Next, I convert all characters to lowercase and split the string into individual words. Then, I create a dictionary to count occurrences of each word. After that, I find the maximum count among the words. Finally, I filter out the words that have this maximum count and return the lexicographically smallest one from the filtered list. This approach ensures the function is both correct and concise.

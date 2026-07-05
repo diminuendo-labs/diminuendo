@@ -1,0 +1,11 @@
+**
+
+The function `most_common_word(s)` takes a string `s` as input and returns the lowercase whitespace-separated word with the highest count. If there are ties, it breaks them by returning the word that comes first alphabetically.
+
+1. **Edge Case Handling:** The function checks if the input string `s` is empty. If it is, it returns an empty string immediately.
+   
+2. **Word Counting:** It converts the entire string to lowercase and splits it into individual words. Then, it uses a dictionary `word_count` to keep track of the count of each word.
+
+3. **Finding the Most Common Word:** The function uses Python's built-in `max()` function with a custom key to find the word with the highest count. The key is a tuple where the first element is the negative count (to sort in descending order) and the second element is the word itself (to break ties alphabetically).
+
+This approach ensures that the function is both concise and readable, adhering to the criteria provided.

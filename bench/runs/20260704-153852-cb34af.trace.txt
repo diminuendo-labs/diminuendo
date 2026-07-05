@@ -1,0 +1,2 @@
+**
+I handled the edge case where `k` is 0 explicitly in the function. This is because Python list indices start at 0, so if we don't handle this case separately, attempting to access an element at index 0 will raise an `IndexError`. I chose to use a lambda function as the key for sorting instead of creating a separate tuple-based comparison function to keep the code concise and readable.

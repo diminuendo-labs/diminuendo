@@ -1,0 +1,2 @@
+**
+I chose to use regular expressions to efficiently handle the edge case of leading and trailing delimiters. This approach simplifies the code and allows for concise implementation of the requested functionality. The `re.sub` function is used to remove any consecutive commas from the start or end of the string, while `re.split` with a positive lookbehind (`(?<=,)`) splits on one or more commas in between pieces.

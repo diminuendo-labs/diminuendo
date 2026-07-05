@@ -1,0 +1,51 @@
+{
+  "run_id": "20260702-014424-f7cd23",
+  "node_id": "task-20260702-014424-f7cd23",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "reason": "The function correctly flattens exactly one level of nesting in a list without introducing any errors or bugs.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness": 4,
+    "readability": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting in a list. Elements that are lists contribute their items \n    in order, and every other element is kept as is. Deeper nesting stays nested.\n\n    Edge case handled:\n    - If an empty list or non-list elements are encountered during flattening, they are left unchanged.\n    \"\"\"\n    result = []\n    for item in lst:\n        if isinstance(item, list):\n            result.extend(item)\n        else:\n            result.append(item)\n    return result\n```\n\n**",
+  "trace": "**\n\nI chose to iterate through the input list and check the type of each element. If an element is a list, I extended the result list with its items; otherwise, I appended the item as is. This approach ensures that only one level of nesting is flattened while preserving deeper levels of nested lists. The edge case handled is when encountering empty lists or non-list elements, which are left unchanged to avoid any unintended behavior during flattening.",
+  "totals": {
+    "time_s": 21.7223598,
+    "tokens": 1030
+  },
+  "files": [
+    "20260702-014424-f7cd23.crumbs.jsonl",
+    "20260702-014424-f7cd23.trace.txt"
+  ]
+}

@@ -1,0 +1,5 @@
+**
+To solve this problem, I first split the input string `s` by underscores to get individual tokens. Then, I iterate through these tokens and convert each one to lowercase unless it is found in the exception list ['URL', 'ID']. For tokens that are not exceptions, I capitalize them. Finally, I join all tokens together, ensuring the first token is always lowercased, and return the resulting camel case string.
+
+**Edge Case:**
+One notable edge case handled by this function is when the input string starts with an underscore or contains leading/trailing underscores. This scenario does not affect the outcome because the `split('_')` method naturally handles these cases, producing an empty token at the beginning or end if necessary. However, since we immediately convert all tokens to lowercase before joining, any initial capitalization from such edge cases is effectively removed.

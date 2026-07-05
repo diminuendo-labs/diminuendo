@@ -1,0 +1,9 @@
+To implement the `range_summary` function, I followed these steps:
+
+1. **Edge Case Handling**: First, I checked if the input list is empty and returned an empty string immediately if it is.
+2. **Sorting and Deduplication**: I converted the list to a set to remove duplicates and then sorted it to ensure the numbers are in ascending order.
+3. **Iterating and Range Detection**: I used a while loop to iterate through the sorted list. For each number, I checked if there were consecutive numbers by comparing the current number with the next one. If consecutive numbers were found, I continued iterating until the sequence ended.
+4. **Appending Results**: Depending on whether a range was detected or not, I appended either a single number or a range ('start-end') to the result list.
+5. **Joining Results**: Finally, I joined all elements in the result list with commas and returned the resulting string.
+
+This approach ensures that the function is both concise and readable while correctly handling consecutive sequences of numbers.

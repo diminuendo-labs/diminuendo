@@ -1,0 +1,6 @@
+**
+To solve this task, I first checked if the input list is empty or if `k` (chunk size) is less than or equal to zero. If either condition is true, I returned an empty list as these are edge cases that require special handling.
+
+Next, I iterated through the list in steps of `k` using a for loop, creating chunks of the desired size. For each chunk, if its length was less than `k`, I appended `None` until it reached the required size. Finally, I appended each padded chunk to the result list and returned this list as the output.
+
+This approach ensures that every chunk is exactly `k` elements long, padding with `None` where necessary, and handles edge cases such as an empty input list or a non-positive chunk size by returning an empty list immediately.

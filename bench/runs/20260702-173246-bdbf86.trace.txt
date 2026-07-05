@@ -1,0 +1,2 @@
+**
+I chose to write concise and readable code while handling at least one edge case. To handle ties, I used Python's built-in `max` function with the `key` argument set to `len`, which returns the longest word when there are multiple longest words. In case of an empty string input, the expression `words or ''` ensures that an empty string is returned instead of raising an error. This meets the edge case requirement specified in the task.

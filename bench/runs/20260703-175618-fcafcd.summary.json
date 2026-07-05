@@ -1,0 +1,64 @@
+{
+  "run_id": "20260703-175618-fcafcd",
+  "node_id": "task-20260703-175618-fcafcd",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function meets all the specified requirements, but could be more concise and has room for improvement on readability.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is handled": 3
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": false,
+        "got": "'None-1, None-2, None-3,None-5'",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": false,
+        "got": "'None-1, None-2,None-3'",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": false,
+        "got": "'None-1, None-3,None-5'",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": false,
+        "got": "'None'",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef range_summary(nums):\n    runs = []\n    i, last = 0, None\n    for n in sorted(set(nums)):\n        if last is not None and n == last + 1:\n            runs[-1][1] = n\n        else:\n            runs.append([last, n])\n            i += 1\n    if len(runs) > 1:\n        return ', '.join('-'.join(str(x) for x in run) for run in runs[:-1]) + f',{runs[-1][0]}-{runs[-1][1]}'\n    elif runs:\n        return str(runs[0][0])\n    else:\n        return ''\n```",
+  "trace": "To tackle this task, we first ensure that each value is counted only once by creating a sorted set of the input list. Then, we iterate through the unique values and identify runs of consecutive numbers by checking if the current number is one more than the last one seen. If it is, we update the end of the last run; otherwise, we start a new run. Finally, we join the runs with commas and 'start-end' for multiple runs and return a single number for a single run or an empty string for an empty list, handling the edge case where the input list is empty.",
+  "totals": {
+    "time_s": -0.9283865999999996,
+    "tokens": -177
+  },
+  "files": [
+    "20260703-175618-fcafcd.crumbs.jsonl",
+    "20260703-175618-fcafcd.trace.txt"
+  ]
+}

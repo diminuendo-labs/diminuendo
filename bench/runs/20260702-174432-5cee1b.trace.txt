@@ -1,0 +1,2 @@
+**
+I implemented this function using a straightforward approach, iterating over each word in the input string and keeping track of the longest word seen so far. When I encounter a new word that is longer than or equal to the current maximum length, I update the maximum length, word, and index accordingly. If multiple words have the same maximum length, I update the index to be the last occurrence of the longest word. This approach allows me to handle the edge case where an empty string is inputted, as I explicitly return an empty string in this scenario.

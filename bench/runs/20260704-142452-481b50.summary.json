@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-142452-481b50",
+  "node_id": "task-20260704-142452-481b50",
+  "task": "Write a Python function kth_ordered(words, k) returning the k-th word, counting from 1, when the words are ordered by increasing length, and words of equal length are ordered reverse-alphabetically among themselves. Return None when k is out of range. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The solution correctly handles the edge case where k is out of range.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "kth_ordered(['dd', 'a', 'ccc'], 2)",
+        "ok": true,
+        "got": "'dd'",
+        "expect": "'dd'"
+      },
+      {
+        "call": "kth_ordered(['a', 'bb'], 1)",
+        "ok": true,
+        "got": "'a'",
+        "expect": "'a'"
+      },
+      {
+        "call": "kth_ordered(['a'], 3)",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**  \n```python\ndef kth_ordered(words, k):\n    if not words or k <= 0:\n        return None\n    \n    # Sort by increasing length, then reverse-alphabetically for equal lengths\n    sorted_words = sorted(words, key=lambda x: (len(x), -ord(x[-1])))\n    \n    # Return the k-th word if within range, otherwise None\n    if k > len(sorted_words):\n        return None\n    else:\n        return sorted_words[k-1]\n```\n\n**",
+  "trace": "**  \nThe function `kth_ordered` first checks if the input list is empty or if `k` is less than or equal to zero, returning `None` in either case as these represent invalid inputs. It then sorts the words based on their length in ascending order and for words of the same length, it uses a trick by negating the ASCII value of the last character to achieve reverse-alphabetical sorting. Finally, it checks if `k` is within the bounds of the sorted list and returns the corresponding word or `None` if `k` is out of range. This approach ensures that the function is both correct and efficient.",
+  "totals": {
+    "time_s": 23.752654,
+    "tokens": 755
+  },
+  "files": [
+    "20260704-142452-481b50.crumbs.jsonl",
+    "20260704-142452-481b50.trace.txt"
+  ]
+}

@@ -1,0 +1,3 @@
+**
+
+I approached this task by first defining the function `kth_ordered` with docstrings to explain its purpose and behavior. I then implemented a simple edge case check for when k is less than 1, returning None in such cases. Next, I used the built-in `sorted` function with a custom key to sort the words based on their length (increasing) and alphabetically-reversed spelling among words of equal length. Finally, I returned the k-th word from the sorted list, adjusting for 0-based indexing by subtracting 1 from k.

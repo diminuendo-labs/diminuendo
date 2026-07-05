@@ -1,0 +1,112 @@
+OBEDIENCE DECOMPOSITION 20260703-043045 (PACKET-007)
+performer=qwen2.5-coder:7b  audience=llama3.1:8b (v1, production)
+tasks=['most_common_word', 'range_summary']  arms=('none', 'menu_concept', 'menu_recipe')  R none=24 menu=12  total runs=96
+most_common_word none rep 0: ev=1.00 tools=0
+most_common_word none rep 1: ev=1.00 tools=0
+most_common_word none rep 2: ev=1.00 tools=0
+most_common_word none rep 3: ev=1.00 tools=0
+most_common_word none rep 4: ev=1.00 tools=0
+most_common_word none rep 5: ev=1.00 tools=0
+most_common_word none rep 6: ev=1.00 tools=0
+most_common_word none rep 7: ev=1.00 tools=0
+most_common_word none rep 8: ev=1.00 tools=0
+most_common_word none rep 9: ev=1.00 tools=0
+most_common_word none rep 10: ev=1.00 tools=0
+most_common_word none rep 11: ev=1.00 tools=0
+most_common_word none rep 12: ev=1.00 tools=0
+most_common_word none rep 13: ev=1.00 tools=0
+most_common_word none rep 14: ev=1.00 tools=0
+most_common_word none rep 15: ev=1.00 tools=0
+most_common_word none rep 16: ev=1.00 tools=0
+most_common_word none rep 17: ev=1.00 tools=0
+most_common_word none rep 18: ev=1.00 tools=0
+most_common_word none rep 19: ev=1.00 tools=0
+most_common_word none rep 20: ev=1.00 tools=0
+most_common_word none rep 21: ev=1.00 tools=0
+most_common_word none rep 22: ev=1.00 tools=0
+most_common_word none rep 23: ev=1.00 tools=0
+most_common_word menu_concept rep 0: ev=1.00 tools=1
+most_common_word menu_concept rep 1: ev=1.00 tools=1
+most_common_word menu_concept rep 2: ev=1.00 tools=1
+most_common_word menu_concept rep 3: ev=0.67 tools=1
+most_common_word menu_concept rep 4: ev=0.67 tools=1
+most_common_word menu_concept rep 5: ev=1.00 tools=1
+most_common_word menu_concept rep 6: ev=1.00 tools=1
+most_common_word menu_concept rep 7: ev=0.67 tools=1
+most_common_word menu_concept rep 8: ev=1.00 tools=1
+most_common_word menu_concept rep 9: ev=1.00 tools=1
+most_common_word menu_concept rep 10: ev=0.67 tools=1
+most_common_word menu_concept rep 11: ev=1.00 tools=1
+most_common_word menu_recipe rep 0: ev=1.00 tools=1
+most_common_word menu_recipe rep 1: ev=1.00 tools=1
+most_common_word menu_recipe rep 2: ev=1.00 tools=1
+most_common_word menu_recipe rep 3: ev=0.33 tools=1
+most_common_word menu_recipe rep 4: ev=1.00 tools=1
+most_common_word menu_recipe rep 5: ev=1.00 tools=1
+most_common_word menu_recipe rep 6: ev=1.00 tools=1
+most_common_word menu_recipe rep 7: ev=1.00 tools=1
+most_common_word menu_recipe rep 8: ev=0.67 tools=1
+most_common_word menu_recipe rep 9: ev=0.33 tools=1
+most_common_word menu_recipe rep 10: ev=0.33 tools=1
+most_common_word menu_recipe rep 11: ev=1.00 tools=1
+range_summary none rep 0: ev=0.60 tools=0
+range_summary none rep 1: ev=0.40 tools=0
+range_summary none rep 2: ev=1.00 tools=0
+range_summary none rep 3: ev=0.60 tools=0
+range_summary none rep 4: ev=0.40 tools=0
+range_summary none rep 5: ev=0.40 tools=0
+range_summary none rep 6: ev=0.80 tools=0
+range_summary none rep 7: ev=0.60 tools=0
+range_summary none rep 8: ev=1.00 tools=0
+range_summary none rep 9: ev=0.40 tools=0
+range_summary none rep 10: ev=1.00 tools=0
+range_summary none rep 11: ev=1.00 tools=0
+range_summary none rep 12: ev=0.40 tools=0
+range_summary none rep 13: ev=1.00 tools=0
+range_summary none rep 14: ev=0.60 tools=0
+range_summary none rep 15: ev=0.40 tools=0
+range_summary none rep 16: ev=0.60 tools=0
+range_summary none rep 17: ev=0.60 tools=0
+range_summary none rep 18: ev=1.00 tools=0
+range_summary none rep 19: ev=0.40 tools=0
+range_summary none rep 20: ev=0.40 tools=0
+range_summary none rep 21: ev=0.80 tools=0
+range_summary none rep 22: ev=0.60 tools=0
+range_summary none rep 23: ev=0.80 tools=0
+range_summary menu_concept rep 0: ev=1.00 tools=1
+range_summary menu_concept rep 1: ev=1.00 tools=1
+range_summary menu_concept rep 2: ev=0.40 tools=1
+range_summary menu_concept rep 3: ev=1.00 tools=1
+range_summary menu_concept rep 4: ev=1.00 tools=1
+range_summary menu_concept rep 5: ev=1.00 tools=1
+range_summary menu_concept rep 6: ev=1.00 tools=1
+range_summary menu_concept rep 7: ev=1.00 tools=1
+range_summary menu_concept rep 8: ev=0.60 tools=1
+range_summary menu_concept rep 9: ev=1.00 tools=1
+range_summary menu_concept rep 10: ev=1.00 tools=1
+range_summary menu_concept rep 11: ev=1.00 tools=1
+range_summary menu_recipe rep 0: ev=0.60 tools=1
+range_summary menu_recipe rep 1: ev=0.80 tools=1
+range_summary menu_recipe rep 2: ev=0.60 tools=1
+range_summary menu_recipe rep 3: ev=0.60 tools=1
+range_summary menu_recipe rep 4: ev=0.80 tools=1
+range_summary menu_recipe rep 5: ev=1.00 tools=1
+range_summary menu_recipe rep 6: ev=1.00 tools=1
+range_summary menu_recipe rep 7: ev=1.00 tools=1
+range_summary menu_recipe rep 8: ev=0.40 tools=1
+range_summary menu_recipe rep 9: ev=0.40 tools=1
+range_summary menu_recipe rep 10: ev=0.40 tools=1
+range_summary menu_recipe rep 11: ev=1.00 tools=1
+== POOLED RULE CHECKS (passed/n per arm) ==
+  most_common_word: none=24/24  menu_concept=8/12  menu_recipe=9/12
+  range_summary: none=12/24  menu_concept=11/12  menu_recipe=7/12
+== PER-CHECK (none / menu_concept / menu_recipe) ==
+  most_common_word('b a b a c'): 1.00 / 0.67 / 0.75  <-- rule
+  most_common_word('z z y'): 1.00 / 1.00 / 0.75
+  most_common_word(''): 1.00 / 1.00 / 0.92
+  range_summary([1, 2, 3, 5]): 0.38 / 0.83 / 0.50
+  range_summary([3, 1, 2, 2]): 0.50 / 0.92 / 0.58  <-- rule
+  range_summary([5, 3, 1]): 0.42 / 0.83 / 0.50
+  range_summary([]): 1.00 / 1.00 / 1.00
+  range_summary([7]): 1.00 / 1.00 / 1.00
+GATE: PASSED. both tasks, three arms at stated R, every armed run carried exactly one tool, every run checkpointed, report persisted. The reading is applied in the packet RESULTS.

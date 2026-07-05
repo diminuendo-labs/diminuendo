@@ -1,0 +1,3 @@
+**
+
+I chose to use a list comprehension with a conditional clause to remove duplicates while preserving order. The `seen` set keeps track of encountered elements, and the condition `x in seen or seen.add(x)` efficiently checks for existence in the set and adds the element if it doesn't exist. I also included a docstring to explicitly mention the edge case handled by the function, which is an empty input list returning an empty list.

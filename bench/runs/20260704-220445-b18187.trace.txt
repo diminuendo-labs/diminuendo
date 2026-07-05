@@ -1,0 +1,1 @@
+First, we sort the input list and find the index of the median element. Then, we drop one occurrence each of the minimum and maximum values by calculating their sum and subtracting the removed value from the average of the remaining elements. If the input list is empty, we return None to handle this edge case. The solution uses list comprehension for better readability.

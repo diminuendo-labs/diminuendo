@@ -1,0 +1,2 @@
+**
+I decided to use Python's built-in string methods `strip()` and `replace()`. The approach involves first removing all leading and trailing underscores with `s.strip('_')`, then replacing any remaining double underscores (`__`) with a single underscore (`_`), and finally removing any leading or trailing underscores again. This ensures that repeated underscores are also dropped, which handles the edge case where there are multiple consecutive underscores (e.g., '__a__b_').

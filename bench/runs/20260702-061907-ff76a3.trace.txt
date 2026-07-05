@@ -1,0 +1,3 @@
+**
+
+I first sorted the input list of ranges by their start values to ensure that overlapping ranges are adjacent in the list. Then I iterated through the sorted list and merged any overlapping ranges into a single range by updating the end value of the last merged range if necessary. This approach avoids duplicate code for edge cases and is concise while still being readable.

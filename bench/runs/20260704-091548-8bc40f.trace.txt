@@ -1,0 +1,3 @@
+I created a function `flatten_once()` that takes a list as input and recursively checks each element within the list. If an element is not a list (i.e., it's an integer, float, or string), it simply returns the element itself. However, if it finds a list, it calls the function `flatten_once()` on that list to continue flattening the nesting level.
+
+To handle empty lists as an edge case, I added a check for an empty list at the beginning of the function. If the input is empty, the function simply returns an empty list instead of raising an exception or attempting to operate on None.

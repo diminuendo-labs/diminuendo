@@ -1,0 +1,2 @@
+**
+I approached this problem by first handling the edge case of an empty input list, returning an empty list as per the specification. Then I sorted the pairs based on their start values to simplify the merging process. After that, I iterated through each pair and checked for overlap or gap within the specified distance d. If a range overlapped with the last merged range or had no gap between them, I updated the last merged range accordingly; otherwise, I added it as a new range to the merged list.

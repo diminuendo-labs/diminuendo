@@ -1,0 +1,3 @@
+**
+
+I chose to use a stack-based approach, which is a common and efficient way to solve parenthesis balancing problems. This approach works by iterating over the input string and pushing opening parentheses onto the stack. When a closing parenthesis is encountered, it pops the corresponding opening parenthesis from the stack if one exists. If the stack is empty when a closing parenthesis is found or if there are unmatched opening parentheses left in the stack at the end of the iteration, the function returns False. Otherwise, it returns True. I also included a docstring to provide context and explain how the function works.

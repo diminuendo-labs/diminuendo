@@ -1,0 +1,64 @@
+{
+  "run_id": "20260703-220240-d64a32",
+  "node_id": "task-20260703-220240-d64a32",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly implements the range summary logic, is well-structured, and handles an empty list as expected.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": false,
+        "got": "'1-3, 5'",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": false,
+        "got": "'1-2, 2-3'",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": false,
+        "got": "'1, 3, 5'",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": true,
+        "got": "'7'",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef range_summary(nums):\n    if not nums:\n        return ''\n    \n    nums.sort()\n    ranges = []\n    start = end = nums[0]\n    \n    for num in nums[1:]:\n        if num == end + 1:\n            end = num\n        else:\n            if start == end:\n                ranges.append(str(start))\n            else:\n                ranges.append(f'{start}-{end}')\n            start = end = num\n    \n    if start == end:\n        ranges.append(str(start))\n    else:\n        ranges.append(f'{start}-{end}')\n    \n    return ', '.join(ranges)\n\n# Edge case: Handling an empty list\nprint(range_summary([]))  # Output: ''\n```",
+  "trace": "1. **Sorting**: The input list is first sorted to ensure that consecutive numbers are adjacent.\n2. **Iterating and Ranging**: We iterate through the sorted list while keeping track of the start and end of potential ranges.\n3. **Appending Ranges**: Whenever a break in consecutive numbers is detected, we decide whether to append a single number or a range based on the current `start` and `end`.\n4. **Edge Case Handling**: The function checks if the input list is empty at the beginning and returns an empty string if true. This handles the edge case where no numbers are provided.",
+  "totals": {
+    "time_s": -3.7522506,
+    "tokens": -42
+  },
+  "files": [
+    "20260703-220240-d64a32.crumbs.jsonl",
+    "20260703-220240-d64a32.trace.txt"
+  ]
+}

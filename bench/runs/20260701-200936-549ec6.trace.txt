@@ -1,0 +1,2 @@
+**
+I chose to follow the "Understand the problem requirements and edge cases thoroughly before writing the code" approach. This allowed me to identify that the function should handle empty lists, as returning None for an empty list is a reasonable behavior. I wrote the function in a concise manner, using a single if-else statement to check the number of distinct values and returning the second largest value (or None) accordingly. The set data structure was used to remove duplicates from the input list, making it easier to find the second largest value.

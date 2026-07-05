@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-055151-032062",
+  "node_id": "task-20260703-055151-032062",
+  "task": "Write a Python function sum_of_modes(nums) returning the sum of the distinct most frequent values in the list, each counted once no matter how often it appears: [1, 1, 2, 2, 3] returns 3. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly calculates the sum of distinct most frequent values, handles edge cases, and is reasonably concise.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness_and_readability": 4,
+    "edge_case_handled": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "sum_of_modes([1, 1, 2, 2, 3])",
+        "ok": true,
+        "got": "3",
+        "expect": "3"
+      },
+      {
+        "call": "sum_of_modes([5])",
+        "ok": true,
+        "got": "5",
+        "expect": "5"
+      },
+      {
+        "call": "sum_of_modes([])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "sum_of_modes([2, 2, 2, 1])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef sum_of_modes(nums):\n    \"\"\"\n    Returns the sum of the distinct most frequent values in the list.\n\n    :param nums: A list of integers.\n    :return: The sum of the distinct most frequent values.\n    \"\"\"\n    if not nums:\n        return 0  # Handle empty list edge case\n\n    counts = {}\n    for num in nums:\n        counts[num] = counts.get(num, 0) + 1\n\n    max_count = max(counts.values())\n    modes = [num for num, count in counts.items() if count == max_count]\n\n    return sum(set(modes))  # Use set to ensure each mode is counted only once\n```\n\n**",
+  "trace": "**\nI approached this problem by first handling the edge case of an empty list, returning 0 as per the requirements. Then, I created a dictionary to store the frequency of each number in the list. After finding the maximum frequency, I generated a list of modes (numbers with the maximum frequency). Finally, I used a set to ensure that each mode is counted only once and returned their sum.",
+  "totals": {
+    "time_s": 20.013584700000003,
+    "tokens": 798
+  },
+  "files": [
+    "20260703-055151-032062.crumbs.jsonl",
+    "20260703-055151-032062.trace.txt"
+  ]
+}

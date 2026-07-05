@@ -1,0 +1,2 @@
+**
+I started by understanding what the function needs to do, which is to find the nth smallest distinct value in a list. I chose to use a set to get rid of duplicates and then sort the unique numbers. To handle edge cases, I specifically checked if `n` is less than 1 or exceeds the number of distinct values. This handles the case where `n` is greater than the length of the list.

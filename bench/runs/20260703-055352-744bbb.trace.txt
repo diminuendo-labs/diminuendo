@@ -1,0 +1,2 @@
+**
+I approached this task by first defining a docstring that explains the purpose and behavior of the function. I then implemented a simple check at the beginning to immediately return an empty list if the start is at or past stop (edge case), or if the step is zero or negative, avoiding any potential loops or crashes. Finally, I used Python's built-in `range` function to generate the desired sequence and converted it to a list before returning.

@@ -1,0 +1,5 @@
+**
+
+The function `token_case(s)` splits the input string by underscores into individual tokens. The first token is converted to lowercase, and each subsequent token is capitalized unless it's in the exception list ['URL', 'ID'], in which case it remains unchanged. Finally, all tokens are joined together without any separators.
+
+An edge case handled by this function is when the input string starts with an underscore. Since splitting on underscores would result in an empty first element, the function ensures that the first token (or what should be the first token) is always converted to lowercase even if it was originally uppercase or part of an exception.

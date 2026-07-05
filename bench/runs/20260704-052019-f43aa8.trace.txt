@@ -1,0 +1,2 @@
+**
+I approached this problem by first handling the edge case of an empty list, as specified in the requirements. Then, I used Python's built-in `sorted` function to sort the input list, which makes it easy to find the middle value(s). For lists with an even length, I averaged the two middle values using simple arithmetic to avoid introducing unnecessary dependencies or complexity. This implementation is concise and readable while meeting all the requirements.

@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to efficiently count the occurrences of each word. To handle ties alphabetically, I first filtered the words with the maximum count and then sorted them before returning the first one. The edge case is handled by checking if the input string is empty after stripping whitespace, in which case an empty string is returned.

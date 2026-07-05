@@ -1,0 +1,3 @@
+**
+
+I chose a brute force approach to find the second largest distinct value, iterating through the set of unique numbers in the list. I started by checking if the input list is empty, returning None immediately in this case. Then, I checked if there are fewer than two distinct values; if so, I also returned None. Finally, I iterated through the set to find the maximum and second maximum values. This approach ensures that all edge cases are handled correctly, including an empty input list.

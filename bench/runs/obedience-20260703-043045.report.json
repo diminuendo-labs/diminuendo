@@ -1,0 +1,268 @@
+{
+  "obedience_id": "20260703-043045",
+  "performer": "qwen2.5-coder:7b",
+  "audience": "llama3.1:8b",
+  "arms": [
+    "none",
+    "menu_concept",
+    "menu_recipe"
+  ],
+  "r_none": 24,
+  "r_menu": 12,
+  "tasks": {
+    "range_summary": "distinctness",
+    "most_common_word": "tie"
+  },
+  "variants": {
+    "distinctness/concept": {
+      "concept": "When the task states each distinct pair counts once regardless of repeats, honor the distinctness the task states.",
+      "rule": "each distinct pair counts once regardless of repeats",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "distinctness"
+      }
+    },
+    "distinctness/recipe": {
+      "concept": "When the task states that each distinct pair should be counted once no matter how many times its values repeat, ensure that pairs are stored in a way that disregards order.",
+      "rule": "Convert potential pairs to tuples and sort them before adding to a set to maintain uniqueness regardless of order.",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "distinctness"
+      }
+    },
+    "tie/concept": {
+      "concept": "When the task states that if the largest value appears more than once, return the index of its last occurrence, ensure your code follows this directive.",
+      "rule": "follow the direction the task states",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "tie_break",
+        "stated_direction": "*"
+      }
+    },
+    "tie/recipe": {
+      "concept": "Use max() with a reversed index scan to return the last occurrence.",
+      "rule": "Use max() with a reversed index scan to return the last occurrence",
+      "applies_when": {
+        "operation": "write_code",
+        "target": "function",
+        "language": "python",
+        "size": "small",
+        "rule_class": "tie_break",
+        "stated_direction": "*"
+      }
+    }
+  },
+  "check_table": {
+    "most_common_word": {
+      "most_common_word('b a b a c')": {
+        "rule_check": true,
+        "arms": {
+          "none": {
+            "n": 24,
+            "passed": 24,
+            "rate": 1.0
+          },
+          "menu_concept": {
+            "n": 12,
+            "passed": 8,
+            "rate": 0.6666666666666666
+          },
+          "menu_recipe": {
+            "n": 12,
+            "passed": 9,
+            "rate": 0.75
+          }
+        }
+      },
+      "most_common_word('z z y')": {
+        "rule_check": false,
+        "arms": {
+          "none": {
+            "n": 24,
+            "passed": 24,
+            "rate": 1.0
+          },
+          "menu_concept": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "menu_recipe": {
+            "n": 12,
+            "passed": 9,
+            "rate": 0.75
+          }
+        }
+      },
+      "most_common_word('')": {
+        "rule_check": false,
+        "arms": {
+          "none": {
+            "n": 24,
+            "passed": 24,
+            "rate": 1.0
+          },
+          "menu_concept": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "menu_recipe": {
+            "n": 12,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          }
+        }
+      }
+    },
+    "range_summary": {
+      "range_summary([1, 2, 3, 5])": {
+        "rule_check": false,
+        "arms": {
+          "none": {
+            "n": 24,
+            "passed": 9,
+            "rate": 0.375
+          },
+          "menu_concept": {
+            "n": 12,
+            "passed": 10,
+            "rate": 0.8333333333333334
+          },
+          "menu_recipe": {
+            "n": 12,
+            "passed": 6,
+            "rate": 0.5
+          }
+        }
+      },
+      "range_summary([3, 1, 2, 2])": {
+        "rule_check": true,
+        "arms": {
+          "none": {
+            "n": 24,
+            "passed": 12,
+            "rate": 0.5
+          },
+          "menu_concept": {
+            "n": 12,
+            "passed": 11,
+            "rate": 0.9166666666666666
+          },
+          "menu_recipe": {
+            "n": 12,
+            "passed": 7,
+            "rate": 0.5833333333333334
+          }
+        }
+      },
+      "range_summary([5, 3, 1])": {
+        "rule_check": false,
+        "arms": {
+          "none": {
+            "n": 24,
+            "passed": 10,
+            "rate": 0.4166666666666667
+          },
+          "menu_concept": {
+            "n": 12,
+            "passed": 10,
+            "rate": 0.8333333333333334
+          },
+          "menu_recipe": {
+            "n": 12,
+            "passed": 6,
+            "rate": 0.5
+          }
+        }
+      },
+      "range_summary([])": {
+        "rule_check": false,
+        "arms": {
+          "none": {
+            "n": 24,
+            "passed": 24,
+            "rate": 1.0
+          },
+          "menu_concept": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "menu_recipe": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      },
+      "range_summary([7])": {
+        "rule_check": false,
+        "arms": {
+          "none": {
+            "n": 24,
+            "passed": 24,
+            "rate": 1.0
+          },
+          "menu_concept": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          },
+          "menu_recipe": {
+            "n": 12,
+            "passed": 12,
+            "rate": 1.0
+          }
+        }
+      }
+    }
+  },
+  "pooled_rule_checks": {
+    "most_common_word": {
+      "none": {
+        "n": 24,
+        "passed": 24,
+        "rate": 1.0
+      },
+      "menu_concept": {
+        "n": 12,
+        "passed": 8,
+        "rate": 0.6666666666666666
+      },
+      "menu_recipe": {
+        "n": 12,
+        "passed": 9,
+        "rate": 0.75
+      }
+    },
+    "range_summary": {
+      "none": {
+        "n": 24,
+        "passed": 12,
+        "rate": 0.5
+      },
+      "menu_concept": {
+        "n": 12,
+        "passed": 11,
+        "rate": 0.9166666666666666
+      },
+      "menu_recipe": {
+        "n": 12,
+        "passed": 7,
+        "rate": 0.5833333333333334
+      }
+    }
+  },
+  "tools_always_one_when_armed": true,
+  "n_note": "none arms n=24, menu arms n=12 per check cell. The reading rules live in the packet and are applied in its RESULTS, not here."
+}

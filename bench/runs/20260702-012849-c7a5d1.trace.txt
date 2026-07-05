@@ -1,0 +1,2 @@
+**  
+The `word_count` function takes a string `s` as input. It first checks if the string is not just whitespace by using `strip()`. If it's not, it splits the string into words based on whitespace and returns the length of this list. If the string is all whitespace or empty, it returns 0. The use of `split()` without any arguments handles multiple consecutive spaces correctly by splitting them into a list with empty strings, which are then ignored by `len()`. This approach ensures that only non-empty, whitespace-separated words are counted.

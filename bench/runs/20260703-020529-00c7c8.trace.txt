@@ -1,0 +1,7 @@
+**
+
+The function `range_summary` takes a list of integers as input and returns a string summarizing the ranges. It first checks if the input list is empty and returns an empty string if so. The list is then sorted to facilitate range detection.
+
+A loop iterates through the sorted numbers, identifying consecutive sequences. When a break in continuity is detected, it decides whether to append a single number or a range to the result list based on the length of the sequence. After processing all elements, any remaining sequence is added to the result.
+
+The function handles edge cases such as an empty input list and ensures that consecutive numbers are collapsed into ranges while distinct single numbers remain individual entries in the output string.

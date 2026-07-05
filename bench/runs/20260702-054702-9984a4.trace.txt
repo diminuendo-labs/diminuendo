@@ -1,0 +1,11 @@
+**
+
+I started by checking if the input list `nums` is empty, returning an empty string immediately if it is. This handles one edge case where the input might be empty.
+
+Next, I sorted the unique elements of `nums` to ensure they are in ascending order. Sorting helps in easily identifying consecutive numbers.
+
+I then iterated through the sorted list, keeping track of the start of a potential range. If a number is not consecutive to its predecessor, I add the current range (either a single number or a range) to the result list and reset the start for the next potential range.
+
+Finally, after the loop, I handle any remaining range that might not have been added yet.
+
+The function returns a string of ranges joined by commas. The edge case of an empty input is handled efficiently with the initial check.

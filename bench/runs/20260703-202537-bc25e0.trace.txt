@@ -1,0 +1,1 @@
+To solve this problem, we first ensure that each number is counted only once by converting the input list to a set. Then, we sort the resulting set in descending order. If there are fewer than two distinct values, we return None; otherwise, we return the second-to-last element of the sorted set, which is the second largest value.

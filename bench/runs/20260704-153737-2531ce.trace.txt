@@ -1,0 +1,5 @@
+**
+
+To solve this problem, I used the built-in `sorted` function in Python, which returns a new sorted list from the elements of any sequence. The `key` argument is a function that takes one argument and returns one value. It is called for each element in the input list, and its return value is used as the sort key. In this case, I used a lambda function as the key to first sort by length (as a tuple) and then alphabetically in reverse order.
+
+I handled the edge case when the input list `words` is empty, returning `None` immediately. This ensures that the function does not attempt to access an out-of-range index or fail silently.

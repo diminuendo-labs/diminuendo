@@ -1,0 +1,2 @@
+**
+I defined a function `nth_smallest` that takes a list of numbers and an index `n` as input. I first checked for the edge case where `n` is less than 1, in which case I returned `None`. Then, I used the `set` function to remove duplicates from the list and sorted the resulting distinct values. Finally, I checked if `n` was within the bounds of the sorted list and returned the corresponding value or `None` otherwise.

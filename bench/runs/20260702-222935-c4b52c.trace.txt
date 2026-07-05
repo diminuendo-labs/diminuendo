@@ -1,0 +1,2 @@
+**
+I chose to iterate through each element of the input list `lst`. If an element is a list itself, I used the `extend()` method to add all its elements to `flat_list` in order. If it's not a list, I simply appended it to `flat_list`. This approach ensures that only one level of nesting is flattened, and deeper nested lists remain intact. The edge case handled here is when there are no sublists at all in the input list, which will return the original list unchanged.

@@ -1,0 +1,3 @@
+**
+
+I chose to directly compare the modified strings after removing whitespace characters and lowercasing both, as this approach is concise and efficient. To handle edge cases such as None inputs, I added a check at the beginning of the function to ensure that both inputs are not None before proceeding with the comparison.

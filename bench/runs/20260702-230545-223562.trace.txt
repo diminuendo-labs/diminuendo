@@ -1,0 +1,2 @@
+**
+I chose to use a simple and straightforward approach by splitting the input string into individual words using the `_` character as a delimiter. This creates a list of words that can then be processed individually. I used the `capitalize()` method to convert each word to camelCase, ensuring that empty strings are ignored in the process. This implementation respects the rule that substrings inside longer words should not count by considering only complete, whitespace-separated words during comparison.

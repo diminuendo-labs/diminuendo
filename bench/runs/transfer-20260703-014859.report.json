@@ -1,0 +1,512 @@
+{
+  "transfer_id": "20260703-014859",
+  "arms": [
+    "none",
+    "menu"
+  ],
+  "repeats": 12,
+  "pairings": [
+    {
+      "id": "P1",
+      "performer": "llama3.1:8b",
+      "tasks": [
+        "longest_word"
+      ],
+      "store": "A",
+      "topic_matched": true
+    },
+    {
+      "id": "P2",
+      "performer": "qwen2.5-coder:7b",
+      "tasks": [
+        "range_summary"
+      ],
+      "store": "B",
+      "topic_matched": true
+    },
+    {
+      "id": "P3",
+      "performer": "qwen2.5-coder:7b",
+      "tasks": [
+        "snake_to_camel"
+      ],
+      "store": "B",
+      "topic_matched": false
+    },
+    {
+      "id": "P4",
+      "performer": "llama3.1:8b",
+      "tasks": [
+        "snake_to_camel",
+        "balanced"
+      ],
+      "store": "A",
+      "topic_matched": false
+    }
+  ],
+  "stores": {
+    "A": [
+      {
+        "concept": "When the task states that if the largest value appears more than once, return the index of its last occurrence, ensure your code follows this directive.",
+        "rule": "follow the direction the task states",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "tie_break",
+          "stated_direction": "last"
+        }
+      },
+      {
+        "concept": "When the task states 'strip leading and trailing punctuation from each word', follow this direction.",
+        "rule": "Apply stripping of leading and trailing punctuation to each word before comparison.",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "normalize"
+        }
+      }
+    ],
+    "B": [
+      {
+        "concept": "When the task states that each distinct pair should be counted once no matter how many times its values repeat, ensure that pairs are stored in a way that disregards order.",
+        "rule": "Convert potential pairs to tuples and sort them before adding to a set to maintain uniqueness regardless of order.",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "distinctness"
+        }
+      },
+      {
+        "concept": "When the task states that words already entirely uppercase stay exactly as they are, respect that rule by not applying title casing to those words.",
+        "rule": "Follow the direction the task states, specifically ensuring words already in all uppercase remain unchanged.",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "normalize"
+        }
+      },
+      {
+        "concept": "When the task states that substrings inside longer words never count, ensure that only complete, whitespace-separated words are considered during the comparison.",
+        "rule": "Follow the direction to strip leading and trailing punctuation from each word before comparing case-insensitively.",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "normalize"
+        }
+      }
+    ]
+  },
+  "check_table": {
+    "P1": {
+      "longest_word": {
+        "longest_word('cat door bird')": {
+          "rule_check": true,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 1,
+              "rate": 0.08333333333333333
+            },
+            "menu": {
+              "n": 12,
+              "passed": 6,
+              "rate": 0.5
+            }
+          }
+        },
+        "longest_word('a bb cc d')": {
+          "rule_check": true,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 1,
+              "rate": 0.08333333333333333
+            },
+            "menu": {
+              "n": 12,
+              "passed": 6,
+              "rate": 0.5
+            }
+          }
+        },
+        "longest_word('')": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "menu": {
+              "n": 12,
+              "passed": 11,
+              "rate": 0.9166666666666666
+            }
+          }
+        },
+        "longest_word('one')": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "menu": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            }
+          }
+        }
+      }
+    },
+    "P2": {
+      "range_summary": {
+        "range_summary([1, 2, 3, 5])": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 7,
+              "rate": 0.5833333333333334
+            },
+            "menu": {
+              "n": 12,
+              "passed": 4,
+              "rate": 0.3333333333333333
+            }
+          }
+        },
+        "range_summary([3, 1, 2, 2])": {
+          "rule_check": true,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 9,
+              "rate": 0.75
+            },
+            "menu": {
+              "n": 12,
+              "passed": 3,
+              "rate": 0.25
+            }
+          }
+        },
+        "range_summary([5, 3, 1])": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 7,
+              "rate": 0.5833333333333334
+            },
+            "menu": {
+              "n": 12,
+              "passed": 5,
+              "rate": 0.4166666666666667
+            }
+          }
+        },
+        "range_summary([])": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "menu": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            }
+          }
+        },
+        "range_summary([7])": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "menu": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            }
+          }
+        }
+      }
+    },
+    "P3": {
+      "snake_to_camel": {
+        "snake_to_camel('foo_bar_baz')": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 0,
+              "rate": 0.0
+            },
+            "menu": {
+              "n": 11,
+              "passed": 2,
+              "rate": 0.18181818181818182
+            }
+          }
+        },
+        "snake_to_camel('__a__b_')": {
+          "rule_check": true,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 0,
+              "rate": 0.0
+            },
+            "menu": {
+              "n": 11,
+              "passed": 2,
+              "rate": 0.18181818181818182
+            }
+          }
+        },
+        "snake_to_camel('word')": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 0,
+              "rate": 0.0
+            },
+            "menu": {
+              "n": 11,
+              "passed": 2,
+              "rate": 0.18181818181818182
+            }
+          }
+        },
+        "snake_to_camel('')": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "menu": {
+              "n": 11,
+              "passed": 10,
+              "rate": 0.9090909090909091
+            }
+          }
+        }
+      }
+    },
+    "P4": {
+      "snake_to_camel": {
+        "snake_to_camel('foo_bar_baz')": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 0,
+              "rate": 0.0
+            },
+            "menu": {
+              "n": 12,
+              "passed": 0,
+              "rate": 0.0
+            }
+          }
+        },
+        "snake_to_camel('__a__b_')": {
+          "rule_check": true,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 0,
+              "rate": 0.0
+            },
+            "menu": {
+              "n": 12,
+              "passed": 0,
+              "rate": 0.0
+            }
+          }
+        },
+        "snake_to_camel('word')": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 0,
+              "rate": 0.0
+            },
+            "menu": {
+              "n": 12,
+              "passed": 0,
+              "rate": 0.0
+            }
+          }
+        },
+        "snake_to_camel('')": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "menu": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            }
+          }
+        }
+      },
+      "balanced": {
+        "balanced('(a(b)c)')": {
+          "rule_check": true,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "menu": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            }
+          }
+        },
+        "balanced(')(')": {
+          "rule_check": true,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 6,
+              "rate": 0.5
+            },
+            "menu": {
+              "n": 12,
+              "passed": 5,
+              "rate": 0.4166666666666667
+            }
+          }
+        },
+        "balanced('')": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "menu": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            }
+          }
+        },
+        "balanced('((x)')": {
+          "rule_check": false,
+          "arms": {
+            "none": {
+              "n": 12,
+              "passed": 12,
+              "rate": 1.0
+            },
+            "menu": {
+              "n": 12,
+              "passed": 11,
+              "rate": 0.9166666666666666
+            }
+          }
+        }
+      }
+    }
+  },
+  "pooled_rule_checks": {
+    "P1": {
+      "none": {
+        "n": 24,
+        "passed": 2,
+        "rate": 0.08333333333333333
+      },
+      "menu": {
+        "n": 24,
+        "passed": 12,
+        "rate": 0.5
+      }
+    },
+    "P2": {
+      "none": {
+        "n": 12,
+        "passed": 9,
+        "rate": 0.75
+      },
+      "menu": {
+        "n": 12,
+        "passed": 3,
+        "rate": 0.25
+      }
+    },
+    "P3": {
+      "none": {
+        "n": 12,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "menu": {
+        "n": 11,
+        "passed": 2,
+        "rate": 0.18181818181818182
+      }
+    },
+    "P4": {
+      "none": {
+        "n": 36,
+        "passed": 18,
+        "rate": 0.5
+      },
+      "menu": {
+        "n": 36,
+        "passed": 17,
+        "rate": 0.4722222222222222
+      }
+    }
+  },
+  "tool_audit": {
+    "longest_word": [
+      "When the task states that if the largest value appears more than once, return the index of its last occurrence, ensure your code follows this directive."
+    ],
+    "range_summary": [
+      "When the task states that each distinct pair should be counted once no matter how many times its values repeat, ensure that pairs are stored in a way that disregards order."
+    ],
+    "snake_to_camel": [
+      "When the task states 'strip leading and trailing punctuation from each word', follow this direction.",
+      "When the task states that substrings inside longer words never count, ensure that only complete, whitespace-separated words are considered during the comparison.",
+      "When the task states that words already entirely uppercase stay exactly as they are, respect that rule by not applying title casing to those words."
+    ],
+    "balanced": [
+      "When the task states 'strip leading and trailing punctuation from each word', follow this direction."
+    ]
+  },
+  "min_tools_armed": 1,
+  "n_note": "R=12 per arm per task. Per-check cells are n=12. The reading rules live in the packet and are applied in its RESULTS, not here."
+}

@@ -1,0 +1,2 @@
+**
+I used list comprehension and the `split` method to split the input string into words, then joined them back together with capitalization applied to each word using a generator expression. I chose this approach because it is concise, readable, and easy to understand. One edge case handled by this function is when an underscore is at the beginning or end of the string; in these cases, the resulting camelCase string will be different from the original snake_case string (e.g., 'foo__bar' becomes 'FooBar', not '_FooBar').

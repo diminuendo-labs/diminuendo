@@ -1,0 +1,2 @@
+**
+I wrote this function by first checking for the empty list edge case, which is a common and important consideration. Then, I used a set to remove duplicates from the input list, sorted the result in descending order, and returned the third element (at index 2) if it exists, or None otherwise. This approach allows me to easily handle lists with fewer than three distinct values while still being concise and readable.

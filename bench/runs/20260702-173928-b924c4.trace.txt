@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to count the occurrences of each word. I then found the maximum count and all words with that count. Since there can be multiple words with the same highest count, I added an edge case where if no such words exist (i.e., s is an empty string), the function returns ''. Finally, I used a list comprehension to find the index of the last occurrence of each word with the maximum count and returned the corresponding word.

@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `set` data structure to eliminate duplicates, as sets automatically discard any duplicate values. The `sum` function then easily calculates the total of these unique values. An edge case is handled by checking if the input list `nums` is empty; if it is, the function returns 0 immediately. This approach ensures both readability and efficiency, leveraging Python's powerful standard library functions.

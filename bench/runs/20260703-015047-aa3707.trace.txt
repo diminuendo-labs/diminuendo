@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `max` function with a generator expression to split the input string into words and find the longest one. I used `default=''` as an edge case handler, which returns an empty string when the input is empty (or contains only whitespace), instead of raising a ValueError or returning None. This approach keeps the code concise and readable while handling the specified edge case.

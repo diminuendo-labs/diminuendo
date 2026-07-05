@@ -1,0 +1,2 @@
+The function first checks if the input list is empty and returns None in that case. Then it sorts the list and calculates the median index, considering edge cases where the length of the list is even or odd. The first quartile and third quartile values are determined by picking the numbers at the calculated index minus one and the index itself (considering a wrap-around if the index is zero).
+The function then creates a new list containing only the numbers that aren't the first quartile or third quartile, and finally returns the average of those trimmed numbers as a float.

@@ -1,0 +1,2 @@
+**
+I first checked if the input list `pairs` is empty and returned an empty list immediately if it is. Then, I sorted the pairs by their start value to ensure they are in ascending order. After that, I iterated through the sorted pairs, merging any overlapping or touching ranges into a single range and appending non-overlapping ranges to the result list. This approach ensures that the output is sorted by start value and handles all edge cases, including an empty input list.

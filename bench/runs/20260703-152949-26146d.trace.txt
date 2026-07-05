@@ -1,0 +1,4 @@
+**
+- **Sorting and Duplicates Removal:** The input list is first sorted and duplicates are removed using `set(nums)` and then converted back to a list. This ensures that we only work with unique, sorted numbers.
+- **Iterative Range Detection:** We iterate through the sorted list, identifying ranges of consecutive numbers. For each identified range (or single number), it constructs the appropriate string format ('start-end' or 'single_number') and appends it to the result list.
+- **Efficiency and Readability:** The code is concise and readable, using straightforward logic to handle both consecutive sequences and single values efficiently.

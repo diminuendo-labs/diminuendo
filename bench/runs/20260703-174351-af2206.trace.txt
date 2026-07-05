@@ -1,0 +1,3 @@
+I created two lists, `a` and `b`, where one list is the initial sequence and the other is the interleaved sequence. I determined the length of both lists to find out which list should start the alternating sequence. Then, I concatenated both lists to create a combined list that includes all elements from both input lists.
+
+If the first list was longer, I appended the second list at the end of the combined list. Otherwise, I reversed the order of the combined list to append the shorter list at the end. Lastly, I sliced the combined list with a step of 2 to produce the interleaved sequence. This approach ensures that the function handles the edge case where one list is longer than the other.

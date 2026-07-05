@@ -1,0 +1,2 @@
+**
+I implemented this function by first sorting the input list of ranges by their start value. This allows us to process each range in order and merge adjacent ranges efficiently. The function then iterates through the sorted list, maintaining a running "current" range that is updated whenever an overlapping or touching range is encountered. Finally, I append the last merged range at the end, handling the edge case where there are multiple single-element lists of ranges with start equal to end.

@@ -1,0 +1,2 @@
+**
+I implemented the function by first stripping leading and trailing underscores using `strip('_')`. Then, I used a generator expression with `split('_')` to split the string into words. Finally, I joined these words together with capitalization applied to each word (except the first) using `join()` and `capitalize()`. This approach handles the edge case where the input string is empty (`''`), returning an empty string as expected.

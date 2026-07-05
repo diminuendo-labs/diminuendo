@@ -1,0 +1,2 @@
+**  
+I chose to use a list comprehension that iterates through each `element` in the input list. For each `element`, I checked whether it is an instance of `list`. If it is not a list, I wrapped it in another list `[element]` to ensure consistency in the structure for flattening. This way, when `item` is flattened, it preserves its original value rather than becoming nested again. If the `element` is a list, I directly included it in the comprehension to flatten it by one level.

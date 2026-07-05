@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to efficiently count the frequency of each number in the list. I then found the maximum frequency and extracted the distinct numbers with this frequency, which are the modes. Finally, I returned their sum, ensuring that no mode is counted more than once by converting the result to a set before summing. I also handled the edge case where an empty list is passed as input.

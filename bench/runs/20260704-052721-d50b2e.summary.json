@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-052721-d50b2e",
+  "node_id": "task-20260704-052721-d50b2e",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function does not correctly handle nested lists with more than one element and does not have a named edge case.",
+  "per_criterion": {
+    "correct": 2,
+    "concise_and_readable": 3,
+    "edge_case_handled": 1
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": false,
+        "got": "[1, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": false,
+        "got": "[1, 2]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting in a list.\n\n    Args:\n        lst (list): The input list to be flattened.\n\n    Returns:\n        list: A new list with elements that are lists contributing their items in order.\n    \"\"\"\n    return [x if not isinstance(x, list) else x[0] for x in lst]\n```\n\n**",
+  "trace": "**\n\nI chose a list comprehension as the most concise and readable way to implement this function. The expression `isinstance(x, list)` is used to check if an element is a list, and if so, it uses indexing `[0]` to get its first element. This approach handles the edge case where a nested list contains only one element (e.g., `[[1]]` will be flattened to `[1]`).",
+  "totals": {
+    "time_s": -5.1229792,
+    "tokens": 30
+  },
+  "files": [
+    "20260704-052721-d50b2e.crumbs.jsonl",
+    "20260704-052721-d50b2e.trace.txt"
+  ]
+}

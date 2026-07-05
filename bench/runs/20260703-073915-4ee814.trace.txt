@@ -1,0 +1,2 @@
+**
+The function `clamp` takes three arguments: `value`, `lo`, and `hi`. It first checks if the lower bound (`lo`) is greater than the upper bound (`hi`). If so, it returns `None` because a degenerate range (where `lo > hi`) does not make sense for clamping. If the range is valid, it uses Python's built-in `max` and `min` functions to ensure that the value is clamped within the inclusive range `[lo, hi]`. This approach ensures that the function is both correct and concise while handling the edge case of a degenerate range.

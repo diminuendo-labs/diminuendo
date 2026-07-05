@@ -1,0 +1,3 @@
+** 
+
+I started by sorting the list of pairs based on their start values to ensure that I process them in order. This simplifies the merging logic, as each subsequent pair only needs to be checked against the last one in the `merged` list. If the current pair overlaps or is within distance `d` of the last merged pair, they are merged by updating the end value of the last merged pair to the maximum end value between them. If not, the current pair is added to the `merged` list as a new segment. This approach ensures that all overlapping or nearly overlapping segments are consolidated into a single range, and the final list is returned sorted by start values.

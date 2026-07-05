@@ -1,0 +1,58 @@
+{
+  "run_id": "20260702-220824-51a9bc",
+  "node_id": "task-20260702-220824-51a9bc",
+  "task": "Write a Python function sum_of_modes(nums) returning the sum of the distinct most frequent values in the list, each counted once no matter how often it appears: [1, 1, 2, 2, 3] returns 3. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function is correct, the code is reasonably concise and readable, and it handles at least one edge case.",
+  "per_criterion": {
+    "correct": 4,
+    "concise_and_readable": 3,
+    "at_least_one_edge_case_named": 1
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "sum_of_modes([1, 1, 2, 2, 3])",
+        "ok": true,
+        "got": "3",
+        "expect": "3"
+      },
+      {
+        "call": "sum_of_modes([5])",
+        "ok": true,
+        "got": "5",
+        "expect": "5"
+      },
+      {
+        "call": "sum_of_modes([])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "sum_of_modes([2, 2, 2, 1])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef sum_of_modes(nums):\n    \"\"\"\n    Return the sum of distinct most frequent values in the list, each counted once.\n\n    Args:\n        nums (list): A list of numbers.\n\n    Returns:\n        int: The sum of distinct most frequent values.\n    \"\"\"\n    from collections import Counter\n    if not nums:  # Edge case: empty list returns 0\n        return 0\n    counts = Counter(nums)\n    max_count = max(counts.values())\n    return sum(val for val, count in counts.items() if count == max_count)\n```\n\n**",
+  "trace": "**\nI used the `Counter` class from the `collections` module to efficiently count the frequency of each number. Then, I found the maximum count and iterated over the items in the counter, returning only the values with this maximum count. This approach ensures that distinct most frequent values are counted once, regardless of their frequency.",
+  "totals": {
+    "time_s": 20.134414,
+    "tokens": 736
+  },
+  "files": [
+    "20260702-220824-51a9bc.crumbs.jsonl",
+    "20260702-220824-51a9bc.trace.txt"
+  ]
+}

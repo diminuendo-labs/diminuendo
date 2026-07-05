@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking for the edge case where the input list is empty. If it's empty, I immediately return 0 as per the requirements. Then, I used a set to keep track of unique numbers encountered so far, allowing me to check if a complement exists in O(1) time. This also ensures that each distinct pair is counted only once, regardless of how many times its values repeat.

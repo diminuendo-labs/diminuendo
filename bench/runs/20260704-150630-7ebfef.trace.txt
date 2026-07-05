@@ -1,0 +1,3 @@
+**
+
+I approached this task by first checking for edge cases where the input list has less than 3 elements. These lists cannot be trimmed to have exactly one occurrence of the minimum and maximum, so I returned None in these cases. Next, I sorted the list to easily find the minimum and maximum values. After dropping one occurrence of each value, I calculated the mean by summing the remaining numbers and dividing by their count.

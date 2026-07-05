@@ -1,0 +1,3 @@
+**
+
+I chose to use a straightforward approach of sorting the input pairs by their start value and then iterating through them to merge any overlapping ranges. This is achieved by maintaining a list of merged ranges (`merged`) and updating it as necessary based on the current pair's relationship with the last merged range. The code also includes an edge case check for an empty list of pairs, which returns an empty list in this scenario.

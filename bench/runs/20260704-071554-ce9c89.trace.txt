@@ -1,0 +1,2 @@
+**  
+To implement the `flatten_once` function, I iterated through each element in the input list. If an element is a list itself, I extended the `flat_list` with its items using the `extend` method. Otherwise, I simply appended the element to `flat_list`. This approach ensures that only one level of nesting is flattened, as required. The edge case handled here is when the input list contains non-list elements interspersed with nested lists, ensuring they are correctly flattened without deeper nesting being altered.

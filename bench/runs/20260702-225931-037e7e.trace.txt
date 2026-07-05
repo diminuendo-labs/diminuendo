@@ -1,0 +1,3 @@
+**
+
+I chose to approach this problem using a stack data structure, which is well-suited for keeping track of opening and closing parentheses. The function iterates over each character in the input string, pushing opening parentheses onto the stack and popping them off when it encounters a matching closing parenthesis. If it encounters an unmatched closing parenthesis or if the stack is not empty at the end (indicating some opening parentheses were never closed), the function returns False; otherwise, it returns True. I explicitly handled the edge case where the input string is empty by checking for this condition before attempting to pop from the stack.

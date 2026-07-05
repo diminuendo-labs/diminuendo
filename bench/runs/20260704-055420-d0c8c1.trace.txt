@@ -1,0 +1,2 @@
+**
+I implemented the function as a simple comparison between the counts of opening and closing parentheses in the string. This approach works because for each opening parenthesis, there must be a corresponding closing one to balance it out, so if the counts are equal, the parentheses are balanced. I did not use recursion or explicit stack management, as they are often overkill for such a simple problem.

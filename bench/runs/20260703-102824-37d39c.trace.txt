@@ -1,0 +1,7 @@
+**
+
+I started by handling the edge case where an empty string is passed to the function. If `s` is empty, I immediately return an empty string.
+
+Next, I split the input string `s` into a list of words using `split()`. This method splits the string at whitespace and handles multiple consecutive spaces correctly by returning an appropriate number of empty strings in the result list.
+
+To find the longest word, I used Python's built-in `max()` function with the `key=len` argument to get the word with the maximum length. However, this returns the first longest word encountered, so I then iterate over the words in reverse order using a for loop. The first word found that matches the maximum length is returned, ensuring that ties are resolved by returning the last such word as specified.

@@ -1,0 +1,3 @@
+**
+
+I started by sorting the list of pairs first by their start time, and then by their end time. This ensures that any overlapping or touching ranges will be adjacent in the sorted list. Then I iterated through the sorted list, merging each pair with the last one in the merged list if they overlap or touch. If they do not overlap, I simply appended the current pair to the merged list. This approach handles the edge case where the input list is empty by returning an empty list immediately.

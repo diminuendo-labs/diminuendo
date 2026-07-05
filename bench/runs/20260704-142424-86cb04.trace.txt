@@ -1,0 +1,2 @@
+** 
+I started by splitting the input string `s` into individual tokens using `_` as the delimiter. Then, I created a list comprehension to capitalize each token unless it is in the exception list ['URL', 'ID']. The first token was explicitly converted to lowercase to ensure proper camel case formatting. Finally, I joined all the tokens together without any separators to form the final camel case string. This approach ensures that the function is correct and concise while handling at least one edge case (tokens in the exception list).

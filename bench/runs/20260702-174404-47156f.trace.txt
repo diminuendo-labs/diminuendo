@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to efficiently count the occurrences of each word. I then used the `most_common(1)[0]` method to get the maximum count and corresponding words. To handle ties, I found the index of the last occurrence by using a list comprehension to find the indices of all tied words and taking the maximum value. If there's only one word with the maximum count, I simply return it as before.

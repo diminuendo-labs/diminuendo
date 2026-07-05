@@ -1,0 +1,7 @@
+**  
+The function `snake_to_camel` takes a string `s` as input and processes it to convert it from snake_case to camelCase. It uses Python's string methods and list comprehension to achieve this:
+- `s.strip('_')` removes leading and trailing underscores.
+- `s.split('_')` splits the string by underscores, resulting in a list of words.
+- The list comprehension iterates over each word, capitalizes it using `word.capitalize()`, and includes it in the final result only if it is not an empty string (to handle repeated underscores).
+
+This approach ensures that the function handles edge cases like leading, trailing, and repeated underscores effectively while maintaining readability and conciseness.

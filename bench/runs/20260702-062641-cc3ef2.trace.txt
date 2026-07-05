@@ -1,0 +1,2 @@
+**
+I implemented the median function by first checking for the edge case of an empty list, returning None in this case. Then, I calculated the middle index `mid` of the input list using integer division (`//`). Depending on whether the length is odd or even, I returned either the middle value directly or the average of the two middle values as a float. I chose to use integer division for simplicity and because it's sufficient for this specific task.

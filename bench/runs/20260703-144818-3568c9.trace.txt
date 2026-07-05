@@ -1,0 +1,2 @@
+**
+I first handled the edge case of an empty list by returning an empty string. Then, I sorted the input list to ensure that numbers are in ascending order. To generate the 'start-end' strings for consecutive runs, I iterated over the sorted list and kept track of the current range with `start` variable. When a new number is encountered, I append the previous range (if it exists) to the result and update the `start` value accordingly.

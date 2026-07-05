@@ -1,0 +1,3 @@
+**
+
+I chose to handle the tie-break situation by iterating over the list of words in reverse order and returning the first occurrence of the longest word, which will be its last occurrence. This approach is straightforward and efficient for small inputs like this task requires. I didn't use any external libraries or built-in functions beyond what's necessary to solve the problem, keeping the code concise and readable as requested.

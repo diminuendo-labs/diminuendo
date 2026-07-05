@@ -1,0 +1,10 @@
+**
+To solve this problem, I first handle the edge case where the input string `s` is empty. If it is, the function returns an empty string immediately.
+
+Next, I convert the entire string to lowercase and split it into individual words using `split()`. This ensures that the word counting is case-insensitive.
+
+I then create a dictionary `word_count` to store each unique word as a key and its count as the value. I iterate through the list of words, updating the count for each word in the dictionary.
+
+After building the dictionary, I sort it based on two criteria: first by the count in descending order (`-x[1]`) to get the most frequent words at the top, and then alphabetically by word (`x[0]`) to break ties.
+
+Finally, I return the word with the highest count. If no words were present (though this case shouldn't occur given the initial check for an empty string), the function returns an empty string.

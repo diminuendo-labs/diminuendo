@@ -1,0 +1,3 @@
+**
+
+I chose to use Python's built-in string methods `replace()` and `lower()` to remove whitespace characters and lowercase the strings respectively. This approach is concise and readable, meeting the criteria. I also explicitly mentioned handling empty strings as equal in the docstring, addressing one edge case.

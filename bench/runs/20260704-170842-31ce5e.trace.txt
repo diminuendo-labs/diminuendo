@@ -1,0 +1,6 @@
+- The function `token_case(s)` takes an underscore-delimited identifier as input.
+- It splits the string into tokens using `_` as a delimiter.
+- For each token after the first, it checks if the token is in the exception list. If so, it keeps the token unchanged; otherwise, it converts it to lowercase.
+- The first token is always converted to lowercase.
+- Finally, it joins all the processed tokens together without any separators to form the camel case string.
+- I included an edge case for an empty string, which results in an empty output as there are no tokens to process.

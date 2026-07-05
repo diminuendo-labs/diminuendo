@@ -1,0 +1,2 @@
+**
+I implemented this function using Python's built-in `count()` method for strings, which returns the number of occurrences of a substring in a given string. I chose to use `count()` because it provides an efficient way to count the opening and closing parentheses without having to iterate over each character individually. By comparing the counts of '(' and ')' characters, we can determine whether the parentheses are balanced. This approach is concise and readable, meeting the criteria for the task.

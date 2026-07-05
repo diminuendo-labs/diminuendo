@@ -1,0 +1,2 @@
+**
+I implemented this function by using Python's built-in `sorted` function with a custom sorting key. The key is a tuple containing the length of each word and its reverse alphabetical order, which ensures words are ordered first by increasing length and then in reverse alphabetical order among words of equal length. I chose to handle the empty list edge case explicitly, as it would raise an exception otherwise when trying to access `k-1` index.

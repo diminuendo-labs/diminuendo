@@ -1,0 +1,2 @@
+To solve this problem, I used Python's built-in set data structure to count the unique occurrences of each number in the list. The set removes any duplicate values and returns a dictionary containing the counts of each value. By filtering this dictionary using the `if nums.count(num) == 1` condition, I was able to find only those numbers that appear exactly once. Finally, the length of the resulting list gives the count of unique numbers that appear exactly once in the input list.
+I also handled an edge case where the list is empty by returning 0 for such cases.

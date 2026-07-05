@@ -1,0 +1,7 @@
+**
+
+To solve this problem, I first checked if `k` is within the valid range (greater than 0 and less than or equal to the length of the words list). If not, I returned `None`.
+
+Next, I sorted the list of words using a custom key. The key sorts primarily by the negative length of each word to ensure that shorter words come before longer ones. For words of equal length, I used reverse-alphabetical order (achieved by `x[::-1]`) to sort them.
+
+Finally, I returned the k-th word from the sorted list, adjusting for zero-based indexing by using `k-1`.

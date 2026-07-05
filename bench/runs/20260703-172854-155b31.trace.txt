@@ -1,0 +1,7 @@
+I created a function called `range_summary` that takes a list of integers as an argument. First, I check if the list is empty and return an empty string if it is. Then, I initialize a list `runs` with the first number in the list and itself as both start and end points.
+
+I iterate through the remaining numbers in the list (`nums[1:]`) to create runs of consecutive integers. If the current number is one more than the last end point in the `runs` list, I increment the end point. Otherwise, I add a new tuple with the current number as both start and end points to the `runs` list.
+
+Finally, I use a list comprehension to create a string representation of each run by checking whether the start equals the end (in which case it's a single number) or converting them into a range format (start-end). Lastly, I join all the resulting strings with commas and return the result.
+
+The edge case I named is when the input list is empty; in this case, an empty string is returned instead of raising any error or returning a default value like 'None'.

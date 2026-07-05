@@ -1,0 +1,2 @@
+**
+To solve this problem, I first split the input string into individual words using `s.split()`. This handles the edge case where the input string is empty by returning an empty list. Next, I find the maximum length of the words in the list using a generator expression within the `max()` function. Finally, I iterate over the words in reverse order to return the last word that has the maximum length.

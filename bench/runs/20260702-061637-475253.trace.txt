@@ -1,0 +1,2 @@
+**  
+The function `median` first checks if the input list `nums` is empty and returns `None` if it is, handling an edge case where no median can be calculated. It then sorts the list to easily find the middle value(s). If the length of the sorted list is even, it calculates the average of the two middle values by summing them and dividing by 2.0 to ensure the result is a float. If the length is odd, it simply returns the middle value directly. This approach ensures correctness and readability while handling the edge case of an empty list.

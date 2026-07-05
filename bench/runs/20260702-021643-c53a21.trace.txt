@@ -1,0 +1,2 @@
+**
+I chose the approach of normalizing the input string by converting it to lowercase and splitting it into words. This makes it easier to compare the occurrences of each word. I used Python's built-in `Counter` class from the `collections` module to efficiently count the occurrences of each word, and then used a lambda function as the key for the `max` function to break ties alphabetically. By handling the empty string edge case explicitly, we ensure that our function returns an empty string in this scenario, meeting the specified criteria.

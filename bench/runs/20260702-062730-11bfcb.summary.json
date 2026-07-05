@@ -1,0 +1,51 @@
+{
+  "run_id": "20260702-062730-11bfcb",
+  "node_id": "task-20260702-062730-11bfcb",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function does not correctly flatten exactly one level of nesting. It flattens all elements if they are lists, rather than only the first element.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_case_handling": 2
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": false,
+        "got": "[1, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": false,
+        "got": "[1, 2]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting in a list.\n\n    Elements that are lists contribute their items in order, and every other element is kept as is.\n    Deeper nesting stays nested.\n\n    Edge case: Handles empty lists correctly by returning the original list.\n\n    :param lst: The list to flatten\n    :return: A new list with one level of nesting flattened\n    \"\"\"\n    return [i if not isinstance(i, list) else i[0] for i in lst]\n```\n\n**",
+  "trace": "**\n\nI defined a generator expression within the function that iterates over each element `i` in the input list. If an element is not a list (`not isinstance(i, list)`), it's included as-is in the new list. If it is a list, its first element (`i[0]`) is extracted and included instead of the entire sublist. This ensures that only one level of nesting is flattened. The function also handles empty lists correctly by returning the original list, which satisfies the edge case requirement.",
+  "totals": {
+    "time_s": -2.6828658999999995,
+    "tokens": 21
+  },
+  "files": [
+    "20260702-062730-11bfcb.crumbs.jsonl",
+    "20260702-062730-11bfcb.trace.txt"
+  ]
+}

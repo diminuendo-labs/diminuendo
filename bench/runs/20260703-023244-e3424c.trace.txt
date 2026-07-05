@@ -1,0 +1,2 @@
+**
+I chose a concise approach using Python's built-in string methods to handle the conversion efficiently. I used the `split()` method to split the input string into words separated by underscores, and then applied the `capitalize()` method to each non-empty word (to handle the edge case where an empty string or strings with repeated underscores are passed). This solution is readable and handles the specified edge cases.

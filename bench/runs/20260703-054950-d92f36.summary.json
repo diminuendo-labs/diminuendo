@@ -1,0 +1,59 @@
+{
+  "run_id": "20260703-054950-d92f36",
+  "node_id": "task-20260703-054950-d92f36",
+  "task": "Write a Python function count_distinct_pairs(nums, target) returning how many distinct unordered value pairs in the list sum to target, each distinct pair counted once no matter how many times its values repeat: [1, 3, 1, 3] with target 4 has exactly one such pair. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function does not handle cases where a number can pair with itself to reach the target.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness": 3,
+    "readability": 2,
+    "edge_cases": 1
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_distinct_pairs([1, 3, 1, 3], 4)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      },
+      {
+        "call": "count_distinct_pairs([2, 2, 2], 4)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      },
+      {
+        "call": "count_distinct_pairs([0, 5, 2, 3, 5, 0], 5)",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_distinct_pairs([], 1)",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef count_distinct_pairs(nums, target):\n    \"\"\"\n    Count distinct unordered value pairs that sum to target.\n\n    Args:\n        nums (list): List of numbers.\n        target (int): Target sum.\n\n    Returns:\n        int: Number of distinct unordered pairs that sum to target.\n\n    Example:\n        >>> count_distinct_pairs([1, 3, 1, 3], 4)\n        1\n    \"\"\"\n    if not nums:  # edge case: empty list returns 0\n        return 0\n\n    num_set = set(nums)  # convert list to set for O(1) lookups\n    pair_count = set()  # store distinct pairs as frozensets\n\n    for num in num_set:\n        complement = target - num\n        if complement in num_set and (frozenset((num, complement)) not in pair_count):\n            pair_count.add(frozenset((num, complement)))\n\n    return len(pair_count)\n```\n\n**",
+  "trace": "**\nI chose to use a set data structure to store the numbers for efficient lookups. To avoid counting duplicate pairs, I used another set to store distinct pairs as frozensets (since lists are not hashable). This approach allows me to iterate through the set of numbers once and count distinct pairs in O(n) time complexity. The edge case of an empty list is handled explicitly with a simple return statement at the beginning of the function.",
+  "totals": {
+    "time_s": -3.119394999999999,
+    "tokens": 29
+  },
+  "files": [
+    "20260703-054950-d92f36.crumbs.jsonl",
+    "20260703-054950-d92f36.trace.txt"
+  ]
+}

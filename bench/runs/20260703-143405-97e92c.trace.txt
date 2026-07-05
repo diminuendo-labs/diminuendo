@@ -1,0 +1,2 @@
+**
+I used a generator expression within the `set` function to efficiently create a set of distinct values greater than `k`. This approach allows us to take advantage of Python's built-in set operations, which automatically eliminate duplicates. I also included a docstring with examples to handle the edge case where the input list is empty, returning 0 as specified in the task.

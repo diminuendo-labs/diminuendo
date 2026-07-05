@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-123329-4a5bc1",
+  "node_id": "task-20260704-123329-4a5bc1",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function accurately implements the trimmed mean calculation.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness": 4,
+    "readability": 3
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": false,
+        "got": "3.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": false,
+        "got": "1.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n    nums.sort()\n    n = len(nums)\n    median_idx = int((n-1)/2)\n    min_val, max_val = nums[0], nums[-1]\n    nums[median_idx] = min_val if median_idx > 0 else max_val\n    nums.remove(min_val)\n    nums.remove(max_val)\n    return sum(nums)/(n-2)\n```",
+  "trace": "The function first checks if the list is empty and returns None in that case. If not, it sorts the list and removes one occurrence of the minimum and one occurrence of the maximum value. The trimmed_mean is then calculated as the sum of the remaining numbers divided by the number of remaining numbers (n-2). An edge case considered here is when the length of the list is odd, as in that case the middle element is the median and not an average between two elements.",
+  "totals": {
+    "time_s": -1.9317464999999991,
+    "tokens": -82
+  },
+  "files": [
+    "20260704-123329-4a5bc1.crumbs.jsonl",
+    "20260704-123329-4a5bc1.trace.txt"
+  ]
+}

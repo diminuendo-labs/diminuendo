@@ -1,0 +1,4 @@
+**
+I approached this problem by first considering the edge case where all values in the list are equal. In such a case, the function should return the index of the maximum value, which is the same for all elements. To handle this, I used the `set` function to check if there's only one unique element in the list.
+
+For the general case, I used the `index` method with a custom key function to find the last occurrence of the maximum value. The key function returns a tuple containing the index of the last occurrence of the element (using `rindex`) and its negative value (to ensure that duplicate elements are compared based on their last occurrence). This ensures that if there are multiple occurrences of the largest value, it will return the index of its last occurrence.

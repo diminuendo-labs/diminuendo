@@ -1,0 +1,2 @@
+**  
+The function `range_summary` takes a list of integers, sorts them to ensure they are in ascending order, and iterates through the sorted list. It identifies consecutive numbers and groups them into ranges. When a break is found (a number not consecutive), it appends the current range or single number to the result list. Finally, it joins all parts with commas and returns the summary string. The function handles edge cases such as an empty list by immediately returning an empty string.

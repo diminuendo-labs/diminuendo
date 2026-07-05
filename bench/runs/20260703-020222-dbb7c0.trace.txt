@@ -1,0 +1,9 @@
+**
+
+1. **Sorting and Uniqueness:** The input list is first sorted and duplicates are removed using `sorted(set(nums))`. This ensures the numbers are in ascending order and there are no repeated values.
+   
+2. **Range Identification:** We iterate through the sorted, unique list to identify consecutive sequences (ranges). If the current number is exactly one more than the previous end, they form a continuous range. Otherwise, we add the current range to the result list and reset the start and end for the next potential range.
+   
+3. **Edge Case Handling:** The function checks if the input list is empty at the beginning. If it is, an empty string is returned immediately.
+
+4. **Final Formatting:** After processing all numbers, any remaining range (if any) is added to the result list, and then the ranges are joined into a single string with commas.

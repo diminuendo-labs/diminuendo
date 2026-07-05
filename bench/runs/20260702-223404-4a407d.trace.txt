@@ -1,0 +1,15 @@
+**
+
+To implement the `most_common_word` function, I followed these steps:
+
+1. **Check for empty string**: If the input string `s` is empty, the function immediately returns an empty string as specified in the edge case.
+
+2. **Normalize and split**: Convert the entire string to lowercase using `.lower()` and then split it into individual words using `.split()`, resulting in a list of words.
+
+3. **Count occurrences**: Use a dictionary `word_count` to keep track of the count of each word. Iterate through the list of words, incrementing the count for each occurrence.
+
+4. **Determine max count**: Find the maximum count from the values in the `word_count` dictionary using `max(word_count.values())`.
+
+5. **Select most common words**: Create a list of words that have the highest count by iterating through the items in `word_count`. If there are multiple such words, sort them alphabetically.
+
+6. **Return the result**: The function returns the first word from the sorted list of most common words, which will be the lexicographically smallest one due to the sorting step.

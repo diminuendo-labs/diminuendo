@@ -1,0 +1,2 @@
+**
+I chose a simple and efficient approach by directly comparing the counts of opening and closing parentheses in the input string. This works because the total count of both types must be equal for the parentheses to be balanced. I also included a docstring to provide clear documentation of what the function does, its arguments, and its return value. This meets the edge case of an empty string being balanced.

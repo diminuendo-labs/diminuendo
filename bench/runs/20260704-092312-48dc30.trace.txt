@@ -1,0 +1,3 @@
+I approached this task by first splitting the string at underscores to get a list of words. If the input is not empty, I created an empty string called `camelCase` and iterated through each word in the list. For each word, I added it to `camelCase`, ensuring that the first letter was lowercased while all other letters were capitalized. Finally, I returned the resulting camelCase string. If the input string is empty, the function returns an empty string as well.
+
+One edge case handled by this function is when there are leading or trailing underscores in the input string; they will be dropped, ensuring that the result always starts with a lowercase letter and ends with an uppercase one. For example: '__a__b_' becomes 'aB'.

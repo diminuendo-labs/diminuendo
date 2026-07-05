@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-052132-4cdd8d",
+  "node_id": "task-20260702-052132-4cdd8d",
+  "task": "Write a Python function average(nums) returning the arithmetic mean of the list as a float, even when the mean is a whole number. An empty list returns None, never zero. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "reason": "The function passes all given criteria, including handling the empty list edge case.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5,
+    "at least one edge case is named": 1
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "average([1, 2])",
+        "ok": true,
+        "got": "1.5",
+        "expect": "1.5"
+      },
+      {
+        "call": "average([2, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      },
+      {
+        "call": "average([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "average([3])",
+        "ok": true,
+        "got": "3.0",
+        "expect": "3.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef average(nums):\n    if not nums:\n        return None\n    return sum(nums) / len(nums)\n```\n\n**",
+  "trace": "**\n\nThe function `average` calculates the arithmetic mean of a list of numbers. It first checks if the input list `nums` is empty; if so, it returns `None`. Otherwise, it computes the sum of the list using the built-in `sum()` function and divides it by the length of the list using `len(nums)`, which gives the arithmetic mean. This approach ensures that the function correctly handles edge cases, such as an empty input list, and always returns a float, even for whole number means.",
+  "totals": {
+    "time_s": 20.1817694,
+    "tokens": 549
+  },
+  "files": [
+    "20260702-052132-4cdd8d.crumbs.jsonl",
+    "20260702-052132-4cdd8d.trace.txt"
+  ]
+}

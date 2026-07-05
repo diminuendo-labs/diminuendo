@@ -1,0 +1,2 @@
+**
+I chose to use regular expressions (re) to strip leading/trailing whitespace and punctuation from each word, as it provides a concise way to handle these edge cases. I also utilized the `split()` method with a space character to split the input string into words, which simplifies the logic for counting occurrences of the target word. The main function itself iterates over each word in the list and uses a generator expression to count the occurrences after stripping punctuation and ignoring case.

@@ -1,0 +1,2 @@
+**
+I solved this problem by using Python's built-in `max` function with a custom `key` function. The `key` function takes an index and returns a tuple where the first element is the value at that index, and the second element is the negative of the index itself. This allows `max` to compare indices based on both their values (in case of a tie) and their positions from right to left (to break ties in favor of the last occurrence). The edge case I named was when two or more values are equal to the maximum, where this function returns the index of the rightmost one.

@@ -1,0 +1,2 @@
+**
+I chose to use a set to store unique pairs, which allows for efficient lookup and ensures that each distinct pair is counted only once. I iterated through the list using nested loops to compare each pair of numbers, ensuring that (a, b) is considered the same as (b, a) by sorting the pair into a tuple. The edge case of an empty list is handled explicitly at the beginning of the function.

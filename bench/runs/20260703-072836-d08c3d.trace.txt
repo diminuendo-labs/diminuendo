@@ -1,0 +1,2 @@
+**
+I implemented the function using a simple iterative approach. I initialized variables to keep track of the maximum run length and the current character. As I iterated through the string, I updated these variables whenever I encountered a change in character or a repeated character. This way, I could easily find the longest consecutive run at the end of the iteration.

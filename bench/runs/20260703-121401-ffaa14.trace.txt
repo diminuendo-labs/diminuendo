@@ -1,0 +1,7 @@
+**
+1. **Edge Case Handling**: The function first checks if the input string `s` is empty. If it is, the function immediately returns an empty string.
+2. **Splitting Words**: The input string is split into a list of words using the `split()` method.
+3. **Tracking Longest Words**: As we iterate over the words in reverse order (to ensure that the last longest word is returned in case of ties), we track the maximum length encountered and collect all words of this length.
+4. **Return Result**: Finally, the function returns the last word from the list of longest words if the list is not empty; otherwise, it returns an empty string.
+
+This approach ensures that the function is both correct and concise, adhering to the provided criteria.

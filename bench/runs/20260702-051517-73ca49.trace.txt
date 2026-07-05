@@ -1,0 +1,4 @@
+- The function `max_index` takes a list of numbers as input and returns the index of the largest value. If the list is empty, it returns `None`.
+- To find the last occurrence of the maximum value, we first determine the maximum value using Python's built-in `max()` function.
+- We then reverse the list (`nums[::-1]`) to find the index of the maximum value in this reversed list. The length of the original list minus this index gives us the index of the last occurrence of the maximum value in the original list.
+- To handle the edge case where the input list is empty, we check if `nums` is empty at the beginning and return `None` if it is.

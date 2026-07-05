@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to count the frequency of each word in the input string. However, since we need to break ties alphabetically, I couldn't use `most_common` directly. Instead, I used a lambda function as the key for the `max` function to first consider the count and then the alphabetical order. This approach is concise and readable, but it's worth noting that it has a time complexity of O(n^2) due to the inner loop in the lambda function.

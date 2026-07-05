@@ -1,0 +1,3 @@
+**
+
+I chose a generator expression to implement the function. It iterates over the input list, checking each element with `isinstance` to see if it is a list. If not, it adds the element as-is; otherwise, it leaves it in its original position. This way, deeper nesting remains intact, and only one level of flattening occurs. The edge case this function handles is when an empty list is present at any level of nesting: it stays an empty list.

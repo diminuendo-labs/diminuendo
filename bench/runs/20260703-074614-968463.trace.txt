@@ -1,0 +1,3 @@
+**
+
+I chose to use a stack data structure to keep track of the opening brackets. This allows me to efficiently count the nesting depth and detect errors such as unbalanced brackets or closed brackets before their openers. I also included an explicit edge case in the docstring, which handles an empty string returning 0. The function iterates over each character in the input string, incrementing the maximum depth whenever it encounters an opening bracket and decrementing when it encounters a closing bracket (if there's a matching opener on the stack).

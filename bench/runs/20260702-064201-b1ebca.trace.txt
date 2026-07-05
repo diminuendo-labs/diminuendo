@@ -1,0 +1,2 @@
+**
+I approached this problem by using Python's built-in `split()` method to split the input string into a list of words. I then used the `max()` function with the `key` argument set to `len`, which returns the length of each word in the list, and a fallback value `next` (which is an empty string) as a default when all lengths are equal. This ensures that if there are multiple longest words, it returns the last one due to Python's lexicographical ordering rules.

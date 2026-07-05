@@ -1,0 +1,11 @@
+**
+
+To solve this problem, the function `kth_ordered` first checks if the input list `words` is empty or if `k` is less than or equal to zero. If either condition is true, it returns `None`, handling an edge case where the input is invalid.
+
+Next, the function groups words by their length using a dictionary `groups`. Each key in this dictionary represents a word length, and the corresponding value is a list of words with that length.
+
+The function then sorts each group of words in reverse-alphabetical order. This is achieved by sorting the list `group` with `sorted(group, reverse=True)`.
+
+After sorting all groups, the function concatenates them into a single list `sorted_words`.
+
+Finally, the function checks if `k` exceeds the length of `sorted_words`. If it does, the function returns `None`, handling another edge case where `k` is out of range. Otherwise, it returns the word at index `k-1` (since Python uses zero-based indexing).

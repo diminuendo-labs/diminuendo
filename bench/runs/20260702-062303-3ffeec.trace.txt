@@ -1,0 +1,3 @@
+**
+
+To solve this task, I chose to use the built-in `split` method of Python strings, which splits a string into a list of words separated by whitespace. Since we need to find the longest word in case of ties, I used the `max` function with the `key` argument set to `len`, which returns the first maximum value (in this case, the first longest word). However, I also added a condition to handle the edge case where the input string contains only spaces or tabs, returning an empty string in such cases.

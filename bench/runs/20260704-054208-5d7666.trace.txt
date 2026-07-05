@@ -1,0 +1,2 @@
+**
+I chose to write a generator expression-based solution, as it allows for concise and readable code. The function first flattens the elements that are lists using `isinstance(item, list)`, then adds all non-list elements as is. This approach handles the edge case where the input list contains only empty lists, which would otherwise be included in the output.

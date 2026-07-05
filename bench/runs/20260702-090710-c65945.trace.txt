@@ -1,0 +1,1 @@
+I used a list comprehension to iterate through each element in the input list. If an element is a list, it's unpacked; otherwise, it's wrapped in a list to ensure consistent handling. This approach handles the edge case where the input might contain non-list elements at any level of nesting beyond the first level, ensuring they are not mistakenly flattened further.

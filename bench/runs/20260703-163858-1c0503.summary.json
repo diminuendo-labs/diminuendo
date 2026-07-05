@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-163858-1c0503",
+  "node_id": "task-20260703-163858-1c0503",
+  "task": "Write a Python function weighted_mean(values, weights) returning the weighted arithmetic mean as a float. Empty lists return None, and a zero total weight also returns None, never a crash. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code meets all requirements, including correctly handling empty lists and zero total weights.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 5,
+    "edge case handling": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "weighted_mean([1, 3], [1, 1])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      },
+      {
+        "call": "weighted_mean([2], [0])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "weighted_mean([], [])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "weighted_mean([1, 2], [0, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef weighted_mean(values, weights):\n    if not values or sum(weights) == 0:\n        return None\n\n    total = sum(v * w for v, w in zip(values, weights))\n    return total / sum(weights)\n```",
+  "trace": "The function first checks if the input lists are empty or the sum of weights is zero, returning `None` in such cases to adhere to the specified edge case. It then calculates the weighted mean using a generator expression and returns the result by dividing the total weighted sum by the sum of weights. The code aims for conciseness without sacrificing readability.",
+  "totals": {
+    "time_s": 19.3106291,
+    "tokens": 572
+  },
+  "files": [
+    "20260703-163858-1c0503.crumbs.jsonl",
+    "20260703-163858-1c0503.trace.txt"
+  ]
+}

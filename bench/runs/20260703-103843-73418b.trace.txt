@@ -1,0 +1,3 @@
+**
+
+I approached this task by defining a function `longest_word` that takes a string `s` as input. The function first checks if the input string is empty and returns an empty string immediately if it is. Then, it splits the input string into words using the `split()` method. To handle ties in word length, Python's built-in `max()` function with the `key=len` argument automatically selects the last word in case of a tie because Python maintains insertion order for its data structures. Therefore, I directly return this longest word found by `max()`.

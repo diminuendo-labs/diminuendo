@@ -1,0 +1,5 @@
+**
+
+The `flatten_once` function iterates through each element in the input list. If an element is a list itself, it uses `extend` to add its items to the result list. If an element is not a list, it simply appends it to the result list as is. This ensures that exactly one level of nesting is flattened while deeper levels remain nested.
+
+The function handles an edge case where there are no elements in the input list or all elements at the top level are non-lists. In such cases, the function returns an empty list or the original list unchanged, respectively, ensuring consistency and correctness.

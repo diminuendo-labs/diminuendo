@@ -1,0 +1,2 @@
+**
+I chose a simple iteration approach to count the balance of parentheses. The function keeps track of an increasing or decreasing balance based on the encountered characters, and returns whether the final balance is zero. This handles edge cases like an empty string (which is considered balanced) without explicit checks for it, as an empty string will result in `balance == 0` at the end of the iteration.

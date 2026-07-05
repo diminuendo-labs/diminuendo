@@ -1,0 +1,2 @@
+**  
+I used Python's string `split` method to break the input string into a list of words based on underscores. Then, I applied the `capitalize` method to each word and joined them back together without any separators. This approach ensures that only non-empty strings are considered (i.e., it drops leading, trailing, and repeated underscores). The function is concise and readable, making it easy to understand and maintain.

@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking for the edge case of an empty list. Then I converted the input list to a set to remove duplicates and sorted it to ensure the output is in ascending order. I iterated over the unique numbers, keeping track of consecutive runs by updating start and end variables; if a run ends or we reach the last number, I append the range (or single number) to the result list.

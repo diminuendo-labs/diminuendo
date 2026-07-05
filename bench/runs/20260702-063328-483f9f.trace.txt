@@ -1,0 +1,2 @@
+**
+I started by checking for the empty list edge case and returning an empty string immediately. Then, I sorted and removed duplicates from the input list using a set, which maintains order due to Python 3's sorting behavior when converting iterables to sets. Finally, I iterated through the sorted list, skipping consecutive runs of numbers (i.e., when each number is one more than its predecessor) and appending ranges or single numbers to a result list as necessary.

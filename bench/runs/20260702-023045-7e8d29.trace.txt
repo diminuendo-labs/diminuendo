@@ -1,0 +1,2 @@
+**
+I chose to use the `split()` method to split the input string into a list of words, as it is a concise and readable way to handle whitespace-separated strings in Python. I also used the `max()` function with a `default` argument set to an empty string (`''`) to handle the edge case where the input contains only whitespace characters. This approach allows us to find the longest word in a single line of code, making it efficient and easy to read.

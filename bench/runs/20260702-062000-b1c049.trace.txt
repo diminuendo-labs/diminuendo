@@ -1,0 +1,2 @@
+**
+I first checked for the edge case of an empty list, returning None in this instance. Then I sorted the input list to prepare it for median calculation. Depending on whether the length is even or odd, I either returned the average of the two middle values (when even) or the single middle value (when odd). This approach ensures that the function can handle both cases correctly and efficiently.

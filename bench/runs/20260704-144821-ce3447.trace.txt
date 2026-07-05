@@ -1,0 +1,2 @@
+**
+I used a greedy approach by sorting the input pairs by their start value and then iterating through them. If two adjacent ranges overlap or are within distance 1, I merge them; otherwise, I add the current range to the list of merged ranges. This approach is concise and readable because it uses a simple iterative loop instead of recursive functions or complex data structures. I also explicitly handled the edge case where the input list is empty by returning an empty list.

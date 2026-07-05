@@ -1,0 +1,2 @@
+**
+I chose a simple yet effective approach by using a list comprehension to filter out the elements that are already lists and keep them as is. This way, we ensure that only one level of nesting is flattened. I did not explicitly handle edge cases like `None` or empty inputs in this implementation, but the function will still work correctly for these cases because they would be treated as non-lists by the `isinstance` check.

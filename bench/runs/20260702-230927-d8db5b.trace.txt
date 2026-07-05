@@ -1,0 +1,2 @@
+**
+I chose a straightforward and concise approach by using Python's built-in `count` method, which returns the number of occurrences of a substring in a string. I considered that an empty string is indeed balanced, as it does not contain any unpaired parentheses. This function handles the edge case where there are no parentheses in the input string (an example of a balanced string), making it pass the given criteria.

@@ -1,0 +1,97 @@
+SELF-DELIVERY 20260704-090337 (PACKET-024)
+performer=mistral:7b  audience=llama3.1:8b (v1, production)
+every armed cell is self-delivery: the origin seat receiving its own store, no transfer edge, never pooled with the P022 llama cells
+sweeps (P022 ranked order): boundary=('merge_ranges', 'median', 'flatten_once')  normalize=('snake_to_camel', 'balanced')  R=12
+qualification at the standing fraction, canonical accounting (unrunnable-as-fail, DECISIONS 2026-07-04): at least 2 passes AND 2 fails of 12 pooled on one-rule ground, at least 4 AND 4 of 24 on two-rule ground
+drift bars, scaled as standing: 2 of 12 pooled one-rule, 4 of 24 pooled two-rule
+byte checks against the production lines: armed-B1=True armed-B2=True armed-N1=True armed-N2=True
+armed-B1: gen_task=chunk  pins boundary/degenerate  origin=mistral:7b (self-delivery)
+armed-B2: gen_task=weighted_mean  pins boundary/*  origin=mistral:7b (self-delivery)
+armed-N1: gen_task=split_csvish  pins normalize/delimiters  origin=mistral:7b (self-delivery)
+armed-N2: gen_task=depth_max  pins normalize/delimiters  origin=mistral:7b (self-delivery)
+the census taxonomy, stated per task before any run (deterministic AST classifiers: merge_ranges, median, flatten_once reused unchanged from moderator23; snake_to_camel and balanced committed here; re-runnable: py selfdeliv24.py census <rows-file>):
+  merge_ranges: sweep, other, unrunnable
+  median: sort-and-index, other, unrunnable
+  flatten_once: comprehension, loop-with-branch, other, unrunnable
+  snake_to_camel: split-and-join, regex, char-walk, other, unrunnable
+  balanced: counter-or-stack sweep, count-equality shortcut, other, unrunnable
+rule checks for merge_ranges (the standing annotation): ['merge_ranges([[1, 3], [4, 6]])']
+rule checks for median (the standing annotation): ['median([5, 5])', 'median([])']
+rule checks for flatten_once (the standing annotation): ['flatten_once([1, [2, [3, 4]]])']
+rule checks for snake_to_camel (the standing annotation): ["snake_to_camel('__a__b_')"]
+rule checks for balanced (the standing annotation): ["balanced('(a(b)c)')", "balanced(')(')"]
+A boundary merge_ranges none rep 0: ev=0.75 tools=0 shape=sweep
+A boundary merge_ranges none rep 1: ev=0.50 tools=0 shape=sweep
+A boundary merge_ranges none rep 2: ev=0.00 tools=0 shape=sweep
+A boundary merge_ranges none rep 3: ev=0.25 tools=0 shape=sweep
+A boundary merge_ranges none rep 4: ev=0.75 tools=0 shape=sweep
+A boundary merge_ranges none rep 5: ev=0.50 tools=0 shape=sweep
+A boundary merge_ranges none rep 6: ev=0.75 tools=0 shape=sweep
+A boundary merge_ranges none rep 7: ev=0.50 tools=0 shape=sweep
+A boundary merge_ranges none rep 8: ev=0.50 tools=0 shape=sweep
+A boundary merge_ranges none rep 9: ev=0.50 tools=0 shape=sweep
+A boundary merge_ranges none rep 10: ev=0.50 tools=0 shape=sweep
+A boundary merge_ranges none rep 11: ev=0.50 tools=0 shape=sweep
+stage A boundary merge_ranges: pooled rule 0 passes, 12 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 0/12 readings-present); does not qualify (mixed means at least 2 of each)
+A boundary median none rep 0: ev=0.50 tools=0 shape=sort-and-index
+A boundary median none rep 1: ev=1.00 tools=0 shape=sort-and-index
+A boundary median none rep 2: ev=1.00 tools=0 shape=sort-and-index
+A boundary median none rep 3: ev=1.00 tools=0 shape=sort-and-index
+A boundary median none rep 4: ev=1.00 tools=0 shape=sort-and-index
+A boundary median none rep 5: ev=1.00 tools=0 shape=sort-and-index
+A boundary median none rep 6: ev=1.00 tools=0 shape=sort-and-index
+A boundary median none rep 7: ev=1.00 tools=0 shape=sort-and-index
+A boundary median none rep 8: ev=1.00 tools=0 shape=sort-and-index
+A boundary median none rep 9: ev=1.00 tools=0 shape=sort-and-index
+A boundary median none rep 10: ev=1.00 tools=0 shape=sort-and-index
+A boundary median none rep 11: ev=1.00 tools=0 shape=sort-and-index
+stage A boundary median: pooled rule 23 passes, 1 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 23/24 readings-present); does not qualify (mixed means at least 4 of each)
+A boundary flatten_once none rep 0: ev=0.33 tools=0 shape=comprehension
+A boundary flatten_once none rep 1: ev=0.33 tools=0 shape=comprehension
+A boundary flatten_once none rep 2: ev=0.33 tools=0 shape=comprehension
+A boundary flatten_once none rep 3: ev=0.33 tools=0 shape=comprehension
+A boundary flatten_once none rep 4: ev=0.00 tools=0 shape=unrunnable
+A boundary flatten_once none rep 5: ev=0.67 tools=0 shape=comprehension
+A boundary flatten_once none rep 6: ev=0.33 tools=0 shape=comprehension
+A boundary flatten_once none rep 7: ev=0.33 tools=0 shape=comprehension
+A boundary flatten_once none rep 8: ev=0.33 tools=0 shape=comprehension
+A boundary flatten_once none rep 9: ev=1.00 tools=0 shape=loop-with-branch
+A boundary flatten_once none rep 10: ev=0.67 tools=0 shape=loop-with-branch
+A boundary flatten_once none rep 11: ev=0.67 tools=0 shape=loop-with-branch
+stage A boundary flatten_once: pooled rule 1 passes, 11 fails of 12 canonical (unrunnable-as-fail; 1 unrunnable rows; diagnostic 1/11 readings-present); does not qualify (mixed means at least 2 of each)
+boundary sweep exhausted with no qualifier: the class closes on the supply answer, the third seat's floors on the record
+A normalize snake_to_camel none rep 0: ev=0.25 tools=0 shape=split-and-join
+A normalize snake_to_camel none rep 1: ev=0.50 tools=0 shape=split-and-join
+A normalize snake_to_camel none rep 2: ev=0.25 tools=0 shape=split-and-join
+A normalize snake_to_camel none rep 3: ev=0.75 tools=0 shape=split-and-join
+A normalize snake_to_camel none rep 4: ev=0.75 tools=0 shape=split-and-join
+A normalize snake_to_camel none rep 5: ev=0.75 tools=0 shape=split-and-join
+A normalize snake_to_camel none rep 6: ev=0.25 tools=0 shape=split-and-join
+A normalize snake_to_camel none rep 7: ev=0.25 tools=0 shape=split-and-join
+A normalize snake_to_camel none rep 8: ev=0.75 tools=0 shape=split-and-join
+A normalize snake_to_camel none rep 9: ev=0.75 tools=0 shape=split-and-join
+A normalize snake_to_camel none rep 10: ev=0.25 tools=0 shape=split-and-join
+A normalize snake_to_camel none rep 11: ev=0.50 tools=0 shape=split-and-join
+stage A normalize snake_to_camel: pooled rule 0 passes, 12 fails of 12 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 0/12 readings-present); does not qualify (mixed means at least 2 of each)
+A normalize balanced none rep 0: ev=1.00 tools=0 shape=counter-or-stack sweep
+A normalize balanced none rep 1: ev=1.00 tools=0 shape=counter-or-stack sweep
+A normalize balanced none rep 2: ev=1.00 tools=0 shape=counter-or-stack sweep
+A normalize balanced none rep 3: ev=1.00 tools=0 shape=counter-or-stack sweep
+A normalize balanced none rep 4: ev=1.00 tools=0 shape=counter-or-stack sweep
+A normalize balanced none rep 5: ev=1.00 tools=0 shape=counter-or-stack sweep
+A normalize balanced none rep 6: ev=1.00 tools=0 shape=counter-or-stack sweep
+A normalize balanced none rep 7: ev=1.00 tools=0 shape=counter-or-stack sweep
+A normalize balanced none rep 8: ev=1.00 tools=0 shape=counter-or-stack sweep
+A normalize balanced none rep 9: ev=1.00 tools=0 shape=counter-or-stack sweep
+A normalize balanced none rep 10: ev=1.00 tools=0 shape=counter-or-stack sweep
+A normalize balanced none rep 11: ev=1.00 tools=0 shape=counter-or-stack sweep
+stage A normalize balanced: pooled rule 24 passes, 0 fails of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 24/24 readings-present); does not qualify (mixed means at least 4 of each)
+normalize sweep exhausted with no qualifier: the class closes on the supply answer, the third seat's floors on the record
+== CENSUS (shape distribution per cell, every cell run, descriptive only) ==
+  A|boundary|flatten_once|none: comprehension=8  loop-with-branch=3  other=0  unrunnable=1
+  A|boundary|median|none: sort-and-index=12  other=0  unrunnable=0
+  A|boundary|merge_ranges|none: sweep=12  other=0  unrunnable=0
+  A|normalize|balanced|none: counter-or-stack sweep=12  count-equality shortcut=0  other=0  unrunnable=0
+  A|normalize|snake_to_camel|none: split-and-join=12  regex=0  char-walk=0  other=0  unrunnable=0
+census unrunnable against zero-readings divergence: 0 rows
+GATE: PASSED. both sweeps ran in ranked order with the arithmetic printed, stage B did not run, boundary, normalize closed on the supply answer, all four byte checks asserted, tool audit clean, census reported for every cell, every run checkpointed, report persisted. The readings are applied in the packet RESULTS. The seat neither taught nor learned.

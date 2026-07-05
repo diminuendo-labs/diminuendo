@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-135211-113686",
+  "node_id": "task-20260704-135211-113686",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly implements the trimmed mean calculation, has clean and simple structure, but only handles empty list as an edge case.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 5,
+    "at least one edge case is named": 1
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": false,
+        "got": "raised TypeError(\"object of type 'int' has no len()\")",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": false,
+        "got": "raised TypeError(\"object of type 'int' has no len()\")",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n\n    sorted_nums = sorted(nums)\n    trimmed_sum = sum(sorted_nums[1:-1])\n    trimmed_count = len(trimmed_sum)\n\n    return trimmed_sum / trimmed_count\n```\n\n**",
+  "trace": "**\n\nThe function `trimmed_mean` calculates the mean of a list after removing one occurrence of the minimum and one occurrence of the maximum value. If the input list is empty, it returns `None`. The approach involves:\n\n1. Sorting the list to easily identify and remove the minimum and maximum values.\n2. Summing up the remaining elements (excluding the first and last elements).\n3. Calculating the mean by dividing the sum by the count of remaining elements.\n\nThis method ensures that exactly one occurrence of each extreme value is removed, and it handles empty lists as specified.",
+  "totals": {
+    "time_s": -2.3285912,
+    "tokens": -28
+  },
+  "files": [
+    "20260704-135211-113686.crumbs.jsonl",
+    "20260704-135211-113686.trace.txt"
+  ]
+}

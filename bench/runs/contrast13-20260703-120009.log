@@ -1,0 +1,68 @@
+TASK-AND-TOPIC CONTRAST 20260703-120009 (PACKET-013)
+performer=qwen2.5-coder:7b  audience=llama3.1:8b (v1, production)
+cells=['L-none', 'L-prod', 'R-none', 'R-hand']  R=12  interleaved by rep in that fixed order
+byte checks: prod=True hand=True
+rep 0 L-none: ev=0.50 tools=0
+rep 0 L-prod: ev=0.50 tools=2
+rep 0 R-none: ev=0.80 tools=0
+rep 0 R-hand: ev=0.60 tools=1
+rep 1 L-none: ev=1.00 tools=0
+rep 1 L-prod: ev=0.50 tools=2
+rep 1 R-none: ev=0.40 tools=0
+rep 1 R-hand: ev=1.00 tools=1
+rep 2 L-none: ev=1.00 tools=0
+rep 2 L-prod: ev=0.50 tools=2
+rep 2 R-none: ev=0.60 tools=0
+rep 2 R-hand: ev=0.60 tools=1
+rep 3 L-none: ev=0.50 tools=0
+rep 3 L-prod: ev=0.50 tools=2
+rep 3 R-none: ev=0.60 tools=0
+rep 3 R-hand: ev=0.60 tools=1
+rep 4 L-none: ev=1.00 tools=0
+rep 4 L-prod: ev=0.50 tools=2
+rep 4 R-none: ev=0.40 tools=0
+rep 4 R-hand: ev=1.00 tools=1
+rep 5 L-none: ev=1.00 tools=0
+rep 5 L-prod: ev=0.50 tools=2
+rep 5 R-none: ev=1.00 tools=0
+rep 5 R-hand: ev=1.00 tools=1
+rep 6 L-none: ev=1.00 tools=0
+rep 6 L-prod: ev=1.00 tools=2
+rep 6 R-none: ev=0.60 tools=0
+rep 6 R-hand: ev=1.00 tools=1
+rep 7 L-none: ev=0.50 tools=0
+rep 7 L-prod: ev=0.50 tools=2
+rep 7 R-none: ev=1.00 tools=0
+rep 7 R-hand: ev=0.60 tools=1
+rep 8 L-none: ev=0.50 tools=0
+rep 8 L-prod: ev=0.50 tools=2
+rep 8 R-none: ev=0.60 tools=0
+rep 8 R-hand: ev=1.00 tools=1
+rep 9 L-none: ev=0.50 tools=0
+rep 9 L-prod: ev=0.50 tools=2
+rep 9 R-none: ev=0.60 tools=0
+rep 9 R-hand: ev=0.60 tools=1
+rep 10 L-none: ev=1.00 tools=0
+rep 10 L-prod: ev=0.50 tools=2
+rep 10 R-none: ev=0.60 tools=0
+rep 10 R-hand: ev=0.60 tools=1
+rep 11 L-none: ev=0.75 tools=0
+rep 11 L-prod: ev=0.50 tools=2
+rep 11 R-none: ev=0.80 tools=0
+rep 11 R-hand: ev=0.60 tools=1
+== POOLED RULE CHECKS (passed/n per cell) ==
+  L-none: 13/24
+  L-prod: 2/24
+  R-none: 8/12
+  R-hand: 12/12
+== PER-CHECK (per task, cells in run order) ==
+  longest_word('cat door bird') (L-none / L-prod): 0.58 / 0.08  <-- rule
+  longest_word('a bb cc d') (L-none / L-prod): 0.50 / 0.08  <-- rule
+  longest_word('') (L-none / L-prod): 1.00 / 1.00
+  longest_word('one') (L-none / L-prod): 1.00 / 1.00
+  range_summary([1, 2, 3, 5]) (R-none / R-hand): 0.33 / 0.42
+  range_summary([3, 1, 2, 2]) (R-none / R-hand): 0.67 / 1.00  <-- rule
+  range_summary([5, 3, 1]) (R-none / R-hand): 0.33 / 0.42
+  range_summary([]) (R-none / R-hand): 1.00 / 1.00
+  range_summary([7]) (R-none / R-hand): 1.00 / 1.00
+GATE: PASSED. four cells at R=12 interleaved, byte checks asserted, tool audit clean, every run checkpointed, report persisted. The readings are applied in the packet RESULTS.

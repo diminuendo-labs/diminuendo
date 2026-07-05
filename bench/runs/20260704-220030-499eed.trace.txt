@@ -1,0 +1,7 @@
+To write the trimmed_mean function, I used the following approach:
+
+1. First, I checked if the input list is empty or has less than three elements and returned None in such cases. This ensures that the function handles an edge case for a degenerate input.
+2. Then, I sorted the given list of numbers in ascending order.
+3. Next, I calculated the middle index of the list to find the position of the "trimmed" mean value after removing one occurrence each of the minimum and maximum values.
+4. Using a while loop, I found the first occurrences of the minimum and maximum values by iterating through the list while keeping track of the difference between them and the middle value.
+5. After finding the indices of the minimum and maximum values, I removed their respective occurrences from the original list and calculated the trimmed mean by summing the remaining numbers and dividing it by the number of remaining elements (excluding the two dropped occurrences).

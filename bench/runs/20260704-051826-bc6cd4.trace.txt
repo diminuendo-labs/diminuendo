@@ -1,0 +1,2 @@
+**
+I started by writing a docstring to explain the function's purpose, parameters, and return values. I then implemented the logic using Python's built-in `sort` method to sort the input list in ascending order. To handle the edge case where the length of the sorted list is even, I checked if the length is divisible by 2 and if so, calculated the average of the two middle values. The function returns None for an empty input list as per the problem's requirements.

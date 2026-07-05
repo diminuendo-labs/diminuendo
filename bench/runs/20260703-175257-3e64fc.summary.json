@@ -1,0 +1,63 @@
+{
+  "run_id": "20260703-175257-3e64fc",
+  "node_id": "task-20260703-175257-3e64fc",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly handles a list with only one distinct value, returning it as a single number.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": false,
+        "got": "'3-4, 5'",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": false,
+        "got": "'3-0, 2-1, 2'",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": false,
+        "got": "'5-2, 3-0, 1'",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": false,
+        "got": "raised IndexError('list index out of range')",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": true,
+        "got": "'7'",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef range_summary(nums):\n    runs = []\n    for i in range(1, len(nums)):\n        if nums[i] == nums[i - 1] + 1:\n            continue\n        else:\n            runs.append((nums[i-1], nums[i] - 1))\n    runs.append(nums[-1])\n    return ', '.join('-'.join(str(x) for x in run) if isinstance(run, tuple) else str(run) for run in runs)\n```",
+  "trace": "The function iterates through the input list and keeps track of runs by checking if each number is one more than the previous one. If it's not, a new run starts. We store the start and end of each run in a list as tuples for consecutive runs. Then we join these runs with commas or hyphens depending on whether they are single numbers or ranges. For edge cases like [1, 2, 2, 3], it correctly identifies two runs: [1, 2] and [3].",
+  "totals": {
+    "time_s": -1.2606962999999993,
+    "tokens": -185
+  },
+  "files": [
+    "20260703-175257-3e64fc.crumbs.jsonl",
+    "20260703-175257-3e64fc.trace.txt"
+  ]
+}

@@ -1,0 +1,3 @@
+**
+
+The function `range_summary` takes a list of integers, handles any duplicates by converting the list to a set and then back to a sorted list. It iterates through this list, grouping consecutive numbers into ranges. For each group, if it consists of a single number, it's added as is; otherwise, it's represented as a range 'start-end'. The final result is joined with commas. An edge case where the input list is empty is handled by returning an empty string immediately.

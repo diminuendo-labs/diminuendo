@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-142225-c71df2",
+  "node_id": "task-20260703-142225-c71df2",
+  "task": "Write a Python function count_unique(nums) returning how many values appear exactly once in the list. Values that repeat do not count at all: [1, 2, 2, 3] has two such values, 1 and 3. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function is correct, the code is reasonably concise and readable, and it handles an edge case properly.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_case_handled": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_unique([1, 2, 2, 3])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_unique([5, 5])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([7])",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef count_unique(nums):\n    \"\"\"\n    Returns the number of unique values that appear exactly once in a list.\n\n    Args:\n        nums (list): A list of integers.\n\n    Returns:\n        int: The number of unique values that appear exactly once.\n    \"\"\"\n    if not nums:  # handle empty list edge case\n        return 0\n\n    count_dict = {}\n    for num in nums:\n        count_dict[num] = count_dict.get(num, 0) + 1\n\n    return sum(1 for count in count_dict.values() if count == 1)\n```\n\n**",
+  "trace": "**\nI approached this problem by creating a dictionary to store the counts of each number in the list. I then used a generator expression within the built-in `sum` function to iterate over the values in the dictionary and return the count of numbers that appear exactly once, which is represented by the value 1. This solution handles the edge case where an empty list is input, as it will immediately return 0.",
+  "totals": {
+    "time_s": 21.9181653,
+    "tokens": 761
+  },
+  "files": [
+    "20260703-142225-c71df2.crumbs.jsonl",
+    "20260703-142225-c71df2.trace.txt"
+  ]
+}

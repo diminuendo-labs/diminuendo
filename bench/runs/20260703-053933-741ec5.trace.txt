@@ -1,0 +1,4 @@
+- I used a set `seen` to keep track of numbers we've encountered so far.
+- Another set `pairs` is used to store unique pairs that sum up to the target, ensuring no duplicate pairs are counted by storing them as sorted tuples.
+- As we iterate through the list, for each number, we calculate its complement (the number needed to reach the target when added together). If this complement has been seen before, it means we've found a valid pair, which we add to our `pairs` set in a sorted manner to handle unordered pairs.
+- Finally, the length of `pairs` gives us the count of distinct pairs that sum to the target. This approach ensures that each pair is counted only once and handles duplicates correctly.

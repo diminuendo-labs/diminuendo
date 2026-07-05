@@ -1,0 +1,2 @@
+**
+I chose to use a generator expression within the built-in `sum` function to count the number of singletons. This approach is concise and readable, as it directly implements the logic described by the problem statement. I also included a docstring to document the function's behavior and edge cases. The empty list case is handled implicitly by the fact that an empty set has no elements with a count of 1.

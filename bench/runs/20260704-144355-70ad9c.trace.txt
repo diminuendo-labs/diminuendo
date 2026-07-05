@@ -1,0 +1,2 @@
+**
+I used a simple sorting and iteration approach to solve the problem. I first sorted the input list by start value, then iterated through the sorted list, merging any overlapping ranges. If a range did not overlap with the last merged range, it was added to the list of merged ranges. This approach allows for efficient handling of large lists of ranges. The edge case for an empty list is handled immediately at the beginning of the function.

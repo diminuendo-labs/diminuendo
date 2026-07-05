@@ -1,0 +1,3 @@
+**
+
+I used a combination of set and sorted to get the unique numbers in ascending order, which simplifies later processing. Then I iterated over this list, checking if the current number is consecutive to the last one processed; if so, it skips that number. If not, it either adds a 'start-end' range or just the number itself to the result list, depending on whether there's more than one number in the run. Finally, I handled edge cases for the first and last numbers in the list.

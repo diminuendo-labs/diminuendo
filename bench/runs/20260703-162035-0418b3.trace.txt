@@ -1,0 +1,1 @@
+I used Python's built-in `set()` data type to remove any duplicate values from the input list, then converted it back into a regular list and applied the `sum()` function. This approach ensures that each value is counted only once. To handle an empty list, I set the default return value to 0.

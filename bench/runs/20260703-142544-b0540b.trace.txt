@@ -1,0 +1,2 @@
+**
+I chose to use a set to remove duplicates and then convert it back to a list, which can be summed. This approach is concise and efficient because sets in Python have an average time complexity of O(1) for lookups and insertions. The edge case for an empty list was explicitly handled with a simple if statement at the beginning of the function.

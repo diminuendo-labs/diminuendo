@@ -1,0 +1,2 @@
+**
+I approached this task by writing a simple iterative function that uses the `isinstance` check to determine whether an element is a list or not. If it's a list, I used the `extend` method to add its elements to the result list. This way, only one level of nesting is removed, and deeper nesting stays nested. I named the edge case "nested lists" as it handles lists within lists correctly.

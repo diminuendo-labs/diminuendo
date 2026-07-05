@@ -1,0 +1,2 @@
+**
+I chose to use a stack data structure to keep track of the opening parentheses. This way, when I encounter a closing parenthesis, I can easily check if its corresponding opening partner is in the stack by popping it and checking if the stack becomes empty (in which case there's an unbalanced pair). The edge case mentioned in the task is handled by checking if the stack is empty before trying to pop from it.

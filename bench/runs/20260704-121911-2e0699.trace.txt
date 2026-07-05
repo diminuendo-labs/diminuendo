@@ -1,0 +1,1 @@
+I utilized list comprehension to efficiently split the given list into consecutive chunks of size `k`. When a final chunk comes up short, I pad it with `None`, ensuring every resulting chunk has exactly `k` elements. To handle the edge case of an empty list, I included a check that returns `[]` when provided with an empty input.

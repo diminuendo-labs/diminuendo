@@ -1,0 +1,2 @@
+**
+I chose a straightforward and concise approach by utilizing Python's built-in `count()` method, which returns the number of occurrences of a specified character in a string. This method is applicable here because we only need to count the number of opening and closing parentheses, regardless of their positions or other characters in the string. By comparing these counts, I can efficiently determine whether the parentheses are balanced. The edge case this code handles is an empty string, which would return True as per the problem statement.

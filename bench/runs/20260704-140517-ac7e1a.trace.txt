@@ -1,0 +1,4 @@
+**
+The function `trimmed_mean` first checks if the length of the list `nums` is less than 3. If it is, the function returns `None` as per the criteria for empty lists, one-element lists, and two-element lists. 
+
+If the list contains three or more elements, the function removes one occurrence of the minimum value and one occurrence of the maximum value from the list using the `remove()` method. Finally, it calculates and returns the mean of the remaining numbers by dividing their sum by the length of the trimmed list, ensuring the result is a float.

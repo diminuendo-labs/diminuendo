@@ -1,0 +1,4 @@
+**  
+The function `title_words` takes a string `s` as input and splits it into individual words using the `split()` method, which handles multiple consecutive spaces by collapsing them to single spaces. It then iterates over each word in the list. If a word is entirely uppercase (checked using `isupper()`), it is appended to the result list unchanged. Otherwise, the word is title-cased using the `capitalize()` method, which converts the first character to uppercase and the rest to lowercase. Finally, the title-cased words are joined back into a single string with spaces in between using `' '.join()`. The function returns this resulting string.
+
+**Note:** This solution correctly handles an empty string by returning an empty string since splitting an empty string results in an empty list, which is then immediately joined to form an empty string.

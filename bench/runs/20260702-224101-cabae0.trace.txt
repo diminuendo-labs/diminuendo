@@ -1,0 +1,5 @@
+1. **Sorting**: The function first sorts the list of ranges based on their start values to ensure that any potential overlaps or touches are adjacent.
+2. **Merging Logic**: It then iterates through the sorted list and merges overlapping or touching ranges by updating the end value of the last merged range if the current range starts before or at the end of the last merged range.
+3. **Edge Case Handling**: The function includes an edge case for when there is only one range in the input, returning it directly as no merging is needed.
+
+This approach ensures that the function is both correct and concise while handling the specified edge cases effectively.

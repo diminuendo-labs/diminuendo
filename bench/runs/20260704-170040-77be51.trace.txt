@@ -1,0 +1,8 @@
+**
+I implemented the `token_case` function to convert an underscore-delimited identifier into camel case. The approach involves:
+1. Removing any leading or trailing underscores from the input string using `strip('_')`.
+2. Splitting the string by underscores into individual tokens using `split('_')`.
+3. Using a list comprehension to iterate over the tokens, converting each token to lowercase if it's not the first token and capitalizing it otherwise.
+4. Handling exceptions where 'URL' and 'ID' should remain in their original case using a conditional replacement after joining the tokens together.
+
+The edge case handled is multiple consecutive underscores, which are treated as a single separator. This ensures consistent behavior regardless of how many underscores are present between tokens.

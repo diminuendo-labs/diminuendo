@@ -1,0 +1,2 @@
+**
+I chose to handle the edge case where there are multiple words with the same maximum frequency by returning the last one that appears in the string. This is achieved by using a list comprehension to get all occurrences of the most common word, and then taking the minimum element of this list (which will be the rightmost occurrence). I used the built-in `min` function along with an arbitrary key (`str`) to achieve this, as it returns the smallest item according to its default ordering.

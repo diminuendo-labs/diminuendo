@@ -1,0 +1,2 @@
+**
+To implement the `trimmed_mean` function, I first check if the list length is less than 3. If it is, the function returns `None` as specified in the criteria for handling edge cases. For lists with more than two elements, I remove one occurrence of the minimum and one occurrence of the maximum using the `remove` method. Finally, I calculate and return the mean of the remaining numbers by dividing their sum by the length of the list. This approach ensures that the function is both correct and concise while handling all specified edge cases.

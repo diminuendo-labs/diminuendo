@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `max` function with a generator expression to split the input string into words and find the longest one. This approach is concise and readable, as it leverages existing library functions to achieve the desired result. I also included a docstring to explain the behavior of the function in case of ties, which aligns with the task's directive.

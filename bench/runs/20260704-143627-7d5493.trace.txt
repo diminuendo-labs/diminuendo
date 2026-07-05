@@ -1,0 +1,2 @@
+**
+I implemented the function using a list comprehension to generate the chunks. The outer `range` iterates over the indices of the input list, incrementing by `k`. For each index `i`, I slice the list to get the chunk at that position and pad it with `None` if its length is less than `k`. This approach allows for efficient computation of all chunks simultaneously. One edge case handled is when the input list has a length divisible by `k`, which results in an empty final chunk.

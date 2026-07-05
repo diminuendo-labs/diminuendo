@@ -1,0 +1,2 @@
+**
+I implemented the function using a list comprehension to generate each chunk. I first check if the input list is empty and return an empty list in that case. Then, I use slicing to create chunks of size `k` and add padding with None as needed. The range generator iterates over the indices where new chunks start, ensuring that every chunk has exactly `k` elements. This approach is concise and readable while handling the edge case for an empty input list.

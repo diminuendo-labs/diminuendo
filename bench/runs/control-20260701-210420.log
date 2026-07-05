@@ -1,0 +1,15 @@
+UNARMED CONTROL 20260701-210420
+watch items in play: 2
+  - The output should not be an empty string when the input is not empty.
+  - Ensure that the function handles ties in word frequency by returning the lexicographically smallest word.
+retro-control on task-20260701-203645-8cbf70: unarmed=fail armed=fail evidence_passed=False -> caught_without_watch
+  unarmed reason: The function does not handle the edge case where multiple characters have the same frequency and are tied alphabetically correctly.
+  armed reason:   The function does not handle ties in word frequency by returning the lexicographically smallest character.
+-- batch protocol: fresh outputs, paired judgments --
+20260701-210435-4c047f: evidence_passed=True unarmed=fail armed=fail -> unarmed_false_alarm
+20260701-210508-f0f063: evidence_passed=False unarmed=pass armed=pass -> missed_even_armed
+20260701-210542-208adc: evidence_passed=True unarmed=fail armed=fail -> unarmed_false_alarm
+20260701-210616-bed7f1: evidence_passed=True unarmed=pass armed=fail -> false_alarm_induced
+20260701-210646-7239ce: evidence_passed=True unarmed=pass armed=pass -> clean_no_harm
+== CONTROL TABLE == {"unarmed_false_alarm": 2, "missed_even_armed": 1, "false_alarm_induced": 1, "clean_no_harm": 1}
+CONTROL GATE: PASSED. every output judged paired with ground truth, both columns reported.

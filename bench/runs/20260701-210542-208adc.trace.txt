@@ -1,0 +1,2 @@
+**
+I approached this task by iterating through the string, keeping track of the current run length and character. When a new character is found that matches the previous one, I increment the current run length; otherwise, I reset it to 1. If the current run is longer than the max run or ties but comes before the max char alphabetically, I update the max run length and character. This way, I ensure the function returns the correct character of the longest consecutive run while breaking ties alphabetically.

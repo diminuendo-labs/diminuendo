@@ -1,0 +1,2 @@
+**
+I created a function `chunk` that takes two parameters, `lst` and `size`. If `size` is less than or equal to zero, the function returns an empty list. Otherwise, it uses a list comprehension to create chunks of the specified size from the input list. The slicing operation `lst[i:i+size]` extracts elements starting at index `i` up to but not including index `i+size`, and this is done in steps of `size` using `range(0, len(lst), size)`. This approach ensures that the function is both correct and concise while handling edge cases such as when `size` is zero or negative.

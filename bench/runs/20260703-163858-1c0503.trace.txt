@@ -1,0 +1,1 @@
+The function first checks if the input lists are empty or the sum of weights is zero, returning `None` in such cases to adhere to the specified edge case. It then calculates the weighted mean using a generator expression and returns the result by dividing the total weighted sum by the sum of weights. The code aims for conciseness without sacrificing readability.

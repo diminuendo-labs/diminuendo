@@ -1,0 +1,7 @@
+**
+
+To solve this task, I first ensure the input list is sorted and contains unique elements by converting it to a set and then back to a sorted list. This approach automatically handles the sorting and uniqueness requirements.
+
+Next, I iterate through the list, keeping track of the start of each range. If the current number continues the sequence (i.e., it's one more than the previous), I continue iterating. Once the sequence breaks, I check if the run was a single number or a range. For a range, I format it as 'start-end'; for a single number, I use just the number.
+
+Finally, I join all parts of the result with commas to form the final string and return it. This method ensures that consecutive runs are collapsed into ranges while handling edge cases like an empty list gracefully.

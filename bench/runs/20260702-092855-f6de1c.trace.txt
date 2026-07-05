@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking for an edge case where the input list is empty. Then, I sorted the pairs based on their start values to ensure that we're iterating through them in order. Next, I initialized a `merged` list with the first pair and iterated through the remaining pairs. If a pair overlaps or touches the last merged range, I updated its end value; otherwise, I added it as a new range to the `merged` list. This approach is concise and readable while handling the edge case where the input list is empty.

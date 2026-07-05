@@ -1,0 +1,3 @@
+**
+
+I first checked for the presence of both lists and then their emptiness as an edge case. I chose to calculate the weighted mean explicitly by computing the weighted sum separately from dividing it by the total weight. This approach avoids potential division-by-zero errors when using a generator expression or list comprehension in one line.

@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking for the edge case where the input list is empty. Then I sorted the ranges by their start value to make it easier to merge overlapping ranges. Finally, I iterated through the sorted ranges and merged any that overlapped or touched each other into a single range. This solution has a time complexity of O(n log n) due to the initial sorting step.

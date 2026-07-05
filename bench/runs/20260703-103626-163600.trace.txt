@@ -1,0 +1,2 @@
+**  
+The function `longest_word(s)` takes a string `s` as input and returns the longest whitespace-separated word. If there are multiple words with the same maximum length, it returns the last such word as specified in the criteria. The approach iterates over the words in reverse order to ensure that if there is a tie for the longest word, the last one is returned. It keeps track of the current maximum length and updates the result accordingly. If the input string is empty, an empty string is returned as per the edge case handling requirement.

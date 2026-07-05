@@ -1,0 +1,2 @@
+**
+I chose to use a generator expression with `str.split()` and `str.capitalize()` to break the input string into words, capitalize each one, and join them back together. This approach is concise and easy to read, making it suitable for this task. One edge case handled by this function is an empty string, which returns an empty string as expected.

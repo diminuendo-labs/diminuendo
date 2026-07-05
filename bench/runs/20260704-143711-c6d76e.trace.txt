@@ -1,0 +1,2 @@
+**
+I chose to use a list comprehension to create the chunks. This approach is concise and easy to read. The edge case I handled is when the final chunk comes up short: if `len(lst)` is not a multiple of `k`, the last chunk will be padded with `None` as needed.

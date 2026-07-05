@@ -1,0 +1,6 @@
+**  
+The function `chunk_pad` takes a list `lst` and an integer `k`. It first checks if the input list is empty or if `k` is less than or equal to zero. If either condition is true, it returns an empty list since there's nothing to chunk or no valid size for chunks.
+
+For valid inputs, it uses a list comprehension to iterate over the list in steps of `k`. For each slice of the list (which might be shorter than `k`), it pads the slice with `None` until it reaches length `k`. This is achieved by adding `[None]*(k - len(lst[i:i+k]))`, which calculates how many `None`s are needed to fill the difference.
+
+This approach ensures that every chunk has exactly `k` elements, even if the last chunk is shorter than `k`. The function handles edge cases like empty lists and invalid chunk sizes efficiently.

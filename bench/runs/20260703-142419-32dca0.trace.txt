@@ -1,0 +1,2 @@
+**
+I used a generator expression to create a set of numbers that appear only once in the list. This approach is concise and readable because it clearly conveys the intent of counting unique singletons without requiring any additional logic or imports. The `set` data structure automatically removes duplicates, making it easy to count the number of unique values using the `len` function. I also handled the edge case where the input list is empty by relying on the fact that an empty set has a length of 0.

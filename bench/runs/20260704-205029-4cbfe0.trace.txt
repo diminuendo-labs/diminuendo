@@ -1,0 +1,3 @@
+I approached this task by first sorting the input list in ascending order. If the list is empty or has less than 3 elements, I return None since we cannot compute the mean with an empty or too small list.
+
+To calculate the trimmed mean, I exclude the minimum and maximum values from the sum and divide it by the number of remaining elements (n-2). However, for lists with an odd number of elements, the middle value is not necessarily a better choice than the average of the two middlemost values. So, I account for this edge case by considering both possibilities in my final calculation.

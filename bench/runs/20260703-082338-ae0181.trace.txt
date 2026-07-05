@@ -1,0 +1,2 @@
+**
+To solve this task, I used Python's `collections.Counter` to easily count the frequency of each number in the list. The function first checks if the input list is empty and returns 0 if it is. Then, it finds the maximum frequency (`max_freq`) among all numbers in the list. Finally, it counts how many distinct values have this maximum frequency and returns that count. This approach ensures the code is concise and readable while correctly handling edge cases like an empty list.

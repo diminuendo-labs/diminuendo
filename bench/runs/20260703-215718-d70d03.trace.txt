@@ -1,0 +1,5 @@
+**
+
+I started by sorting the list and removing duplicates using `sorted(set(nums))` to ensure all values are distinct and in ascending order. Then, I used a while loop to iterate through the list, identifying consecutive ranges. For each range found, I checked if it was a single number or a range and formatted it accordingly. Finally, I joined all the ranges with commas to produce the desired output string.
+
+This approach ensures that the function is both correct and concise, handling edge cases such as an empty input list and multiple consecutive numbers efficiently.

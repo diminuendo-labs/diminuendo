@@ -1,0 +1,3 @@
+**
+
+I started by sorting the input list of pairs based on their start values to ensure that all overlapping or touching ranges are adjacent. Then, I iterated through the sorted list and checked for overlaps with the last range in the `merged` list. If there is no overlap, I simply added the current range to `merged`. If there is an overlap, I merged the current range with the last one by updating the end value of the last range in `merged`. This approach ensures that all overlapping or touching ranges are properly merged into a single range. The function handles the edge case where the input list is empty by returning an empty list.

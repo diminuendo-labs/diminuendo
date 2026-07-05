@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `split()` function to split the input string into a list of words. I then used the `max()` function with the `key` argument set to `len`, which returns the longest word in the list. The `default=''` argument ensures that an empty string is returned if the input string is empty, as per the edge case requirement. This approach allows for concise and readable code while handling the necessary edge case.

@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from Python's standard library to count the occurrences of each word. To handle the edge case where multiple words have the same maximum count, I used list comprehension to find the index of the last occurrence of the most common word in the original string. This approach ensures that if there are ties for the most common word, it will return the one with the last occurrence in the input string.

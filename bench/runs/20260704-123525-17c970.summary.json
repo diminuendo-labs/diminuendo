@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-123525-17c970",
+  "node_id": "task-20260704-123525-17c970",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly calculates the trimmed mean by removing the minimum and maximum values, and handles empty lists as expected.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": false,
+        "got": "raised AttributeError(\"'list' object has no attribute 'rfind'\")",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": false,
+        "got": "raised AttributeError(\"'list' object has no attribute 'rfind'\")",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n\n    nums.sort()\n    n = len(nums)\n    if n <= 2:\n        return sum(nums[1:-1]) / (n-2) if n > 1 else None\n\n    median_index = int((len(nums)-1)/2)\n    min_idx = nums[:median_index].rfind(nums[median_index]) + median_index\n    max_idx = nums[-median_index-1:].find(nums[median_index]) + median_index\n    return sum(nums[min_idx+1:max_idx-1]) / (n - 4)\n```",
+  "trace": "I first checked if the input list is empty, and if so, returned None. Then I sorted the list and computed the median index. If the length of the list is less than or equal to 2, I returned the mean of all elements except the first and last ones. For larger lists, I found the indices of the minimum and maximum occurring more than once by finding the last occurrence of the minimum after the median and the first occurrence of the maximum before the median. The function then computes and returns the mean of all elements between these two indices. This approach handles an edge case where the list contains duplicates at the ends, ensuring that only one occurrence of the minimum and maximum is excluded when computing the trimmed mean.",
+  "totals": {
+    "time_s": -1.8388598000000016,
+    "tokens": -118
+  },
+  "files": [
+    "20260704-123525-17c970.crumbs.jsonl",
+    "20260704-123525-17c970.trace.txt"
+  ]
+}

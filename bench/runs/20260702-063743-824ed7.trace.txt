@@ -1,0 +1,3 @@
+**
+
+I chose a simple and direct approach by using the built-in `count()` method of Python strings, which returns the number of occurrences of a given character in the string. I only consider the count of opening and closing parentheses to determine if they are balanced. This approach is concise and readable, and it handles the edge case where an empty string is balanced because both counts will be 0.

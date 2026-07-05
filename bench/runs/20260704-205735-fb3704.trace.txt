@@ -1,0 +1,3 @@
+First, the function checks if the input list is empty and returns None in that case. If not, it sorts the list and calculates the number of elements (n). If n equals 1, it simply returns the only element, as there are no minimum or maximum values to drop in this edge case.
+
+In all other cases, we find the middle index (middle) by dividing n - 1 by 2 and rounding down. Then, we sum up the elements at every second index starting from the middle index, discarding exactly one occurrence of the minimum and one occurrence of the maximum. Finally, we divide this partial sum by (n - 2), the total number of remaining elements after dropping two extreme values, to calculate the trimmed mean.

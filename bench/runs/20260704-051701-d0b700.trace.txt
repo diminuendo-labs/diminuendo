@@ -1,0 +1,3 @@
+**
+
+I first checked for the edge case of an empty list and returned None in this scenario. I then sorted the input list to ensure that it is in ascending order, which is necessary for calculating the median. To calculate the median, I used conditional statements to determine whether the length of the list was odd or even, and calculated the middle value(s) accordingly. I chose to use integer division (`//`) to avoid floating point errors when calculating the indices of the middle values.

@@ -1,0 +1,3 @@
+**
+
+I approached this task by creating a dictionary to store the frequency of each number in the input list. This allows for efficient lookups when counting pairs that sum up to the target. I also included an edge case check at the beginning to handle empty input lists, as the problem statement does not specify how such cases should be handled. By iterating through the list and keeping track of the frequency of each number's complement (target - num), I was able to count the total pairs in O(n) time complexity.

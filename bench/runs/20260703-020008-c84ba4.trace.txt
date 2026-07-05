@@ -1,0 +1,3 @@
+** 
+
+The function `range_summary` first checks if the input list is empty and returns an empty string immediately if so. It then sorts the unique elements of the list to ensure they are in ascending order. Using a while loop, it iterates through the sorted numbers, identifying consecutive sequences by checking if the next number is exactly one greater than the current one. If a sequence is found, it appends either a single number or a range (in 'start-end' format) to the `summary` list. The process repeats until all numbers are processed, and finally, the function joins all elements in `summary` with commas to form the final string.

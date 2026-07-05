@@ -1,0 +1,2 @@
+**
+I chose to use the `split()` method to split the input string into a list of whitespace-separated words. To handle ties, I used a generator expression with `reversed()` to iterate over the words in reverse order and return the first word that has the maximum length. This approach is concise and readable, and it handles the edge case where the input string is empty by returning an empty string immediately if the list of words is empty.

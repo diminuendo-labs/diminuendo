@@ -1,0 +1,9 @@
+** 
+1. The function `least_frequent_word` first checks if the input string `s` is empty. If it is, it returns an empty string as per the edge case.
+2. It then creates a dictionary `word_counts` to store the frequency of each word in lowercase.
+3. The function iterates over each word in the input string, updating the count in the dictionary.
+4. After counting all words, it finds the minimum count using the `min` function.
+5. It then filters out the words that have this minimum count and stores them in a list `least_words`.
+6. Finally, it sorts the `least_words` list alphabetically and returns the first element as the result.
+
+This approach ensures that the function is both correct and concise while handling edge cases appropriately.

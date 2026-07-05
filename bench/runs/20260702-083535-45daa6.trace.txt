@@ -1,0 +1,2 @@
+**
+To implement the `sum_distinct` function, I first checked if the input list `nums` is empty. If it is, I returned 0 immediately as per the edge case. For a non-empty list, I converted the list to a set using `set(nums)`. This automatically removes any duplicate values because sets do not allow duplicates. Then, I used the `sum()` function to calculate and return the sum of the distinct values in the set. This approach is concise and readable, leveraging Python's built-in functions to achieve the desired result efficiently.

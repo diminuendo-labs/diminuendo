@@ -1,0 +1,2 @@
+**
+I used the `split` method to break the string into words based on underscores, ignoring empty strings that might result from leading, trailing, or repeated underscores. Then, I capitalized each word and joined them together without any separators. This approach ensures that the function handles all edge cases, including consecutive underscores, by effectively filtering out empty strings resulting from these cases.

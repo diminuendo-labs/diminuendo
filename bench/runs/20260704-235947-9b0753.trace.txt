@@ -1,0 +1,5 @@
+**
+
+The function `kth_ordered` first checks if the input list is empty or if `k` is less than or equal to zero, returning `None` in these cases. It then groups words by their length using a dictionary where keys are lengths and values are lists of words with that length. The groups are created in reverse order to ensure that words of equal length are ordered reverse-alphabetically when flattened back into a single list. Finally, it returns the k-th word from this sorted list, adjusting for zero-based indexing by subtracting one from `k`. If `k` is out of range, it returns `None`.
+
+This approach ensures that the function handles edge cases correctly, such as multiple words having the same shortest length and the input list being empty or too short. The code is concise and readable, focusing on clear logic and efficient data structures.

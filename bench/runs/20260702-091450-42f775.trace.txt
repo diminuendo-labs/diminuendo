@@ -1,0 +1,3 @@
+** 
+
+I approached the problem by using a stack data structure to keep track of opening parentheses. As I iterate through the string, if I encounter an opening parenthesis '(', I push it onto the stack. If I find a closing parenthesis ')', I check if there is a corresponding opening parenthesis at the top of the stack. If the stack is empty or the top element is not an opening parenthesis, the string is not balanced, and I return False. If all characters are processed and the stack is empty, it means every opening parenthesis has been properly closed, so I return True. The edge case of an empty string being considered balanced is naturally handled as the loop will simply complete without modifying the stack, and thus it remains empty, indicating a balanced state.

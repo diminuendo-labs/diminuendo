@@ -1,0 +1,2 @@
+**
+I implemented the function by first sorting the input pairs by their start value. This allows me to iterate through the sorted list and efficiently merge overlapping or touching ranges. I used a simple iterative approach to build up the merged range list, keeping track of the current range and updating its end value when necessary.

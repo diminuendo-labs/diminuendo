@@ -1,0 +1,3 @@
+**
+
+I approached this task by creating a list comprehension that iterates through the input list `lst` with a step of `k`. For each chunk, I checked if its length was less than `k`, and if so, padded it with `None` elements to ensure all chunks have exactly `k` elements. This method handles the edge case where `lst` is empty by returning an empty list, as no padding or splitting would be required in such a scenario.

@@ -1,0 +1,2 @@
+**
+I solved this problem by iterating over the input list with `enumerate`, which provides both the index and value of each element. I kept track of the maximum value seen so far (`max_val`) and its corresponding index (`last_max_idx`). If a new maximum is found, I updated these two variables. This approach has a time complexity of O(n), where n is the length of the input list.

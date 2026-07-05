@@ -1,0 +1,2 @@
+**
+I used Python's built-in string methods `strip()` and `split()` to handle the leading, trailing, and repeated underscores. The `split('_')` method divides the string into a list of words based on the underscore delimiter. Then, using a generator expression within the `join()`, I capitalized each word and concatenated them together to form the camelCase string. This approach ensures that the function is both concise and readable while handling all specified edge cases effectively.

@@ -1,0 +1,3 @@
+**
+
+I approached this task by splitting the input string into individual words using the `_` character as a delimiter. This allows me to process each word separately, which simplifies the camelCase conversion logic. I used a generator expression with `join()` to efficiently build the output string, capitalizing each non-empty word and leaving empty strings in place (which ensures the function handles edge cases like '__a__b_' correctly).

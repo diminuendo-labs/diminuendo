@@ -1,0 +1,2 @@
+**
+I created a function `count_word` that takes two parameters: `s`, the string to search through, and `w`, the word to count. I first check if either `s` or `w` is an empty string, returning 0 immediately in such cases as specified. Then, I split the string `s` into a list of words using whitespace as the delimiter. Finally, I use a generator expression within the `sum` function to count how many words match the target word `w`, ignoring case by converting both the current word and `w` to lowercase before comparison.

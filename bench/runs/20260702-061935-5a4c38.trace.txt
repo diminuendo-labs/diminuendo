@@ -1,0 +1,2 @@
+**
+I chose to use the `max` function with a custom sorting key (`key=len`) to find the longest word. This approach is concise and readable because it leverages built-in Python functionality for finding the maximum element in an iterable. I also included an edge case where an empty string returns an empty string, as per the task requirements.

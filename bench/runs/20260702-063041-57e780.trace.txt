@@ -1,0 +1,2 @@
+**
+I chose a recursive approach to flatten the list, since it's concise and easy to understand. The function `flatten_once` iterates over each element in the input list, checking if it's a list itself. If it is, the function calls itself with that sublist as an argument, effectively flattening one level of nesting. If not, the element is appended directly to the result list. This approach handles edge cases like empty lists and non-list elements without further modification.

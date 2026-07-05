@@ -1,0 +1,2 @@
+**
+I started by checking if the input list `nums` is empty and returning `None` if it is, as this is an edge case that needs to be handled separately. If the list is not empty, I sorted the list using Python's built-in `sorted()` function. I then calculated the middle index `mid` of the sorted list. If the length of the list is even (`n % 2 == 0`), I returned the average of the two middle values by summing them and dividing by 2.0 to ensure a float result. If the length is odd, I simply returned the value at the middle index as a float.

@@ -1,0 +1,2 @@
+**
+I defined the function `truncate_words` that takes a string `s` and an integer `n`. If `n` is zero or negative, the function returns an empty string. Otherwise, it splits the input string into words, selects the first `n` words, and joins them back together with single spaces. This approach ensures that runs of whitespace are collapsed into a single space, as required.

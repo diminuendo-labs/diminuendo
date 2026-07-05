@@ -1,0 +1,40 @@
+SYMMETRIC FORMS 20260704-185817 (PACKET-030, gap G1 re-cut)
+performer=qwen2.5-coder:7b  audience=llama3.1:8b (v1, production)
+ground=kth_ordered r3  cells=('none', 'menu-form', 'directive')  R=12  stage A gate 18 of 24  reading bar 4 of 24  one content, form the only variable
+rule checks (the standing annotation): ["kth_ordered(['ab', 'ba', 'aa', 'c'], 2)", "kth_ordered(['ab', 'ba', 'aa', 'c'], 3)"]
+census taxonomy, stated before any run (supply_families classifiers unchanged, identity-pinned, re-runnable: py directive30.py census <rows-file>): single-key-sort, compound-key-sort, manual-scan, other, unrunnable
+GATE 1, THE CONTRADICTION GATE (the P028/P029 instrument, imported):
+  kth_ordered(['ab', 'ba', 'aa', 'c'], 2):
+    stated rule (reverse-alphabetical among equal lengths): order ['c', 'ba', 'ab', 'aa'] -> 'ba'
+    directive direction (later-encountered among equal lengths): order ['c', 'aa', 'ba', 'ab'] -> 'aa'
+    DIFFERS: True
+  kth_ordered(['ab', 'ba', 'aa', 'c'], 3):
+    stated rule (reverse-alphabetical among equal lengths): order ['c', 'ba', 'ab', 'aa'] -> 'ab'
+    directive direction (later-encountered among equal lengths): order ['c', 'aa', 'ba', 'ab'] -> 'ba'
+    DIFFERS: True
+  GATE: PASSES
+GATE 2, THE BYTE CHECK (the P029 store against production line 4, imported):
+  store byte-identical, position asserted: True
+GATE 3, THE BYTE-FORM VERIFIER:
+  emission count on matched features: 1
+  tool equals lesson concept plus applies_when: True
+  firewall control, tools on ground features: 0
+the directive text (the lesson's rule sentence, byte-verbatim, source field: rule): If multiple words have the same shortest length, the function should return the last such word encountered.
+A none rep 0: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 1: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 2: ev=0.50 tools=0 directives=0 shape=compound-key-sort
+A none rep 3: ev=0.50 tools=0 directives=0 shape=compound-key-sort
+A none rep 4: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 5: ev=0.50 tools=0 directives=0 shape=single-key-sort
+A none rep 6: ev=0.75 tools=0 directives=0 shape=compound-key-sort
+A none rep 7: ev=0.50 tools=0 directives=0 shape=single-key-sort
+A none rep 8: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 9: ev=0.50 tools=0 directives=0 shape=single-key-sort
+A none rep 10: ev=1.00 tools=0 directives=0 shape=compound-key-sort
+A none rep 11: ev=0.75 tools=0 directives=0 shape=compound-key-sort
+stage A gate: pooled rule 14 of 24 canonical (unrunnable-as-fail; 0 unrunnable rows; diagnostic 14/24 readings-present); FAILS (gate at 18 of 24 or better)
+stage A gate FAILED: the packet closes on the answer, no stage B, no reading fires, the re-cut is a Brad-level design decision
+== CENSUS (shape distribution per cell, every cell run) ==
+  A|none: single-key-sort=3  compound-key-sort=9  manual-scan=0  other=0  unrunnable=0
+census unrunnable against zero-readings divergence: 0 rows
+GATE: PASSED. build gates re-run as committed code before any model run, stage A arithmetic printed, stage B did not run, closed on the gate answer, audits clean from the rows (tools and directives both), census reported for every cell, every run checkpointed, report persisted. The readings are applied in the packet RESULTS. The seat neither taught nor learned.

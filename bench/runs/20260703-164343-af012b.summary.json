@@ -1,0 +1,59 @@
+{
+  "run_id": "20260703-164343-af012b",
+  "node_id": "task-20260703-164343-af012b",
+  "task": "Write a Python function title_words(s) returning the string with every whitespace-separated word title-cased (first letter upper, the rest lower) and runs of whitespace collapsed to single spaces, except that words already entirely uppercase stay exactly as they are. An empty string returns ''. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly handles title casing and whitespace collapsing, while being concise and readable.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness": 4,
+    "readability": 4,
+    "edge_cases_handled": 1
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "title_words('hello  world')",
+        "ok": true,
+        "got": "'Hello World'",
+        "expect": "'Hello World'"
+      },
+      {
+        "call": "title_words('NASA rocks')",
+        "ok": true,
+        "got": "'NASA Rocks'",
+        "expect": "'NASA Rocks'"
+      },
+      {
+        "call": "title_words('mIxEd')",
+        "ok": true,
+        "got": "'Mixed'",
+        "expect": "'Mixed'"
+      },
+      {
+        "call": "title_words('')",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef title_words(s):\n    words = s.split()\n    for i, word in enumerate(words):\n        if not word.isupper():\n            words[i] = word.capitalize()\n    return ' '.join(words)\n\n# Edge case: it handles strings with a mix of uppercase and lowercase words, such as \"Hello World\" which returns \"Hello World\" instead of \"Hello world\".\n```",
+  "trace": "First, I split the input string into words using the `split()` method. Then, I loop through each word, checking if it is entirely uppercase by using the `isupper()` method. If not, I capitalize the first letter of the word and make the rest lowercase using the `capitalize()` method. Finally, I join all the words back into a single string using the `join()` method. This approach ensures that words already entirely uppercase stay exactly as they are while handling other cases according to the criteria.",
+  "totals": {
+    "time_s": 18.764963199999997,
+    "tokens": 716
+  },
+  "files": [
+    "20260703-164343-af012b.crumbs.jsonl",
+    "20260703-164343-af012b.trace.txt"
+  ]
+}

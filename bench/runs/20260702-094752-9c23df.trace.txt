@@ -1,0 +1,2 @@
+**
+I wrote this function using list comprehension and string methods. I chose the `split()` method to split the input string by underscores, which results in a list of words. The `capitalize()` method is then used to capitalize each word except for the first one (since it's already uppercase). This way, repeated or leading/trailing underscores are dropped, as required. An edge case that this function handles is an empty string, which returns an empty string '' as expected.

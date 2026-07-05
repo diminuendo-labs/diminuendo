@@ -1,0 +1,2 @@
+**
+I chose to implement a simple iterative solution using a stack data structure. This approach allows me to keep track of the opening parentheses encountered so far, and I can easily check if there's a matching closing parenthesis for each one. The edge case of an empty string is handled implicitly by this implementation, as it will return True since the string contains no unbalanced parentheses.

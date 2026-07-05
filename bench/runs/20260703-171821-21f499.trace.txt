@@ -1,0 +1,1 @@
+I used a dictionary to count the frequency of each number in the list. Then, I found the maximum count and its corresponding key (the most frequent value). After that, I iterated through the dictionary again to find the smallest such value in case of ties. The edge case handled here is when the input list is empty, in which case the function returns None.

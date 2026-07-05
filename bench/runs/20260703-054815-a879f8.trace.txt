@@ -1,0 +1,2 @@
+**
+I implemented the function by iterating through the list and keeping track of the maximum value encountered so far. If a larger value is found, both its value and index are updated. This way, when the largest value appears more than once, the last occurrence's index will be stored in `max_index`. To handle the edge case where the input list is empty, I added a simple check at the beginning of the function to return None immediately if the list is empty.

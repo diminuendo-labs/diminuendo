@@ -1,0 +1,7 @@
+**
+
+To implement the `trimmed_mean` function, I first check if the length of the input list `nums` is less than or equal to 2. If it is, I return `None` because we cannot drop one minimum and one maximum in such cases without violating the problem constraints.
+
+If the list has more than two elements, I proceed by removing the first occurrence of both the minimum and maximum values using the `remove()` method. Finally, I calculate and return the mean of the remaining elements as a float by dividing their sum by their count.
+
+This approach ensures that we correctly handle all edge cases as specified in the criteria, including lists with duplicate values where one instance of the minimum and maximum is removed.

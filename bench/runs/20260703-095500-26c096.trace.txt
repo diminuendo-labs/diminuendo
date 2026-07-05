@@ -1,0 +1,3 @@
+**
+
+To solve this task, I first check if the input string `s` is empty or contains only whitespace using `strip()`. If it is, I return an empty string. Then, I split the string into a list of words using `split()`. Next, I find the maximum length of these words using a generator expression within `max()`. Finally, I filter out all words that have this maximum length and return the last one in the resulting list. This ensures that ties are resolved by returning the last longest word as specified.

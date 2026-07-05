@@ -1,0 +1,2 @@
+**
+I implemented a simple function that directly calculates the average by dividing the sum of the numbers in the list by its length. I used the built-in `sum()` and `len()` functions to make the code concise, while also including a docstring to explain what the function does. The edge case I handled is when the input list is empty, in which case the function returns None instead of zero, as per the task's requirements.

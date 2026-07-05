@@ -1,0 +1,2 @@
+**
+I approached this problem by creating a dictionary to store the counts of each number in the list. I then used a generator expression within the built-in `sum` function to iterate over the values in the dictionary and return the count of numbers that appear exactly once, which is represented by the value 1. This solution handles the edge case where an empty list is input, as it will immediately return 0.

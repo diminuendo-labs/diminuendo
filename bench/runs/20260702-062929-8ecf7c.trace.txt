@@ -1,0 +1,2 @@
+**
+I chose to use the "When the largest value appears more than once, return the index of its last occurrence" approach, which is suitable for a small function like this. I implemented it by splitting the input string into words and then iterating over them in reverse order, updating the `last_longest_word` variable whenever a longer word is found. This ensures that if there are multiple words with the maximum length, the last one encountered will be returned.

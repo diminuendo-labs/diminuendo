@@ -1,0 +1,2 @@
+**
+I started by checking for an edge case where the input list is empty, returning an empty string in this case. Then I sorted and removed duplicates from the input list to make it easier to group consecutive numbers together. I used two variables `start` and `end` to keep track of the start and end of each range, updating them accordingly as I iterate through the distinct numbers. The function finally joins the ranges together with commas to produce the desired output string.

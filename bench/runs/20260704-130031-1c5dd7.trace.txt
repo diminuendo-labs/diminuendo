@@ -1,0 +1,3 @@
+The function `token_case(s)` takes an underscore-delimited identifier as input. It creates a set of exception tokens, 'URL' and 'ID', which will keep their exact form wherever they appear in the given string. The input is split at underscores to create a list of tokens.
+
+The first token is converted to lowercase while the rest are title-cased. We use a generator expression to avoid creating unnecessary intermediate lists, which makes the code more efficient and concise. The resulting list is then joined together without any separators to form the final camelCase output.

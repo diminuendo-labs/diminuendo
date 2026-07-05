@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-150417-d39f3f",
+  "node_id": "task-20260704-150417-d39f3f",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly calculates the trimmed mean, is concise and readable, and handles edge cases properly.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness_and_readability": 4,
+    "edge_case_handled": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef trimmed_mean(nums):\n    \"\"\"\n    Calculate the mean of a list after dropping one occurrence of min and max.\n\n    Args:\n        nums (list): A list of numbers.\n\n    Returns:\n        float or None: The trimmed mean if not empty, otherwise None.\n    \"\"\"\n    if not nums:\n        return None\n\n    nums = sorted(nums)\n    dropped = [nums[0], nums[-1]]\n    trimmed_nums = [num for num in nums if num not in dropped]\n    return sum(trimmed_nums) / len(trimmed_nums)\n```\n\n**",
+  "trace": "**\nI wrote a function `trimmed_mean` that first checks if the input list is empty, returning `None` immediately to handle this edge case. Then I sort the list and create a new list `dropped` containing the minimum and maximum values. The original list is then iterated over to create a new list `trimmed_nums` without these dropped values. Finally, the sum of the trimmed list divided by its length is calculated as the mean.",
+  "totals": {
+    "time_s": 22.392039099999998,
+    "tokens": 717
+  },
+  "files": [
+    "20260704-150417-d39f3f.crumbs.jsonl",
+    "20260704-150417-d39f3f.trace.txt"
+  ]
+}

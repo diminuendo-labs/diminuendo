@@ -1,0 +1,3 @@
+**
+
+I defined the function with a clear docstring to describe its purpose and behavior. The function first checks if the list of values is empty, returning None immediately in this case as per the specification. If the list of values is not empty, it then calculates the total weight by summing up all weights, handling the edge case where the total weight is zero by also returning None in this case. Finally, it computes and returns the weighted mean using a generator expression to avoid unnecessary memory usage.

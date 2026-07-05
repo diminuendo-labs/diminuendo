@@ -1,0 +1,58 @@
+{
+  "run_id": "20260702-231105-809568",
+  "node_id": "task-20260702-231105-809568",
+  "task": "Write a Python function median(nums) returning the middle value of the sorted list when the length is odd, or the average of the two middle values as a float when the length is even. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function is correct, the code is mostly concise and readable, and it handles an edge case by returning None for empty lists.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness_and_readability": 4,
+    "edge_case_handled": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "median([3, 1, 2])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "median([1, 2, 3, 4])",
+        "ok": true,
+        "got": "2.5",
+        "expect": "2.5"
+      },
+      {
+        "call": "median([5, 5])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "median([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef median(nums):\n    \"\"\"\n    Calculate the median of a list of numbers.\n\n    Args:\n        nums (list): A list of numbers.\n\n    Returns:\n        float or None: The middle value if the length is odd, \n                       the average of the two middle values if the length is even,\n                       None if the input list is empty.\n    \"\"\"\n    if not nums:\n        return None  # handle edge case where input list is empty\n\n    sorted_nums = sorted(nums)\n    n = len(sorted_nums)\n\n    if n % 2 == 1:  # odd length\n        return sorted_nums[n // 2]\n    else:  # even length\n        mid1, mid2 = sorted_nums[n // 2 - 1:n // 2 + 1]\n        return (mid1 + mid2) / 2.0\n```\n\n**",
+  "trace": "**\nI wrote a function `median` that takes a list of numbers as input and returns the median value. I first checked for the edge case where the input list is empty, in which case I returned None. Then, I sorted the input list and determined whether its length was odd or even using the modulo operator. If it's odd, I simply returned the middle value; if it's even, I returned the average of the two middle values as a float.",
+  "totals": {
+    "time_s": 21.7507892,
+    "tokens": 865
+  },
+  "files": [
+    "20260702-231105-809568.crumbs.jsonl",
+    "20260702-231105-809568.trace.txt"
+  ]
+}

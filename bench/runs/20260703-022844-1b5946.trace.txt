@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in string methods `split` and `capitalize` to convert the snake_case identifier to camelCase. The edge case handled by this function is when the input string contains only underscores, in which case it returns an empty string (''). This is achieved by using a generator expression to iterate over the words split from the input string, and applying the `.replace('_', '')` method to remove any remaining underscores.

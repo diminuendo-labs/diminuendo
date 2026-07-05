@@ -1,0 +1,73 @@
+{
+  "probe_id": "20260702-012616",
+  "models": {
+    "A": "qwen2.5-coder:7b",
+    "B": "llama3.1:8b"
+  },
+  "audience": {
+    "A": "llama3.1:8b",
+    "B": "qwen2.5-coder:7b"
+  },
+  "generator": "qwen2.5-coder:7b",
+  "lesson_counts": {
+    "A": 6,
+    "B": 6
+  },
+  "apply_pool": [
+    "most_common_word",
+    "merge_ranges",
+    "longest_word",
+    "median",
+    "range_summary",
+    "flatten_once",
+    "snake_to_camel",
+    "balanced"
+  ],
+  "repeats": 3,
+  "per_cell_n": 24,
+  "cells": [
+    {
+      "cell": "A|none",
+      "tools": 0,
+      "n": 24,
+      "pass_rate": 0.5416666666666666,
+      "ev_mean": 0.7999999999999999
+    },
+    {
+      "cell": "A|A",
+      "tools": 5,
+      "n": 24,
+      "pass_rate": 0.5,
+      "ev_mean": 0.7979166666666666
+    },
+    {
+      "cell": "A|B",
+      "tools": 5,
+      "n": 24,
+      "pass_rate": 0.5416666666666666,
+      "ev_mean": 0.7979166666666666
+    },
+    {
+      "cell": "B|none",
+      "tools": 0,
+      "n": 24,
+      "pass_rate": 0.16666666666666666,
+      "ev_mean": 0.6243055555555556
+    },
+    {
+      "cell": "B|A",
+      "tools": 5,
+      "n": 24,
+      "pass_rate": 0.25,
+      "ev_mean": 0.6437499999999999
+    },
+    {
+      "cell": "B|B",
+      "tools": 5,
+      "n": 24,
+      "pass_rate": 0.16666666666666666,
+      "ev_mean": 0.5881944444444445
+    }
+  ],
+  "n_note": "8 apply tasks x 3 repeats = n=24 per cell. Direction at this n, not rates. Volume decides."
+}

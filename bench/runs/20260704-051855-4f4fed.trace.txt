@@ -1,0 +1,2 @@
+**
+I chose to implement the function by first checking for the edge case of an empty list and returning None. Then, I sorted the input list using the built-in `sorted` function. Since Python's `sorted` is stable, this ensures that the order of equal elements is preserved, which is necessary for calculating the median correctly when the length is even. Finally, I used conditional logic to determine whether the length of the sorted list is odd or even and return either the middle value (for odd lengths) or the average of the two middle values (for even lengths).

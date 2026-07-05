@@ -1,0 +1,51 @@
+{
+  "run_id": "20260704-234955-e07a93",
+  "node_id": "task-20260704-234955-e07a93",
+  "task": "Write a Python function kth_ordered(words, k) returning the k-th word, counting from 1, when the words are ordered by increasing length, and words of equal length are ordered reverse-alphabetically among themselves. Return None when k is out of range. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly handles the edge case when k is out of range, and its code is well-written.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "kth_ordered(['bb', 'ab', 'c'], 2)",
+        "ok": true,
+        "got": "'bb'",
+        "expect": "'bb'"
+      },
+      {
+        "call": "kth_ordered(['dd', 'a', 'ccc'], 2)",
+        "ok": true,
+        "got": "'dd'",
+        "expect": "'dd'"
+      },
+      {
+        "call": "kth_ordered(['a', 'bb'], 5)",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**  \n```python\ndef kth_ordered(words, k):\n    # Edge case handling\n    if not words or k <= 0 or k > len(words):\n        return None\n\n    # Sorting the words first by length in ascending order, then reverse-alphabetically for words of equal length\n    sorted_words = sorted(words, key=lambda word: (len(word), -ord(word[0])))\n\n    # Returning the k-th word\n    return sorted_words[k-1]\n```\n\n**",
+  "trace": "**  \nI approached this problem by first handling an edge case where `words` is empty or `k` is out of range, returning `None` in such cases. Then, I used Python's built-in `sorted` function with a custom key to sort the words. The key sorts primarily by word length in ascending order (`len(word)`) and secondarily by the reverse ASCII value of the first character (`-ord(word[0])`). This ensures that words of equal length are ordered reverse-alphabetically. Finally, I returned the `k-th` word from the sorted list, adjusting for zero-indexing by using `k-1`.",
+  "totals": {
+    "time_s": 23.9450992,
+    "tokens": 744
+  },
+  "files": [
+    "20260704-234955-e07a93.crumbs.jsonl",
+    "20260704-234955-e07a93.trace.txt"
+  ]
+}

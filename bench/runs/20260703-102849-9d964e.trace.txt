@@ -1,0 +1,2 @@
+**
+The function `longest_word` takes a string `s` as input and returns the longest whitespace-separated word. If the string is empty, it returns an empty string. The words in the string are split using the `split()` method, which by default splits by any whitespace and removes extra spaces. The `max()` function is then used with the `key=len` argument to find the word with the maximum length. In case of a tie (multiple words of the same longest length), `max()` returns the last such word as required. If no words are found, it defaults to an empty string.

@@ -1,0 +1,2 @@
+**
+I chose to handle the edge case where the largest value appears more than once by returning the first occurrence (i.e., the one at the beginning of the list), rather than its last occurrence. This is because it's a common convention in Python to break ties arbitrarily, and returning the first occurrence is simple and consistent with other Python functions that return lists or tuples. I also decided to use the `min` function with the `key` argument set to `str.lower` to ensure that we're comparing words case-insensitively when breaking ties alphabetically.

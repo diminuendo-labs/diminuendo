@@ -1,0 +1,2 @@
+**
+I chose to use a state machine-like approach, iterating through the input string and keeping track of whether the next character should be uppercase. This is achieved by using two flags: `cap_next` for whether the next character should be capitalized, and another flag that gets updated when an underscore is encountered. The function starts with the edge case handling of an empty string, returning immediately in such a case to avoid unnecessary processing.

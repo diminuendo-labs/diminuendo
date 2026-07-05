@@ -1,0 +1,1 @@
+** The function `trimmed_mean` calculates the mean of a list after removing one occurrence of the minimum and one occurrence of the maximum value. If the list is empty, has only one element, or two elements (which would result in zero elements after removal), it returns `None`. This handles the edge case where the list is too small to perform the operation.

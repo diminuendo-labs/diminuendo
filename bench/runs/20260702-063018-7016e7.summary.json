@@ -1,0 +1,64 @@
+{
+  "run_id": "20260702-063018-7016e7",
+  "node_id": "task-20260702-063018-7016e7",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function does not handle consecutive ranges correctly. It only handles single numbers and disconnected ranges.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness": 3,
+    "readability": 3,
+    "edge_case_handled": 2
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": false,
+        "got": "'1-2,2-3,3'",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": false,
+        "got": "'1-2,2-3'",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": false,
+        "got": "'1,3'",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": false,
+        "got": "''",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef range_summary(nums):\n    if not nums:\n        return ''\n    \n    sorted_nums = sorted(set(nums))\n    result = []\n    for i in range(1, len(sorted_nums)):\n        if sorted_nums[i] == sorted_nums[i - 1] + 1:\n            result.append(f'{sorted_nums[i-1]}-{sorted_nums[i]}')\n        else:\n            result.append(str(sorted_nums[i-1]))\n    \n    return ','.join(result)\n```\n\n**",
+  "trace": "**\nI first handled the edge case of an empty input list by returning an empty string. Then, I sorted and removed duplicates from the input list to prepare it for the range-finding logic. Next, I iterated through the sorted list, checking if each number is one more than the previous; if so, I combined them into a 'start-end' range, otherwise I just appended the current number as a single value. Finally, I joined all these ranges and numbers with commas to produce the desired output string.",
+  "totals": {
+    "time_s": -2.3891831000000003,
+    "tokens": 16
+  },
+  "files": [
+    "20260702-063018-7016e7.crumbs.jsonl",
+    "20260702-063018-7016e7.trace.txt"
+  ]
+}

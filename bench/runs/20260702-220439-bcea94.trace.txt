@@ -1,0 +1,3 @@
+**
+
+To solve this task, I used a straightforward approach by iterating over the input list and keeping track of the maximum value and its index. When a larger value is found, both the maximum value and its index are updated. This ensures that the last occurrence of the maximum value is returned when it appears more than once. I also handled the edge case where the input list is empty, raising a ValueError in this scenario.

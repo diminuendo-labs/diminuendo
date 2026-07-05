@@ -1,0 +1,6 @@
+**
+The function `longest_word` first checks if the input string is empty or contains only whitespace. If so, it returns an empty string as per the edge case handling.
+
+Next, it splits the string into individual words and finds the maximum length of any word in the list. It then constructs a list of all words that have this maximum length by iterating over the words in reverse order to ensure that if there are ties for the longest word, the last one is returned.
+
+Finally, it returns the first element from the list of longest words.

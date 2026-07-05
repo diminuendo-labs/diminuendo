@@ -1,0 +1,2 @@
+**
+I chose to implement this function using a simple comparison of the counts of '(' and ')' characters in the string. This approach is concise and readable because it directly addresses the core requirement of balance by comparing the two types of parentheses. I also noted that an empty string is balanced, as per the problem statement, which my solution implicitly handles since the counts are equal when there are no parentheses at all.

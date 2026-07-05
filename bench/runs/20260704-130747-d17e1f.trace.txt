@@ -1,0 +1,5 @@
+To create the function `token_case`, I first defined a set of exceptions containing 'URL' and 'ID'. Then, I split the input string by underscores to get individual tokens. For each token, I check if it is an exception or an empty string (since the exceptions should keep their exact form even when they are the first token). If neither of these conditions is true, I concatenate the resulting transformed token with the existing result string.
+
+Initially, I handle the edge case where the input string might not have any tokens other than underscores by checking if `result` (the accumulated string) is empty before returning the first token in lowercase.
+
+In addition to this, I created helper functions `lowercase()` and `capitalize()` to easily transform the individual tokens in the input string.

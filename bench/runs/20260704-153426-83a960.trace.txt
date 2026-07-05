@@ -1,0 +1,2 @@
+**
+I approached this task by first defining a concise and readable function that meets the given criteria. I used Python's built-in `sorted` function to order the words based on their length in ascending order, and then alphabetically in descending order for equal lengths. This approach ensures that words of different lengths are ordered correctly while also handling edge cases such as an empty input list or a k value out of range.

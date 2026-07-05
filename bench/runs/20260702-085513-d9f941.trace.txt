@@ -1,0 +1,3 @@
+**
+
+I used Python's string `split` method to break the input string into words based on underscores, filtering out any empty strings that might result from leading/trailing/adjacent underscores. Then, I capitalized each word and joined them together without separators to achieve the camelCase format. This approach is concise and readable, making use of Python's built-in string methods for clarity. The edge case of consecutive underscores (e.g., '__a__b_') is handled by the filtering step in the list comprehension.

@@ -1,0 +1,2 @@
+**
+I first checked for edge cases where `k` could be out of range, handling non-positive integers. Then I used Python's built-in `sorted` function with a custom key to order the words as specified in the task. This key uses a tuple, where the first element is the length of each word (increasing) and the second element is the reverse-alphabetical ordering for equal-length words. Finally, I checked if `k` was within range before returning the k-th word.

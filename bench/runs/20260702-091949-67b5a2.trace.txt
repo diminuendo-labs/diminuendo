@@ -1,0 +1,2 @@
+**
+I chose to use a straightforward approach by first checking if the input list is empty and returning None in that case. Then I ensured the input list is sorted, as the problem statement doesn't guarantee it. For calculating the median, I used integer division (`//`) to find the middle index of the list. If the length of the list is odd, I simply return the value at the middle index; if even, I calculate the average of the two values surrounding the middle index.

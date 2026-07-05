@@ -1,0 +1,6 @@
+**
+
+1. **Edge Case Handling**: The function first checks if the input string `s` is empty. If it is, it immediately returns an empty string.
+2. **Splitting the String**: The input string is split into a list of words using the `split()` method. This method handles multiple spaces by treating them as single delimiters and discards leading/trailing whitespace.
+3. **Finding Maximum Length**: A generator expression inside the `max()` function computes the maximum length of the words in the list.
+4. **Iterating Backwards**: The function then iterates over the list of words in reverse order using a `for` loop. This ensures that if there are multiple words with the same maximum length, the last one encountered is returned.

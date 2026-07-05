@@ -1,0 +1,5 @@
+I approached this task by first sorting the input list of ranges based on their start points using the `sorted()` function in Python. Then, I initialized a variable `current_range` to hold the first range from the sorted list. For each subsequent range, I checked if it overlaps with the current range by comparing its starting point with the end point of the current range.
+
+If they overlap, I merged the ranges by updating the end point of the current range to be the maximum of its current value and the end point of the next range. If they do not overlap, I added the current range to the final result and set the new current range to the next range from the sorted list.
+
+Finally, I added the last (possibly unmerged) current range to the final result and returned it. An edge case that this solution handles is when there are multiple non-overlapping ranges that need to be preserved as separate lists in the output.

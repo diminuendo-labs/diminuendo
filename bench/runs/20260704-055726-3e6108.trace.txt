@@ -1,0 +1,2 @@
+**
+I chose a simple and concise approach to solve this task. Since the function only needs to count the number of opening and closing parentheses, I used Python's built-in `count` method on the string. This method is efficient because it only iterates over the characters in the string once. One edge case that this function handles is an empty string, which is considered balanced by definition.

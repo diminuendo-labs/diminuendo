@@ -1,0 +1,2 @@
+**
+I first handle the edge case where the input list is empty, returning an empty string immediately. Then, I sort the list to ensure the numbers are in ascending order, which simplifies grouping consecutive runs. I iterate through the sorted list, using two pointers to identify the start and end of each range. If a range consists of a single number, it's added as is; otherwise, it's formatted as 'start-end'. Finally, I join all parts with commas to form the result string. This approach ensures clarity and conciseness while handling consecutive runs efficiently.

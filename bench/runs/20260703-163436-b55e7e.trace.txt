@@ -1,0 +1,9 @@
+To solve this task, I chose to use the `collections.Counter` class in Python, which provides an easy way to count occurrences of elements in a list.
+
+First, I calculate the mode (the most frequent value) and its count using the `max()` function with a custom key that compares the counts of each item.
+
+Next, I sum up all instances of the mode where their count is not equal to the maximum count (to avoid counting them multiple times). This ensures that each mode is only counted once even if it appears more than once in the input list.
+
+To handle the edge case where there are multiple modes with the same frequency, I use `filter()` and `len()` to check if there are other items with the same maximum count as the mode. If this condition is true, I return 0 since it means that there's no definitive sum of the most frequent values.
+
+Finally, I subtract the total count of all modes other than the mode we found earlier from the total (since they should not be included in the result), and return the final value.

@@ -1,0 +1,8 @@
+**
+
+1. **Sorting and Uniqueness**: The function first sorts the input list to ensure that consecutive numbers are adjacent. It also converts the list to a set to remove any duplicates.
+2. **Iterating and Range Detection**: It iterates through the sorted unique numbers, identifying ranges by checking if the next number is exactly one greater than the current one.
+3. **Building the Result String**: For each segment (either a single number or a range), it appends the appropriate string to the result list.
+4. **Edge Case Handling**: The function handles an empty input list by returning an empty string, as specified.
+
+This approach ensures that the code is both correct and concise, meeting the criteria provided.

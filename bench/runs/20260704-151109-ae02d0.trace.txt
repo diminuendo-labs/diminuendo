@@ -1,0 +1,2 @@
+**
+I chose to directly calculate the minimum and maximum values of the input list using built-in functions `min()` and `max()`, then use a list comprehension to create a new list with these two values removed. This approach is concise and easy to read, and it meets the criteria of dropping exactly one occurrence of the minimum and one occurrence of the maximum. The edge case that this code handles specifically is when all elements in the input list are equal, in which case it correctly returns None instead of attempting to calculate a mean from a list with duplicate values.

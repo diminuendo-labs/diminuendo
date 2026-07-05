@@ -1,0 +1,1 @@
+I sorted the input list by start values using the `sort()` function and a custom key function. Then I iterated over the sorted pairs, merging overlapping or touching ranges while appending them to a new list called `merged`. An edge case I handled is when the merged range exceeds the end of the existing last range in the `merged` list, updating its end value accordingly.

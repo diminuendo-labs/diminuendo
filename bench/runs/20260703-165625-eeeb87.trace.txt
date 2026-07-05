@@ -1,0 +1,7 @@
+I used a dictionary called `counter` to keep track of the frequency of each number in the list. The variable `max_freq` stores the highest frequency found, and the variable `mode_count` initially counts the numbers that tie for the maximum frequency, but it will eventually hold the total count of modes.
+
+For each number in the list, I check if it's already in the dictionary; if so, increment its count by 1. If not, add a new key-value pair to the dictionary with the number as the key and 1 as the value. After this loop, I update `max_freq` to be equal to the maximum frequency found among all numbers.
+
+Finally, I iterate through all the values in the dictionary and increment `mode_count` for each one that equals `max_freq`, which means it is a mode. The function then returns the count of modes.
+
+One edge case this solution handles is an empty list, for which the function returns 0 instead of raising an error.

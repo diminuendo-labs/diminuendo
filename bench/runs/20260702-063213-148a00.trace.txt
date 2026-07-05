@@ -1,0 +1,2 @@
+**
+I implemented the function using a simple iterative approach. The input list is first sorted by start value, which allows us to iterate through it and merge overlapping ranges in linear time. I also included an edge case handling: if the input list is empty, the function returns an empty list, as there are no ranges to merge.

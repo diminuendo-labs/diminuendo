@@ -1,0 +1,2 @@
+**
+I approached this task by identifying that a string's parentheses are balanced if and only if the number of opening '(' characters is equal to the number of closing ')' characters. This eliminates the need for explicit iteration or recursion, making the code concise. The `count` method of strings in Python is used here to count the occurrences of each character. An edge case handled by this function is an empty string, which should return True as there are no unmatched parentheses.

@@ -1,0 +1,2 @@
+**
+I approached this problem by writing a function that iterates over each element in the input list. If an element is a list, it recursively calls itself on that sublist and extends the current result with its items. Otherwise, it simply appends the element to the result. I chose to explicitly handle the edge case of an empty list being found during recursion, to ensure it's not lost when flattened.

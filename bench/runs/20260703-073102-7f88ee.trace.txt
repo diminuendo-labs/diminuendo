@@ -1,0 +1,2 @@
+**
+I used the `Counter` class from the `collections` module to count the frequency of each word in the input string. To break ties alphabetically, I used a lambda function as the key for the `min` function, which returns a tuple containing the frequency and the word itself. This allows Python's built-in comparison operators to compare tuples first by their first element (frequency) and then by their second element (word). The edge case of an empty string is handled at the beginning of the function.

@@ -1,0 +1,3 @@
+The function takes a list of numbers `nums` as an input and checks if there are fewer than two distinct values in the list by converting it into a set. If the number of distinct values is less than 2, it returns `None`.
+
+Then, it sorts the list in descending order using the sort method with `reverse=True`. The second largest value (index 1) is then returned if there are more than one elements in the sorted list, otherwise, `None` is returned. This approach handles the edge case where there might be less than two distinct values in the input list.

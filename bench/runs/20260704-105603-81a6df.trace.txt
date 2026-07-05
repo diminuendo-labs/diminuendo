@@ -1,0 +1,2 @@
+**
+I implemented this function by simply counting the occurrences of '(' and ')' in the string. Since Python's `count()` method counts all occurrences, including those that may be preceded by closing brackets, this approach satisfies the condition that a closing parenthesis must never appear before its opening partner. I chose to ignore everything else besides parentheses as per the problem statement, making my function concise while still meeting the requirements for correctness and edge cases (such as an empty string).

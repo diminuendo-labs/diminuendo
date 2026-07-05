@@ -1,0 +1,64 @@
+{
+  "run_id": "20260703-175706-e844dc",
+  "node_id": "task-20260703-175706-e844dc",
+  "task": "Write a Python function range_summary(nums) taking a list of integers, possibly unsorted with duplicates, and returning a string of the distinct values in ascending order, collapsing consecutive runs into 'start-end' and joining pieces with commas, so [1, 2, 3, 5] becomes '1-3,5'. A single number stays a single number, never a range. An empty list returns ''. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The code correctly handles the empty list edge case by returning an empty string.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "range_summary([1, 2, 3, 5])",
+        "ok": false,
+        "got": "'1-2, 3-3, 5'",
+        "expect": "'1-3,5'"
+      },
+      {
+        "call": "range_summary([3, 1, 2, 2])",
+        "ok": false,
+        "got": "'1-2, 3'",
+        "expect": "'1-3'"
+      },
+      {
+        "call": "range_summary([5, 3, 1])",
+        "ok": false,
+        "got": "'1-1, 3-3, 5'",
+        "expect": "'1,3,5'"
+      },
+      {
+        "call": "range_summary([])",
+        "ok": true,
+        "got": "''",
+        "expect": "''"
+      },
+      {
+        "call": "range_summary([7])",
+        "ok": true,
+        "got": "'7'",
+        "expect": "'7'"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef range_summary(nums):\n    if not nums:\n        return ''\n    sorted_list = sorted(set(nums))\n    runs = []\n    start, end = sorted_list[0], sorted_list[0]\n    for i in sorted_list:\n        if i == start + 1:\n            end = i\n        elif end != i:\n            runs.append(f'{start}-{end}')\n            start = i\n            end = i\n    runs.append(str(end))\n    return ', '.join(runs) if runs else '{}'.format(sorted_list[0])\n```",
+  "trace": "First, I ensured that the list is sorted and distinct by using the built-in `sorted()` function with a set to avoid duplicates. Then, I created an empty list called `runs` which will store the ranges found in the list. Initially, I set the start and end variables to the first number in the list. After that, I iterated through the sorted list and compared each number to the current start and end values. If the current number is one greater than the current end, it's part of the same range, so I updated the end variable. Otherwise, if there's a gap between the current number and the end, I added the current run (if any) to the `runs` list as a formatted string, reset the start to the current number, and continued with the next number in the list. Finally, after iterating through all numbers, I add the last number if it's not already included in the runs list (since the last iteration won't update the end variable). The function returns a comma-separated string of the ranges found in the input list or just the single value if there are no ranges. An edge case handled here is when the list contains only one number, as it will still return that number instead of an empty string.",
+  "totals": {
+    "time_s": -3.131479800000001,
+    "tokens": -344
+  },
+  "files": [
+    "20260703-175706-e844dc.crumbs.jsonl",
+    "20260703-175706-e844dc.trace.txt"
+  ]
+}

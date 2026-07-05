@@ -1,0 +1,10 @@
+**
+
+1. The function `most_common_word(s)` takes a single parameter `s`, which is expected to be a string.
+2. It first checks if the input string is empty. If it is, the function returns an empty string as specified in the edge case.
+3. A dictionary `word_counts` is used to count occurrences of each word, converting all words to lowercase to ensure case insensitivity and splitting the string by whitespace to get individual words.
+4. The maximum count is determined from the values in `word_counts`.
+5. A list comprehension identifies all words that have the maximum count.
+6. Finally, the function returns the lexicographically smallest (first alphabetically) word among those with the highest count.
+
+This approach ensures correctness by addressing both the main functionality and the edge case of an empty string. The code is concise and readable by using straightforward Python constructs like dictionaries and list comprehensions.

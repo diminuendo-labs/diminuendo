@@ -1,0 +1,2 @@
+** 
+To solve the problem, I first check if the input string `s` is empty and return an empty string immediately if it is. Otherwise, I split the string into words using `split()`. To handle ties correctly and ensure the last word is returned in case of a tie, I filter out all words that have the maximum length found by `max(len(word) for word in words)`. Finally, I return the first element from the filtered list (which will be the last word due to the reversed order). If no such words exist, an empty string is returned.

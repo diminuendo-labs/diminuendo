@@ -1,0 +1,3 @@
+**
+
+I started by checking if the input list is empty, returning an empty string immediately if so. The list is then sorted to ensure that consecutive numbers are adjacent. I iterate through the sorted list while keeping track of the current start and end of a range. If the next number is consecutive (one more than the current end), I update the end. Otherwise, I append the current range (or single number) to the result list and reset the start and end for the new sequence. Finally, I handle any remaining range or single number in the list and join them with commas to form the final string.

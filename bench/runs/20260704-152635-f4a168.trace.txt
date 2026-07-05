@@ -1,0 +1,3 @@
+**
+
+I approached this problem by first sorting the set of words based on a two-part key. The primary key is the length of each word, ensuring that shorter words come before longer ones. If multiple words have the same length, their secondary key is their reverse alphabetization, which orders them in descending order. Then, I tried to return the k-th element (adjusting for 1-based indexing) from this sorted list. If an IndexError occurred during the retrieval of the k-th word, it means that there are not enough unique words, and thus the function returns None.

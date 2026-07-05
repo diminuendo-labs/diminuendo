@@ -1,0 +1,3 @@
+**
+
+To implement the `balanced` function, I used a stack data structure to keep track of the opening parentheses encountered so far. As each character is processed, if an opening parenthesis is found, it's pushed onto the stack; if a closing parenthesis is found and the stack is empty, it immediately returns False (since there can't be a matching opening parenthesis); otherwise, the corresponding opening parenthesis is popped from the stack. After processing all characters, if there are any remaining opening parentheses on the stack, the function also returns False.

@@ -1,0 +1,5 @@
+The function `most_common_word(s)` takes a string `s` as input and returns the most frequently occurring lowercase word (ignoring punctuation). It creates a set of unique words from the input string using the `split()` method, then calculates the count of each word in the set using the `count()` method on the string itself.
+
+The maximum count and its corresponding word are found using Python's built-in max function, which takes a list of tuples where each tuple contains a count and the corresponding word. In case multiple words have the same maximum count, it returns the first one alphabetically (lexicographically) according to ASCII sorting.
+
+An edge case this function handles is when the input string does not contain any words (only whitespace or punctuation), in which case an empty string is returned.

@@ -1,0 +1,3 @@
+**
+
+The function `merge_within` takes a list of integer pairs and merges them based on the criteria provided. The process involves sorting the pairs first by their start values to ensure that we always merge in the correct order. We then iterate through the sorted pairs, maintaining a list of merged ranges. For each pair, if it overlaps or is within distance 1 from the last range in our merged list, we extend the last range. Otherwise, we add the new range as is. The function handles an edge case where the input list is empty, returning an empty list as specified.

@@ -1,0 +1,3 @@
+**
+
+I defined the function `kth_ordered` with a clear docstring explaining its purpose and behavior. To handle edge cases efficiently, I first checked if the input list is empty or k is less than 1. If so, I immediately returned None without further computation. For the main logic, I used Python's built-in sorted function to order the words according to the provided key function. The key function uses a tuple to allow sorting by length first and then alphabetically in reverse (due to -x) for words of equal lengths. Finally, I attempted to return the k-th word from the sorted list; if it does not exist due to being out of range, an IndexError would be raised and caught, returning None as specified.

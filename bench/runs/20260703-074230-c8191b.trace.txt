@@ -1,0 +1,3 @@
+**
+
+I chose to use a simple mathematical approach to calculate the start and end indices of the page. This allows for efficient pagination without having to iterate over the entire list. I also added an explicit edge case handling in the docstring, noting that when n is 1 and size is negative, the function returns an empty list instead of raising an exception. The code itself is concise and readable, with clear variable names and a straightforward logic flow.

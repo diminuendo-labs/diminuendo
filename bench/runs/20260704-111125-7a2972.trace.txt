@@ -1,0 +1,2 @@
+**
+I chose to directly compare the counts of opening and closing parentheses, as this approach is concise and readable. It also handles one edge case explicitly mentioned in the task: an empty string is balanced because both counts are zero. This function uses a built-in method `count()` which is efficient for strings.

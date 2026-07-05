@@ -1,0 +1,2 @@
+**
+I approached this problem by first considering the edge case where the input list `words` is empty. If so, I immediately return `None`, as there are no words to order or retrieve. Next, I used Python's built-in `sorted()` function with a custom key function that sorts the words based on their length (first) and then alphabetically reverse for words of equal length. Finally, I checked if `k` is within bounds and returned the corresponding word from the sorted list.

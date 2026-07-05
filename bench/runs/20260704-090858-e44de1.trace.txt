@@ -1,0 +1,3 @@
+The function takes a list of [start, end] pairs and sorts them by the start value. It then initializes an empty `result` list containing the first pair from the sorted list. For each subsequent pair, it checks if the end value of the last element in the `result` list is greater than or equal to the start value of the new pair. If it is, the end values are merged; otherwise, the new pair is appended to the `result`. This approach ensures that the resultant list is sorted and only unmerged ranges remain as separate entries.
+
+The edge case I handle here is when there are multiple overlapping ranges in the input list, such as [1, 3], [2, 4], and [5, 7]. The function correctly merges them into the expected result: [1, 7].

@@ -1,0 +1,5 @@
+** 
+
+I started by handling the edge case where the input list is empty or `k` is less than or equal to 0. If either condition is true, I return an empty list immediately. This ensures that the function handles degenerate cases correctly.
+
+For the main logic, I defined a helper generator function `chunks_of(lst, n)` that yields chunks of size `n` from the input list. Then, in the `chunk_pad` function, I used this generator to create each chunk and padded it with `None` using list comprehension until each chunk had exactly `k` elements. This approach ensures that the code is concise and readable while handling the edge case as specified.

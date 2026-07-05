@@ -1,0 +1,5 @@
+I wrote a Python function named `median(nums)`. The function first checks if the input list is empty and returns None in that case. If the list has elements, it sorts them and calculates the middle index based on the length of sorted numbers.
+
+If the number of elements is odd, it simply returns the value at the calculated middle index. If the number of elements is even, it averages the values at the two middle indices by summing them and dividing by 2. This approach ensures that both cases are handled correctly and concisely while keeping the code readable.
+
+An edge case that this function handles is when the input list is empty or contains only one element. In these cases, the function returns None instead of raising an exception.

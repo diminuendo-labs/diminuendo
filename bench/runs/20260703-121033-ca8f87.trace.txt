@@ -1,0 +1,2 @@
+**  
+I first handle the edge case where the input list is empty, returning an empty string immediately. Then, I sort and deduplicate the list of numbers to ensure each number appears only once and they are in ascending order. Using a while loop, I iterate through the list and identify consecutive sequences by checking if the current number plus one equals the next number. If a sequence is found, it is added as a range; otherwise, a single number is added. Finally, the results are joined with commas to form the final string.

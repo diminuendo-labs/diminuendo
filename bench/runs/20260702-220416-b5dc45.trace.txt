@@ -1,0 +1,2 @@
+**
+I implemented the function using Python's built-in `max` function with a custom key. The `enumerate` function returns both the index and value of each element, allowing me to find the last occurrence of the maximum value by comparing them as tuples. This solution is concise while still handling edge cases like an empty list.

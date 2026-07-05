@@ -1,0 +1,2 @@
+**  
+The function `chunk` takes two arguments: a list `lst` and an integer `size`. If `size` is less than or equal to zero, it returns an empty list. Otherwise, it uses a list comprehension to create chunks of the desired size. The slicing operation `lst[i:i+size]` extracts elements from index `i` to `i+size-1`, and the step value in the range function ensures that this process is repeated for each chunk, advancing by `size` each time. This approach efficiently handles the task with minimal code while ensuring readability.

@@ -1,0 +1,7 @@
+I started by checking if the input list `nums` is empty and returning an empty string if it is. This handles the edge case where there are no numbers to summarize.
+
+Next, I sorted the list and removed duplicates using `sorted(set(nums))` to ensure that each number is considered only once, regardless of how many times it appears in the original list.
+
+I then used a while loop to iterate through the sorted list, grouping consecutive numbers into ranges. If the start and end of a range are the same, I added a single number to the `ranges` list; otherwise, I added the range in 'start-end' format.
+
+Finally, I joined all the elements in the `ranges` list with commas to form the final string and returned it.

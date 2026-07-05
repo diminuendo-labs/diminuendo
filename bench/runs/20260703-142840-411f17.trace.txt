@@ -1,0 +1,2 @@
+**
+I started by defining the function with a docstring that describes its behavior and lists an edge case it handles (an empty list). I then implemented a solution using two sets: `seen` to keep track of all numbers we've seen so far, and `count` to store distinct pairs that sum to the target. This approach avoids duplicates by only counting each pair once, regardless of how many times its values repeat. By sorting each pair before adding it to `count`, we ensure that (a, b) and (b, a) are considered the same pair.

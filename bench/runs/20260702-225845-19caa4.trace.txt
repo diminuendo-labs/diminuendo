@@ -1,0 +1,2 @@
+**
+I implemented the `flatten_once` function using a list comprehension. This approach allows for concise and readable code while still handling the edge case where an element is itself a list with only one element. I used the `isinstance` function to check if each element is a list, and if so, extracted its first (and only) element.

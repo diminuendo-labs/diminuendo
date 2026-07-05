@@ -1,0 +1,3 @@
+**
+
+I chose a simple yet effective approach to solve this problem. I used the built-in `count` method of Python strings to count the occurrences of both opening and closing parentheses, then checked if these counts are equal. This ensures that there is no more closing than opening parenthesis in the entire string. Additionally, I added an edge case check where a closing parenthesis must never appear before its opening partner.

@@ -1,0 +1,2 @@
+**  
+The function `chunk_pad` takes a list `lst` and an integer `k`. It uses list comprehension to iterate through the list in steps of `k`, slicing it into chunks of size `k`. If the input list is empty, it directly returns an empty list. This approach ensures that each chunk has exactly `k` elements by default, and any remaining elements in the last chunk are padded with `None` implicitly due to Python's slice operation behavior.

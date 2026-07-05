@@ -1,0 +1,2 @@
+**
+I used Python's built-in `split()` method to split the input string into a list of words, and then used `reversed()` to reverse this list. Finally, I joined the reversed list back into a single string with spaces between each word using `' '.join()`. I chose not to remove leading or trailing whitespace from the input string, as it's not explicitly stated in the task requirements.

@@ -1,0 +1,2 @@
+**  
+I approached the task by first ensuring the input list is sorted and has no duplicates. Then, I iterated through the list to identify consecutive sequences. For each sequence, I determined if it should be represented as a single number or a range. Finally, I joined all segments with commas to form the output string. This method handles edge cases such as an empty list and ensures correct behavior for both single numbers and ranges of consecutive numbers.

@@ -1,0 +1,2 @@
+**
+I chose to use the built-in `sorted()` function in Python, which returns a new sorted list from the elements of any sequence. This allowed me to keep the code concise and readable. I also explicitly handled the edge case where the input list is empty, as it's a common pitfall that can result in an "IndexError" when trying to access the middle value(s).

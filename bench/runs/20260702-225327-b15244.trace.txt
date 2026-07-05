@@ -1,0 +1,3 @@
+**
+
+I used the built-in `Counter` class from the `collections` module to efficiently count the occurrences of each word in the input string. To break ties alphabetically, I used a lambda function as the key argument for the `max` function, which returns the first item where the counts are equal (i.e., the words themselves). This approach allows me to handle edge cases like an empty string by checking if the input is truthy before attempting to split it.

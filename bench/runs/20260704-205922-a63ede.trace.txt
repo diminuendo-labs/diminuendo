@@ -1,0 +1,5 @@
+I created a function named `trimmed_mean(nums)`. The function first checks if the input list is empty, and if so, it returns `None`. If not, it sorts the list and calculates the median value.
+
+Then, it filters out both the minimum and maximum values from the sorted list using a list comprehension and calculates the sum of the remaining filtered numbers. Finally, it divides the sum by the number of filtered items to get the trimmed mean as a float.
+
+The edge case I handled is when the input list is empty, as the function returns `None` in such a scenario.

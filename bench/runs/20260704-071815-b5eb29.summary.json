@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-071815-b5eb29",
+  "node_id": "task-20260704-071815-b5eb29",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly flattens one level of nesting in a list, handling edge cases such as lists containing only other lists.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "edge case is handled": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting in a list.\n\n    Args:\n    lst (list): The input list to be flattened.\n\n    Returns:\n    list: A new list with exactly one level of nesting flattened.\n    \"\"\"\n    flat_list = []\n    for item in lst:\n        if isinstance(item, list):\n            flat_list.extend(item)\n        else:\n            flat_list.append(item)\n    return flat_list\n```\n\n**",
+  "trace": "**\n\n- The function `flatten_once` takes a list as input and iterates through each element.\n- If an element is a list, it extends the `flat_list` with its items, thus flattening one level of nesting.\n- If an element is not a list, it simply appends the element to `flat_list`.\n- This approach ensures that only the first level of nesting is flattened, and deeper levels remain nested.",
+  "totals": {
+    "time_s": 24.142636600000003,
+    "tokens": 684
+  },
+  "files": [
+    "20260704-071815-b5eb29.crumbs.jsonl",
+    "20260704-071815-b5eb29.trace.txt"
+  ]
+}

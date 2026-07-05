@@ -1,0 +1,3 @@
+**
+
+I approached this task by first sorting the input list of numbers to ensure they are in ascending order. I then iterated through the sorted list, tracking the start and end of consecutive sequences. When a non-consecutive number is encountered, I check if the start equals the end (indicating a single number) or if there's a range to be added to the result. Finally, I add any remaining sequence after the loop ends before joining all parts with commas. This method ensures that the function handles consecutive numbers correctly and efficiently constructs the output string in a readable format.

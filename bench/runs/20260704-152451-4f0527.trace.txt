@@ -1,0 +1,2 @@
+**
+I split the input string into tokens using underscore as a delimiter, and then iterate over each token. If the token is an exception (i.e., in the list ['URL', 'ID']), I append it to the result as-is. Otherwise, if it's the first token, I convert it to lowercase; otherwise, I capitalize it. Finally, I join all tokens together without any separator and return the resulting string. The edge case handled is when the first token is already in lowercase.

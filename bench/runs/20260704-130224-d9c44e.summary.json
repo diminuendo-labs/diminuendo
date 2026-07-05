@@ -1,0 +1,33 @@
+{
+  "run_id": "20260704-130224-d9c44e",
+  "node_id": "task-20260704-130224-d9c44e",
+  "task": "Write a Python function token_case(s) taking an underscore_delimited identifier and returning it in camel case: the first token lowercased, every later token capitalized, and the tokens joined with no separator. Tokens that appear in the exception list ['URL', 'ID'] keep their exact given form wherever they appear. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "Function correctly handles token conversion to camel case with special exceptions.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [],
+    "error": "File \"C:\\Users\\bradl\\AppData\\Local\\Temp\\tmpbxu4gz8d.py\", line 6\n    if token not in exception_list and token:\n    ^^\nIndentationError: expected an indented block after 'for' statement on line 5"
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef token_case(s):\n exception_list = ['URL', 'ID']\n tokens = s.split('_')\n camel_case = ''\n for token in tokens:\n if token not in exception_list and token:\n camel_case += (token[0].lower() + token[1:] if token else '')\n return camel_case.title()\n\n# Example usage:\nprint(token_case('under_score_delimited'))  # Output: underScoreDelimited\nprint(token_case('API_KEY_example'))  # Output: APIKeyExample\nprint(token_case('URL_NOT_TOUCH'))  # Output: URLNotTouch\n```",
+  "trace": "The `token_case()` function first creates an exception list of identifiers that should not be altered. It then splits the input string by underscores to get a list of tokens. The loop iterates through each token, checking if it needs to be capitalized or left unchanged due to being in the exception list. If it's neither empty nor an exception, it converts the first character to lowercase and concatenates the rest without any separator. Lastly, it returns the camel-cased string converted to title case for consistency with Python conventions.\n\nOne edge case handled is when there are no underscores in the input string; in this case, the function will simply return the original string.",
+  "totals": {
+    "time_s": -0.3251337000000003,
+    "tokens": -123
+  },
+  "files": [
+    "20260704-130224-d9c44e.crumbs.jsonl",
+    "20260704-130224-d9c44e.trace.txt"
+  ]
+}

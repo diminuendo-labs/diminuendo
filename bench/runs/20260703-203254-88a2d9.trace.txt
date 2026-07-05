@@ -1,0 +1,1 @@
+To solve this task, I used the concept of counting distinct values in a set and then sorting them in reverse order to find the second largest value. The edge case handled here is when there are fewer than two distinct values in the list. In such cases, the function returns None instead of raising an exception or returning an error message.

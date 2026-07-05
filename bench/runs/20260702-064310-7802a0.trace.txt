@@ -1,0 +1,2 @@
+**
+I approached this task by using a simple iterative approach with a for loop to iterate over the input list. I used the `isinstance` function to check if an item is a list, and if so, extended the result list with its items. If the item is not a list, it's simply appended to the result list. This way, deeper nesting stays nested as required. The edge case handled is when the input list contains a single-element nested list, where only the innermost element is extracted and added to the result.

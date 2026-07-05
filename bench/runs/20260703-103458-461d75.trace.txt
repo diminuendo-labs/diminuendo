@@ -1,0 +1,2 @@
+**  
+I approached this task by first splitting the input string `s` into a list of words using `split()`. I then checked if the resulting list `words` is empty, and if so, returned an empty string as specified. For non-empty lists, I used Python's built-in `max()` function with `key=len` to find the longest word in terms of length. This automatically handles ties by returning the last such word encountered because of the way `max()` works in Python. The solution is concise and readable, adhering to the criteria provided.

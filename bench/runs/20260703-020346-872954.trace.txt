@@ -1,0 +1,5 @@
+**
+
+I started by sorting the list and removing duplicates using `sorted(set(nums))`. This ensures that I only process distinct values in ascending order. Then, I iterate through the sorted list while keeping track of the start of potential ranges. If the current number is followed by consecutive numbers, it's part of a range, and I continue iterating until the sequence breaks. If a range is identified (start not equal to end), I add it to the result in 'start-end' format; otherwise, I simply add the single number. Finally, I join all parts with commas to form the final string.
+
+I included an edge case where if the input list `nums` is empty, the function immediately returns an empty string, as no processing is needed.

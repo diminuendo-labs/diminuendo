@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-054959-64541d",
+  "node_id": "task-20260704-054959-64541d",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function correctly flattens one level of nesting, is reasonably concise, and handles an edge case where a sublist might be empty.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_case_handled": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": true,
+        "got": "[1, 2, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": true,
+        "got": "[1, 2, [3, 4]]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting in a list.\n\n    Args:\n        lst (list): The input list that may contain nested lists.\n\n    Returns:\n        list: A new list with only one level of flattening applied.\n    \"\"\"\n    result = []\n    for item in lst:\n        if isinstance(item, list):\n            # If the sublist is not empty, add its items to the result\n            if item:\n                result.extend(item)\n        else:\n            result.append(item)\n    return result\n\n# Example usage:\nprint(flatten_once([1, 2, [3, 4], 5]))  # Output: [1, 2, 3, 4, 5]\n```\n\n**",
+  "trace": "**\n\nTo solve this task, I chose a straightforward approach that iterates over the input list using a for loop. For each item in the list, it checks if the item is itself a list using the `isinstance` function. If it is a list and not empty (to handle edge case: empty sublists), it uses the `extend` method to add all its items to the result list. Otherwise, it simply appends the item to the result list. This approach ensures that only one level of flattening is applied, as required by the task.",
+  "totals": {
+    "time_s": 22.8196448,
+    "tokens": 913
+  },
+  "files": [
+    "20260704-054959-64541d.crumbs.jsonl",
+    "20260704-054959-64541d.trace.txt"
+  ]
+}

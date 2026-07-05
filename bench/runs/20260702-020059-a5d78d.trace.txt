@@ -1,0 +1,9 @@
+**
+To solve the problem of finding the longest whitespace-separated word in a string, I followed these steps:
+1. **Edge Case Handling:** The function first removes any leading and trailing whitespace using `strip()`. If the resulting string is empty, it immediately returns an empty string.
+2. **Splitting the String:** The input string is split into individual words using `split()`.
+3. **Iterating in Reverse:** To handle ties by returning the last longest word, I iterate over the list of words in reverse order.
+4. **Tracking Longest Words:** As I iterate, I keep track of the maximum word length encountered and a list of words that have this length.
+5. **Returning the Result:** Finally, I return the last word from the list of longest words.
+
+This approach ensures that ties are handled correctly by returning the last longest word, as required.

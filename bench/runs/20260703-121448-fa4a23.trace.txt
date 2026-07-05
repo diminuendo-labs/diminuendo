@@ -1,0 +1,7 @@
+**
+
+To solve this problem, I first handle the edge case where the input list is empty, returning an empty string immediately. Next, I sort the list and remove duplicates by converting it to a set and back to a sorted list. This ensures that we only work with distinct values in ascending order.
+
+I then use a while loop to iterate through the sorted list. For each value, I check if there are consecutive numbers following it. If so, I continue incrementing the index until the sequence ends or the end of the list is reached. Depending on whether a range was detected or not, I format the result accordingly (either as a single number or a start-end range) and add it to the result list.
+
+Finally, I join all elements in the result list with commas to produce the final output string. This approach ensures that the function is both concise and readable while handling the specified requirements effectively.

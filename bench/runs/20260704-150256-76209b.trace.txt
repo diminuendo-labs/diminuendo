@@ -1,0 +1,2 @@
+**
+I chose to sort the input list first, which allows me to efficiently find the minimum and maximum values. This approach minimizes unnecessary computations and makes the code concise. I also explicitly handled the edge case where the input list is empty, returning None as specified in the task.

@@ -1,0 +1,3 @@
+**
+
+The function `max_index` iterates through the list of numbers from right to left, maintaining a running maximum value and its index. This approach ensures that if there are multiple occurrences of the same maximum value, the index of the last occurrence is returned. The function also includes an edge case check for empty lists, raising a `ValueError` to prevent unexpected behavior.

@@ -1,0 +1,8 @@
+**
+1. **Edge Case Handling**: I started by checking if the input list `nums` is empty. If it is, I immediately return 0 as specified.
+2. **Frequency Counting**: I used Python's `collections.Counter` to count the frequency of each element in the list.
+3. **Finding Modes**: I determined the maximum frequency (`max_freq`) and then created a list of elements that have this frequency (i.e., the modes).
+4. **Summing Distinct Modes**: To ensure each mode is counted only once, I converted the list of modes to a set before summing them up.
+5. **Return Result**: Finally, I returned the sum of these distinct modes.
+
+This approach ensures the function is correct and concise, while handling the edge case where all elements in the list are the same.

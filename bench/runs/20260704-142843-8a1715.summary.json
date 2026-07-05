@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-142843-8a1715",
+  "node_id": "task-20260704-142843-8a1715",
+  "task": "Write a Python function kth_ordered(words, k) returning the k-th word, counting from 1, when the words are ordered by increasing length, and words of equal length are ordered reverse-alphabetically among themselves. Return None when k is out of range. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided Python function correctly implements the required functionality for finding the k-th word in a list ordered by increasing length and then reverse-alphabetically.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 3
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "kth_ordered(['dd', 'a', 'ccc'], 2)",
+        "ok": true,
+        "got": "'dd'",
+        "expect": "'dd'"
+      },
+      {
+        "call": "kth_ordered(['a', 'bb'], 1)",
+        "ok": true,
+        "got": "'a'",
+        "expect": "'a'"
+      },
+      {
+        "call": "kth_ordered(['a'], 3)",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:** \n\n```python\ndef kth_ordered(words, k):\n    if not words or k <= 0 or k > len(words):\n        return None\n    \n    sorted_words = sorted(words, key=lambda word: (-len(word), word), reverse=True)\n    \n    return sorted_words[k-1]\n```\n\n**",
+  "trace": "** \n\nThe function `kth_ordered` first checks if the input list is empty or if `k` is out of range. If either condition is true, it returns `None`. Otherwise, it sorts the list of words using a custom key in Python's `sorted()` function. The key sorts primarily by the negative length of each word (to get increasing order of length) and secondarily by the word itself (in reverse alphabetical order). This ensures that longer words come first, and among words of equal length, they are ordered reverse-alphabetically. Finally, it returns the `k`-th element from the sorted list, adjusting for zero-based indexing by using `k-1`.",
+  "totals": {
+    "time_s": 22.9240477,
+    "tokens": 702
+  },
+  "files": [
+    "20260704-142843-8a1715.crumbs.jsonl",
+    "20260704-142843-8a1715.trace.txt"
+  ]
+}

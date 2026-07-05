@@ -1,0 +1,2 @@
+{"ts": 1783204180.6714618, "node_id": "task-20260704-152914-c429ee", "category": "failure", "time_s": -12.9763758, "tokens": -417, "note": "verdict: fail (evidence_fail)"}
+{"ts": 1783204180.6720233, "node_id": "task-20260704-152914-c429ee", "category": "clean", "time_s": 9.1653497, "tokens": 393, "note": "audience scoring"}

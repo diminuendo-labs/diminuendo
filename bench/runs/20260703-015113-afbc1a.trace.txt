@@ -1,0 +1,2 @@
+**
+I approached this problem by using Python's built-in `split()` method to split the input string into a list of words. The `max()` function was then used with the `key` argument set to `len`, which returns the length of each word in the list. This ensures that the longest word is returned, and in case of ties, the last word is chosen due to Python's stability properties for max(). I also added a default value of an empty string (`''`) to handle the edge case where the input string is empty.

@@ -1,0 +1,3 @@
+**
+
+I implemented this function by using the built-in `sorted` function to order the list of words first by length and then alphabetically in reverse. This approach is concise because it leverages Python's built-in sorting capabilities, making the code easy to read and understand. I also added a check for the edge case where there are no words in the input list, which would otherwise raise an error when trying to access `words[k-1]`.

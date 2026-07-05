@@ -1,0 +1,2 @@
+**
+I chose to use a generator expression within the `min` function to split the input string into words and filter out any empty strings. This approach is concise and readable while also meeting the performance requirements of the task. The `default=''` parameter ensures that an empty string is returned when the input string is empty, handling one edge case explicitly.

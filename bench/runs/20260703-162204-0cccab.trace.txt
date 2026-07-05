@@ -1,0 +1,1 @@
+I utilized Python's built-in set data structure, which automatically removes duplicates when creating it from a list. The `sum()` function is then used to sum up the elements of the distinct set, ensuring that each value is counted once. To handle an empty list edge case, I return 0 instead of raising an error or returning an undefined value.

@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-163346-b4de83",
+  "node_id": "task-20260703-163346-b4de83",
+  "task": "Write a Python function count_distinct_pairs(nums, target) returning how many distinct unordered value pairs in the list sum to target, each distinct pair counted once no matter how many times its values repeat: [1, 3, 1, 3] with target 4 has exactly one such pair. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The solution correctly counts distinct unordered value pairs in the list that sum to target.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_distinct_pairs([1, 3, 1, 3], 4)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      },
+      {
+        "call": "count_distinct_pairs([2, 2, 2], 4)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      },
+      {
+        "call": "count_distinct_pairs([0, 5, 2, 3, 5, 0], 5)",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_distinct_pairs([], 1)",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef count_distinct_pairs(nums, target):\n    pairs = set()\n    for i in range(len(nums)):\n        for j in range(i, len(nums)):\n            pair_sum = nums[i] + nums[j]\n            if pair_sum == target:\n                pairs.add((min(nums[i], nums[j]), max(nums[i], nums[j])))\n    return len(pairs)\n```",
+  "trace": "To solve this problem, I first created an empty set named `pairs` to store unique pairs that sum up to the target value. Then, I iterated over every pair of numbers in the input list using nested for loops, calculating the sum of each pair and checking if it equals the given target. If a valid pair is found, I added it to the set as a tuple, with the smaller number first and the larger number second (so that (1, 3) and (3, 1) are considered the same pair). At the end, I return the length of the pairs set, which represents the count of distinct unordered value pairs in the list summing to the target. An edge case handled is when the input list is empty; in this case, the function returns 0.",
+  "totals": {
+    "time_s": 20.564218500000003,
+    "tokens": 810
+  },
+  "files": [
+    "20260703-163346-b4de83.crumbs.jsonl",
+    "20260703-163346-b4de83.trace.txt"
+  ]
+}

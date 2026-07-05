@@ -1,0 +1,2 @@
+**
+I used a list comprehension to generate the chunks. The expression `lst[i:i+k]` creates a slice of the input list from index `i` to `i+k`. To pad the final chunk with `None`, I calculated the number of `None`s needed by subtracting the remaining elements in the original list (`len(lst) - i`) from `k`. This value is then used to add `None` values to the slice using `[None]*(...)`.

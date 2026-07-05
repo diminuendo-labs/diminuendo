@@ -1,0 +1,2 @@
+**
+To implement the `longest_word` function, I first check if the input string is empty. If it is, I return an empty string as specified. Otherwise, I split the string into a list of words using `split()`. I then determine the maximum length of these words using a generator expression. Next, I filter this list to find all words that have this maximum length. Finally, I return the last word from this filtered list, ensuring that in case of ties, the last such word is returned as required.

@@ -1,0 +1,2 @@
+**
+I chose to approach this problem by iterating over the words in reverse order, ensuring that in case of a tie, the last word with the maximum length is returned. This follows the direction mentioned in the task to prioritize returning the last word among those with the shortest length. I also explicitly handled the edge case where the input string is empty, as required by the task. The function remains concise and readable due to its simplicity and adherence to the problem's requirements.

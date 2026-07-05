@@ -1,0 +1,2 @@
+**
+I chose to use a simple and straightforward approach by first checking if the input list is empty. If it is, I immediately return `None` as per the requirements. Next, I sort the input list in ascending order using the built-in `sorted()` function. Then, I check whether the length of the sorted list is odd or even. If it's odd, I simply return the middle element at index `n // 2`. If it's even, I calculate the average of the two middle elements at indices `((n - 1) // 2)` and `n // 2`, which are rounded down to avoid slicing past the end of the list.

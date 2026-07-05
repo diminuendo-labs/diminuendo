@@ -1,0 +1,2 @@
+**
+I implemented the `flatten_once` function using a list comprehension to iterate over each element in the input list. For non-list elements, they are included as-is. For list elements, only their first element is taken, effectively flattening one level of nesting while preserving deeper nesting structures. The edge case handling includes returning an empty list when the input list is empty, which is a straightforward yet necessary consideration for this function's operation.

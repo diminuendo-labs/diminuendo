@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-083406-9cb92e",
+  "node_id": "task-20260702-083406-9cb92e",
+  "task": "Write a Python function count_unique(nums) returning how many values appear exactly once in the list. Values that repeat do not count at all: [1, 2, 2, 3] has two such values, 1 and 3. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "reason": "The function meets all criteria with no issues.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4.5,
+    "at least one edge case is handled": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_unique([1, 2, 2, 3])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_unique([5, 5])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([7])",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n```python\ndef count_unique(nums):\n    \"\"\"\n    Counts how many values appear exactly once in the list.\n\n    Parameters:\n    nums (list): The list of integers to be evaluated.\n\n    Returns:\n    int: The count of unique values that appear exactly once.\n    \"\"\"\n    if not nums:\n        return 0\n    \n    num_counts = {}\n    for num in nums:\n        if num in num_counts:\n            num_counts[num] += 1\n        else:\n            num_counts[num] = 1\n    \n    return sum(1 for count in num_counts.values() if count == 1)\n```\n\n**",
+  "trace": "**\nI chose to use a dictionary `num_counts` to keep track of the occurrences of each number. As I iterate through the list, I increment the count for each number. After populating the dictionary, I sum up the counts that are exactly 1 to get the final result.\n\nThis approach ensures that all unique numbers (those with exactly one occurrence) are counted correctly, and it handles an edge case where the input list is empty by returning 0 immediately.",
+  "totals": {
+    "time_s": 18.7765926,
+    "tokens": 774
+  },
+  "files": [
+    "20260702-083406-9cb92e.crumbs.jsonl",
+    "20260702-083406-9cb92e.trace.txt"
+  ]
+}

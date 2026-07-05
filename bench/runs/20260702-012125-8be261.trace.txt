@@ -1,0 +1,2 @@
+**
+I wrote a simple function that splits the input string into words using `str.split()` and then uses slicing to get the first `n` words. If `n` is less than or equal to 0, I return an empty string as per the requirements. To handle the case when the string has fewer words than `n`, Python's slice assignment will simply return all the words in the original order.

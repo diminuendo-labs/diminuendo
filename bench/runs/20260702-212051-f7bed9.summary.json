@@ -1,0 +1,57 @@
+{
+  "run_id": "20260702-212051-f7bed9",
+  "node_id": "task-20260702-212051-f7bed9",
+  "task": "Write a Python function weighted_mean(values, weights) returning the weighted arithmetic mean as a float. Empty lists return None, and a zero total weight also returns None, never a crash. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided function accurately calculates the weighted mean, handles edge cases correctly, and its code is well-structured.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "weighted_mean([1, 3], [1, 1])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      },
+      {
+        "call": "weighted_mean([2], [0])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "weighted_mean([], [])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "weighted_mean([1, 2], [0, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef weighted_mean(values, weights):\n    if not values or sum(weights) == 0:\n        return None\n    return sum(v * w for v, w in zip(values, weights)) / sum(weights)\n```",
+  "trace": "The function `weighted_mean` calculates the weighted arithmetic mean by first checking if either the `values` list is empty or the total weight is zero. If either condition is true, it returns `None`. Otherwise, it computes the sum of each value multiplied by its corresponding weight and divides this by the total weight to get the mean. This approach ensures that the function handles edge cases like empty lists and zero weights gracefully without causing a crash.",
+  "totals": {
+    "time_s": 13.9674619,
+    "tokens": 560
+  },
+  "files": [
+    "20260702-212051-f7bed9.crumbs.jsonl",
+    "20260702-212051-f7bed9.trace.txt"
+  ]
+}

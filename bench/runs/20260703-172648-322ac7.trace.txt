@@ -1,0 +1,5 @@
+I first ensure that the function handles an empty list by returning an empty string. Then, I sort the distinct values of the input list and loop through them to build a list `result`.
+
+If the current number is one more than the previous number, I append the updated range without a hyphen to the last element in `result`, otherwise, if there is a previous number, I create a new range starting from the previous value up to the current one. If this is the first iteration, I simply append the current number to `result`.
+
+Finally, I join all elements in `result` with commas and return the final string. This approach handles duplicate numbers and ensures that single numbers are not transformed into ranges. An edge case it handles is when there are no consecutive runs of numbers (e.g., [1, 3, 5]).

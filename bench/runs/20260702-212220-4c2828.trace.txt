@@ -1,0 +1,2 @@
+**
+I implemented the function using a straightforward approach, iterating over the input lists simultaneously with the `zip` function to calculate the weighted sum. I also included some basic error checking to ensure that both lists have the same length and all elements are numeric. The edge case of zero total weight is explicitly handled by returning None in this situation, rather than raising an exception or returning a specific value like 0.

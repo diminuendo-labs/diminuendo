@@ -1,0 +1,2 @@
+**
+I chose to use Python's built-in `split()` method to split the snake_case string into individual words, then used a generator expression with `capitalize()` to capitalize each word except the first one (which is already capitalized by default). I also included an edge case in the docstring: if the input string is empty, the function will correctly return an empty string. This approach was chosen for its simplicity and readability, allowing the code to be easily understood and maintained.

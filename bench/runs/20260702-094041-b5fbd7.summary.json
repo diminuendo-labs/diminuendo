@@ -1,0 +1,52 @@
+{
+  "run_id": "20260702-094041-b5fbd7",
+  "node_id": "task-20260702-094041-b5fbd7",
+  "task": "Write a Python function flatten_once(lst) that flattens exactly one level of nesting: elements that are lists contribute their items in order, and every other element is kept as is. Deeper nesting stays nested. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "reason": "The function does not correctly flatten exactly one level of nesting. It concatenates flattened and non-flattened elements without maintaining the correct order.",
+  "per_criterion": {
+    "correctness": 3,
+    "conciseness": 2,
+    "readability": 2,
+    "edge_case_handled": 1
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "flatten_once([[1, 2], [3]])",
+        "ok": false,
+        "got": "[1, 3]",
+        "expect": "[1, 2, 3]"
+      },
+      {
+        "call": "flatten_once([1, [2, [3, 4]]])",
+        "ok": false,
+        "got": "[1, 2]",
+        "expect": "[1, 2, [3, 4]]"
+      },
+      {
+        "call": "flatten_once([])",
+        "ok": true,
+        "got": "[]",
+        "expect": "[]"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n\n```python\ndef flatten_once(lst):\n    \"\"\"\n    Flattens exactly one level of nesting in a list.\n\n    Args:\n        lst (list): The input list, potentially containing nested lists.\n\n    Returns:\n        list: A new list with elements from the original list that are not lists themselves,\n              and with each element of a sublist added as separate items in order.\n    \"\"\"\n    return [item for item in lst if not isinstance(item, list) or len(item) == 0] + \\\n           [sublist[0] for sublist in lst if isinstance(sublist, list) and len(sublist) > 0]\n```\n\n**",
+  "trace": "**\n\nI implemented the function using a list comprehension to create two separate lists: one containing non-list elements (or empty lists), and another containing the first element of each sublist. I chose this approach because it allows for concise code while still making it clear what's happening. The edge case handled by this implementation is when an input contains a list with only one element, which would otherwise be treated as part of its parent list instead of being flattened out.",
+  "totals": {
+    "time_s": -1.9458933999999992,
+    "tokens": 40
+  },
+  "files": [
+    "20260702-094041-b5fbd7.crumbs.jsonl",
+    "20260702-094041-b5fbd7.trace.txt"
+  ]
+}

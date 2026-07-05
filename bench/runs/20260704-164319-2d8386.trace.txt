@@ -1,0 +1,2 @@
+**  
+I designed the function `chunk_pad` to take a list and an integer `k`, then split the list into chunks of size `k`. If any chunk is shorter than `k`, it pads the chunk with `None` until it reaches the desired length. I used list slicing to create each chunk and another slice to add padding when necessary. The function handles the edge case where the input list is empty by returning an empty list, ensuring that there are no unwanted results for this specific scenario.

@@ -1,0 +1,2 @@
+**
+I implemented this function using a stack data structure. This approach allows me to efficiently keep track of the opening parentheses and match them with their corresponding closing counterparts. The edge case where an empty string is balanced is handled directly in the function's logic, which returns True for an empty input without attempting to process it further.

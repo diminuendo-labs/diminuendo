@@ -1,0 +1,3 @@
+**
+
+I chose to use a combination of list comprehensions and conditional statements to implement the function. The first part `[item for item in lst if isinstance(item, list)]` creates a new list with only the elements that are lists themselves, effectively removing one level of nesting. The second part `[i for i in lst if not isinstance(i, list)]` then takes the remaining elements and adds them to the result. This approach allows for concise and readable code while still handling edge cases, such as an input list containing a single nested list or a mix of nested and non-nested lists.

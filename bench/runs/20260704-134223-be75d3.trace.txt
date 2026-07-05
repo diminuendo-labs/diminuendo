@@ -1,0 +1,2 @@
+**
+To solve this problem, I first sort the input list of ranges by their start time. This allows me to process each range in sequence and determine if it overlaps with or is close enough (within a distance of 1) to the previous range. If it does, I merge them into a single range. Otherwise, I add the new non-overlapping range to the result list. The function handles an edge case where the input list is empty by returning an empty list immediately. This ensures that the function works correctly for all valid inputs.

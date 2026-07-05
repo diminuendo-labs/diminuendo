@@ -1,0 +1,4 @@
+1. The function `top_k` takes two arguments, `nums` (the list of numbers) and `k` (the number of largest values to return).
+2. If `nums` is empty or `k` is zero or negative, the function returns an empty list.
+3. If the length of `nums` is less than `k`, it means that all elements in the list are within the top `k` numbers, so they are returned sorted in descending order.
+4. If the length of `nums` is greater than or equal to `k`, we first convert the set of unique numbers by using the set data type and `set()`. This eliminates duplicate values in the list. Then we sort the set in descending order by using a custom key function that returns the index of each number within the original list (`nums.index`) and reverse sorting. Finally, we slice the sorted set from the end to get the first `k` elements. This approach ensures that duplicates are kept while handling the edge case where more than `k` numbers have the same maximum value.

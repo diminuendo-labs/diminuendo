@@ -1,0 +1,7 @@
+**
+
+- I used Python's `re` module to find all words in the string, ignoring punctuation. The regex `\b\w+\b` ensures that only whole words are matched, excluding substrings within longer words.
+- For each word found, I stripped leading and trailing punctuation by using `word.strip()` which is not necessary here because of the regex but kept for clarity. Then, I compared it with `w` in a case-insensitive manner by converting both to lowercase.
+- The function returns the count of words that match the criteria.
+
+This approach ensures the function is both correct and concise while handling edge cases like empty input gracefully.

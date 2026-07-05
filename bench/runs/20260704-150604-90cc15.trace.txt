@@ -1,0 +1,2 @@
+**
+I first checked for the edge cases where the list has less than 3 elements. If so, I returned None as per the task. Then I found the minimum and maximum values in the list using built-in functions min() and max(). After that, I created a new list (filtered_nums) by iterating through nums and including only numbers not equal to either the minimum or maximum value. Finally, I calculated the mean of filtered_nums by summing its elements and dividing by its length.

@@ -1,0 +1,96 @@
+{
+  "calibrate_id": "20260702-011304",
+  "models": {
+    "A": "qwen2.5-coder:7b",
+    "B": "llama3.1:8b"
+  },
+  "audience": {
+    "A": "llama3.1:8b",
+    "B": "qwen2.5-coder:7b"
+  },
+  "table": {
+    "second_largest": {
+      "A": 1.0,
+      "B": 1.0
+    },
+    "most_common_word": {
+      "A": 1.0,
+      "B": 0.6666666666666666
+    },
+    "top_k": {
+      "A": 1.0,
+      "B": 1.0
+    },
+    "dedupe": {
+      "A": 1.0,
+      "B": 1.0
+    },
+    "mode": {
+      "A": 1.0,
+      "B": 1.0
+    },
+    "merge_ranges": {
+      "A": 0.75,
+      "B": 0.75
+    },
+    "longest_word": {
+      "A": 0.5,
+      "B": 0.5
+    },
+    "median": {
+      "A": 1.0,
+      "B": 0.75
+    },
+    "range_summary": {
+      "A": 0.4,
+      "B": 0.6
+    },
+    "flatten_once": {
+      "A": 0.3333333333333333,
+      "B": 0.3333333333333333
+    },
+    "snake_to_camel": {
+      "A": 0.25,
+      "B": 0.25
+    },
+    "nth_smallest": {
+      "A": 1.0,
+      "B": 1.0
+    },
+    "is_rotation": {
+      "A": 1.0,
+      "B": 1.0
+    },
+    "truncate_words": {
+      "A": 1.0,
+      "B": 1.0
+    },
+    "balanced": {
+      "A": 1.0,
+      "B": 0.75
+    },
+    "interleave": {
+      "A": 1.0,
+      "B": 1.0
+    },
+    "count_pairs": {
+      "A": 1.0,
+      "B": 1.0
+    }
+  },
+  "candidate_pool_mean": {
+    "A": 0.8372549019607842,
+    "B": 0.7999999999999999
+  },
+  "tasks_with_headroom": [
+    "most_common_word",
+    "merge_ranges",
+    "longest_word",
+    "median",
+    "range_summary",
+    "flatten_once",
+    "snake_to_camel",
+    "balanced"
+  ],
+  "n_note": "One run per task per seat. Each table cell is n=1, direction only. The kept-pool band check applies to the pool mean, selection happens outside this harness and is recorded in probe_tasks.py."
+}

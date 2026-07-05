@@ -1,0 +1,6 @@
+**
+I first handle the edge case where the input list is empty by returning an empty string. Then, I sort and remove duplicates from the input list to ensure that we are working with a clean, sorted list of unique numbers. I initialize a `result` list and set a `start` variable to track the beginning of a range.
+
+I iterate through the sorted list starting from the second element. If the current number is not consecutive (i.e., it is not one more than the previous number), I add the current range to the result list and reset the `start` variable to the current number. After the loop, I add the final range to the result.
+
+Finally, I join all elements in the result list with commas to form the final output string.

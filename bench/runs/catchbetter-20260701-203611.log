@@ -1,0 +1,15 @@
+== CATCH-BETTER, live ==
+mix before: {"clean_pass": 14, "caught_live_by_audience": 3, "caught_by_evidence_after_audience_pass": 2, "seeded": 1, "unscorable": 0}
+-- phase 1: unarmed run on the trap --
+phase 1: verdict=pass audience=pass evidence_passed=True watches_used=0
+-- phase 2: hindsight sweep over the whole record --
+taught from miss task-20260701-200910-2c0d20
+taught from miss task-20260701-201001-a2cc87
+taught 2 watch item(s) from natural misses
+  watch: The output should not be an empty string when the input is not empty.
+  watch: Ensure that the function handles ties in word frequency by returning the lexicographically smallest word.
+-- phase 3: armed run, same trap class --
+phase 3: verdict=fail audience=fail evidence_passed=False watches_used=2
+mix after: {"clean_pass": 15, "caught_live_by_audience": 4, "caught_by_evidence_after_audience_pass": 2, "seeded": 1, "unscorable": 0}
+CATCH-BETTER GATE: PASSED. misses taught=2, watches consumed by the armed audience=2.
+anecdote (n=1, not a claim): armed audience caught a real break live.

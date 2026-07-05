@@ -1,0 +1,2 @@
+**
+I chose to use the `Counter` class from the `collections` module to count the occurrences of each word. This approach allows for efficient counting and easy access to the frequencies. I also included a simple check at the beginning of the function to handle the case where the input string is empty or contains only whitespace, as per the edge case specified in the task.

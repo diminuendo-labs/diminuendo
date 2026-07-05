@@ -1,0 +1,2 @@
+**
+I approached this problem by first checking for the edge case where the input list is empty. I then sorted the input ranges based on their start values, which allowed me to easily merge overlapping or touching ranges in a single pass through the list. This was achieved by maintaining an accumulator of merged ranges and comparing each new range against the last one in the accumulator; if there's an overlap or touch, the two are merged into a single range with updated end value.

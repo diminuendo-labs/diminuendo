@@ -1,0 +1,7 @@
+**
+
+I started by sorting the list of pairs to ensure that I process them in order. This simplifies merging since any overlapping or touching ranges will be adjacent after sorting.
+
+The core logic uses a single pass through the sorted list, maintaining a `merged` list where each element is the last merged range. For each new range, it checks if there is an overlap with the last merged range. If there is (i.e., the start of the current range is less than or equal to the end of the last merged range), it merges them by updating the end of the last merged range to the maximum of the two ends.
+
+If there is no overlap, it simply appends the current range to the `merged` list. This approach ensures that all overlapping and touching ranges are merged into a single range, and the result is sorted by start time as required.

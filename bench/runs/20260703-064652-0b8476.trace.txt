@@ -1,0 +1,2 @@
+**
+I chose to implement the "last" tie-break rule, where the function returns the last word among those with the shortest length. I used a generator expression to iterate over the words in reverse order and return the first one that meets the condition. This approach is concise and readable while following the task's direction. The edge case of an empty string is handled by checking if the list of words is empty, returning an empty string in this case.

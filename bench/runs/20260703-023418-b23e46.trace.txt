@@ -1,0 +1,2 @@
+**
+I chose to use the `split()` method to split the input string into words, and then used a generator expression with the `capitalize()` method to capitalize each word. I considered using regular expressions or other more complex approaches, but felt that this simple solution was sufficient for handling the given task's requirements. One edge case this function handles is when the input string contains consecutive underscores (`'__a__b_'` becomes `'aB'`).

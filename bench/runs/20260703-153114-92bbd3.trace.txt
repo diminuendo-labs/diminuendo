@@ -1,0 +1,6 @@
+**
+- First, I handle the edge case where the input list is empty. If it is, the function returns an empty string.
+- Next, I convert the list to a set and sort it to ensure all numbers are unique and in ascending order.
+- I then iterate through the sorted list, identifying ranges by checking if consecutive numbers follow each other sequentially.
+- For each identified range or single number, I format it appropriately and add it to a list of strings.
+- Finally, I join the list of formatted strings with commas to produce the final output.

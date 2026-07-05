@@ -1,0 +1,9 @@
+**
+
+The function `kth_ordered` takes a list of words and an integer `k`. It first checks if `k` is within the valid range (1 to the length of the list). If not, it returns `None`.
+
+To sort the words according to the given criteria:
+- Words are primarily sorted by their length in increasing order. This is achieved using the key `-len(word)`, where a negative sign is used to sort in reverse order based on word length.
+- For words of equal length, they are further sorted in reverse-alphabetical order, which is handled by including `word` as the secondary key.
+
+Finally, the function returns the `k-th` word from the sorted list (adjusting for 0-based indexing with `k-1`).

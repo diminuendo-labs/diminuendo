@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-215521-d5d35d",
+  "node_id": "task-20260704-215521-d5d35d",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The provided Python function correctly calculates the trimmed mean by removing exactly one occurrence of the minimum and maximum values, and handles empty lists appropriately.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": true,
+        "got": "5.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": true,
+        "got": "2.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n\n    nums = sorted(nums)\n    min_occurrence = nums[0]\n    max_occurrence = nums[-1]\n    nums.remove(min_occurrence)\n    nums.remove(max_occurrence)\n    nums_len = len(nums)\n\n    if nums_len % 2 == 0:\n        return sum(nums) / nums_len\n    else:\n        return sum(nums[:nums_len//2 + 1]) / (nums_len // 2 + 1)\n```",
+  "trace": "The function sorts the list of numbers and removes both minimum and maximum occurrences. If the number of remaining elements is even, it calculates the mean by summing all the remaining numbers and dividing by the count of remaining numbers. Otherwise, it calculates the mean by summing the first half plus one middle number (if any) and dividing by the total count of the remaining numbers. An edge case to handle an empty list is also included, returning None in such a scenario.",
+  "totals": {
+    "time_s": 22.6873568,
+    "tokens": 770
+  },
+  "files": [
+    "20260704-215521-d5d35d.crumbs.jsonl",
+    "20260704-215521-d5d35d.trace.txt"
+  ]
+}

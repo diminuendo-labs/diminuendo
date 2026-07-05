@@ -1,0 +1,2 @@
+**  
+The function `snake_to_camel` takes a string `s` as input and converts it from snake_case to camelCase. It first strips any leading or trailing underscores using `strip('_')`. Then, it splits the string by underscores into a list of words. The function capitalizes all words except for the first one (if present) and concatenates them together. If the original string was empty or consisted solely of underscores, the function returns an empty string. This approach ensures that repeated underscores are handled correctly and that only valid identifiers are transformed.

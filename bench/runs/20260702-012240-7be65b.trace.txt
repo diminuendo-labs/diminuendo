@@ -1,0 +1,2 @@
+**
+I implemented the interleave function by initializing an empty list to store the interleaved elements, and then iterating over the minimum length between lists a and b. During each iteration, I append elements from both lists in alternating order. To handle edge cases where one list is longer than the other, I checked for remaining elements after the minimum length range and appended them at the end of the result list. This approach ensures that the function correctly handles empty input lists as an edge case.

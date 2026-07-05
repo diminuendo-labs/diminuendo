@@ -1,0 +1,3 @@
+**
+
+I chose to implement this function using Python's built-in `count` method, which returns the number of occurrences of a substring in a string. This is concise and readable because it clearly expresses the required condition for balanced parentheses: that there must be an equal number of opening and closing parentheses. I also handled the edge case where an empty string is passed to the function by noting that an empty string has zero opening and zero closing parentheses, thus meeting the balance criterion.

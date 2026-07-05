@@ -1,0 +1,3 @@
+To create the `snake_to_camel` function, I first split the input string by underscores, creating a list of words. Then, I loop through the list and for each word except the first (if it exists), I convert the first character to uppercase and concatenate it with the rest of the word. Finally, I join the modified words back together with an underscore as a separator when the input string is empty, or return the resulting camelCase identifier.
+
+The edge case that this function handles is handling an input string containing leading, trailing, or repeated underscores by simply ignoring them during the conversion process. For example, it converts '__foo_bar__baz' to 'fooBarBaz'.

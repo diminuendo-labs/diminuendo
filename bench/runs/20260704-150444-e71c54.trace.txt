@@ -1,0 +1,2 @@
+**
+I implemented the `trimmed_mean` function by first checking if the input list is empty. If it is, I return `None`. Otherwise, I calculate the minimum and maximum values in the list using built-in functions `min()` and `max()`. Then, I create a new list (`trimmed_nums`) that excludes both the minimum and maximum values from the original list. Finally, if this new list is not empty, I return its mean by summing up all elements and dividing by the count; otherwise, I return `None` again.

@@ -1,0 +1,2 @@
+**
+I chose to implement this function using a stack data structure, which is well-suited for tracking opening and closing parentheses. By iterating over each character in the string, I can push opening parentheses onto the stack and pop them off when a corresponding closing parenthesis is encountered. This approach ensures that closing parentheses never appear before their opening partners, and it also handles edge cases like an empty string (which returns True).

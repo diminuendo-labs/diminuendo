@@ -1,0 +1,4 @@
+**
+I used a counter to keep track of the balance between opening and closing parentheses. As I iterate through the string, every time I encounter an opening parenthesis '(', I increment the counter. For every closing parenthesis ')', I decrement the counter. If at any point the counter goes negative, it means there's a closing parenthesis before its corresponding opening one, so I return `False`. Finally, if the counter is zero after processing all characters, it indicates that all parentheses are balanced, and I return `True`.
+
+This solution handles the edge case where the input string might be empty, as iterating through an empty string will result in a counter of 0, which correctly returns `True` indicating balanced parentheses.

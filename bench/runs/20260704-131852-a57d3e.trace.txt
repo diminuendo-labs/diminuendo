@@ -1,0 +1,2 @@
+**  
+I defined the function `chunk_pad` which takes a list `lst` and an integer `k`. It first handles the edge cases where the input list is empty or when k is not a positive integer, returning an empty list in such cases. The main logic calculates how many full chunks can be formed and then iterates through these chunks, slicing the original list accordingly. For the last chunk, it ensures that it contains exactly `k` elements by padding with `None` if necessary. This approach ensures that the function is both correct and concise, meeting all specified criteria.

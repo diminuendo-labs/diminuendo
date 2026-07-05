@@ -1,0 +1,3 @@
+** 
+
+The function `kth_ordered` first checks if the input list is empty or if `k` is out of range. If either condition is true, it returns `None`. Otherwise, it sorts the list of words using a custom key in Python's `sorted()` function. The key sorts primarily by the negative length of each word (to get increasing order of length) and secondarily by the word itself (in reverse alphabetical order). This ensures that longer words come first, and among words of equal length, they are ordered reverse-alphabetically. Finally, it returns the `k`-th element from the sorted list, adjusting for zero-based indexing by using `k-1`.

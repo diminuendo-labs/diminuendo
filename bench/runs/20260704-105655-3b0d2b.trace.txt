@@ -1,0 +1,2 @@
+**
+I chose to use a simple and efficient approach by counting the number of opening and closing parentheses in the string. This is because for a string to be balanced, the number of opening parentheses must equal the number of closing parentheses. I handled the edge case where an empty string is considered balanced by checking for it directly at the beginning of the function. This solution has a time complexity of O(n), where n is the length of the input string, making it efficient even for large inputs.

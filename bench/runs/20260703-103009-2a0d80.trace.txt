@@ -1,0 +1,7 @@
+** 
+1. **Initial Check for Empty String**: The function first checks if the input string `s` is empty. If it is, it returns an empty string immediately.
+2. **Splitting the String**: The string is split into words using the `split()` method, which handles multiple spaces between words by creating empty strings in the resulting list.
+3. **Finding the Longest Word**: The `max()` function with the key set to `len` finds the longest word in the list of words. If there are multiple words of the same maximum length, `max()` returns the last one due to Python's stable sorting algorithm.
+4. **Returning the Result**: The longest word is returned.
+
+The approach ensures that the function is both correct and concise while handling an edge case where multiple spaces between words might lead to incorrect results if not properly managed.

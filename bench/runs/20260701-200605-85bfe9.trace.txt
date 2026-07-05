@@ -1,0 +1,2 @@
+**
+I approached this problem by first removing any non-alphanumeric characters from both strings, converting them to lowercase, and then comparing their sorted versions. This ensures that the function correctly identifies anagrams while ignoring case and spaces. I chose not to use a set or counter-based approach as it would be more complex for someone reading my code without prior knowledge of those data structures.

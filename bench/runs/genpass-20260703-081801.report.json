@@ -1,0 +1,151 @@
+{
+  "genpass_id": "20260703-081801",
+  "models": {
+    "A": "qwen2.5-coder:7b",
+    "B": "llama3.1:8b"
+  },
+  "generator": "qwen2.5-coder:7b",
+  "r_g": 3,
+  "accounting": {
+    "A": [
+      {
+        "rule_class": "tie_break",
+        "cases": {
+          "max_index": "mixed",
+          "shortest_word": "mixed",
+          "longest_run_char": "mixed",
+          "least_frequent_word": "all_pass"
+        },
+        "lessons": [
+          {
+            "task": "max_index",
+            "type": "within_task",
+            "committed": true
+          },
+          {
+            "task": "shortest_word",
+            "type": "within_task",
+            "committed": true
+          }
+        ]
+      },
+      {
+        "rule_class": "distinctness",
+        "cases": {
+          "mode_count": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      }
+    ],
+    "B": [
+      {
+        "rule_class": "tie_break",
+        "cases": {
+          "max_index": "all_fail",
+          "shortest_word": "all_fail",
+          "longest_run_char": "mixed",
+          "least_frequent_word": "all_pass"
+        },
+        "lessons": [
+          {
+            "task": "longest_run_char",
+            "type": "within_task",
+            "committed": true
+          },
+          {
+            "task": "max_index",
+            "sibling": "longest_run_char",
+            "type": "sibling",
+            "committed": true
+          }
+        ]
+      },
+      {
+        "rule_class": "distinctness",
+        "cases": {
+          "mode_count": "all_pass"
+        },
+        "lessons": [],
+        "reason": "both siblings all_pass, nothing broke"
+      }
+    ]
+  },
+  "rejections": [],
+  "rejections_by_reason": {},
+  "lessons": {
+    "A": [
+      {
+        "concept": "When the task states to return the index of the last occurrence of the maximum value, follow that direction.",
+        "rule": "If multiple occurrences of the maximum value exist, locate the last one and provide its index rather than the first.",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "trail": {
+          "gen_task": "max_index",
+          "contrast_type": "within_task"
+        }
+      },
+      {
+        "concept": "When the task requires handling ties by returning the last occurrence, prioritize ordering or iteration that naturally favors the latter.",
+        "rule": "If the task specifies to return the last word in case of a tie when sorting or selecting items, use an operation that processes items in reverse order.",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "trail": {
+          "gen_task": "shortest_word",
+          "contrast_type": "within_task"
+        }
+      }
+    ],
+    "B": [
+      {
+        "concept": "When multiple consecutive character runs have the same length, return the last such run's character.",
+        "rule": "When several runs tie for longest, follow the direction to return the character of the last such run.",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "trail": {
+          "gen_task": "longest_run_char",
+          "contrast_type": "within_task"
+        }
+      },
+      {
+        "concept": "When the task states to return the last occurrence or longest run, follow that direction.",
+        "rule": "Follow the stated direction of returning the last occurrence or longest run when applicable.",
+        "applies_when": {
+          "operation": "write_code",
+          "target": "function",
+          "language": "python",
+          "size": "small",
+          "rule_class": "tie_break",
+          "rule_topic": "direction",
+          "stated_direction": "last"
+        },
+        "trail": {
+          "gen_task": "max_index",
+          "contrast_type": "sibling"
+        }
+      }
+    ]
+  },
+  "n_note": "R_G=3 per task per seat, one pass. Supply and screen accounting, not a treatment measurement."
+}

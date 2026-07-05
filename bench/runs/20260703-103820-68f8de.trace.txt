@@ -1,0 +1,7 @@
+**
+
+The function `longest_word` takes a string `s` and splits it into individual words using the `split()` method, which handles multiple consecutive spaces by default. If the list of words is empty (i.e., the input string is empty), the function returns an empty string.
+
+To find the longest word, I first compute the maximum length of any word in the list. Then, I use a generator expression to iterate over the words in reverse order using `reversed(words)`. This ensures that if there are multiple words with the same maximum length, the last such word is returned, as required by the task's tie-breaking rule.
+
+This approach is concise and readable, leveraging Python's built-in functions and comprehensions to achieve the desired functionality efficiently.

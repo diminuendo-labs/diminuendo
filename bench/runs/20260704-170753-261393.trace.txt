@@ -1,0 +1,4 @@
+1. I split the input string `s` by underscores to get individual tokens.
+2. I used a list comprehension to iterate over each token, capitalizing it unless it's in the exception list.
+3. I joined the processed tokens back into a single string without any separators.
+4. I added an edge case where if the input string is empty, the function should return an empty string, which is handled correctly by the initial split operation.

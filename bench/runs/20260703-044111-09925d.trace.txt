@@ -1,0 +1,2 @@
+**
+The function `most_common_word(s)` takes a string `s` as input. First, it checks if the string is empty and returns an empty string if true to handle this edge case explicitly. The string is then converted to lowercase and split into individual words. A dictionary `word_count` is used to count occurrences of each word. After counting, the maximum count is determined, and a list comprehension finds all words that have this maximum count. These words are sorted alphabetically, and the function returns the first (and thus lexicographically smallest) word in this list.

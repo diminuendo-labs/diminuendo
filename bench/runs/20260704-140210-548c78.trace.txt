@@ -1,0 +1,7 @@
+**
+
+To implement the `trimmed_mean` function, I first check if the length of the input list is less than or equal to 2. If so, I return `None` as per the criteria for empty lists, one-element lists, and two-element lists.
+
+If the list has more than two elements, I remove the first occurrence of both the minimum and maximum values from the list using the `remove()` method. Then, I calculate the mean by summing the remaining elements and dividing by their count, which is then returned as a float.
+
+This approach ensures that exactly one occurrence of the minimum and one occurrence of the maximum are dropped, and the mean is calculated correctly for any valid input list.

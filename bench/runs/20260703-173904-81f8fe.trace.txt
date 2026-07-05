@@ -1,0 +1,1 @@
+I used the `split()` method to separate the input string into a list of words, and then checked if there are fewer words than the requested number. If so, I joined all the found words together with a single space. Otherwise, I sliced the list of words up to the nth element and joined them together. The edge case handled is when the input string has less than 'n' words.

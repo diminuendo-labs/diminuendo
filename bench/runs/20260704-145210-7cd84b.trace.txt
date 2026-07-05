@@ -1,0 +1,2 @@
+**
+I chose to implement a simple iterative approach that scans the input list of pairs and keeps track of the currently merged range. If a new range starts far away from the last one (more than 1 unit), it is appended as a separate entry in the result list. Otherwise, the new range is merged with the previous one by updating its end value. Finally, I sorted the merged ranges by their start values before returning them. The code aims for conciseness and readability while clearly documenting its behavior.

@@ -1,0 +1,2 @@
+**
+The function `range_summary` takes a list of integers, sorts them to ensure they are in ascending order, and then iterates through the sorted list to identify consecutive numbers. If consecutive numbers are found, they are grouped into a range ('start-end'). Single numbers that do not form part of a consecutive sequence remain unchanged. The results are collected in a list, which is then joined into a single string with commas separating each element. The function handles an edge case where the input list is empty by returning an empty string.

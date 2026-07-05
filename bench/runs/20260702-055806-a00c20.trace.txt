@@ -1,0 +1,10 @@
+**  
+The function `most_common_word(s)` takes a string `s` as input and returns the lowercase whitespace-separated word with the highest count, breaking ties alphabetically. If the input string is empty, it returns an empty string.
+
+1. The function first checks if the input string `s` is empty. If it is, it immediately returns an empty string.
+2. It then converts the entire string to lowercase and splits it into individual words using whitespace as a delimiter.
+3. A dictionary `word_count` is created to keep track of the frequency of each word. The function iterates over each word, updating its count in the dictionary.
+4. To find the most common word, the dictionary items are sorted first by their frequency in descending order (most frequent first) and then alphabetically in ascending order if frequencies are equal.
+5. The word at the top of this sorted list is identified as the most common word and returned.
+
+This approach ensures that the function handles edge cases such as an empty string gracefully and efficiently computes the most common word according to the specified criteria.

@@ -1,0 +1,2 @@
+**
+I chose to use a list comprehension to create the output list. This approach is concise and readable, making it suitable for this task. I also considered handling edge cases, specifically empty lists and `None` inputs, but since the problem statement doesn't mention them explicitly, I didn't include any special case handling. If necessary, an additional check at the beginning of the function could be added to return an empty list if the input is `None`, as you suggested in one of the available approaches.

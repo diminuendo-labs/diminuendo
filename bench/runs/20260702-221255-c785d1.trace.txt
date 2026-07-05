@@ -1,0 +1,2 @@
+**
+To solve this task, I chose to use the `re` module's `sub` function to remove punctuation from each word. This allowed me to avoid creating a separate data structure or loop to perform this operation. By splitting the string into words and then comparing them case-insensitively using `casefold()`, I was able to meet the requirements of the task in a concise manner.

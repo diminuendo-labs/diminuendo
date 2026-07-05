@@ -1,0 +1,3 @@
+**
+
+The function `third_largest_distinct` first converts the input list `nums` into a set to remove any duplicates, resulting in `distinct_nums`. It then checks if the number of distinct elements is less than 3. If so, it returns `None` as there aren't enough distinct values. Otherwise, it sorts the distinct numbers in descending order and returns the third element from the sorted list, which represents the third largest distinct value.

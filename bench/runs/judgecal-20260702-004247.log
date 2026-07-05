@@ -1,0 +1,6 @@
+JUDGE CALIBRATION 20260702-004247: corpus=7 outputs (2 broken, 5 clean)
+v1|qwen: {"clean_n": 5, "false_alarms": 2, "false_alarm_rate": 0.4, "broken_n": 2, "misses": 1, "miss_rate": 0.5, "unscorable": 0}
+v1|llama: {"clean_n": 5, "false_alarms": 0, "false_alarm_rate": 0.0, "broken_n": 2, "misses": 2, "miss_rate": 1.0, "unscorable": 0}
+v2|qwen: {"clean_n": 5, "false_alarms": 1, "false_alarm_rate": 0.2, "broken_n": 2, "misses": 2, "miss_rate": 1.0, "unscorable": 0}
+v2|llama: {"clean_n": 5, "false_alarms": 0, "false_alarm_rate": 0.0, "broken_n": 2, "misses": 2, "miss_rate": 1.0, "unscorable": 0}
+CALIBRATION GATE: PASSED. four conditions, both classes represented, every judgment on disk.

@@ -1,0 +1,2 @@
+**
+I chose to use the `split()` method to split the input string into a list of words, and then used a generator expression with `capitalize()` to capitalize each non-empty word. This approach is concise and readable, and it handles the edge case where an empty string is passed in (since the `if word` condition filters out any empty strings). I also included a docstring to describe what the function does.

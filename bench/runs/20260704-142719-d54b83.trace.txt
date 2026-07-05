@@ -1,0 +1,8 @@
+** 
+I defined the function `kth_ordered` that takes a list of words and an integer `k`. The function first checks if `k` is within the valid range (greater than 0 and less than or equal to the length of the words list). If not, it returns `None`.
+
+To sort the words according to the specified criteria:
+1. Words are primarily sorted by their length in ascending order.
+2. For words of equal length, they are further sorted reverse-alphabetically using the negative ASCII value of the last character as a key.
+
+Finally, the function returns the `k-th` word from the sorted list (adjusting for zero-based indexing by subtracting 1 from `k`). This approach ensures that the function is both correct and concise while handling edge cases such as out-of-range values for `k`.

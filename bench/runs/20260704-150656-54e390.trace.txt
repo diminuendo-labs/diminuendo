@@ -1,0 +1,2 @@
+**
+I chose to sort the input list first and then create a new list that includes all numbers except the minimum and maximum. This approach allows us to drop exactly one occurrence of each, while avoiding duplicate removal in lists with repeated values. The edge case handled is when the input list has less than 3 elements, which would not be able to trim any values and thus returns None immediately.

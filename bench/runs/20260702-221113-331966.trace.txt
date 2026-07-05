@@ -1,0 +1,2 @@
+**
+I chose to use a simple while loop to generate the range of integers, as it is concise and easy to read. I checked for edge cases at the beginning of the function to prevent unnecessary work, specifically when `start` is at or past `stop`, or when `step` is zero or negative. This approach allows the function to handle all possible inputs correctly and avoid potential errors such as infinite loops or crashes.

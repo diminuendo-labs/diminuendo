@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-142450-076ed9",
+  "node_id": "task-20260703-142450-076ed9",
+  "task": "Write a Python function count_unique(nums) returning how many values appear exactly once in the list. Values that repeat do not count at all: [1, 2, 2, 3] has two such values, 1 and 3. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "fail",
+  "audience_model": "qwen2.5-coder:7b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function does not handle the edge case of an empty list correctly.",
+  "per_criterion": {
+    "correctness": 4,
+    "conciseness_and_readability": 3,
+    "edge_case_handled": 2
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_unique([1, 2, 2, 3])",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_unique([5, 5])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([])",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      },
+      {
+        "call": "count_unique([7])",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT**\n```python\ndef count_unique(nums):\n    \"\"\"\n    Count the number of unique values in a list, ignoring repeated values.\n\n    Args:\n        nums (list): A list of integers.\n\n    Returns:\n        int: The number of unique values.\n    \"\"\"\n    return len(set(num for num in nums if nums.count(num) == 1))\n```\n\n**",
+  "trace": "**\nI used a set comprehension to generate a new set containing only the numbers that appear exactly once in the original list. A set is used here because it automatically removes duplicates, so we don't need to explicitly filter out repeated values. This approach meets the edge case of an empty list, since `len(set())` returns 0.",
+  "totals": {
+    "time_s": -3.6644702000000002,
+    "tokens": 43
+  },
+  "files": [
+    "20260703-142450-076ed9.crumbs.jsonl",
+    "20260703-142450-076ed9.trace.txt"
+  ]
+}

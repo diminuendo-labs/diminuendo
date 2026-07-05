@@ -1,0 +1,2 @@
+**
+I used regular expressions to split the input string into a list of words, and then used Python's built-in `Counter` class from the `collections` module to count the frequency of each word. To handle ties alphabetically, I used the `min` function with a custom key that returns a tuple containing the frequency (first) and the word itself (second). This allows the `min` function to first compare words by their frequencies, and then by their alphabetical order if they have the same frequency.

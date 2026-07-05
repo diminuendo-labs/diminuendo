@@ -1,0 +1,2 @@
+**
+I chose a simple approach to solve this task by leveraging Python's built-in `count()` method, which returns the number of occurrences of a specified value in a string. This method counts both opening and closing parentheses, but since we only care about their balance, it perfectly fits our needs. One edge case that this function handles is an empty string, as its count() would return 0 for both '(' and ')', making them balanced according to the task's definition.

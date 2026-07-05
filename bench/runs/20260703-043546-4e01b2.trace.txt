@@ -1,0 +1,2 @@
+**
+The function `most_common_word` processes a given string to find the most common word, considering case insensitivity and breaking ties alphabetically. It handles an edge case where the input string is empty by returning an empty string immediately. The solution uses a dictionary to count occurrences of each word, then filters and sorts words based on their counts before selecting the first one in the sorted list as the result.

@@ -1,0 +1,2 @@
+**
+I chose to use the approach of iterating over the sorted list of numbers, keeping track of the current run and appending it to the result string when a different number is encountered. This approach ensures that consecutive runs are collapsed into 'start-end' as required. I also explicitly handled the edge case where the input is an empty list, returning '' in this case.

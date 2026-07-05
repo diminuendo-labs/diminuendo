@@ -1,0 +1,52 @@
+{
+  "run_id": "20260704-205828-5cd72e",
+  "node_id": "task-20260704-205828-5cd72e",
+  "task": "Write a Python function trimmed_mean(nums) returning the mean of the list after dropping exactly one occurrence of the minimum and one occurrence of the maximum, as a float. An empty list returns None. Note one edge case it handles.",
+  "verdict": "fail",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "All criteria are met, the code works correctly.",
+  "per_criterion": {
+    "the function is correct": 5,
+    "the code is concise and readable": 4,
+    "at least one edge case is named": 5
+  },
+  "evidence": {
+    "passed": false,
+    "results": [
+      {
+        "call": "trimmed_mean([])",
+        "ok": true,
+        "got": "None",
+        "expect": "None"
+      },
+      {
+        "call": "trimmed_mean([5, 5, 1, 9])",
+        "ok": false,
+        "got": "10.0",
+        "expect": "5.0"
+      },
+      {
+        "call": "trimmed_mean([3, 1, 2])",
+        "ok": false,
+        "got": "4.0",
+        "expect": "2.0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "```python\ndef trimmed_mean(nums):\n    if not nums:\n        return None\n    nums = sorted(nums)\n    if len(nums) <= 1:\n        return sum(nums) / len(nums)\n    min_occurrences, max_occurrences = nums.count(min(nums)), nums.count(max(nums))\n    if min_occurrences > 1 or max_occurrences > 1:\n        return (sum(nums[1:-1]) + nums[len(nums) // 2]) / len(nums[1:-1])\n    if min_occurrences == 1:\n        return (sum(nums[1:]) + sum(nums[:-1])) / (len(nums) - 1)\n    return (sum(nums[1:]) + nums[0]) / len(nums)\n```",
+  "trace": "I sorted the input list and found the minimum and maximum values. If there is only one occurrence of either, I computed the trimmed mean by excluding that value from the sum. If both min and max have more than one occurrence, an edge case occurs where the list is not trimmed at all, so I returned the average of the middle element and the total sum. In this case, I used the arithmetic mean since the list is not truly trimmed. The function returns None when given an empty list as specified in the task.",
+  "totals": {
+    "time_s": -0.8695622000000007,
+    "tokens": -112
+  },
+  "files": [
+    "20260704-205828-5cd72e.crumbs.jsonl",
+    "20260704-205828-5cd72e.trace.txt"
+  ]
+}

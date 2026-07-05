@@ -1,0 +1,2 @@
+**
+I chose to first handle the edge case where an empty string is provided, returning an empty string immediately. Then, I converted the input string to lowercase and split it into individual words using `split()`. Next, I used a dictionary to count the occurrences of each word. Finally, I sorted the dictionary items by frequency (descending) and lexicographical order (ascending), and returned the most common word based on these criteria.

@@ -1,0 +1,2 @@
+**
+I used a combination of list comprehension and the built-in `set` function to efficiently count unique occurrences. To handle edge cases, I explicitly mentioned that an empty list returns 0, as it would otherwise throw a TypeError when trying to access an element in the list. The `count_unique` function iterates over each unique number in the input list, counting how many times it appears, and then counts the numbers with exactly one occurrence using a generator expression within a set comprehension.

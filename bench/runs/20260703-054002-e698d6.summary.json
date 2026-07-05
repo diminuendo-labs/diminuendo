@@ -1,0 +1,58 @@
+{
+  "run_id": "20260703-054002-e698d6",
+  "node_id": "task-20260703-054002-e698d6",
+  "task": "Write a Python function count_distinct_pairs(nums, target) returning how many distinct unordered value pairs in the list sum to target, each distinct pair counted once no matter how many times its values repeat: [1, 3, 1, 3] with target 4 has exactly one such pair. An empty list returns 0. Note one edge case it handles.",
+  "verdict": "pass",
+  "audience_verdict": "pass",
+  "audience_model": "llama3.1:8b",
+  "watches_used": 0,
+  "directives_used": 0,
+  "reason": "The function accurately solves the problem and handles an edge case.",
+  "per_criterion": {
+    "correctness": 5,
+    "conciseness": 4,
+    "readability": 5
+  },
+  "evidence": {
+    "passed": true,
+    "results": [
+      {
+        "call": "count_distinct_pairs([1, 3, 1, 3], 4)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      },
+      {
+        "call": "count_distinct_pairs([2, 2, 2], 4)",
+        "ok": true,
+        "got": "1",
+        "expect": "1"
+      },
+      {
+        "call": "count_distinct_pairs([0, 5, 2, 3, 5, 0], 5)",
+        "ok": true,
+        "got": "2",
+        "expect": "2"
+      },
+      {
+        "call": "count_distinct_pairs([], 1)",
+        "ok": true,
+        "got": "0",
+        "expect": "0"
+      }
+    ],
+    "error": null
+  },
+  "code_mutated": false,
+  "flagged": false,
+  "output": "**OUTPUT:**\n```python\ndef count_distinct_pairs(nums, target):\n    \"\"\"\n    Counts distinct unordered value pairs in the list nums that sum to target.\n    \n    :param nums: List[int] - a list of integers\n    :param target: int - the target sum for the pairs\n    :return: int - the number of distinct unordered value pairs that sum to target\n    \n    Edge case handled:\n    - If nums is empty, returns 0 immediately.\n    \"\"\"\n    if not nums:\n        return 0\n\n    seen = set()\n    pairs = set()\n\n    for num in nums:\n        complement = target - num\n        if complement in seen:\n            lower, upper = sorted((complement, num))\n            pairs.add((lower, upper))\n        seen.add(num)\n\n    return len(pairs)\n```\n\n**",
+  "trace": "**\nI used a `set` to track the numbers I have seen so far and another set to store the distinct pairs. As I iterate through the list, for each number, I calculate its complement (the number needed to reach the target sum). If this complement is in the `seen` set, it means we have found a pair that sums up to the target. To ensure the pairs are unordered and counted distinctly, I sort the pair before adding it to the `pairs` set. Finally, I return the size of the `pairs` set, which represents the number of distinct unordered pairs.",
+  "totals": {
+    "time_s": 24.5033366,
+    "tokens": 894
+  },
+  "files": [
+    "20260703-054002-e698d6.crumbs.jsonl",
+    "20260703-054002-e698d6.trace.txt"
+  ]
+}

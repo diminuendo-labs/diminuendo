@@ -1,0 +1,2 @@
+**
+I used list comprehension to find the index of the last occurrence of a word with maximum length. This approach ensures that ties are handled by returning the last such word, not the first. I also added a check for an empty string as per the requirement and returned an empty string in this case. The function's logic is concise and readable due to the use of Python's built-in `max` function with a generator expression to find the maximum length, followed by list comprehension to find the last occurrence index.

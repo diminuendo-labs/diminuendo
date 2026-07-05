@@ -1,0 +1,204 @@
+{
+  "gencal_id": "20260703-072720",
+  "models": {
+    "A": "qwen2.5-coder:7b",
+    "B": "llama3.1:8b"
+  },
+  "audience": {
+    "A": "llama3.1:8b",
+    "B": "qwen2.5-coder:7b"
+  },
+  "r_g": 3,
+  "table": {
+    "longest_run_char": {
+      "rule_class": "tie_break",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "mixed",
+        "fails": 2,
+        "ev": [
+          1.0,
+          0.75,
+          0.5
+        ]
+      }
+    },
+    "least_frequent_word": {
+      "rule_class": "tie_break",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "mixed",
+        "fails": 1,
+        "ev": [
+          1.0,
+          1.0,
+          0.75
+        ]
+      }
+    },
+    "count_distinct_over": {
+      "rule_class": "distinctness",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "third_largest_distinct": {
+      "rule_class": "distinctness",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "mode_count": {
+      "rule_class": "distinctness",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "mixed",
+        "fails": 1,
+        "ev": [
+          1.0,
+          1.0,
+          0.25
+        ]
+      }
+    },
+    "clamp": {
+      "rule_class": "boundary",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "nth_page": {
+      "rule_class": "boundary",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "split_csvish": {
+      "rule_class": "normalize",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "depth_max": {
+      "rule_class": "normalize",
+      "A": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "B": {
+        "case": "all_pass",
+        "fails": 0,
+        "ev": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "n_note": "R_G=3 per task per seat. Cases are direction for pool selection, not rates."
+}

@@ -1,0 +1,7 @@
+**
+
+I approached this task by splitting the input string `s` using the underscore `_` as a delimiter. This creates a list of substrings, which I then filter to remove any empty strings that may result from leading, trailing, or repeated underscores.
+
+The first word in the list is converted to lowercase (to handle cases like '__a__b_' where the second word should not be capitalized if it follows an underscore). The remaining words are capitalized using a generator expression and joined together with no separators.
+
+This solution respects the edge case of leading, trailing, and repeated underscores by ensuring they do not affect the final output. It also maintains readability and conciseness while adhering to Python's style guidelines.

@@ -1,0 +1,2 @@
+**
+I implemented the `token_case` function by first splitting the input string into tokens using the underscore as a delimiter. Then, I iterated over each token and applied the conversion rules: lowercasing the first token, capitalizing subsequent tokens, and preserving tokens that match any case in the exception list. This approach ensures that consecutive underscores are handled correctly, as they would be interpreted as an empty string and thus not affect the result.

@@ -1,0 +1,5 @@
+**
+
+I designed the function `weighted_mean` to compute the weighted arithmetic mean of a list of values with corresponding weights. I first checked if either the values or weights lists are empty, or if the total weight is zero. In these cases, the function returns `None` as specified. Otherwise, it calculates the sum of the products of each value and its corresponding weight, then divides this by the total weight to get the weighted mean.
+
+This approach ensures that the function handles edge cases gracefully without crashing and always returns a meaningful result or `None` when appropriate.

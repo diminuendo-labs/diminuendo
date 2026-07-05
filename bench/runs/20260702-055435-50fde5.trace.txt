@@ -1,0 +1,5 @@
+**
+
+The function `balanced(s)` iterates through each character in the input string `s`. It maintains a counter (`count`) that is incremented for every opening parenthesis '(' encountered and decremented for every closing parenthesis ')'. If at any point the counter goes negative, it means there's a closing parenthesis without a matching opening one, so the function returns `False`. Finally, if the counter ends up being zero after iterating through all characters, it means all parentheses are properly balanced, and the function returns `True`.
+
+This approach ensures that only the parentheses '(' and ')' are considered, and it efficiently checks for balance by maintaining a simple count. The edge case of an empty string is implicitly handled since starting with a counter of zero and ending at zero indicates balance without any operations on negative values.
