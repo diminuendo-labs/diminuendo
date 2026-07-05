@@ -1,5 +1,7 @@
 # The chair holds the memory
 
+## Lessons that move between AI models, and the delivery form that decides whether bad advice is survivable: measurements from a small reproducible bench
+
 Brad Hunt, Diminuendo LLC. July 2026. Code, tests, and every run
 record cited below live in this repository; everything marked
 measured traces to them.
