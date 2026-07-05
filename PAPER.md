@@ -1,10 +1,19 @@
 # The chair holds the memory
 
-Draft writeup, revised after external review and a verification pass
-against the run artifacts. Not yet posted. The companion technical
-report skeleton lives beside this file, and the bench code, tests,
-and run records are in this repository. Everything below marked
-measured traces to that record.
+Brad Hunt, Diminuendo LLC. July 2026. Code, tests, and every run
+record cited below live in this repository; everything marked
+measured traces to them.
+
+Here is the finding in plain terms. Take one piece of advice and
+hand it to a small AI model two ways. Phrased as a command, the
+model obeys it even when it contradicts the task, and work the model
+does correctly on its own collapses. Phrased as an option on a menu,
+the identical bytes cause no harm anywhere: the model uses what fits
+and declines what does not. Same advice, same model, same task. The
+framing alone decides whether bad advice is survivable, and I
+measured it, on two tasks and two model families, with executable
+checks. This document is that measurement, the system it came from,
+and the record that lets you rerun it on a consumer machine.
 
 A word on the name. Diminuendo is the musical mark for growing
 quieter, and that is the whole job. The system does not try to catch
@@ -42,14 +51,16 @@ bench artifacts in this repository and this document's archival DOI
 [DOI: assigned on deposit]. The full development history behind those
 dated artifacts is available to referees on request. A hostile
 prior-art sweep (July 2026) found every ingredient published
-somewhere, and the assembly published nowhere: role-persistent chair
+somewhere, and the assembly published nowhere in the academic record or, per an
+extended sweep of shipped open-source projects, in the OSS space,
+with the claim sized to the sweep's reach: role-persistent chair
 memory across swappable models, break-mined gated lessons, form-safe
 menu delivery, per-model casting (choosing which model to seat for a task), and the measurement discipline, in
 one running system with the instrument that measures it. The
 neighbors are cited by name in Related Work below, because the
 second thing this document claims, the delivery finding, survives on
 a thin margin in a valley that is filling in monthly, and the honest
-way to hold thin ground is to name every neighbor and plant exactly
+way to hold thin ground is to name every neighbor and build exactly
 where they are not.
 
 ## The finding: form is the variable
@@ -186,8 +197,8 @@ field has the same ingredient: cross-model memory transfer (arXiv
 confirm that distilled experience moves between
 models. I state
 my transfer results as consistent with that field, sized to my n.
-Nothing here claims a first on transfer. The flag plants on what the
-field has not published: the delivery science. Which form carries a
+Nothing here claims a first on transfer. This work stands on what
+the field has not published: the delivery science. Which form carries a
 lesson safely, measured at byte identity. Which seats amplify,
 filter, or sit indifferent, measured as traits. Where the serving
 path refuses, proven from code. And an instrument that produces
@@ -197,7 +208,11 @@ those answers on a schedule.
 
 A hostile prior-art sweep ran before this document froze, built to
 kill each claim, and its map is reproduced here so a reader can
-check the planting against the neighborhood. Membrane (arXiv
+check the claims against the neighborhood. MemCollab (arXiv
+2603.23234) distills cross-model memory from contrastive
+trajectories and reports that naive cross-model reuse can degrade a
+seat, which is the hazard the form finding above prices and the menu
+form survives. Membrane (arXiv
 2606.05743, June 2026) publishes conditional gating of safety memory
 as the harm-blocking mechanism, and published first; this bench
 claims the craft-lesson instantiation. Szeider (arXiv 2603.01254,
@@ -245,7 +260,7 @@ pre-registered before any run and applied verbatim after. No signal
 is believed before it replicates, and premature leads get downgraded
 in the record where they were made, mine included. Every packet's
 claims are verified against the run artifacts on disk, never against
-the session's account. The same evening this flag's central result
+the session's account. The same evening this paper's central result
 landed, the same machinery buried a promising gain three hours
 earlier because its replication came back flat. The machine that
 killed the result I liked is the machine vouching for the one I am

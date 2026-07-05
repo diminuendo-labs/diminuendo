@@ -76,7 +76,7 @@ Reading 1, the collapse (directive against none): predicts DOWN.
   measured on two tasks, one seat per task, direction never a rate.
 - Gap at or under the bar: the collapse did NOT replicate, said
   loudly in the first sentence; the finding stays one task old and
-  the flag writeup sizes it exactly so.
+  the public writeup sizes it exactly so.
 - Directive above none by more than the bar: unobservable direction,
   claims nothing, reported as an anomaly with NO NAME.
 

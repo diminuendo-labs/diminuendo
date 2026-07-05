@@ -14,9 +14,9 @@ one model transfers to another.
   records. The run records are the data and are committed.
 - `DIMINUENDO_TECHNICAL_SPEC_v0.7.md`: how the known pieces are built,
   each section with a Spec and a Where it breaks.
-- `DIMINUENDO_FLAG_DRAFT_v0.md`: the writeup of what the bench
+- `PAPER.md`: the writeup of what the bench
   measured, in draft.
-- `DIMINUENDO_TECH_REPORT_SKELETON_v0.md`: the technical report
+- `TECHNICAL_REPORT.md`: the technical report
   outline.
 - `bench/DECISIONS.md`: the decisions log, one line per architecture
   call. This is a redacted public copy; see its header.
@@ -31,7 +31,7 @@ tasks and two model families, small n, direction not rate. Tool
 response reads as a per-model casting trait. Transfer across models is
 consistent with the field and sized to n. The catching-failure loop
 is designed and instrumented, not yet proven. The details, with every
-measured claim traced to the run record, are in the flag draft and
+measured claim traced to the run record, are in the paper and
 the technical spec.
 
 ## Running the bench
@@ -52,4 +52,4 @@ running, and what has run is in the bench record.
 
 ## License
 
-AGPL-3.0. See `LICENSE`.
+Copyright 2026 Diminuendo LLC. AGPL-3.0-or-later, see `LICENSE`. Commercial licenses are available from Diminuendo LLC via this organization. Questions and challenges to any measured claim: open an Issue, it is the canonical channel, and every factual challenge gets verified against the run record before it gets an answer.
