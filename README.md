@@ -16,7 +16,6 @@ one model transfers to another.
   each section with a Spec and a Where it breaks.
 - `PAPER.md`: the writeup of what the bench
   measured, in draft.
-- `TECHNICAL_REPORT.md`: the technical report
   outline.
 - `bench/DECISIONS.md`: the decisions log, one line per architecture
   call. This is a redacted public copy; see its header.
