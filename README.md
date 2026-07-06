@@ -8,6 +8,8 @@ bench: a small running system with a deterministic score, a cost
 ledger, and the instrument that measures whether a lesson learned by
 one model transfers to another.
 
+DOI: https://doi.org/10.5281/zenodo.21212666
+
 ## What is here
 
 - `bench/`: the code, the tests, the work packets, and the run

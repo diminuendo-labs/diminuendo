@@ -6,6 +6,8 @@ Brad Hunt, Diminuendo LLC. July 2026. Code, tests, and every run
 record cited below live in this repository; everything marked
 measured traces to them.
 
+DOI: https://doi.org/10.5281/zenodo.21212666
+
 Here is the finding in plain terms. Take one piece of advice and
 hand it to a small AI model two ways. Phrased as a command, the
 model obeys it even when it contradicts the task, and work the model
@@ -50,7 +52,7 @@ The claim of this document, stated once so the rest can be checked
 against it: the assembled system is the first of its kind. I rest
 that priority on the public record, not on assertion: the dated
 bench artifacts in this repository and this document's archival DOI
-[DOI: assigned on deposit]. The full development history behind those
+(10.5281/zenodo.21212666). The full development history behind those
 dated artifacts is available to referees on request. A hostile
 prior-art sweep (July 2026) found every ingredient published
 somewhere, and the assembly published nowhere in the academic record or, per an
