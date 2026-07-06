@@ -18,7 +18,6 @@ DOI: https://doi.org/10.5281/zenodo.21212666
   each section with a Spec and a Where it breaks.
 - `PAPER.md`: the writeup of what the bench
   measured, in draft.
-  outline.
 - `bench/DECISIONS.md`: the decisions log, one line per architecture
   call. This is a redacted public copy; see its header.
 
@@ -53,4 +52,4 @@ running, and what has run is in the bench record.
 
 ## License
 
-Copyright 2026 Diminuendo LLC. AGPL-3.0-or-later, see `LICENSE`. Commercial licenses are available from Diminuendo LLC via this organization. Questions and challenges to any measured claim: open an Issue, it is the canonical channel, and every factual challenge gets verified against the run record before it gets an answer.
+Copyright 2026 Diminuendo LLC. The paper, PAPER.md and the deposited PDF, is licensed CC-BY-4.0, the standard license for research papers, so it can be read, quoted, and reused with attribution. The code, the run records, and everything else in this repository is AGPL-3.0-or-later, see `LICENSE`. Commercial licenses for the code are available from Diminuendo LLC via this organization. Questions and challenges to any measured claim: open an Issue, it is the canonical channel, and every factual challenge gets verified against the run record before it gets an answer.
